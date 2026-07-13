@@ -16,7 +16,7 @@
     border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;box-shadow:0 40px 120px -40px rgba(0,0,0,.9)}
   .slide{position:absolute;inset:0;padding:5.2cqw 6.5cqw;display:none;flex-direction:column;justify-content:center;gap:2.1cqw}
   .slide.on{display:flex;animation:sin .5s cubic-bezier(.16,1,.3,1) both}
-  @keyframes sin{from{opacity:0;transform:translateY(1.2cqw)}to{opacity:1;transform:none}}
+  @keyframes sin{from{opacity:0}to{opacity:1}}
   .slide.split{flex-direction:row;align-items:center;gap:5cqw}
   .slide.split .txt{flex:1;display:flex;flex-direction:column;gap:1.8cqw;min-width:0}
   .slide.split .vis{flex:1.1;min-width:0}
@@ -212,11 +212,9 @@
 <div class="eyebrow" style="color:var(--red)"><span class="e">The consequence — weeks later</span><span class="a">النتيجة — بعد أسابيع</span></div>
 <h2 class="sm e">A man who couldn&#8217;t breathe — from a disease vaccines had <span class="g">nearly erased.</span></h2>
 <h2 class="sm a">راجل مش عارف يتنفّس — من مرض اللقاحات <span class="g">شبه محتّه.</span></h2>
-<p class="lead e">Another doctor&#8217;s real case: undiagnosable, deteriorating, <b>intubated just to breathe.</b> The clue was one sentence from the family — <i>&#8220;he never took vaccines; he says they&#8217;re a conspiracy.&#8221;</i> The diagnosis: a <b>rare, vaccine-preventable disease</b> that had almost vanished from Egypt.</p>
-<p class="lead a">حالة حقيقية لدكتور تاني: مستحيل تشخيصها، بتتدهور، <b>اتدخّلتله أنبوبة عشان يتنفّس.</b> المفتاح جملة من الأهل — <i>«عمره ما أخد تطعيمات؛ بيقول إنها مؤامرة.»</i> التشخيص: <b>مرض نادر بيمنعه اللقاح</b> شبه اختفى من مصر.</p>
-<div class="stats"><div class="stat"><b>3.5–5M</b><span class="e">deaths/yr vaccines prevent · WHO</span><span class="a">وفيات بتمنعها اللقاحات سنوياً · WHO</span></div><div class="stat"><b>~95%</b><span class="e">coverage for herd immunity</span><span class="a">تغطية لمناعة القطيع</span></div><div class="stat"><b class="g">8 layers</b><span class="e">موثوق flags the decontext</span><span class="a">موثوق بيكشف نزع السياق</span></div></div>
-<p class="lead e"><b>موثوق is built for exactly this input:</b> it flags the study&#8217;s age and missing context, splits the real finding from the false instruction, and shows the countervailing evidence — <i>before</i> she comments &#8220;I&#8217;m stopping.&#8221;</p>
-<p class="lead a"><b>موثوق اتبنى بالظبط للمدخل ده:</b> بيعلّم على عُمر الدراسة والسياق الناقص، بيفصل النتيجة عن الأمر الغلط، وبيوري الدليل المضاد — <i>قبل</i> ما تكتب «هوقّف».</p>
+<p class="lead e">Another doctor&#8217;s real case: undiagnosable, deteriorating, <b>intubated just to breathe.</b> The clue was one sentence — <i>&#8220;he never took vaccines; he says they&#8217;re a conspiracy.&#8221;</i> The diagnosis: a <b>rare, vaccine-preventable disease</b> almost vanished from Egypt. <b>موثوق is built for this input</b> — it flags the source&#8217;s age and missing context <i>before</i> she comments &#8220;I&#8217;m stopping.&#8221;</p>
+<p class="lead a">حالة حقيقية لدكتور تاني: مستحيل تشخيصها، بتتدهور، <b>اتدخّلتله أنبوبة عشان يتنفّس.</b> المفتاح جملة واحدة — <i>«عمره ما أخد تطعيمات؛ بيقول إنها مؤامرة.»</i> التشخيص: <b>مرض نادر بيمنعه اللقاح</b> شبه اختفى من مصر. <b>موثوق اتبنى للمدخل ده</b> — بيكشف عُمر المصدر وسياقه الناقص <i>قبل</i> ما تكتب «هوقّف».</p>
+<div class="stats"><div class="stat"><b>3.5–5M</b><span class="e">deaths/yr prevented · WHO</span><span class="a">وفيات بتتمنع سنوياً</span></div><div class="stat"><b>~95%</b><span class="e">for herd immunity</span><span class="a">لمناعة القطيع</span></div><div class="stat"><b class="g">8-layer</b><span class="e">scan flags it</span><span class="a">فحص بيكشفها</span></div></div>
 </section>
 <section class="slide">
       <div class="eyebrow"><span class="no">04</span> <span class="e">The insight</span><span class="a">اللمحة</span></div>
@@ -744,13 +742,15 @@
     var count=document.getElementById('count'), fnum=document.getElementById('fnum'), prog=document.getElementById('prog'), dw=document.getElementById('dots'), dots=[], langBtn=document.getElementById('lang');
     for(var i=0;i<N;i++){ (function(i){ var d=document.createElement('button'); d.className='dot'; d.onclick=function(){go(i)}; dw.appendChild(d); dots.push(d); })(i); }
     function pad(n){return (n<10?'0':'')+n;}
-    function go(i){ i=Math.max(0,Math.min(N-1,i)); slides[cur].classList.remove('on'); cur=i; slides[cur].classList.add('on'); count.textContent=(cur+1)+' / '+N; fnum.textContent=pad(cur+1)+' / '+pad(N); prog.style.width=((cur+1)/N*100)+'%'; for(var k=0;k<N;k++) dots[k].classList.toggle('on',k===cur); }
+    function fit(sl){ if(!sl)return; sl.style.transform=''; sl.style.transformOrigin='top center'; sl.style.justifyContent='flex-start'; var over=sl.scrollHeight - sl.clientHeight; if(over>-20){ var k=Math.max(0.55,(sl.clientHeight-30)/sl.scrollHeight); sl.style.transform='scale('+k+')'; } else { sl.style.justifyContent=''; } }
+    function go(i){ i=Math.max(0,Math.min(N-1,i)); slides[cur].classList.remove('on'); cur=i; slides[cur].classList.add('on'); fit(slides[cur]); count.textContent=(cur+1)+' / '+N; fnum.textContent=pad(cur+1)+' / '+pad(N); prog.style.width=((cur+1)/N*100)+'%'; for(var k=0;k<N;k++) dots[k].classList.toggle('on',k===cur); }
     function setLang(ar){ deck.classList.toggle('ar',ar); stage.setAttribute('dir',ar?'rtl':'ltr'); langBtn.textContent=ar?'English':'🇪🇬 بالمصري'; }
     langBtn.onclick=function(){ setLang(!deck.classList.contains('ar')); };
     document.getElementById('next').onclick=function(){go(cur+1)}; document.getElementById('prev').onclick=function(){go(cur-1)};
     document.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1)} else if(e.key==='ArrowLeft'){go(cur-1)} else if(e.key==='l'||e.key==='L'){setLang(!deck.classList.contains('ar'))} });
     stage.addEventListener('click',function(e){ if(e.target.closest('a,button,input,textarea,select')) return; var r=stage.getBoundingClientRect(); if((e.clientX-r.left) < r.width*0.32){ go(cur-1); } else { go(cur+1); } });
     stage.style.cursor='pointer';
+    window.addEventListener('resize',function(){ fit(slides[cur]); });
     go(0);
   })();
 </script>
