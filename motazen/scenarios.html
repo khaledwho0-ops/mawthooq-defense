@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>متزن · مواقف — اتمرّن على التفكير</title>
+<meta name="description" content="مواقف من الحياة اليومية بيظهر فيها خطأ في التفكير عن الصحة النفسية. اقرأ الموقف، اكتشف الغلطة، بعدين شوف اللي العلم بيقوله فعلًا — بمصدره.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.9;-webkit-font-smoothing:antialiased;background:var(--paper);
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),
+      radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),
+      repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(70,90,75,.016) 0 1px, transparent 1px 3px);}
+  .wrap{max-width:820px;margin-inline:auto;padding:0 clamp(16px,4vw,32px)}
+  a{color:var(--sage)}
+  header.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px;max-width:1080px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep)}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px;background:none;border:none;cursor:pointer;font-family:inherit}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark{animation:none!important}}
+
+  .intro{text-align:center;padding:clamp(30px,6vw,54px) 0 6px}
+  .intro .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .intro h1{font-size:clamp(2rem,7vw,3rem);color:var(--sage-deep);font-weight:600;margin:10px 0 0}
+  .intro .lead{font-family:'IBM Plex Serif',serif;font-style:italic;color:var(--ink);font-size:1.05rem;margin-top:10px}
+  .intro p{color:var(--muted);max-width:600px;margin:10px auto 0}
+
+  .scn{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:clamp(18px,3.5vw,26px);box-shadow:var(--shadow);margin:16px 0}
+  .scn .num{font-size:.72rem;letter-spacing:.16em;font-weight:700;color:var(--sage)}
+  .scn h3{font-size:clamp(1.15rem,3.4vw,1.4rem);color:var(--ink);font-weight:600;margin:4px 0 12px}
+  .vignette{background:var(--paper);border:1px solid var(--line);border-inline-start:4px solid var(--sage-soft);border-radius:14px;padding:15px 18px;font-size:1.02rem;line-height:1.85}
+  .vignette .who{font-weight:700;color:var(--sage-deep)}
+  .ask{margin:16px 0 8px;font-weight:700;color:var(--sage-deep);font-size:.96rem}
+  .errs{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  @media(max-width:560px){.errs{grid-template-columns:1fr}}
+  .err{all:unset;cursor:pointer;background:var(--paper);border:1.5px solid var(--line);border-radius:13px;padding:12px 15px;font-weight:600;font-size:.92rem;transition:.16s}
+  .err:hover{border-color:var(--sage-soft);transform:translateY(-2px)}
+  .err:disabled{cursor:default;transform:none;opacity:.5}
+  .err.correct{border-color:var(--established);background:color-mix(in srgb,var(--established) 14%,transparent);opacity:1}
+  .err.wrong{border-color:var(--debunked);background:color-mix(in srgb,var(--debunked) 12%,transparent);opacity:1}
+
+  .analysis{margin-top:16px;border-top:1px dashed var(--line);padding-top:15px;display:none}
+  .analysis.show{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  .analysis .verdict{font-weight:700;margin-bottom:6px}
+  .analysis .verdict.ok{color:var(--established)} .analysis .verdict.no{color:var(--contested)}
+  .analysis .lesson{color:var(--muted);font-size:.95rem}
+  .analysis .lesson b{color:var(--sage-deep)}
+  .whatsci{margin-top:14px;font-size:.78rem;font-weight:700;color:var(--sage);letter-spacing:.04em}
+  /* the grounded claim mini-cards rendered from the library */
+  .cl{background:var(--card-2);border:1px solid var(--line);border-inline-start:4px solid var(--stat);border-radius:14px;padding:14px 16px;margin-top:9px}
+  .cl .top{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--stat) 14%,transparent);color:var(--stat);border:1px solid color-mix(in srgb,var(--stat) 44%,transparent)}
+  .tier{font-size:.7rem;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
+  .weird{font-size:.7rem;font-weight:700;color:var(--weak);background:color-mix(in srgb,var(--weak) 12%,transparent);border:1px solid color-mix(in srgb,var(--weak) 36%,transparent);border-radius:99px;padding:2px 8px}
+  .cl .claim{font-size:1rem;font-weight:500}
+  .cl .src{margin-top:9px;font-size:.78rem}
+  .cl .src .q{font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;color:var(--ink);opacity:.9;line-height:1.5}
+  .cl .src .cite{margin-top:5px}
+  .cl .src .cite a{font-weight:700;text-decoration:none;color:var(--sage-deep);word-break:break-word}
+  .cl .src .g{font-size:.64rem;color:var(--sage);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-inline-end:5px}
+  .jump{margin-top:12px;font-size:.82rem}
+  .jump a{font-weight:700;text-decoration:none}
+  footer{border-top:1px solid var(--line);padding:24px 0 60px;text-align:center;color:var(--dim);font-size:.82rem;margin-top:20px}
+  .crisis{max-width:600px;margin:8px auto 0;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 28%,transparent);border-radius:12px;padding:10px 14px;color:var(--ink);font-size:.82rem}
+  .crisis b{color:var(--debunked)}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرحلة</a>
+  <a class="lnk" href="phase0.html">المرحلة صفر</a>
+  <a class="lnk" href="phase1.html">المجالات</a>
+  <a class="lnk" href="exercises.html">التمارين</a>
+  <a class="lnk" href="navigation.html">التنقّل</a>
+  <a class="lnk" href="assess.html">الاتزان</a>
+  <a class="lnk" href="game.html">احكم بنفسك</a>
+  <a class="lnk" href="assistant.html">اسأل متزن</a>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <div class="eyebrow">تمرين · مواقف</div>
+    <h1>مواقف</h1>
+    <div class="lead">الخطأ في التفكير مش بيجيلك في امتحان — بيجيلك في مكالمة، على قهوة، جوّه رأسك.</div>
+    <p>ستة مواقف من اللي بيحصل كل يوم. اقرأ الموقف، اكتشف الغلطة في التفكير، بعدين شوف اللي العلم بيقوله فعلًا — بمصدره من مكتبة متزن.</p>
+  </div>
+  <div id="list"></div>
+</div>
+
+<footer><div class="wrap">
+  المواقف تعليمية من تأليفنا، لكن كل «اللي العلم بيقوله» مربوط بادّعاء <b style="color:var(--ink)">موثّق بمصدر</b> في مكتبة متزن — نفس القانون الواحد.
+  <div class="crisis">دي أداة <b>محو أمية</b> — مش تشخيص ولا علاج. في أزمة أو خطر: كلّم مختص، أو خط الدعم النفسي المصري <b style="direction:ltr;display:inline-block">16328</b>.</div>
+</div></footer>
+
+<script>document.write('<script src="claims.js?_=' + Date.now() + '"><\/script>')</script>
+<script>
+  const STAT = { established:{c:'var(--established)',ar:'مؤكّد',ic:'✔'}, contested:{c:'var(--contested)',ar:'متنازع عليه',ic:'⇄'}, debunked:{c:'var(--debunked)',ar:'مدحوض',ic:'✖'}, unknown:{c:'var(--unknown)',ar:'ما لا نعرفه',ic:'…'} };
+  const TIER = { strong:'دليل قوي', contested:'دليل مختلط', weak:'دليل ضعيف', debunked:'الدليل ضدّه', unknown:'مفتوح' };
+  const S = window.SOURCES||{}, C = window.CLAIMS||[];
+  const byId = Object.fromEntries(C.map(c=>[c.id,c]));
+  const esc=(s)=>String(s==null?'':s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+
+  // The shared taxonomy of thinking-errors the reader learns to spot.
+  const ERR = {
+    anecdote:   'تعميم من حالة واحدة',
+    weird:      'تعميم من ناس مش زيّنا',
+    reduce:     'اختزال المُركّب في سبب واحد',
+    dismiss:    'التقليل من مرض حقيقي',
+    medicalize: 'طَبْنَة حاجة طبيعية',
+    reify:      'التعامل مع تصنيف بشري كإنه حقيقة مطلقة',
+    onestudy:   'الخلط بين «دراسة» و«معرفة محسومة»',
+    repeat:     'تصديق الكلام لأنه اتكرّر كتير',
+  };
+
+  // 6 scenarios. `right` = correct error key(s). `claimIds` MUST reference real grounded claims
+  // (rendered from the library below), so the "what science says" is never an unsourced assertion.
+  const SCN = [
+    {
+      num:'موقف ٠١ · على القهوة',
+      title:'«الاكتئاب؟ ده مجرد كيمياء في المخ، اشرب الحبّة وخلاص»',
+      vignette:`<span class="who">صاحبك:</span> «يا عم بطّل فلسفة. الاكتئاب ده خلل كيميائي في المخ زيّه زي السكر بالظبط. تاخد الدوا يتظبط الكيمياء وتخلص. النفسي والجسدي حاجة واحدة، مفيش كلام تاني.»`,
+      options:['reduce','anecdote','medicalize','reify'],
+      right:'reduce',
+      lesson:`صاحبك بيختزل حاجة مُركّبة (تجربة إنسانية فيها بيولوجيا وسياق ومعنى) في سبب واحد بسيط. تشبيهه بالسكر بيخفي إن <b>مفيش لحد دلوقتي «تحليل» أو صورة مخ بتقول ده اكتئاب</b>، وإن الفصل الحادّ بين «النفسي» و«الجسدي» نفسه بيتوصف بأنه مشكلة. مش معنى كلامنا إن الدوا ماينفعش — معناه إن «مجرد كيمياء» اختزال، مش حقيقة محسومة.`,
+      claimIds:['bz6-no-biological-line-unknown','bz2-false-division-clinical','bz5-stigma-paradox'],
+    },
+    {
+      num:'موقف ٠٢ · جروب العيلة',
+      title:'«أنا اتعالجت بالكلام بس وخفّيت، يبقى الدوا كله نصب»',
+      vignette:`<span class="who">قريبتك في الجروب:</span> «أنا كنت تعبانة نفسيًا وراحت من غير أي دوا، بالكلام والدعوات بس. اللي بياخدوا أدوية دول بيتنصب عليهم. تجربتي أكبر دليل.»`,
+      options:['anecdote','weird','onestudy','dismiss'],
+      right:'anecdote',
+      lesson:`تجربة واحدة — مهما كانت حقيقية ومؤثّرة — مش دليل على قاعدة عامة. <b>قصة نجاح واحدة مقنعة بتقدر تغيّر قرارك حتى لو الأرقام ضدّها.</b> ده مش معناه إن تجربتها كذب؛ معناه إن «أنا شُفت» حاجة، و«ده بيشتغل للناس كلها» حاجة تانية خالص.`,
+      claimIds:['bz4-anecdote-not-evidence','bz4-illusory-truth'],
+    },
+    {
+      num:'موقف ٠٣ · بوست على فيسبوك',
+      title:'«دراسة من جامعة أمريكية أثبتت الطريقة دي، يبقى تنفع معانا»',
+      vignette:`<span class="who">صفحة تنمية بشرية:</span> «دراسة من ستانفورد على طلبة الجامعة أثبتت إن التمرين ده بيرفع السعادة ٤٠٪. جرّبه وهيتغير كل حياتك!»`,
+      options:['weird','reify','medicalize','repeat'],
+      right:'weird',
+      lesson:`أغلب أبحاث علم النفس اتعملت على شريحة ضيّقة من البشر — غربية، متعلّمة، ميسورة — <b>مش بالضرورة شبهنا</b>. نتيجة على طلبة أمريكان مش تلقائيًا بتنطبق على حد في الصعيد. ده مش رفض للعلم، ده سؤال مشروع: «اتّجرّب على مين؟».`,
+      claimIds:['bz5-weird'],
+    },
+    {
+      num:'موقف ٠٤ · في البيت',
+      title:'«ده مش مرض، ده دلع وقلّة شغل. قوم اتحرّك»',
+      vignette:`<span class="who">حد بيحبّك، بحُسن نيّة:</span> «مفيش حاجة اسمها اكتئاب، دي رفاهية. الناس زمان كانت بتشقى ومحدش كان بيتكلّم في الكلام ده. قوم اشتغل وهتعدّي.»`,
+      options:['dismiss','medicalize','anecdote','onestudy'],
+      right:'dismiss',
+      lesson:`رسم الخط غلط بيأذي في اتجاهين — وده أحد الاتجاهين: <b>التقليل من مرض حقيقي</b>. الاضطرابات النفسية من بين أكبر عشرة أسباب للعبء الصحّي في العالم، والموقف المستقرّ طبيًا إن «لا صحة بدون صحة نفسية». مش كل ضيق مرض — بس إنكار المرض الحقيقي له تكلفة.`,
+      claimIds:['bz6-dismissing-real-illness-harms','bz3-top-ten-burden','bz3-no-health-without'],
+    },
+    {
+      num:'موقف ٠٥ · بعد فقدان',
+      title:'«حزنت أسبوعين بعد وفاة جدّي، أكيد عندي اكتئاب محتاج دوا»',
+      vignette:`<span class="who">إنت لنفسك:</span> «جدّي مات من أسبوعين ولسه حزين وبعيط. ده أكيد اكتئاب إكلينيكي، لازم أروح آخد تشخيص ودوا حالًا.»`,
+      options:['medicalize','dismiss','weird','reify'],
+      right:'medicalize',
+      lesson:`الاتجاه التاني للأذى: <b>طَبْنَة حاجة طبيعية</b>. الحزن بعد فقدان تجربة إنسانية عادية — مش كل ألم مرض. ده خلاف علمي حقيقي فعلًا (لمّا شال دليل DSM-5 «استثناء الحِداد» قامت عاصفة جدل)، ومعايير الحِداد بتختلف بين الثقافات. الوعي هنا إنك متستعجلش تلزّق تشخيص على وجع طبيعي — ولا تتجاهل لو استمرّ وتعمّق.`,
+      claimIds:['bz6-overmedicalizing-grief-contested','bz6-conditions-broader-than-disorders'],
+    },
+    {
+      num:'موقف ٠٦ · نقاش',
+      title:'«مكتوب في الـDSM إنه اضطراب، يبقى محسومة، ده كتاب العلم المقدّس»',
+      vignette:`<span class="who">حد واثق:</span> «الـDSM ده مرجع الأطباء. أي حاجة مكتوبة فيه إنها اضطراب يبقى اضطراب مية في المية، والباقي مش مرض. القصة محسومة علميًا.»`,
+      options:['reify','onestudy','weird','repeat'],
+      right:'reify',
+      lesson:`الفئات التشخيصية <b>مش حقائق طبيعية ثابتة، دي تصنيفات بشرية</b> اتبنت واتغيّرت بقرارات (زي شطب المثلية من قائمة الأمراض)، ودايرة اللي يتحسب «اضطراب» بتتوسّع مع كل نسخة. ده مش معناه إنها عبث — معناه إنها خريطة رسمها بشر، وفيها خلاف حقيقي، مش وحي مقدّس.`,
+      claimIds:['bz7-categories-are-human-decisions','bz7-diagnostic-reach-is-expanding','bz7-are-current-categories-valid'],
+    },
+  ];
+
+  function claimCard(id){
+    const c = byId[id]; if(!c) return '';
+    const st = STAT[c.status]||STAT.unknown;
+    const weird = c.weird_flag==='yes' ? `<span class="weird">⚑ ناس مش زيّنا</span>` : '';
+    const so = (c.sources||[])[0]; const s = so?(S[so.srcId]||{}):{};
+    const src = so ? `<div class="src"><div class="q">“${esc(so.quote_en)}”</div><div class="cite"><span class="g">${esc(s.tier||'')}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label||so.srcId)}</a></div></div>` : '';
+    return `<div class="cl" style="--stat:${st.c}"><div class="top"><span class="badge">${st.ic} ${st.ar}</span><span class="tier">${TIER[c.evidence_tier]||c.evidence_tier}</span>${weird}</div><div class="claim">${esc(c.claim_ar)}</div>${src}</div>`;
+  }
+
+  function build(){
+    document.getElementById('list').innerHTML = SCN.map((sc,i)=>{
+      const opts = sc.options.map(k=>`<button class="err" data-k="${k}">${esc(ERR[k])}</button>`).join('');
+      return `<section class="scn" id="scn${i}">
+        <div class="num">${esc(sc.num)}</div>
+        <h3>${esc(sc.title)}</h3>
+        <div class="vignette">${sc.vignette}</div>
+        <div class="ask">إيه الغلطة في التفكير هنا؟</div>
+        <div class="errs" data-i="${i}">${opts}</div>
+        <div class="analysis" id="an${i}"></div>
+      </section>`;
+    }).join('');
+    document.querySelectorAll('.errs').forEach(box=>{
+      box.addEventListener('click',e=>{const b=e.target.closest('.err');if(!b||b.disabled)return;pick(+box.dataset.i,b.dataset.k);});
+    });
+  }
+
+  function pick(i,guess){
+    const sc = SCN[i];
+    const ok = guess===sc.right;
+    const box = document.querySelector(`.errs[data-i="${i}"]`);
+    box.querySelectorAll('.err').forEach(b=>{ b.disabled=true;
+      if(b.dataset.k===sc.right) b.classList.add('correct');
+      else if(b.dataset.k===guess) b.classList.add('wrong');
+    });
+    const an = document.getElementById('an'+i);
+    an.innerHTML = `
+      <div class="verdict ${ok?'ok':'no'}">${ok?'✔ لقطتها':'⇄ الغلطة الأساسية غير كده'} — الغلطة هنا: <b>${esc(ERR[sc.right])}</b></div>
+      <div class="lesson">${sc.lesson}</div>
+      <div class="whatsci">اللي العلم بيقوله فعلًا — بمصدره:</div>
+      ${sc.claimIds.map(claimCard).join('')}
+      <div class="jump"><a href="index.html#st${(byId[sc.claimIds[0]]||{}).question||''}">شوف المحطّة كاملة في الرحلة ←</a></div>`;
+    an.classList.add('show');
+  }
+
+  const tb=document.getElementById('themeBtn');
+  const setT=(t)=>{ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');tb.textContent='☀';} else {document.documentElement.removeAttribute('data-theme');tb.textContent='☾';} };
+  setT(localStorage.getItem('motazen-theme')||'light');
+  tb.onclick=()=>{ const dark=document.documentElement.getAttribute('data-theme')==='dark'; const n=dark?'light':'dark'; localStorage.setItem('motazen-theme',n); setT(n); };
+
+  build();
+</script>
+</body>
+</html>

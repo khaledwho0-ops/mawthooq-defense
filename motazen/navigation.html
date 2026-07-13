@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>التنقّل · تطلب المساعدة إزاي — متزن</title>
+<meta name="description" content="المرحلة الثالثة من متزن: التنقّل. إمتى وفين تطلب مساعدة نفسية في مصر، وإزاي تقيّم أي ادّعاء نفسي بعدسة واحدة، وإزاي تتكلم مع أهلك. كل ادّعاء بمصدره.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.9;-webkit-font-smoothing:antialiased;background:var(--paper);
+    background-image:radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px);}
+  .wrap{max-width:1000px;margin-inline:auto;padding:0 clamp(16px,4vw,36px)}
+  a{color:var(--sage)}
+  header.bar{position:sticky;top:0;z-index:30;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px;max-width:1080px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep)}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  .bar a.lnk.here{color:var(--sage-deep);background:color-mix(in srgb,var(--sage-soft) 14%,transparent)}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark{animation:none!important}}
+  .hero{text-align:center;padding:clamp(40px,8vw,72px) 0 8px}
+  .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .hero h1{font-size:clamp(2.1rem,7vw,3.4rem);margin:12px 0 0;font-weight:600;color:var(--sage-deep)}
+  .hero .tag{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:clamp(1rem,2.6vw,1.3rem);color:var(--ink);margin-top:12px}
+  .hero .sub{color:var(--muted);max-width:640px;margin:14px auto 0;font-size:clamp(.95rem,2.1vw,1.05rem)}
+  .secttl{display:flex;align-items:center;gap:12px;margin:34px 0 14px}
+  .secttl .n{width:44px;height:44px;border-radius:12px;background:var(--card);border:1.6px solid var(--sage-soft);display:grid;place-items:center;font-size:1.3rem;flex:none}
+  .secttl h2{font-size:clamp(1.3rem,4vw,1.7rem);color:var(--ink);font-weight:600}
+  .secttl p{color:var(--muted);font-size:.9rem;margin-top:2px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:18px;padding:20px;border-inline-start:4px solid var(--stat);box-shadow:var(--shadow)}
+  .card .top{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+  .badge{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--stat) 14%,transparent);color:var(--stat);border:1px solid color-mix(in srgb,var(--stat) 44%,transparent)}
+  .tier{font-size:.7rem;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
+  .card .claim{font-size:1.05rem;font-weight:500;line-height:1.8}
+  .card .en{color:var(--muted);font-size:.8rem;font-family:var(--lat);direction:ltr;text-align:left;margin-top:7px;line-height:1.5}
+  .card .cultural{margin-top:9px;font-size:.85rem;color:var(--ink);background:color-mix(in srgb,var(--sage-soft) 10%,transparent);border:1px solid color-mix(in srgb,var(--sage-soft) 30%,transparent);border-radius:11px;padding:8px 11px}
+  .card .cultural b{color:var(--sage-deep)}
+  .card .src{margin-top:9px;font-size:.75rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+  .card .src .q{font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;display:block;opacity:.9;margin-bottom:4px}
+  .card .src a{color:var(--sage-deep);text-decoration:none;font-weight:600}
+  /* the evaluation lens */
+  .lens{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+  .lens ol{margin:0;padding:0;list-style:none;counter-reset:q;display:grid;gap:14px}
+  .lens li{counter-increment:q;display:flex;gap:14px;align-items:flex-start}
+  .lens li::before{content:counter(q);flex:none;width:34px;height:34px;border-radius:50%;background:var(--sage-deep);color:#f4efe2;display:grid;place-items:center;font-weight:700}
+  .lens li b{color:var(--sage-deep)}
+  .lens li span{font-size:.97rem}
+  .lens .q{font-weight:600;color:var(--ink)}
+  .lens .why{color:var(--muted);font-size:.88rem;display:block;margin-top:2px}
+  /* help directory */
+  .help{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .hcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .hcard .num{font-size:1.9rem;font-weight:700;color:var(--sage-deep);direction:ltr}
+  .hcard .lbl{font-weight:600;color:var(--ink);margin-top:2px}
+  .hcard .d{color:var(--muted);font-size:.86rem;margin-top:5px}
+  .hcard.urgent{border-color:color-mix(in srgb,var(--debunked) 34%,transparent);background:color-mix(in srgb,var(--debunked) 7%,transparent)}
+  .hcard.urgent .num{color:var(--debunked)}
+  .steps{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:14px}
+  .steps h4{color:var(--sage-deep);font-size:1rem;margin-bottom:8px}
+  .steps ul{margin:0;padding-inline-start:20px;display:grid;gap:7px}
+  .steps li{font-size:.94rem;color:var(--ink)}
+  .steps li b{color:var(--sage-deep)}
+  .note{font-size:.85rem;color:var(--muted);margin-top:10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 13px}
+  footer{border-top:1px solid var(--line);padding:26px 0 60px;text-align:center;color:var(--dim);font-size:.84rem;margin-top:34px}
+  footer b{color:var(--ink)}
+  .crisis{max-width:640px;margin:10px auto 0;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 30%,transparent);border-radius:14px;padding:12px 16px;color:var(--ink);font-size:.85rem}
+  .crisis b{color:var(--debunked)}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:1rem" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرحلة</a>
+  <a class="lnk" href="phase1.html">المجالات</a>
+  <a class="lnk" href="exercises.html">التمارين</a>
+  <a class="lnk here" href="navigation.html">التنقّل</a>
+  <a class="lnk" href="assistant.html">اسأل متزن</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">المرحلة الثالثة · التنقّل</div>
+  <h1>تطلب المساعدة إزاي — في عالمنا</h1>
+  <div class="tag">عرفت تفكّر، وعرفت المجالات. دلوقتي: إمتى وفين تدوّر على مساعدة، وإزاي تفلتر أي ادّعاء يقابلك.</div>
+  <p class="sub">التنقّل مهارة: تعرف تسمّي اللي بيحصل، تقيّم الكلام اللي بيتقالك، تلاقي الباب الصحّ في مصر، وتتكلم مع أهلك. كل «ليه» هنا بمصدره؛ كل «إزاي» أداة عملية.</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="secttl"><span class="n">🧭</span><div><h2>ليه ومتى — الأساس المسنود</h2><p>قبل «إزاي»، نفهم «ليه» — بأدلّة، مش بشعارات.</p></div></div>
+  <div class="grid" id="whyGrid"></div>
+
+  <div class="secttl"><span class="n">🔍</span><div><h2>عدسة التقييم — ٥ أسئلة لأي ادّعاء نفسي</h2><p>نفس منهج «موثوق»، مصوّب على كلام النفس. اسأل الأسئلة دي قبل ما تصدّق أو تشارك.</p></div></div>
+  <div class="lens"><ol>
+    <li><span><span class="q">المصدر إيه؟ ومين قايله؟</span><span class="why">ادّعاء من غير مصدر تقدر ترجعله = مجرّد رأي. «خبير» على السوشيال ≠ دليل. دوّر على الورقة الأصلية.</span></span></li>
+    <li><span><span class="q">الدليل قوي قدّ إيه؟</span><span class="why">مراجعة منهجية وتحليل شامل أقوى من دراسة واحدة، وأقوى بكتير من «تجربة شخصية». اسأل: ده مؤكّد، متنازع عليه، ضعيف، ولا مدحوض؟</span></span></li>
+    <li><span><span class="q">اتّجرّب على مين؟ (فخّ WEIRD)</span><span class="why">أغلب علم النفس اتبنى على عيّنات غربية. نتيجة نفعت طالب أمريكي مش بالضرورة تنفعك — اسأل: اتقاس على ناس زيّي؟</span></span></li>
+    <li><span><span class="q">مين بيختلف، وليه؟</span><span class="why">لو حد بيقولك «كله متفق»، خلّي بالك. العلم الحقيقي فيه خلاف. دوّر على الرأي المقابل قبل ما تحسم.</span></span></li>
+    <li><span><span class="q">إيه اللي يثبت إنه غلط؟</span><span class="why">ادّعاء ماينفعش يتكذّب بأي حال = مش علم. اسأل: لو ده غلط، هنعرف إزاي؟ لو مفيش إجابة، شكّ فيه.</span></span></li>
+  </ol></div>
+
+  <div class="secttl"><span class="n">🇪🇬</span><div><h2>فين تلاقي مساعدة في مصر</h2><p>خطوط ومسارات حقيقية. دي معلومات محو أميّة، مش إحالة طبّية.</p></div></div>
+  <div class="help">
+    <div class="hcard urgent"><div class="num">123</div><div class="lbl">الإسعاف</div><div class="d">لأي خطر على الحياة أو إصابة عاجلة — على مدار الساعة.</div></div>
+    <div class="hcard"><div class="num">16328</div><div class="lbl">خط الدعم النفسي</div><div class="d">خط المساعدة النفسية التابع للأمانة العامة للصحة النفسية — استشارة ودعم.</div></div>
+    <div class="hcard urgent"><div class="num">122</div><div class="lbl">النجدة (الشرطة)</div><div class="d">لو فيه خطر أو تهديد على شخص.</div></div>
+    <div class="hcard"><div class="num">112</div><div class="lbl">الطوارئ الموحّد</div><div class="d">رقم طوارئ موحّد بيوصّلك للجهة المناسبة.</div></div>
+  </div>
+  <div class="steps">
+    <h4>مسارات تدوّر فيها على مختصّ</h4>
+    <ul>
+      <li><b>مستشفيات ومراكز الصحة النفسية الحكومية</b> — تابعة لوزارة الصحة، وفيها عيادات خارجية.</li>
+      <li><b>العيادات الخاصّة</b> — طبيب نفسي (بيقدر يوصف دوا) أو أخصّائي/معالج نفسي (علاج بالكلام). الاتنين مكمّلين لبعض.</li>
+      <li><b>وحدات الإرشاد في الجامعات</b> — لو طالب، كتير من الجامعات فيها دعم نفسي (غالبًا سرّي ومجّاني).</li>
+      <li><b>طبيب الأسرة/الباطنة</b> — نقطة بداية كويّسة يقدر يحوّلك للمختصّ الصح.</li>
+    </ul>
+    <div class="note">💡 <b>الفرق المهمّ:</b> «طبيب نفسي» (psychiatrist) دكتور بيقدر يشخّص ويوصف دوا. «أخصّائي/معالج نفسي» (psychologist/therapist) بيعالج بالكلام. المشكلة الشديدة غالبًا محتاجة الاتنين. متزن مابيرشّحلكش شخص معيّن — بيعرّفك بالخريطة بس.</div>
+  </div>
+
+  <div class="secttl"><span class="n">🫂</span><div><h2>تتكلم إزاي — مع أهلك ونفسك</h2><p>التنقّل مش لوحدك بس؛ ده كمان مع اللي حواليك.</p></div></div>
+  <div class="steps">
+    <h4>لمّا تفتح الموضوع مع حدّ بتحبّه</h4>
+    <ul>
+      <li>ابدأ بالإحساس مش بالتشخيص: «أنا حاسس بـ...» أحسن من «أنا عندي اكتئاب».</li>
+      <li>اختار وقت هادي، ومكان آمن — مش وسط خناقة.</li>
+      <li>لو بتسمع حدّ بيتعب: مش لازم تحلّ، يكفي تسمع من غير ما تقلّل («ده مالوش لازمة») ولا تعظّم.</li>
+      <li>لو حدّ عبّر عن أفكار إيذاء نفسه: خُدها بجدّية، افضل معاه، ووصّلوه لمساعدة (١٦٣٢٨ / ١٢٣) — متسيبوش لوحده.</li>
+    </ul>
+    <div class="note">🕌 <b>السياق الديني والثقافي:</b> عند كتير مننا، الإيمان مصدر معنى وسند حقيقي في وقت الشدّة — وده يُحترَم. في نفس الوقت، طلب العلاج النفسي مايتعارضش مع الإيمان: «تداووا» مبدأ أصيل. متزن بيحمل الاتنين بصدق: لا بيختصر الإيمان في «آلية تكيّف»، ولا بيخلّيه يمنع حدّ عن رعاية يحتاجها.</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>متزن</b> · تحت المكتبة المصرية للوعي —
+  <span>معلومات التنقّل دي محو أميّة، مش إحالة ولا نصيحة طبّية شخصية.</span>
+  <div class="crisis">في أزمة أو خطر على نفسك أو غيرك: كلّم مختص، أو خط الدعم النفسي المصري <b style="direction:ltr;display:inline-block">16328</b>، أو الإسعاف <b style="direction:ltr;display:inline-block">123</b>.</div>
+  <p id="stamp" style="margin-top:12px;color:var(--dim);font-size:.75rem"></p>
+</div></footer>
+
+<script>document.write('<script src="claims.js?_=' + Date.now() + '"><\/script>')</script>
+<script>
+  const STAT = { established:{c:'var(--established)',ar:'مؤكّد',ic:'✔'}, contested:{c:'var(--contested)',ar:'متنازع عليه',ic:'⇄'}, debunked:{c:'var(--debunked)',ar:'مدحوض',ic:'✖'}, unknown:{c:'var(--unknown)',ar:'ما لا نعرفه',ic:'…'} };
+  const TIER={strong:'دليل قوي',contested:'دليل مختلط',weak:'دليل ناشئ',unknown:'مفتوح',debunked:'الدليل ضدّه'};
+  const S = window.SOURCES||{}, C = (window.CLAIMS||[]).filter(c=>c.phase===3);
+  const esc=(s)=>String(s==null?'':s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+  const ORDER={established:0,contested:1,unknown:2,debunked:3};
+  function card(c){
+    const st=STAT[c.status]||STAT.unknown; const src=(c.sources||[])[0]||{}; const s=S[src.srcId]||{};
+    return `<article class="card" style="--stat:${st.c}">
+      <div class="top"><span class="badge">${st.ic} ${st.ar}</span><span class="tier">${TIER[c.evidence_tier]||c.evidence_tier}</span></div>
+      <div class="claim">${esc(c.claim_ar)}</div>
+      <div class="en">${esc(c.claim_en)}</div>
+      ${c.cultural_note_ar?`<div class="cultural"><b>سياقنا:</b> ${esc(c.cultural_note_ar)}</div>`:''}
+      <div class="src"><span class="q">“${esc(src.quote_en||'')}”</span><a href="${esc(s.url||'#')}" target="_blank" rel="noopener">${esc(s.label||src.srcId||'')}</a></div>
+    </article>`;
+  }
+  const ordered=C.slice().sort((a,b)=>(ORDER[a.status]??9)-(ORDER[b.status]??9));
+  document.getElementById('whyGrid').innerHTML = ordered.map(card).join('') || '<p style="color:var(--muted)">…</p>';
+  document.getElementById('stamp').textContent = `المرحلة الثالثة — ${C.length} ادّعاءات مسنودة عن التنقّل وطلب المساعدة، كلها موثّقة من مصدر مسحوب ومتأكّد منه حرفيًا. الأرقام المصرية (16328/123/122/112) معلومات عامة موثّقة.`;
+
+  const tb=document.getElementById('themeBtn');
+  const setT=(t)=>{ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');tb.textContent='☀';} else {document.documentElement.removeAttribute('data-theme');tb.textContent='☾';} };
+  setT(localStorage.getItem('motazen-theme')||'light');
+  tb.onclick=()=>{ const dark=document.documentElement.getAttribute('data-theme')==='dark'; const n=dark?'light':'dark'; localStorage.setItem('motazen-theme',n); setT(n); };
+</script>
+</body>
+</html>

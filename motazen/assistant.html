@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>متزن · اسأل متزن — مساعد موثّق بالمصادر</title>
+<meta name="description" content="اسأل متزن عن الصحة النفسية. المساعد ده مبيخترعش إجابات — بيجاوب بس من مكتبة مصادر متزن الموثّقة، وبيقولك بصراحة لو مش عارف، وفي أي إشارة خطر بيوجّهك لمختص فورًا.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.85;-webkit-font-smoothing:antialiased;background:var(--paper);min-height:100vh;
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),
+      radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),
+      repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(70,90,75,.016) 0 1px, transparent 1px 3px);}
+  .wrap{max-width:760px;margin-inline:auto;padding:0 clamp(14px,4vw,28px)}
+  a{color:var(--sage)}
+  header.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px;max-width:1080px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep)}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px;background:none;border:none;cursor:pointer;font-family:inherit}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark{animation:none!important}}
+
+  .intro{text-align:center;padding:clamp(24px,5vw,44px) 0 4px}
+  .intro .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .intro h1{font-size:clamp(1.8rem,6vw,2.7rem);color:var(--sage-deep);font-weight:600;margin:8px 0 0}
+  .intro p{color:var(--muted);max-width:560px;margin:10px auto 0;font-size:.95rem}
+  .rules{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px}
+  .rules span{font-size:.75rem;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 12px}
+  .rules b{color:var(--sage-deep)}
+
+  /* chat log */
+  .log{display:flex;flex-direction:column;gap:14px;padding:18px 0 8px;min-height:32vh}
+  .msg{max-width:88%}
+  .msg.me{align-self:flex-start;background:var(--sage-deep);color:#f4efe2;border-radius:16px 16px 16px 5px;padding:11px 15px;font-weight:500}
+  .msg.bot{align-self:flex-end;width:100%}
+  .bot .lead{color:var(--ink);font-weight:600;margin-bottom:8px}
+  .bot .lead.warn{color:var(--contested)} .bot .lead.crisis{color:var(--debunked)}
+  /* grounded claim card */
+  .cl{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-inline-start:4px solid var(--stat);border-radius:14px;padding:14px 16px;margin-top:9px;box-shadow:var(--shadow)}
+  .cl .top{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px;background:color-mix(in srgb,var(--stat) 14%,transparent);color:var(--stat);border:1px solid color-mix(in srgb,var(--stat) 44%,transparent)}
+  .tier{font-size:.7rem;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:2px 8px}
+  .weird{font-size:.7rem;font-weight:700;color:var(--weak);background:color-mix(in srgb,var(--weak) 12%,transparent);border:1px solid color-mix(in srgb,var(--weak) 36%,transparent);border-radius:99px;padding:2px 8px}
+  .cl .claim{font-size:1rem;font-weight:500}
+  .cl .src{margin-top:9px;font-size:.78rem;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:9px 12px}
+  .cl .src .q{font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;color:var(--ink);opacity:.9;line-height:1.5}
+  .cl .src .cite{margin-top:5px}
+  .cl .src .cite a{font-weight:700;text-decoration:none;color:var(--sage-deep);word-break:break-word}
+  .cl .src .g{font-size:.64rem;color:var(--sage);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-inline-end:5px}
+  .refuse{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:14px 16px;color:var(--muted)}
+  .refuse b{color:var(--sage-deep)}
+  .crisisbox{background:color-mix(in srgb,var(--debunked) 10%,transparent);border:1.5px solid color-mix(in srgb,var(--debunked) 40%,transparent);border-radius:16px;padding:16px 18px}
+  .crisisbox b{color:var(--debunked)}
+  .crisisbox .num{font-size:1.5rem;font-weight:700;color:var(--debunked);direction:ltr;display:inline-block;margin-top:4px}
+
+  /* composer */
+  .composer{position:sticky;bottom:0;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:12px 0 18px;margin-top:8px}
+  .composer .row{display:flex;gap:9px;align-items:flex-end}
+  .composer textarea{flex:1;resize:none;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 15px;line-height:1.6;max-height:130px;min-height:48px}
+  .composer textarea:focus{outline:none;border-color:var(--sage-soft)}
+  .composer button.send{all:unset;cursor:pointer;background:var(--sage-deep);color:#f4efe2;border-radius:14px;padding:0 20px;height:48px;font-weight:700;font-family:inherit;flex:none}
+  .composer button.send:hover{filter:brightness(1.08)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:10px}
+  .chips button{all:unset;cursor:pointer;font-size:.8rem;color:var(--sage-deep);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+  .chips button:hover{border-color:var(--sage-soft)}
+  .disclaim{text-align:center;color:var(--dim);font-size:.72rem;margin-top:8px}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرحلة</a>
+  <a class="lnk" href="phase0.html">المرحلة صفر</a>
+  <a class="lnk" href="phase1.html">المجالات</a>
+  <a class="lnk" href="exercises.html">التمارين</a>
+  <a class="lnk" href="navigation.html">التنقّل</a>
+  <a class="lnk" href="assess.html">الاتزان</a>
+  <a class="lnk" href="game.html">احكم بنفسك</a>
+  <a class="lnk" href="scenarios.html">مواقف</a>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <div class="eyebrow">مساعد · موثّق بالمصادر</div>
+    <h1>اسأل متزن</h1>
+    <p>المساعد ده <b style="color:var(--sage-deep)">مبيخترعش إجابات</b>. بيجاوبك بس من مكتبة متزن الموثّقة — لو لقى ادّعاء بمصدر يخصّ سؤالك عرضهولك بحالته، ولو ملقاش قالك بصراحة «مش عارف».</p>
+    <div class="rules">
+      <span>✔ <b>بمصدر</b> أو <b>مش عارف</b></span>
+      <span>✖ مش بيشخّص ولا بيصف علاج</span>
+      <span>⚑ أي إشارة خطر → مختص فورًا</span>
+    </div>
+  </div>
+
+  <div class="log" id="log"></div>
+</div>
+
+<div class="composer"><div class="wrap">
+  <div class="chips" id="chips"></div>
+  <div class="row">
+    <textarea id="inp" rows="1" placeholder="اكتب سؤالك عن الصحة النفسية…" aria-label="سؤالك"></textarea>
+    <button class="send" id="send">اسأل</button>
+  </div>
+  <div class="disclaim">متزن أداة محو أمية — مش تشخيص، مش علاج، مش بديل عن مختص. في أزمة: خط الدعم النفسي المصري <b style="direction:ltr;display:inline-block">16328</b>.</div>
+</div></div>
+
+<script>document.write('<script src="claims.js?_=' + Date.now() + '"><\/script>')</script>
+<script>
+  const STAT = { established:{c:'var(--established)',ar:'مؤكّد',ic:'✔'}, contested:{c:'var(--contested)',ar:'متنازع عليه',ic:'⇄'}, debunked:{c:'var(--debunked)',ar:'مدحوض',ic:'✖'}, unknown:{c:'var(--unknown)',ar:'ما لا نعرفه',ic:'…'} };
+  const TIER = { strong:'دليل قوي', contested:'دليل مختلط', weak:'دليل ضعيف', debunked:'الدليل ضدّه', unknown:'مفتوح' };
+  const S = window.SOURCES||{}, C = window.CLAIMS||[];
+  const esc=(s)=>String(s==null?'':s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+
+  // ── Arabic-light normalization + tokenization for retrieval ──
+  const norm=(s)=>String(s||'').toLowerCase()
+    .replace(/[إأآا]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/ؤ/g,'و').replace(/ئ/g,'ي')
+    .replace(/[ً-ْ]/g,'') // strip diacritics
+    .replace(/[^؀-ۿ a-z0-9]/g,' ').replace(/\s+/g,' ').trim();
+  const STOP=new Set('في من على عن الي اللي ده دي ان انه هو هي مع كل ما مش ولا او و يا هل ليه ازاي اي انا احنا كان يكون بيكون عشان علشان لان'.split(' '));
+  const toks=(s)=>norm(s).split(' ').filter(t=>t.length>2&&!STOP.has(t));
+
+  // precompute each claim's searchable token bag
+  const DOCS = C.map(c=>({c, bag:new Set(toks((c.claim_ar||'')+' '+(c.claim_en||'')+' '+(c.uncertainty_note_ar||'')+' '+(c.cultural_note_ar||'')))}));
+
+  // curated topic→station map: colloquial Egyptian phrasings a user would actually type, mapped to the
+  // Below-Zero question each belongs to. Token overlap alone misses these (vocab rarely matches the
+  // academic claim text), so we BOOST claims whose station a query's topic keywords point at.
+  const TOPICS = {
+    1:['تعريف','يعني ايه','الصحه النفسيه','صحه نفسيه','معنى','مفهوم','رفاه','سعاده','غياب المرض','طيف','متصل'],
+    2:['عقل','مخ','دماغ','جسد','جسدي','نفسي وجسدي','كيمياء','كيميائي','سيروتونين','روح','هرمون','عصبي','بيولوجي'],
+    3:['مهم','اهميه','مهمه','رفاهيه','عبء','خطير','قد ايه','ولا مش مهم','لا صحه بدون'],
+    4:['دليل','اثبات','حدس','خبره شخصيه','تجربه شخصيه','قصه','سمعت','الكل بيقول','بيتكرر','تكرار الكلام','متاكد منين'],
+    5:['دراسه','دراسات','تجربه','بحث','ابحاث','عينه','غربيه','امريكان','ناس زينا','مش زينا','weird','تكرار النتائج','اثبتت','علميا','منهج','ازمه'],
+    6:['عادي','طبيعي','اضطراب','حزن','اكتئاب','ضيق','تشخيص','مرض ولا','فقدان','حداد','متى يصبح','الحد','الخط'],
+    7:['مين بيقرر','بيقرر','قرار','dsm','icd','تصنيف','دليل تشخيصي','مقدس','مين حدد','سلطه','بيتوسع'],
+  };
+  const TOPICN = Object.fromEntries(Object.entries(TOPICS).map(([q,arr])=>[q,arr.map(norm)]));
+  function stationBoost(nq){ // nq = normalized query string
+    const sc={}; for(const [q,arr] of Object.entries(TOPICN)){ let h=0; for(const kw of arr) if(nq.includes(kw)) h++; if(h) sc[q]=h; } return sc;
+  }
+
+  // ── SAFETY GATES (checked in order, BEFORE any retrieval) ──
+  // 1. crisis — non-bypassable. If any crisis cue appears, we ONLY route to help.
+  const CRISIS=[/انتحار/,/انتحر/,/اقتل نفس/,/هقتل نفس/,/اذي نفس/,/اؤذي نفس/,/اموت/,/عايز اموت/,/مش عايز اعيش/,/انهي حيات/,/انهاء حيات/,/افني نفس/,/مليش لازمه/,/suicid/,/kill myself/,/end my life/,/self.?harm/,/hurt myself/,/want to die/];
+  // 2. scope — متزن does NOT diagnose or prescribe. Route those to a professional.
+  const CLINICAL=[/شخصني/,/شخصلي/,/عندي ايه/,/انا مريض/,/انا عندي/,/ايه العلاج/,/انهي دوا/,/اي دوا/,/جرعه/,/وصفه/,/اسم دوا/,/diagnos/,/prescri/,/what medication/,/should i take/];
+
+  const logEl=document.getElementById('log');
+  function add(html,cls){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=html;logEl.appendChild(d);d.scrollIntoView({behavior:'smooth',block:'end'});return d;}
+
+  function claimCard(c){
+    const st=STAT[c.status]||STAT.unknown;
+    const weird=c.weird_flag==='yes'?`<span class="weird">⚑ ناس مش زيّنا</span>`:'';
+    const so=(c.sources||[])[0]; const s=so?(S[so.srcId]||{}):{};
+    const src=so?`<div class="src"><div class="q">“${esc(so.quote_en)}”</div><div class="cite"><span class="g">${esc(s.tier||'')}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label||so.srcId)}</a></div></div>`:'';
+    return `<div class="cl" style="--stat:${st.c}"><div class="top"><span class="badge">${st.ic} ${st.ar}</span><span class="tier">${TIER[c.evidence_tier]||c.evidence_tier}</span>${weird}</div><div class="claim">${esc(c.claim_ar)}</div>${src}</div>`;
+  }
+
+  function retrieve(q){
+    const qt=new Set(toks(q)); if(!qt.size) return [];
+    const nq=norm(q); const boost=stationBoost(nq);
+    const scored=DOCS.map(d=>{
+      let tok=0; for(const t of qt) if(d.bag.has(t)) tok++;      // token overlap with claim text
+      const b=(boost[d.c.question]||0)*2;                        // station-topic boost (weighted)
+      return {c:d.c, score:tok+b, tok, b};
+    })
+    // accept a claim if it shares ≥2 content tokens OR its station is topically matched with some token support
+    .filter(x=> x.tok>=2 || (x.b>0 && x.tok>=1) || x.b>=4)
+    .sort((a,b)=> b.score-a.score || (a.c.status==='established'?-1:1)); // ties: prefer established
+    return scored.slice(0,3).map(x=>x.c);
+  }
+
+  function answer(q){
+    add(esc(q),'me');
+    // GATE 1 — crisis (non-bypassable, first, no retrieval)
+    if(CRISIS.some(r=>r.test(norm(q)))){
+      add(`<div class="crisisbox"><div class="lead crisis">كلامك مهم، وإنت مش لوحدك دلوقتي.</div>
+        متزن أداة تعليمية — مش المكان الصح للحظة دي. لو فيه أي فكرة إنك تأذي نفسك، من فضلك اتواصل حالًا مع حد يقدر يساعد فعلًا:
+        <br><b>خط الدعم النفسي (مصر):</b> <span class="num">16328</span>
+        <br><b>الإسعاف / الطوارئ:</b> <span class="num">123</span>
+        <br>لو تقدر، كلّم حد قريب منك دلوقتي، أو روح أقرب مستشفى. إنت تستاهل مساعدة حقيقية من إنسان.</div>`,'bot');
+      return;
+    }
+    // GATE 2 — clinical (diagnosis / prescription) out of scope
+    if(CLINICAL.some(r=>r.test(norm(q)))){
+      add(`<div class="refuse"><b>ده خارج دور متزن.</b> متزن بيعلّمك <b>تفكّر إزاي</b> في الصحة النفسية — لكنه مبيشخّصش حالتك ومبيوصفش دوا. التشخيص والعلاج قرار لمختص بيشوفك. لو محتاج، ابدأ بطبيب نفسي أو أخصائي، وفي أزمة كلّم <b style="direction:ltr;display:inline-block">16328</b>.</div>`,'bot');
+      return;
+    }
+    // GATE 3 — retrieval from the grounded library
+    const hits=retrieve(q);
+    if(!hits.length){
+      add(`<div class="refuse"><b>مش لاقي ده في المكتبة لحد دلوقتي.</b> متزن مبيخترعش إجابات — لو مفيش ادّعاء بمصدر يخصّ سؤالك، بنقول بصراحة «مش عارفين». ممكن تجرّب صياغة تانية، أو تتفرّج على <a href="index.html#descent">الرحلة</a> اللي فيها أسس الموضوع.</div>`,'bot');
+      return;
+    }
+    const hasContested=hits.some(c=>c.status==='contested'||c.status==='unknown');
+    const lead = hasContested
+      ? `اللي المكتبة تقدر تقوله عن سؤالك — وفيه نقطة مش محسومة، فبنوريك حالتها بصراحة:`
+      : `اللي المكتبة تقدر تأكّده عن سؤالك، كل واحد بمصدره وحالته:`;
+    add(`<div class="lead ${hasContested?'warn':''}">${lead}</div>${hits.map(claimCard).join('')}
+        <div style="margin-top:10px;font-size:.82rem;color:var(--muted)">لاحظ الحالة (مؤكّد / متنازع / ما لا نعرفه) قبل ما تبني عليها — ده جوهر متزن.</div>`,'bot');
+  }
+
+  // sample prompts
+  const SAMPLES=['الصحة النفسية يعني إيه بالظبط؟','هل الاكتئاب كيمياء في المخ بس؟','الدراسات النفسية اتعملت على مين؟','مين اللي بيقرّر إيه اللي يتحسب اضطراب؟','هل الحزن الطبيعي مرض؟'];
+  document.getElementById('chips').innerHTML=SAMPLES.map(s=>`<button data-q="${esc(s)}">${esc(s)}</button>`).join('');
+  document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;inp.value=b.dataset.q;submit();});
+
+  const inp=document.getElementById('inp');
+  inp.addEventListener('input',()=>{inp.style.height='auto';inp.style.height=Math.min(inp.scrollHeight,130)+'px';});
+  function submit(){const q=inp.value.trim();if(!q)return;answer(q);inp.value='';inp.style.height='auto';}
+  document.getElementById('send').onclick=submit;
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();submit();}});
+
+  // greeting
+  add(`<div class="lead">أهلًا 👋 اسألني أي حاجة عن الصحة النفسية كـ<b>فكرة</b> — أنا هرجّعلك اللي المكتبة تقدر تأكّده بمصدره، وبحالته بصراحة. جرّب سؤال من تحت.</div>`,'bot');
+
+  const tb=document.getElementById('themeBtn');
+  const setT=(t)=>{ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');tb.textContent='☀';} else {document.documentElement.removeAttribute('data-theme');tb.textContent='☾';} };
+  setT(localStorage.getItem('motazen-theme')||'light');
+  tb.onclick=()=>{ const dark=document.documentElement.getAttribute('data-theme')==='dark'; const n=dark?'light':'dark'; localStorage.setItem('motazen-theme',n); setT(n); };
+</script>
+</body>
+</html>

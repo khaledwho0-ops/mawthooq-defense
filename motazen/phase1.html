@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>المرحلة الأولى · المجالات — متزن</title>
+<meta name="description" content="المرحلة الأولى من متزن: تطواف المجالات. كل منطقة (المزاج، القلق، الضغط والنوم…) بنفس الانضباط — بتحسّ بإيه من جوّه، إيه المؤكّد، إيه المتنازع عليه، إيه اللي منعرفوش، وفين الخط بين الطبيعي والاضطراب. كل ادّعاء بمصدره وحالته.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  /* متزن identity — النَّفَس والورق (breath & paper), shared with index/phase0. Phase 1 = touring the regions. */
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.9;-webkit-font-smoothing:antialiased;background:var(--paper);
+    background-image:radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px),repeating-linear-gradient(90deg, rgba(70,90,75,.016) 0 1px, transparent 1px 3px);}
+  .wrap{max-width:1080px;margin-inline:auto;padding:0 clamp(16px,4vw,36px)}
+  a{color:var(--sage)}
+  header.bar{position:sticky;top:0;z-index:30;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep)}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  .bar a.lnk.here{color:var(--sage-deep);background:color-mix(in srgb,var(--sage-soft) 14%,transparent)}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark,.breath-orb{animation:none!important}}
+  .hero{position:relative;text-align:center;padding:clamp(40px,8vw,78px) 0 clamp(12px,2vw,20px);overflow:hidden}
+  .breath-orb{position:absolute;inset-inline-start:50%;top:clamp(24px,6vw,50px);width:min(280px,60vw);aspect-ratio:1;transform:translateX(50%);border-radius:50%;background:radial-gradient(circle,var(--breath-glow),transparent 62%);filter:blur(6px);z-index:0;animation:breathe 10s ease-in-out infinite}
+  .hero .in{position:relative;z-index:1}
+  .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .hero h1{font-size:clamp(2.2rem,7vw,3.6rem);line-height:1.05;margin:14px 0 0;font-weight:600;color:var(--sage-deep)}
+  .hero .tag{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:clamp(1.02rem,2.6vw,1.35rem);color:var(--ink);margin-top:12px}
+  .hero .sub{color:var(--muted);max-width:660px;margin:14px auto 0;font-size:clamp(.96rem,2.1vw,1.06rem)}
+  .backlink{display:inline-flex;gap:6px;align-items:center;margin-top:16px;font-size:.84rem;font-weight:600;text-decoration:none;color:var(--sage);border:1px solid var(--line);border-radius:99px;padding:6px 15px;background:var(--card)}
+  .backlink:hover{color:var(--ink)}
+  /* a persistent safety banner — Phase 1 domains are crisis-adjacent (PRD §14) */
+  .safety{max-width:760px;margin:20px auto 0;display:flex;gap:12px;align-items:flex-start;background:color-mix(in srgb,var(--sage-soft) 12%,transparent);border:1px solid color-mix(in srgb,var(--sage-soft) 34%,transparent);border-radius:16px;padding:14px 18px;text-align:start}
+  .safety .ic{font-size:1.2rem;flex:none;margin-top:2px}
+  .safety p{color:var(--ink);font-size:.9rem;margin:0}
+  .safety b{color:var(--sage-deep)}
+  .safety .n{direction:ltr;display:inline-block;font-weight:700;color:var(--sage-deep)}
+  /* domain nav pills */
+  .domnav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+  .domnav a{text-decoration:none;font-size:.85rem;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:99px;padding:7px 16px}
+  .domnav a:hover{color:var(--ink);border-color:var(--sage-soft)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .lg{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 13px;font-size:.79rem;color:var(--muted)}
+  .dot{width:9px;height:9px;border-radius:99px;flex:none}
+  .journey{position:relative;padding:14px 0 30px}
+  .station{position:relative;padding:30px 0 8px;scroll-margin-top:74px;border-top:1px solid var(--line)}
+  .station:first-child{border-top:none}
+  .station .head{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+  .stnum{flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.7rem;background:var(--card);border:1.6px solid var(--sage-soft);box-shadow:0 0 0 6px var(--paper)}
+  .station .htext{flex:1;min-width:0}
+  .station .kick{font-size:.72rem;letter-spacing:.18em;font-weight:700;color:var(--sage)}
+  .station h3{font-size:clamp(1.35rem,4.4vw,1.95rem);color:var(--ink);font-weight:600;line-height:1.3;margin:3px 0 0}
+  .station .frame{color:var(--muted);font-size:.98rem;margin-top:8px;max-width:74ch}
+  .station .scount{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .station .scount i{font-style:normal;font-size:.73rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:3px 10px;display:inline-flex;gap:5px;align-items:center}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;padding:4px 0 8px}
+  .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;border-inline-start:4px solid var(--stat);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+  .card:hover{transform:translateY(-3px)}
+  .card .top{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:13px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:4px 11px;border-radius:99px;background:color-mix(in srgb,var(--stat) 14%,transparent);color:var(--stat);border:1px solid color-mix(in srgb,var(--stat) 44%,transparent)}
+  .tier{font-size:.72rem;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
+  .weird{font-size:.72rem;font-weight:700;color:var(--weak);background:color-mix(in srgb,var(--weak) 12%,transparent);border:1px solid color-mix(in srgb,var(--weak) 38%,transparent);border-radius:99px;padding:3px 9px}
+  .cflag{font-size:.72rem;font-weight:700;color:var(--debunked);background:color-mix(in srgb,var(--debunked) 10%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 34%,transparent);border-radius:99px;padding:3px 9px}
+  .card .claim{font-size:1.14rem;font-weight:500;line-height:1.85}
+  .card .en{color:var(--muted);font-size:.85rem;font-family:var(--lat);direction:ltr;text-align:left;margin-top:9px;line-height:1.55}
+  .card .cultural{margin-top:11px;font-size:.9rem;color:var(--ink);background:color-mix(in srgb,var(--sage-soft) 10%,transparent);border:1px solid color-mix(in srgb,var(--sage-soft) 30%,transparent);border-radius:13px;padding:10px 13px}
+  .card .cultural b{color:var(--sage-deep);font-weight:700}
+  details{margin-top:13px;border-top:1px dashed var(--line);padding-top:11px}
+  details summary{cursor:pointer;font-size:.82rem;font-weight:700;color:var(--sage);list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:'؟ ';opacity:.7}
+  details .note{color:var(--muted);font-size:.9rem;margin-top:7px}
+  .dissent{margin-top:9px;font-size:.85rem;color:var(--muted);border-inline-start:3px solid color-mix(in srgb,var(--contested) 60%,transparent);padding-inline-start:10px}
+  .dissent b{color:var(--contested);font-weight:700}
+  .src{margin-top:11px;background:var(--card-2);border:1px solid var(--line);border-radius:13px;padding:11px 14px;font-size:.82rem}
+  .src .q{color:var(--ink);font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;opacity:.92;line-height:1.5}
+  .src .cite{margin-top:7px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .src .cite a{font-weight:700;text-decoration:none;word-break:break-word;color:var(--sage-deep)}
+  .src .g{font-size:.66rem;color:var(--sage);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+  .src .dis{font-size:.66rem;color:var(--contested);border:1px solid color-mix(in srgb,var(--contested) 40%,transparent);border-radius:6px;padding:1px 6px;font-weight:700}
+  .card.iunknown{background:repeating-linear-gradient(135deg,var(--card) 0 10px,var(--card-2) 10px 20px);border-style:dashed}
+  .pending{text-align:center;color:var(--muted);padding:40px 20px;border:1px dashed var(--line);border-radius:18px;margin:20px 0;background:var(--card)}
+  .endcard{margin:22px 0 12px;text-align:center;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:22px;padding:32px 24px;box-shadow:var(--shadow)}
+  .endcard .z{font-size:.74rem;letter-spacing:.2em;color:var(--sage);font-weight:700}
+  .endcard h3{font-size:clamp(1.3rem,4.2vw,1.85rem);color:var(--sage-deep);font-weight:600;margin:6px 0 8px}
+  .endcard p{color:var(--muted);max-width:600px;margin:0 auto;font-size:.96rem}
+  .endcard .soon{display:inline-block;margin-top:14px;font-size:.8rem;color:var(--dim);border:1px dashed var(--line);border-radius:99px;padding:6px 16px}
+  footer{border-top:1px solid var(--line);padding:26px 0 60px;text-align:center;color:var(--dim);font-size:.84rem}
+  footer b{color:var(--ink)}
+  .crisis{max-width:640px;margin:10px auto 0;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 30%,transparent);border-radius:14px;padding:12px 16px;color:var(--ink);font-size:.85rem}
+  .crisis b{color:var(--debunked)}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:1rem" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرحلة</a>
+  <a class="lnk" href="phase0.html">المرحلة صفر</a>
+  <a class="lnk here" href="phase1.html">المجالات</a>
+  <a class="lnk" href="game.html">احكم بنفسك</a>
+  <a class="lnk" href="scenarios.html">مواقف</a>
+  <a class="lnk" href="assistant.html">اسأل متزن</a>
+</div></header>
+
+<span id="top"></span>
+<section class="hero">
+  <div class="breath-orb" aria-hidden="true"></div>
+  <div class="wrap in">
+    <div class="eyebrow">المرحلة الأولى · المجالات</div>
+    <h1>تطواف المناطق</h1>
+    <div class="tag">معاك الخريطة والنضّارة. دلوقتي نطوف أول المناطق — واحدة واحدة، بنفس الانضباط.</div>
+    <p class="sub">كل منطقة بنمشي فيها نفس الخط: بتحسّ بإيه من جوّه · إيه المؤكّد · إيه المتنازع عليه · إيه اللي منعرفوش · وفين الخط الرفيّع بين الطبيعي والاضطراب. مفيش تشخيص، مفيش وصفة — ده محو أميّة.</p>
+    <a class="backlink" href="phase0.html">→ رجوع لخريطة الأرض</a>
+
+    <div class="safety">
+      <span class="ic">🫂</span>
+      <p>المحطّات دي بتتكلّم عن الاكتئاب والقلق والضغط. لو أي حاجة هنا بتوصفك دلوقتي وبتتعب منها، ده مؤشّر تكلّم مختص — مش تشخّص نفسك. لو فيه خطر على نفسك أو غيرك، اتّصل حالًا: <b>الإسعاف <span class="n">123</span> · الدعم النفسي <span class="n">16328</span></b>.</p>
+    </div>
+
+    <div class="domnav" id="domnav"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+</section>
+
+<section id="domains"><div class="wrap">
+  <div class="journey" id="journey"></div>
+
+  <div class="endcard">
+    <div class="z">المرحلة الأولى · مستمرّة</div>
+    <h3>المناطق بتتفتح واحدة واحدة — كل واحدة تحت نفس القانون.</h3>
+    <p>بنبدأ بأعلى ثلاث مناطق عبئًا (المزاج، القلق، الضغط والنوم). بعدها الصدمة، الانتباه، والطيف الذُّهاني — كلها بنفس الشكل: مؤكّد / متنازع / ما لا نعرفه / الخط بين الطبيعي والاضطراب.</p>
+    <span class="soon">مناطق إضافية — قيد البناء</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <b>متزن</b> · تحت المكتبة المصرية للوعي —
+  <span>القانون الواحد: <b>مفيش ادّعاء بيوصلك من غير مصدر حقيقي تقدر ترجعله، ومن غير ما نقولك حالته.</b></span>
+  <div class="crisis">دي أداة <b>محو أمية</b> — مش تشخيص، مش علاج، مش بديل عن مختص. في أزمة أو خطر على نفسك أو غيرك: كلّم مختص، أو خط الدعم النفسي المصري <b style="direction:ltr;display:inline-block">16328</b>، أو الإسعاف <b style="direction:ltr;display:inline-block">123</b>.</div>
+  <p id="stamp" style="margin-top:12px;color:var(--dim);font-size:.75rem"></p>
+</div></footer>
+
+<script>document.write('<script src="claims.js?_=' + Date.now() + '"><\/script>')</script>
+<script>
+  const STAT = { established:{c:'var(--established)',ar:'مؤكّد',ic:'✔'}, contested:{c:'var(--contested)',ar:'متنازع عليه',ic:'⇄'}, debunked:{c:'var(--debunked)',ar:'مدحوض',ic:'✖'}, unknown:{c:'var(--unknown)',ar:'ما لا نعرفه',ic:'…'} };
+  const TIER = { strong:'دليل قوي', contested:'دليل مختلط', weak:'دليل ضعيف', debunked:'الدليل ضدّه', unknown:'مفتوح' };
+  // Phase-1 domains (top-burden first). `key` matches claims' `domain` field; agents write d1/d2/d3.json.
+  const DOMAINS = [
+    {key:'مزاج',     icon:'🌧️', kick:'المنطقة الأولى', t:'المزاج والاكتئاب', frame:'الحزن مش الاكتئاب. المنطقة دي بتفرّق بين المزاج المنخفض الطبيعي والاضطراب — بمؤشّراته، بأدلّته، وبالجدل الحقيقي حواليه.'},
+    {key:'قلق',      icon:'🌊', kick:'المنطقة الثانية', t:'القلق والخوف', frame:'الخوف استجابة طبيعية ومفيدة. القلق بيبقى اضطراب لمّا يزيد ويستمرّ ويعطّل — فين الخط، وإيه اللي بيساعد فعلاً؟'},
+    {key:'ضغط ونوم', icon:'🌙', kick:'المنطقة الثالثة', t:'الضغط والنوم', frame:'جسمك جوّه القصّة. الضغط المزمن والأرق — إيه المؤكّد، وإيه خرافات «الديتوكس» و«النوم ٨ ساعات للكل» اللي بتتباع.'},
+    {key:'صدمة', icon:'🌩️', kick:'المنطقة الرابعة', t:'الصدمة النفسية', frame:'الصدمة مش ضعف. أغلب الناس بتتعافى، والعلاج له طريق — بس فيه ممارسات «بنيّة طيّبة» طلعت ممكن تأذي. نمشي بحذر وكرامة.'},
+    {key:'انتباه', icon:'🎯', kick:'المنطقة الخامسة', t:'الانتباه وفرط الحركة', frame:'مش «كله عنده ADHD شويّة». نفرّق بين التشتّت العادي والاضطراب الحقيقي — ونكسر خرافات «السكّر» و«التربية» و«الشاشات».'},
+    {key:'ذهان', icon:'🌀', kick:'المنطقة السادسة', t:'الطيف الذُّهاني', frame:'أكتر منطقة محمّلة بالوصمة — فبنتعامل معاها بأقصى كرامة. الخرافة الأخطر: «خطر وعنيف». الحقيقة عكسها تمامًا.'},
+  ];
+  const ORDER = {established:0, contested:1, weak:2, debunked:3, unknown:4};
+  const S = window.SOURCES||{}, C = (window.CLAIMS||[]).filter(c=>c.phase===1);
+  const esc=(s)=>String(s==null?'':s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+
+  document.getElementById('legend').innerHTML = Object.entries(STAT).map(([k,v])=>`<span class="lg"><span class="dot" style="background:${v.c}"></span>${v.ic} ${v.ar}</span>`).join('') + `<span class="lg"><span class="dot" style="background:var(--weak)"></span>⚑ اتّجرّب على ناس زيّنا؟</span>`;
+  document.getElementById('domnav').innerHTML = DOMAINS.map(d=>`<a href="#dom-${encodeURIComponent(d.key)}">${d.icon} ${esc(d.t)}</a>`).join('');
+
+  function card(c){
+    const st = STAT[c.status]||STAT.unknown;
+    const weird = c.weird_flag==='yes' ? `<span class="weird">⚑ اتّجرّب على ناس مش زيّنا</span>` : c.weird_flag==='no' ? `<span class="tier">⚑ بيانات عالمية</span>` : '';
+    const cflag = c.crisis_sensitive ? `<span class="cflag">🫂 موضوع حسّاس</span>` : '';
+    const srcs = (c.sources||[]).map(so=>{const s=S[so.srcId]||{};const dis=s.dissent?`<span class="dis">الرأي المقابل</span>`:'';return `<div class="src"><div class="q">“${esc(so.quote_en)}”</div><div class="cite"><span class="g">${esc(s.tier||'')}</span>${dis}<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label||so.srcId)}</a></div></div>`;}).join('');
+    const cultural = c.cultural_note_ar ? `<div class="cultural"><b>سياقنا:</b> ${esc(c.cultural_note_ar)}</div>` : '';
+    const dissent = c.dissent ? `<div class="dissent"><b>الخلاف:</b> ${esc(c.dissent)}</div>` : '';
+    const note = c.uncertainty_note_ar ? `<details><summary>اللي لازم تعرفه عن الادّعاء ده</summary><div class="note">${esc(c.uncertainty_note_ar)}</div></details>` : '';
+    return `<article class="card ${c.status==='unknown'?'iunknown':''}" style="--stat:${st.c}">
+      <div class="top"><span class="badge">${st.ic} ${st.ar}</span><span class="tier">${TIER[c.evidence_tier]||c.evidence_tier}</span>${weird}${cflag}</div>
+      <div class="claim">${esc(c.claim_ar)}</div>
+      <div class="en">${esc(c.claim_en)}</div>
+      ${cultural}${dissent}${note}${srcs}
+    </article>`;
+  }
+  function counts(claims){const by={};for(const c of claims)by[c.status]=(by[c.status]||0)+1;return Object.entries(STAT).filter(([k])=>by[k]).map(([k,v])=>`<i><span class="dot" style="background:${v.c}"></span>${by[k]} ${v.ar}</i>`).join('');}
+
+  function draw(){
+    const jn = document.getElementById('journey');
+    jn.innerHTML = DOMAINS.map(dom=>{
+      const claims = C.filter(c=>c.domain===dom.key).sort((a,b)=>(ORDER[a.status]??9)-(ORDER[b.status]??9));
+      const body = claims.length
+        ? `<div class="scount">${counts(claims)}</div></div></div><div class="grid">${claims.map(card).join('')}</div>`
+        : `</div></div><div class="pending">المنطقة دي لسه بتتجهّز — المحتوى بيتّبني تحت القانون الواحد (كل ادّعاء بمصدر مسحوب ومتأكّد منه حرفيًا). قريبًا.</div>`;
+      return `<section class="station" id="dom-${encodeURIComponent(dom.key)}">
+        <div class="head">
+          <div class="stnum">${dom.icon}</div>
+          <div class="htext">
+            <div class="kick">${esc(dom.kick)}</div>
+            <h3>${esc(dom.t)}</h3>
+            <p class="frame">${esc(dom.frame)}</p>
+        ${body}
+      </section>`;
+    }).join('');
+  }
+
+  const total = C.length;
+  document.getElementById('stamp').textContent = total
+    ? `المرحلة الأولى — ${total} ادّعاء عبر ${new Set(C.map(c=>c.domain)).size} منطقة، كلها موثّقة من مصدر مسحوب واتّهاشِت بالكود، والاقتباس متأكّد منه حرفيًا.`
+    : `المرحلة الأولى — المناطق بتتّبني دلوقتي تحت القانون الواحد. كل منطقة بتظهر أول ما ادّعاءاتها تعدّي الجدار الناري.`;
+
+  const tb=document.getElementById('themeBtn');
+  const setT=(t)=>{ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');tb.textContent='☀';} else {document.documentElement.removeAttribute('data-theme');tb.textContent='☾';} };
+  setT(localStorage.getItem('motazen-theme')||'light');
+  tb.onclick=()=>{ const dark=document.documentElement.getAttribute('data-theme')==='dark'; const n=dark?'light':'dark'; localStorage.setItem('motazen-theme',n); setT(n); };
+
+  draw();
+</script>
+</body>
+</html>

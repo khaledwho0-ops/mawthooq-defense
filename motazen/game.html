@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>متزن · احكم بنفسك — لعبة التمييز</title>
+<meta name="description" content="لعبة متزن: اقرأ ادّعاء نفسي، واحكم بنفسك على حالته — مؤكّد؟ متنازع عليه؟ مدحوض؟ ولا لسه مجهول؟ — بعدين شوف الحقيقة بمصدرها. الهدف مش إنك تكون صح، الهدف إنك تلاحظ إزاي بتقرّر.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  /* shares متزن's "breath & paper" identity (see index.html). Paper-light default, opt-in ☾ night. */
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.9;-webkit-font-smoothing:antialiased;background:var(--paper);
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),
+      radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),
+      repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(70,90,75,.016) 0 1px, transparent 1px 3px);}
+  .wrap{max-width:760px;margin-inline:auto;padding:0 clamp(16px,4vw,32px)}
+  a{color:var(--sage)}
+  header.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px;max-width:1080px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep)}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px;background:none;border:none;cursor:pointer;font-family:inherit}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark{animation:none!important}}
+
+  .intro{text-align:center;padding:clamp(30px,6vw,54px) 0 8px}
+  .intro .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .intro h1{font-size:clamp(2rem,7vw,3rem);color:var(--sage-deep);font-weight:600;margin:10px 0 0}
+  .intro p{color:var(--muted);max-width:560px;margin:12px auto 0}
+  .intro .lead{font-family:'IBM Plex Serif',serif;font-style:italic;color:var(--ink);font-size:1.05rem;margin-top:10px}
+
+  /* scoreboard */
+  .score{display:flex;gap:10px;justify-content:center;margin:22px 0 6px;flex-wrap:wrap}
+  .score .s{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:9px 16px;text-align:center;min-width:96px}
+  .score .s b{display:block;font-size:1.5rem;color:var(--sage-deep);line-height:1.1}
+  .score .s span{font-size:.72rem;color:var(--muted)}
+
+  /* the play card */
+  .play{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:22px;padding:clamp(20px,4vw,30px);box-shadow:var(--shadow);margin:14px 0 30px;position:relative;overflow:hidden}
+  .play .qmeta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px;font-size:.74rem;color:var(--dim)}
+  .play .qmeta .st{border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-weight:600}
+  .play .claim{font-size:clamp(1.15rem,3.4vw,1.4rem);font-weight:500;line-height:1.8}
+  .play .en{color:var(--muted);font-size:.85rem;font-family:var(--lat);direction:ltr;text-align:left;margin-top:10px;line-height:1.55}
+  .ask{margin:20px 0 6px;font-weight:700;color:var(--sage-deep);font-size:1rem}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:520px){.opts{grid-template-columns:1fr}}
+  .opt{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:13px 16px;font-weight:600;transition:.16s;font-size:.95rem}
+  .opt:hover{border-color:var(--sage-soft);transform:translateY(-2px)}
+  .opt .oc{width:12px;height:12px;border-radius:50%;flex:none}
+  .opt:disabled{cursor:default;transform:none;opacity:.55}
+  .opt.correct{border-color:var(--established);background:color-mix(in srgb,var(--established) 14%,transparent);opacity:1}
+  .opt.wrong{border-color:var(--debunked);background:color-mix(in srgb,var(--debunked) 12%,transparent);opacity:1}
+
+  /* reveal */
+  .reveal{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px;display:none}
+  .reveal.show{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  .verdict{font-size:1.05rem;font-weight:700;margin-bottom:4px}
+  .verdict.ok{color:var(--established)} .verdict.no{color:var(--contested)}
+  .reveal .why{color:var(--muted);font-size:.93rem}
+  .reveal .tags{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}
+  .tag{font-size:.74rem;font-weight:700;border-radius:99px;padding:4px 11px;border:1px solid var(--line);color:var(--muted)}
+  .tag.stat{color:var(--stat);background:color-mix(in srgb,var(--stat) 12%,transparent);border-color:color-mix(in srgb,var(--stat) 40%,transparent)}
+  .tag.weird{color:var(--weak);background:color-mix(in srgb,var(--weak) 12%,transparent);border-color:color-mix(in srgb,var(--weak) 36%,transparent)}
+  .note{color:var(--muted);font-size:.9rem;margin-top:6px}
+  .note b{color:var(--sage-deep)}
+  .src{margin-top:12px;background:var(--card-2);border:1px solid var(--line);border-radius:13px;padding:11px 14px;font-size:.82rem}
+  .src .q{color:var(--ink);font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;opacity:.92;line-height:1.5}
+  .src .cite{margin-top:7px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .src .cite a{font-weight:700;text-decoration:none;word-break:break-word;color:var(--sage-deep)}
+  .src .g{font-size:.66rem;color:var(--sage);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+  .next{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--sage-deep);color:#f4efe2;border-radius:13px;padding:12px 22px;font-weight:700;font-family:inherit}
+  .next:hover{filter:brightness(1.08)}
+  .metacue{margin-top:14px;background:color-mix(in srgb,var(--sage-soft) 10%,transparent);border:1px solid color-mix(in srgb,var(--sage-soft) 28%,transparent);border-radius:13px;padding:11px 14px;font-size:.88rem;color:var(--ink)}
+  .metacue b{color:var(--sage-deep)}
+  footer{border-top:1px solid var(--line);padding:24px 0 60px;text-align:center;color:var(--dim);font-size:.82rem;margin-top:20px}
+  .crisis{max-width:600px;margin:8px auto 0;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 28%,transparent);border-radius:12px;padding:10px 14px;color:var(--ink);font-size:.82rem}
+  .crisis b{color:var(--debunked)}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرحلة</a>
+  <a class="lnk" href="phase0.html">المرحلة صفر</a>
+  <a class="lnk" href="phase1.html">المجالات</a>
+  <a class="lnk" href="exercises.html">التمارين</a>
+  <a class="lnk" href="navigation.html">التنقّل</a>
+  <a class="lnk" href="assess.html">الاتزان</a>
+  <a class="lnk" href="scenarios.html">مواقف</a>
+  <a class="lnk" href="assistant.html">اسأل متزن</a>
+</div></header>
+
+<div class="wrap">
+  <div class="intro">
+    <div class="eyebrow">لعبة · التمييز المعرفي</div>
+    <h1>احكم بنفسك</h1>
+    <div class="lead">الهدف مش إنك تطلع صح. الهدف إنك تلاحظ إزاي بتقرّر.</div>
+    <p>هنوريك ادّعاء نفسي حقيقي. احكم على حالته زي ما تحكم على أي كلام بيوصلك: مؤكّد علميًا؟ العلماء نفسهم مختلفين عليه؟ مدحوض؟ ولا لسه مجهول محدش يعرف إجابته؟ — بعدين نوريك الحقيقة بمصدرها.</p>
+  </div>
+
+  <div class="score">
+    <div class="s"><b id="scSeen">٠</b><span>ادّعاء شُفته</span></div>
+    <div class="s"><b id="scRight">٠</b><span>حكمت صح</span></div>
+    <div class="s"><b id="scStreak">٠</b><span>سلسلة متتالية</span></div>
+  </div>
+
+  <div class="play" id="play"><!-- filled by JS --></div>
+</div>
+
+<footer><div class="wrap">
+  كل ادّعاء في اللعبة مسحوب من مصدر حقيقي واتّهاشِت بالكود — نفس <b style="color:var(--ink)">القانون الواحد</b> بتاع متزن.
+  <div class="crisis">دي أداة <b>محو أمية</b> — مش تشخيص ولا علاج. في أزمة أو خطر: كلّم مختص، أو خط الدعم النفسي المصري <b style="direction:ltr;display:inline-block">16328</b>.</div>
+</div></footer>
+
+<script>document.write('<script src="claims.js?_=' + Date.now() + '"><\/script>')</script>
+<script>
+  const STAT = {
+    established:{c:'var(--established)',ar:'مؤكّد علميًا',ic:'✔',hint:'دليل قوي ومتّسق'},
+    contested:{c:'var(--contested)',ar:'متنازع عليه',ic:'⇄',hint:'العلماء نفسهم مختلفين'},
+    debunked:{c:'var(--debunked)',ar:'مدحوض',ic:'✖',hint:'الدليل ضدّه'},
+    unknown:{c:'var(--unknown)',ar:'لسه مجهول',ic:'…',hint:'محدش يعرف الإجابة بعد'},
+  };
+  const TIER = { strong:'دليل قوي', contested:'دليل مختلط', weak:'دليل ضعيف', debunked:'الدليل ضدّه', unknown:'سؤال مفتوح' };
+  const AR = (n)=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+  const esc=(s)=>String(s==null?'':s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));
+  // The deck excludes crisis_sensitive claims (e.g. depression/medication-adjacent from Phase-1 domains): a
+  // status-guessing game is the wrong place to surface sensitive symptom content. Those claims still live in
+  // the library, journey, and chatbot where their full context + crisis routing are present.
+  const S = window.SOURCES||{}, ALL = (window.CLAIMS||[]).filter(c=>!c.crisis_sensitive);
+
+  // metacognitive nudges — the point of the game is HOW you decide, not the score
+  const CUES = {
+    established:'لاحظت إنك صدّقته بسرعة؟ حتى المؤكّد علميًا، اسأل: منين عرفت؟ هنا الإجابة: مصدر تقدر ترجعله تحت.',
+    contested:'دي أصعب حالة: مش صح ومش غلط — العلم نفسه لسه بيتناقش. الأمانة إننا نوريك الطرفين، مش نختار لك.',
+    debunked:'حاجات كتير «معروفة» بتطلع مدحوضة. لو صدّقته، إنت مش وحدك — بس دلوقتي عندك الدليل.',
+    unknown:'أصعب اعتراف في العلم: «مش عارفين». مش كل سؤال ليه إجابة دلوقتي، وده مش عيب.',
+  };
+
+  let idx=0, order=[], seen=0, right=0, streak=0, answered=false;
+  function reshuffle(){ order = ALL.map((_,i)=>i); for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];} idx=0; }
+  reshuffle();
+
+  function render(){
+    answered=false;
+    const c = ALL[order[idx]];
+    const opts = Object.entries(STAT).map(([k,v])=>
+      `<button class="opt" data-k="${k}"><span class="oc" style="background:${v.c}"></span>${v.ic} ${v.ar}</button>`).join('');
+    document.getElementById('play').innerHTML = `
+      <div class="qmeta"><span class="st">ادّعاء رقم ${AR(seen+1)}</span><span>اقرأه بتمعّن — بعدين احكم</span></div>
+      <div class="claim">${esc(c.claim_ar)}</div>
+      <div class="en">${esc(c.claim_en)}</div>
+      <div class="ask">في تقديرك، حالة الادّعاء ده إيه؟</div>
+      <div class="opts" id="opts">${opts}</div>
+      <div class="reveal" id="reveal"></div>`;
+    document.querySelectorAll('#opts .opt').forEach(b=> b.onclick=()=>choose(b.dataset.k, c));
+  }
+
+  function choose(guess, c){
+    if(answered) return; answered=true; seen++;
+    const truth = c.status; const ok = guess===truth;
+    if(ok){ right++; streak++; } else { streak=0; }
+    // paint options
+    document.querySelectorAll('#opts .opt').forEach(b=>{
+      b.disabled=true;
+      if(b.dataset.k===truth) b.classList.add('correct');
+      else if(b.dataset.k===guess) b.classList.add('wrong');
+    });
+    const st = STAT[truth];
+    const src = (c.sources||[]).map(so=>{const s=S[so.srcId]||{};return `<div class="src"><div class="q">“${esc(so.quote_en)}”</div><div class="cite"><span class="g">${esc(s.tier||'')}</span><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label||so.srcId)}</a></div></div>`;}).join('');
+    const weird = c.weird_flag==='yes' ? `<span class="tag weird">⚑ اتّجرّب على ناس مش زيّنا</span>` : '';
+    const note = c.uncertainty_note_ar ? `<div class="note"><b>اللي لازم تعرفه:</b> ${esc(c.uncertainty_note_ar)}</div>` : '';
+    const rev = document.getElementById('reveal');
+    rev.style.setProperty('--stat', st.c);
+    rev.innerHTML = `
+      <div class="verdict ${ok?'ok':'no'}">${ok?'✔ حكمك مطابق للعلم':'⇄ العلم بيقول حاجة تانية'}</div>
+      <div class="why">الحالة الصحيحة: <b style="color:${st.c}">${st.ic} ${st.ar}</b> — ${esc(st.hint)}.</div>
+      <div class="tags"><span class="tag stat">${st.ic} ${st.ar}</span><span class="tag">${TIER[c.evidence_tier]||c.evidence_tier}</span>${weird}</div>
+      ${note}
+      ${src}
+      <div class="metacue"><b>وقفة:</b> ${esc(CUES[truth]||'')}</div>
+      <button class="next" id="next">الادّعاء اللي بعده ←</button>`;
+    rev.classList.add('show');
+    document.getElementById('next').onclick=advance;
+    document.getElementById('scSeen').textContent=AR(seen);
+    document.getElementById('scRight').textContent=AR(right);
+    document.getElementById('scStreak').textContent=AR(streak);
+    rev.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function advance(){ idx++; if(idx>=order.length) reshuffle(); render(); }
+
+  // theme
+  const tb=document.getElementById('themeBtn');
+  const setT=(t)=>{ if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');tb.textContent='☀';} else {document.documentElement.removeAttribute('data-theme');tb.textContent='☾';} };
+  setT(localStorage.getItem('motazen-theme')||'light');
+  tb.onclick=()=>{ const dark=document.documentElement.getAttribute('data-theme')==='dark'; const n=dark?'light':'dark'; localStorage.setItem('motazen-theme',n); setT(n); };
+
+  render();
+</script>
+</body>
+</html>

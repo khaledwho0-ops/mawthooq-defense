@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مستعد · Mosta'ed — استعِدّ للّي ممكن يحصل</title>
+<meta name="description" content="مستعد — منصّة الجاهزية تحت مكتبة الوعي المصري. مكتبة سيناريوهات حقيقية مصنّفة ومتدرّجة، كل خطوة موثّقة من مصدر رسمي.">
+<style>
+  :root{
+    --ink:#0d1411; --ink2:#101b16; --surface:#16221c; --surface2:#1c2b24; --line:rgba(160,200,180,.16);
+    --text:#EAF1EC; --muted:#9EB2A7; --dim:#75897e;
+    --safe:#2FB39A; --safe-2:#37c9a8; --gold:#C9A24B; --sand:#d9cbb0;
+    --l1:#2CA58D; --l2:#4BA36A; --l3:#E0A83E; --l4:#E07B39; --l5:#E0544E;
+    --danger:#E0544E;
+    --shadow:0 24px 60px -30px rgba(0,0,0,.75);
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --ink:#f3f1ea; --ink2:#efece2; --surface:#fbfaf5; --surface2:#f4f1e8; --line:rgba(30,60,45,.14);
+      --text:#16221c; --muted:#5a6b61; --dim:#7d8e83; --shadow:0 24px 55px -32px rgba(30,50,40,.4); }
+  }
+  *{margin:0;box-sizing:border-box}
+  body{background:radial-gradient(130% 70% at 50% -8%,#14231c,var(--ink) 60%);color:var(--text);
+    font-family:'Segoe UI',system-ui,'Noto Naskh Arabic','Tahoma',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  @media (prefers-color-scheme: light){ body{background:radial-gradient(130% 70% at 50% -8%,#e7ece3,var(--ink) 60%)} }
+  a{color:var(--safe-2)}
+  .wrap{max-width:1200px;margin-inline:auto;padding:0 clamp(14px,4vw,36px)}
+  /* ── top bar ── */
+  header.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--ink) 80%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:14px;padding-block:12px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.01em}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .brand b{font-size:1.25rem;background:linear-gradient(180deg,var(--safe-2),var(--safe) 55%,#1c7d6c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .brand .eal{font-size:.66rem;color:var(--dim);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-inline-start:4px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.link{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600;padding:7px 12px;border-radius:10px}
+  .bar a.link:hover{color:var(--text);background:var(--surface)}
+  /* ── hero ── */
+  .hero{text-align:center;padding:clamp(40px,8vw,88px) 0 clamp(26px,5vw,44px);position:relative;overflow:hidden}
+  .compass{width:clamp(120px,20vw,168px);height:auto;margin-inline:auto;display:block;filter:drop-shadow(0 0 34px rgba(47,179,154,.35));animation:spin 40s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.compass{animation:none}}
+  .hero h1{font-size:clamp(2.6rem,9vw,5rem);line-height:1;margin:18px 0 0;font-weight:900;
+    background:linear-gradient(180deg,#eafff8,var(--safe-2) 50%,#1c7d6c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .tag{font-size:clamp(1.05rem,3.4vw,1.5rem);color:var(--sand);margin-top:12px;font-weight:700}
+  .hero .sub{color:var(--muted);max-width:640px;margin:14px auto 0;font-size:clamp(.98rem,2.2vw,1.1rem)}
+  .eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .drill{margin:26px auto 0;max-width:560px;background:linear-gradient(180deg,var(--surface),var(--ink2));border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;text-align:right}
+  .drill .dh{display:flex;align-items:center;gap:9px;padding:11px 16px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--danger) 12%,transparent)}
+  .drill .dot{width:9px;height:9px;border-radius:99px;background:var(--danger);box-shadow:0 0 10px var(--danger);animation:pulse 1.4s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  .drill .dh b{font-size:.9rem;color:var(--text)} .drill .dh span{color:var(--dim);font-size:.8rem;margin-inline-start:auto;font-family:ui-monospace,Consolas,monospace}
+  .drill .db{padding:16px 18px;min-height:92px}
+  .drill .q{font-weight:800;font-size:1.12rem;margin-bottom:8px}
+  .drill .row{display:flex;gap:8px;font-size:.88rem;color:var(--muted);opacity:0;transform:translateY(6px);transition:.5s}
+  .drill .row.show{opacity:1;transform:none}
+  .drill .row b{color:var(--safe-2)} .drill .row.no b{color:var(--danger)}
+  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:26px;background:linear-gradient(180deg,var(--safe-2),var(--safe));color:#04120e;font-weight:800;
+    padding:14px 26px;border-radius:14px;text-decoration:none;font-size:1.05rem;box-shadow:0 14px 34px -14px rgba(47,179,154,.7);cursor:pointer;border:none}
+  .cta:hover{filter:brightness(1.06)}
+  /* ── stat ribbon ── */
+  .ribbon{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+  .ribbon .chip{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:8px 15px;font-size:.85rem;color:var(--muted)}
+  .ribbon .chip b{color:var(--text)}
+  /* ── section head ── */
+  .sec{padding:clamp(34px,6vw,64px) 0}
+  .sec-h{text-align:center;max-width:720px;margin:0 auto clamp(20px,4vw,36px)}
+  .sec-h h2{font-size:clamp(1.6rem,4.6vw,2.5rem);margin:8px 0 0;font-weight:800}
+  .sec-h p{color:var(--muted);margin-top:10px}
+  /* ── filters ── */
+  .filters{display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+  .frow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .frow .flabel{font-size:.74rem;color:var(--dim);font-weight:800;min-width:74px;letter-spacing:.04em}
+  .fchip{background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:6px 14px;font-size:.85rem;cursor:pointer;font-weight:600;transition:.15s;font-family:inherit}
+  .fchip:hover{color:var(--text);border-color:var(--safe)}
+  .fchip.on{background:linear-gradient(180deg,var(--safe-2),var(--safe));color:#04120e;border-color:transparent}
+  .fchip.lv[data-v="5"].on{background:linear-gradient(180deg,#ef6b66,var(--l5))}
+  .fchip.lv[data-v="4"].on{background:var(--l4)} .fchip.lv[data-v="3"].on{background:var(--l3);color:#1a1205}
+  /* ── grid ── */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,var(--surface),var(--ink2));border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;
+    position:relative;overflow:hidden;transition:.18s;border-inline-start:4px solid var(--lv)}
+  .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--lv) 60%,var(--line));box-shadow:var(--shadow)}
+  .card .top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .lv-badge{font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--lv) 22%,transparent);color:var(--lv);border:1px solid color-mix(in srgb,var(--lv) 45%,transparent)}
+  .dom-badge{font-size:.72rem;color:var(--dim);margin-inline-start:auto}
+  .card h3{font-size:1.18rem;font-weight:800;margin:0 0 6px;line-height:1.35}
+  .card .snap{color:var(--muted);font-size:.92rem}
+  .card .open{margin-top:14px;font-size:.82rem;color:var(--safe-2);font-weight:700}
+  /* ── detail modal ── */
+  .ov{position:fixed;inset:0;background:rgba(4,10,8,.72);backdrop-filter:blur(4px);z-index:50;display:none;overflow-y:auto;padding:clamp(10px,3vw,40px)}
+  .ov.open{display:block}
+  .sheet{max-width:820px;margin-inline:auto;background:var(--ink2);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet .head{padding:22px clamp(18px,3vw,30px);border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--ink2);z-index:2;border-inline-start:5px solid var(--lv)}
+  .sheet .head .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .sheet .head h2{font-size:clamp(1.4rem,4vw,2rem);margin:0;font-weight:900}
+  .sheet .head .snap{color:var(--muted);margin-top:6px}
+  .sheet .x{position:absolute;inset-inline-start:16px;top:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1.3rem;cursor:pointer;line-height:1}
+  .sheet .body{padding:clamp(16px,3vw,30px)}
+  .flag{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 20px}
+  .flag .f{font-size:.8rem;background:color-mix(in srgb,var(--danger) 12%,transparent);border:1px solid color-mix(in srgb,var(--danger) 35%,transparent);color:#f0a9a6;padding:4px 11px;border-radius:9px}
+  .grp{margin:22px 0 8px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800;border-bottom:1px solid var(--line);padding-bottom:7px}
+  .fld{margin:14px 0}
+  .fld .k{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1rem;margin-bottom:6px}
+  .fld .k .i{width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:8px;background:color-mix(in srgb,var(--safe) 15%,transparent);font-size:.95rem}
+  .fld.warn .k .i{background:color-mix(in srgb,var(--danger) 15%,transparent)}
+  .fld ol,.fld ul{margin:0;padding-inline-start:22px}.fld li{margin:5px 0;color:var(--text)}
+  .fld ul.no li{color:#e9b7b4}
+  .fld p{color:var(--text);margin:0}
+  .fld .ex{margin-top:8px;background:var(--surface);border-inline-start:3px solid var(--safe);border-radius:0 12px 12px 0;padding:10px 14px;color:var(--muted);font-size:.92rem}
+  .calls{display:grid;gap:10px}
+  .call{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+  .call .num{font-size:1.5rem;font-weight:900;color:var(--safe-2);font-family:ui-monospace,Consolas,monospace;direction:ltr}
+  .call .lab{font-weight:800}.call .say{color:var(--muted);font-size:.86rem}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:560px){.two{grid-template-columns:1fr}}
+  .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .box .bk{font-size:.78rem;color:var(--dim);font-weight:800;margin-bottom:5px}
+  /* per-step provenance marker: a verified step links to the document it came from,
+     an unverified one is visibly flagged rather than passing as sourced */
+  .cite{margin-inline-start:6px;font-size:.62em;vertical-align:super;line-height:0}
+  .cite a{color:var(--safe);text-decoration:none;border:1px solid var(--safe);border-radius:6px;padding:1px 5px;opacity:.85}
+  .cite a:hover{opacity:1;background:color-mix(in srgb,var(--safe) 15%,transparent)}
+  .cite.unv{color:var(--l4,#e0a458);border:1px dashed currentColor;border-radius:6px;padding:0 4px;cursor:help}
+  .src{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin:8px 0;display:flex;gap:10px;align-items:flex-start}
+  .src .g{font-size:.7rem;color:var(--safe-2);border:1px solid var(--line);border-radius:7px;padding:2px 7px;white-space:nowrap}
+  .src a{font-weight:700;text-decoration:none;word-break:break-word}
+  /* ── mode B ── */
+  .modeb{background:linear-gradient(180deg,var(--surface),var(--ink2));border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,44px);text-align:center;box-shadow:var(--shadow)}
+  .modeb .days{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  .modeb .day{width:44px;height:44px;border-radius:12px;background:var(--ink);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--dim);font-size:.85rem}
+  .modeb .day.done{background:color-mix(in srgb,var(--safe) 20%,transparent);color:var(--safe-2);border-color:transparent}
+  .modeb .day.today{background:linear-gradient(180deg,var(--safe-2),var(--safe));color:#04120e;border-color:transparent}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 60px;text-align:center;color:var(--dim);font-size:.88rem}
+  footer b{color:var(--sand)}
+  .soon{font-size:.7rem;background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold);border-radius:99px;padding:2px 9px;font-weight:700}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="var(--safe)" stroke-width="2.5"/><circle cx="24" cy="24" r="3" fill="var(--gold)"/><path d="M24 6 L28 22 L24 24 L20 22 Z" fill="var(--safe-2)"/><path d="M24 42 L20 26 L24 24 L28 26 Z" fill="var(--dim)"/></svg>
+    <b>مستعد</b><span class="eal">EAL</span>
+  </div>
+  <span class="sp"></span>
+  <a class="link" href="#library">المكتبة</a>
+  <a class="link" href="#daily">الاستعداد اليومي</a>
+  <a class="link" href="https://egy2.vercel.app" target="_blank" rel="noopener">موثوق ↗</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">مكتبة الوعي المصري · تحويل الوعي إلى جاهزية</div>
+  <svg class="compass" viewBox="0 0 200 200" fill="none">
+    <circle cx="100" cy="100" r="92" stroke="var(--line)" stroke-width="2"/>
+    <circle cx="100" cy="100" r="74" stroke="var(--safe)" stroke-width="2" stroke-opacity=".5"/>
+    <g font-family="ui-monospace,monospace" font-size="13" fill="var(--muted)" text-anchor="middle">
+      <text x="100" y="26">N</text><text x="100" y="184">S</text><text x="180" y="105">E</text><text x="22" y="105">W</text></g>
+    <path d="M100 34 L116 100 L100 100 Z" fill="var(--danger)"/><path d="M100 166 L84 100 L100 100 Z" fill="var(--safe-2)"/>
+    <path d="M100 34 L84 100 L100 100 Z" fill="#b03e3a"/><path d="M100 166 L116 100 L100 100 Z" fill="var(--safe)"/>
+    <circle cx="100" cy="100" r="7" fill="var(--gold)"/><circle cx="100" cy="100" r="7" stroke="#000" stroke-opacity=".25"/>
+  </svg>
+  <h1>مستعد</h1>
+  <div class="tag">استعِدّ للّي ممكن يحصلك — قبل ما يحصل.</div>
+  <p class="sub">مكتبة سيناريوهات حقيقية للمواقف الصعبة اللي بتقابل أي حد: طوارئ، صحة، نفسية، وحياة يومية. كل خطوة <b style="color:var(--safe-2)">موثّقة من مصدر رسمي</b> — مش كلام عام ولا اجتهاد.</p>
+
+  <div class="drill" aria-label="تجربة جاهزية حيّة">
+    <div class="dh"><span class="dot"></span><b>لو حصل دلوقتي…</b><span id="drillTag">L5 · طوارئ</span></div>
+    <div class="db"><div class="q" id="drillQ">—</div>
+      <div class="row" id="drillDo"><b>اعمل:</b><span id="drillDoT"></span></div>
+      <div class="row no" id="drillDont"><b>ماتعملش:</b><span id="drillDontT"></span></div>
+    </div>
+  </div>
+  <div><button class="cta" onclick="document.getElementById('library').scrollIntoView({behavior:'smooth'})">استكشف مكتبة الجاهزية ↓</button></div>
+  <div class="ribbon">
+    <span class="chip"><b id="cScen">5</b> بطاقة جاهزية (عيّنة) <span class="soon">الموجة الأولى: 150</span></span>
+    <span class="chip"><b>4</b> محاور تصنيف: مين · فين · المجال · الخطورة</span>
+    <span class="chip"><b>كل خطوة</b> بمصدرها</span>
+  </div>
+</div></section>
+
+<section class="sec" id="library"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow">المنهجية الأولى · المكتبة</div>
+    <h2>دوّر على موقفك — واعرف تعمل إيه بالظبط</h2>
+    <p>فلتر بالمحاور الأربعة. كل بطاقة فيها: اعمل / ماتعملش · امتى وليه · تكلّم مين · تشتري إيه · التكنولوجيا · تقول إيه لنفسك وللناس · لغة الجسد · حقوقك · الوقاية · وبعدها.</p></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec" id="daily"><div class="wrap">
+  <div class="modeb">
+    <div class="eyebrow">المنهجية التانية · الاستعداد اليومي <span class="soon">قريبًا — المرحلة 2</span></div>
+    <h2 style="font-size:clamp(1.5rem,4.4vw,2.2rem);margin:10px 0 6px;font-weight:800">تمرين قصيّر كل يوم — تبقى جاهز قبل الموقف</h2>
+    <p style="color:var(--muted);max-width:600px;margin-inline:auto">سؤال أو تدريب يومي متدرّج (نفس محرّك «الإدراك» بتاع موثوق)، بيثبّت رد فعلك بالتكرار المتباعد — عشان تكون <b style="color:var(--safe-2)">مستعد</b>، مش بتتخبّط في اللحظة.</p>
+    <div class="days"><div class="day done">1</div><div class="day done">2</div><div class="day done">3</div><div class="day today">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div style="font-weight:800;color:var(--text);font-size:1.05rem">مستعد · <span style="color:var(--dim);font-weight:600">تحت مكتبة الوعي المصري</span></div>
+  <p style="margin-top:8px">القانون الواحد: <b>مفيش خطوة توصلك من غير مصدر حقيقي تقدر ترجعله.</b> دي إرشادات جاهزية عامة — مش بديل عن الطوارئ أو المختص. في أي خطر: <b style="direction:ltr;display:inline-block">112 · 123 · 180</b>.</p>
+  <p style="margin-top:6px;color:var(--dim);font-size:.8rem">
+    عيّنة المرحلة 0 — <b>١٨ بطاقة</b>، منها <b>٤ بس</b> كل خطوة فيها مربوطة بمستند اتسحب واتّجزّأ بالكود.
+    الباقي لسه تحت التوثيق وبيتعلّم عليه ⚠️. مانقولش «موثّق» غير لما يبقى موثّق فعلًا.
+  </p>
+  <p style="margin-top:10px;color:var(--dim);font-size:.75rem;line-height:1.7">
+    <b>المصادر والتراخيص:</b>
+    معلومات صحية من <a href="https://medlineplus.gov" target="_blank" rel="noopener">MedlinePlus.gov</a>
+    (المكتبة الوطنية الأمريكية للطب — ملكية عامة).
+    ومحتوى من <a href="https://www.nhs.uk" target="_blank" rel="noopener">NHS.uk</a>
+    (© Crown copyright، رخصة OGL v3).
+    مستعد مش تابع لأيٍّ منهم ومحدش منهم بيصادق عليه.
+  </p>
+</div></footer>
+
+<div class="ov" id="ov" onclick="if(event.target===this)closeSheet()"><div class="sheet" id="sheet"></div></div>
+
+<script src="scenarios.js"></script>
+<script>
+const S = window.SCENARIOS || [];
+const LV = {1:{n:'يومي',c:'--l1'},2:{n:'مقلق',c:'--l2'},3:{n:'خطير',c:'--l3'},4:{n:'خطر',c:'--l4'},5:{n:'تهديد حياة',c:'--l5'}};
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const uniq = a => [...new Set(a)];
+
+/* ---- filters ---- */
+const AXES = [
+  {key:'who', label:'مين', get:s=>s.who},
+  {key:'place', label:'فين', get:s=>s.place},
+  {key:'domain', label:'المجال', get:s=>[s.domain]},
+];
+const state = {who:null,place:null,domain:null,level:null};
+function buildFilters(){
+  const f = document.getElementById('filters'); f.innerHTML='';
+  AXES.forEach(ax=>{
+    const vals = uniq(S.flatMap(ax.get)).filter(Boolean);
+    const row = document.createElement('div'); row.className='frow';
+    row.innerHTML = `<span class="flabel">${ax.label}</span>`;
+    row.appendChild(mkChip('الكل', state[ax.key]===null, ()=>{state[ax.key]=null;render();buildFilters();}));
+    vals.forEach(v=>row.appendChild(mkChip(v, state[ax.key]===v, ()=>{state[ax.key]=state[ax.key]===v?null:v;render();buildFilters();})));
+    f.appendChild(row);
+  });
+  // level row
+  const row = document.createElement('div'); row.className='frow';
+  row.innerHTML = `<span class="flabel">الخطورة</span>`;
+  row.appendChild(mkChip('الكل', state.level===null, ()=>{state.level=null;render();buildFilters();}));
+  [1,2,3,4,5].forEach(l=>{
+    const c = mkChip('L'+l+' · '+LV[l].n, state.level===l, ()=>{state.level=state.level===l?null:l;render();buildFilters();});
+    c.classList.add('lv'); c.dataset.v=l;
+    row.appendChild(c);
+  });
+  f.appendChild(row);
+}
+function mkChip(text,on,fn){const b=document.createElement('button');b.className='fchip'+(on?' on':'');b.textContent=text;b.onclick=fn;return b;}
+
+/* ---- grid ---- */
+function match(s){return (!state.who||s.who.includes(state.who))&&(!state.place||s.place.includes(state.place))&&(!state.domain||s.domain===state.domain)&&(!state.level||s.level===state.level);}
+function render(){
+  const g = document.getElementById('grid'); const list = S.filter(match);
+  g.innerHTML = list.length? '' : '<p style="color:var(--muted);text-align:center;padding:30px">مفيش بطاقة بالفلتر ده — جرّب «الكل».</p>';
+  list.forEach(s=>{
+    const el = document.createElement('div'); el.className='card'; el.style.setProperty('--lv','var('+LV[s.level].c+')');
+    el.innerHTML = `<div class="top"><span class="lv-badge">L${s.level} · ${LV[s.level].n}</span><span class="dom-badge">${esc(s.domain)}</span></div>
+      <h3>${esc(s.title.ar)}</h3><div class="snap">${esc(s.snapshot.ar)}</div><div class="open">افتح البطاقة الكاملة ←</div>`;
+    el.onclick=()=>openSheet(s.id); g.appendChild(el);
+  });
+}
+
+/* ---- detail sheet ---- */
+const fld = (icon,label,html,warn)=>`<div class="fld${warn?' warn':''}"><div class="k"><span class="i">${icon}</span>${label}</div>${html}</div>`;
+
+/* A step is either a plain string (ungrounded — legacy) or {t, src} where src keys window.SOURCES.
+   Ungrounded steps are MARKED, never silently rendered as if they were verified. */
+const T = x => (typeof x === 'string' ? x : x.t);
+const CITE = x => {
+  if (typeof x === 'string' || !x.src) return `<sup class="cite unv" title="خطوة من غير مصدر مُثبت — تحت المراجعة">⚠</sup>`;
+  const s = (window.SOURCES || {})[x.src];
+  if (!s) return `<sup class="cite unv" title="مصدر غير معروف">⚠</sup>`;
+  return `<sup class="cite"><a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.label)} — ${esc(s.licence||'')}">${esc(s.tag||'مصدر')}</a></sup>`;
+};
+/* Citations mark CLAIMS (do / dont / variations). Checklists, kit lists and scripts are not
+   claims about the world, so they render plain — a ⚠ on everything trains people to ignore ⚠. */
+const citedItem = x => `<li>${esc(T(x))}${CITE(x)}</li>`;
+const plainItem = x => `<li>${esc(T(x))}</li>`;
+const list  = (arr,cls)=>`<ul class="${cls||''}">${arr.map(plainItem).join('')}</ul>`;
+const clist = (arr,cls)=>`<ul class="${cls||''}">${arr.map(citedItem).join('')}</ul>`;
+const olist = arr=>`<ol>${arr.map(citedItem).join('')}</ol>`;
+function openSheet(id){
+  const s = S.find(x=>x.id===id); if(!s)return;
+  const call = s.whoToCall.map(c=>`<div class="call"><span class="num">${esc(c.number)}</span><div><div class="lab">${esc(c.label)}</div><div class="say">${esc(c.say)}</div></div></div>`).join('');
+  const buy = s.whatToBuy.map(b=>`<div class="box"><div class="bk">${esc(b.item)}</div>${esc(b.why)}</div>`).join('');
+  // §2.2 calls these "verified links". Three of them return 403 even to a browser UA, so they
+  // cannot be machine-verified. An unearned "verified" claim is the defect this project exists to fight.
+  const vids = s.videosCommunities.map(v=>`<div class="src">${v.unverified?`<span class="g" title="${esc(v.unverified)}">⚠️VERIFY</span>`:''}<a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.label)} ↗</a></div>`).join('');
+  const srcs = s.sources.map(x=>`<div class="src"><span class="g">${esc(x.grade)}</span><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)} ↗</a></div>`).join('');
+  document.getElementById('sheet').innerHTML = `
+    <div class="head" style="--lv:var(${LV[s.level].c})">
+      <button class="x" onclick="closeSheet()">×</button>
+      <div class="top"><span class="lv-badge">L${s.level} · ${LV[s.level].n}</span><span class="dom-badge">${esc(s.domain)}</span></div>
+      <h2>${esc(s.title.ar)}</h2><div class="snap">${esc(s.snapshot.ar)}</div>
+    </div>
+    <div class="body">
+      <div class="flag">${s.redFlags.map(f=>`<span class="f">⚑ ${esc(f)}</span>`).join('')}</div>
+      <div class="grp">لحظة الموقف</div>
+      ${fld('✅','اعمل',olist(s.do))}
+      ${fld('⛔','ماتعملش',clist(s.dont,'no'),true)}
+      ${fld('🕒','امتى وليه',`<p>${esc(s.whenWhy.ar)}</p>`)}
+      ${fld('🎯','إزاي — بمثال حيّ',`<p>${esc(s.how.ar)}</p>`)}
+      <div class="grp">اطلب المساعدة</div>
+      ${fld('📞','تكلّم مين',`<div class="calls">${call}</div>`)}
+      ${fld('🛒','تشتري إيه يساعد',`<div class="two">${buy}</div>`)}
+      ${fld('📱','استخدم التكنولوجيا',list(s.tech))}
+      ${fld('📝','جهّز واكتب',list(s.writeDown))}
+      <div class="grp">الكلام ولغة الجسد</div>
+      ${fld('💬','تقول إيه',`<div class="two"><div class="box"><div class="bk">للناس</div>${list(s.say.toOthers)}</div><div class="box"><div class="bk">لنفسك</div>${list(s.say.toSelf)}</div></div>`)}
+      ${fld('🧍','لغة الجسد ونبرة الصوت',`<p>${esc(s.bodyLanguage.ar)}</p>`)}
+      ${fld('👥','وجهة نظر الطرف الآخر',`<p>${esc(s.othersPOV.ar)}</p>`)}
+      <div class="grp">اعرف واستعدّ</div>
+      ${fld('⚖️','حقوقك',`<p>${esc(s.rights.ar)}</p>`)}
+      ${fld('🔀','لو الموقف اختلف',clist(s.variations))}
+      ${fld('🛡️','الوقاية',list(s.prevention))}
+      ${fld('🎽','تمرين تستعدّ بيه',`<p>${esc(s.drill.ar)}</p>`)}
+      ${fld('🌿','بعد الموقف',`<p>${esc(s.after.ar)}</p>`)}
+      <div class="grp">المصادر · كل خطوة بمرجعها</div>
+      ${srcs}
+      ${vids?('<div class="grp">فيديوهات ومجتمعات</div>'+vids):''}
+    </div>`;
+  document.getElementById('ov').classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeSheet(){document.getElementById('ov').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet();});
+
+/* ---- hero live drill (cycles the L5 emergencies) ---- */
+let di=0; const drillPool = S.filter(s=>s.level>=4);
+function cycleDrill(){
+  if(!drillPool.length)return; const s = drillPool[di%drillPool.length]; di++;
+  document.getElementById('drillTag').textContent = 'L'+s.level+' · '+s.domain;
+  document.getElementById('drillQ').textContent = s.title.ar;
+  const doR=document.getElementById('drillDo'), dontR=document.getElementById('drillDont');
+  doR.classList.remove('show');dontR.classList.remove('show');
+  document.getElementById('drillDoT').textContent = T(s.do[0]);
+  document.getElementById('drillDontT').textContent = T(s.dont[0]);
+  setTimeout(()=>doR.classList.add('show'),350); setTimeout(()=>dontR.classList.add('show'),750);
+}
+/* init */
+document.getElementById('cScen').textContent = S.length;
+buildFilters(); render(); cycleDrill(); setInterval(cycleDrill, 4200);
+</script>
+</body>
+</html>
