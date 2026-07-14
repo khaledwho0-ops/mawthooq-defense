@@ -7,7 +7,7 @@ html,body{height:100%}
 body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color:var(--paper);
   font-family:"Segoe UI","Tahoma","Noto Kufi Arabic",system-ui,Arial,sans-serif;overflow:hidden;cursor:pointer;-webkit-font-smoothing:antialiased}
 .scene{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3vmin;padding:8vmin;text-align:center;
-  opacity:0;transform:translateY(16px) scale(.996);transition:opacity 1.3s ease,transform 1.3s ease;pointer-events:none}
+  opacity:0;transform:translateY(16px) scale(.996);transition:opacity 1s ease,transform 1s ease;pointer-events:none}
 .scene.on{opacity:1;transform:none;pointer-events:auto}
 .k{font-family:ui-monospace,"Consolas",monospace;letter-spacing:.34em;font-size:min(2.3vmin,13px);color:var(--gold);text-transform:uppercase;opacity:.9}
 .k .no{color:var(--mut)}
@@ -50,6 +50,9 @@ body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color
 <!-- 4 · موثوق platform + counters -->
 <div class="scene"><div class="k"><span class="no">03</span> المنصّة الرئيسية · موثوق</div><div class="big"><span class="g">software حقيقي</span> — منشور وشغّال.</div><div class="stats"><div class="stat"><b data-c="153">0</b><span>صفحة</span></div><div class="stat"><b data-c="95">0</b><span>خدمة خلفية</span></div><div class="stat"><b data-c="60">0</b><span>أداة</span></div></div></div>
 
+<!-- connected · evidence APIs -->
+<div class="scene"><div class="k">موصولة بالعالم الحقيقي</div><div class="big">مش صندوق مقفول — <span class="g">موصولة بالدليل الحيّ.</span></div><div class="chips"><span class="chip on-em">OpenAlex</span><span class="chip on-em">Semantic Scholar</span><span class="chip on-em">Crossref</span><span class="chip on-em">EuropePMC</span><span class="chip on-em">DOAJ</span><span class="chip on-em">openFDA</span><span class="chip on-em">RxNorm</span><span class="chip on-em">WHO</span></div><div class="sm">٩ مصادر بيانات حيّة · ٦ مزوّدين ذكاء · كل حُكم مربوط بمصدر حقيقي.</div></div>
+
 <!-- 5 · 8-layer scan -->
 <div class="scene"><div class="k"><span class="no">04</span> القلب · فحص الـ٨ طبقات</div><div class="big">يفكّك أي ادعاء على <span class="g">٨ طبقات</span> مرة واحدة.</div><div class="chips"><span class="chip">المصدر</span><span class="chip">الدليل</span><span class="chip">الإحصاء</span><span class="chip">المنطق</span><span class="chip">التأطير</span><span class="chip">الدافع</span><span class="chip">الوسائط</span><span class="chip">الإجماع</span></div><div class="sm">ويفصل <span class="g">العلمي عن الديني</span> — متاخدش «صح/غلط»، بتاخد تشريح الـليه.</div></div>
 
@@ -74,6 +77,27 @@ body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color
 <!-- 12 · proof -->
 <div class="scene"><div class="k"><span class="no">11</span> الإثبات · مقيس مش متخمّن</div><div class="big"><span class="em">١١٨ / ١٢٩ / صفر أخطاء.</span></div><div class="badge">كل اقتباس اتراجع حرف بحرف</div><div class="mid" style="margin-top:2vmin">وأقوى نتيجة: <span class="g">الـFirewall منع ضرر حقيقي</span> — مسك خطوة إسعاف غلط وجرعة دوا غلط قبل أي مستخدم.</div></div>
 
+<!-- any job intro -->
+<div class="scene"><div class="k">مش بس للمناقشة — لأي شغلانة</div><div class="big">نفس القانون بيخدم <span class="g">أي حد</span>، في أي مجال.</div></div>
+
+<!-- sneaky · consumer protection -->
+<div class="scene"><div class="k">لأي جهة بتحمي الناس</div><div class="mid">أي جهة بتحمي الناس من ادّعاء مضلّل — أول سؤال بتسأله: <span class="g">فين المصدر؟</span> إحنا حطّينا المصدر جنب كل كلمة، وشِلنا كلمة «موثّق» الفاضية.</div></div>
+
+<!-- sneaky · technical training -->
+<div class="scene"><div class="k">لأي تدريب</div><div class="mid">التدريب الحقيقي مش حفظ — إنك <span class="g">تعمل الخطوة الصح لوحدك في أقل من دقيقة</span>، وتضيف محتوى بمصدر من غير ما تكسر الأمان.</div></div>
+
+<!-- sneaky · research -->
+<div class="scene"><div class="k">لأي بحث</div><div class="mid">أي بحث بيقف على سؤال واحد: <span class="g">تقدر تعيد إنتاج كل رقم فيه؟</span> عندنا كل معلومة تتفتح لمصدرها، وإعادة التشغيل بترجّع نفس الرقم.</div></div>
+
+<!-- sneaky · operations -->
+<div class="scene"><div class="k">لأي عملية</div><div class="mid">أي عملية بتطلّع معلومة للناس محتاجة <span class="g">بوابة توقف الغلط قبل ما حد يتصرّف عليه</span> — وبتكلفة قريبة من الصفر.</div></div>
+
+<!-- sneaky · product/business -->
+<div class="scene"><div class="k">لأي منتج</div><div class="mid">الفرق بين منتج بيتباع وشات بوت: إن <span class="g">كل كلمة فيه تعدّي إعادة الفحص</span>. ده اللي بيخلّيه محلّي، مصدره واضح، ومستحيل يفبرك.</div></div>
+
+<!-- why now -->
+<div class="scene"><div class="k">ليه دلوقتي</div><div class="big">الـAI خلّى الفبركة <span class="rd">رخيصة وفورية</span> — والعربي مُهمَل.</div><div class="mid">فمكتبة مقفولة على المصدر، وعربي أولاً — مهمة دلوقتي أكتر من أي وقت.</div></div>
+
 <!-- 13 · what's next -->
 <div class="scene"><div class="k"><span class="no">12</span> الجاي · المرحلة الذاتية</div><div class="big">الفريق مكانش ستة — كان ستة <span class="g">+ مئات وكلاء الذكاء.</span></div><div class="pipe"><div class="step">يقلّد الخبير</div><span class="arrw">→</span><div class="step">يكتب</div><span class="arrw">→</span><div class="step">يتحقّق</div><span class="arrw">→</span><div class="step">يختبر</div><span class="arrw">→</span><div class="step">يكرّر</div></div><div class="sm">المنهجية تفضل بشرية، والوكلاء يعملوا كل البناء — لحد ما موثوق يبقى الصوت الحقيقي للوعي المصري.</div></div>
 
@@ -86,7 +110,7 @@ body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color
 <script>
 (function(){
   var scenes=[].slice.call(document.querySelectorAll('.scene'));
-  var durs=[6000,9000,10000,9000,11000,8000,8000,11000,9000,9000,11000,11000,12000,9000];
+  var durs=[6000,9000,11000,11000,11000,11000,9000,9000,11000,10000,10000,11000,11000,6500,9500,9500,9500,9500,9500,9500,12000,10000];
   var bar=document.getElementById('bar'), ctl=document.getElementById('ctl'), autobtn=document.getElementById('autobtn');
   var i=-1, timer=null, auto=true;
   function animCounters(sc){
@@ -99,7 +123,7 @@ body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color
   }
   function show(n){
     if(timer){clearTimeout(timer);timer=null;}
-    if(n<0)n=0; if(n>=scenes.length){finish();return;}
+    if(n<0)n=0; if(n>=scenes.length){ if(auto){ n=0; } else { finish(); return; } }  // loop when auto-playing
     scenes.forEach(function(s){s.classList.remove('on')});
     i=n; var sc=scenes[n]; void sc.offsetWidth; sc.classList.add('on'); animCounters(sc);
     bar.style.width=((n+1)/scenes.length*100)+'%'; ctl.classList.remove('on');
