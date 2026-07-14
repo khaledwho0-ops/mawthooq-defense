@@ -1,0 +1,109 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>موثوق · الافتتاح — وفيات لسه مماتش</title>
+<style>
+:root{--gold:#BC9457;--goldbr:#E4C583;--paper:#EDEAE3;--mut:#8B8279;--red:#c0505a;--ink:#08070a}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{background:radial-gradient(140% 100% at 50% 0%,#141018,#08070a 70%);color:var(--paper);
+  font-family:"Segoe UI","Tahoma","Noto Kufi Arabic",system-ui,Arial,sans-serif;overflow:hidden;cursor:pointer}
+.stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:7vmin;text-align:center}
+.scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3vmin;padding:8vmin;
+  opacity:0;transform:translateY(14px);transition:opacity 1.4s ease,transform 1.4s ease;pointer-events:none}
+.scene.on{opacity:1;transform:none;pointer-events:auto}
+.k{font-family:ui-monospace,"Consolas",monospace;letter-spacing:.32em;font-size:min(2.2vmin,13px);color:var(--gold);text-transform:uppercase;opacity:.85}
+.big{font-weight:800;line-height:1.18;font-size:min(7.6vmin,52px);text-wrap:balance;max-width:20ch}
+.mid{font-weight:700;line-height:1.5;font-size:min(4.4vmin,30px);color:#d8d3c8;max-width:24ch}
+.sm{font-size:min(3.2vmin,20px);color:var(--mut);line-height:1.7;max-width:30ch}
+.g{color:var(--goldbr)} .rd{color:var(--red)}
+/* fb-style post card */
+.post{width:min(86vw,540px);background:#15131a;border:1px solid rgba(188,148,87,.25);border-radius:18px;padding:4.5vmin;text-align:start;
+  box-shadow:0 30px 80px -40px #000;display:flex;flex-direction:column;gap:2.4vmin}
+.post .row{display:flex;align-items:center;gap:2.4vmin}
+.post .av{width:11vmin;height:11vmin;max-width:56px;max-height:56px;border-radius:50%;background:linear-gradient(135deg,#2a2431,#1a1620);border:1px solid rgba(188,148,87,.3);flex:none;display:flex;align-items:center;justify-content:center;font-size:5vmin}
+.post .nm{font-weight:700;font-size:min(3.4vmin,19px)}.post .meta{font-size:min(2.4vmin,13px);color:var(--mut)}
+.post .body{font-size:min(3.4vmin,20px);line-height:1.6;color:#e6e1d7}
+.cmt{margin-top:1vmin;padding:3vmin;background:#0f0d13;border-radius:12px;border-inline-start:3px solid var(--red);font-size:min(3.1vmin,18px);line-height:1.6}
+.cmt .who{color:var(--mut);font-size:min(2.4vmin,13px);margin-bottom:1vmin}
+.agree{color:var(--mut);font-size:min(2.6vmin,14px)}
+/* heartbeat */
+.ecg{width:min(70vw,420px);height:70px;margin-top:1vmin}
+.ecg path{stroke:var(--red);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 3.2s linear forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+/* logo */
+.sun{width:16vmin;height:16vmin;max-width:96px;max-height:96px}
+.brand{font-weight:800;font-size:min(8vmin,60px);background:linear-gradient(180deg,#fff,var(--goldbr) 55%,#8a5f22);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tag{color:var(--goldbr);font-size:min(3.6vmin,22px)}
+.en{font-family:ui-monospace,monospace;color:var(--mut);letter-spacing:.14em;font-size:min(2.6vmin,14px);direction:ltr}
+/* controls */
+.hint{position:fixed;bottom:3.4vmin;left:0;right:0;text-align:center;font-family:ui-monospace,monospace;font-size:min(2.4vmin,12px);color:var(--mut);letter-spacing:.08em;opacity:.75}
+.bar{position:fixed;top:0;left:0;height:3px;background:var(--gold);width:0;transition:width .5s linear;box-shadow:0 0 12px var(--gold)}
+.replay{position:fixed;bottom:8vmin;left:0;right:0;text-align:center;opacity:0;transition:opacity .6s;pointer-events:none}
+.replay.on{opacity:1;pointer-events:auto}
+.replay button{font-family:ui-monospace,monospace;font-size:14px;color:var(--paper);background:rgba(188,148,87,.14);border:1px solid var(--gold);border-radius:999px;padding:10px 22px;cursor:pointer}
+</style></head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="stage" id="stage">
+  <div class="scene"><div class="k">المكتبة المصرية للوعي</div><div class="mid">قبل أي كلمة عن اللي بنيناه…<br><span class="g">بُصّوا على بوستين.</span></div></div>
+
+  <div class="scene"><div class="big">بوستين. لدكاترة اتنين.<br><span class="mut" style="color:var(--mut)">شكلهم عادي تمامًا.</span></div></div>
+
+  <div class="scene"><div class="post">
+    <div class="row"><div class="av">🩺</div><div><div class="nm">د. — طبيبة</div><div class="meta">منشور عام · ٢٠٢١</div></div></div>
+    <div class="body">تحذير لمتابعيني من لقاح كورونا — تقارير عن جلطات نادرة مرتبطة بماركة واحدة.</div>
+    <div class="cmt"><div class="who">تعليق · مئات الإعجابات</div>«علشان محدش يقول تاخدوا تطعيمات — <span class="rd">مهما حصل</span>، ولا قرار حكومي ولا أي قرار.»</div>
+    <div class="agree">▲ ومئات وافقوا…</div>
+  </div></div>
+
+  <div class="scene"><div class="k">اللي محدّش شافه</div><div class="mid">إشارة من <span class="g">٢٠٢١</span> · عن خطر <span class="g">نادر</span> · لماركة واحدة —<br>اتشالت من سياقها واتحوّلت لـ:</div><div class="big rd">«ارفض كل لقاح. للأبد.»</div></div>
+
+  <div class="scene"><div class="k">أسابيع بعدين</div><div class="post">
+    <div class="row"><div class="av">🏥</div><div><div class="nm">د. — طبيب آخر</div><div class="meta">حالة في العناية المركّزة</div></div></div>
+    <div class="body">مريض بيجي… الفريق كله عاجز يشخّصه. بيتدهور — لحد ما اضطروا يدخّلوا أنبوبة في زوره عشان بس يقدر يتنفّس.</div>
+    <svg class="ecg" viewBox="0 0 420 70" preserveAspectRatio="none"><path d="M0,35 L120,35 L135,35 L145,10 L158,60 L170,35 L300,35 L315,35 L325,35 L420,35"/></svg>
+    <div class="cmt"><div class="who">آخر سؤال من الطبيب للأهل</div>«كان واخد تطعيماته؟» — الأخ: «لأ. أبويا بيقول إن التطعيمات نظرية مؤامرة.»</div>
+  </div></div>
+
+  <div class="scene"><div class="mid">الجملة الواحدة دي وصّلت للتشخيص:<br><span class="g">مرض نادر شبه اختفى من مصر — بسبب اللقاحات.</span></div></div>
+
+  <div class="scene"><div class="big">البوست الأول <span class="g">هو</span> البوست التاني.<br><span class="mid" style="color:var(--mut);font-size:min(4vmin,26px)">بس بدري… بأسابيع.</span></div></div>
+
+  <div class="scene"><div class="big rd" style="font-size:min(9vmin,64px)">دي وفيات.</div><div class="big" style="font-size:min(6.4vmin,44px)">بس لسه مماتش.</div></div>
+
+  <div class="scene">
+    <svg class="sun" viewBox="0 0 32 32"><g stroke="#BC9457" stroke-width="1.4" stroke-linecap="round"><line x1="19.5" y1="16" x2="30" y2="9"/><line x1="19.5" y1="16" x2="30.5" y2="13.5"/><line x1="19.5" y1="16" x2="29" y2="17.5"/><line x1="12.5" y1="16" x2="2" y2="9"/><line x1="12.5" y1="16" x2="1.5" y2="13.5"/><line x1="12.5" y1="16" x2="3" y2="17.5"/></g><circle cx="16" cy="15.5" r="5.6" fill="#F6D68B" stroke="#B67B1E" stroke-width=".8"/></svg>
+    <div class="brand">المكتبة المصرية للوعي</div>
+    <div class="tag">بنقف في المسافة بين البوست الواثق والإنسان اللي مش عارف ياخد نفَس.</div>
+    <div class="en">الدليل قبل التصديق · Evidence before belief</div>
+  </div>
+</div>
+
+<div class="replay" id="replay"><button onclick="play(0)">▶ إعادة · replay</button></div>
+<div class="hint">دوس في أي مكان للتقديم · tap to advance</div>
+
+<script>
+(function(){
+  var scenes=[].slice.call(document.querySelectorAll('.scene'));
+  var durs=[4200,4200,7000,6200,7600,5200,5200,5600,7000]; // ms per scene
+  var bar=document.getElementById('bar'), replay=document.getElementById('replay');
+  var i=-1, timer=null;
+  function show(n){
+    if(timer){clearTimeout(timer);timer=null;}
+    if(n<0)n=0; if(n>=scenes.length){finish();return;}
+    scenes.forEach(function(s){s.classList.remove('on')});
+    // re-trigger ECG draw if present
+    i=n; var sc=scenes[n]; void sc.offsetWidth; sc.classList.add('on');
+    var ecg=sc.querySelector('.ecg path'); if(ecg){ecg.style.animation='none';void ecg.offsetWidth;ecg.style.animation='';}
+    bar.style.width=((n+1)/scenes.length*100)+'%';
+    replay.classList.remove('on');
+    timer=setTimeout(function(){show(n+1)}, durs[n]||5000);
+  }
+  function finish(){ scenes.forEach(function(s){s.classList.remove('on')}); scenes[scenes.length-1].classList.add('on'); bar.style.width='100%'; replay.classList.add('on'); }
+  window.play=function(n){ show(n); };
+  document.getElementById('stage').addEventListener('click',function(){ show(i+1); });
+  document.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key===' ')show(i+1); if(e.key==='ArrowLeft')show(i-1); });
+  show(0);
+})();
+</script>
+</body></html>
