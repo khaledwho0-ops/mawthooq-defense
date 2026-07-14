@@ -146,6 +146,23 @@
 .mt td:first-child{color:var(--mid);font-family:var(--mono);font-size:1.3cqw} .mt b{color:var(--gold-br)}
 .deck.ar .figcap,.deck.ar .numc,.deck.ar .claim .sc,.deck.ar .docsrc,.deck.ar .mt{font-family:var(--ar)}
 .deck.ar .figcap,.deck.ar .numc span,.deck.ar .mt th{text-transform:none;letter-spacing:0}
+
+/* ── PROJECTOR LIGHT THEME — default; toggle (button / D key) to dark for a dimmed room ── */
+.deck.light{
+  --ink:#F5F2EB; --ink2:#FCFAF6; --panel:#ECE6DA; --paper:#181410;
+  --gold:#8A5E20; --gold-br:#6F4A14; --red:#9E1B26; --emerald:#1C7A58;
+  --mid:#574E42; --line:rgba(138,94,32,.42); --line-soft:rgba(24,20,16,.14);
+}
+.deck.light .stagebox{background:radial-gradient(120% 90% at 50% -20%,rgba(138,94,32,.10),transparent 55%),linear-gradient(180deg,#FFFFFF,#F2EEE4);box-shadow:0 30px 90px -42px rgba(90,66,20,.32)}
+.deck.light .big-ar{background:none;-webkit-text-fill-color:currentColor;color:#7A5216}
+.deck.light .rd,.deck.light .claim.deb .st{color:#9E1B26}
+.deck.light .em,.deck.light .claim.est .st{color:#1C7A58}
+.deck.light .dot{background:rgba(24,20,16,.20)}
+.deck.light .dot.on{background:var(--gold)}
+.deck.light .nav{background:#ECE6DA;color:#181410}
+.deck.light #lang,.deck.light #theme{background:rgba(138,94,32,.14);border-color:var(--gold)}
+.deck.light .tlayer .tn{text-shadow:none}
+.deck.light .prog{background:rgba(24,20,16,.10)}
 </style>
 
 <div class="deck">
@@ -936,12 +953,13 @@
   <div class="prog"><i id="prog"></i></div>
   <div class="bar2">
     <button class="nav" id="lang">🇪🇬 بالمصري</button>
+    <button class="nav" id="theme">🌙 Dark room</button>
     <button class="nav" id="prev"><span class="e">← Prev</span><span class="a">‹ السابق</span></button>
     <span class="count" id="count">1 / 31</span>
     <div class="dots" id="dots"></div>
     <button class="nav" id="next"><span class="e">Next →</span><span class="a">التالي ›</span></button>
   </div>
-  <p class="tip"><span class="e">click / tap the slide to move · ← → keys · L = language · F11 fullscreen to present · screenshots are the real live platform</span><span class="a">دوس على الشريحة عشان تتحرك · ‹ › · L للّغة · F11 للعرض ملء الشاشة · الصور من المنصة الحقيقية</span></p>
+  <p class="tip"><span class="e">click / tap to move · ← → keys · L = language · D = light/dark room · F11 fullscreen · screenshots are the real live platform</span><span class="a">دوس عشان تتحرك · ‹ › · L للّغة · D للإضاءة (فاتح/غامق) · F11 ملء الشاشة · الصور من المنصة الحقيقية</span></p>
 </div>
 
 <script>
@@ -955,11 +973,15 @@
     function go(i){ i=Math.max(0,Math.min(N-1,i)); slides[cur].classList.remove('on'); cur=i; slides[cur].classList.add('on'); fit(slides[cur]); count.textContent=(cur+1)+' / '+N; fnum.textContent=pad(cur+1)+' / '+pad(N); prog.style.width=((cur+1)/N*100)+'%'; for(var k=0;k<N;k++) dots[k].classList.toggle('on',k===cur); }
     function setLang(ar){ deck.classList.toggle('ar',ar); stage.setAttribute('dir',ar?'rtl':'ltr'); langBtn.textContent=ar?'English':'🇪🇬 بالمصري'; }
     langBtn.onclick=function(){ setLang(!deck.classList.contains('ar')); };
+    var themeBtn=document.getElementById('theme');
+    function setLight(on){ deck.classList.toggle('light',on); themeBtn.textContent=on?'🌙 Dark room':'☀️ Light room'; fit(slides[cur]); }
+    themeBtn.onclick=function(){ setLight(!deck.classList.contains('light')); };
     document.getElementById('next').onclick=function(){go(cur+1)}; document.getElementById('prev').onclick=function(){go(cur-1)};
-    document.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1)} else if(e.key==='ArrowLeft'){go(cur-1)} else if(e.key==='l'||e.key==='L'){setLang(!deck.classList.contains('ar'))} });
+    document.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(cur+1)} else if(e.key==='ArrowLeft'){go(cur-1)} else if(e.key==='l'||e.key==='L'){setLang(!deck.classList.contains('ar'))} else if(e.key==='d'||e.key==='D'){setLight(!deck.classList.contains('light'))} });
     stage.addEventListener('click',function(e){ if(e.target.closest('a,button,input,textarea,select')) return; var r=stage.getBoundingClientRect(); if((e.clientX-r.left) < r.width*0.32){ go(cur-1); } else { go(cur+1); } });
     stage.style.cursor='pointer';
     window.addEventListener('resize',function(){ fit(slides[cur]); });
+    setLight(true);
     go(0);
   })();
 </script>
