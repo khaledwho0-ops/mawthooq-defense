@@ -92,8 +92,9 @@ body{background:radial-gradient(140% 110% at 50% -10%,#161019,#08070a 72%);color
   function animCounters(sc){
     sc.querySelectorAll('[data-c]').forEach(function(el){
       var end=+el.getAttribute('data-c'), t0=null, dur=1400;
-      function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=Math.round(end*(p<1?(1-Math.pow(1-p,3)):1)); if(p<1)requestAnimationFrame(step); }
+      function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1); el.textContent=Math.round(end*(p<1?(1-Math.pow(1-p,3)):1)); if(p<1)requestAnimationFrame(step); else el.textContent=end; }
       el.textContent='0'; requestAnimationFrame(step);
+      setTimeout(function(){ el.textContent=end; }, dur+150); // guarantee the final value even if rAF throttles
     });
   }
   function show(n){
