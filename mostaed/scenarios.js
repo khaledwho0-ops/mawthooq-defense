@@ -19,6 +19,7 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"nhs:dehydration": {"url": "https://www.nhs.uk/conditions/dehydration/", "label": "NHS", "sha256": "c10c4fd56c", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
   "nhs:cpr": { url: "https://www.nhs.uk/tests-and-treatments/first-aid/cpr/", label: "NHS — CPR",
     sha256: "67f42f0720", retrieved: "2026-07-09", licence: "OGL v3 · © Crown copyright", tag: "NHS" },
   "nhs:heart-attack": { url: "https://www.nhs.uk/conditions/heart-attack/", label: "NHS — Heart attack",
@@ -17282,4 +17283,93 @@ window.SCENARIOS = [
       }
     ]
   }
+,
+{
+ "id": "dehydration",
+ "title": {
+  "ar": "جفاف",
+  "en": "Dehydration"
+ },
+ "level": 3,
+ "who": [
+  "الكل",
+  "آباء وأمهات",
+  "كبار السن"
+ ],
+ "place": [
+  "البيت",
+  "برّه"
+ ],
+ "domain": "صحة",
+ "snapshot": {
+  "ar": "حد عطشان وبقه ناشف وبوله أصفر غامق وحاسس بدوخة وتعب، عشان جسمه فقد سوائل أكتر مما أخد.",
+  "en": "Someone is thirsty with a dry mouth, dark yellow pee, dizziness and tiredness because the body has lost more fluid than it took in."
+ },
+ "redFlags": [
+  "تعب أو نُعاس غير طبيعي (أو الطفل تايه/نعسان) — ممكن تكون علامة جفاف خطير محتاج علاج عاجل",
+  "دوخة وإنت بتقوم تقف ومش بتروح",
+  "بول أصفر غامق أو تبوّل أقل من المعتاد (أو البيبي حفاضاته المبلولة قلّت)",
+  "نَفَس سريع أو ضربات قلب سريعة",
+  "الطفل أو البيبي بيعيّط من غير دموع أو بدموع قليلة",
+  "اليافوخ (النقطة الطرية في راس البيبي) غاطس لجوه",
+  "جلد أو شفايف أو لسان أزرق/رمادي/شاحب/مبقّع، أو جلد بارد لمّا تلمسه — دي علامات صدمة (shock)",
+  "صعوبة في التنفّس، أو تشوّش، أو نُعاس شديد وصعب تصحّي الشخص — اطلب الإسعاف فورًا"
+ ],
+ "do": [
+  {
+   "t": "اشرب سوائل لو ظهرت عليك أعراض الجفاف.",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "لو حاسس بغثيان أو رجّعت، ابدأ برشفات صغيرة وبعدين اشرب أكتر بالتدريج.",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "الصيدلي ممكن يوصّي بمحاليل معالجة الجفاف عن طريق الفم — بودرة بتحلّها في مية وتشربها — عشان تعوّض السكر والأملاح والمعادن اللي جسمك فقدها.",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "كمّل رضاعة طبيعية لبيبيك أو استمر في اللبن الصناعي — حاول تديله كميات صغيرة على مرّات أكتر من المعتاد.",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "ادّي البيبي رشفات صغيرة مية زيادة لو بياخد لبن صناعي أو أكل صلب (لو البيبي أقل من 6 شهور، اغلي المية الأول وسيبها تبرد قبل ما تديهاله).",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "اشرب سوائل بانتظام عشان تقلّل خطر الجفاف — المية أو عصير سكوّاش خالي من السكر ومخفّف اختيارات كويسة — بكمية تخلّي لون البول فاتح.",
+   "src": "nhs:dehydration"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ابعد عن المشروبات اللي فيها كافيين والكحول، الاتنين بيزوّدوا الجفاف.",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "متخففش اللبن الصناعي (متزودش عليه مية زيادة).",
+   "src": "nhs:dehydration"
+  },
+  {
+   "t": "متديش الأطفال الصغيرين عصير فاكهة أو مشروبات غازية — ممكن تزوّد الإسهال أو الترجيع.",
+   "src": "nhs:dehydration"
+  }
+ ],
+ "whenWhy": {
+  "ar": "start with small sips and then gradually drink more",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
 ];

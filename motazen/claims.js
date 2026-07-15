@@ -3,6 +3,12 @@
  * 118 claims across the Below-Zero phase. Regenerate: node pipeline/assemble-research.mjs
  */
 window.SOURCES = {
+"nhs:ocd-basics": {"tier": "national_health_authority", "label": "NHS – Obsessive compulsive disorder (OCD): Overview", "url": "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/overview/", "sha256": "79c65de036", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:bipolar-basics": {"tier": "national_health_authority", "label": "NHS (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/conditions/bipolar-disorder/overview/", "sha256": "2f66a8da3b", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:eating-disorders": {"tier": "عالية — جهة صحية وطنية رسمية (NHS)، صفحة معلومات سريرية روجعت 23 يناير 2024", "label": "NHS — الخدمة الصحية الوطنية البريطانية (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/", "sha256": "b09f8bc3a3", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:self-harm-help": {"tier": "إرشاد هيئة صحية وطنية موجّه للجمهور (NHS) — national health authority patient guidance", "label": "NHS — Where to get help for self-harm", "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/self-harm/getting-help/", "sha256": "834062b840", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"who:burnout-is-real": {"tier": "A (WHO ICD-11 official classification — top-tier authority)", "label": "منظمة الصحة العالمية (WHO) — التصنيف الدولي للأمراض (ICD-11)", "url": "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon", "sha256": "849ccfe3a5", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:grief-vs-depression": {"tier": "strong", "label": "NHS — Grief after bereavement or loss", "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/", "sha256": "0d35982fac", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
   "who:depression": {
     "tier": "A-consensus",
     "label": "WHO — Depressive disorder (depression) fact sheet",
@@ -3745,4 +3751,131 @@ window.CLAIMS = [
     "uncertainty_note_ar": "ده مش جهل مؤقت هيتحل بكرة بالضرورة؛ ده سؤال حدودي بيخلط العلم بالقيم. المطلوب منّا: شك متوازن مش شلل — نأخد التشخيص كأداة مفيدة قابلة للمراجعة، مش كحقيقة مقدّسة ولا كخرافة.",
     "last_reviewed": "2026-07-11"
   }
+,
+{
+ "id": "ocd-basics",
+ "question": 10,
+ "phase": 1,
+ "domain": "قلق",
+ "crisis_sensitive": true,
+ "claim_ar": "ناس كتير فاكرة إن الوسواس القهري (OCD) مجرد «نضافة زيادة» أو إن صاحبه بيحب كل حاجة مرتبة ومظبوطة — وده مش صح. حسب هيئة الصحة البريطانية (NHS)، الوسواس القهري حالة نفسية حقيقية فيها أفكار وسواسية متكررة ومزعجة، وسلوكيات قهرية بيحس الشخص إنه مضطر يعملها عشان يهدّي القلق مؤقتاً — زي حد خايف من السرقة فيفضل يتأكد من قفل الشبابيك والأبواب كذا مرة قبل ما يخرج، يعني مش شرط نضافة أصلاً. والأهم إنها «حالة صحية زي أي حالة تانية»، وجودها مايعنيش إن الشخص «مجنون» ومش ذنبه، وليها علاج فعّال بيقلّل تأثيرها على حياتك — أساسه العلاج بالكلام (CBT) وأحياناً أدوية من نوع SSRIs.",
+ "claim_en": "Many people think OCD is just \"being too clean\" or liking everything tidy - it isn't. According to the NHS, OCD is a real mental health condition of recurring, distressing obsessive thoughts and compulsive behaviours a person feels driven to do to briefly relieve anxiety - for example, someone afraid of being burgled repeatedly checking the windows and doors are locked before leaving, so it isn't necessarily about cleanliness at all. It is \"a health condition like any other,\" having it doesn't mean you're \"mad\" and it's not your fault, and it has effective treatments that reduce its impact - mainly talking therapy (CBT) and sometimes SSRI medicines.",
+ "status": "established",
+ "evidence_tier": "national_health_authority",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:ocd-basics",
+   "quote_en": "There are some effective treatments for OCD that can help reduce the impact it has on your life."
+  }
+ ],
+ "cultural_note_ar": "في ثقافتنا كتير بنحس بالخجل أو إن فيه «عيب» لما نتكلم عن أي تعب نفسي، وده بيخلّي ناس تأجّل إنها تطلب مساعدة. بس زي ما بتقول NHS: الوسواس القهري «حالة صحية زي أي حالة تانية»، مفيش حاجة تستدعي الخجل، ومش ذنبك إنك مصاب بيه. وكمان مهم تعرف إن غالباً مش هيتحسّن لوحده من غير علاج ودعم مناسب — فإنك تروح لدكتور أو خدمة علاج نفسي/بالكلام ده تصرّف صح مش ضعف.",
+ "uncertainty_note_ar": "المصدر بيقول بصراحة إن سبب الوسواس القهري لسه «مش واضح» بالظبط، وإن فيه عوامل كتير ممكن تلعب دور (تاريخ العائلة، فروق في المخ، ضغوط الحياة، طبيعة الشخصية). وكمان العلاج بيختلف من شخص للتاني: الـ CBT بيبان تأثيره بسرعة، لكن أدوية الـ SSRIs ممكن تاخد لحد ١٢ أسبوع، و«معظم» الناس هيستفيدوا — يعني مش الكل بنفس السرعة. وده كلام توعية عام مش تشخيص؛ لو الأعراض بتأثّر على حياتك اليومية الأفضل تتكلم مع دكتور.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "bipolar-basics",
+ "question": 11,
+ "phase": 1,
+ "domain": "مزاج",
+ "crisis_sensitive": true,
+ "claim_ar": "ناس كتير بتقول إن «الاضطراب ثنائي القطب» ده مجرد إن الواحد «مزاجه متقلب» أو «مود سواينج» بيتغيّر من ساعة للتانية — وده كلام غلط. حسب هيئة الصحة البريطانية (NHS)، ده اضطراب نفسي طويل المدى، والتغيّرات في المزاج بتكون شديدة مش عادية: فترات مزاج مرتفع جدًا (هوس mania أو hypomania — زي الإحساس بفرحة أو حماس أو طاقة زيادة عن اللزوم) وفترات مزاج منخفض (اكتئاب — حزن وإرهاق وفقدان أمل). والنوبات دي بتفضل أيام أو أسابيع مش دقائق، وبينها بيبقى فيه فترات المزاج فيها مستقر ممكن توصل أسابيع أو شهور أو سنين. عشان كده هو مش «دلع» ولا مجرد «مزاج»، ده حاجة بتتشخّص عند طبيب نفسي متخصص؛ ومع إن مفيش شفاء نهائي، فيه علاج بيساعد يظبّط المزاج (أدوية بتثبّت المزاج + جلسات علاج بالكلام زي العلاج المعرفي السلوكي CBT).",
+ "claim_en": "Some people brush off bipolar disorder as someone merely being \"moody\" or having quick \"mood swings\" that flip from one hour to the next — but that's a myth. According to the NHS, it's a long-term mental health condition in which the mood changes are extreme, not ordinary: spells of high mood (mania or hypomania — e.g. very happy, over-excited, restless or bursting with energy) and low mood (depression — e.g. sad, drained and hopeless). These episodes usually last days or weeks, not minutes, and in between a person usually has stable stretches that can run for weeks, months or years. That's why it isn't a personality quirk or a matter of \"attitude\": it's diagnosed by a mental health specialist (psychiatrist), and although it cannot be cured, treatments — mood-stabilising medicines and talking therapy such as CBT — help manage it.",
+ "status": "established",
+ "evidence_tier": "national_health_authority",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:bipolar-basics",
+   "quote_en": "The main symptom of bipolar disorder is extreme changes to your mood."
+  }
+ ],
+ "cultural_note_ar": "في الكلام اليومي المصري، وصف زي «ثنائي القطب» أو «مزاجه متقلب» بيتقال بخفّة على أي حد عصبي أو متغيّر المزاج، وساعات بيتلخبط مع «الدلع» أو «النكد» أو «قلّة الصبر» أو ضعف الشخصية — وده بيزوّد الوصمة ويأخّر إن الشخص يطلب مساعدة. لما نبصّله كحالة طبية ليها أعراض واضحة، وبتتشخّص عند متخصص، وليها علاج بيساعد على إدارتها (زي ما بتوصفها NHS)، بنحوّل اللوم والسخرية لدعم وفهم.",
+ "uncertainty_note_ar": "حسب نفس المصدر، لسه مش معروف بالظبط إيه اللي بيسبّب الاضطراب ثنائي القطب، والتشخيص ممكن ياخد وقت لأنه بيختلف من شخص للتاني وأعراضه بتشبه اضطرابات نفسية تانية، ومفيش شفاء نهائي — بس فيه علاج بيساعد على إدارته. الكلام ده معلومات توعية عامة من NHS (آخر مراجعة 28 أكتوبر 2024) ومش بديل عن إن حد متخصّص يعمل تشخيص.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "eating-disorders",
+ "question": 12,
+ "phase": 1,
+ "domain": "سلوك",
+ "crisis_sensitive": true,
+ "claim_ar": "كتير بيتعاملوا مع اضطرابات الأكل على إنها مجرد «رجيم» أو دلع أو رغبة في الرشاقة — وده فهم غلط. حسب هيئة الصحة الوطنية البريطانية (NHS): اضطراب الأكل هو «حالة صحة نفسية» بيتحكّم فيها الشخص في الأكل عشان يتعامل مع مشاعره ومواقف تانية في حياته — يعني مش قرار رجيم، ده حالة نفسية. وساعات بيظهر معاه علامات في الجسم زي البرودة والتعب والدوخة، وخفقان القلب أو الإغماء أو الشعور بالإغماء. عشان كده الـNHS بتنصح: لو حاسس إن ممكن يكون عندك اضطراب أكل، شوف دكتور (GP) في أقرب وقت. والمطمئن إن «مع العلاج، أغلب الناس بتقدر تتعافى من اضطراب الأكل».",
+ "claim_en": "Eating disorders are not a \"diet\" or a vanity choice. Per the NHS: \"An eating disorder is a mental health condition where you use the control of food to cope with feelings and other situations.\" It can come with physical signs such as feeling cold, tired or dizzy, and a racing heart or fainting. The NHS advises seeing a GP as soon as you can if you think you may have one — and with treatment, most people can recover.",
+ "status": "established",
+ "evidence_tier": "عالية — جهة صحية وطنية رسمية (NHS)، صفحة معلومات سريرية روجعت 23 يناير 2024",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:eating-disorders",
+   "quote_en": "An eating disorder is a mental health condition where you use the control of food to cope with feelings and other situations."
+  }
+ ],
+ "cultural_note_ar": "في مجتمعاتنا كتير بيقللوا من اضطرابات الأكل ويعتبروها «دلع» أو «بنت عايزة تبقى رشيقة» أو مجرد قلة أكل، وده بيأخّر إن الشخص يطلب مساعدة. الرسالة المهمة إنها حالة نفسية ليها تأثير على الجسم كمان، ومش عيب تطلب المساعدة (المصدر بيقول إنه صعب على الإنسان يعترف بالمشكلة ويطلب مساعدة، وبيشجّع إنه يعملها). ملاحظة: رقم مساعدة Beat (0808 801 0677) اللي في المصدر بريطاني؛ في مصر الأنسب إنك تروح لطبيب أو مختص نفسي، والخطوة الأولى زي ما بتقول NHS إنك تشوف دكتور في أقرب وقت.",
+ "uncertainty_note_ar": "المصدر نفسه بيقول إن «السبب الدقيق لاضطرابات الأكل غير معروف»، والتعافي بيختلف من شخص للتاني وممكن ياخد وقت — «أغلب» الناس بتتعافى، مش بالضرورة كلهم. ملاحظة عن المصدر: الرابط الأصلي المطلوب (/mental-health/conditions/eating-disorders/overview/) رجّع خطأ 404، فتم الاستناد للصفحة الحيّة الرسمية نفسها على NHS واللي بيوديلها تحويل NHS الدائم (301 من /conditions/eating-disorders/) وهي: /mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/ (روجعت 23 يناير 2024، المراجعة التالية 23 يناير 2027). كل الاقتباسات مأخوذة من الصفحة دي بالظبط.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "self-harm-help",
+ "question": 13,
+ "phase": 1,
+ "domain": "أزمة",
+ "crisis_sensitive": true,
+ "claim_ar": "فيه ناس بتقول إن اللي بيأذي نفسه بيعمل كده «علشان يلفت النظر» أو «دلع». الكلام ده بيجرح ومش صح. حسب هيئة الصحة البريطانية (NHS)، إيذاء النفس علامة على ضيق وألم نفسي جوّه سبب كامن محتاج نتعامل معاه، والدعم أو العلاج متاح لأي حد بيأذي نفسه أو حتى بيفكّر في كده. الأولى إنك تطلب مساعدة — تتكلّم مع طبيب أو خدمة إنصات مجانية — مش إن الشخص يتلام أو يتّفضح.",
+ "claim_en": "Some people brush off self-harm as \"attention-seeking.\" That's hurtful and wrong. According to the NHS, self-harm is a sign of emotional distress with an underlying cause that needs to be addressed, and support or treatment is available for anyone who self-harms or even thinks about it. The right response is to seek help — talk to a GP or a free listening service — not to blame or shame the person.",
+ "status": "established",
+ "evidence_tier": "إرشاد هيئة صحية وطنية موجّه للجمهور (NHS) — national health authority patient guidance",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:self-harm-help",
+   "quote_en": "a sign of emotional distress"
+  }
+ ],
+ "cultural_note_ar": "في سياقنا المصري كتير بنقلّل من إيذاء النفس بجُمَل زي «بيعمل كده علشان ناخد بالنا» أو «دلع»، والكلام ده بيخلّي الشخص يخبّي ألمه أكتر ويتأخّر عن طلب المساعدة. الأصل إننا نسمع من غير لوم ولا فضيحة، ونشجّعه يتكلّم مع مختص. ملاحظة مهمة: كل أرقام الدعم المذكورة في مصدر NHS خدمات بريطانية؛ فلو محتاج مساعدة فورية في مصر دوّر على أقرب دعم طبي/نفسي محلي أو حد تثق فيه، وما تعتمدش على الأرقام البريطانية.",
+ "uncertainty_note_ar": "المصدر ده صفحة NHS بريطانية موجّهة للجمهور (مُراجَعة آخر مرة أغسطس 2023)، مش دراسة علمية، وكل أرقام الطوارئ والخدمات فيها بريطانية مش مصرية. المصدر بيوصف إيذاء النفس بإنه «علامة على ضيق نفسي» ومحتاج دعم لسبب كامن، لكنه في الصفحة دي ما بيستخدمش حرفياً كلمة «لفت نظر» عشان ينفيها — نفي الأسطورة استنتاج من إطار المصدر إنه ألم حقيقي محتاج مساعدة. وأسباب إيذاء النفس بتختلف من شخص للتاني، والتقييم والعلاج المناسب بيتحدّدوا مع مختص.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "burnout-is-real",
+ "question": 14,
+ "phase": 1,
+ "domain": "ضغط",
+ "crisis_sensitive": false,
+ "claim_ar": "في ناس كتير بتقول إن \"الاحتراق الوظيفي\" ده دلع أو كسل أو حجة عشان الواحد يفكّ من الشغل — كإنه حاجة مش حقيقية. بس الكلام ده مش مظبوط: منظمة الصحة العالمية مُدرِجة الاحتراق في التصنيف الدولي للأمراض (ICD-11) كـ\"ظاهرة مهنية\" حقيقية، وبتعرّفه إنه متلازمة ناتجة عن ضغط شغل مزمن ما اتعالِجش صح. وليه ٣ علامات: إنهاك وإحساس إن طاقتك خلصت؛ وبُعد ذهني عن شغلك أو سلبية وسخط ناحيته؛ وضعف في كفاءتك في الشغل. بس خلّي بالك: ده توصيف مرتبط بالشغل تحديدًا — ومش مُصنَّف كـ\"مرض\" طبي.",
+ "claim_en": "Some people brush burnout off as laziness or an excuse to dodge work — as if it weren't real. That's not accurate: the World Health Organization includes burn-out in the ICD-11 as a genuine \"occupational phenomenon,\" defining it as a syndrome resulting from chronic workplace stress that has not been successfully managed. It has three dimensions: energy depletion or exhaustion; mental distance from — or negativism/cynicism toward — one's job; and reduced professional efficacy. Importantly, it refers specifically to the occupational context, and it is NOT classified as a medical condition.",
+ "status": "established",
+ "evidence_tier": "A (WHO ICD-11 official classification — top-tier authority)",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "who:burnout-is-real",
+   "quote_en": "Burn-out is a syndrome conceptualized as resulting from chronic workplace stress that has not been successfully managed. It is characterized by three dimensions: feelings of energy depletion or exhaustion; increased mental distance from one's job, or feelings of negativism or cynicism related to one's job; and reduced professional efficacy. Burn-out refers specifically to phenomena in the occupational context and should not be applied to describe experiences in other areas of life."
+  }
+ ],
+ "cultural_note_ar": "في بيئة الشغل عندنا كتير بنسمع \"الشغل مايموتش\" و\"اللي مايستحملش يسيب\"، والاحتراق بيتشاف كإنه ضعف في شخص الموظف نفسه مش مشكلة في ظروف الشغل. إن منظمة الصحة العالمية بتوصّف الاحتراق كـ\"ظاهرة مهنية\" ناتجة من ضغط شغل مزمن بيدّينا لغة نتكلم بيها من غير لوم أو وصمة، ويخلّينا نبص لبيئة الشغل وظروفها — مش بس للشخص لوحده.",
+ "uncertainty_note_ar": "خلي بالك: المصدر بيأكّد إن الاحتراق مُعترَف بيه كـ\"ظاهرة مهنية\" في ICD-11، لكنه بيقول بالنص \"It is not classified as a medical condition\" — يعني مش مُصنَّف كمرض/حالة طبية، ومذكور في فصل \"العوامل المؤثرة على الحالة الصحية أو التواصل مع الخدمات الصحية\" مش في فصل الأمراض. كمان WHO بتحصر استخدام المصطلح في سياق الشغل تحديدًا: \"should not be applied to describe experiences in other areas of life\". والصفحة دي تعريف وتصنيف بس — مابتقدّمش معايير تشخيص فردي، ولا بتتكلم عن العلاج أو نسب الانتشار.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "grief-vs-depression",
+ "question": 15,
+ "phase": 1,
+ "domain": "مزاج",
+ "crisis_sensitive": true,
+ "claim_ar": "خرافة بنسمعها بعد الفقد على وشّين: يا «أي حزن ده اكتئاب لازم دوا»، يا العكس «الحزن كله بيعدّي لوحده، استحمل وبس». الاتنين مش دقيقين. الحزن بعد الفقد استجابة طبيعية — والـNHS بتقول «الحزن والفقد استجابات طبيعية للفقد»، وإن الإحساس ده «المفروض يخفّ تدريجيًا مع الوقت». يعني مش كل حزن يبقى مرض. لكن في خطّ فاصل: «لو حاسس إنك بتكتئب أو بتقلق أكتر وأكتر، يمكن تحتاج مساعدة طبية» — وكمان لو المزاج المنخفض قعد «أكتر من أسبوعين»، أو الحزن استمرّ «شهور أو سنين» (ده اللي بيتسمّى اضطراب الحزن المطوّل). الفرق مش إنك حزين، الفرق إنه بيزيد أو مش بيخفّ — وساعتها تطلب مساعدة، متستنّاش.",
+ "claim_en": "A myth we hear after loss cuts both ways: either 'any grief is depression that needs medication,' or the opposite, 'all grief passes on its own, just endure it.' Neither is accurate. Grief after loss is a natural response — the NHS says 'grief and bereavement are natural responses to loss' and that these feelings 'should ease gradually with time.' So not every grief is an illness. But there is a dividing line: 'if you are feeling increasingly depressed or anxious you may need medical help' — also if low mood lasts 'more than 2 weeks,' or grief lasts 'many months or years' (called prolonged grief disorder). The difference isn't that you're sad; it's whether it's worsening or not easing — and then you seek help, you don't wait.",
+ "status": "established",
+ "evidence_tier": "strong",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:grief-vs-depression",
+   "quote_en": "You may feel sad after a bereavement and these feelings should ease gradually with time. But if you are feeling increasingly depressed or anxious you may need medical help."
+  }
+ ],
+ "cultural_note_ar": "عندنا الحزن على الفقد مقدّر ومحترم، والصبر قيمة غالية — بس ساعات بنستخدم «الوقت بيداوي» أو «قوّي إيمانك» عشان نقفل الموضوع بدري، فالحزين يفضل ساكت حتى لو حزنه زاد أو طوّل. المعنى اللي بنطمّن بيه: إن الحزن حاجة طبيعية، وإن وجود علامات إنه محتاج مساعدة مش قلّة صبر ولا ضعف إيمان — ده باب مفتوح، مش عيب.",
+ "uncertainty_note_ar": "الخطّ بين الحزن والاكتئاب مش حائط حاد — الصفحة نفسها بتذكر «الاكتئاب» كإحساس ممكن يمرّ ضمن مراحل الحزن، فالاتنين بيتقاطعوا. الفرق في الاستمرار والزيادة، مش في مجرّد وجود الحزن. وحدود زي «أسبوعين» أو «شهور» إشارات تدفعك تطلب رأي مختصّ، مش تشخيص تعمله لنفسك. وكمان دي إرشادات من هيئة بريطانية (NHS)؛ الرسالة عن الفرق تنطبق، لكن مسار «روح لدكتور» متفصّل على نظامهم. متزن بيعرّف، مش بيشخّص.",
+ "last_reviewed": "2026-07-15"
+}
 ];
