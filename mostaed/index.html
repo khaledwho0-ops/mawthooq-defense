@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
 <title>مستعد · Mosta'ed — استعِدّ للّي ممكن يحصل</title>
 <meta name="description" content="مستعد — منصّة الجاهزية تحت مكتبة الوعي المصري. مكتبة سيناريوهات حقيقية مصنّفة ومتدرّجة، كل خطوة موثّقة من مصدر رسمي.">
 <style>
@@ -197,8 +198,8 @@
   <div style="font-weight:800;color:var(--text);font-size:1.05rem">مستعد · <span style="color:var(--dim);font-weight:600">تحت مكتبة الوعي المصري</span></div>
   <p style="margin-top:8px">القانون الواحد: <b>مفيش خطوة توصلك من غير مصدر حقيقي تقدر ترجعله.</b> دي إرشادات جاهزية عامة — مش بديل عن الطوارئ أو المختص. في أي خطر: <b style="direction:ltr;display:inline-block">112 · 123 · 180</b>.</p>
   <p style="margin-top:6px;color:var(--dim);font-size:.8rem">
-    عيّنة المرحلة 0 — <b>١٨ بطاقة</b>، منها <b>٤ بس</b> كل خطوة فيها مربوطة بمستند اتسحب واتّجزّأ بالكود.
-    الباقي لسه تحت التوثيق وبيتعلّم عليه ⚠️. مانقولش «موثّق» غير لما يبقى موثّق فعلًا.
+    المكتبة الحالية — <b><span id="footerCount">٠</span> بطاقة</b>، وكل خطوة إجرائية فيها مربوطة بسطر من مستند رسمي اتسحب واتّجزّأ بالكود.
+    ده إثبات تتبّع للمصدر، مش اعتماد طبي؛ مراجعة المختص لسه بوابة إلزامية قبل النشر العام.
   </p>
   <p style="margin-top:10px;color:var(--dim);font-size:.75rem;line-height:1.7">
     <b>المصادر والتراخيص:</b>
@@ -296,7 +297,7 @@ function openSheet(id){
       <h2>${esc(s.title.ar)}</h2><div class="snap">${esc(s.snapshot.ar)}</div>
     </div>
     <div class="body">
-      <div class="flag">${s.redFlags.map(f=>`<span class="f">⚑ ${esc(f)}</span>`).join('')}</div>
+      <div class="flag">${s.redFlags.map(f=>`<span class="f">⚑ ${esc(T(f))}${CITE(f)}</span>`).join('')}</div>
       <div class="grp">لحظة الموقف</div>
       ${fld('✅','اعمل',olist(s.do))}
       ${fld('⛔','ماتعملش',clist(s.dont,'no'),true)}
@@ -340,6 +341,7 @@ function cycleDrill(){
 }
 /* init */
 document.getElementById('cScen').textContent = S.length;
+document.getElementById('footerCount').textContent = String(S.length).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
 buildFilters(); render(); cycleDrill(); setInterval(cycleDrill, 4200);
 </script>
 </body>
