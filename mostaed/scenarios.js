@@ -1053,7 +1053,7 @@ window.SCENARIOS = [
     drill: { ar: "لو حسّيت بعلامات الإغماء: انزل الأرض بنفسك قبل ما تقع — ده بيمنع إصابة الراس.", en: "" },
     after: { ar: "لو أول مرة أو اتكرّر: اكشف لاستبعاد أسباب قلبية أو أنيميا أو هبوط ضغط.", en: "" },
     sources: [
-      { label: "MedlinePlus — Fainting (First aid / Home Care)", url: "https://medlineplus.gov/ency/article/003092.htm", srcId: "mlp:fainting", sha256: "c1da1196df", grade: "A · public domain (U.S. NLM)" },
+      { label: "MedlinePlus — Fainting (First aid / Home Care)", url: "https://medlineplus.gov/ency/article/003092.htm", srcId: "mlp:fainting", sha256: "c1da1196df", grade: "A · © A.D.A.M./Ebix" },
       { label: "NHS — Fainting", url: "https://www.nhs.uk/symptoms/fainting/", srcId: "nhs:fainting", sha256: "6b9d8b5071", grade: "A" },
       { label: "American Red Cross — Fainting", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/fainting", grade: "A · مرجع إسعاف رسمي" }
     ]
@@ -1251,7 +1251,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000028.htm",
         "srcId": "mlp:head-injury",
         "sha256": "1c5457c4a4",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -1460,7 +1460,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000043.htm",
         "srcId": "mlp:cuts-wounds",
         "sha256": "91244c2b35",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -1671,7 +1671,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000001.htm",
         "srcId": "mlp:broken-bone",
         "sha256": "8ffc676de6",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -1861,7 +1861,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000033.htm",
         "srcId": "mlp:insect-bites",
         "sha256": "bbaa53e3f1",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2067,7 +2067,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000054.htm",
         "srcId": "mlp:eye-injury",
         "sha256": "4fb150b9ce",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2238,7 +2238,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000039.htm",
         "srcId": "mlp:shock",
         "sha256": "3229ac4846",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2429,7 +2429,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000059.htm",
         "srcId": "mlp:chemical-burn",
         "sha256": "fe2e4f64d4",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2603,7 +2603,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000038.htm",
         "srcId": "mlp:hypothermia",
         "sha256": "b04c164d48",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2788,7 +2788,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000007.htm",
         "srcId": "mlp:breathing-difficulty",
         "sha256": "f8fc45e36d",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -2967,7 +2967,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/003062.htm",
         "srcId": "mlp:bleeding-gums",
         "sha256": "f43d536909",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -3164,7 +3164,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/003227.htm",
         "srcId": "mlp:sunburn",
         "sha256": "db61e39f51",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -3351,7 +3351,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000005.htm",
         "srcId": "mlp:allergic-reaction",
         "sha256": "8c31fb3437",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -3525,7 +3525,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000041.htm",
         "srcId": "mlp:sprains",
         "sha256": "757721f11b",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -3704,7 +3704,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/003090.htm",
         "srcId": "mlp:fever",
         "sha256": "bd0794a1ff",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -3872,7 +3872,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/003106.htm",
         "srcId": "mlp:nosebleed",
         "sha256": "94ef589236",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4055,7 +4055,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000058.htm",
         "srcId": "mlp:knocked-tooth",
         "sha256": "6457d31ac6",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4248,7 +4248,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000014.htm",
         "srcId": "mlp:dislocation",
         "sha256": "51749ea3de",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4421,7 +4421,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000044.htm",
         "srcId": "mlp:genital-injury",
         "sha256": "a925f806a0",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4624,7 +4624,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000052.htm",
         "srcId": "mlp:ear-emergencies",
         "sha256": "f1741ccdc1",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4775,7 +4775,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000057.htm",
         "srcId": "mlp:frostbite",
         "sha256": "24166ddd32",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -4932,7 +4932,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000060.htm",
         "srcId": "mlp:skull-fracture",
         "sha256": "3ef322663e",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -5102,7 +5102,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000061.htm",
         "srcId": "mlp:nose-fracture",
         "sha256": "0688856283",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
@@ -5295,7 +5295,7 @@ window.SCENARIOS = [
         "url": "https://medlineplus.gov/ency/article/000022.htm",
         "srcId": "mlp:unconsciousness",
         "sha256": "b4adebf16c",
-        "grade": "A · public domain (U.S. NLM)"
+        "grade": "A · © A.D.A.M./Ebix"
       }
     ]
   },
