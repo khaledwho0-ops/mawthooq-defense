@@ -1,0 +1,326 @@
+# 🧠 THE SECOND BRAIN — الدماغ الثاني
+## The Egyptian Awareness Library — everything we learned, and how to continue without me
+
+> **Written:** 16 July 2026 · **For:** Khaled Sayed, the EAL team, and any future human or AI agent who picks this up cold.
+>
+> This document exists because knowledge dies when a session ends. Everything on the one-link is static and will outlive any subscription. But the *methodology* — why we reject a card, how content is actually born, what the mistakes cost us — lives only in conversation. This is that conversation, made permanent.
+>
+> **If you are an AI agent reading this: this is your briefing. Read it fully before touching anything. It will save you from repeating expensive mistakes.**
+
+---
+
+# PART 0 — THE ONE-PARAGRAPH VERSION
+
+The Egyptian Awareness Library builds platforms that fight confident-but-wrong information. It has **one law**: *no claim, step, number, or fact reaches a user without a real, resolvable, fetched source.* Content is **extracted** from documents we actually downloaded — never recalled from a model's memory. Every producer is checked by an **adversarial verifier** that tries to refute it. Most candidates fail. **That is the system working, not failing.** An empty card beats a fabricated one, because the project exists precisely because fabricated confidence kills people.
+
+---
+
+# PART 1 — THE CONSTITUTION
+
+## القانون الواحد · The One Law
+
+> **مفيش خطوة توصلك من غير مصدر حقيقي تقدر ترجعله.**
+> *No step reaches you without a real source you can go back to.*
+
+### What it means operationally (not as a slogan)
+
+1. **Fetch or die.** Content is EXTRACTED from a fetched document. If the page won't load, or doesn't support the claim → `grounded = false` → **REJECT**. Do not "fill the gap from knowledge."
+2. **Every step carries provenance.** Each actionable step is `{t: "...", src: "nhs:tetanus"}` where `src` keys a source record: `{url, label, sha256, retrieved, licence, tag}`.
+3. **Unsourced is MARKED, never silently rendered.** The viewer shows a ⚠ on any step without a resolvable source. It must never *look* verified when it isn't.
+4. **The hash is the receipt.** `sha256` of the verbatim quote proves what the source said the day we read it.
+5. **An empty card beats a fabricated one.**
+
+### Why this law exists
+
+The founding story (the cold-open): a doctor's 2021 post about a *rare* clot risk from *one* vaccine brand was stripped of context into "refuse all vaccines, forever." Weeks later, another doctor watched a patient deteriorate until they needed a tube in his throat to breathe — a disease nearly eliminated from Egypt *by vaccines*. The brother's answer: *"No. My father says vaccines are a conspiracy."*
+
+**Those are deaths that haven't happened yet.** If we fabricate, we become the disease we exist to fight. That's not a metaphor — it's the acceptance criterion.
+
+---
+
+# PART 2 — THE CORE METHODOLOGIES
+
+These transfer to any project, in any domain. This is the actual IP.
+
+## 2.1 منهج التثبّت · The Verification Doctrine
+*Binding philosophy that sits ABOVE the constitution.*
+
+- **Operational definitions** — define every term so it can be measured and falsified. "Misinformation" is not a definition; "a claim contradicted by the cited source" is.
+- **Falsification tests** — for every claim, ask: *what observation would prove this wrong?* If nothing could, it isn't a claim, it's a belief.
+- **Stress-test everything** — assume your own output is wrong until it survives an attack.
+- **The ~1-in-4 rule** — empirically, roughly a quarter of confident outputs are wrong. Plan for it. Build the catcher, not the hope.
+
+## 2.2 The Firewall Protocol
+The binding acceptance test for any verdict the system gives:
+
+1. **Separate the layers** — empirical / religious / emotional. Never mix them. A claim can be empirically false and religiously meaningful; conflating the two is how you lose the person and the truth at once.
+2. **Harm gate** — if being right causes harm, the harm is part of the answer.
+3. **Calibrated verdict — NEVER 100%.** Certainty is the tell of a liar. (Passes 21/21 on prod.)
+
+## 2.3 The Provenance Pipeline — how content is actually born
+
+```
+FETCH → HASH → EXTRACT → VERIFY(adversarial) → INTEGRATE(additive) → VALIDATE(node) → DEPLOY → CONFIRM(live)
+```
+
+| Step | Rule |
+|---|---|
+| **FETCH** | Download the real URL. No fetch = no card. |
+| **HASH** | sha256 the verbatim quote — the receipt. |
+| **EXTRACT** | Every field must trace to the fetched text. |
+| **VERIFY** | A *different* agent re-fetches and tries to refute. |
+| **INTEGRATE** | Additive injection only. Never rebuild. |
+| **VALIDATE** | `node -e` load the data file; count must be right; a syntax error must fail loudly. |
+| **CONFIRM** | Fetch the live URL, assert the new content is actually there + 0 console errors. |
+
+> **⚠️ THE LESSON THAT DEFINES THIS PIPELINE:**
+> **NHS overturned my poisoning card.** The model's recall was confidently wrong; the fetched source was right. **Always trust the fetch over the memory — including your own.** On the first مستعد validation run, only **1 of 18** cards was properly grounded. That number is why the pipeline exists.
+
+## 2.4 Adversarial Verification — produce → refute → PASS-only
+
+**Never trust the producer.** A second agent re-fetches the source and attempts to *refute* the card. It PASSes only if **all** hold:
+
+- [ ] every do/dont step is supported by the page
+- [ ] nothing invented — no fabricated fact, article number, statistic, or phone number
+- [ ] arrays complete (not truncated)
+- [ ] no unverified number; no jurisdiction conflation
+- [ ] safe and not misleading
+
+**This is not theatre — it caught a real kill:**
+> The **tetanus card** fabricated `"123 إسعاف"` (the Egyptian ambulance) into a step, when the NHS source lists only 111 and 999 — *and* spliced an emergency number into a step labelled with the **non-emergency** line. Wrong AND dangerous. The verifier rejected it. **It never reached a user.**
+
+**Expect low yield and don't flinch.** Batch 1: **4 of 18 PASS**. Wave 1 gap batch: 3/6 cards + 5/6 claims. That's the gate doing its job. *A low pass rate is evidence of integrity, not incompetence.*
+
+## 2.5 The Durability Protocol
+*Born from a session-limit kill that destroyed ~40 minutes of work and produced zero files.*
+
+- **Write-first.** Make the deliverable durable **before** the expensive call, not after.
+- **One unit per agent.** A death then costs one card, not a batch.
+- **Checkpoint + persist resume state.**
+- **Resume, don't restart.** `Workflow({scriptPath, resumeFromRunId})` — unchanged agents replay from cache **for free**.
+- **Salvage immediately.** When a batch dies, harvest the PASS survivors *now* (integration is cheap, agents are not). We rescued `high-blood-sugar` this way from a 12-of-17 wipeout.
+
+## 2.6 Number Safety *(the tetanus lesson, generalized)*
+
+- **Never invent a phone number.** Ever.
+- **Keep the source's own numbers** (NHS 111, 999) *inside* source-quoted steps, exactly as written.
+- **Put the Egyptian number (123) only in its own field** / the call directory — never spliced into a foreign source's step.
+- **Never merge a non-emergency line with an emergency one.** That's not a typo, it's a triage failure.
+- **Unverifiable number → leave it empty** and give guidance in words.
+
+## 2.7 Honesty Labels
+Every متزن claim carries: **established · contested · debunked · unknown**, plus:
+- **WEIRD flag** — was this studied only on Western/Educated/Industrialized/Rich/Democratic samples? If yes, say so.
+- **cultural note** + **uncertainty note** — in Egyptian Arabic.
+
+## 2.8 Anti-Truncation *(a completeness bug is a safety bug)*
+Structured outputs get cut mid-array. On an emergency card, a truncated `dont` list is **actively dangerous** — the reader believes they've read all the warnings.
+- Cap: **≤6 do / ≤4 dont / ≤5 redFlags**, each **≤18–20 words**.
+- Require complete JSON (all arrays closed).
+- **A truncated array = FAIL**, even if everything visible is correct.
+
+## 2.9 Theme-Binding *(standing rule)*
+**EVERY** page binds to tokens (`--bg-*`, `--text-*`, `--border-*`, `--accent-*`) — never a hardcoded colour. Verify on **a light and a dark theme** before shipping.
+
+## 2.10 Jurisdiction Honesty *(حقوقي's version of the One Law)*
+Legal content has a failure mode medical content doesn't: **a foreign procedure presented as local law.**
+- State the **الدليل** (basis): the exact instrument + article (e.g. «الدستور المصري ٢٠١٤ — المادة ٥٤») + the verbatim quote.
+- State the **jurisdiction** plainly.
+- **ALWAYS**: *"ده وعي قانوني عام — مش استشارة قانونية. استشير محامي مصري مختص."*
+- **Never** present an NCSC/FTC/UN procedure as an Egyptian one. (Batch 1's phishing card does this correctly: it says outright that the reporting route is UK-only, and points to the Egyptian channel separately.)
+
+## 2.11 Dedup Before You Spend
+**9 of 10 "new" topics in one batch were already covered.** Always diff proposed topics against the deployed set *before* spending a single agent. Token cost of dedup: ~0. Token cost of skipping it: an entire wave.
+
+---
+
+# PART 3 — THE ARCHITECTURE
+
+## The family
+
+**EAL is the mother methodology.** Every platform inherits the same law.
+
+| Platform | Domain | State (16 Jul 2026) |
+|---|---|---|
+| **موثوق** Mawthooq | Verification — 8-layer deception scan, media forensics, no-hallucination agent, critical-thinking curriculum | **LIVE** · egy2.vercel.app |
+| **مستعد** Mosta'ed | Readiness — first-aid / emergencies, every step line-level sourced | **117 cards** |
+| **متزن** Motazen | Psychological literacy — claims with honesty labels | **130 claims** |
+| **حقوقي** Ħoqoqi | Rights + criminology — know your right before you need it | **1 card** (seeded) |
+| **أمان** Aman | Cybersecurity **+** criminology — a safe wall around you, your family, your home | **3 cards** (seeded) |
+
+> **أمان's positioning (K., 16 Jul 2026):** *"منصة الأولى من نوعها بتدمج بين علوم الـ cybersecurity و criminology عشان تعمل جدار آمن حوالين نفسك أهلك بيتك وكل من تحب."* — The criminology half is what makes it new: not just *what the attack is*, but **how the criminal thinks and selects you**.
+
+## The card engine (reusable across all platforms)
+
+**Data file** sets two globals:
+```js
+window.SOURCES = { "ncsc:phishing": {url, label, tag, sha256, retrieved, licence} };
+window.CARDS   = [ {id, title:{ar,en}, level, domain, who[], place[],
+                    snapshot:{ar,en}, redFlags[],
+                    do:[{t, src}], dont:[{t, src}],     // ← src = provenance
+                    whenWhy:{ar}, note:{ar}, basis:{ar}, quote,
+                    contacts:[{label, number, say}], sources:[{srcId, grade}]} ];
+```
+
+**Viewer** (`index.html`, ~350 lines, self-contained): filters (domain/level) → card grid → detail sheet.
+The critical function is `CITE()`:
+```js
+// A verified step links to the document it came from.
+// An unverified one is visibly flagged rather than passing as sourced.
+const CITE = x => {
+  if (typeof x === 'string' || !x.src) return `<sup class="cite unv" title="خطوة من غير مصدر مُثبت">⚠</sup>`;
+  const s = (window.SOURCES||{})[x.src];
+  if (!s) return `<sup class="cite unv" title="مصدر غير معروف">⚠</sup>`;
+  return `<sup class="cite"><a href="${s.url}" target="_blank">${s.tag}</a></sup>`;
+};
+```
+> **Design note that matters:** citations mark **claims** (do/dont/variations) only. Checklists and scripts render plain — *a ⚠ on everything trains people to ignore ⚠.*
+
+## The integrators (in scratchpad — copy them forward)
+
+| Tool | Job |
+|---|---|
+| `integrate.py` | Additive injection into مستعد/متزن. Brace-matches the array close, inserts before `]`, prepends to `window.SOURCES = {`. Dedups by id. node-validates. **Git is the safety net** — if validation fails, `git checkout -- <file>` reverts instantly. |
+| `integrate_new.py` | Canonical accumulator (scratchpad JSON) → regenerates `aman/threats.js` + `hoqoqi/rights.js`. Idempotent; safe to re-run. |
+| `validate-cards.mjs` | **Exits 1** on ungrounded L≥4. The blocking gate. |
+
+**Why additive-only:** K.'s rule after a near-miss — *"DONT HARD REBUILD AND DELETE ALL WE HAVE NO TIME."* Surgical edits. A rebuild risks everything to fix a little.
+
+---
+
+# PART 4 — THE HARD-WON LESSONS
+
+*Each of these cost real time, tokens, or trust. Do not re-learn them.*
+
+### On truth
+1. **Fabrication is the default failure mode.** An 86-item audit found **40 One-Law violations**. Unconstrained engines fabricate hadith, fatwa, and medical authority — fluently and confidently.
+2. **The model's recall loses to the fetched source.** Every time. Including when you're sure.
+3. **Adversarial verify catches what self-review cannot.** Self-review is the fox auditing the henhouse.
+4. **A low PASS rate is a healthy signal.** 4/18 means the gate is real.
+
+### On process
+5. **Dedup before you spend.** 9/10 topics were duplicates.
+6. **Don't hard-rebuild.** Additive only.
+7. **Save-only-on-200.** A screenshot re-run under thin quota silently overwrote good captures with error pages. Never write an artifact unless the response was actually successful.
+8. **Session limits kill mid-flight.** Hence the Durability Protocol. This document is itself an instance of it.
+9. **Verify live, not locally.** "It's in the file" ≠ "the user can see it." Fetch the deployed URL and assert.
+
+### On judgement
+10. **Third-party privacy is a hard line.** The 4 committee-analysis docs name and analyze real examiners — they stayed **local**, published 19 of 23. K. pushed to publish all; the line held. *A right answer that harms a third party is still the wrong action.*
+11. **Secrets:** API keys pasted into chat are **exposed**. Gitignored `.env.local` only, never a public repo, and rotate afterward.
+12. **Expert gates are not bureaucracy.** مستعد L4/L5 needs clinician sign-off; حقوقي needs a lawyer, before either claims authority. We can prove *traceability*; we cannot grant *medical or legal endorsement*. Those are different things, and conflating them is exactly the failure we exist to fight.
+
+---
+
+# PART 5 — STATE OF THE WORLD (16 July 2026)
+
+## Live and permanent (no API, no subscription — works forever)
+- **The one link:** `khaledwho0-ops.github.io/mawthooq-defense` — static GitHub Pages. Hub arranged in defense-day order (①–⑥).
+- **موثوق:** `egy2.vercel.app` (needs API keys for the AI tools; the no-API pages work regardless)
+- **Content:** مستعد **117** · متزن **130** · أمان **3** · حقوقي **1**
+- **Assets:** 59-slide deck (light-mode default, presenter initials), ~50s cold-open (`intro.html`), ~4-min looped showcase (`showcase.html`), 63pp documentation, 19 published docs.
+
+## Known-open items
+| Item | Note |
+|---|---|
+| حقوقي / أمان content | **The main gap.** Plan is in Part 6, ready to run. |
+| Wave 2 expansion | Died on session limit (resets 8am Cairo). **Resumable** — see Part 6. |
+| Clinician gate | مستعد L4/L5 before "medical-grade" claims |
+| Lawyer gate | حقوقي before authoritative legal claims |
+| `egy2clean` → `main` | Holds كوّن وعيك + rotator fixes. Not merged (prod-safe). |
+
+---
+
+# PART 6 — THE READY-TO-RUN PLAN
+*The unfinished work, specified so it is executable rather than lost.*
+
+## 6.1 حقوقي — the full dimension map (K.'s spec, 16 Jul 2026)
+
+**Per-card structure (every card must answer all six):**
+> **ما هو حقي القانوني الكامل** · **الدليل** · **كيف أسترده** · **ماذا أفعل** · **ماذا لا أفعل** · **من أكلم**
+
+| # | Dimension | Grounded source |
+|---|---|---|
+| 1 | حقوق الإنسان الأساسية الطبيعية الموافق عليها من العالم كله | UDHR — `un.org/en/about-us/universal-declaration-of-human-rights` |
+| 2 | حقوق الإنسان بناءً على القانون المصري | Egyptian Constitution 2014 — `constituteproject.org/constitution/Egypt_2014` |
+| 3 | حقوق الإنسان — رجل | UDHR equality (Art 1–2, 7) — frame as equal protection |
+| 4 | حقوق الإنسان — المرأة | CEDAW (OHCHR) · WHO violence-against-women |
+| 5 | حقوق الإنسان في العمل | ILO (fundamental principles, OSH) |
+| 6 | حقوق الإنسان في مجالات أخرى | CRC (children) · WHO (elder abuse) |
+| 7 | كيف أحمي نفسي بالقانون: **البيت · الشارع · العمل · المتجر · المسجد · المدرسة · الأماكن العامة** | Ground each scenario in the *right* (home inviolability → Constitution Art 57–58; work → ILO; store → consumer protection) + the reporting route |
+| 8 | كيف أحمي أبي وأمي وأخي وأختي بالقانون في كل الظروف | CRC/UNICEF (children) · WHO (older people) · the rights above |
+
+**Grounding difficulty (be honest about it):** dimensions 1, 2, 5 ground cleanly — UDHR and the Constitution are fetchable full texts. Dimensions 7 and 8 are *situational*; ground each in an underlying right + a real reporting route, and let the verifier reject anything that drifts into invented Egyptian procedure. **Expect rejections. That's correct.**
+
+## 6.2 أمان — remaining topic map
+
+Covered: phishing · strong-passwords · romance-scam.
+Queued (all with strong fetchable sources):
+
+| Topic | Source |
+|---|---|
+| elderly-scam-protection | `consumer.ftc.gov/features/protecting-older-consumers` |
+| investment-crypto-scam | `consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams` |
+| social-engineering *(criminology)* | `cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks` |
+| secure-home-devices | `cisa.gov/secure-our-world` |
+| account-recovery-hacked | `ncsc.gov.uk/guidance/recovering-a-hacked-account` |
+| two-factor-auth · otp-hijack · ransomware · child-online-safety · public-wifi · data-breach-response · online-shopping-fraud | NCSC / FTC (see workflow script) |
+
+**The criminology half** is the differentiator: every أمان card should answer not just *what the attack is*, but **how the criminal selects and manipulates you** (UNODC / FTC / CISA social-engineering material).
+
+## 6.3 How to actually run it
+
+**Resume the killed wave (free for cached agents):**
+```
+Workflow({ scriptPath: ".../workflows/scripts/expand-hoqoqi-aman-w2-wf_5c5876fc-287.js",
+           resumeFromRunId: "wf_5c5876fc-287" })
+```
+
+**Then integrate:**
+```bash
+# extract PASS → scratchpad/pass_aman.json + pass_hoqoqi.json, then:
+python integrate_new.py APPLY     # regenerates threats.js + rights.js, node-validates
+git add -A && git commit -m "content: ..." && git push
+# then FETCH the live URL and assert the new ids are present + 0 console errors
+```
+
+**The workflow shape that works** (produce → adversarially verify → PASS-only):
+```js
+const r = await pipeline(TOPICS,
+  x => agent(SAFE + ONELAW + NUMSAFE + CONCISE + AR + BASIS +
+             `Produce ONE card id="${x.id}" grounded ONLY in ${x.src}...`,
+             {phase:'Produce', schema: CARD}),
+  (card, x) => card?.grounded
+    ? agent(SAFE + `ADVERSARIAL One-Law check. Re-fetch ${x.src}. Confirm every step
+             supported, nothing invented, arrays complete, numbers safe. PASS/FAIL.`,
+             {phase:'Verify', schema: VERDICT}).then(v => ({card, verdict:v}))
+    : {card, verdict:{verdict:'FAIL', issues:['ungrounded at produce']}}
+);
+const pass = r.filter(Boolean).filter(x => x.verdict?.verdict === 'PASS').map(x => x.card);
+```
+**The prompt constants are the methodology compressed** — `ONELAW`, `NUMSAFE`, `CONCISE`, `BASIS`, `AR`. Reuse them verbatim; each one encodes a scar.
+
+---
+
+# PART 7 — HOW TO CONTINUE WITHOUT ME
+
+**If you are a future agent or a human picking this up:**
+
+1. **Read Part 1 and Part 2 first.** They are not background — they are the operating rules. Violating them produces output that looks like the project and betrays it.
+2. **Never write a claim from memory.** Fetch, extract, hash, cite. If you can't fetch, you can't ship.
+3. **Always have a second pass try to refute the first.** Self-review is not review.
+4. **Expect and welcome rejection.** If your pass rate is high, your gate is broken.
+5. **Additive edits only.** Git is the safety net; node-validate before you push; fetch the live URL before you claim it's done.
+6. **Say what you don't know.** Calibrated, never 100%. Mark jurisdiction. Mark uncertainty. Flag WEIRD.
+7. **Protect third parties** even when asked not to. Even when it's inconvenient.
+8. **When the budget dies mid-flight:** salvage the survivors, write the state, resume — don't restart.
+
+**The test for anything you build here:**
+> *Would this step still be true if the person following it were someone you love, in the worst moment of their life, with no time to check?*
+>
+> If you can't trace it to a real source — **the honest answer is to say nothing.**
+
+---
+
+*الدليل قبل التصديق — evidence before belief.*
+*المكتبة المصرية للوعي · The Egyptian Awareness Library · 2026*
