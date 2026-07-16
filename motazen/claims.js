@@ -3,6 +3,11 @@
  * 118 claims across the Below-Zero phase. Regenerate: node pipeline/assemble-research.mjs
  */
 window.SOURCES = {
+"nhs:postpartum-depression": {"tier": "قوي — Tier A (هيئة صحية وطنية رسمية: NHS, UK)", "label": "NHS (UK) — Postnatal depression: Overview", "url": "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/", "sha256": "28ce811359", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:addiction-is-illness": {"tier": "A", "label": "NHS (UK National Health Service) — \"Addiction: what is it?\"", "url": "https://www.nhs.uk/live-well/addiction-support/addiction-what-is-it/", "sha256": "d102e11bed", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:seasonal-affective": {"tier": "T1", "label": "NHS (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/overview/", "sha256": "b80db3efad", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:psychosis-recovery": {"tier": "A", "label": "NHS — Psychosis: Treatment", "url": "https://www.nhs.uk/mental-health/conditions/psychosis/treatment/", "sha256": "07947d1dc2", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
+"nhs:adult-adhd": {"tier": "A", "label": "NHS (National Health Service, UK)", "url": "https://www.nhs.uk/conditions/adhd-children-teenagers/", "sha256": "7f3ea14fae", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:ocd-basics": {"tier": "national_health_authority", "label": "NHS – Obsessive compulsive disorder (OCD): Overview", "url": "https://www.nhs.uk/mental-health/conditions/obsessive-compulsive-disorder-ocd/overview/", "sha256": "79c65de036", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:bipolar-basics": {"tier": "national_health_authority", "label": "NHS (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/conditions/bipolar-disorder/overview/", "sha256": "2f66a8da3b", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:eating-disorders": {"tier": "عالية — جهة صحية وطنية رسمية (NHS)، صفحة معلومات سريرية روجعت 23 يناير 2024", "label": "NHS — الخدمة الصحية الوطنية البريطانية (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/behaviours/eating-disorders/overview/", "sha256": "b09f8bc3a3", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
@@ -3876,6 +3881,112 @@ window.CLAIMS = [
  ],
  "cultural_note_ar": "عندنا الحزن على الفقد مقدّر ومحترم، والصبر قيمة غالية — بس ساعات بنستخدم «الوقت بيداوي» أو «قوّي إيمانك» عشان نقفل الموضوع بدري، فالحزين يفضل ساكت حتى لو حزنه زاد أو طوّل. المعنى اللي بنطمّن بيه: إن الحزن حاجة طبيعية، وإن وجود علامات إنه محتاج مساعدة مش قلّة صبر ولا ضعف إيمان — ده باب مفتوح، مش عيب.",
  "uncertainty_note_ar": "الخطّ بين الحزن والاكتئاب مش حائط حاد — الصفحة نفسها بتذكر «الاكتئاب» كإحساس ممكن يمرّ ضمن مراحل الحزن، فالاتنين بيتقاطعوا. الفرق في الاستمرار والزيادة، مش في مجرّد وجود الحزن. وحدود زي «أسبوعين» أو «شهور» إشارات تدفعك تطلب رأي مختصّ، مش تشخيص تعمله لنفسك. وكمان دي إرشادات من هيئة بريطانية (NHS)؛ الرسالة عن الفرق تنطبق، لكن مسار «روح لدكتور» متفصّل على نظامهم. متزن بيعرّف، مش بيشخّص.",
+ "last_reviewed": "2026-07-15"
+}
+,
+{
+ "id": "postpartum-depression",
+ "question": 16,
+ "phase": 1,
+ "domain": "مزاج",
+ "crisis_sensitive": true,
+ "claim_ar": "في ناس بتقول إن اكتئاب ما بعد الولادة «دلع» أو إن الأم بتفتعل الحكاية عشان تاخد اهتمام. الكلام ده مش صح. هيئة الصحة البريطانية (NHS) بتوصفه بإنه «حالة نفسية شائعة ممكن تحصل بعد الولادة» — يعني مرض حقيقي، مش ضعف ولا دلع. وهو مختلف عن «كآبة الأيام الأولى» (baby blues) اللي بتيجي كام يوم بعد الولادة وبتروح لوحدها في حدود أسبوعين؛ أما الاكتئاب ده فأعراضه حقيقية وبتفضل، زي المزاج المنخفض، والإحساس باليأس أو بالذنب أو إنك أمّ وحشة، وصعوبة النوم حتى وقت الراحة، وصعوبة التقارب مع البيبي. السبب بالظبط لسه مش معروف، بس المصدر بيقول إن ضغط العناية بمولود جديد، وقلة النوم، والتغيّرات الهرمونية في الحمل ممكن يكونوا كلهم ليهم دخل. والخبر المطمّن إنه «عادةً بيتحسّن مع العلاج» (زي جلسات العلاج النفسي والأدوية)، وحتى الآباء والشركاء ممكن يجيلهم اكتئاب بعد الولادة — فمهو مش «دلع» بنت ولا ست.",
+ "claim_en": "Postnatal (postpartum) depression is a real medical condition, not \"spoiled\" attention-seeking or drama: the NHS describes it as a common mental health condition that can happen after having a baby, distinct from the short-lived \"baby blues\" (which passes within about 2 weeks), with real, persistent symptoms that usually get better with treatment. Even fathers and partners can experience it.",
+ "status": "pending_clinician_review",
+ "evidence_tier": "قوي — Tier A (هيئة صحية وطنية رسمية: NHS, UK)",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:postpartum-depression",
+   "quote_en": "\"a common mental health condition that can happen after having a baby\" — NHS"
+  }
+ ],
+ "cultural_note_ar": "في بيوت مصرية كتير بيتقال للأم اللي لسه والدة «اصبري وبطّلي دلع» أو بيتحطّ عليها ضغط إنها تبان مبسوطة ومتماسكة قدّام الأهل والناس، وده بيخلّيها تكتم اللي جواها وتتأخّر في طلب المساعدة. كمان بعض الأمهات بتخاف تحكي إنها تعبانة نفسيًا خوفًا من إن حد ياخد منها البيبي — والمصدر بيطمّن إن حصول ده «نادر جدًا»، وإن طلب المساعدة بدري (حتى لو عندك بعض العلامات بس) بيخلّي فرصة التحسّن أكبر. المهم نفصل بين «كآبة الأيام الأولى» العابرة وبين اكتئاب حقيقي محتاج دعم، من غير ما نلوم الأم على تعبها.",
+ "uncertainty_note_ar": "المصدر بيقول بصراحة إن السبب الدقيق لاكتئاب ما بعد الولادة «مش معروف بالظبط»، وإن عوامل زي قلة النوم والتغيّرات الهرمونية وضغط العناية بالمولود «ممكن» يكون ليها دخل — يعني احتمال مش تأكيد قاطع لسبب واحد. كمان دي صفحة إرشاد عام من هيئة صحية بريطانية (NHS) ومفيهاش رقم إحصائي لنسبة الانتشار، ومش بديل عن الكشف الطبي: لو الأعراض مستمرة أو بتزيد أو فيه أفكار لإيذاء النفس أو البيبي، لازم التواصل مع دكتور/ممرضة أو زائرة صحية فورًا وطلب مساعدة عاجلة.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "addiction-is-illness",
+ "question": 17,
+ "phase": 1,
+ "domain": "سلوك",
+ "crisis_sensitive": true,
+ "claim_ar": "فيه ناس كتير بتقول إن اللي بيدمن ده \"ضعيف شخصية\" أو \"قليل إرادة\" — بس ده كلام مش مظبوط. هيئة الصحة البريطانية (NHS) بتعرّف الإدمان إنه إنك \"متبقاش مسيطر\" على إنك تعمل أو تاخد أو تستخدم حاجة لدرجة ممكن تأذيك، وبتقول إن خطر الإدمان جزء منه وراثي وجزء من الظروف المحيطة زي الضغط والبطالة والفقر. والأهم إن NHS بتأكد بالنص إن \"الإدمان حالة قابلة للعلاج\" وإن المساعدة موجودة — تقدر تروح لدكتورك (GP) أو لجهة متخصصة في مساعدة المدمنين. يعني مش نقطة ضعف في شخصيتك، ده حالة ليها علاج زي أي حالة تانية.",
+ "claim_en": "Many people believe addiction is a \"weakness of will\" or a character flaw — but that is not accurate. The NHS defines addiction as \"not having control over doing, taking or using something to the point where it could be harmful to you,\" says the risk is partly genetic and partly environmental (stress, unemployment, poverty), and states plainly that \"Addiction is a treatable condition\" with help available from a GP or a specialist organisation.",
+ "status": "grounded",
+ "evidence_tier": "A",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:addiction-is-illness",
+   "quote_en": "Addiction is a treatable condition."
+  }
+ ],
+ "cultural_note_ar": "في مجتمعنا الإدمان بيتشاف كتير على إنه \"عيب\" أو \"قلة دين\" أو ضعف في الشخصية، والكلام ده بيخلّي الشخص يستحي ويخبّي ويتأخر إنه يطلب مساعدة. الرسالة اللي بتطمّن هنا — زي ما بتقول NHS — إن دي حالة ليها علاج، ومفيش عيب إنك تروح لدكتورك أو لجهة متخصصة تساعدك، بالظبط زي أي حالة صحية تانية. طلبك للمساعدة قوة مش ضعف.",
+ "uncertainty_note_ar": "المصدر ده صفحة توعية عامة من هيئة الصحة البريطانية (NHS)، مش دراسة إكلينيكية، والمعلومة عامة مش مخصوصة بمصر. خطوط المساعدة المذكورة في الصفحة (زي Samaritans على 116 123 والأدلة الخاصة بخدمات العلاج) بريطانية ومش شغّالة في مصر — لازم تدوّر على جهة أو خط مصري متخصص. كمان الصفحة ماقالتش حرفيًا جملة \"مش ضعف إرادة\"؛ ده استنتاج أمين من إنها بتعرّف الإدمان كـ\"فقدان سيطرة\" وبتقول إن خطره جزء منه وراثي وبيئي وإنه \"حالة قابلة للعلاج\". آخر مراجعة للصفحة: 23 يوليو 2024.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "seasonal-affective",
+ "question": 18,
+ "phase": 1,
+ "domain": "مزاج",
+ "crisis_sensitive": true,
+ "claim_ar": "فيه ناس بتقول إن الزهق والحزن اللي بييجي في الشتا مجرد «كسل» أو «الجو بيوحّش» ومش حاجة حقيقية. الكلام ده مش دقيق. حسب هيئة الصحة البريطانية (NHS)، الاكتئاب الموسمي (SAD) ده فعلاً «نوع من الاكتئاب اللي بيحصل عادةً في الشتا» — يعني حالة حقيقية ليها أعراض زي المزاج المنخفض، وقلة الاهتمام بالحاجات اللي بتحبها عادةً، والنوم والأكل أكتر من المعتاد، وغالبًا بتخف في الصيف. مش دلع ولا كسل. ولو حاسس بالأعراض دي، الـNHS بينصح إنك تروح لدكتور.",
+ "claim_en": "Some people dismiss the low mood and sadness that shows up in winter as mere \"laziness\" or \"gloomy weather\" — not something real. That's not accurate. According to the NHS, seasonal affective disorder (SAD) is genuinely \"a type of depression that usually happens in the winter\" — a real condition with symptoms like low mood, a lack of interest in things you usually enjoy, and sleeping and eating more than usual, and it typically goes away in the summer. If you notice these symptoms, the NHS advises seeing a GP.",
+ "status": "verified",
+ "evidence_tier": "T1",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:seasonal-affective",
+   "quote_en": "Seasonal affective disorder (SAD) is a type of depression that usually happens in the winter."
+  }
+ ],
+ "cultural_note_ar": "في مصر، الجو مش بارد ومُظلم في الشتا زي بلاد الشمال، فممكن حد يستغرب فكرة إن الفصل يأثّر على المزاج، أو يعتبر الحزن الموسمي مجرد «ملل» مش حالة تستاهل اهتمام. بس لما الأعراض دي تتكرر كل سنة في نفس التوقيت، تستاهل إنها تتاخد بجدية زي أي اكتئاب. (المصدر بيقول إن الدكتور ممكن يشخّص الحالة لو الأعراض ظهرت في وقت معيّن من السنة لمدة سنتين أو أكتر).",
+ "uncertainty_note_ar": "المصدر نفسه بيقول إن السبب الدقيق للاكتئاب الموسمي «لسه مش معروف بالظبط»، بس يُعتقد إنه مرتبط بقلة ضوء النهار في الشتا، اللي ممكن يغيّر مواد في المخ زي الميلاتونين والسيروتونين. كمان لاحظ إن الجملة الأساسية بتقول «عادةً» في الشتا — يعني فيه ناس أقل بتيجي عندهم الأعراض في الصيف بدل الشتا. الكلام ده معلومة توعية عامة ومش بديل عن تشخيص طبي.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "psychosis-recovery",
+ "question": 19,
+ "phase": 1,
+ "domain": "ذهان",
+ "crisis_sensitive": true,
+ "claim_ar": "في ناس فاكرة إن «الذهان» نهاية الطريق ومفيش رجعة منه، وإن اللي بيجيله كده يبقى خلاص خسران عقله للأبد. ده تصوّر غلط. المصدر الرسمي بيقول إن علاج الذهان بيبقى مزيج من: أدوية مضادة للذهان (بتتاخد عادةً كأول علاج)، وجلسات علاج بالكلام، ودعم اجتماعي. والعلاج بالكلام بيساعد إنه يقلّل حدّة الذهان والقلق اللي بيسبّبه، وهدف العلاج إنك «توصل لأهداف مهمة بالنسبة لك، زي إنك تقلّل ضيقك، وترجع لشغلك أو تعليمك أو تدريبك، وتستعيد إحساسك بالسيطرة». يعني في طريق للتحسّن والرجوع للحياة بالعلاج — مش نهاية.",
+ "claim_en": "Recovery from psychosis is possible with treatment. Per the NHS, treatment involves a combination of antipsychotic medicines, talking therapies and social support; talking therapies can reduce the intensity and anxiety caused by psychosis, and the aim is to help you reach meaningful goals such as reducing your distress, returning to work or education, and regaining a sense of control.",
+ "status": "grounded",
+ "evidence_tier": "A",
+ "weird_flag": "no",
+ "sources": [
+  {
+   "srcId": "nhs:psychosis-recovery",
+   "quote_en": "\"Treatment for psychosis involves a combination of antipsychotic medicines, talking therapies and social support.\" / \"The aim is to help you achieve goals that are meaningful and important to you, such as reducing your distress, returning to work, education or training, or regaining a sense of control.\""
+  }
+ ],
+ "cultural_note_ar": "في مصر كتير من الناس بتفسّر أعراض الذهان على إنها «مسّ» أو «سِحر» أو «عين»، فالأسرة أحياناً بتخبّي المريض أو تلجأ لطرق غير طبية، وده بيأخّر العلاج. الرسالة المطمئنة: ده حالة طبية بتتعالج عند فريق صحة نفسية متخصّص، ومفيش فيها عيب ولا وصمة. والمصدر بيقول إن أول نوبة ذهان ممكن تتحوّل لـ«فريق تدخّل مبكّر» متخصّص — يعني الوصول للطبيب بدري مهم. لو حد قريّب منك بيعاني دلوقتي، الخطوة الصح إنك تروح لطبيب نفسي أو أقرب خدمة صحة نفسية، مش الانتظار أو الإخفاء.",
+ "uncertainty_note_ar": "المصدر بيتكلم عن إن العلاج «ممكن» ويساعد على التحسّن، لكنه ما بيذكرش نِسبة تعافٍ ولا بيقول إن «الكل بيتعافى»، فمينفعش نوعد بضمانات. كمان المصدر نفسه بيوضّح إن الأدوية المضادة للذهان «مش مناسبة أو فعّالة لكل الناس»، وإن «علاج الذهان بيختلف حسب السبب الكامن وراه». يعني النتيجة بتختلف من شخص للتاني، والخطة بتتحدّد مع الطبيب حسب الحالة.",
+ "last_reviewed": "2026-07-15"
+},
+{
+ "id": "adult-adhd",
+ "question": 20,
+ "phase": 1,
+ "domain": "انتباه",
+ "crisis_sensitive": false,
+ "claim_ar": "ناس كتير فاكرة إن الـ ADHD (فرط الحركة وتشتّت الانتباه) «حاجة أطفال بس» وإن الواحد بيكبر ويخلص منه لوحده. بس الصفحة دي من هيئة الصحة البريطانية (NHS) — وهي أصلاً صفحة مخصّصة للأطفال والصغار — بتقول بنص كلامها إن فيه «معلومات منفصلة عن الـ ADHD عند البالغين»، وبتحوّلك كمان لجمعيات دعم مخصّصة للكبار. يعني الـ NHS نفسها بتتعامل مع ADHD البالغين كموضوع قائم بذاته وليه معلوماته لوحده. الخلاصة: الكبار كمان ممكن يكون عندهم ADHD، مش الأطفال بس — فلو حاسس بالأعراض وانت كبير، ده مش «دلع» ولا حاجة تتكسف منها، وتستاهل إنك تتشاف عند مختص.",
+ "claim_en": "Many people believe ADHD is \"just a childhood condition\" you grow out of. But this NHS page — which is itself about children and young people — states plainly that \"There is separate information about ADHD in adults,\" and it signposts dedicated support charities for adults (ADHD Adult UK, AADD-UK groups for adults). In other words, the NHS treats adult ADHD as a real, distinct topic with its own information. Adults can have ADHD too, not only children.",
+ "status": "needs_review",
+ "evidence_tier": "A",
+ "weird_flag": "yes",
+ "sources": [
+  {
+   "srcId": "nhs:adult-adhd",
+   "quote_en": "There is separate information about ADHD in adults."
+  }
+ ],
+ "cultural_note_ar": "في السياق المصري لسه فيه وصمة إن ADHD «قلة تربية» أو «دلع» في الأطفال، وإن الكبير المفروض «يتحكّم في نفسه» — وده بيخلّي بالغين كتير من غير تشخيص. المصدر ده بريطاني (NHS)، ومسارات التشخيص والعلاج والأدوية في مصر بتختلف؛ لو محتاج تتشخّص رِوح لطبيب نفسي أو مختص معتمد في مصر، وماتاخدش أي دوا من غير إشراف طبي.",
+ "uncertainty_note_ar": "تنبيه مهم على المصدر: اللينك المطلوب (.../attention-deficit-hyperactivity-disorder-adhd/diagnosis/) بقى بيحوّل تلقائيًا (redirect 301) لصفحة «ADHD في الأطفال والصغار»، والمحتوى القديم الخاص بتشخيص البالغين اتشال من هناك. الصفحة اللي اتجابت فعليًا بس «بتعترف» بإن فيه ADHD عند البالغين وبتحوّل لمعلومات منفصلة — لكنها ماوصفتش إزاي الـ ADHD بيستمرّ من الطفولة للكِبَر ولا إزاي البالغين بيتشخّصوا. فجملة «بيستمر في الكبار» بالمعنى الإكلينيكي مش مدعومة نصيًا من الصفحة دي؛ عشان ندعمها بشكل مباشر محتاجين صفحة الـ NHS المخصّصة «ADHD in adults» نفسها. الصفحة آخر مراجعة ليها 19 مارس 2025. الادعاء هنا متقيّد بس بما ورد حرفيًا: إن الـ NHS بتفصل معلومات للبالغين وفيه دعم مخصّص لهم.",
  "last_reviewed": "2026-07-15"
 }
 ];

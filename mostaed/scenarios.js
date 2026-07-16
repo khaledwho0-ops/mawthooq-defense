@@ -19,6 +19,8 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"nhs:carbon-monoxide": {"url": "https://www.nhs.uk/conditions/carbon-monoxide-poisoning/", "label": "NHS", "sha256": "d4ed3c4907", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
+"nhs:jellyfish-sting": {"url": "https://www.nhs.uk/conditions/jellyfish-and-other-sea-creature-stings/", "label": "NHS", "sha256": "a00a36cd1f", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:high-blood-sugar": {"url": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/", "label": "NHS", "sha256": "1fc2b97013", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:dehydration": {"url": "https://www.nhs.uk/conditions/dehydration/", "label": "NHS", "sha256": "c10c4fd56c", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
   "nhs:cpr": { url: "https://www.nhs.uk/tests-and-treatments/first-aid/cpr/", label: "NHS — CPR",
@@ -17436,6 +17438,178 @@ window.SCENARIOS = [
  ],
  "whenWhy": {
   "ar": "High blood sugar (hyperglycaemia) is where the level of sugar in your blood is too high. It mainly affects people with diabetes and can be serious if not treated.",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
+,
+{
+ "id": "carbon-monoxide",
+ "title": {
+  "ar": "تسمّم أول أكسيد الكربون (carbon monoxide poisoning)",
+  "en": "Carbon monoxide poisoning"
+ },
+ "level": 4,
+ "who": [
+  "أي حد بيستنشق الغاز في مكان فيه تسريب من جهاز غاز أو دفاية أو موقد",
+  "بيوت فيها سخّانات، بوتاجازات، دفايات غاز أو بارافين، أو مواقد خشب/فحم/غاز",
+  "اللي بيستخدموا شوّاية أو بابور كامب جوّه مكان مقفول"
+ ],
+ "place": [
+  "البيت — المطبخ أو أوضة فيها سخّان أو دفاية",
+  "الأماكن المقفولة زي الجراج",
+  "جوّه الخيمة أو أي مكان مقفول فيه شوّاية أو بابور كامب"
+ ],
+ "domain": "طوارئ",
+ "snapshot": {
+  "ar": "أول أكسيد الكربون غاز سام ملهوش لون ولا ريحة، فمش هتحس بيه وهو حواليك. لو حسّيت إنك اتسممت: لو تقدر اقفل الجهاز اللي ممكن يكون بيطلّع الغاز، اطلع برّه في الهوا، واطلب استشارة طبية على طول، ومتدخلش تاني المكان لحد ما تاخد نصيحة.",
+  "en": "Carbon monoxide is a poisonous gas that is colourless and does not smell, so you cannot tell if it is around you. If you think you have it: stop using the appliance if you can, go outside, and get medical advice as soon as possible — do not go back into the affected building until you have got advice."
+ },
+ "redFlags": [
+  "بيلاقي صعوبة في التنفّس",
+  "بقى مشوّش أو تايه فجأة",
+  "فقد الوعي / أُغمي عليه",
+  "حاسس بضعف شديد في جسمه",
+  "عنده ألم في الصدر أو العضلات"
+ ],
+ "do": [
+  {
+   "t": "لو تقدر، اقفل أي جهاز ممكن يكون بيطلّع الغاز (زي السخّان أو البوتاجاز أو الدفاية)",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "اطلع برّه في الهوا الطلق",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "اطلب استشارة طبية بأسرع وقت ممكن",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "لو محتاج تروح المستشفى، خلّي حد تاني يوصّلك أو اطلب إسعاف",
+   "src": "nhs:carbon-monoxide"
+  }
+ ],
+ "dont": [
+  {
+   "t": "متدخلش تاني المكان المصاب لحد ما تاخد استشارة طبية",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "متسوقش عربيتك بنفسك للمستشفى",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "متولّعش شوّاية أو بابور كامب جوّه البيت أو جوّه الخيمة",
+   "src": "nhs:carbon-monoxide"
+  },
+  {
+   "t": "متسيبش عربية أو أي موتور شغّال في مكان مقفول (زي الجراج)",
+   "src": "nhs:carbon-monoxide"
+  }
+ ],
+ "whenWhy": {
+  "ar": "Carbon monoxide gas is colourless and does not smell, so you cannot tell if it is around you.",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+},
+{
+ "id": "jellyfish-sting",
+ "title": {
+  "ar": "لسعة قنديل بحر",
+  "en": "Jellyfish sting"
+ },
+ "level": 3,
+ "who": [
+  "أي حد اتلسع من قنديل بحر أو كائن بحري",
+  "رواد الشواطئ والمصايف",
+  "السبّاحين والغطّاسين",
+  "اللي بيمشوا في المياه الضحلة أو المناطق الصخرية"
+ ],
+ "place": [
+  "على الشاطئ",
+  "في مياه البحر",
+  "المناطق الصخرية والمياه الضحلة"
+ ],
+ "domain": "إسعافات",
+ "snapshot": {
+  "ar": "معظم لسعات كائنات البحر (زي قنديل البحر) في بريطانيا مش خطيرة وممكن تتعالج بإسعافات أولية. اشطف مكان اللسعة بميّة البحر، شيل أي شوك، وانقع المكان في ميّة دافية جدًا لمدة 30 دقيقة على الأقل. خد مسكّن لو محتاج. أول حاجة دوّر على عامل إنقاذ أو حد عنده تدريب إسعافات. ولو ظهرت أعراض خطيرة زي صعوبة تنفّس أو تورّم شديد، اطلب إسعاف فورًا.",
+  "en": "Most sea creature stings (like jellyfish) in the UK are not serious and can be treated with first aid. Ask a lifeguard or someone with first aid training for help if possible. Rinse the area with seawater, remove any spines, and soak the area in very warm water for at least 30 minutes. Take painkillers if needed. Go to A&E or call 999 for serious symptoms like difficulty breathing or severe swelling."
+ },
+ "redFlags": [
+  "صعوبة في التنفّس",
+  "ألم في الصدر",
+  "تشنّجات أو نوبات (صرع)",
+  "تورّم شديد حوالين مكان اللسعة",
+  "نزيف شديد",
+  "قيء (استفراغ)",
+  "دوخة أو فقدان الوعي"
+ ],
+ "do": [
+  {
+   "t": "لو اتلسعت من كائن بحري زي قنديل البحر، دوّر على استشارة طبية قريبة بأسرع وقت. تقدر تسأل عامل إنقاذ (lifeguard) أو حد عنده تدريب إسعافات أولية.",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "اشطف مكان اللسعة بميّة البحر (مش ميّة عذبة).",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "شيل أي شوك من الجلد بملقاط أو بحرف كارت بلاستيك (كارت البنك).",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "انقع مكان اللسعة في ميّة دافية جدًا (أسخن درجة تقدر تستحملها) لمدة 30 دقيقة على الأقل — ولو مش قادر تنقعه استعمل فوط أو مناديل قماش سخنة.",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "خد مسكّنات زي الباراسيتامول أو الإيبوبروفين.",
+   "src": "nhs:jellyfish-sting"
+  }
+ ],
+ "dont": [
+  {
+   "t": "متبولش على اللسعة.",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "متحطش تلج أو كمّادة باردة.",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "متلمسش أي لوامس (tentacles) أو شوك بإيدك من غير حماية.",
+   "src": "nhs:jellyfish-sting"
+  },
+  {
+   "t": "متغطّيش الجرح أو تقفله.",
+   "src": "nhs:jellyfish-sting"
+  }
+ ],
+ "whenWhy": {
+  "ar": "rinse the affected area with seawater (not fresh water)",
   "en": ""
  },
  "whoToCall": [
