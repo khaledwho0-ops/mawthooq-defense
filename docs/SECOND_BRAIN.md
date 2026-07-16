@@ -115,6 +115,15 @@ FETCH → HASH → EXTRACT → VERIFY(adversarial) → INTEGRATE(additive) → V
 - **Never merge a non-emergency line with an emergency one.** That's not a typo, it's a triage failure.
 - **Unverifiable number → leave it empty** and give guidance in words.
 
+### 2.6b A number needs its OWN source — the card's source can't grant it
+Found live on 16 Jul: the حقوقي `fraud-victim-steps` card listed **«جهاز حماية المستهلك — 19588»** while its **only** source was a **US FTC page**. A US federal page cannot possibly carry an Egyptian hotline. **The tetanus pattern again**, and it survived batch-1's verifier *because the slice bug (2.10b Bug 1) hid the `contacts` array from it.* Two harness bugs compounding.
+
+**How it resolved — and why this is the pattern to copy:** the number turned out to be **real** (verified live in the header of the Consumer Protection Agency's own site, `cpa.gov.eg`). So the fix was **not** deletion — it was **provenance**. The contact now carries its own `extra_sources` record pointing at cpa.gov.eg, and the card renders **two** sources: FTC (for the advice) + CPA (for the number).
+
+> **The rule:** a card's primary source only grounds what that source says. **Every phone number, address, or institution name needs provenance of its own** — verified against the issuing body's own site, and recorded as a separate source. `integrate_new.py` supports this via `extra_sources`.
+>
+> **And the deeper point:** "true" and "sourced" are different properties. 19588 was true and unsourced — still a One-Law violation, because a reader has no way to tell a true unsourced number from a hallucinated one. **The fix for a true-but-unsourced claim is to source it, not to delete it.** The fix for a false one is deletion.
+
 ## 2.7 Honesty Labels
 Every متزن claim carries: **established · contested · debunked · unknown**, plus:
 - **WEIRD flag** — was this studied only on Western/Educated/Industrialized/Rich/Democratic samples? If yes, say so.
