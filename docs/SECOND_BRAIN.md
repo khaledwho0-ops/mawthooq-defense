@@ -96,6 +96,26 @@ FETCH → HASH → EXTRACT → VERIFY(adversarial) → INTEGRATE(additive) → V
 
 > **3. The domestic-violence card** widened WHO's *"intimate partner violence"* statistic into *"violence"* generally. A true number in a false frame. Rejected.
 
+### 2.4b ⚠️ RUN EVERY NEW RULE BACKWARDS OVER WHAT IS ALREADY SHIPPED
+**The single most dangerous blind spot in this whole build.**
+
+The gate rejected a *new* severe-bleeding card for dropping the source's **"except for an eye injury"** exception. Good. Then — only by accident, while integrating — I discovered مستعد **already had a live severe-bleeding card with the identical defect**:
+
+> Live L5 card: **«اضغط بالظبط على الجرح»** *(press directly on the wound)* — **no eye exception**, while its own A.D.A.M. source states *"Direct pressure is best for external bleeding, except for an eye injury."*
+
+It had been live the entire time. **The gate protects only what passes through it — everything shipped BEFORE the rule existed is unexamined.** A verifier that rejects a bad new card while an identical bad old card sits live is theatre.
+
+> **THE RULE: every time the gate catches a NEW defect class, immediately grep the ENTIRE live corpus for that same class.** The catch is not finished when the card is rejected; it is finished when the corpus is clean.
+
+**Retroactive audits this implies (do them):**
+- [x] dropped-qualifier / missing exception — found + fixed on `severe-bleeding` (replaced with an NHS/OGL card)
+- [ ] **every other L4/L5 card** — does any instruction drop an exception its source carries? (33 A.D.A.M.-derived cards were never checked for this)
+- [x] ungrounded phone numbers — found `19588` cited to a US FTC page; grounded via `extra_sources`
+- [x] false licence labels — found 39; relabelled
+- [ ] statistic scoping across all 130 متزن claims — never audited
+
+**Why I missed it:** I was watching the pipeline, not the product. New content got a fanatical gate; shipped content got no gate at all. *The library is not the sum of what the gate approved — it is everything a user can open right now.*
+
 **Expect low yield and don't flinch.** Batch 1: **4 of 18 PASS**. Wave 1 gap batch: 3/6 cards + 5/6 claims. That's the gate doing its job. *A low pass rate is evidence of integrity, not incompetence.*
 
 ## 2.5 The Durability Protocol
@@ -341,7 +361,7 @@ const CITE = x => {
 ## Live and permanent (no API, no subscription — works forever)
 - **The one link:** `khaledwho0-ops.github.io/mawthooq-defense` — static GitHub Pages. Hub arranged in defense-day order (①–⑥).
 - **موثوق:** `egy2.vercel.app` (needs API keys for the AI tools; the no-API pages work regardless)
-- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **15**
+- **Content:** مستعد **119** · متزن **130** · حقوقي **15** · أمان **10**
   *(حقوقي 9 = 8 Egyptian-Constitution 2014 cards + 1 FTC fraud-victim card. An earlier attempt at 10 UDHR cards was SHIPPED THEN REVERTED — see 2.10b Bug 3. The Constitution grounds them because it is binding Egyptian law and actually contains procedure; the UDHR does not.)*
 
 ## ⚠️ KNOWN CONTENT GAP — priority for the next run
