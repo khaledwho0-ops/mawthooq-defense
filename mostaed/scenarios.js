@@ -19,6 +19,7 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"nhs:high-blood-sugar": {"url": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/", "label": "NHS", "sha256": "1fc2b97013", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:dehydration": {"url": "https://www.nhs.uk/conditions/dehydration/", "label": "NHS", "sha256": "c10c4fd56c", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
   "nhs:cpr": { url: "https://www.nhs.uk/tests-and-treatments/first-aid/cpr/", label: "NHS — CPR",
     sha256: "67f42f0720", retrieved: "2026-07-09", licence: "OGL v3 · © Crown copyright", tag: "NHS" },
@@ -17357,6 +17358,84 @@ window.SCENARIOS = [
  ],
  "whenWhy": {
   "ar": "start with small sips and then gradually drink more",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
+,
+{
+ "id": "high-blood-sugar",
+ "title": {
+  "ar": "ارتفاع السكر الحاد (هايبرجليسيميا)",
+  "en": "High blood sugar (hyperglycaemia)"
+ },
+ "level": 4,
+ "who": [
+  "مرضى السكري (السكر العالي بيأثّر عليهم أكتر حاجة)",
+  "أي حد عنده أعراض سكر عالي حتى لو لسه ماتشخّصش بالسكري"
+ ],
+ "place": [
+  "البيت",
+  "أي مكان"
+ ],
+ "domain": "طوارئ",
+ "snapshot": {
+  "ar": "ارتفاع السكر في الدم (هايبرجليسيميا) معناه إن نسبة السكر في دمك بقت عالية أوي. بيحصل أكتر حاجة لمرضى السكري، وممكن يبقى خطير لو ماتعالجش.",
+  "en": "High blood sugar (hyperglycaemia) is where the level of sugar in your blood is too high. It mainly affects people with diabetes and can be serious if not treated."
+ },
+ "redFlags": [
+  "بتحس بالغثيان أو بترجّع أو عندك وجع في بطنك",
+  "بتتنفّس أسرع من العادي أو قلبك بيدق بسرعة",
+  "بتحس بنعاس شديد أو مش قادر تفضل صاحي",
+  "ريحة نفَسك بقت زي الفاكهة (زي ريحة البونبون/الدروبس)",
+  "بتحس بتشوّش أو مش قادر تركّز",
+  "نسبة الكيتونز عالية في دمك أو في البول"
+ ],
+ "do": [
+  {
+   "t": "خُد أي دوا سكر الدكتور كتبه لك، زي ما دكتورك أو الفريق الطبي قالك.",
+   "src": "nhs:high-blood-sugar"
+  },
+  {
+   "t": "بلاش تاكل أكل كتير فيه سكر أو نشويات.",
+   "src": "nhs:high-blood-sugar"
+  },
+  {
+   "t": "حاول تلاقي طرق تهدّي بيها التوتر والضغط النفسي.",
+   "src": "nhs:high-blood-sugar"
+  },
+  {
+   "t": "اعمل رياضة بانتظام.",
+   "src": "nhs:high-blood-sugar"
+  },
+  {
+   "t": "خسّس وزنك لو وزنك زيادة.",
+   "src": "nhs:high-blood-sugar"
+  },
+  {
+   "t": "اتبع نصايح دكتورك أو الفريق الطبي عن اللي تعمله وانت عيّان (اللي بيتسمّى أحياناً \"قواعد أيام المرض\").",
+   "src": "nhs:high-blood-sugar"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ماتبطّلش أو تغيّر جرعات دوا السكر من غير ما دكتورك أو الفريق الطبي يقولك.",
+   "src": "nhs:high-blood-sugar"
+  }
+ ],
+ "whenWhy": {
+  "ar": "High blood sugar (hyperglycaemia) is where the level of sugar in your blood is too high. It mainly affects people with diabetes and can be serious if not treated.",
   "en": ""
  },
  "whoToCall": [
