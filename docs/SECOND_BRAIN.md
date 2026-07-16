@@ -152,6 +152,19 @@ I hand-verified the 10 UDHR cards by checking **quotes and article numbers** —
 
 This is the doctrine's own warning (*"self-review is not review"*) catching **me**. I was both the salvager and the verifier, and I certified my own work. **The cards were live for ~40 minutes before the real gate caught them.** Git reverted them in seconds — that is why additive-only + git-as-safety-net exists.
 
+### THE PROOF — fixing the harness took the pass rate from 0% to 80%
+Same models. Same adversarial gate. Same One Law. Three waves with the bugs: **0 PASS out of ~30**. One wave after fixing them (full card to the verifier + forbid procedure that isn't on the page + ground in the *binding* source): **8 PASS out of 10.**
+
+> **When a pipeline returns nothing, suspect the harness before you suspect the model.** A 0% pass rate is almost never "the AI can't do it" — it is usually the scaffolding lying to itself.
+
+And the content the fixed wave produced is *better* than what the buggy one attempted, because honesty was designed in rather than demanded away:
+- `snapshot_ar`: **«ده مبدأ دستوري — مش إجراء»**
+- `dont_step`: **«متدوّرش على خطوات إجرائية جوه المادة ٥٣ — مفيش فيها»**
+- `redFlag`: **«حد بيستشهد برقم مادة من غير ما يقرالك نصها — اطلب النص الحرفي»** ← *the One Law, taught to the reader*
+- `note_ar` even discloses that the verbatim quote is the English **International IDEA** translation on Constitute Project, **not the official Arabic text** — an honesty disclosure nobody asked for.
+
+**The gate does not just block bad content. Given an honest frame, it produces better content.**
+
 ### The deeper lesson for حقوقي specifically
 **A rights instrument grounds the RIGHT; it does not ground the REMEDY.**
 - **UDHR / CEDAW** = non-binding declaration / obligation on *states*. **Not self-executing** in an Egyptian court. A card that pairs them with "go file at the نيابة" implies an enforcement pathway that does not exist — which could fail a real person in a real legal moment.
@@ -275,8 +288,8 @@ const CITE = x => {
 ## Live and permanent (no API, no subscription — works forever)
 - **The one link:** `khaledwho0-ops.github.io/mawthooq-defense` — static GitHub Pages. Hub arranged in defense-day order (①–⑥).
 - **موثوق:** `egy2.vercel.app` (needs API keys for the AI tools; the no-API pages work regardless)
-- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **11**
-  *(حقوقي's 11 = 8 UDHR + 2 Egyptian-Constitution cards salvaged from a limit-killed workflow and verified by re-fetching the sources — every quote and article number confirmed against the real text — plus 1 FTC fraud-victim card.)*
+- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **9**
+  *(حقوقي 9 = 8 Egyptian-Constitution 2014 cards + 1 FTC fraud-victim card. An earlier attempt at 10 UDHR cards was SHIPPED THEN REVERTED — see 2.10b Bug 3. The Constitution grounds them because it is binding Egyptian law and actually contains procedure; the UDHR does not.)*
 
 ## ⚠️ KNOWN CONTENT GAP — priority for the next run
 **مستعد has NO severe-bleeding card.** It covers `bleeding-gums` and `nosebleed` only. Severe external bleeding is a life-threatening L5 topic and it is **uncovered**.
