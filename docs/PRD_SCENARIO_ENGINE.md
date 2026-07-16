@@ -178,6 +178,22 @@ Attack chains · account-recovery cascades (one email owns everything) · device
 5. **Base rates need a source or they don't ship.** «الغالبية بتنتهي بسلام» is a *claim*.
 6. **Every rule from SECOND_BRAIN applies**: omission (carry every exception), statistic scoping, number provenance, licence tier, full-card verification.
 
+### ✅ PROBE RESULTS — 16 Jul 2026 (done; do not re-probe these)
+
+| Need | Status | URL |
+|---|---|---|
+| **The 24-hour myth** 🏆 | ✅ **LIVE — the single most valuable line we have found** | `https://www.gov.uk/report-missing-person` — literal text: **"You do not have to wait 24 hours before contacting the police."** Also carries: contact anyone who may know their whereabouts · *"if you're **still concerned**"* (carry that hedge) · what police may ask |
+| **Crime triangle / routine activity** 🕵️ | ✅ LIVE | `https://popcenter.asu.edu/content/problem-analysis-triangle-0` · `https://www.ojp.gov/ncjrs/virtual-library/abstracts/social-change-and-crime-rate-trends-routine-activity-approach` |
+| Elder abuse | ✅ LIVE | `https://www.who.int/news-room/fact-sheets/detail/abuse-of-older-people` |
+| Phone monitoring / stalkerware | ✅ LIVE | `https://consumer.ftc.gov/articles/how-protect-your-phone-hackers` |
+| Sextortion | ✅ LIVE | `https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself` |
+| SIM swap | ✅ LIVE (shipped) | `https://www.ic3.gov/PSA/2022/PSA220208` |
+| **Virtual kidnapping** | 🚫 **NO LIVE SOURCE** — `fbi.gov` blocks agents; the IC3 PSAs on it are gone. **Try `consumer.ftc.gov/articles/family-emergency-scams` (same crime, FTC's name for it) — untested.** Do NOT write this card from memory. |
+| **Consular / relative abroad** | 🚫 **NO LIVE SOURCE** — gov.uk + travel.state.gov both blocked. K.'s «والدي في دولة تانية» **cannot be grounded yet.** Needs an Egyptian MFA source or another fetchable consular authority. |
+| **Money mule** | 🚫 NO LIVE SOURCE — Europol, Action Fraud, FBI, and the OJP abstract all fail. |
+
+> **Honest consequence:** of K.'s two flagship examples, **«أمي وأخويا اتأخروا» is fully groundable and is the reference card. «والدي في دولة تانية» is NOT** — the consular half has no fetchable authority. It stays unbuilt until one is found. **We do not write it from memory. That is the whole discipline.**
+
 ### Source shortlist to probe (per scenario, before writing)
 - **Missing persons / golden hours** → national police or Interpol guidance; **the 24-hour myth** must be refuted from an official page
 - **Virtual kidnapping** → FBI/IC3 (`ic3.gov` is fetchable ✅ — proven)
