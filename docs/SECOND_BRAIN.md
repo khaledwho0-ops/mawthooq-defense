@@ -200,6 +200,12 @@ const CITE = x => {
 
 ### On process
 5. **Dedup before you spend.** 9/10 topics were duplicates.
+5b. **Mine the journals — produced work survives a dead workflow.** When Wave 2 was killed by the session limit it reported `0 PASS` and looked like a total loss. It wasn't: **10 fully-produced حقوقي cards were sitting in `journal.jsonl`** — only their *verifiers* had died. The expensive half (fetch + extract) was already paid for. We recovered all 10, verified them by re-fetching the sources, and shipped them.
+   - Journal path: `.claude/projects/<proj>/<session>/subagents/workflows/<runId>/journal.jsonl`
+   - **Schema is `{type:"result", agentId, key, result}`** — `result` is a JSON *string* of the agent's return. (An early parser looked for `label`/`value`, found nothing, and nearly wrote off the whole wave. **Check the actual schema before concluding "no data."**)
+   - **A workflow reporting 0 PASS is not the same as a workflow that produced nothing.**
+5c. **Orphaned drafts accumulate in scratchpad.** Two complete, grounded مستعد cards (`sprain-strain`, `knocked-out-tooth`) sat unmerged for a day. Scratchpad is session-temp — **it gets wiped.** Sweep `scratchpad/*.json` against the live files periodically; merge or lose.
+5d. **Verify with the source text, not a term-matcher.** Two "failures" in the salvage sweep were *my matcher*, not the cards: `egypt-home-privacy` (quote joined two sentences with `...`) and the tooth reinsertion step (card says "socket", MedlinePlus says "back in your mouth where it fell out" — a faithful paraphrase). **Always read the surrounding source text before rejecting.** A false rejection destroys good work as surely as a false accept ships bad work.
 6. **Don't hard-rebuild.** Additive only.
 7. **Save-only-on-200.** A screenshot re-run under thin quota silently overwrote good captures with error pages. Never write an artifact unless the response was actually successful.
 8. **Session limits kill mid-flight.** Hence the Durability Protocol. This document is itself an instance of it.
@@ -217,7 +223,13 @@ const CITE = x => {
 ## Live and permanent (no API, no subscription — works forever)
 - **The one link:** `khaledwho0-ops.github.io/mawthooq-defense` — static GitHub Pages. Hub arranged in defense-day order (①–⑥).
 - **موثوق:** `egy2.vercel.app` (needs API keys for the AI tools; the no-API pages work regardless)
-- **Content:** مستعد **117** · متزن **130** · أمان **3** · حقوقي **1**
+- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **11**
+  *(حقوقي's 11 = 8 UDHR + 2 Egyptian-Constitution cards salvaged from a limit-killed workflow and verified by re-fetching the sources — every quote and article number confirmed against the real text — plus 1 FTC fraud-victim card.)*
+
+## ⚠️ KNOWN CONTENT GAP — priority for the next run
+**مستعد has NO severe-bleeding card.** It covers `bleeding-gums` and `nosebleed` only. Severe external bleeding is a life-threatening L5 topic and it is **uncovered**.
+A grounded draft exists (`scratchpad/bleeding_card_draft.json`, MedlinePlus `ency/article/000045.htm`, *"The most important step for external bleeding is to apply direct pressure"*) but it is **malformed** — no `id`, wrong key shape (`do_steps_ar`), no level/domain/snapshot.
+**It was deliberately NOT hand-authored.** Rebuilding it by hand would make the same context both producer and verifier, which breaks the separation the One Law depends on — on the single most dangerous card in the library. **Produce it properly (agent) → adversarially verify → integrate.** Do not shortcut this one.
 - **Assets:** 59-slide deck (light-mode default, presenter initials), ~50s cold-open (`intro.html`), ~4-min looped showcase (`showcase.html`), 63pp documentation, 19 published docs.
 
 ## Known-open items
