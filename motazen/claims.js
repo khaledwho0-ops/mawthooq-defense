@@ -3,6 +3,7 @@
  * 118 claims across the Below-Zero phase. Regenerate: node pipeline/assemble-research.mjs
  */
 window.SOURCES = {
+"nhs:loneliness-health": {"tier": "A (official NHS health guidance)", "label": "NHS – Every Mind Matters: Loneliness", "url": "https://www.nhs.uk/every-mind-matters/lifes-challenges/loneliness/", "sha256": "8890674938", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:postpartum-depression": {"tier": "قوي — Tier A (هيئة صحية وطنية رسمية: NHS, UK)", "label": "NHS (UK) — Postnatal depression: Overview", "url": "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/", "sha256": "28ce811359", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:addiction-is-illness": {"tier": "A", "label": "NHS (UK National Health Service) — \"Addiction: what is it?\"", "url": "https://www.nhs.uk/live-well/addiction-support/addiction-what-is-it/", "sha256": "d102e11bed", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:seasonal-affective": {"tier": "T1", "label": "NHS (UK National Health Service)", "url": "https://www.nhs.uk/mental-health/conditions/seasonal-affective-disorder-sad/overview/", "sha256": "b80db3efad", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
@@ -3987,6 +3988,28 @@ window.CLAIMS = [
  ],
  "cultural_note_ar": "في السياق المصري لسه فيه وصمة إن ADHD «قلة تربية» أو «دلع» في الأطفال، وإن الكبير المفروض «يتحكّم في نفسه» — وده بيخلّي بالغين كتير من غير تشخيص. المصدر ده بريطاني (NHS)، ومسارات التشخيص والعلاج والأدوية في مصر بتختلف؛ لو محتاج تتشخّص رِوح لطبيب نفسي أو مختص معتمد في مصر، وماتاخدش أي دوا من غير إشراف طبي.",
  "uncertainty_note_ar": "تنبيه مهم على المصدر: اللينك المطلوب (.../attention-deficit-hyperactivity-disorder-adhd/diagnosis/) بقى بيحوّل تلقائيًا (redirect 301) لصفحة «ADHD في الأطفال والصغار»، والمحتوى القديم الخاص بتشخيص البالغين اتشال من هناك. الصفحة اللي اتجابت فعليًا بس «بتعترف» بإن فيه ADHD عند البالغين وبتحوّل لمعلومات منفصلة — لكنها ماوصفتش إزاي الـ ADHD بيستمرّ من الطفولة للكِبَر ولا إزاي البالغين بيتشخّصوا. فجملة «بيستمر في الكبار» بالمعنى الإكلينيكي مش مدعومة نصيًا من الصفحة دي؛ عشان ندعمها بشكل مباشر محتاجين صفحة الـ NHS المخصّصة «ADHD in adults» نفسها. الصفحة آخر مراجعة ليها 19 مارس 2025. الادعاء هنا متقيّد بس بما ورد حرفيًا: إن الـ NHS بتفصل معلومات للبالغين وفيه دعم مخصّص لهم.",
+ "last_reviewed": "2026-07-15"
+}
+,
+{
+ "id": "loneliness-health",
+ "question": 21,
+ "phase": 1,
+ "domain": "ضغط",
+ "crisis_sensitive": true,
+ "claim_ar": "الوحدة مش مجرد إحساس بيعدّي. لو زادت أوي أو فضلت معاك فترة طويلة، ممكن تأثّر على صحتك النفسية وكمان الجسدية — وتزوّد خطر حاجات زي التوتر والقلق والاكتئاب.",
+ "claim_en": "Loneliness can affect both mental and physical health: if it is very severe or lasts a long time, it may increase the risk of physical conditions such as dementia and mental health conditions such as stress, anxiety, low mood or depression.",
+ "status": "needs_review",
+ "evidence_tier": "A (official NHS health guidance)",
+ "weird_flag": "yes",
+ "sources": [
+  {
+   "srcId": "nhs:loneliness-health",
+   "quote_en": "If loneliness is very severe or lasts a long time, it might increase the risk of some physical conditions such as dementia and mental health conditions such as stress, anxiety, low mood or depression."
+  }
+ ],
+ "cultural_note_ar": "في ثقافتنا المصرية أحياناً بيبقى صعب حد يعترف إنه حاسس بوحدة وهو وسط أهله وصحابه، وممكن الناس تحس إنها حاجة تكسف. المهم نوصّل إن الإحساس بالوحدة طبيعي وبيجي لأي حد وفي أي سن، ومش عيب ولا ضعف — والكلام مع حد بتثق فيه أو مع مختص أول خطوة للمساعدة.",
+ "uncertainty_note_ar": "المصدر بيربط التأثير على الصحة الجسدية بحالة إن الوحدة تكون «شديدة أو طالت مدتها»، وبيتكلم عن «زيادة الخطر» مش حتمية، وبيذكر الخرف كمثال. ملاحظة مهمة عن المصدر: الرابط الأصلي المطلوب (‎.../feelings-symptoms-behaviours/feelings-and-symptoms/loneliness/‎) رجّع خطأ 404 (اتأكدنا بـ curl و WebFetch)، فالـ NHS نقلت المحتوى؛ الاقتباس اتسحب حرفياً من صفحة الـ NHS الحيّة عن الوحدة (Every Mind Matters). محتاج مراجعة بشرية لتثبيت الرابط النهائي.",
  "last_reviewed": "2026-07-15"
 }
 ];

@@ -19,6 +19,9 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"mlp:scorpion-sting": {"url": "https://medlineplus.gov/ency/article/002850.htm", "label": "MedlinePlus Medical Encyclopedia — Scorpions", "sha256": "52025e9a1e", "retrieved": "2026-07-15", "licence": "public domain (U.S. NLM)", "tag": "Medlin"},
+"nhs:dog-bite": {"url": "https://www.nhs.uk/conditions/animal-and-human-bites/", "label": "NHS website — Animal and human bites (Open Government Licence v3.0)", "sha256": "8345a33599", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
+"nhs:tetanus": {"url": "https://www.nhs.uk/conditions/tetanus/", "label": "NHS", "sha256": "e7f2eac6cc", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:carbon-monoxide": {"url": "https://www.nhs.uk/conditions/carbon-monoxide-poisoning/", "label": "NHS", "sha256": "d4ed3c4907", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:jellyfish-sting": {"url": "https://www.nhs.uk/conditions/jellyfish-and-other-sea-creature-stings/", "label": "NHS", "sha256": "a00a36cd1f", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:high-blood-sugar": {"url": "https://www.nhs.uk/conditions/high-blood-sugar-hyperglycaemia/", "label": "NHS", "sha256": "1fc2b97013", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
@@ -17610,6 +17613,281 @@ window.SCENARIOS = [
  ],
  "whenWhy": {
   "ar": "rinse the affected area with seawater (not fresh water)",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
+,
+{
+ "id": "scorpion-sting",
+ "title": {
+  "ar": "لسعة عقرب",
+  "en": "Scorpion Sting"
+ },
+ "level": 2,
+ "who": [
+  "أي حد اتلدغ من عقرب",
+  "الأطفال 6 سنين أو أقل (أكتر عرضة للخطر من السم)"
+ ],
+ "place": [
+  "الصحاري",
+  "تحت الصخور والخشب والأرضيات",
+  "الشقوق والفتحات"
+ ],
+ "domain": "الإسعافات الأولية — لدغات وسموم",
+ "snapshot": {
+  "ar": "أغلب لدغات العقارب في أمريكا الشمالية ما بتحتاجش علاج؛ نضّف المكان، حُط تلج، وخلّي مكان اللدغة ثابت. لكن لو في أعراض خطيرة زي صعوبة التنفّس أو تشنّجات أو ضربات قلب غير منتظمة، أو طفل صغير اتلدغ، لازم إسعاف فوراً.",
+  "en": "Most North American scorpion stings need no treatment; clean the area, ice it, keep it still. Severe symptoms (breathing trouble, seizures, irregular heartbeat) or a stung young child need emergency care."
+ },
+ "redFlags": [
+  "صعوبة في التنفّس أو توقّف أو سرعة النفَس",
+  "تشنّجات (صرع) أو تشنّج عضلي أو شلل",
+  "ضربات قلب سريعة أو بطيئة أو غير منتظمة",
+  "ازدواج الرؤية أو سيلان اللعاب أو تشنّج الحنجرة",
+  "الأعراض بتزيد بسرعة خلال أول 2 لـ 4 ساعات",
+  "طفل عمره 6 سنين أو أقل اتلدغ"
+ ],
+ "do": [
+  {
+   "t": "نضّف مكان اللدغة كويس بالمياه والصابون.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "حُط تلج ملفوف بقماشة 10 دقايق وشيله 10، وكرّر.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "خلّي مكان اللدغة ثابت عشان السم ما ينتشرش.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "فكّ الهدوم واخلع الخواتم والحاجات الضيّقة.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "للأعراض الخفيفة اديله دايفينهيدرامين (بينادريل) بالفم لو بيقدر يبلع.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "قبل ما تتصل جهّز السن والوزن ووقت اللدغة ومكانها ونوع العقرب.",
+   "src": "mlp:scorpion-sting"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ما تعتمدش على الكلام ده في العلاج، اتصل بالإسعاف.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "ما تحطّش إيدك أو رجلك تحت الصخور أو الخشب أو الشقوق.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "ما تعرّضش نفسك لإصابة تانية عشان تمسك أو تصوّر العقرب.",
+   "src": "mlp:scorpion-sting"
+  },
+  {
+   "t": "ما تسبش التلج فترة طويلة لو في مشكلة في الدورة الدموية.",
+   "src": "mlp:scorpion-sting"
+  }
+ ],
+ "whenWhy": {
+  "ar": "This article is for information only. DO NOT use it to treat or manage a scorpion sting.",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+},
+{
+ "id": "dog-bite",
+ "title": {
+  "ar": "عضة كلب أو حيوان (أو إنسان) + خطر السعار",
+  "en": "Animal or human bite + rabies risk"
+ },
+ "level": 4,
+ "who": [
+  "أي حد اتعض من كلب أو حيوان أو إنسان",
+  "الأهل",
+  "المسعف الأولي"
+ ],
+ "place": [
+  "الشارع",
+  "البيت",
+  "الريف والأماكن اللي فيها كلاب أو حيوانات ضالة"
+ ],
+ "domain": "الإسعافات الأولية",
+ "snapshot": {
+  "ar": "لو اتعضيت من كلب أو حيوان أو إنسان: نضّف الجرح بالصابون والمية، وقّف النزيف، وغطّيه، وبعدين روح لدكتور يقيّم خطر السعار والتيتانوس وياخد مضاد حيوي لو محتاج. فيه خطر سعار، فماتستهونش بالعضة.",
+  "en": "First aid for animal or human bites and rabies risk: clean the wound with soap and water, control bleeding, cover it, then get medical help to check tetanus and rabies risk and start antibiotics if needed."
+ },
+ "redFlags": [
+  "الجرح كبير أو عميق أو مش قادر توقّف النزيف — روح الطوارئ فوراً أو اطلب إسعاف 123.",
+  "عضّك إنسان، أو العضة على الإيد أو الرجل أو الوش أو الراس.",
+  "سخونية عالية أو إحساس بالبرد والرعشة.",
+  "فيه حاجة جوه الجرح زي سنة أو شعر أو أتربة.",
+  "علامات عدوى: العضة بتطلّع صديد أو ريحتها وحشة.",
+  "لو اتقطع جزء من الجسم (صباع أو ودن): لفّه في منديل نضيف، حطه في كيس ومحوطه بتلج، وخده معاك."
+ ],
+ "do": [
+  {
+   "t": "نضّف الجرح كويس بالصابون والمياه الدافية.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "اعصر الجرح بلطف لحد ما ينزف شوية (إلا لو نازف أصلاً) عشان تقلّل خطر العدوى.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "لو بينزف بغزارة، اضغط عليه بشاش ناشف أو قماشة نضيفة لحد ما يقف.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "نشّف الجرح بلطف وغطّيه بشاش نضيف.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "خُد باراسيتامول أو إيبوبروفين عشان الألم والورم.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "روح لدكتور يقيّم خطر التيتانوس والسعار وياخد مضاد حيوي لو محتاج.",
+   "src": "nhs:dog-bite"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ماتدّيش أسبرين لأي طفل تحت ١٦ سنة.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "ماتسوقش بنفسك للمستشفى — خلي حد يوصّلك أو اطلب إسعاف.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "ماتستهونش بعضة سخنة أو ورمانة أو بيطلع منها سايل أو ريحتها وحشة.",
+   "src": "nhs:dog-bite"
+  },
+  {
+   "t": "ماتفترضش إنك متحصّن لو ماخدتش تطعيم تيتانوس من ١٠ سنين.",
+   "src": "nhs:dog-bite"
+  }
+ ],
+ "whenWhy": {
+  "ar": "check your risk of getting tetanus and rabies",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+},
+{
+ "id": "tetanus",
+ "title": {
+  "ar": "تيتانوس من جرح ملوّث",
+  "en": "Tetanus from a contaminated wound"
+ },
+ "level": 1,
+ "who": [
+  "أي حد اتجرح من عضة أو حرق أو خدش",
+  "العمال وأصحاب الورش",
+  "الفلاحين",
+  "الأطفال"
+ ],
+ "place": [
+  "البيت",
+  "الورشة والشغل",
+  "الشارع",
+  "الأرض الزراعية والمزرعة"
+ ],
+ "domain": "طوارئ",
+ "snapshot": {
+  "ar": "التيتانوس مرض خطير بيجي لما بكتيريا من التربة أو السماد تدخل جرح زي عضة أو حرق أو خدش. الخطر بيزيد لو الجرح كبير أو عميق أو فيه وسخ أو حاجة مغروزة فيه. نضّف الجرح كويس، اتأكد إنك مطعّم كامل ضد التيتانوس، ولو ظهرت علامات خطر زي تنشيف الفك أو تشنجات اطلب مساعدة طبية على طول.",
+  "en": "Tetanus is a serious condition caused by bacteria from soil or manure getting into a wound like a bite, burn or scratch. Risk is higher with large, deep or very dirty wounds. Clean the wound, make sure you are fully vaccinated, and get medical help urgently if warning signs appear."
+ },
+ "redFlags": [
+  "تنشيف أو تيبّس في الفك وصعوبة في فتح الفم",
+  "تشنجات عضلية مؤلمة أو تيبّس في العضلات",
+  "صعوبة في التنفس",
+  "ضربات قلب سريعة",
+  "تشنجات أو صرع",
+  "سخونية عالية أو إحساس بالبرد والرعشة مع جرح كبير أو عميق"
+ ],
+ "do": [
+  {
+   "t": "نضّف الجرح كويس وشيل أي وسخ أو تراب أو طين منه.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "اتأكد إنك واخد التطعيم كامل ضد التيتانوس.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "لو مش متأكد من تطعيماتك، اسأل الدكتور أو الوحدة الصحية.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "لو فضل تراب أو طين في الجرح بعد التنضيف، اطلب مساعدة طبية عاجلة.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "راقب الجرح لو بقى سخن أو متورّم أو أحمر أو بيوجع.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "لو هتروح المستشفى ما تسوقش بنفسك، خلّي حد يوصّلك.",
+   "src": "nhs:tetanus"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ما تستهونش بأي عضة أو حرق أو خدش حتى لو صغير.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "ما تسبش تراب أو وسخ أو حاجة مغروزة جوه الجرح.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "ما تفترضش إنك محصّن من غير ما تتأكد من تطعيمك.",
+   "src": "nhs:tetanus"
+  },
+  {
+   "t": "لو الفك نشف أو بدأت تشنجات، ما تستناش في البيت.",
+   "src": "nhs:tetanus"
+  }
+ ],
+ "whenWhy": {
+  "ar": "Tetanus is a serious, life-threatening condition caused by bacteria getting into a wound.",
   "en": ""
  },
  "whoToCall": [
