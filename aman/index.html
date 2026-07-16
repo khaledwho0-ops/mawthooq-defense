@@ -86,6 +86,7 @@
   .fld ul.no li{color:#e9b7b4}
   .fld p{color:var(--text);margin:0}
   .note{margin:18px 0 4px;background:color-mix(in srgb,var(--gold) 10%,transparent);border:1px solid color-mix(in srgb,var(--gold) 35%,transparent);border-radius:12px;padding:12px 15px;color:var(--sand);font-size:.9rem}
+  .ex{margin-top:8px;background:var(--surface);border-inline-start:3px solid var(--safe);border-radius:0 12px 12px 0;padding:10px 14px;color:var(--muted);font-size:.9rem;direction:ltr;text-align:start}
   .cite{margin-inline-start:6px;font-size:.62em;vertical-align:super;line-height:0}
   .cite a{color:var(--safe);text-decoration:none;border:1px solid var(--safe);border-radius:6px;padding:1px 5px;opacity:.85}
   .cite a:hover{opacity:1;background:color-mix(in srgb,var(--safe) 15%,transparent)}
@@ -115,7 +116,7 @@
 </div></header>
 
 <section class="hero"><div class="wrap">
-  <div class="eyebrow">مكتبة الوعي المصري · أمنك الرقمي</div>
+  <div class="eyebrow">مكتبة الوعي المصري · أمن سيبراني + علم إجرام</div>
   <svg class="shield" viewBox="0 0 200 200" fill="none">
     <path d="M100 12 L172 42 V102 C172 148 140 176 100 190 C60 176 28 148 28 102 V42 Z" stroke="var(--safe)" stroke-width="3" fill="color-mix(in srgb,var(--safe) 8%,transparent)"/>
     <path d="M100 30 L154 52 V100 C154 136 130 158 100 170 C70 158 46 136 46 100 V52 Z" stroke="var(--line)" stroke-width="2"/>
@@ -124,8 +125,8 @@
     <circle cx="100" cy="112" r="5" fill="var(--gold)"/><rect x="98" y="112" width="4" height="12" rx="2" fill="var(--gold)"/>
   </svg>
   <h1>أمان</h1>
-  <div class="tag">أمانك الرقمي يبدأ إنك تعرف الخطر — قبل ما يوصلك.</div>
-  <p class="sub">مكتبة بتشرح إزاي تحمي نفسك من النصب، الاختراق، وسرقة البيانات — على الموبايل، الحسابات، والفلوس. كل خطوة <b style="color:var(--safe-2)">موثّقة من جهة أمن رسمية</b> (NCSC · CISA · FTC) — مش نصايح عامة.</p>
+  <div class="tag">جدار آمن حوالين نفسك وأهلك وبيتك وكل اللي بتحبه.</div>
+  <p class="sub"><b style="color:var(--safe-2)">أول منصّة بتدمج علوم الـ cybersecurity وعلم الإجرام (criminology)</b> — تفهم إزاي المجرم بيفكّر ويستهدفك، وإزاي تبني حماية كاملة حوالين حساباتك، فلوسك، بيتك، وأهلك. كل خطوة موثّقة من جهة رسمية (NCSC · CISA · FTC · UNODC) — مش نصايح عامة.</p>
   <div><button class="cta" onclick="document.getElementById('library').scrollIntoView({behavior:'smooth'})">استكشف مكتبة الأمان ↓</button></div>
   <div class="ribbon">
     <span class="chip"><b id="cCount">0</b> بطاقة أمان</span>
@@ -217,6 +218,7 @@ function openSheet(id){
       ${s.whenWhy&&s.whenWhy.ar?fld('🕒','امتى وليه',`<p>${esc(s.whenWhy.ar)}</p>`):''}
       ${calls?('<div class="grp">بلّغ / اطلب مساعدة</div>'+fld('📞','تواصل مع',`<div class="calls">${calls}</div>`)):''}
       ${s.note&&s.note.ar?`<div class="note">⚖️ ${esc(s.note.ar)}</div>`:''}
+      ${(s.basis&&s.basis.ar)||s.quote?('<div class="grp">الدليل · السند من المصدر</div>'+fld('📜','السند',`${s.basis&&s.basis.ar?`<p>${esc(s.basis.ar)}</p>`:''}${s.quote?`<div class="ex">“${esc(s.quote)}”</div>`:''}`)):''}
       <div class="grp">المصادر</div>
       ${srcs||'<p style="color:var(--muted)">—</p>'}
     </div>`;
