@@ -20,6 +20,12 @@ def srcid(url, cid):
 def licence_for(url):
     d = (url or "").lower()
     if "nhs.uk" in d: return "OGL v3 · © Crown copyright"
+    # NOT all of MedlinePlus is public domain. The /ency/ medical-encyclopedia pages are
+    # A.D.A.M., Inc. (Ebix) content: "© 1997-2026 A.D.A.M. ... Any duplication or distribution
+    # ... is strictly prohibited ... You may not ... create derivative works from this content."
+    # Only the MedlinePlus health-topic pages are NLM public domain. Labelling A.D.A.M. content
+    # "public domain" is an unearned provenance claim — the exact defect this project exists to fight.
+    if "medlineplus.gov/ency/" in d: return "© A.D.A.M./Ebix — مقتبس ومنسوب، مش ملكية عامة"
     if "medlineplus" in d or "nih.gov" in d: return "public domain (U.S. NLM)"
     return "quoted, attributed"
 
