@@ -19,6 +19,8 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"nhs:sprain-strain": {"url": "https://www.nhs.uk/conditions/sprains-and-strains/", "label": "NHS", "sha256": "6bb2844e4f", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
+"mlp:knocked-out-tooth": {"url": "https://medlineplus.gov/ency/article/000058.htm", "label": "MedlinePlus Medical Encyclopedia", "sha256": "dedd8c3d79", "retrieved": "2026-07-15", "licence": "public domain (U.S. NLM)", "tag": "Medlin"},
 "mlp:scorpion-sting": {"url": "https://medlineplus.gov/ency/article/002850.htm", "label": "MedlinePlus Medical Encyclopedia — Scorpions", "sha256": "52025e9a1e", "retrieved": "2026-07-15", "licence": "public domain (U.S. NLM)", "tag": "Medlin"},
 "nhs:dog-bite": {"url": "https://www.nhs.uk/conditions/animal-and-human-bites/", "label": "NHS website — Animal and human bites (Open Government Licence v3.0)", "sha256": "8345a33599", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:tetanus": {"url": "https://www.nhs.uk/conditions/tetanus/", "label": "NHS", "sha256": "e7f2eac6cc", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
@@ -17888,6 +17890,200 @@ window.SCENARIOS = [
  ],
  "whenWhy": {
   "ar": "Tetanus is a serious, life-threatening condition caused by bacteria getting into a wound.",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
+,
+{
+ "id": "sprain-strain",
+ "title": {
+  "ar": "التواء أو شدّ عضلي (sprain / strain)",
+  "en": "Sprains and strains"
+ },
+ "level": 2,
+ "who": [
+  "الكل",
+  "رياضيين"
+ ],
+ "place": [
+  "البيت",
+  "برّه",
+  "النادي"
+ ],
+ "domain": "إسعافات",
+ "snapshot": {
+  "ar": "وجع أو ألم أو ضعف — غالبًا حوالين الكاحل أو القدم أو الرسغ أو الصُباع أو الركبة أو الرِجل أو الضهر — مع ورم أو كدمة، ومش قادر تحمّل عليها أو تستعملها عادي.",
+  "en": "Pain, tenderness or weakness — usually around an ankle, foot, wrist, thumb, knee, leg or back — with swelling or bruising, and you cannot put weight on it or use it normally."
+ },
+ "redFlags": [
+  "سمعت صوت طقّة أو فرقعة وقت الإصابة",
+  "العضو المصاب اتغيّر شكله أو مايل بزاوية غريبة",
+  "العضو المصاب مخدّر أو فيه تنميل أو وخز",
+  "لون الجلد حوالين الإصابة اتغيّر (أزرق أو رمادي) أو بقى بارد باللمس",
+  "وجع شديد جدًا أو بيزيد",
+  "ورم أو كدمة كبيرة قوي أو بتزيد",
+  "مش قادر تحمّل وزن عليها خالص أو تمشي أكتر من كام خطوة",
+  "المكان متيبّس جدًا أو صعب تحرّكه",
+  "مافيش أي تحسّن بعد ما عالجت نفسك",
+  "سخونية عالية جدًا أو حاسس بحَرّ أو برد أو رعشة (ممكن يكون في عدوى)"
+ ],
+ "do": [
+  {
+   "t": "احمِ مكان الإصابة: استعمل دعامة أو مشدّ، أو البس جزمة تسند رجلك وكاحلك.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "ريّح المكان: بطّل أي رياضة أو مجهود، ومتحطّش وزن على الإصابة.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "حُط تلج: كمادة تلج (أو كيس خضار مجمّد ملفوف في فوطة) على الإصابة لمدة لحد ٢٠ دقيقة كل ٢ لـ ٣ ساعات.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "اضغط برباط: لِف رباط حوالين الإصابة يسندها في النهار.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "ارفع المكان: خلّيه مرفوع على مخدّة قد ما تقدر.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "أول ما تقدر تحرّك المكان من غير ما الوجع يوقّفك، فضّل تحرّكه بالراحة عشان المفصل أو العضلة ماتتيبّسش.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "للوجع جرّب مسكّن زي الباراسيتامول، ولتقليل الورم جل أو رغوة أو سبراي ايبوبروفين على الجلد. تقدر تسأل الصيدلي على الأنسب ليك.",
+   "src": "nhs:sprain-strain"
+  }
+ ],
+ "dont": [
+  {
+   "t": "بلاش حرارة على الإصابة (مغطس سخن أو كمادات دافية) أول يومين، عشان الورم مايزيدش.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "بلاش كحوليات أول يومين.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "بلاش مساج أو تدليك للمكان أول يومين.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "بعّد عن الرياضة العنيفة زي الجري لحد ٨ أسابيع، عشان في خطر إصابة تانية.",
+   "src": "nhs:sprain-strain"
+  },
+  {
+   "t": "لو محتاج طوارئ، متسوقش العربية بنفسك؛ خلّي حد يوصّلك أو اطلب إسعاف.",
+   "src": "nhs:sprain-strain"
+  }
+ ],
+ "whenWhy": {
+  "ar": "follow the 5 steps known as PRICE therapy",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+},
+{
+ "id": "knocked-out-tooth",
+ "title": {
+  "ar": "سِنّة اتخلعت",
+  "en": "Knocked-out tooth"
+ },
+ "level": 3,
+ "who": [
+  "الكل",
+  "آباء وأمهات"
+ ],
+ "place": [
+  "البيت",
+  "الملعب",
+  "برّه"
+ ],
+ "domain": "إسعافات",
+ "snapshot": {
+  "ar": "سِنّة كاملة اتخلعت من مكانها بعد خبطة أو وقعة أو حادثة، وساعات بيكون فيه نزيف في اللثة.",
+  "en": "A whole tooth has been knocked out of its place after a fall, blow, or accident, sometimes with gum bleeding."
+ },
+ "redFlags": [
+  "مش قادر تقفّل سنانك الفوقانية والتحتانية على بعض — يمكن يكون فكّك اتكسر، وده محتاج إسعاف فوري عند دكتور أسنان أو في المستشفى.",
+  "أي سِنّة دايمة (بتاعة الكبار) اتخلعت — لازم دكتور الأسنان حالاً، وكل ما تتأخّر تقلّ فرصة إنه يرجّعها.",
+  "بس سنان الكبار الدايمة اللي بتترجّع مكانها، أما سنان اللبن (الأطفال) فمابترجّعش."
+ ],
+ "do": [
+  {
+   "t": "احتفظ بأي سِنّة اتخلعت وروح بيها دكتور الأسنان بأسرع وقت — كل ما تأخّرت قلّت فرصة إصلاحها. امسك السِنّة من التاج (طرف المضغ) بس.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "حاول ترجّع السِنّة مكانها في نفس مستوى باقي السنان، وعُضّ برفق على شاشة أو كيس شاي مبلول عشان تثبّتها. وخلّي بالك ما تبلعهاش.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "لو مش قادر ترجّعها، حُطّ السِنّة في علبة وغطّيها بشوية لبن بقري أو بلعابك.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "تقدر كمان تمسك السِنّة بين شفتك التحتانية واللثة، أو تحت لسانك.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "فيه علبة مخصوصة لحفظ السِنّة (زي Save-a-Tooth) ممكن تلاقيها عند دكتور الأسنان — فكّر تشتري واحدة لشنطة إسعافات البيت.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "حُطّ كمّادة باردة على بُرّه بُقّك واللثة عشان تخفّف الألم.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "اضغط بشاشة مباشرة على مكان النزيف عشان يقف.",
+   "src": "mlp:knocked-out-tooth"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ما تمسكش جذور السِنّة، امسك بس من طرف المضغ (التاج، الجزء اللي فوق).",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "ما تحكّش ولا تمسح جذر السِنّة عشان تشيل التراب.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "ما تفرشيش ولا تنضّف السِنّة بالكحول أو الماء الأكسجيني.",
+   "src": "mlp:knocked-out-tooth"
+  },
+  {
+   "t": "ما تسيبش السِنّة تنشف.",
+   "src": "mlp:knocked-out-tooth"
+  }
+ ],
+ "whenWhy": {
+  "ar": "Save any tooth that has been knocked out.",
   "en": ""
  },
  "whoToCall": [
