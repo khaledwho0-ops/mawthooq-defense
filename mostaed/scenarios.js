@@ -19,6 +19,8 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+"nhs:severe-bleeding": {"url": "https://www.nhs.uk/conditions/first-aid/", "label": "NHS — First aid", "sha256": "daa803992e", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
+"nhs:severe-bleeding": {"url": "https://www.nhs.uk/conditions/first-aid/", "label": "NHS — First aid", "sha256": "daa803992e", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:sprain-strain": {"url": "https://www.nhs.uk/conditions/sprains-and-strains/", "label": "NHS", "sha256": "6bb2844e4f", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "mlp:knocked-out-tooth": {"url": "https://medlineplus.gov/ency/article/000058.htm", "label": "MedlinePlus Medical Encyclopedia", "sha256": "dedd8c3d79", "retrieved": "2026-07-15", "licence": "© A.D.A.M./Ebix — مقتبس ومنسوب، مش ملكية عامة", "tag": "Medlin"},
 "mlp:scorpion-sting": {"url": "https://medlineplus.gov/ency/article/002850.htm", "label": "MedlinePlus Medical Encyclopedia — Scorpions", "sha256": "52025e9a1e", "retrieved": "2026-07-15", "licence": "© A.D.A.M./Ebix — مقتبس ومنسوب، مش ملكية عامة", "tag": "Medlin"},
@@ -257,54 +259,7 @@ window.SCENARIOS = [
         grade: "C · CITE-ONLY", verified: "NOT machine-verified — redcross.org returns 403 to scripts; copyrighted" }
     ]
   },
-  {
-    id: "severe-bleeding",
-    title: { ar: "نزيف شديد", en: "Severe (life-threatening) bleeding" },
-    level: 5, who: ["الكل", "مواطن"], place: ["برّه", "الشغل", "البيت", "الطريق"], domain: "طوارئ",
-    snapshot: { ar: "دم بيندفع أو بيغزر بغزارة ومش بيقف — خطر على الحياة خلال دقائق.", en: "Blood spurting/flowing and not stopping — life-threatening in minutes." },
-    redFlags: ["الدم بينزل بسرعة وبيبلّل الهدوم/الأرض", "الشخص شاحب، بيرتجف، أو بيفقد التركيز"],
-    do: [
-      { t: "نيّمه على ضهره — ده بيقلّل فرصة إنه يغمى عليه لأنه بيزوّد وصول الدم للمخ. لو تقدر، ارفع مكان النزيف.", src: "mlp:bleeding" },
-      { t: "شيل أي تراب أو حاجات سايبة شايفها في الجرح.", src: "mlp:bleeding" },
-      { t: "اضغط بالظبط على الجرح بشاش معقّم أو قماشة نضيفة، أو حتى قطعة هدوم لو مفيش.", src: "mlp:bleeding" },
-      { t: "فضل ضاغط لحد ما الدم يقف. أول ما يقف، لُفّ الرباط على الجرح كويس بشريط لاصق.", src: "mlp:bleeding" },
-      { t: "لو الدم كمّل ونشّ من القماشة، ماتشيلهاش — حُطّ واحدة تانية فوقها.", src: "mlp:bleeding" }
-      // NOTE: «كلّم الإسعاف ١٢٣» was removed from `do`. MedlinePlus says "call 911"; no ingested
-      // document says 123. The Egyptian number is a LOCALIZATION decision, not a claim from a source,
-      // so it lives in `whoToCall` (below) where it is labelled as such — never inside a cited step.
-    ],
-    dont: [
-      { t: "ماتشيلش حاجة مغروسة في الجسم زي سكينة أو عود — شيلها ممكن يأذي أكتر ويزوّد النزيف.", src: "mlp:bleeding" },
-      { t: "ماتبصّش على الجرح كل شوية تشوف الدم وقف ولا لأ — كل ما تسيبه في حاله، كل ما تقدر توقّف النزيف.", src: "mlp:bleeding" },
-      { t: "ماتنكّشش في الجرح وماتشدّش أي حاجة مغروسة فيه — ده بيزوّد النزيف والأذى.", src: "mlp:bleeding" },
-      { t: "ماتشيلش الرباط لو اتشبع دم — حُطّ واحد جديد فوقه.", src: "mlp:bleeding" }
-    ],
-    whenWhy: { ar: "الضغط المباشر المستمر بيدّي الجسم فرصة يكوّن جلطة توقّف الدم؛ رفع القماش بيكسر الجلطة ويرجّع النزيف.", en: "" },
-    how: { ar: "مثال: جرح عميق في الساعد بينزف بغزارة. تلفّ تيشيرت وتضغط بكفّك بكل تقلك على الجرح، وتفضل ضاغط طول الوقت لحد الإسعاف — مترفعش خالص.", en: "" },
-    whoToCall: [{ label: "الإسعاف", number: "123", say: "«نزيف شديد مش بيقف»، مكان الإصابة، والعنوان." }, { label: "الموحّد", number: "112", say: "لو مش متأكد." }],
-    whatToBuy: [{ item: "شنطة إسعافات فيها شاش وضمادات", why: "الضغط المباشر أهم خطوة" }, { item: "تورنيكيه (رباط ضاغط)", why: "لنزيف الأطراف الخطير — بعد تدريب" }],
-    tech: ["Emergency SOS + Medical ID فيه فصيلة دمك وحساسياتك", "شارك موقعك المباشر (Live Location) مع الإسعاف/قريب"],
-    writeDown: ["اكتب فصيلة دمك والأمراض المزمنة في Medical ID", "مكان أقرب مستشفى فيها طوارئ"],
-    videosCommunities: [{ label: "American Red Cross — Life-Threatening Bleeding", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/bleeding-life-threatening-external" }],
-    othersPOV: { ar: "المصاب هيكون خايف وممكن يرفض إنك تضغط عشان بيوجعه — طمّنه إن الوجع ده هو اللي بينقذه.", en: "" },
-    say: { toOthers: ["«اضغط هنا بكل قوتك ومترفعش، أنا هكلّم الإسعاف.»"], toSelf: ["«الضغط المستمر بيوقّف الدم. أنا فاضل ثابت.»"] },
-    bodyLanguage: { ar: "انزل بتقل جسمك كله على الجرح، إيدك مستقرّة، صوتك ثابت — طمأنينتك بتقلّل صدمة المصاب.", en: "" },
-    rights: { ar: "التدخّل لإنقاذ حياة في خطر تصرّف مسؤول؛ الأولوية للحركة السريعة.", en: "" },
-    variations: ["طفل: نفس المبدأ بضغط أخف وحسب حجمه.", "جسم غاطس في الجرح (سكينة/زجاج): ماتشيلهوش — اضغط حواليه.", "لوحدك ومصاب: اضغط بكل تقلك واطلب نجدة بصوت عالي."],
-    prevention: ["قفازات وأدوات حادّة مأمّنة في الشغل والمطبخ", "اعرف مكان شنطة الإسعافات في البيت والعربية"],
-    drill: { ar: "اتمرّن على لفّ ضمادة ضغط على ساعدك مرة، عشان إيدك تعرف الحركة.", en: "" },
-    after: { ar: "لازم كشف طبي حتى لو الدم وقف — النزيف الداخلي مايبانش. راقب علامات الصدمة (شحوب، دوخة).", en: "" },
-    // The tourniquet steps were removed: the ingested MedlinePlus bleeding article does not contain
-    // them. A level-5 instruction that no fetched document supports does not stay in the card.
-    sources: [
-      { srcId: "mlp:bleeding", label: "MedlinePlus — Bleeding", url: "https://medlineplus.gov/ency/article/000045.htm",
-        grade: "A · INGESTED", sha256: "5a2a6134fb", retrieved: "2026-07-10", licence: "© A.D.A.M./Ebix — مقتبس ومنسوب، مش ملكية عامة",
-        verified: "machine — every do/dont step extracted from these bytes",
-        attribution: "Information from MedlinePlus.gov" },
-      { label: "American Red Cross — Bleeding (Life-Threatening External)", url: "https://www.redcross.org/take-a-class/resources/learn-first-aid/bleeding-life-threatening-external",
-        grade: "C · CITE-ONLY", verified: "NOT machine-verified — redcross.org returns 403 to scripts; copyrighted" }
-    ]
-  },
+  
   {
     id: "house-fire",
     title: { ar: "حريق في البيت", en: "A fire starts at home" },
@@ -18084,6 +18039,102 @@ window.SCENARIOS = [
  ],
  "whenWhy": {
   "ar": "Save any tooth that has been knocked out.",
+  "en": ""
+ },
+ "whoToCall": [
+  {
+   "label": "الإسعاف",
+   "number": "123",
+   "say": "قول نوع الحالة والعنوان بالظبط."
+  },
+  {
+   "label": "الطوارئ الموحّد",
+   "number": "112",
+   "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
+  }
+ ]
+}
+,
+{
+ "id": "severe-bleeding",
+ "title": {
+  "ar": "نزيف خارجي شديد",
+  "en": "Severe external bleeding"
+ },
+ "level": 5,
+ "who": [
+  "أي حد موجود مع مصاب بينزف بشدة قبل ما الإسعاف يوصل"
+ ],
+ "place": [
+  "أي مكان بيحصل فيه حادث أو إصابة"
+ ],
+ "domain": "طوارئ",
+ "snapshot": {
+  "ar": "لو حد بينزف بشدة: اطلب الإسعاف فورًا، اتأكد إن مفيش حاجة مغروزة في الجرح، واضغط على الجرح بشاش نضيف لحد ما النزيف يقف.",
+  "en": "Call an ambulance at once, check for an embedded object, and apply firm pressure to the wound with a clean pad until bleeding stops."
+ },
+ "redFlags": [
+  "جلد شاحب وبارد ومبلول بعرق لزج، مع تعرّق",
+  "تنفس سريع وسطحي",
+  "ضعف ودوخة",
+  "غثيان واحتمال ترجيع",
+  "عطش",
+  "تثاؤب وتنهُّد"
+ ],
+ "do": [
+  {
+   "t": "الهدف إنك تمنع فقدان دم زيادة وتقلّل آثار الصدمة. أول حاجة: اطلب الإسعاف بأسرع وقت ممكن.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو معاك جوانتي للاستعمال مرة واحدة، البسه علشان يقلل خطر انتقال أي عدوى. اتأكد إن مفيش حاجة مغروزة في الجرح.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو فيه حاجة مغروزة، ما تضغطش عليها. اضغط بقوة على جنبيها الاتنين وحوّط حواليها بحشو قبل الرباط، من غير ضغط عليها نفسها.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو مفيش حاجة مغروزة: اضغط على الجرح بإيدك اللابسة الجوانتي، بشاش أو ضمادة نضيفة لو متوفرة، واستمر لحد ما النزيف يقف.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "استخدم ضمادة نضيفة أو أي قماش نضيف وناعم علشان تربط الجرح كويس.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو النزيف كمّل من خلال الشاش، فضل ضاغط لحد ما يقف، وبعدين حط شاش تاني فوقه واربطه في مكانه.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو جزء من الجسم اتقطع (صباع مثلاً): حطه في كيس أو لفّه بنايلون، ولفّه بقماش ناعم في تلج مجروش، ويروح مع المصاب.",
+   "src": "nhs:severe-bleeding"
+  }
+ ],
+ "dont": [
+  {
+   "t": "ما تحاولش تشيل الحاجة المغروزة، لأنها ممكن تكون بتساعد على تبطيء النزيف.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "ما تشيلش الشاش أو الضمادة الأولانية، بس فضل تتأكد إن النزيف وقف.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "ما تغسلش الجزء المقطوع.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "ما تخليش الجزء المقطوع يلمس التلج نفسه.",
+   "src": "nhs:severe-bleeding"
+  },
+  {
+   "t": "لو ظهرت علامات صدمة: ما تديلوش أي حاجة ياكلها أو يشربها.",
+   "src": "nhs:severe-bleeding"
+  }
+ ],
+ "whenWhy": {
+  "ar": "prevent further blood loss and minimise the effects of shock",
   "en": ""
  },
  "whoToCall": [
