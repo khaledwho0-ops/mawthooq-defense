@@ -129,6 +129,35 @@ Legal content has a failure mode medical content doesn't: **a foreign procedure 
 - **ALWAYS**: *"ده وعي قانوني عام — مش استشارة قانونية. استشير محامي مصري مختص."*
 - **Never** present an NCSC/FTC/UN procedure as an Egyptian one. (Batch 1's phishing card does this correctly: it says outright that the reporting route is UK-only, and points to the Egyptian channel separately.)
 
+## 2.10b THE THREE HARNESS BUGS *(read this before you blame a model for a bad card)*
+
+Three waves returned **0 PASS**. Not one was the model's fault. All three were the **harness** — mine. This section exists so nobody re-learns them.
+
+### Bug 1 — Never truncate the artifact you ask a verifier to certify
+The verify prompt did `JSON.stringify(card).slice(0, 3200)`. Arabic JSON blows past 3200 chars, so **every verifier received a card cut off mid-array** and correctly refused to certify what it could not see. The verifier said it outright:
+> *"this is a **transport artifact of the instructions I was given**, not a proven defect in the card"*
+
+Three waves of "failures" were **the slice**. Pass the **full** card. If it's too big, split the check — never silently amputate the evidence and then blame the witness.
+
+### Bug 2 — Do not ORDER the fabrication, then blame the model for obeying
+The `RIGHTS` prompt demanded: *"do_steps must cover (a) ما هو حقك ثم (b) **كيف تسترده عمليًا**"* — and pointed the agent at the **UDHR**, a document containing **zero procedures**. The agent, ordered to produce procedure from a page with none, filled the gap from recall: *"file a complaint with النيابة العامة"*, *"demand a lawyer"*, *"document the witnesses"*.
+> The verifier's grep was brutal and correct: *"the page contains **ZERO occurrences of 'Egypt'**, no National Council for Human Rights, no prosecution service, and no complaint procedure."* · *"Plausible advice, but **not extracted** from the cited page." — **Recall, not extraction.***
+
+**The One-Law violation was authored by my prompt, not by the model.** If you ask a source for something it does not contain, you have commissioned a fabrication.
+**Rule:** the card's *shape* must match what the source can actually ground. Never demand a field the document cannot fill.
+
+### Bug 3 — Verifying الدليل is NOT verifying the card
+I hand-verified the 10 UDHR cards by checking **quotes and article numbers** — both genuinely clean, byte-exact. I **shipped them**. The real adversarial pass then checked the **do_steps** and failed them all.
+> **A perfect quote at the top does not make the steps below it true.** Provenance of the *evidence* ≠ provenance of the *advice*. Check every step, or you have checked nothing.
+
+This is the doctrine's own warning (*"self-review is not review"*) catching **me**. I was both the salvager and the verifier, and I certified my own work. **The cards were live for ~40 minutes before the real gate caught them.** Git reverted them in seconds — that is why additive-only + git-as-safety-net exists.
+
+### The deeper lesson for حقوقي specifically
+**A rights instrument grounds the RIGHT; it does not ground the REMEDY.**
+- **UDHR / CEDAW** = non-binding declaration / obligation on *states*. **Not self-executing** in an Egyptian court. A card that pairs them with "go file at the نيابة" implies an enforcement pathway that does not exist — which could fail a real person in a real legal moment.
+- **The Egyptian Constitution 2014 IS binding Egyptian law** — *and it actually contains procedure* (Art 54: a detainee must be told the reasons, may contact relatives and a lawyer, must be before the investigation authority within 24 hours; Art 99: assault on freedoms is a crime with no statute of limitations and the NCHR may file civil action). **Ground Egyptian procedural cards there, not in the UDHR.**
+- The "كيف أسترده / من أكلم" half of K.'s card spec needs a **second, Egyptian procedural source**. Without one, the honest card states the right + الدليل + "استشير محامي" — and stops.
+
 ## 2.11b Probe the URLs Before You Spend *(the cheapest win in the whole pipeline)*
 
 **A dead source URL is indistinguishable from bad content in the results — and it is far more common.**
