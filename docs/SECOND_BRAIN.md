@@ -201,6 +201,43 @@ Keep 2–4 candidate URLs per topic and take the first that passes. **If no URL 
 A card turned WHO's **"intimate partner violence"** figure into **"violence"** generally — a real, subtle fabrication by widening scope. The verifier caught it.
 > **Scope every statistic exactly as the source scopes it.** Do not broaden ("partner violence" → "violence"), narrow, or round. A true number in a wider frame is a false claim.
 
+## 2.11d LICENCE TIER — "sourced" does not mean "allowed to use" ⚠️ **OPEN ISSUE — NEEDS KHALED'S DECISION**
+
+**The One Law makes you check whether a claim is TRUE. It does not make you check whether you are ALLOWED to republish it. Those are different questions, and we got the second one wrong for months.**
+
+### What we believed
+`integrate.py` stamped every MedlinePlus source `"public domain (U.S. NLM)"`, and مستعد's public footer told users the same: *«المكتبة الوطنية الأمريكية للطب — ملكية عامة»*.
+
+### What is actually true
+**MedlinePlus is two different things under one domain:**
+| Path | Owner | Licence |
+|---|---|---|
+| `medlineplus.gov/<topic>.html` | NLM | **genuinely public domain** ✅ |
+| `medlineplus.gov/ency/article/*` | **A.D.A.M., Inc. (a business unit of Ebix)** | **© 1997-2026 — copyrighted** ❌ |
+
+The `/ency/` pages carry this notice, verbatim:
+> *"© 1997-2026 A.D.A.M., a business unit of Ebix, Inc. **Any duplication or distribution of the information contained herein is strictly prohibited.**"*
+> *"You may not copy, reproduce, distribute, transmit, display, publish, reverse-engineer, adapt, modify, store beyond ordinary browser caching, index, mine, scrape, or **create derivative works from this content**. You may not use automated tools to access or extract content… Use of any content for **training, fine-tuning, calibrating, testing, evaluating, or improving AI systems** of any kind is prohibited without express written consent."*
+
+### The exposure (measured 16 Jul 2026)
+- **39 of 135** مستعد source records pointed at `/ency/` and were **all falsely labelled public domain**.
+- **~33 of 119** مستعد cards are derived from A.D.A.M. content — including `choking-adult`, `choking-infant`, `drowning`, `electric-shock`, `heat-stroke`, `burn`, `scorpion-sting`, `knocked-out-tooth`.
+- The site publicly asserted the false licence to every visitor.
+
+### What was fixed immediately (done)
+All 39 records relabelled **«© A.D.A.M./Ebix — مقتبس ومنسوب، مش ملكية عامة»**; the footer now states the truth and distinguishes the two MedlinePlus tiers; `integrate.py` will never mislabel `/ency/` again. **A false provenance claim is the exact defect this project exists to fight — it could not be left live for one hour.**
+
+### What is NOT fixed — a human must decide ⚠️
+Relabelling makes the claim **honest**. It does **not** make the use **permitted**. A.D.A.M.'s terms forbid derivative works, and a card *is* a derivative work. **Options for Khaled:**
+1. **Re-source to NHS (recommended).** NHS content is **OGL v3** — it *explicitly permits* reuse and adaptation with attribution. NHS covers nearly every A.D.A.M.-sourced topic (choking, drowning, burns, bleeding, bites, heat illness). This resolves the issue cleanly and *strengthens* the library. Cost: re-run ~33 cards through the pipeline against NHS URLs.
+2. **Seek written consent** from Ebix/A.D.A.M.
+3. **Withdraw** the 33 cards.
+
+**Do not ship مستعد commercially, or claim it as an unencumbered asset, until this is resolved.** Until then the honest public position is: attributed educational quotation, licence under review.
+
+### The transferable rule
+> **Add a licence gate beside the truth gate.** For every source ask *both*: **(a) is the claim true?** and **(b) am I permitted to republish and adapt it?** Record the real licence, per-URL-path — not per-domain. One domain can host two licences, and the restrictive one will be the page you actually used.
+
 ## 2.11 Dedup Before You Spend
 **9 of 10 "new" topics in one batch were already covered.** Always diff proposed topics against the deployed set *before* spending a single agent. Token cost of dedup: ~0. Token cost of skipping it: an entire wave.
 
