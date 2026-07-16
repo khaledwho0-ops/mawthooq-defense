@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>حقوقي · Ħoqoqi — اعرف حقك</title>
+<meta name="description" content="حقوقي — منصّة الوعي القانوني وعلم الإجرام تحت مكتبة الوعي المصري. بطاقات موثّقة عن حقوقك، الإبلاغ عن الجرائم، وحماية نفسك — كل خطوة من مصدر رسمي. توعية عامة، مش استشارة قانونية.">
+<style>
+  :root{
+    --ink:#0e0b18; --ink2:#140f24; --surface:#1c1636; --surface2:#241c44; --line:rgba(160,150,230,.18);
+    --text:#EEEAFB; --muted:#b1a9d0; --dim:#867 da8; --dim:#867da8;
+    --safe:#7b6ee6; --safe-2:#9a8ff2; --gold:#d8b35a; --sand:#e2d6b6;
+    --l1:#6d9ae0; --l2:#7b6ee6; --l3:#e0a83e; --l4:#e07b39; --l5:#e0544e; --danger:#e0544e;
+    --shadow:0 24px 60px -30px rgba(0,0,0,.8);
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --ink:#f1eff9; --ink2:#ebe8f5; --surface:#fcfbff; --surface2:#f4f1fb; --line:rgba(70,55,140,.15);
+      --text:#140f24; --muted:#544c74; --dim:#7b719c; --shadow:0 24px 55px -32px rgba(50,40,90,.4); }
+  }
+  *{margin:0;box-sizing:border-box}
+  body{background:radial-gradient(130% 70% at 50% -8%,#171030,var(--ink) 60%);color:var(--text);
+    font-family:'Segoe UI',system-ui,'Noto Naskh Arabic','Tahoma',sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  @media (prefers-color-scheme: light){ body{background:radial-gradient(130% 70% at 50% -8%,#e5e0f4,var(--ink) 60%)} }
+  a{color:var(--safe-2)}
+  .wrap{max-width:1200px;margin-inline:auto;padding:0 clamp(14px,4vw,36px)}
+  header.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:color-mix(in srgb,var(--ink) 80%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:14px;padding-block:12px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800}
+  .brand .mark{width:34px;height:34px;flex:none}
+  .brand b{font-size:1.25rem;background:linear-gradient(180deg,var(--gold),#b98f2e 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .brand .eal{font-size:.66rem;color:var(--dim);font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-inline-start:4px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.link{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600;padding:7px 12px;border-radius:10px}
+  .bar a.link:hover{color:var(--text);background:var(--surface)}
+  .hero{text-align:center;padding:clamp(40px,8vw,84px) 0 clamp(24px,5vw,40px);position:relative;overflow:hidden}
+  .scales{width:clamp(104px,17vw,150px);height:auto;margin-inline:auto;display:block;filter:drop-shadow(0 0 30px rgba(216,179,90,.35))}
+  .hero h1{font-size:clamp(2.6rem,9vw,5rem);line-height:1;margin:16px 0 0;font-weight:900;
+    background:linear-gradient(180deg,#fff6df,var(--gold) 55%,#9c7420);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .tag{font-size:clamp(1.05rem,3.4vw,1.5rem);color:var(--sand);margin-top:12px;font-weight:700}
+  .hero .sub{color:var(--muted);max-width:660px;margin:14px auto 0;font-size:clamp(.98rem,2.2vw,1.1rem)}
+  .eyebrow{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .disc{margin:20px auto 0;max-width:600px;background:color-mix(in srgb,var(--gold) 10%,transparent);border:1px solid color-mix(in srgb,var(--gold) 34%,transparent);border-radius:14px;padding:12px 18px;color:var(--sand);font-size:.9rem;font-weight:600}
+  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:linear-gradient(180deg,var(--gold),#b98f2e);color:#1a1205;font-weight:800;
+    padding:14px 26px;border-radius:14px;text-decoration:none;font-size:1.05rem;box-shadow:0 14px 34px -14px rgba(216,179,90,.6);cursor:pointer;border:none}
+  .cta:hover{filter:brightness(1.06)}
+  .ribbon{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+  .ribbon .chip{background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:8px 15px;font-size:.85rem;color:var(--muted)}
+  .ribbon .chip b{color:var(--text)}
+  .sec{padding:clamp(30px,6vw,60px) 0}
+  .sec-h{text-align:center;max-width:720px;margin:0 auto clamp(18px,4vw,32px)}
+  .sec-h h2{font-size:clamp(1.6rem,4.6vw,2.4rem);margin:8px 0 0;font-weight:800}
+  .sec-h p{color:var(--muted);margin-top:10px}
+  .filters{display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+  .frow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .frow .flabel{font-size:.74rem;color:var(--dim);font-weight:800;min-width:74px;letter-spacing:.04em}
+  .fchip{background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:6px 14px;font-size:.85rem;cursor:pointer;font-weight:600;transition:.15s;font-family:inherit}
+  .fchip:hover{color:var(--text);border-color:var(--gold)}
+  .fchip.on{background:linear-gradient(180deg,var(--gold),#b98f2e);color:#1a1205;border-color:transparent}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg,var(--surface),var(--ink2));border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;
+    position:relative;overflow:hidden;transition:.18s;border-inline-start:4px solid var(--lv)}
+  .card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--lv) 60%,var(--line));box-shadow:var(--shadow)}
+  .card .top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  .lv-badge{font-size:.7rem;font-weight:800;padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--lv) 22%,transparent);color:var(--lv);border:1px solid color-mix(in srgb,var(--lv) 45%,transparent)}
+  .dom-badge{font-size:.72rem;color:var(--dim);margin-inline-start:auto}
+  .card h3{font-size:1.16rem;font-weight:800;margin:0 0 6px;line-height:1.35}
+  .card .snap{color:var(--muted);font-size:.92rem}
+  .card .open{margin-top:14px;font-size:.82rem;color:var(--gold);font-weight:700}
+  .ov{position:fixed;inset:0;background:rgba(8,5,16,.74);backdrop-filter:blur(4px);z-index:50;display:none;overflow-y:auto;padding:clamp(10px,3vw,40px)}
+  .ov.open{display:block}
+  .sheet{max-width:820px;margin-inline:auto;background:var(--ink2);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+  .sheet .head{padding:22px clamp(18px,3vw,30px);border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--ink2);z-index:2;border-inline-start:5px solid var(--lv)}
+  .sheet .head .top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .sheet .head h2{font-size:clamp(1.4rem,4vw,2rem);margin:0;font-weight:900}
+  .sheet .head .snap{color:var(--muted);margin-top:6px}
+  .sheet .x{position:absolute;inset-inline-start:16px;top:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:1.3rem;cursor:pointer;line-height:1}
+  .sheet .body{padding:clamp(16px,3vw,30px)}
+  .flag{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 20px}
+  .flag .f{font-size:.8rem;background:color-mix(in srgb,var(--danger) 12%,transparent);border:1px solid color-mix(in srgb,var(--danger) 35%,transparent);color:#f0a9a6;padding:4px 11px;border-radius:9px}
+  .grp{margin:22px 0 8px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:800;border-bottom:1px solid var(--line);padding-bottom:7px}
+  .fld{margin:14px 0}
+  .fld .k{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1rem;margin-bottom:6px}
+  .fld .k .i{width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:8px;background:color-mix(in srgb,var(--safe) 15%,transparent);font-size:.95rem}
+  .fld.warn .k .i{background:color-mix(in srgb,var(--danger) 15%,transparent)}
+  .fld ol,.fld ul{margin:0;padding-inline-start:22px}.fld li{margin:5px 0;color:var(--text)}
+  .fld ul.no li{color:#e9b7b4}
+  .fld p{color:var(--text);margin:0}
+  .note{margin:18px 0 4px;background:color-mix(in srgb,var(--gold) 10%,transparent);border:1px solid color-mix(in srgb,var(--gold) 35%,transparent);border-radius:12px;padding:12px 15px;color:var(--sand);font-size:.9rem}
+  .cite{margin-inline-start:6px;font-size:.62em;vertical-align:super;line-height:0}
+  .cite a{color:var(--gold);text-decoration:none;border:1px solid var(--gold);border-radius:6px;padding:1px 5px;opacity:.85}
+  .cite a:hover{opacity:1;background:color-mix(in srgb,var(--gold) 15%,transparent)}
+  .cite.unv{color:var(--l4);border:1px dashed currentColor;border-radius:6px;padding:0 4px;cursor:help}
+  .calls{display:grid;gap:10px}
+  .call{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+  .call .num{font-size:1.2rem;font-weight:900;color:var(--gold);font-family:ui-monospace,Consolas,monospace;direction:ltr;min-width:60px;text-align:center}
+  .call .lab{font-weight:800}.call .say{color:var(--muted);font-size:.86rem}
+  .src{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 14px;margin:8px 0;display:flex;gap:10px;align-items:flex-start}
+  .src .g{font-size:.7rem;color:var(--gold);border:1px solid var(--line);border-radius:7px;padding:2px 7px;white-space:nowrap}
+  .src a{font-weight:700;text-decoration:none;word-break:break-word}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 60px;text-align:center;color:var(--dim);font-size:.88rem}
+  footer b{color:var(--sand)}
+  .empty{text-align:center;color:var(--muted);padding:40px 20px}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <div class="brand">
+    <svg class="mark" viewBox="0 0 48 48" fill="none"><path d="M24 6 V40" stroke="var(--gold)" stroke-width="2.4"/><path d="M12 14 H36" stroke="var(--gold)" stroke-width="2.4"/><circle cx="24" cy="10" r="2.6" fill="var(--gold)"/><path d="M12 14 L7 25 H17 Z" stroke="var(--safe-2)" stroke-width="1.8" fill="color-mix(in srgb,var(--safe) 14%,transparent)"/><path d="M36 14 L31 25 H41 Z" stroke="var(--safe-2)" stroke-width="1.8" fill="color-mix(in srgb,var(--safe) 14%,transparent)"/><rect x="18" y="40" width="12" height="3" rx="1.5" fill="var(--gold)"/></svg>
+    <b>حقوقي</b><span class="eal">EAL</span>
+  </div>
+  <span class="sp"></span>
+  <a class="link" href="#library">المكتبة</a>
+  <a class="link" href="../index.html">المكتبة المصرية للوعي</a>
+  <a class="link" href="https://egy2.vercel.app" target="_blank" rel="noopener">موثوق ↗</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">مكتبة الوعي المصري · وعي قانوني وعلم إجرام</div>
+  <svg class="scales" viewBox="0 0 200 200" fill="none">
+    <path d="M100 26 V166" stroke="var(--gold)" stroke-width="4"/>
+    <circle cx="100" cy="34" r="6" fill="var(--gold)"/>
+    <path d="M46 52 H154" stroke="var(--gold)" stroke-width="4"/>
+    <path d="M46 52 L28 96 H64 Z" stroke="var(--safe-2)" stroke-width="3" fill="color-mix(in srgb,var(--safe) 12%,transparent)"/>
+    <path d="M154 52 L136 96 H172 Z" stroke="var(--safe-2)" stroke-width="3" fill="color-mix(in srgb,var(--safe) 12%,transparent)"/>
+    <path d="M46 52 V60 M154 52 V60" stroke="var(--gold)" stroke-width="2"/>
+    <rect x="70" y="166" width="60" height="8" rx="4" fill="var(--gold)"/>
+    <rect x="82" y="150" width="36" height="16" rx="3" stroke="var(--gold)" stroke-width="3" fill="none"/>
+  </svg>
+  <h1>حقوقي</h1>
+  <div class="tag">اعرف حقك — قبل ما تحتاجه.</div>
+  <p class="sub">مكتبة بتشرح حقوقك وخطواتك العملية في المواقف الصعبة: لو اتنصب عليك، لو اتظلمت في شغلك، لو اتعرّضت لجريمة أو تحرّش، وإزاي تبلّغ صح. كل خطوة <b style="color:var(--gold)">موثّقة من مصدر رسمي</b>.</p>
+  <div class="disc">⚖️ ده <b>وعي قانوني عام</b> — مش استشارة قانونية. القوانين بتختلف من بلد لبلد ومع الوقت؛ في أي موقف حقيقي استشير <b>محامي مصري مختص</b>.</div>
+  <div><button class="cta" onclick="document.getElementById('library').scrollIntoView({behavior:'smooth'})">استكشف مكتبة الحقوق ↓</button></div>
+  <div class="ribbon">
+    <span class="chip"><b id="cCount">0</b> بطاقة حق</span>
+    <span class="chip"><b>كل خطوة</b> بمصدرها</span>
+    <span class="chip">القانون الواحد · <b>لا خطوة بلا مصدر</b></span>
+  </div>
+</div></section>
+
+<section class="sec" id="library"><div class="wrap">
+  <div class="sec-h"><div class="eyebrow">المكتبة</div>
+    <h2>دوّر على موقفك — واعرف حقك وخطواتك</h2>
+    <p>فلتر بالمجال. كل بطاقة: حقوقك · اعمل إيه · ماتعملش · تكلّم مين · وتنويه قانوني · والمصادر.</p></div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"><div class="empty">جاري تحميل البطاقات…</div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div style="font-weight:800;color:var(--text);font-size:1.05rem">حقوقي · <span style="color:var(--dim);font-weight:600">تحت مكتبة الوعي المصري</span></div>
+  <p style="margin-top:8px">القانون الواحد: <b>مفيش خطوة توصلك من غير مصدر حقيقي تقدر ترجعله.</b> ده وعي عام — <b>مش استشارة قانونية</b>. استشير محامي مختص.</p>
+  <p style="margin-top:6px;color:var(--dim);font-size:.8rem">
+    <b>المصادر:</b> أطر ومراجع من
+    <a href="https://www.unodc.org" target="_blank" rel="noopener">UNODC (مكتب الأمم المتحدة لمكافحة المخدرات والجريمة)</a>،
+    <a href="https://www.who.int" target="_blank" rel="noopener">WHO</a>، <a href="https://www.ilo.org" target="_blank" rel="noopener">ILO</a>، و<a href="https://consumer.ftc.gov" target="_blank" rel="noopener">FTC</a>.
+  </p>
+</div></footer>
+
+<div class="ov" id="ov" onclick="if(event.target===this)closeSheet()"><div class="sheet" id="sheet"></div></div>
+
+<script src="rights.js"></script>
+<script>
+const S = window.CARDS || [];
+const LV = {1:{n:'معلومة',c:'--l1'},2:{n:'مهم',c:'--l2'},3:{n:'خطير',c:'--l3'},4:{n:'عاجل',c:'--l4'},5:{n:'حرج',c:'--l5'}};
+const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const uniq = a => [...new Set(a)];
+const T = x => (typeof x === 'string' ? x : (x&&x.t)||'');
+const CITE = x => {
+  if (typeof x === 'string' || !x || !x.src) return `<sup class="cite unv" title="خطوة من غير مصدر مُثبت">⚠</sup>`;
+  const s = (window.SOURCES||{})[x.src];
+  if (!s) return `<sup class="cite unv" title="مصدر غير معروف">⚠</sup>`;
+  return `<sup class="cite"><a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.label)}">${esc(s.tag||'مصدر')}</a></sup>`;
+};
+const citedItem = x => `<li>${esc(T(x))}${CITE(x)}</li>`;
+const olist = arr => `<ol>${(arr||[]).map(citedItem).join('')}</ol>`;
+const clist = (arr,cls) => `<ul class="${cls||''}">${(arr||[]).map(citedItem).join('')}</ul>`;
+const fld = (icon,label,html,warn) => `<div class="fld${warn?' warn':''}"><div class="k"><span class="i">${icon}</span>${label}</div>${html}</div>`;
+
+const state = {domain:null,level:null};
+function mkChip(text,on,fn){const b=document.createElement('button');b.className='fchip'+(on?' on':'');b.textContent=text;b.onclick=fn;return b;}
+function buildFilters(){
+  const f=document.getElementById('filters'); f.innerHTML='';
+  const doms=uniq(S.map(s=>s.domain)).filter(Boolean);
+  const r1=document.createElement('div'); r1.className='frow'; r1.innerHTML=`<span class="flabel">المجال</span>`;
+  r1.appendChild(mkChip('الكل',state.domain===null,()=>{state.domain=null;render();buildFilters();}));
+  doms.forEach(v=>r1.appendChild(mkChip(v,state.domain===v,()=>{state.domain=state.domain===v?null:v;render();buildFilters();})));
+  f.appendChild(r1);
+  const lvls=uniq(S.map(s=>s.level)).filter(Boolean).sort();
+  const r2=document.createElement('div'); r2.className='frow'; r2.innerHTML=`<span class="flabel">الأهمية</span>`;
+  r2.appendChild(mkChip('الكل',state.level===null,()=>{state.level=null;render();buildFilters();}));
+  lvls.forEach(l=>r2.appendChild(mkChip('L'+l+' · '+LV[l].n,state.level===l,()=>{state.level=state.level===l?null:l;render();buildFilters();})));
+  f.appendChild(r2);
+}
+function match(s){return (!state.domain||s.domain===state.domain)&&(!state.level||s.level===state.level);}
+function render(){
+  const g=document.getElementById('grid'); const list=S.filter(match);
+  g.innerHTML = list.length? '' : '<div class="empty">مفيش بطاقة بالفلتر ده — جرّب «الكل».</div>';
+  list.forEach(s=>{
+    const el=document.createElement('div'); el.className='card'; el.style.setProperty('--lv','var('+LV[s.level].c+')');
+    el.innerHTML=`<div class="top"><span class="lv-badge">L${s.level} · ${LV[s.level].n}</span><span class="dom-badge">${esc(s.domain)}</span></div>
+      <h3>${esc(s.title.ar)}</h3><div class="snap">${esc(s.snapshot.ar)}</div><div class="open">افتح البطاقة ←</div>`;
+    el.onclick=()=>openSheet(s.id); g.appendChild(el);
+  });
+}
+function openSheet(id){
+  const s=S.find(x=>x.id===id); if(!s)return;
+  const calls=(s.contacts||[]).map(c=>`<div class="call"><span class="num">${esc(c.number||'—')}</span><div><div class="lab">${esc(c.label)}</div><div class="say">${esc(c.say)}</div></div></div>`).join('');
+  const srcs=(s.sources||[]).map(x=>{const src=(window.SOURCES||{})[x.srcId]||{};return `<div class="src"><span class="g">${esc(x.grade||src.tag||'مصدر')}</span><a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label||x.srcId)} ↗</a></div>`;}).join('');
+  document.getElementById('sheet').innerHTML=`
+    <div class="head" style="--lv:var(${LV[s.level].c})">
+      <button class="x" onclick="closeSheet()">×</button>
+      <div class="top"><span class="lv-badge">L${s.level} · ${LV[s.level].n}</span><span class="dom-badge">${esc(s.domain)}</span></div>
+      <h2>${esc(s.title.ar)}</h2><div class="snap">${esc(s.snapshot.ar)}</div>
+    </div>
+    <div class="body">
+      ${s.redFlags&&s.redFlags.length?`<div class="flag">${s.redFlags.map(f=>`<span class="f">⚑ ${esc(T(f))}</span>`).join('')}</div>`:''}
+      <div class="grp">حقك وخطواتك</div>
+      ${fld('⚖️','اعمل / حقك',olist(s.do))}
+      ${s.dont&&s.dont.length?fld('⛔','ماتعملش',clist(s.dont,'no'),true):''}
+      ${s.whenWhy&&s.whenWhy.ar?fld('🕒','امتى وليه',`<p>${esc(s.whenWhy.ar)}</p>`):''}
+      ${calls?('<div class="grp">تكلّم مين</div>'+fld('📞','تواصل مع',`<div class="calls">${calls}</div>`)):''}
+      <div class="note">⚖️ ${esc((s.note&&s.note.ar)||'ده وعي قانوني عام — مش استشارة قانونية. القوانين بتختلف من بلد لبلد؛ استشير محامي مصري مختص في أي موقف حقيقي.')}</div>
+      <div class="grp">المصادر</div>
+      ${srcs||'<p style="color:var(--muted)">—</p>'}
+    </div>`;
+  document.getElementById('ov').classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeSheet(){document.getElementById('ov').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet();});
+document.getElementById('cCount').textContent=S.length;
+if(S.length){buildFilters();render();}else{document.getElementById('grid').innerHTML='<div class="empty">المحتوى في الطريق — بطاقات موثّقة قريبًا.</div>';}
+</script>
+</body>
+</html>
