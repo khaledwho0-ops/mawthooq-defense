@@ -129,6 +129,29 @@ Legal content has a failure mode medical content doesn't: **a foreign procedure 
 - **ALWAYS**: *"ده وعي قانوني عام — مش استشارة قانونية. استشير محامي مصري مختص."*
 - **Never** present an NCSC/FTC/UN procedure as an Egyptian one. (Batch 1's phishing card does this correctly: it says outright that the reporting route is UK-only, and points to the Egyptian channel separately.)
 
+## 2.11b Probe the URLs Before You Spend *(the cheapest win in the whole pipeline)*
+
+**A dead source URL is indistinguishable from bad content in the results — and it is far more common.**
+
+Batch 1 reported 14 failures. The diagnosis:
+- **10 of 14** were `"ungrounded at produce"` — because **the URL I supplied was 404**. The agents did nothing wrong; they were sent to a dead page and correctly refused to invent.
+- The verifiers were explicit: *"All VISIBLE content is fully and accurately grounded — **nothing invented**"* · *"CONTENT IS OTHERWISE SUPPORTED (**no fabrication found**)"*.
+- Only **1 of 14** was a real content defect (see 2.11c).
+
+Then a pre-flight probe before the next wave found **only 7 of 13 topics had a live source at all** — NCSC and FTC restructure their URLs constantly (`/ransomware/home-and-small-business` → `/ransomware/home`; several `consumer.ftc.gov/articles/...` simply gone).
+
+**The rule:** before spending a single agent, `curl` every candidate URL and assert `200 + >1200 chars + not "page not found"`. Cost: seconds. Savings: an entire wave.
+
+```python
+r = urllib.request.urlopen(Request(u, headers=UA), timeout=25)   # UA matters — some hosts 403 a bare agent
+ok = r.status == 200 and len(text) > 1200 and 'page not found' not in text.lower()[:3000]
+```
+Keep 2–4 candidate URLs per topic and take the first that passes. **If no URL is live, drop the topic — do not send an agent to guess.**
+
+## 2.11c Statistic Scoping *(the domestic-violence catch)*
+A card turned WHO's **"intimate partner violence"** figure into **"violence"** generally — a real, subtle fabrication by widening scope. The verifier caught it.
+> **Scope every statistic exactly as the source scopes it.** Do not broaden ("partner violence" → "violence"), narrow, or round. A true number in a wider frame is a false claim.
+
 ## 2.11 Dedup Before You Spend
 **9 of 10 "new" topics in one batch were already covered.** Always diff proposed topics against the deployed set *before* spending a single agent. Token cost of dedup: ~0. Token cost of skipping it: an entire wave.
 
