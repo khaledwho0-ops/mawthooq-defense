@@ -7,6 +7,70 @@ window.SOURCES = {
   "sha256": "a682211776",
   "retrieved": "2026-07-16",
   "licence": "public domain (US gov)"
+ },
+ "web:egypt-equality": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt 2014 Constitution (Translated by International IDEA)",
+  "tag": "مصدر",
+  "sha256": "4232769e07",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-arrest-rights": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt 2014 Constitution (translated by International IDEA)",
+  "tag": "مصدر",
+  "sha256": "19459388c8",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-home-inviolable": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt's Constitution of 2014",
+  "tag": "مصدر",
+  "sha256": "5e78627421",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-women-rights": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt's Constitution of 2014 (English translation)",
+  "tag": "مصدر",
+  "sha256": "8f0a0f6160",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-work-rights": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Egypt 2014 Constitution — Constitute Project",
+  "tag": "مصدر",
+  "sha256": "d2ad93aeba",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-education-right": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt's Constitution of 2014 (English translation), Article 19. Education",
+  "tag": "مصدر",
+  "sha256": "7a061c4269",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-children-protection": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt 2014 Constitution (Egypt's Constitution of 2014)",
+  "tag": "مصدر",
+  "sha256": "28961cff8b",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
+ },
+ "web:egypt-litigation-remedy": {
+  "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+  "label": "Constitute Project — Egypt's Constitution of 2014",
+  "tag": "مصدر",
+  "sha256": "cbe4614cae",
+  "retrieved": "2026-07-16",
+  "licence": "quoted, attributed"
  }
 };
 window.CARDS = [
@@ -119,6 +183,745 @@ window.CARDS = [
    {
     "srcId": "ftc:fraud-victim-steps",
     "grade": "FTC"
+   }
+  ]
+ },
+ {
+  "id": "egypt-equality",
+  "title": {
+   "ar": "المساواة وعدم التمييز",
+   "en": "Equality and Non-Discrimination"
+  },
+  "level": 2,
+  "domain": "دستور مصري",
+  "who": [
+   "أي مواطن مصري — نص المادة ٥٣ بيقول «Citizens are equal before the law»"
+  ],
+  "place": [
+   "مصر"
+  ],
+  "snapshot": {
+   "ar": "دستور ٢٠١٤، المادة ٥٣: المواطنون سواء قدام القانون، ليهم نفس الحقوق والواجبات العامة، وممنوع التمييز ضدهم لأي سبب. والتمييز والتحريض على الكراهية جريمتان يعاقب عليهما القانون. ده مبدأ دستوري — مش إجراء.",
+   "en": "Article 53 of Egypt's 2014 Constitution: citizens are equal before the law, hold equal rights and public duties, and may not be discriminated against for any reason. Discrimination and incitement to hate are crimes punishable by law. This is a principle, not a procedure."
+  },
+  "redFlags": [
+   "حد بيقولك «نوع التمييز ده مش مغطّى بالدستور» — نص المادة ٥٣ بينتهي بـ«أو لأي سبب آخر»، يعني القائمة مش مقفولة.",
+   "حد بيقولك إن الحق بيسقط بمرور الوقت — المادة ٩٩ بتقول جريمة لا تسقط بالتقادم مدنيًا وجنائيًا.",
+   "حد بيحدّدلك مبلغ تعويض — المادة ٩٩ بتقول «تعويض عادل» «على النحو الذي ينظمه القانون»، من غير أي رقم.",
+   "حد بيستشهد برقم مادة من غير ما يقرالك نصها — اطلب النص الحرفي."
+  ],
+  "do": [
+   {
+    "t": "المادة ٥٣: انت والمواطنين كلكم سواء قدام القانون، وليكم نفس الحقوق ونفس الواجبات العامة.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "المادة ٥٣: ممنوع التمييز بسبب الدين، العقيدة، الجنس، الأصل، العِرق، اللون، اللغة، الإعاقة، الطبقة، الانتماء السياسي أو الجغرافي — أو «أي سبب آخر».",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "المادة ٥٣: التمييز والتحريض على الكراهية جريمتان يعاقب عليهما القانون.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "المادة ٥٣: الدولة ملتزمة تاخد كل التدابير اللازمة للقضاء على التمييز، والقانون بينظّم إنشاء مفوضية مستقلة لده.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "المادة ٩٩: الاعتداء على الحقوق والحريات اللي الدستور بيكفلها جريمة لا تسقط بالتقادم، والمضرور يقدر يرفع الدعوى الجنائية مباشرة.",
+    "src": "web:egypt-equality"
+   }
+  ],
+  "dont": [
+   {
+    "t": "متتوقعش عقوبة محددة جوه المادة ٥٣ — النص بيقول «جريمة يعاقب عليها القانون»، يعني العقوبة نفسها في قانون تاني.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "متعتمدش على «المفوضية المستقلة» كجهة شغالة — نص المادة ٥٣ بيقول إن القانون هو اللي بينظّم إنشاءها.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "متدوّرش على خطوات إجرائية جوه المادة ٥٣ — مفيش فيها؛ نصها مبدأ دستوري بس.",
+    "src": "web:egypt-equality"
+   }
+  ],
+  "whenWhy": {
+   "ar": "لما تحس إن فيه فرق في المعاملة بينك وبين مواطن تاني لسبب شخصي — دين، عقيدة، جنس، أصل، عِرق، لون، لغة، إعاقة، طبقة، أو انتماء سياسي أو جغرافي. الكارت ده بيوضّح المبدأ الدستوري نفسه زي ما هو مكتوب: المادة ٥٣ بتقرّر المساواة ومنع التمييز، والمادة ٩ بتقول «الدولة تكفل تكافؤ الفرص لجميع المواطنين دون تمييز»، والمادة ١١ بتلزم الدولة بتحقيق المساواة بين المرأة والرجل في الحقوق المدنية والسياسية والاقتصادية والاجتماعية والثقافية."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. شفافية عن المصدر: الصفحة اللي اتسحب منها الكارت هي نص Constitute Project بالإنجليزي بترجمة International IDEA، فالاقتباس الحرفي (verbatim_quote) مكتوب بالإنجليزي زي ما هو منشور بالظبط — والصياغة العربية هنا نقل للمعنى مش النص الرسمي العربي."
+  },
+  "basis": {
+   "ar": "المادة ٥٣ «Equality in public rights and duties» (المساواة في الحقوق والواجبات العامة) — دي الأساس. ومعاها: المادة ٩ «Equal opportunity»، والمادة ١١ «The place of women, motherhood and childhood»، والمادة ٩٩ «Violation of personal freedom». كلها من نص دستور مصر ٢٠١٤ المنشور على Constitute Project بترجمة International IDEA."
+  },
+  "quote": "Citizens are equal before the law, possess equal rights and public duties, and may not be discriminated against on the basis of religion, belief, sex, origin, race, color, language, disability, social class, political or geographical affiliation, or for any other reason. Discrimination and incitement to hate are crimes punishable by law.",
+  "contacts": [
+   {
+    "label": "المجلس القومي لحقوق الإنسان",
+    "number": "",
+    "say": "المادة ٩٩ بتقول إنه بيبلّغ النيابة بأي انتهاك للحقوق دي، ويقدر يدخل مدّعي مدني جنب المضرور بناءً على طلبه."
+   },
+   {
+    "label": "النيابة العامة",
+    "number": "",
+    "say": "المادة ٩٩ بتذكرها كجهة بيتبلّغلها الانتهاك. الدستور مفهوش أرقام تليفونات ولا إجراء تفصيلي."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-equality",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-arrest-rights",
+  "title": {
+   "ar": "حقوقك لو اتقبض عليك",
+   "en": "Your rights if you are arrested"
+  },
+  "level": 4,
+  "domain": "دستور مصري",
+  "who": [
+   "أي مواطن اتقيّدت حريته",
+   "المحامي",
+   "الأهل",
+   "سلطة التحقيق"
+  ],
+  "place": [
+   "مصر",
+   "أماكن الاحتجاز",
+   "السجون"
+  ],
+  "snapshot": {
+   "ar": "الدستور المصري ٢٠١٤ بيقول: القبض والتفتيش مايتمش إلا بأمر قضائي مسبب — إلا في حالة التلبس. ولازم تتبلّغ فورًا بالأسباب، وتتعرف حقوقك كتابةً، وتتصل بأهلك ومحاميك فورًا، وتتعرض على سلطة التحقيق خلال ٢٤ ساعة. والاستجواب مايبدأش غير لما محاميك يحضر، ولو مالكش محامي يتعيّنلك واحد.",
+   "en": "Egypt's 2014 Constitution, Article 54: arrest or search requires a causal judicial warrant except in flagrante delicto. Those whose freedoms are restricted must be immediately informed of the causes, notified of their rights in writing, allowed to immediately contact family and lawyer, and brought before the investigating authority within twenty-four hours. Questioning may only begin once the lawyer is present."
+  },
+  "redFlags": [
+   "قبضوا عليك أو فتشوك من غير أمر قضائي مسبب وإنت مش في حالة تلبس (م.٥٤).",
+   "عدّت ٢٤ ساعة من غير ما تتعرض على سلطة التحقيق (م.٥٤).",
+   "منعوك تتصل بأهلك أو بمحاميك فورًا، أو ما بلّغوكش بحقوقك كتابةً (م.٥٤).",
+   "بدأوا الاستجواب ومحاميك مش موجود، أو ضغطوا عليك أو هددوك عشان تتكلم (م.٥٤ و م.٥٥)."
+  ],
+  "do": [
+   {
+    "t": "حقك: ما يتقبضش عليك ولا تتفتش إلا بأمر قضائي مسبب تستوجبه التحقيقات — إلا لو في حالة تلبس (م.٥٤).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "حقك: تتبلّغ فورًا بالأسباب وبحقوقك كتابةً، وتتصل بأهلك ومحاميك فورًا، وتتعرض على سلطة التحقيق خلال ٢٤ ساعة (م.٥٤).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "حقك: الاستجواب ما يبدأش غير لما محاميك يحضر؛ ولو مالكش محامي يتعيّنلك واحد (م.٥٤).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "حقك: تفضل ساكت. وأي أقوال تثبت إنها اتاخدت منك تحت ضغط أو تهديد بتبقى باطلة (م.٥٥).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "حقك: تلجأ للقضاء، والحكم لازم يصدر خلال أسبوع من اللجوء وإلا تتفرج عنك فورًا (م.٥٤).",
+    "src": "web:egypt-arrest-rights"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ما ينفعش يعذبوك أو يرهبوك أو يجبروك، ولا يأذوك جسديًا أو نفسيًا (م.٥٥).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "ما ينفعش تتحاكم جنائيًا في جريمة تستوجب حبسك من غير محامي حاضر أو معيَّن (م.٥٤).",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "ما ينفعش حد يتعامل معاك كمُدان — المتهم بريء لحد ما تثبت إدانته في محاكمة عادلة (م.٩٦).",
+    "src": "web:egypt-arrest-rights"
+   }
+  ],
+  "whenWhy": {
+   "ar": "استخدم الكارت ده لو اتقبض عليك أو على حد قريب منك، أو اتقيّدت حريتك بأي شكل — عشان تعرف نص الدستور بيضمنلك إيه بالظبط، من غير أي زيادة من عندنا."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص."
+  },
+  "basis": {
+   "ar": "المادة ٥٤ «الحرية الشخصية» (Article 54. Personal freedom) + المادة ٥٥ «المحاكمة العادلة» (Article 55. Due process) + المادة ٩٦ «المحاكمة العادلة» (Article 96. Due process) + المادة ٩٩ «الاعتداء على الحرية الشخصية» (Article 99. Violation of personal freedom) — دستور مصر ٢٠١٤، ترجمة International IDEA على Constitute Project."
+  },
+  "quote": "All those whose freedoms have been restricted shall be immediately informed of the causes therefor, notified of their rights in writing, be allowed to immediately contact their family and lawyer, and be brought before the investigating authority within twenty-four hours of their freedoms having been restricted.",
+  "contacts": [
+   {
+    "label": "سلطة التحقيق (النيابة)",
+    "number": "",
+    "say": "م.٥٤: لازم تتعرض على سلطة التحقيق خلال ٢٤ ساعة. المصدر دستوري وما فيهوش أرقام تليفون."
+   },
+   {
+    "label": "المجلس القومي لحقوق الإنسان",
+    "number": "",
+    "say": "م.٩٩: بيبلّغ النيابة بأي انتهاك وله يدخل مدعي مدني منضم لجانبك بطلبك. مفيش أرقام في المصدر."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-arrest-rights",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-home-inviolable",
+  "title": {
+   "ar": "حرمة بيتك — مفيش دخول ولا تفتيش من غير إذن قضائي",
+   "en": "Your home is inviolable — no entry or search without a judicial warrant"
+  },
+  "level": 3,
+  "domain": "دستور مصري",
+  "who": [
+   "أي شخص مقيم في مصر",
+   "ساكني البيت وقت الدخول أو التفتيش"
+  ],
+  "place": [
+   "البيت",
+   "المسكن"
+  ],
+  "snapshot": {
+   "ar": "المادة ٥٨ بتقول إن للمنازل حرمة: مايتمش دخولها ولا تفتيشها ولا مراقبتها ولا التنصّت عليها إلا بأمر قضائي مسبَّب يحدد المكان والزمان والغرض — والاستثناء الوحيد في النص هو حالة الخطر أو الاستغاثة.",
+   "en": "Article 58 states homes are inviolable: no entry, search, monitoring or wiretapping except by a causal judicial warrant specifying place, time and purpose — the only exceptions in the text are danger or a call for help."
+  },
+  "redFlags": [
+   "دخول أو تفتيش البيت من غير أمر قضائي، ومفيش حالة خطر ولا استغاثة (م٥٨).",
+   "أمر غير مسبَّب، أو مش محدِّد فيه المكان والزمان والغرض (م٥٨).",
+   "اللي جوّه البيت مااتخطروش ولا اتعرضش عليهم الأمر وقت الدخول أو التفتيش (م٥٨).",
+   "مراقبة أو تنصّت على البيت من غير أمر قضائي مسبَّب (م٥٨)."
+  ],
+  "do": [
+   {
+    "t": "المادة ٥٨ بتنص على مبدأ صريح: «للمنازل حرمة» — دي نقطة البداية في النص.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "حسب المادة ٥٨: مفيش دخول ولا تفتيش ولا مراقبة ولا تنصّت إلا بأمر قضائي مسبَّب.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "المادة ٥٨ بتشترط إن الأمر القضائي نفسه يحدد المكان والزمان والغرض من الإجراء.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "المادة ٥٨: عند دخول أو تفتيش المنازل، لازم اللي جوّه يتم إخطارهم وإطلاعهم على الأمر الصادر.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "المادة ٩٩: الاعتداء على الحرمات جريمة لا تسقط بالتقادم، وللمضرور رفع الدعوى الجنائية مباشرة.",
+    "src": "web:egypt-home-inviolable"
+   }
+  ],
+  "dont": [
+   {
+    "t": "متفتكرش إن أي أمر يكفي — نص المادة ٥٨ بيشترط أمر «مسبَّب» ومحدِّد للمكان والزمان والغرض.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "متوسّعش الاستثناءات: النص في المادة ٥٨ ذكر حالتين بس — الخطر أو الاستغاثة.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "متحصرش الحرمة في الدخول — المادة ٥٨ بتغطي التفتيش والمراقبة والتنصّت كمان.",
+    "src": "web:egypt-home-inviolable"
+   }
+  ],
+  "whenWhy": {
+   "ar": "لما حد يحب يفهم نص الدستور المصري بخصوص حرمة بيته: إيه اللي النص بيشترطه قبل الدخول أو التفتيش، وإيه الاستثناءات المكتوبة فيه بالظبط."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. ملحوظة: صفحة المصدر بالإنجليزي (ترجمة Constitute Project)، والاقتباس الحرفي منقول زي ما هو مطبوع فيها. الصفحة مافيهاش أي أرقام تليفونات، عشان كده كل الأرقام هنا فاضية."
+  },
+  "basis": {
+   "ar": "المادة ٥٨ — حرمة المنازل (Article 58. Inviolability of homes)، دستور مصر ٢٠١٤. ومعاها المادة ٩٩ — الاعتداء على الحرية الشخصية (Article 99. Violation of personal freedom)، والمادة ٥٧ — الحياة الخاصة (Article 57. Private life)."
+  },
+  "quote": "Homes are inviolable. Except in cases of danger, or if a call for help is made, they may not be entered, searched, monitored or wiretapped except by causal judicial warrant specifying the place, time and purpose thereof. All of the above is to be conducted in cases specified by the law, and in the manner prescribed. Upon entering or searching homes, those inside shall be notified and informed of the warrant issued in this regard.",
+  "contacts": [
+   {
+    "label": "المجلس القومي لحقوق الإنسان",
+    "number": "",
+    "say": "المادة ٩٩ بتقول إن المجلس بيبلّغ النيابة بأي انتهاك للحقوق دي، وله حق التدخل مدنياً بجانب المضرور بطلبه."
+   },
+   {
+    "label": "محامي مصري مختص",
+    "number": "",
+    "say": "الدستور بيقرر المبادئ؛ الإجراءات التفصيلية في قوانين تانية — استشير محامي مختص في أي موقف حقيقي."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-home-inviolable",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-women-rights",
+  "title": {
+   "ar": "حقوق المرأة في الدستور",
+   "en": "Women's rights in the Egyptian Constitution"
+  },
+  "level": 2,
+  "domain": "حقوق المرأة",
+  "who": [
+   "أي ست أو بنت في مصر",
+   "أي حد بيتعرض لتمييز بسبب الجنس",
+   "حد بيدوّر على النص الدستوري الأصلي كدليل"
+  ],
+  "place": [
+   "مصر",
+   "جهات العمل والوظائف العامة",
+   "الجهات القضائية"
+  ],
+  "snapshot": {
+   "ar": "دستور ٢٠١٤ بيقرر إن الدولة ملتزمة بالمساواة بين المرأة والرجل في كل الحقوق، وبحماية المرأة من كل أشكال العنف، وإن التمييز بسبب الجنس جريمة يعاقب عليها القانون. دي مبادئ دستورية — مش إجراءات.",
+   "en": "Egypt's 2014 Constitution commits the state to full equality between women and men, to protecting women from all forms of violence, and makes sex-based discrimination a crime punishable by law. These are constitutional principles, not procedures."
+  },
+  "redFlags": [
+   "حد يقولك إن التمييز بسبب الجنس مش جريمة — المادة ٥٣ بتقول إنه جريمة يعاقب عليها القانون.",
+   "حد يمنعك من وظيفة عامة أو تعيين قضائي لأنك ست — المادة ١١ بتدّي الحق ده دون تمييز.",
+   "حد يبرّر العنف ضد المرأة — المادة ١١ بتلزم الدولة بالحماية من كل أشكال العنف.",
+   "أي عرض فيه استغلال قسري أو اتجار — المادة ٨٩ بتحظره ويعاقب عليه القانون."
+  ],
+  "do": [
+   {
+    "t": "المادة ١١: الدولة ملتزمة بتحقيق المساواة بين المرأة والرجل في كل الحقوق المدنية والسياسية والاقتصادية والاجتماعية والثقافية.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "المادة ١١: للمرأة حق تولّي الوظائف العامة ووظائف الإدارة العليا والتعيين في الجهات القضائية دون تمييز.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "المادة ١١: الدولة ملتزمة بحماية المرأة ضد كل أشكال العنف، وبرعاية الأمومة والطفولة والمعيلات والمسنّات وأولى الاحتياج.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "المادة ٥٣: التمييز بسبب الجنس ممنوع، والتمييز والتحريض على الكراهية جريمة يعاقب عليها القانون.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "المادة ٨٩: الاتجار بالجنس وكل صور الاتجار بالبشر والاستغلال القسري محظورة ويعاقب عليها القانون.",
+    "src": "web:egypt-women-rights"
+   }
+  ],
+  "dont": [
+   {
+    "t": "متقوليش الدستور مابيحميش — المادة ١١ نص صريح على الحماية من كل أشكال العنف.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "متدوّريش في الدستور على خطوات تفصيلية للشكوى — نصوصه مبادئ، والإجراءات في قوانين تانية.",
+    "src": "web:egypt-women-rights"
+   },
+   {
+    "t": "متعتمديش على الكارت ده كاستشارة قانونية — ده وعي عام بالنص الدستوري بس.",
+    "src": "web:egypt-women-rights"
+   }
+  ],
+  "whenWhy": {
+   "ar": "لما تحتاجي تعرفي النص الدستوري نفسه: إيه اللي مكتوب بالظبط عن المساواة، وتولّي الوظائف العامة والقضاء، والحماية من العنف. المادة ٥٣ كمان بتقول إن القانون هو اللي بينظّم إنشاء مفوضية مستقلة للقضاء على كل أشكال التمييز."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. ملحوظة: النصوص هنا متاخدة من الترجمة الإنجليزية المنشورة على Constitute Project، وصفحة المصدر مافيهاش أي أرقام تليفونات — عشان كده كل جهات الاتصال هنا من غير رقم."
+  },
+  "basis": {
+   "ar": "المادة ١١ — «The place of women, motherhood and childhood» (مكانة المرأة والأمومة والطفولة)؛ المادة ٥٣ — «Equality in public rights and duties» (المساواة في الحقوق والواجبات العامة)؛ المادة ٩ — «Equal Opportunity» (تكافؤ الفرص)؛ المادة ٨٩ — «Slavery, oppression, trafficking» (الرق والقهر والاتجار)"
+  },
+  "quote": "\"The state commits to achieving equality between women and men in all civil, political, economic, social, and cultural rights in accordance with the provisions of this Constitution.\" — Article 11, Egypt's Constitution of 2014",
+  "contacts": [
+   {
+    "label": "محامي مصري مختص",
+    "number": "",
+    "say": "الدستور بيقرر المبادئ بس؛ الإجراءات في قوانين تانية — استشيري محامي للخطوات الفعلية في موقفك."
+   },
+   {
+    "label": "المفوضية المستقلة لمناهضة التمييز (المادة ٥٣)",
+    "number": "",
+    "say": "المادة ٥٣ بتقول إن القانون هو اللي بينظّم إنشاء مفوضية مستقلة للقضاء على كل أشكال التمييز."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-women-rights",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-work-rights",
+  "title": {
+   "ar": "حقوقك في الشغل",
+   "en": "Your Rights at Work"
+  },
+  "level": 2,
+  "domain": "عمل",
+  "who": [
+   "أي عامل أو موظف في مصر",
+   "موظفي الوظائف العامة (المادة ١٤)",
+   "أعضاء الاتحادات والنقابات (المادة ٧٦)"
+  ],
+  "place": [
+   "أماكن الشغل عمومًا",
+   "الوظائف العامة (المادة ١٤)",
+   "النقابات والاتحادات (المادة ٧٦)"
+  ],
+  "snapshot": {
+   "ar": "دستور ٢٠١٤: الشغل حق وواجب وشرف تكفله الدولة، ومفيش عمل جبري إلا بشروط النص، والدولة بتحظر الفصل التعسفي وتكفل الأمن والسلامة والصحة المهنية — كله «على النحو الذي ينظمه القانون».",
+   "en": "Egypt's 2014 Constitution: work is a right, a duty and an honor guaranteed by the state; no forced labor except under the conditions the text sets; the state prohibits arbitrary dismissal and ensures occupational safety — all as organized by law."
+  },
+  "redFlags": [
+   "فصل تعسفي — المادة ١٣ بتنص إن الدولة «تحظر الفصل التعسفي».",
+   "شغل بالإجبار خارج شروط المادة ١٢ (قانون + خدمة عامة + مدة محددة + أجر عادل).",
+   "ظروف شغل من غير أمن وسلامة وصحة مهنية — المادة ١٣ بتكفل الشروط دي.",
+   "محاباة أو وساطة في الوظائف العامة — المادة ١٤ بتنص إنها على أساس الكفاءة."
+  ],
+  "do": [
+   {
+    "t": "المادة ١٢: العمل حق وواجب وشرف تكفله الدولة — ده نص الدستور حرفيًا.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "المادة ١٢: مفيش عمل جبري إلا وفقًا للقانون، لأداء خدمة عامة، لمدة محددة، وبأجر عادل، وبدون إخلال بالحقوق الأساسية.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "المادة ١٣: الدولة تلتزم بحماية حقوق العمال، وتكفل وسائل التفاوض الجماعي، وتحظر الفصل التعسفي — على النحو الذي ينظمه القانون.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "المادة ١٣: الدولة تعمل على حماية العمال من مخاطر العمل وتوفير شروط الأمن والسلامة والصحة المهنية.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "المادة ١٥: الإضراب السلمي حق ينظمه القانون — النص كله بالحرف كده.",
+    "src": "web:egypt-work-rights"
+   }
+  ],
+  "dont": [
+   {
+    "t": "متقبلش «محاباة أو وساطة» في الوظائف العامة — المادة ١٤: الوظائف العامة حق للمواطنين على أساس الكفاءة، بلا محاباة أو وساطة.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "متفتكرش إن موظف عام ممكن يتفصل بأي طريقة — المادة ١٤: لا يجوز فصلهم بغير الطريق التأديبي إلا في الأحوال التي يحددها القانون.",
+    "src": "web:egypt-work-rights"
+   },
+   {
+    "t": "متستنّاش من الدستور إجراءات تفصيلية — المادة ١٣ نفسها بتقول «كل ما تقدم على النحو الذي ينظمه القانون».",
+    "src": "web:egypt-work-rights"
+   }
+  ],
+  "whenWhy": {
+   "ar": "استخدم الكارت ده لما تحب تعرف النص الدستوري نفسه بيقول إيه عن حقك في الشغل: قبل ما توقّع عقد، أو لما تسمع كلام عن فصل تعسفي أو شغل بالإجبار أو ظروف شغل مش آمنة، أو لما حد يقول لك «الوظيفة العامة بالواسطة». الكارت بيوريك المبدأ الدستوري بس — مش الإجراء."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. ملاحظة أمانة: الصفحة المصدر منشورة بالإنجليزية، فالاقتباس الحرفي (verbatim_quote) اتنقل بالإنجليزية زي ما هو مطبوع، والعربي هنا ترجمة توضيحية مش النص الرسمي العربي."
+  },
+  "basis": {
+   "ar": "المادة ١٢ «Article 12. Right to work, forced labor»، المادة ١٣ «Article 13. Worker Rights»، المادة ١٤ «Article 14. State employment»، المادة ١٥ «Article 15. Right to strike»، والمادة ٧٦ «Article 76. Right to form syndicates» — دستور مصر ٢٠١٤ بأرقام وعناوين المواد زي ما هي مطبوعة على صفحة Constitute Project."
+  },
+  "quote": "Work is a right, a duty, and an honor guaranteed by the state. There can be no forced labor except in accordance with the law and for the purpose of performing a public service for a defined period of time and in return for a fair wage, without prejudice to the basic rights of those assigned to the work.",
+  "contacts": [
+   {
+    "label": "النقابة أو الاتحاد المختص",
+    "number": "",
+    "say": "المادة ٧٦: الاتحادات والنقابات تدافع عن حقوق أعضائها وتحمي مصالحهم. الصفحة مافيهاش أي أرقام تواصل."
+   },
+   {
+    "label": "محامي مصري مختص في قانون العمل",
+    "number": "",
+    "say": "نص الدستور مبادئ عامة؛ للإجراءات استشير محامي مختص. صفحة الدستور مافيهاش أرقام تليفونات نهائيًا."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-work-rights",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-education-right",
+  "title": {
+   "ar": "حقك في التعليم",
+   "en": "Your Right to Education"
+  },
+  "level": 2,
+  "domain": "تعليم",
+  "who": [
+   "كل مواطن مصري (م١٩)",
+   "الأطفال أقل من ١٨ سنة (م٨٠)",
+   "طلاب الجامعات ومعاهد الدولة (م٢١)",
+   "الأقزام وذوو الإعاقة (م٨١)"
+  ],
+  "place": [
+   "المدارس والمعاهد الحكومية والخاصة (م١٩)",
+   "مؤسسات الدولة التعليمية (م١٩)",
+   "الجامعات ومعاهد الدولة (م٢١)",
+   "مراكز الطفولة (م٨٠)"
+  ],
+  "snapshot": {
+   "ar": "التعليم في دستور ٢٠١٤ مش منّة ولا خدمة — ده حق لكل مواطن (م١٩)، إلزامي لآخر المرحلة الثانوية، ومجاني في مؤسسات الدولة التعليمية وفقاً للقانون.",
+   "en": "Under Egypt's 2014 Constitution, education is a right of every citizen (Art 19), obligatory until the end of the secondary stage, and free in state educational institutions as per the law."
+  },
+  "redFlags": [
+   "طفل بيشتغل قبل ما يكمل تعليمه الابتدائي — المادة ٨٠ بتحظره صراحةً",
+   "منع أو تمييز في التعليم بسبب الإعاقة أو الطبقة الاجتماعية — المادة ٥٣ والمادة ٨١",
+   "مدرسة حكومية أو خاصة مش ملتزمة بسياسات الدولة التعليمية — المادة ١٩ بتلزم الدولة بالإشراف",
+   "طفل أقل من ٦ سنين محروم من التعليم المبكر في مركز طفولة — المادة ٨٠ بتقرره حق"
+  ],
+  "do": [
+   {
+    "t": "المادة ١٩: التعليم حق لكل مواطن — هدفه بناء الشخصية المصرية وترسيخ التفكير العلمي وقيم المواطنة والتسامح وعدم التمييز.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "المادة ١٩: التعليم إلزامي لحد نهاية المرحلة الثانوية أو ما يعادلها.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "المادة ١٩: الدولة بتكفل التعليم المجاني بمراحله المختلفة في مؤسسات الدولة التعليمية وفقاً للقانون.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "المادة ١٩: الدولة بتشرف على التعليم عشان كل المدارس والمعاهد الحكومية والخاصة تلتزم بسياساتها التعليمية.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "المادة ٢١: الدولة بتكفل استقلال الجامعات، وبتلتزم بتطوير التعليم الجامعي المجاني في جامعات ومعاهد الدولة وفقاً للقانون.",
+    "src": "web:egypt-education-right"
+   }
+  ],
+  "dont": [
+   {
+    "t": "متسمحش بتشغيل طفل قبل ما يتم تعليمه الابتدائي — المادة ٨٠ بتحظر ده صراحةً.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "متقبلش تمييز في حقوقك العامة — المادة ٥٣: المواطنون سواء، والتمييز جريمة يعاقب عليها القانون.",
+    "src": "web:egypt-education-right"
+   },
+   {
+    "t": "متفتكرش إن المدارس الخاصة معفية من المواد الأساسية — المادة ٢٤ بتخليها أساسية في التعليم العام والخاص.",
+    "src": "web:egypt-education-right"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده لما حد يقولك إن التعليم منّة أو خدمة، أو لما تحتاج تعرف نص الدستور بالظبط في الإلزام والمجانية وإشراف الدولة على المدارس الحكومية والخاصة."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. كل جملة في الكارت ده متاخدة حرفياً من نص الدستور المنشور على constituteproject.org، والصفحة مفيهاش أي أرقام تليفونات — عشان كده كل خانات الأرقام فاضية."
+  },
+  "basis": {
+   "ar": "دستور مصر ٢٠١٤ — المادة ١٩ (التعليم)، المادة ٢١ (استقلال الجامعات)، المادة ٢٤ (اللغة العربية والتربية الدينية والتاريخ الوطني)، المادة ٥٣ (المساواة في الحقوق والواجبات العامة)، المادة ٨٠ (حقوق الطفل)، المادة ٨١ (حقوق ذوي الإعاقة)"
+  },
+  "quote": "Every citizen has the right to education with the aim of building the Egyptian character, maintaining national identity, planting the roots of scientific thinking, developing talents, promoting innovation and establishing civilizational and spiritual values and the concepts of citizenship, tolerance and non-discrimination.",
+  "contacts": [
+   {
+    "label": "محامي مصري مختص",
+    "number": "",
+    "say": "الدستور بيقرر مبادئ؛ الإجراءات التفصيلية في قوانين تانية — استشير محامي متخصص لموقفك."
+   },
+   {
+    "label": "المفوضية المستقلة لمكافحة التمييز (المادة ٥٣)",
+    "number": "",
+    "say": "المادة ٥٣ بتنص إن القانون ينظّم إنشاء مفوضية مستقلة لمكافحة التمييز؛ الدستور مذكرش أي وسيلة تواصل."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-education-right",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-children-protection",
+  "title": {
+   "ar": "حماية الطفل — إزاي تحمي ابنك أو أخوك الصغير",
+   "en": "Child protection — what Egypt's 2014 Constitution literally says about protecting a child"
+  },
+  "level": 3,
+  "domain": "حماية الأهل",
+  "who": [
+   "أي طفل ماوصلش سن ١٨ سنة (المادة ٨٠)",
+   "الأطفال ذوو الإعاقة — الدولة بتضمن حقوقهم وتأهيلهم ودمجهم في المجتمع (المادة ٨٠)",
+   "الطفل الضحية أو الشاهد (المادة ٨٠)"
+  ],
+  "place": [
+   "مصر — دستور جمهورية مصر العربية ٢٠١٤"
+  ],
+  "snapshot": {
+   "ar": "دستور مصر ٢٠١٤ بيعرّف الطفل إنه أي حد ماوصلش سن ١٨ سنة، وبيلزم الدولة برعاية الأطفال وحمايتهم من كل أشكال العنف والإساءة وسوء المعاملة والاستغلال التجاري والجنسي — كله في المادة ٨٠. ونفس المادة بتحظر تشغيل الطفل قبل ما يتم سن إتمام التعليم الأساسي أو في شغل بيعرّضه للخطر، وبتقرر إن المساعدة القانونية حق للأطفال وإنهم يتحجزوا في أماكن مناسبة منفصلة عن أماكن احتجاز البالغين، وإن الدولة تعمل على تحقيق مصلحة الطفل الفضلى في كل الإجراءات اللي بتتخذ تجاهه.",
+   "en": "Egypt's 2014 Constitution defines a child as anyone who has not reached 18, and obliges the state to care for children and protect them from all forms of violence, abuse, mistreatment and commercial and sexual exploitation (Article 80). The same article prohibits employing children before they reach the age of having completed their primary education and in jobs that expose them to risk, provides that legal aid shall be provided to children and that they shall be detained in appropriate locations separate from adult detention centers, and that the state shall work to achieve children's best interest in all measures taken with regards to them."
+  },
+  "redFlags": [
+   "طفل بيشتغل قبل إتمام تعليمه الأساسي، أو في شغل بيعرّضه للخطر — محظور بنص المادة ٨٠.",
+   "طفل متحجز في مكان مع البالغين — المادة ٨٠ بتقول أماكن مناسبة منفصلة عن أماكن احتجاز البالغين.",
+   "طفل متساءل جنائيًا أو متحجز من غير مساعدة قانونية — المادة ٨٠ بتقرر إن المساعدة القانونية تُقدَّم للأطفال.",
+   "عنف أو إساءة أو سوء معاملة أو استغلال تجاري أو جنسي لطفل — المادة ٨٠ بتلزم الدولة بالحماية منه."
+  ],
+  "do": [
+   {
+    "t": "المادة ٨٠: الطفل هو أي حد ماوصلش سن ١٨ سنة — ده تعريف الدستور نفسه.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٨٠: للطفل حق في اسم وأوراق هوية، وتطعيمات مجانية إجبارية، ورعاية صحية وأسرية، وغذاء ومأوى آمن.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٨٠: الدولة بترعى الأطفال وتحميهم من كل أشكال العنف والإساءة وسوء المعاملة والاستغلال التجاري والجنسي.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٨٠: المساعدة القانونية حق للأطفال، والاحتجاز يكون في أماكن مناسبة منفصلة عن أماكن احتجاز البالغين.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٩٩: الاعتداء على الحريات جريمة لا تسقط بالتقادم، والمضرور له رفع الدعوى الجنائية مباشرة.",
+    "src": "web:egypt-children-protection"
+   }
+  ],
+  "dont": [
+   {
+    "t": "المادة ٨٠: ممنوع تشغيل الطفل قبل ما يتم سن إتمام التعليم الأساسي، أو في شغل بيعرّضه للخطر.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٨٠: مايجوزش مساءلة الطفل جنائيًا أو احتجازه إلا وفق القانون والمدة المحددة فيه.",
+    "src": "web:egypt-children-protection"
+   },
+   {
+    "t": "المادة ٨٩: العبودية وكل صور القهر والاستغلال القسري والاتجار بالبشر والجنس محظورة ويعاقب عليها القانون.",
+    "src": "web:egypt-children-protection"
+   }
+  ],
+  "whenWhy": {
+   "ar": "استخدم الكارت ده لما تشك إن طفل قريب منك بيتعرض لعنف أو إساءة أو سوء معاملة أو استغلال، أو بيتشغّل بدري أو في شغل خطر، أو لما طفل يتحجز — عشان تعرف نص الدستور بيقول إيه بالظبط، من غير أي زيادة من عندنا."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص. كل كلمة في الكارت ده مأخوذة حرفيًا من صفحة الدستور — والمواد دي بتقرر مبادئ وحقوق، ومابتشرحش خطوات تنفيذية، عشان كده مافيش هنا أي خطوات إجرائية مش موجودة في النص. والصفحة نفسها مافيهاش أي أرقام تليفون."
+  },
+  "basis": {
+   "ar": "المادة ٨٠ — حقوق الطفل (Article 80. Rights of the child)، دستور مصر ٢٠١٤. ومعاها المادة ٨٩ — العبودية والقهر والاتجار (Article 89. Slavery, oppression, trafficking)، والمادة ٩٩ — الاعتداء على الحرية الشخصية (Article 99. Violation of personal freedom) — بأرقامها وعناوينها زي ما هي مطبوعة على الصفحة."
+  },
+  "quote": "The state shall care for children and protect them from all forms of violence, abuse, mistreatment and commercial and sexual exploitation. (Article 80. Rights of the child)",
+  "contacts": [
+   {
+    "label": "المجلس القومي لحقوق الإنسان (National Council for Human Rights)",
+    "number": "",
+    "say": "المادة ٩٩: بيبلّغ النيابة بأي انتهاك للحقوق دي، وله حق يدخل مدعي مدني جنب المضرور بناءً على طلبه. نص الدستور مافيهوش أرقام."
+   },
+   {
+    "label": "النيابة العامة (the prosecutor's office)",
+    "number": "",
+    "say": "المادة ٩٩ بتذكرها كجهة بيتبلّغ لها الانتهاك، والمضرور له رفع الدعوى الجنائية مباشرة. صفحة الدستور مافيهاش أي أرقام تليفون."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-children-protection",
+    "grade": "مصدر"
+   }
+  ]
+ },
+ {
+  "id": "egypt-litigation-remedy",
+  "title": {
+   "ar": "حقك في التقاضي — وإن الاعتداء على حرياتك جريمة لا تسقط",
+   "en": "Your right to litigate — and that assault on your freedoms is a crime with no statute of limitations"
+  },
+  "level": 3,
+  "domain": "دستور مصري",
+  "who": [
+   "أي شخص وقع عليه اعتداء على حرياته أو حقوقه العامة",
+   "المتقاضون قدام القضاء",
+   "اللي مش قادر ماديًا على تكاليف التقاضي (م.٩٨)"
+  ],
+  "place": [
+   "المحاكم — القاضي الطبيعي (م.٩٧)",
+   "النيابة العامة (م.٩٩)",
+   "المجلس القومي لحقوق الإنسان (م.٩٩)"
+  ],
+  "snapshot": {
+   "ar": "الدستور بيقول إن التقاضي حق مكفول للناس كلها، وإن أي اعتداء على حرياتك جريمة ما بتسقطش بالتقادم لا مدنيًا ولا جنائيًا.",
+   "en": "The Constitution states litigation is a right guaranteed to all, and that any assault on personal freedoms is a crime with no statute of limitations."
+  },
+  "redFlags": [
+   "حد بيقول لك إن القرار ده «متحصّن» ومش بيتطعن عليه قدام القضاء (م.٩٧)",
+   "إحالتك لمحكمة استثنائية مش قاضيك الطبيعي (م.٩٧)",
+   "حرمانك من الدفاع أصالةً أو بالوكالة (م.٩٨)",
+   "قفل الموضوع بحجّة إنه «سقط بالتقادم» رغم إنه اعتداء على الحريات (م.٩٩)"
+  ],
+  "do": [
+   {
+    "t": "م.٩٧: التقاضي حق مكفول للناس كلها، والدولة بتقرّب بين الخصوم وبتسعى لسرعة الفصل في القضايا.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "م.٩٧: محظور تحصين أي عمل أو قرار إداري من رقابة القضاء — يعني القرار يفضل قابل للطعن قدام المحكمة.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "م.٩٧: ما تتحاكمش إلا قدام قاضيك الطبيعي، والمحاكم الاستثنائية محظورة.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "م.٩٩: النص بيقول إن للمضرور أن يقيم الدعوى الجنائية بالطريق المباشر، والدولة بتضمن تعويضًا عادلًا للمعتدى عليه.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "م.٩٨: حق الدفاع أصالةً أو بالوكالة مكفول، والنص بيكفل معاونة غير القادرين ماليًا على الالتجاء للقضاء.",
+    "src": "web:egypt-litigation-remedy"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ما تفترضش إن الوقت عدّى — م.٩٩ بتقول الاعتداء جريمة لا تسقط بالتقادم مدنيًا ولا جنائيًا.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "ما تقبلش كلام إن قرار إداري «محصّن» ومفيش رقابة قضاء عليه — م.٩٧ بتحظر ده.",
+    "src": "web:egypt-litigation-remedy"
+   },
+   {
+    "t": "ما تقبلش محاكمة قدام محكمة استثنائية — م.٩٧ بتحظرها وبتحصر المحاكمة قدام القاضي الطبيعي.",
+    "src": "web:egypt-litigation-remedy"
+   }
+  ],
+  "whenWhy": {
+   "ar": "لما حد يقول لك \"مفيش قرار بيتراجع في المحكمة\" أو \"الموضوع بقى قديم وسقط بالتقادم\" أو تتحرم من محامي — النص الدستوري بيقول حاجة تانية."
+  },
+  "note": {
+   "ar": "الدستور المصري ٢٠١٤ قانون مُلزم في مصر، لكن مواده مبادئ دستورية — الإجراءات التفصيلية بتيجي من قوانين تانية (زي قانون الإجراءات الجنائية أو قانون العمل). ده وعي قانوني عام مش استشارة قانونية؛ في أي موقف حقيقي استشير محامي مصري مختص."
+  },
+  "basis": {
+   "ar": "المادة ٩٧ (Right to litigate — \"Ultra-vires administrative actions\")، المادة ٩٨ (Right to defense)، المادة ٩٩ (Protection of victim's rights — Human rights commission) من دستور مصر ٢٠١٤"
+  },
+  "quote": "Article 97: \"Litigation is a safeguarded right guaranteed to all. The state shall bring together the litigating parties, and work towards speedy judgment in cases. It is forbidden to grant any act or administrative decision immunity from judicial oversight. Individuals may only be tried before their natural judge. Extraordinary courts are forbidden.\" — Article 99: \"Any assault on the personal freedoms or sanctity of the life of citizens, along with other general rights and freedoms guaranteed by the Constitution and the law, is a crime with no statute of limitations for both civil and criminal proceedings. The injured party may file a criminal suit directly. ... The state guarantees just compensation for those who have been assaulted. The National Council for Human Rights shall inform the prosecutor's office of any violation of these rights, and also possesses the right to enter into an ancillary civil lawsuit on the side of the injured party at its request.\"",
+  "contacts": [
+   {
+    "label": "النيابة العامة (م.٩٩)",
+    "number": "",
+    "say": "م.٩٩: للمضرور أن يقيم الدعوى الجنائية بالطريق المباشر. الصفحة مفيهاش أرقام تليفونات."
+   },
+   {
+    "label": "المجلس القومي لحقوق الإنسان (م.٩٩)",
+    "number": "",
+    "say": "م.٩٩: يبلّغ النيابة بأي انتهاك، وله التدخل في الدعوى المدنية منضمًا للمضرور بناءً على طلبه."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-litigation-remedy",
+    "grade": "مصدر"
    }
   ]
  }
