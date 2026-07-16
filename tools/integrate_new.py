@@ -57,6 +57,15 @@ def to_view(c):
     }
     source = {sid: {"url": c.get("source_url",""), "label": c.get("source_name",""), "tag": tag_for(c.get("source_url")),
                     "sha256": qhash(c.get("verbatim_quote")), "retrieved": "2026-07-16", "licence": licence_for(c.get("source_url"))}}
+    # A card's primary source cannot ground a phone number it does not contain (a US FTC page cannot
+    # carry an Egyptian hotline). extra_sources lets a contact number carry its OWN provenance —
+    # verified separately against the issuing body's own site. No number ships without one.
+    for ex in (c.get("extra_sources") or []):
+        exid = ex.get("srcId") or srcid(ex.get("url"), c["id"])
+        source[exid] = {"url": ex.get("url",""), "label": ex.get("label",""), "tag": ex.get("tag","مصدر"),
+                        "sha256": qhash(ex.get("quote")), "retrieved": ex.get("retrieved","2026-07-16"),
+                        "licence": ex.get("licence","quoted, attributed")}
+        card["sources"].append({"srcId": exid, "grade": ex.get("tag","مصدر")})
     return card, source
 
 def node_validate(path):

@@ -8,6 +8,14 @@ window.SOURCES = {
   "retrieved": "2026-07-16",
   "licence": "public domain (US gov)"
  },
+ "eg:cpa": {
+  "url": "https://www.cpa.gov.eg/",
+  "label": "جهاز حماية المستهلك المصري — الموقع الرسمي (الرقم ١٩٥٨٨ منشور في ترويسة الموقع)",
+  "tag": "CPA",
+  "sha256": "8c927808cc",
+  "retrieved": "2026-07-16",
+  "licence": "جهة حكومية مصرية — منسوب"
+ },
  "web:egypt-equality": {
   "url": "https://www.constituteproject.org/constitution/Egypt_2014",
   "label": "Constitute Project — Egypt 2014 Constitution (Translated by International IDEA)",
@@ -219,7 +227,7 @@ window.CARDS = [
    {
     "label": "جهاز حماية المستهلك (مصر)",
     "number": "19588",
-    "say": "خط رسمي لشكاوى النصب والاحتيال التجاري في مصر."
+    "say": "الرقم ده متأكّد منه من موقع الجهاز الرسمي cpa.gov.eg (مش من المصدر الأمريكي بتاع الكارت). لشكاوى النصب والاحتيال التجاري في مصر."
    },
    {
     "label": "الإبلاغ الدولي (FTC الأمريكية)",
@@ -231,6 +239,10 @@ window.CARDS = [
    {
     "srcId": "ftc:fraud-victim-steps",
     "grade": "FTC"
+   },
+   {
+    "srcId": "eg:cpa",
+    "grade": "CPA"
    }
   ]
  },
