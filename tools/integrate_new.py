@@ -17,18 +17,21 @@ PROJ = {
 def qhash(q): return hashlib.sha256((q or "").encode("utf-8")).hexdigest()[:10]
 def srcid(url, cid):
     d = (url or "").lower()
-    p = ("ncsc" if "ncsc.gov" in d else "cisa" if "cisa.gov" in d else "ftc" if "ftc.gov" in d or "identitytheft.gov" in d
+    p = ("ncsc" if "ncsc.gov" in d else "cisa" if "cisa.gov" in d else "ic3" if "ic3.gov" in d or "fbi.gov" in d
+         else "ftc" if "ftc.gov" in d or "identitytheft.gov" in d
          else "unodc" if "unodc.org" in d else "who" if "who.int" in d else "ilo" if "ilo.org" in d else "web")
     return p + ":" + cid
 def tag_for(url):
     d = (url or "").lower()
-    for k, v in [("ncsc.gov","NCSC"),("cisa.gov","CISA"),("ftc.gov","FTC"),("identitytheft.gov","FTC"),
+    for k, v in [("ncsc.gov","NCSC"),("cisa.gov","CISA"),("ic3.gov","FBI/IC3"),("fbi.gov","FBI"),
+                 ("ftc.gov","FTC"),("identitytheft.gov","FTC"),
                  ("unodc.org","UNODC"),("who.int","WHO"),("ilo.org","ILO")]:
         if k in d: return v
     return "مصدر"
 def licence_for(url):
     d = (url or "").lower()
     if "ncsc.gov" in d: return "© Crown copyright · OGL"
+    if "ic3.gov" in d or "fbi.gov" in d: return "public domain (US gov)"
     if any(x in d for x in ["cisa.gov","ftc.gov","identitytheft.gov"]): return "public domain (US gov)"
     if "unodc.org" in d or "who.int" in d or "ilo.org" in d: return "© UN — quoted, attributed"
     return "quoted, attributed"

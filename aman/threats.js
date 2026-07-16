@@ -24,13 +24,13 @@ window.SOURCES = {
   "retrieved": "2026-07-16",
   "licence": "public domain (US gov)"
  },
- "web:sim-swap": {
+ "ic3:sim-swap": {
   "url": "https://www.ic3.gov/PSA/2022/PSA220208",
   "label": "FBI / Internet Crime Complaint Center (IC3) — Public Service Announcement I-020822-PSA: \"Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public\" (8 فبراير 2022)",
-  "tag": "مصدر",
+  "tag": "FBI/IC3",
   "sha256": "c1588542a0",
   "retrieved": "2026-07-16",
-  "licence": "quoted, attributed"
+  "licence": "public domain (US gov)"
  },
  "ncsc:mfa-not-all-equal": {
   "url": "https://www.ncsc.gov.uk/guidance/multi-factor-authentication-online-services",
@@ -396,53 +396,53 @@ window.CARDS = [
   "do": [
    {
     "t": "لو شكيت إنك ضحية: كلّم شركة المحمول فورًا عشان ترجّع السيطرة على رقمك — دي أول خطوة في نصايح الـFBI للضحية.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "ادخل حساباتك الأونلاين وغيّر الباسوردات.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "كلّم البنك يحطّ تنبيه على حسابك لمحاولات الدخول أو المعاملات المشبوهة.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "سيب الـOTP بالرسايل: الـFBI بينصح بوسيلة تأمين قوية — بصمة، أو مفتاح أمان مادي، أو تطبيق authentication مستقل.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "لو حد اتصل بيك بيطلب باسورد أو PIN حساب المحمول: متديهوش. اتصل انت بخدمة عملاء شركتك وتأكد بنفسك.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "استخدم باسوردات مختلفة ومتنوعة لحساباتك الأونلاين — مش باسورد واحد لكله.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "بلّغ الجهة الأمنية المحلية في بلدك. الـPSA بيوجّه لمكاتب الـFBI وموقع ic3.gov — دول لأمريكا بس.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    }
   ],
   "dont": [
    {
     "t": "متعلنش عن أصولك المالية على السوشيال والمنتديات — ومنها إنك بتملك أو بتستثمر في عملات رقمية. الـFBI حاطط دي أول نصيحة.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "متنشرش بياناتك الشخصية أونلاين: رقم الموبايل، العنوان، أو أي بيانات بتعرّفك.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "متديش بيانات حساب المحمول على التليفون لأي «مندوب» بيطلب الباسورد أو الـPIN.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "متسبش الباسوردات واليوزرنيمز محفوظة للدخول السريع على تطبيقات الموبايل.",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    },
    {
     "t": "متعتبرش إن الباسورد القوي لوحده كفاية — السلسلة دي بتعدّي الباسورد أصلًا عن طريق «استعادة الحساب».",
-    "src": "web:sim-swap"
+    "src": "ic3:sim-swap"
    }
   ],
   "whenWhy": {
@@ -469,8 +469,8 @@ window.CARDS = [
   ],
   "sources": [
    {
-    "srcId": "web:sim-swap",
-    "grade": "مصدر"
+    "srcId": "ic3:sim-swap",
+    "grade": "FBI/IC3"
    }
   ]
  },
