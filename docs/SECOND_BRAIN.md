@@ -382,6 +382,37 @@ A grounded draft exists (`scratchpad/bleeding_card_draft.json`, MedlinePlus `enc
 
 **Grounding difficulty (be honest about it):** dimensions 1, 2, 5 ground cleanly — UDHR and the Constitution are fetchable full texts. Dimensions 7 and 8 are *situational*; ground each in an underlying right + a real reporting route, and let the verifier reject anything that drifts into invented Egyptian procedure. **Expect rejections. That's correct.**
 
+## 6.1b ⚠️ THE REAL CRITIQUE — "STILL LACKING CONTENT… KNOWN DATA. DIVE DEEP" (K., 16 Jul)
+
+**K. is right, and this is the most important open item in the document.**
+
+أمان shipped 3 cards: *use three random words*, *don't click suspicious links*, *romance scams exist*. **Every Egyptian has heard all of it.** That is cyber-hygiene, not a product — and it is **not what K. specified**. His brief was explicit:
+
+> *«منصة الأولى من نوعها بتدمج بين علوم الـ cybersecurity و **criminology** عشان تعمل جدار آمن حوالين نفسك أهلك بيتك وكل من تحب»*
+
+**The criminology half — the entire differentiator — was never built.** A card that says "use a strong password" answers *what to do*. The product K. asked for answers **how the criminal thinks, how they choose you, and what actually happens next.** Nobody needs another list of tips; the value is in the non-obvious.
+
+**Diagnosis of why it happened:** I picked topics by what had an easy source, not by what was worth knowing. The hygiene pages are the easiest pages on NCSC/FTC to ground — so the pipeline drifted to the shallowest possible content. **Grounding difficulty selected for banality.** Guard against this: choose the topic by value FIRST, then go find a source that can carry it.
+
+### The deep source map — PROBE-VERIFIED LIVE 16 Jul 2026 (the hard part is done)
+
+| Deep topic | Why it is NOT known data | Source (verified 200 + substantive) |
+|---|---|---|
+| **SIM swap** | The chain nobody explains: they take your **number** → your **OTP** → your **bank**. Your phone stops working *and that is the attack*, not a fault. | `https://www.ic3.gov/PSA/2022/PSA220208` (4.5k) |
+| **Not all MFA is equal** | **Contradicts our own `two-factor-auth` card.** SMS codes are the *weakest* MFA and are phishable in real time. "Just turn on 2FA" is incomplete advice. | `https://www.ncsc.gov.uk/guidance/multi-factor-authentication-online-services` (5.5k) |
+| **Sextortion** | The mechanics + *it is not your fault* + **do not pay** + the criminal usually has nothing. Life-saving for a panicking teenager. | `https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself` (6.4k) |
+| **What happens to your data after a breach** | The resale chain — the theft is the *beginning*, not the end. | `https://consumer.ftc.gov/features/identity-theft` (8.7k) |
+| **The real numbers** | Actual reported-fraud data instead of vibes. *(Scope every statistic EXACTLY — see 2.11c.)* | `https://www.ftc.gov/news-events/data-visualizations/data-spotlight` (15k) · `https://www.ic3.gov/AnnualReport/Reports` (3.7k) |
+| **The global crime picture** | The criminology frame: organised, industrial, cross-border. | `https://www.unodc.org/unodc/en/cybercrime/index.html` (7k) |
+
+**Dead ends — do not retry these (all 403/404 on 16 Jul):** Europol IOCTA + money-muling, actionfraud.police.uk, `ic3.gov/PSA/2021/*` and `/2023/*`, `consumer.ftc.gov/articles/cell-phone-fraud`, CISA `sites/default/files/*.pdf`, `ncsc.gov.uk/guidance/social-engineering`. Europol and Action Fraud block automated agents outright.
+
+### Still-missing deep topics with NO live source found
+money-mule recruitment (how an ordinary person becomes a criminal without knowing) · victim-selection/targeting · the fraud lifecycle (grooming→hook→extraction→exit) · why urgency and authority work on the brain. **These are the best cards on the list and none of them are grounded yet.** Find a fetchable authority before writing a word of them. If none exists, the honest answer is that أمان does not carry them.
+
+### The rule this produced
+> **Pick the topic by value, then hunt the source. Never let source-convenience pick your topics** — do that and you will faithfully, verifiably, ship things everyone already knows.
+
 ## 6.2 أمان — remaining topic map
 
 Covered: phishing · strong-passwords · romance-scam.
