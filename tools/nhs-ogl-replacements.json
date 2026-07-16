@@ -1,0 +1,11 @@
+{
+ "choking-adult": "https://www.nhs.uk/conditions/first-aid/",
+ "drowning": "https://www.nhs.uk/conditions/first-aid/",
+ "electric-shock": "https://www.nhs.uk/conditions/burns-and-scalds/",
+ "burn": "https://www.nhs.uk/conditions/burns-and-scalds/",
+ "heat-stroke": "https://www.nhs.uk/conditions/heat-exhaustion-heatstroke/",
+ "head-injury": "https://www.nhs.uk/conditions/head-injury-and-concussion/",
+ "broken-bone": "https://www.nhs.uk/conditions/broken-arm-or-wrist/",
+ "cuts-wounds": "https://www.nhs.uk/conditions/cuts-and-grazes/",
+ "poisoning": "https://www.nhs.uk/conditions/poisoning/"
+}
