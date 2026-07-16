@@ -86,8 +86,15 @@ FETCH → HASH → EXTRACT → VERIFY(adversarial) → INTEGRATE(additive) → V
 - [ ] no unverified number; no jurisdiction conflation
 - [ ] safe and not misleading
 
-**This is not theatre — it caught a real kill:**
-> The **tetanus card** fabricated `"123 إسعاف"` (the Egyptian ambulance) into a step, when the NHS source lists only 111 and 999 — *and* spliced an emergency number into a step labelled with the **non-emergency** line. Wrong AND dangerous. The verifier rejected it. **It never reached a user.**
+**This is not theatre — it caught real kills:**
+
+> **1. The tetanus card** fabricated `"123 إسعاف"` (the Egyptian ambulance) into a step, when the NHS source lists only 111 and 999 — *and* spliced an emergency number into a step labelled with the **non-emergency** line. Wrong AND dangerous. Rejected. **It never reached a user.**
+
+> **2. The severe-bleeding card dropped an exception that could blind someone.** MedlinePlus reads: *"Direct pressure is best for external bleeding, **except for an eye injury**."* The card kept the direct-pressure instruction and **dropped the exception**. Someone following it literally would press on an injured eye. The verifier's verdict: **"BLOCKING (safety)"**. Rejected — on the most dangerous card in the library.
+>
+> **Note what kind of error that is.** Nothing was fabricated. Every word came from the source. The defect was an **omission** — a true instruction made dangerous by dropping the clause that bounds it. *Grounding is necessary but not sufficient: a subset of the truth can be more dangerous than a visible lie, because it carries the source's authority while missing the part that keeps you safe.* Check for what was **left out**, not only for what was made up.
+
+> **3. The domestic-violence card** widened WHO's *"intimate partner violence"* statistic into *"violence"* generally. A true number in a false frame. Rejected.
 
 **Expect low yield and don't flinch.** Batch 1: **4 of 18 PASS**. Wave 1 gap batch: 3/6 cards + 5/6 claims. That's the gate doing its job. *A low pass rate is evidence of integrity, not incompetence.*
 
@@ -288,7 +295,7 @@ const CITE = x => {
 ## Live and permanent (no API, no subscription — works forever)
 - **The one link:** `khaledwho0-ops.github.io/mawthooq-defense` — static GitHub Pages. Hub arranged in defense-day order (①–⑥).
 - **موثوق:** `egy2.vercel.app` (needs API keys for the AI tools; the no-API pages work regardless)
-- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **9**
+- **Content:** مستعد **119** · متزن **130** · أمان **3** · حقوقي **15**
   *(حقوقي 9 = 8 Egyptian-Constitution 2014 cards + 1 FTC fraud-victim card. An earlier attempt at 10 UDHR cards was SHIPPED THEN REVERTED — see 2.10b Bug 3. The Constitution grounds them because it is binding Egyptian law and actually contains procedure; the UDHR does not.)*
 
 ## ⚠️ KNOWN CONTENT GAP — priority for the next run
