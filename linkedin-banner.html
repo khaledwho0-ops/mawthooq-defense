@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#111;display:flex;align-items:center;justify-content:center;min-height:100vh}
+  .banner{
+    width:1584px;height:396px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 140% at 78% 18%, rgba(188,148,87,.20), transparent 58%),
+      radial-gradient(90% 120% at 12% 85%, rgba(188,148,87,.09), transparent 55%),
+      linear-gradient(135deg,#0A0A0A 0%,#12100E 52%,#1a1409 100%);
+    font-family:-apple-system,"Segoe UI",system-ui,Arial,sans-serif;
+    display:flex;align-items:center;
+  }
+  /* subtle rule grid */
+  .grid{position:absolute;inset:0;opacity:.055;
+    background-image:linear-gradient(rgba(228,197,131,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(228,197,131,.6) 1px,transparent 1px);
+    background-size:64px 64px}
+  .hairline{position:absolute;left:0;right:0;top:0;height:3px;
+    background:linear-gradient(90deg,transparent,#BC9457 22%,#E4C583 50%,#BC9457 78%,transparent)}
+  /* LinkedIn safe zones: profile photo covers the lower-left ~380px.
+     Mobile crops the outer edges, so nothing critical past ~1430px. */
+  .content{position:relative;padding-left:452px;z-index:3;transform:translateY(-14px)}
+  .name{font-size:62px;font-weight:800;letter-spacing:-.5px;line-height:1;
+    background:linear-gradient(180deg,#fff 8%,#E4C583 58%,#8a5f22 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .line{margin-top:20px;font-size:27px;font-weight:600;color:#F2F0EC;letter-spacing:-.1px}
+  .line b{color:#E4C583;font-weight:700}
+  .sub{margin-top:16px;display:flex;align-items:center;gap:13px;
+    font-family:ui-monospace,Consolas,monospace;font-size:14.5px;letter-spacing:.15em;
+    text-transform:uppercase;color:#9d9287}
+  .dot{width:5px;height:5px;border-radius:50%;background:#BC9457;flex:none}
+  .ar{position:absolute;right:104px;top:50%;transform:translateY(-58%);text-align:right;z-index:4}
+  .ar .t{font-family:"Reem Kufi",Tahoma,sans-serif;direction:rtl;font-size:34px;font-weight:700;
+    background:linear-gradient(180deg,#fff,#E4C583 60%,#8a5f22);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .ar .s{margin-top:10px;font-family:"Reem Kufi",Tahoma,sans-serif;direction:rtl;
+    font-size:19px;color:#BC9457;letter-spacing:.02em}
+  /* winged sun — large, faint watermark BEHIND the text (z-index 1).
+     Keeps brand presence with zero collision, and stays clear of the
+     profile-photo zone on the lower left. */
+  .mark{position:absolute;right:150px;top:50%;transform:translateY(-52%);z-index:1;opacity:.13}
+</style></head>
+<body>
+<div class="banner">
+  <div class="grid"></div><div class="hairline"></div>
+
+  <svg class="mark" width="330" height="330" viewBox="0 0 32 32">
+    <g stroke="#BC9457" stroke-width="1.15" stroke-linecap="round" opacity=".95">
+      <line x1="19.5" y1="16" x2="30" y2="9"/><line x1="19.5" y1="16" x2="30.5" y2="13.5"/><line x1="19.5" y1="16" x2="29" y2="17.5"/>
+      <line x1="12.5" y1="16" x2="2" y2="9"/><line x1="12.5" y1="16" x2="1.5" y2="13.5"/><line x1="12.5" y1="16" x2="3" y2="17.5"/>
+    </g>
+    <circle cx="16" cy="15.5" r="5.6" fill="#F6D68B" stroke="#B67B1E" stroke-width=".7"/>
+    <circle cx="16" cy="15.5" r="8.6" fill="none" stroke="#BC9457" stroke-width=".38" opacity=".5"/>
+  </svg>
+
+  <div class="content">
+    <div class="name">Khalid Sayed</div>
+    <div class="line">I build AI systems that <b>refuse to publish unsourced claims</b></div>
+    <div class="sub"><span>Founder — The Egyptian Awareness Library</span><span class="dot"></span><span>Next.js · TypeScript · Multi-Agent AI</span></div>
+  </div>
+
+  <div class="ar">
+    <div class="t">المكتبة المصرية للوعي</div>
+    <div class="s">الدليل قبل التصديق</div>
+  </div>
+</div>
+</body></html>
