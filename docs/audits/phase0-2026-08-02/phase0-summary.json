@@ -38,9 +38,9 @@
     }
   },
   "sourceFetchTotals": {
-    "requested": 93,
-    "saved": 39,
-    "blocked": 54
+    "requested": 100,
+    "saved": 42,
+    "blocked": 58
   },
   "inventoryCompleteness": {
     "complete": false,
@@ -59,11 +59,13 @@
     },
     "motazenStatisticsScope": {
       "allClaimsInventoried": 130,
-      "statisticalClaims": 41,
+      "explicitDecisions": 130,
+      "broadCandidates": 46,
+      "statisticalClaims": 47,
       "verdicts": {
         "PASS": 0,
         "FAIL": 0,
-        "BLOCKED": 41
+        "BLOCKED": 47
       }
     },
     "contactsProvenance": {
@@ -150,6 +152,7 @@
     "mood-antidepressants: BLOCKED — At least one cited source was inaccessible.",
     "mood-efficacy-contested: BLOCKED — At least one cited source was inaccessible.",
     "mood-regional: BLOCKED — At least one cited source was inaccessible.",
+    "anx-subtypes: BLOCKED — At least one cited source was inaccessible.",
     "anx-benzo-caution: BLOCKED — At least one cited source was inaccessible.",
     "anx-help-exists: BLOCKED — At least one cited source was inaccessible.",
     "anx-how-strong-contested: BLOCKED — At least one cited source was inaccessible.",
@@ -168,6 +171,7 @@
     "p0-bps-frame: BLOCKED — At least one cited source was inaccessible.",
     "p0-bps-contested: BLOCKED — At least one cited source was inaccessible.",
     "skill-breathing: BLOCKED — At least one cited source was inaccessible.",
+    "nav-stigma-barrier: BLOCKED — At least one cited source was inaccessible.",
     "bz2-serotonin-simple-story-debunked: BLOCKED — At least one cited source was inaccessible.",
     "bz2-serotonin-role-contested: BLOCKED — At least one cited source was inaccessible.",
     "bz3-top-ten-burden: BLOCKED — At least one cited source was inaccessible.",
@@ -181,12 +185,16 @@
     "bz5-study-vs-know: BLOCKED — At least one cited source was inaccessible.",
     "bz5-replication-crisis: BLOCKED — At least one cited source was inaccessible.",
     "bz5-crisis-overstated: BLOCKED — At least one cited source was inaccessible.",
+    "bz5-stigma-paradox: BLOCKED — At least one cited source was inaccessible.",
     "bz6-overmedicalizing-grief-contested: BLOCKED — At least one cited source was inaccessible.",
     "bz6-definition-of-disorder-unsettled: BLOCKED — At least one cited source was inaccessible.",
     "bz7-categories-are-human-decisions: BLOCKED — At least one cited source was inaccessible.",
+    "bipolar-basics: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
     "burnout-is-real: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
     "grief-vs-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
     "postpartum-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "addiction-is-illness: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "adult-adhd: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
     "Motazen matrix postpartum-depression: FAIL — status \"pending_clinician_review\" is outside established|contested|debunked|unknown.",
     "Motazen matrix addiction-is-illness: FAIL — status \"grounded\" is outside established|contested|debunked|unknown.",
     "Motazen matrix seasonal-affective: FAIL — status \"verified\" is outside established|contested|debunked|unknown.",

@@ -13,9 +13,9 @@
 
 ## Evidence totals
 
-- Source fetches: 93 requested; 39 saved; 54 blocked.
+- Source fetches: 100 requested; 42 saved; 58 blocked.
 - Mostaed: 14 audited; {"PASS":0,"FAIL":0,"BLOCKED":14}.
-- Motazen: all 130 inventoried; 41 statistical; {"PASS":0,"FAIL":0,"BLOCKED":41}.
+- Motazen: all 130 inventoried; 47 statistical; {"PASS":0,"FAIL":0,"BLOCKED":47}.
 - Contacts: 1 inventoried; {"PASS":1,"FAIL":0,"BLOCKED":0}.
 - Matrices: Mostaed 40 cells/119 cards; Motazen 52 cells/124 classified claims plus 6 invalid-status claims; Aman 24 rows; Hoqoqi 22 rows.
 
@@ -45,6 +45,7 @@
 - mood-antidepressants: BLOCKED — At least one cited source was inaccessible.
 - mood-efficacy-contested: BLOCKED — At least one cited source was inaccessible.
 - mood-regional: BLOCKED — At least one cited source was inaccessible.
+- anx-subtypes: BLOCKED — At least one cited source was inaccessible.
 - anx-benzo-caution: BLOCKED — At least one cited source was inaccessible.
 - anx-help-exists: BLOCKED — At least one cited source was inaccessible.
 - anx-how-strong-contested: BLOCKED — At least one cited source was inaccessible.
@@ -63,6 +64,7 @@
 - p0-bps-frame: BLOCKED — At least one cited source was inaccessible.
 - p0-bps-contested: BLOCKED — At least one cited source was inaccessible.
 - skill-breathing: BLOCKED — At least one cited source was inaccessible.
+- nav-stigma-barrier: BLOCKED — At least one cited source was inaccessible.
 - bz2-serotonin-simple-story-debunked: BLOCKED — At least one cited source was inaccessible.
 - bz2-serotonin-role-contested: BLOCKED — At least one cited source was inaccessible.
 - bz3-top-ten-burden: BLOCKED — At least one cited source was inaccessible.
@@ -76,12 +78,16 @@
 - bz5-study-vs-know: BLOCKED — At least one cited source was inaccessible.
 - bz5-replication-crisis: BLOCKED — At least one cited source was inaccessible.
 - bz5-crisis-overstated: BLOCKED — At least one cited source was inaccessible.
+- bz5-stigma-paradox: BLOCKED — At least one cited source was inaccessible.
 - bz6-overmedicalizing-grief-contested: BLOCKED — At least one cited source was inaccessible.
 - bz6-definition-of-disorder-unsettled: BLOCKED — At least one cited source was inaccessible.
 - bz7-categories-are-human-decisions: BLOCKED — At least one cited source was inaccessible.
+- bipolar-basics: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - burnout-is-real: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - grief-vs-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - postpartum-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
+- addiction-is-illness: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
+- adult-adhd: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - Motazen matrix postpartum-depression: FAIL — status "pending_clinician_review" is outside established|contested|debunked|unknown.
 - Motazen matrix addiction-is-illness: FAIL — status "grounded" is outside established|contested|debunked|unknown.
 - Motazen matrix seasonal-affective: FAIL — status "verified" is outside established|contested|debunked|unknown.

@@ -138,15 +138,23 @@ function assertSourceReferences(records, sources) {
 function detectStatisticalQuantities(text) {
   const value = String(text);
   const digit = '[0-9٠-٩۰-۹]';
+  const number = `${digit}+(?:[.,٫]${digit}+)*`;
   const candidates = [];
   const patterns = [
-    new RegExp(`${digit}+(?:[.,٫]${digit}+)?\\s*(?:%|٪|percent(?:age)?)`, 'giu'),
-    new RegExp(`${digit}+(?:[.,٫]${digit}+)?\\s*[:/]\\s*${digit}+(?:[.,٫]${digit}+)?`, 'gu'),
-    /\b(?:one[- ]half|half|one[- ]third|a third|one[- ]quarter|a quarter|two[- ]thirds|three[- ]quarters)\b/giu,
-    /(?:نصف|النصف|ثلث|الثلث|ربع|الربع|تلت|التلت)(?![\u0600-\u06ff])/gu,
-    new RegExp(`(?<!${digit})${digit}+(?:[.,٫]${digit}+)?(?!${digit})`, 'gu'),
-    /\b(?:one|two|three|four|five|six|seven|eight|nine|ten|hundred|thousand|million|billion)\b(?=\s+(?:people|persons|participants|patients|adults|children|cases|respondents|workers|women|men|studies|times|percent))/giu,
-    /(?:واحد|واحدة|اتنين|اثنين|اثنان|ثلاثة|تلاتة|أربعة|اربعة|خمسة|ستة|سبعة|ثمانية|تمانية|تسعة|عشرة|مئة|مائة|ألف|مليون|مليار)(?=\s+(?:شخص|أشخاص|مشارك|مشاركين|مريض|مرضى|دراسة|دراسات|مرة|مرات|في المئة|بالمئة|من كل))/gu,
+    new RegExp(`${number}\\s*(?:%|٪|percent(?:age)?)`, 'giu'),
+    new RegExp(`${number}\\s*[:/]\\s*${number}`, 'gu'),
+    new RegExp(`\\b(?:more\\s+than\\s+|over\\s+|under\\s+|less\\s+than\\s+|at\\s+least\\s+|about\\s+|approximately\\s+|~\\s*)?${number}\\s*\\+?\\s*(?:(?:hundred|thousand|million|billion)s?\\s+)?(?:people|persons|participants|patients|adults|children|cases|respondents|workers|women|men|studies|trials|disorders|reviews|years?|months?|weeks?|days?|hours?|minutes?|times?)\\b`, 'giu'),
+    new RegExp(`(?:أكتر\\s+من\\s+|أكثر\\s+من\\s+|أقل\\s+من\\s+|حوالي\\s+|نحو\\s+|قرابة\\s+)?${number}\\s*\\+?\\s*(?:(?:ألف|آلاف|مليون|ملايين|مليار|مليارات)\\s+)?(?:شخص|أشخاص|مشارك|مشاركين|مشاركاً|مريض|مرضى|دراسة|دراسات|تجربة|تجارب|اضطراب|اضطرابات|مراجعة|مراجعات|سنة|سنوات|شهر|شهور|أسبوع|أسابيع|يوم|أيام|ساعة|ساعات|دقيقة|دقائق|مرة|مرات)`, 'gu'),
+    /\b(?:one[- ]half|half|one[- ]third|a third|one[- ]quarter|a quarter|two[- ]thirds|three[- ]quarters)(?:\s+[a-z][a-z-]*){1,5}/giu,
+    /(?:نص|نصف|النصف|ثلث|الثلث|ربع|الربع|تلت|التلت)(?:\s+[\u0600-\u06ffًٌٍَُِّْٰـ]+){1,5}/gu,
+    /\b(?:one|two|three|four|five|six|seven|eight|nine|ten)(?:\s+[a-z][a-z-]*){0,3}\s+(?:people|persons|participants|patients|adults|children|cases|respondents|workers|women|men|studies|trials|disorders|reviews|years?|months?|weeks?|days?|hours?|minutes?|times)\b/giu,
+    /(?:واحد|واحدة|اتنين|اثنين|اثنان|ثلاثة|تلاتة|أربعة|اربعة|خمسة|ستة|سبعة|ثمانية|تمانية|تسعة|عشرة)(?:\s+[\u0600-\u06ffًٌٍَُِّْٰـ]+){0,3}\s+(?:شخص|أشخاص|مشارك|مشاركين|مريض|مرضى|دراسة|دراسات|تجربة|تجارب|اضطراب|اضطرابات|مراجعة|مراجعات|سنة|سنوات|شهر|شهور|أسبوع|أسابيع|يوم|أيام|ساعة|ساعات|دقيقة|دقائق|مرة|مرات)/gu,
+    /(?:مراجعتان|مراجعتين|مراجعتَيْن)(?:\s+[\u0600-\u06ffًٌٍَُِّْٰـ]+){0,3}/gu,
+    /\b(?:hundreds|thousands|millions|billions)\b/giu,
+    /(?:مئات|آلاف|ملايين|مليارات)(?![\u0600-\u06ff])/gu,
+    /\b(?:one|two|three|four|five|six|seven|eight|nine|ten)\b(?=\s*[:：])/giu,
+    /(?:واحد|واحدة|اتنين|اثنين|اثنان|ثلاثة|تلاتة|أربعة|اربعة|خمسة|ستة|سبعة|ثمانية|تمانية|تسعة|عشرة)(?=\s*[:：])/gu,
+    new RegExp(`(?<!${digit})${number}(?!${digit})`, 'gu'),
   ];
   patterns.forEach((pattern, priority) => {
     for (const match of value.matchAll(pattern)) candidates.push({ start: match.index, end: match.index + match[0].length, text: match[0].trim(), priority });
@@ -155,8 +163,54 @@ function detectStatisticalQuantities(text) {
   for (const candidate of candidates.sort((a, b) => a.priority - b.priority || a.start - b.start || b.end - a.end)) {
     if (!accepted.some((item) => candidate.start < item.end && candidate.end > item.start)) accepted.push(candidate);
   }
-  const quantities = accepted.sort((a, b) => a.start - b.start).map((item) => item.text);
-  return { hasStatistic: quantities.length > 0, quantities };
+  const ordered = accepted.sort((a, b) => a.start - b.start);
+  const sentenceFor = (item) => {
+    let start = item.start;
+    while (start > 0 && !/[.!?؟\n]/u.test(value[start - 1])) start -= 1;
+    let end = item.end;
+    while (end < value.length && !/[.!?؟\n]/u.test(value[end])) end += 1;
+    if (end < value.length && value[end] !== '\n') end += 1;
+    return value.slice(start, end).trim();
+  };
+  const quantities = ordered.map(sentenceFor).filter((quantity, index, all) => all.indexOf(quantity) === index);
+  return { hasStatistic: quantities.length > 0, quantities, markers: ordered.map((item) => item.text) };
+}
+
+function scanBroadQuantitativeCandidates(text) {
+  const value = String(text);
+  const patterns = [
+    /[0-9٠-٩۰-۹]+(?:[.,٫][0-9٠-٩۰-۹]+)*(?:\s*(?:%|٪|\+))?/gu,
+    /\b(?:zero|one|two|three|four|five|six|seven|eight|nine|ten|dozen|dozens)(?:\s+[a-z][a-z-]*){0,4}\s+(?:people|persons|participants|patients|adults|children|cases|respondents|workers|women|men|studies|trials|disorders|reviews|years?|months?|weeks?|days?|hours?|minutes?|times?)\b/giu,
+    /\b(?:score|scores) of\b|\b(?:hundreds|thousands|millions|billions|half|third|quarter|percent|percentage|ratio|odds|fold)\b/giu,
+    /(?:صفر|واحد|واحدة|اتنين|اثنين|اثنان|ثلاثة|تلاتة|أربعة|اربعة|خمسة|ستة|سبعة|ثمانية|تمانية|تسعة|عشرة|دستة|عشرات)(?:\s+[\u0600-\u06ffًٌٍَُِّْٰـ]+){0,4}\s+(?:شخص|أشخاص|مشارك|مشاركين|مريض|مرضى|دراسة|دراسات|تجربة|تجارب|اضطراب|اضطرابات|مراجعة|مراجعات|سنة|سنوات|شهر|شهور|أسبوع|أسابيع|يوم|أيام|ساعة|ساعات|دقيقة|دقائق|مرة|مرات)|(?:مئات|آلاف|ملايين|مليارات|نص|نصف|ثلث|ربع|بالمئة|في المئة|أضعاف|مراجعتان|مراجعتين)(?![\u0600-\u06ff])/gu,
+  ];
+  const candidates = patterns.flatMap((pattern) => [...value.matchAll(pattern)].map((match) => match[0]));
+  return { hasCandidate: candidates.length > 0, candidates: [...new Set(candidates)] };
+}
+
+function validateStatisticalDecisionCompleteness(claims, decisionRecords) {
+  const errors = [];
+  const recordsById = new Map();
+  for (const record of decisionRecords) {
+    if (recordsById.has(record.id)) errors.push(`Motazen duplicate audit decision record: ${record.id}`);
+    else recordsById.set(record.id, record);
+  }
+  for (const claim of claims) {
+    const record = recordsById.get(claim.id);
+    if (!record) {
+      errors.push(`Motazen audit decision missing: ${claim.id}`);
+      continue;
+    }
+    if (!['statistical', 'not-statistical'].includes(record.decision)) {
+      errors.push(`Motazen audit decision missing or undecided: ${claim.id}`);
+      continue;
+    }
+    const claimText = `${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`;
+    if (scanBroadQuantitativeCandidates(claimText).hasCandidate && record.decision !== 'statistical') {
+      errors.push(`Motazen broad quantitative candidate not marked statistical: ${claim.id}`);
+    }
+  }
+  return { complete: errors.length === 0, errors };
 }
 
 function extractContactNumbers(record) {
@@ -400,7 +454,7 @@ async function writeOutputs() {
   const statisticalClaims = motazen.records.filter((claim) => detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`).hasStatistic);
   const allClaimsInventory = motazen.records.map((claim) => {
     const detected = detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`);
-    return { id: claim.id, domain: claim.domain, status: claim.status, statistical: detected.hasStatistic ? 'yes' : 'no', quantities: detected.quantities.join(' ') };
+    return { id: claim.id, domain: claim.domain, status: claim.status, decision: detected.hasStatistic ? 'statistical' : 'not-statistical', quantities: detected.quantities.join(' | ') };
   });
   const contactItems = [['aman', aman], ['hoqoqi', hoqoqi]].flatMap(([project, data]) => data.records.flatMap((card) => extractContactNumbers(card).map((contact) => ({ project, card, contact, refs: sourceRefs(card, data.sources) }))));
   const auditUrls = [...mostaedScope.flatMap((card) => sourceRefs(card, mostaed.sources).filter((source) => /medlineplus\.gov\/ency\//i.test(source.url)).map((source) => source.url)), ...statisticalClaims.flatMap((claim) => sourceRefs(claim, motazen.sources).map((source) => source.url)), ...contactItems.flatMap((item) => item.refs.map((source) => source.url))];
@@ -419,7 +473,7 @@ async function writeOutputs() {
   const motazenAudit = statisticalClaims.map((claim) => {
     const detected = detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`);
     const refs = sourceStatus(captures, sourceRefs(claim, motazen.sources));
-    const excerpts = refs.map((source) => ({ id: source.id, excerpt: source.capture?.status === 'saved' ? excerptAround(source.capture.text, detected.quantities) : '(Source inaccessible.)' }));
+    const excerpts = refs.map((source) => ({ id: source.id, excerpt: source.capture?.status === 'saved' ? excerptAround(source.capture.text, detected.markers) : '(Source inaccessible.)' }));
     const claimText = `${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`;
     const reason = refs.some((source) => source.capture?.status !== 'saved') ? 'At least one cited source was inaccessible.' : 'Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.';
     return { id: claim.id, quantities: detected.quantities, claim: claimText, refs, excerpts, verdict: 'BLOCKED', complete: Boolean(claim.id && detected.quantities.length && claimText.trim() && refs.length && reason), reason };
@@ -442,7 +496,7 @@ async function writeOutputs() {
 
   const linesForSource = (source) => `${source.id} — ${source.url} — ${source.capture?.status === 'saved' ? `HTTP 200; ${source.capture.decodedLength} chars; SHA256 ${source.capture.sha256}; saved corpus/${source.capture.filename}; final ${source.capture.finalUrl}; retrieved ${source.capture.retrievedAt}` : `BLOCKED: ${source.capture?.reason ?? 'no capture'}`}`;
   const mostaedMd = ['# Mostaed dropped-exceptions audit', '', `Observed qualifying inventory: ${mostaedAudit.length} cards (the canonical current data, not the older ~33 estimate).`, '', ...mostaedAudit.flatMap((record) => [`## ${record.id} — ${record.title}`, '', `- Level: L${record.level}`, `- Sources: ${record.refs.map(linesForSource).join('; ')}`, `- Source qualifiers/exceptions found automatically: ${record.qualifiers.length ? record.qualifiers.join(' … ') : '(none located automatically; this is not proof none exist)'}`, `- Card text checked: ${record.lines.join(' | ')}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
-  const motazenMd = ['# Motazen statistics-scope audit', '', `All ${motazen.records.length} claims were inventoried; ${motazenAudit.length} contain detected statistical quantities in claim text.`, '', ...motazenAudit.flatMap((record) => [`## ${record.id}`, '', `- Exact detected quantity/scope in claim: ${record.quantities.join(', ')}`, `- Claim text: ${record.claim.replace(/\n/g, ' / ')}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Supporting excerpts with surrounding qualifiers: ${record.excerpts.map((item) => `${item.id}: ${item.excerpt}`).join(' … ') || '(none)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, '']), '## Complete 130-claim inventory', '', markdownTable(allClaimsInventory, ['id', 'domain', 'status', 'statistical', 'quantities']), ''].join('\n');
+  const motazenMd = ['# Motazen statistics-scope audit', '', `All ${motazen.records.length} claims have an explicit statistical/not-statistical audit decision; ${motazenAudit.length} are marked statistical.`, '', ...motazenAudit.flatMap((record) => [`## ${record.id}`, '', `- Exact detected quantity/scope in claim: ${record.quantities.join(' | ')}`, `- Claim text: ${record.claim.replace(/\n/g, ' / ')}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Supporting excerpts with surrounding qualifiers: ${record.excerpts.map((item) => `${item.id}: ${item.excerpt}`).join(' … ') || '(none)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, '']), '## Complete 130-claim decision inventory', '', markdownTable(allClaimsInventory, ['id', 'domain', 'status', 'decision', 'quantities']), ''].join('\n');
   const contactsMd = ['# Aman and Hoqoqi contact provenance audit', '', `Inventory: ${contactsAudit.length} rendered/actionable contact numbers.`, '', ...contactsAudit.flatMap((record) => [`## ${record.project}/${record.cardId} — ${record.number}`, '', `- Field path: ${record.fieldPath}`, `- Authority: ${record.authority}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Exact-number excerpt: ${record.matches.map((source) => excerptAround(source.capture.text, [record.number])).join(' … ') || '(not found)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
 
   const coverageMd = (title, rows, columns) => `# ${title}\n\n${markdownTable(rows, columns)}\n`;
@@ -477,7 +531,7 @@ async function writeOutputs() {
   const contactKey = (project, cardId, fieldPath, number) => `${project}/${cardId}/${fieldPath}/${number}`;
   const mostaedDomains = [...new Set(mostaed.records.map((card) => card.domain ?? '(missing)'))];
   const motazenDomains = [...new Set(motazen.records.map((claim) => claim.domain ?? '(missing)'))];
-  const inventoryCompleteness = validateRequiredInventories([
+  const structuralInventoryCompleteness = validateRequiredInventories([
     { name: 'Mostaed audit cards', expected: mostaedScope.map((card) => card.id), actual: mostaedAudit.map((record) => record.id) },
     { name: 'Motazen 130-claim inventory', expected: motazen.records.map((claim) => claim.id), actual: allClaimsInventory.map((record) => record.id) },
     { name: 'Motazen statistical subset', expected: statisticalClaims.map((claim) => claim.id), actual: motazenAudit.map((record) => record.id) },
@@ -488,6 +542,11 @@ async function writeOutputs() {
     { name: 'Aman scenario rows', expected: AMAN_SCENARIOS.map(([id]) => id), actual: amanCoverage.map((row) => row.id) },
     { name: 'Hoqoqi scenario rows', expected: HOQOQI_SCENARIOS.map(([id]) => id), actual: hoqoqiCoverage.map((row) => row.id) },
   ]);
+  const statisticalDecisionCompleteness = validateStatisticalDecisionCompleteness(motazen.records, allClaimsInventory);
+  const inventoryCompleteness = {
+    complete: structuralInventoryCompleteness.complete && statisticalDecisionCompleteness.complete,
+    errors: [...structuralInventoryCompleteness.errors, ...statisticalDecisionCompleteness.errors],
+  };
   const matricesComplete = mostaedCoverage.length > 0
     && mostaedCoverage.reduce((sum, row) => sum + row.count, 0) === mostaed.records.length
     && motazenCoverage.length > 0
@@ -501,7 +560,7 @@ async function writeOutputs() {
     ...motazenUnclassified.map((claim) => `Motazen matrix ${claim.id}: FAIL — status ${JSON.stringify(claim.status)} is outside established|contested|debunked|unknown.`),
     ...inventoryCompleteness.errors.map((error) => `Inventory completeness: FAIL — ${error}`),
   ];
-  const summary = { auditDate: AUDIT_DATE, gate: gate.clear ? 'CLEAR' : 'BLOCKED', phase1Started: false, commands: ['node --test tools/phase0-audit.test.mjs', 'node tools/phase0-audit.mjs', 'git diff --check'], inputs: inputIntegrity, sourceFetchTotals: fetchTotals, inventoryCompleteness, audits: { mostaedDroppedExceptions: { inventory: mostaedAudit.length, verdicts: verdictTotals(mostaedAudit) }, motazenStatisticsScope: { allClaimsInventoried: motazen.records.length, statisticalClaims: motazenAudit.length, verdicts: verdictTotals(motazenAudit) }, contactsProvenance: { inventory: contactsAudit.length, verdicts: verdictTotals(contactsAudit) } }, matrices: { complete: matricesComplete, mostaed: { cells: mostaedCoverage.length, total: mostaedCoverage.reduce((sum, row) => sum + row.count, 0) }, motazen: { cells: motazenCoverage.length, classifiedTotal: motazenCoverage.reduce((sum, row) => sum + row.count, 0), canonicalTotal: motazen.records.length, unclassified: motazenUnclassified.map((claim) => ({ id: claim.id, status: claim.status })) }, aman: { rows: amanCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, amanCoverage.filter((row) => row.status === status).length])) }, hoqoqi: { rows: hoqoqiCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, hoqoqiCoverage.filter((row) => row.status === status).length])) } }, blockers };
+  const summary = { auditDate: AUDIT_DATE, gate: gate.clear ? 'CLEAR' : 'BLOCKED', phase1Started: false, commands: ['node --test tools/phase0-audit.test.mjs', 'node tools/phase0-audit.mjs', 'git diff --check'], inputs: inputIntegrity, sourceFetchTotals: fetchTotals, inventoryCompleteness, audits: { mostaedDroppedExceptions: { inventory: mostaedAudit.length, verdicts: verdictTotals(mostaedAudit) }, motazenStatisticsScope: { allClaimsInventoried: motazen.records.length, explicitDecisions: allClaimsInventory.length, broadCandidates: motazen.records.filter((claim) => scanBroadQuantitativeCandidates(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`).hasCandidate).length, statisticalClaims: motazenAudit.length, verdicts: verdictTotals(motazenAudit) }, contactsProvenance: { inventory: contactsAudit.length, verdicts: verdictTotals(contactsAudit) } }, matrices: { complete: matricesComplete, mostaed: { cells: mostaedCoverage.length, total: mostaedCoverage.reduce((sum, row) => sum + row.count, 0) }, motazen: { cells: motazenCoverage.length, classifiedTotal: motazenCoverage.reduce((sum, row) => sum + row.count, 0), canonicalTotal: motazen.records.length, unclassified: motazenUnclassified.map((claim) => ({ id: claim.id, status: claim.status })) }, aman: { rows: amanCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, amanCoverage.filter((row) => row.status === status).length])) }, hoqoqi: { rows: hoqoqiCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, hoqoqiCoverage.filter((row) => row.status === status).length])) } }, blockers };
   const corpusIndex = sortCorpusIndex([...captures.entries()].map(([url, capture]) => ({ url, ...capture, text: undefined })));
   await writeFile(path.join(CORPUS, 'index.json'), `${JSON.stringify(corpusIndex, null, 2)}\n`);
   await writeFile(path.join(OUTPUT, 'phase0-summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
@@ -511,7 +570,8 @@ async function writeOutputs() {
 }
 
 const audit = {
-  loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, extractContactNumbers,
+  loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, scanBroadQuantitativeCandidates,
+  validateStatisticalDecisionCompleteness, extractContactNumbers,
   sourceContainsExactNumber, isScenarioCard, toCsv, validateRequiredInventories, evaluateGate,
   validateSourceDocument, hasScenarioEvidence, sortCorpusIndex, loadPriorCapture, fetchAndCapture, writeOutputs,
 };

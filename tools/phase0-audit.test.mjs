@@ -122,19 +122,59 @@ test('corpus capture is saved only after a successful probe and failed fetch nev
   assert.equal((await stat(path.join(directory, 'authority.html'))).mtimeMs, before);
 });
 
-test('reports exact fractional and Arabic decimal quantities without overlapping partial tokens', () => {
+test('reports sentence-level fractional and Arabic decimal scope without overlapping partial tokens', () => {
   assert.deepEqual(
     audit.detectStatisticalQuantities('The replicated effects were about half the original magnitude.').quantities,
-    ['half'],
+    ['The replicated effects were about half the original magnitude.'],
   );
   assert.deepEqual(
     audit.detectStatisticalQuantities('النسبة كانت ٣٫٥٪، وحوالي نصف العينة.').quantities,
-    ['٣٫٥٪', 'نصف'],
+    ['النسبة كانت ٣٫٥٪، وحوالي نصف العينة.'],
   );
   assert.deepEqual(
     audit.detectStatisticalQuantities('The ratio was 1:4 and 35%.').quantities,
-    ['1:4', '35%'],
+    ['The ratio was 1:4 and 35%.'],
   );
+});
+
+test('classifies plural magnitudes, counted disorders, and counted reviews as statistical', () => {
+  const samples = [
+    'Stigma is a global public health issue affecting millions.',
+    'Reviews describe five disorders.',
+    'Two independent meta-analytic reviews found the same paradox.',
+    'الوصمة بتأثّر على ملايين.',
+    'المراجعات بتوصف خمسة اضطرابات.',
+    'مراجعتين تحليليتين مستقلتين لقوا نفس المفارقة.',
+  ];
+  for (const sample of samples) {
+    assert.equal(audit.detectStatisticalQuantities(sample).hasStatistic, true, sample);
+  }
+});
+
+test('preserves exact English and Arabic quantity-and-scope language', () => {
+  const english = audit.detectStatisticalQuantities('The synthesis included 522 trials and 116,000+ participants.');
+  assert.deepEqual(english.quantities, ['The synthesis included 522 trials and 116,000+ participants.']);
+
+  const arabic = audit.detectStatisticalQuantities('التحليل شمل ٥٢٢ تجربة، وأكتر من ١١٦ ألف مشارك، وكان الأثر نص حجمه الأصلي تقريباً.');
+  assert.deepEqual(arabic.quantities, ['التحليل شمل ٥٢٢ تجربة، وأكتر من ١١٦ ألف مشارك، وكان الأثر نص حجمه الأصلي تقريباً.']);
+});
+
+test('independent broad quantitative scan blocks a primary-detector miss', () => {
+  const claims = [
+    { id: 'ordinary', claim_ar: 'وصف نوعي بلا كمية.', claim_en: 'A qualitative description.' },
+    { id: 'broad-only', claim_ar: '', claim_en: 'A score of participants reported improvement.' },
+  ];
+  assert.equal(audit.detectStatisticalQuantities(claims[1].claim_en).hasStatistic, false);
+  assert.equal(audit.scanBroadQuantitativeCandidates(claims[1].claim_en).hasCandidate, true);
+
+  const completeness = audit.validateStatisticalDecisionCompleteness(claims, [
+    { id: 'ordinary', decision: 'not-statistical' },
+    { id: 'broad-only', decision: 'not-statistical' },
+  ]);
+  assert.equal(completeness.complete, false);
+  assert.deepEqual(completeness.errors, [
+    'Motazen broad quantitative candidate not marked statistical: broad-only',
+  ]);
 });
 
 test('rejects a long generic JavaScript application shell as non-substantive source evidence', async () => {
