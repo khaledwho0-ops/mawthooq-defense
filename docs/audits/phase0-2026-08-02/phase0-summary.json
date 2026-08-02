@@ -1,0 +1,189 @@
+{
+  "auditDate": "2026-08-02",
+  "gate": "BLOCKED",
+  "phase1Started": false,
+  "commands": [
+    "node --test tools/phase0-audit.test.mjs",
+    "node tools/phase0-audit.mjs",
+    "git diff --check"
+  ],
+  "inputs": {
+    "mostaed": {
+      "countBefore": 119,
+      "countAfter": 119,
+      "sha256Before": "b6ccfa5c4df2767dad72430c7f9b0f3668242c4dd054b477caf4054a9a9913ca",
+      "sha256After": "b6ccfa5c4df2767dad72430c7f9b0f3668242c4dd054b477caf4054a9a9913ca",
+      "bytesUnchanged": true
+    },
+    "motazen": {
+      "countBefore": 130,
+      "countAfter": 130,
+      "sha256Before": "0785c79746b050b3412b7fb38ab52c19748919d360e834ade3e12e620eba5822",
+      "sha256After": "0785c79746b050b3412b7fb38ab52c19748919d360e834ade3e12e620eba5822",
+      "bytesUnchanged": true
+    },
+    "aman": {
+      "countBefore": 10,
+      "countAfter": 10,
+      "sha256Before": "49e0d976e71fba3c4c090acf5b58156a982cdfa2a17b7c8cd07f73b310177444",
+      "sha256After": "49e0d976e71fba3c4c090acf5b58156a982cdfa2a17b7c8cd07f73b310177444",
+      "bytesUnchanged": true
+    },
+    "hoqoqi": {
+      "countBefore": 15,
+      "countAfter": 15,
+      "sha256Before": "8f1ed58a2e8c596a093213b1b70ba91efb7ae5eea8cb2616ed23ff53f583f4be",
+      "sha256After": "8f1ed58a2e8c596a093213b1b70ba91efb7ae5eea8cb2616ed23ff53f583f4be",
+      "bytesUnchanged": true
+    }
+  },
+  "sourceFetchTotals": {
+    "requested": 92,
+    "saved": 88,
+    "blocked": 4
+  },
+  "audits": {
+    "mostaedDroppedExceptions": {
+      "inventory": 14,
+      "verdicts": {
+        "PASS": 0,
+        "FAIL": 0,
+        "BLOCKED": 14
+      }
+    },
+    "motazenStatisticsScope": {
+      "allClaimsInventoried": 130,
+      "statisticalClaims": 39,
+      "verdicts": {
+        "PASS": 0,
+        "FAIL": 0,
+        "BLOCKED": 39
+      }
+    },
+    "contactsProvenance": {
+      "inventory": 1,
+      "verdicts": {
+        "PASS": 1,
+        "FAIL": 0,
+        "BLOCKED": 0
+      }
+    }
+  },
+  "matrices": {
+    "complete": false,
+    "mostaed": {
+      "cells": 40,
+      "total": 119
+    },
+    "motazen": {
+      "cells": 52,
+      "classifiedTotal": 124,
+      "canonicalTotal": 130,
+      "unclassified": [
+        {
+          "id": "postpartum-depression",
+          "status": "pending_clinician_review"
+        },
+        {
+          "id": "addiction-is-illness",
+          "status": "grounded"
+        },
+        {
+          "id": "seasonal-affective",
+          "status": "verified"
+        },
+        {
+          "id": "psychosis-recovery",
+          "status": "grounded"
+        },
+        {
+          "id": "adult-adhd",
+          "status": "needs_review"
+        },
+        {
+          "id": "loneliness-health",
+          "status": "needs_review"
+        }
+      ]
+    },
+    "aman": {
+      "rows": 24,
+      "statuses": {
+        "built": 0,
+        "source-found": 19,
+        "no-source": 4,
+        "not-built-unprobed": 1
+      }
+    },
+    "hoqoqi": {
+      "rows": 22,
+      "statuses": {
+        "built": 0,
+        "source-found": 22,
+        "no-source": 0,
+        "not-built-unprobed": 0
+      }
+    }
+  },
+  "blockers": [
+    "choking-adult: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "drowning: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "burn: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "electric-shock: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "infant-choking: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "heat-stroke: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "head-injury: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "shock: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "chemical-burn: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "breathing-difficulty: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "dislocation: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "genital-injury: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "skull-fracture: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "unconsciousness: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.",
+    "mood-recurrence: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "mood-antidepressants: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "mood-efficacy-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "mood-regional: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "anx-benzo-caution: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "anx-help-exists: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "anx-how-strong-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "anx-why-unknown: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "sleep-disruptors-caffeine-shift: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "sleep-melatonin-overuse: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "sleep-insomnia-features: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "sleep-eight-hours-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "sleep-normal-vs-disorder: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "trauma-features-clusters: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "trauma-most-recover: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "adhd-real-valid: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "adhd-normal-vs-disorder: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "p0-languishing: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "p0-bps-frame: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "p0-bps-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "skill-breathing: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz2-serotonin-simple-story-debunked: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz2-serotonin-role-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz3-top-ten-burden: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz3-treatment-gap: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz3-true-magnitude-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz4-illusory-truth: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz4-anecdote-not-evidence: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz4-confirmation-bias-search: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz4-actuarial-vs-clinical: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz4-dunning-kruger: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz5-study-vs-know: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz5-crisis-overstated: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz6-overmedicalizing-grief-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz6-definition-of-disorder-unsettled: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "bz7-categories-are-human-decisions: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "burnout-is-real: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "grief-vs-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "postpartum-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.",
+    "Motazen matrix postpartum-depression: FAIL — status \"pending_clinician_review\" is outside established|contested|debunked|unknown.",
+    "Motazen matrix addiction-is-illness: FAIL — status \"grounded\" is outside established|contested|debunked|unknown.",
+    "Motazen matrix seasonal-affective: FAIL — status \"verified\" is outside established|contested|debunked|unknown.",
+    "Motazen matrix psychosis-recovery: FAIL — status \"grounded\" is outside established|contested|debunked|unknown.",
+    "Motazen matrix adult-adhd: FAIL — status \"needs_review\" is outside established|contested|debunked|unknown.",
+    "Motazen matrix loneliness-health: FAIL — status \"needs_review\" is outside established|contested|debunked|unknown."
+  ]
+}

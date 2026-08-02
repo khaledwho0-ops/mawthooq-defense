@@ -1,0 +1,26 @@
+# Hoqoqi PRD scenario inventory H1–H22
+
+| id | title | status | probe_url | probe_result |
+|---|---|---|---|---|
+| H1 | «اتقبض على أخويا — أعمل إيه في أول ٢٤ ساعة؟» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H2 | «البوليس عايز يفتش بيتي» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H3 | «حد اعتدى عليّ» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H4 | «اتحرشوا بيّا في الشارع» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H5 | «اتعرضت لتعذيب/إساءة في الاحتجاز» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H6 | «المدرسة بتضرب ابني» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H7 | «أبويا كبير وحد بياخد فلوسه» | source-found | https://www.who.int/news-room/fact-sheets/detail/abuse-of-older-people | 200; 105437 chars; sha256 0f01bb83b5c3e4d4902f2de13ac50fe27def6cde1260737381e86c254a1c646c |
+| H8 | «أختي جوزها بيضربها» | source-found | https://www.who.int/news-room/fact-sheets/detail/violence-against-women | 200; 118379 chars; sha256 312993313965451af185dbab7bc549437ce311d99c7770ef00a71cebb58d937e |
+| H9 | «ابني اتمنع من التعليم» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H10 | «أمي محتاجة علاج ورفضوا» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H11 | «مديري بيهددني بالفصل من غير سبب» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H12 | «مش بياخد أجري» | source-found | https://www.ilo.org/topics-and-sectors/wages | 200; 95051 chars; sha256 b9cbec2c167185566fc1552332882f9329a04aa67584da15f6250d6f904c6e0b |
+| H13 | «شغل خطر من غير أمان» | source-found | https://www.ilo.org/topics/safety-and-health-work | 200; 112682 chars; sha256 55b01fe26074cce7a1e112b80f9d600486d0cfb72fbdadd154e59ba4986a3fe2 |
+| H14 | «بيميّزوا ضدي في الشغل» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H15 | «المحل رفض يرجّع البضاعة المعيبة» | source-found | https://www.cpa.gov.eg/ | 200; 136330 chars; sha256 411b21351e96715920d80a37f3ff3145ecab2d8b1eb2ea36dd9496c7936327d1 |
+| H16 | «اتنصب عليّ» | source-found | https://consumer.ftc.gov/articles/what-do-if-you-were-scammed | 200; 492377 chars; sha256 5ef9ee9bfcfd28e466501066e1ef2a6b74ff18f752e25445ebef261b4d95810f |
+| H17 | «صاحب البيت عايز يطردني» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H18 | «منعوني من مكان عام» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H19 | «إيه حقوقي الأساسية أصلًا؟» | source-found | https://www.un.org/en/about-us/universal-declaration-of-human-rights | 200; 105687 chars; sha256 a716b51b2633ee50f8d126f58fe1c140d5a7c098a0b9f362cd4e9c5946fff7c2 |
+| H20 | «حقوقي كست» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H21 | «حقوقي كراجل» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |
+| H22 | «إزاي أعرف حقي حقيقي ولا حد بيضحك عليّا؟» | source-found | https://www.constituteproject.org/constitution/Egypt_2014 | 200; 320806 chars; sha256 1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8 |

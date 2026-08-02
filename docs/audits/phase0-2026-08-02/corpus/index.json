@@ -1,0 +1,920 @@
+[
+  {
+    "url": "https://consumer.ftc.gov/articles/what-do-data-breach",
+    "status": "blocked",
+    "httpStatus": null,
+    "decodedLength": 0,
+    "finalUrl": "https://consumer.ftc.gov/articles/what-do-data-breach",
+    "retrievedAt": "2026-08-02T14:16:54.383Z",
+    "reason": "fetch failed"
+  },
+  {
+    "url": "https://consumer.ftc.gov/consumer-alerts/2024/10/report-fraud-ftc-what-older-adults-need-know",
+    "status": "blocked",
+    "httpStatus": null,
+    "decodedLength": 0,
+    "finalUrl": "https://consumer.ftc.gov/consumer-alerts/2024/10/report-fraud-ftc-what-older-adults-need-know",
+    "retrievedAt": "2026-08-02T14:16:54.385Z",
+    "reason": "fetch failed"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 492377,
+    "finalUrl": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
+    "retrievedAt": "2026-08-02T14:12:34.196Z",
+    "sha256": "5ef9ee9bfcfd28e466501066e1ef2a6b74ff18f752e25445ebef261b4d95810f",
+    "filename": "consumer-ftc-gov-articles-what-do-if-you-were-scammed-bb355a9edf.html",
+    "preservedAfterFailedProbe": "fetch failed"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 497497,
+    "finalUrl": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
+    "retrievedAt": "2026-08-02T14:14:55.220Z",
+    "sha256": "27921891fcd32601f9035c30119e43ee2fcac584442e2d20d35725cdd0b4ff81",
+    "filename": "consumer-ftc-gov-articles-what-know-about-cryptocurrency-and-scams-319cd8df21.html",
+    "preservedAfterFailedProbe": "fetch failed"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/18235867",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/18235867",
+    "retrievedAt": "2026-08-02T14:16:54.821Z",
+    "sha256": "d72a54b509baece036c378dc1ddd927a2708f858d11d444ff8c1d7d61911d04f",
+    "filename": "europepmc-org-article-med-18235867-a2970056e3.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/12096700",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/12096700",
+    "retrievedAt": "2026-08-02T14:16:54.820Z",
+    "sha256": "563b0a04b759f94e09cc08c4619d4e7c9cebc4dd987f2134ae8a051497326b41",
+    "filename": "europepmc-org-article-med-12096700-d2bc4a96e8.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/25806940",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/25806940",
+    "retrievedAt": "2026-08-02T14:16:54.825Z",
+    "sha256": "9576fa8dca38a41c0ed16dc03401fce9e1071493b7e9810c012b6b339eb51f02",
+    "filename": "europepmc-org-article-med-25806940-5eb5b5a0bc.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/22294996",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/22294996",
+    "retrievedAt": "2026-08-02T14:16:54.824Z",
+    "sha256": "e4731f98fbde015cb9c491e6b88459aaf58fecbc82cbae35c7395002e028dbae",
+    "filename": "europepmc-org-article-med-22294996-a3c1370210.html"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/job-scams",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 494015,
+    "finalUrl": "https://consumer.ftc.gov/articles/job-scams",
+    "retrievedAt": "2026-08-02T14:16:54.382Z",
+    "sha256": "ad8f97ae9878877eb3d6595fe4915899c46160bdcfe557863771c8d346665de5",
+    "filename": "consumer-ftc-gov-articles-job-scams-7767c4e238.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/27189265",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/27189265",
+    "retrievedAt": "2026-08-02T14:16:55.140Z",
+    "sha256": "5a7d534a29e2fde9f942cca72079aaa86ef2ecf691970a1f31a5569674e948c5",
+    "filename": "europepmc-org-article-med-27189265-5a1c9699ca.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/26941311",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/26941311",
+    "retrievedAt": "2026-08-02T14:16:55.135Z",
+    "sha256": "86b917aecd47f4c4859b5bf873d005f6b79bbd4e0a3ec32e318a1b6af90eda0b",
+    "filename": "europepmc-org-article-med-26941311-73954dc9a8.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/28178949",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/28178949",
+    "retrievedAt": "2026-08-02T14:16:55.141Z",
+    "sha256": "8be4e7057f4a3bedc7e1689388f478814a3497baf8ce2f8e8ed7f916582ff1d6",
+    "filename": "europepmc-org-article-med-28178949-cc298bea8c.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/26315443",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/26315443",
+    "retrievedAt": "2026-08-02T14:16:55.130Z",
+    "sha256": "72ec1fa51cfe2eae5579b9417e004a2355c889391fec77c32e03de83ee8716a7",
+    "filename": "europepmc-org-article-med-26315443-ed4baea1b9.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/29451967",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/29451967",
+    "retrievedAt": "2026-08-02T14:16:55.270Z",
+    "sha256": "010a71acbb8b24105c1edfe76c23b7ca19c8ac1e0ee39184549a801f8c80098d",
+    "filename": "europepmc-org-article-med-29451967-3a5e0072c0.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/29477251",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/29477251",
+    "retrievedAt": "2026-08-02T14:16:55.275Z",
+    "sha256": "b9efbea61a9ff8c0180b82fe1cc69d8f24435cc6dc03166e497e508d39ba0ba5",
+    "filename": "europepmc-org-article-med-29477251-0ef989af2b.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/33549739",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/33549739",
+    "retrievedAt": "2026-08-02T14:16:55.277Z",
+    "sha256": "0893e7aef933f0782d2a2885a1ec312345a0ab13219b749c4b1ce4206ee75c1d",
+    "filename": "europepmc-org-article-med-33549739-ff4ba29ce5.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/33581801",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/33581801",
+    "retrievedAt": "2026-08-02T14:16:55.286Z",
+    "sha256": "e9b388b9c8063952321b40c572e7fed92098ea390591856bf988789516524005",
+    "filename": "europepmc-org-article-med-33581801-9870c748cb.html"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 484229,
+    "finalUrl": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers",
+    "retrievedAt": "2026-08-02T14:16:54.381Z",
+    "sha256": "7df537a88193c2078e19635806f471f1cc626d3dc693287fd8a44794348256a6",
+    "filename": "consumer-ftc-gov-articles-how-protect-your-phone-hackers-4ab4d49207.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/35026139",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/35026139",
+    "retrievedAt": "2026-08-02T14:16:55.362Z",
+    "sha256": "162a20d1d68abaad68de16159854f9828d848c1c310c405960dc2214235f3e40",
+    "filename": "europepmc-org-article-med-35026139-df7c2ea61a.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/36193171",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/36193171",
+    "retrievedAt": "2026-08-02T14:16:55.377Z",
+    "sha256": "5778ef891d7584ab758cf8374b67ee4e77e5bcabc1af6f8ce22adff7672c0464",
+    "filename": "europepmc-org-article-med-36193171-9a2c06200d.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/35854107",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/35854107",
+    "retrievedAt": "2026-08-02T14:16:55.372Z",
+    "sha256": "711173a568d8d5fec0d928e7c5cdadda7d9e93dd4ab25dec2610fc141d44c3f4",
+    "filename": "europepmc-org-article-med-35854107-d7fd2c287c.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/35401341",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/35401341",
+    "retrievedAt": "2026-08-02T14:16:55.371Z",
+    "sha256": "6aa863ad9dc231336272bc445b4a4103b6b857c0d51b9b4087a13b7cf0b5b71b",
+    "filename": "europepmc-org-article-med-35401341-537c5fdac3.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/28470168",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/28470168",
+    "retrievedAt": "2026-08-02T14:16:55.240Z",
+    "sha256": "77798ebf820523a9c528669aa91dbe29a4490253ba3757811af1e874bd5e877c",
+    "filename": "europepmc-org-article-med-28470168-bba6b37009.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/36938996",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/36938996",
+    "retrievedAt": "2026-08-02T14:16:55.455Z",
+    "sha256": "081c0bc1a5c3a8cec8b66bceec81662eefaf64fd56947ca5768eecd11377cadf",
+    "filename": "europepmc-org-article-med-36938996-78187c95f0.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/37681273",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/37681273",
+    "retrievedAt": "2026-08-02T14:16:55.475Z",
+    "sha256": "20313ff864488b8a618202a9752007cd4a502dc488051e22d3d93cf02275423f",
+    "filename": "europepmc-org-article-med-37681273-cb4a3872ba.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/37067677",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/37067677",
+    "retrievedAt": "2026-08-02T14:16:55.471Z",
+    "sha256": "29dcfaf9acc196c3f71acdd52243668a7a7d7e2110ca30fdc84bfb5d54ac3b6a",
+    "filename": "europepmc-org-article-med-37067677-a12c15a024.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/37974470",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/37974470",
+    "retrievedAt": "2026-08-02T14:16:55.489Z",
+    "sha256": "784f1efdb13b42010dc2c447c57c74e5b480856c268ee0ef89c5f5d72f32bf2a",
+    "filename": "europepmc-org-article-med-37974470-dbd4da1ccd.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/38952836",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/38952836",
+    "retrievedAt": "2026-08-02T14:16:55.533Z",
+    "sha256": "c968c73ba71ad30ef0640f2f137b1eb3cef9c8ce4c538d0d6f63a02a01daf1ad",
+    "filename": "europepmc-org-article-med-38952836-c3e4db5535.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/39070736",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/39070736",
+    "retrievedAt": "2026-08-02T14:16:55.564Z",
+    "sha256": "7db145c009732b0e51eef0e88eb9c47718e81e978c948c3a53b8760796ab9fdf",
+    "filename": "europepmc-org-article-med-39070736-3708f841d4.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/39363308",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/39363308",
+    "retrievedAt": "2026-08-02T14:16:55.574Z",
+    "sha256": "f9f2f7199af4ebea09bdb3ad91673a4979ea0e7f213c9a15a1330354fa701f00",
+    "filename": "europepmc-org-article-med-39363308-01903dcb63.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/39540077",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/39540077",
+    "retrievedAt": "2026-08-02T14:16:55.578Z",
+    "sha256": "1832645e332f8aae2a09bbb7b0e297a62ba99e5899cc24ee23fc1eff91e9e878",
+    "filename": "europepmc-org-article-med-39540077-fb08dc74ad.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/39607055",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/39607055",
+    "retrievedAt": "2026-08-02T14:16:55.598Z",
+    "sha256": "a2d69110cd249871a0dd0f8aa27009fa634d5cf2c5fd666786c94d4270a69214",
+    "filename": "europepmc-org-article-med-39607055-3785d27778.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/40127267",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/40127267",
+    "retrievedAt": "2026-08-02T14:16:55.624Z",
+    "sha256": "d0bfa877f0064aeb33a3668e722143e6d859b3c74773b5d75556fb06e98f65c3",
+    "filename": "europepmc-org-article-med-40127267-a19109fd36.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/36624160",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/36624160",
+    "retrievedAt": "2026-08-02T14:16:55.446Z",
+    "sha256": "6fcf420214d35ea1a7cd4852181932e5f0a73293e22d68bd329b656e142c8b17",
+    "filename": "europepmc-org-article-med-36624160-042e27133f.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/40564612",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/40564612",
+    "retrievedAt": "2026-08-02T14:16:55.669Z",
+    "sha256": "8a1caa7f82fd06aa48316667f33b7171ff2a94c736b80942d63795fc58fa3ed3",
+    "filename": "europepmc-org-article-med-40564612-60b6036e29.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/40811499",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/40811499",
+    "retrievedAt": "2026-08-02T14:16:55.670Z",
+    "sha256": "2c22d80353edb3ac3bf0e33a664ac997775f2f119e1107cf24f2ef07a7c68bf4",
+    "filename": "europepmc-org-article-med-40811499-9cd2edc6c5.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/40528849",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/40528849",
+    "retrievedAt": "2026-08-02T14:16:55.661Z",
+    "sha256": "4428863e6283d308fa7a573dcec81025e33a6dc6576c6d77eba63690408abdcf",
+    "filename": "europepmc-org-article-med-40528849-eefb03db4e.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41020433",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41020433",
+    "retrievedAt": "2026-08-02T14:16:55.698Z",
+    "sha256": "dcad76bf406c58f29afb38909100f64063fabcc2398ec81af1ec531ac93b575c",
+    "filename": "europepmc-org-article-med-41020433-639e6e2c97.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41039330",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41039330",
+    "retrievedAt": "2026-08-02T14:16:55.723Z",
+    "sha256": "bca6417ce949d13cd132149e715953d1db7bd2b4f9cbc5057f57a1b136783d5d",
+    "filename": "europepmc-org-article-med-41039330-1f77a8bdf4.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41250080",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41250080",
+    "retrievedAt": "2026-08-02T14:16:55.784Z",
+    "sha256": "2d01105ab488e1b9ee8cf5dc745e162c13dfc2d597c818ab738de0901a55af03",
+    "filename": "europepmc-org-article-med-41250080-77567aa29c.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41402711",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41402711",
+    "retrievedAt": "2026-08-02T14:16:55.786Z",
+    "sha256": "0848be203b350b1ac9b9f8e4795315f4ee91618f29a2bc1beeaa6947df468d9b",
+    "filename": "europepmc-org-article-med-41402711-1a160af967.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41195774",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41195774",
+    "retrievedAt": "2026-08-02T14:16:55.783Z",
+    "sha256": "62df47e3bdcb3e63f0b57b562f1d8fb7e8be72531448b97b37d76016ef80e516",
+    "filename": "europepmc-org-article-med-41195774-d214fa0692.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41523646",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41523646",
+    "retrievedAt": "2026-08-02T14:16:55.814Z",
+    "sha256": "b533426f92ea03c277474a0a7521aa0d75ec8b138069ef11a61e10a90e71669c",
+    "filename": "europepmc-org-article-med-41523646-643f1d183a.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41555769",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41555769",
+    "retrievedAt": "2026-08-02T14:16:55.825Z",
+    "sha256": "af275770c4eb78e90a6c2211f96b6cbf61e2b7c1de49354f4e89bc91ff83a1c3",
+    "filename": "europepmc-org-article-med-41555769-8c03373816.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41760614",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41760614",
+    "retrievedAt": "2026-08-02T14:16:55.832Z",
+    "sha256": "40e5ef2b7215b61f78b4ebd60849760029feb7b06a56cd87fbbfa0a2c29707ff",
+    "filename": "europepmc-org-article-med-41760614-790fcac68a.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42075032",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42075032",
+    "retrievedAt": "2026-08-02T14:16:55.889Z",
+    "sha256": "552df998cebb154fa5c60b1a4fc27ed6a465b8241592d3d638906d3abeeda2c9",
+    "filename": "europepmc-org-article-med-42075032-20e898d350.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41819810",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/41819810",
+    "retrievedAt": "2026-08-02T14:16:55.881Z",
+    "sha256": "6e791b80e0d95d61d4ff222397bc96741f920f6518540f5bf1d3c031331d9007",
+    "filename": "europepmc-org-article-med-41819810-0b55e74dd5.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42089634",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42089634",
+    "retrievedAt": "2026-08-02T14:16:55.892Z",
+    "sha256": "7c76360edf75815e2dadf80013b8cc5aa239caac3aa97a40818208f994219249",
+    "filename": "europepmc-org-article-med-42089634-2db97d21a9.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42092856",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42092856",
+    "retrievedAt": "2026-08-02T14:16:55.908Z",
+    "sha256": "be33fbcccb09b1d1a0b041b3e3ba5fd0ca6fa0abcd25de267f997f487ec7a87f",
+    "filename": "europepmc-org-article-med-42092856-e481cf7156.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42110248",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42110248",
+    "retrievedAt": "2026-08-02T14:16:55.921Z",
+    "sha256": "3e8177b0b91bee4ea63006bd298ae967ca06286087891640a650a60077179b38",
+    "filename": "europepmc-org-article-med-42110248-d8738c8f88.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42149467",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42149467",
+    "retrievedAt": "2026-08-02T14:16:55.935Z",
+    "sha256": "33ff2e088fa96bff944987bcaf581f560be66f873703162269863f561f6e1ac6",
+    "filename": "europepmc-org-article-med-42149467-0b2f188434.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42194483",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42194483",
+    "retrievedAt": "2026-08-02T14:16:55.982Z",
+    "sha256": "c20ed43bdd036971babeefff7639bbd67c2f3a1af3bbbc7fc3dc2e2d8bf9e6d6",
+    "filename": "europepmc-org-article-med-42194483-90395d0dc4.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/847460",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28173,
+    "finalUrl": "https://europepmc.org/article/MED/847460",
+    "retrievedAt": "2026-08-02T14:16:55.986Z",
+    "sha256": "2d5a9ab2b60e44be63cf11e1c14ef2a38b24a058bd4359f44675c7ad8cb12cec",
+    "filename": "europepmc-org-article-med-847460-8aeeb8d7a0.html"
+  },
+  {
+    "url": "https://europepmc.org/article/MED/42167796",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 28181,
+    "finalUrl": "https://europepmc.org/article/MED/42167796",
+    "retrievedAt": "2026-08-02T14:16:55.981Z",
+    "sha256": "105a5658d18f9662390d9b98e1d746bf87da787e79e1c585633996a3751cfe60",
+    "filename": "europepmc-org-article-med-42167796-efdcb03164.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000007.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 35895,
+    "finalUrl": "https://medlineplus.gov/ency/article/000007.htm",
+    "retrievedAt": "2026-08-02T14:16:56.000Z",
+    "sha256": "7e14bcbb408560411ffdefa84228df8344983032b7cb5f1a41e25c59a3eb2e26",
+    "filename": "medlineplus-gov-ency-article-000007-htm-24cf5c4a9c.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000030.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 39277,
+    "finalUrl": "https://medlineplus.gov/ency/article/000030.htm",
+    "retrievedAt": "2026-08-02T14:16:56.121Z",
+    "sha256": "0d66d1418df9bf1104379fabdb398a99ed4f77dd30ecb1decb79c50c551d4d93",
+    "filename": "medlineplus-gov-ency-article-000030-htm-a91249d64f.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000022.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 34839,
+    "finalUrl": "https://medlineplus.gov/ency/article/000022.htm",
+    "retrievedAt": "2026-08-02T14:16:56.029Z",
+    "sha256": "b4adebf16c028ab36478858e713a4e7efb77a578ee3c7e2888ee5d4e0cbaa7b3",
+    "filename": "medlineplus-gov-ency-article-000022-htm-6a9c016e54.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000028.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 36495,
+    "finalUrl": "https://medlineplus.gov/ency/article/000028.htm",
+    "retrievedAt": "2026-08-02T14:16:56.078Z",
+    "sha256": "2c57d6a6580183b072ea1116209e3a5ba50f744f7a40dc9ebdea0cb1696af805",
+    "filename": "medlineplus-gov-ency-article-000028-htm-6f5c25540f.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000014.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 33490,
+    "finalUrl": "https://medlineplus.gov/ency/article/000014.htm",
+    "retrievedAt": "2026-08-02T14:16:56.022Z",
+    "sha256": "51749ea3de8e5aa6b3ff64e79061a15242b5f782a39153cf8ca73abdd0b5c020",
+    "filename": "medlineplus-gov-ency-article-000014-htm-9a52c9aa76.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000044.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 31163,
+    "finalUrl": "https://medlineplus.gov/ency/article/000044.htm",
+    "retrievedAt": "2026-08-02T14:16:56.373Z",
+    "sha256": "c318f7ed331373aeb7c005902ffc5e69f43f31b358c662686bb52ace37d31ac5",
+    "filename": "medlineplus-gov-ency-article-000044-htm-3a796e31fc.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000048.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 31886,
+    "finalUrl": "https://medlineplus.gov/ency/article/000048.htm",
+    "retrievedAt": "2026-08-02T14:16:56.380Z",
+    "sha256": "88a94dfe08c3e14b9ef83bd5015722ad77554c3544ab5308b4eb7df5886f512e",
+    "filename": "medlineplus-gov-ency-article-000048-htm-214b4c7031.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000046.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 36067,
+    "finalUrl": "https://medlineplus.gov/ency/article/000046.htm",
+    "retrievedAt": "2026-08-02T14:16:56.380Z",
+    "sha256": "8e2d631313d243a28b75eb22cde24d66ae3a9c44ac6f279c640db458a6a9c19e",
+    "filename": "medlineplus-gov-ency-article-000046-htm-6d7cc31490.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000053.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 33363,
+    "finalUrl": "https://medlineplus.gov/ency/article/000053.htm",
+    "retrievedAt": "2026-08-02T14:16:56.387Z",
+    "sha256": "bad995c350ba82a74d456aa3e05c5d547328a8a9d3b15e49707c9a19b3f33348",
+    "filename": "medlineplus-gov-ency-article-000053-htm-228ae086aa.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000049.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 34537,
+    "finalUrl": "https://medlineplus.gov/ency/article/000049.htm",
+    "retrievedAt": "2026-08-02T14:16:56.386Z",
+    "sha256": "eac391a78e62a6d51fc1f35e5853ba8bc424df37cdde4b24fe9ba5855127d997",
+    "filename": "medlineplus-gov-ency-article-000049-htm-04380ada4d.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000056.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 33710,
+    "finalUrl": "https://medlineplus.gov/ency/article/000056.htm",
+    "retrievedAt": "2026-08-02T14:16:56.426Z",
+    "sha256": "240e6394f7aa8200fd68ba4a1df4deac90df78b8ea396676706ebf7d2d311bf0",
+    "filename": "medlineplus-gov-ency-article-000056-htm-9e0c1c93c6.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000059.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 31850,
+    "finalUrl": "https://medlineplus.gov/ency/article/000059.htm",
+    "retrievedAt": "2026-08-02T14:16:56.438Z",
+    "sha256": "f709133db4a17dc6dc25bc03be18bba8c77a007b56e4700e47bdcffe4c6e5a6b",
+    "filename": "medlineplus-gov-ency-article-000059-htm-8ccc72eec0.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000060.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 33681,
+    "finalUrl": "https://medlineplus.gov/ency/article/000060.htm",
+    "retrievedAt": "2026-08-02T14:16:56.438Z",
+    "sha256": "ca7e884edba7e0f28a363a8d7050f46ab99685dd520288de0d647ea2bdfb5713",
+    "filename": "medlineplus-gov-ency-article-000060-htm-dfe577a34e.html"
+  },
+  {
+    "url": "https://medlineplus.gov/ency/article/000039.htm",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 31730,
+    "finalUrl": "https://medlineplus.gov/ency/article/000039.htm",
+    "retrievedAt": "2026-08-02T14:16:56.138Z",
+    "sha256": "4dbfca27f2f86d1a09ebcd622c3c3579d794510d500182ebe9088c09fbbccecb",
+    "filename": "medlineplus-gov-ency-article-000039-htm-59cf851378.html"
+  },
+  {
+    "url": "https://www.cisa.gov/secure-our-world",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 66675,
+    "finalUrl": "https://www.cisa.gov/secure-our-world",
+    "retrievedAt": "2026-08-02T14:16:56.444Z",
+    "sha256": "2a4f88bfbfb1f438de63f444fa898121dbaa2ecc24d385f9f99c5ae094352ebf",
+    "filename": "www-cisa-gov-secure-our-world-60cecf3b48.html"
+  },
+  {
+    "url": "https://www.gov.uk/report-missing-person",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 68068,
+    "finalUrl": "https://www.gov.uk/report-missing-person",
+    "retrievedAt": "2026-08-02T14:16:56.496Z",
+    "sha256": "a518ef7dd44505b9a11bf2449533120b85253a01af7e00b666a1712808b1f919",
+    "filename": "www-gov-uk-report-missing-person-7577a21e50.html"
+  },
+  {
+    "url": "https://www.identitytheft.gov/",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 8744,
+    "finalUrl": "https://www.identitytheft.gov/",
+    "retrievedAt": "2026-08-02T14:16:56.782Z",
+    "sha256": "b398dc1b403391f33e4b8482f5c6052674cfebe5e788526acda7c0a515d0a816",
+    "filename": "www-identitytheft-gov-0b56339791.html"
+  },
+  {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 320806,
+    "finalUrl": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "retrievedAt": "2026-08-02T14:16:56.481Z",
+    "sha256": "1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8",
+    "filename": "www-constituteproject-org-constitution-egypt-2014-2eed3d6f84.html"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/family-emergency-scams",
+    "status": "blocked",
+    "httpStatus": 404,
+    "decodedLength": 475213,
+    "finalUrl": "https://consumer.ftc.gov/articles/family-emergency-scams",
+    "retrievedAt": "2026-08-02T14:16:54.344Z",
+    "reason": "HTTP 404"
+  },
+  {
+    "url": "https://support.google.com/accounts/answer/6160491",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 1582328,
+    "finalUrl": "https://support.google.com/accounts/answer/6160491",
+    "retrievedAt": "2026-08-02T14:16:56.444Z",
+    "sha256": "84c0ca0f9c2f55da136e8f30bd03689f38135ef9c2a4aeac459b7a3d08ce7e50",
+    "filename": "support-google-com-accounts-answer-6160491-d3f5c62981.html"
+  },
+  {
+    "url": "https://www.ilo.org/topics-and-sectors/wages",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 95051,
+    "finalUrl": "https://www.ilo.org/topics-and-sectors/wages",
+    "retrievedAt": "2026-08-02T14:16:56.915Z",
+    "sha256": "b9cbec2c167185566fc1552332882f9329a04aa67584da15f6250d6f904c6e0b",
+    "filename": "www-ilo-org-topics-and-sectors-wages-17d036ba01.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 135074,
+    "finalUrl": "https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself",
+    "retrievedAt": "2026-08-02T14:16:57.155Z",
+    "sha256": "d5d1524d3ccc4d1ea29d33e6e4633e39eba05276ab31d883134d0143384abf03",
+    "filename": "www-ncsc-gov-uk-guidance-sextortion-scams-how-to-protect-yourself-4affacaae7.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 141984,
+    "finalUrl": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email",
+    "retrievedAt": "2026-08-02T14:16:56.986Z",
+    "sha256": "abbdd2ab94fa6ec6f34615c19ca43a45646f49f290e5e1fe308d2d24445cb3dd",
+    "filename": "www-ncsc-gov-uk-collection-top-tips-for-staying-secure-online-activate-2-step-verification-ead0ef8c7d.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 144700,
+    "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+    "retrievedAt": "2026-08-02T14:16:57.036Z",
+    "sha256": "3fbfd95d57d272ddaebd92c472467439c25199e6ee0c1be32b441ea579286402",
+    "filename": "www-ncsc-gov-uk-guidance-recovering-a-hacked-account-4f1351e404.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/guidance/social-media-how-to-use-it-safely",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 140258,
+    "finalUrl": "https://www.ncsc.gov.uk/guidance/social-media-how-to-use-it-safely",
+    "retrievedAt": "2026-08-02T14:16:57.398Z",
+    "sha256": "c7292004aa4c3fdf6a71a6e4d00e80815fe663a74d8bd28af02035cedae089be",
+    "filename": "www-ncsc-gov-uk-guidance-social-media-how-to-use-it-safely-f1c78443f2.html"
+  },
+  {
+    "url": "https://www.ilo.org/topics/safety-and-health-work",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 112682,
+    "finalUrl": "https://www.ilo.org/topics-and-sectors/safety-and-health-work",
+    "retrievedAt": "2026-08-02T14:16:56.962Z",
+    "sha256": "55b01fe26074cce7a1e112b80f9d600486d0cfb72fbdadd154e59ba4986a3fe2",
+    "filename": "www-ilo-org-topics-safety-and-health-work-d659798424.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/ransomware/home",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 91405,
+    "finalUrl": "https://www.ncsc.gov.uk/ransomware/home",
+    "retrievedAt": "2026-08-02T14:16:57.525Z",
+    "sha256": "b5c0aca6a9f780c6d865f69e63223cdf03950b602fafd1c6e205b111dc390eeb",
+    "filename": "www-ncsc-gov-uk-ransomware-home-6857135a42.html"
+  },
+  {
+    "url": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 48153,
+    "finalUrl": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/",
+    "retrievedAt": "2026-08-02T14:16:57.605Z",
+    "sha256": "f0b1503e1df1cc7749ea2323701be202f43223ee1356dcb38bfa166a11154eb7",
+    "filename": "www-nhs-uk-mental-health-feelings-symptoms-behaviours-feelings-and-symptoms-grief-bereavem-4721731426.html"
+  },
+  {
+    "url": "https://www.ncsc.gov.uk/guidance/smart-devices-in-the-home",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 147238,
+    "finalUrl": "https://www.ncsc.gov.uk/guidance/smart-devices-in-the-home",
+    "retrievedAt": "2026-08-02T14:16:57.361Z",
+    "sha256": "eed70d6a192607e2b3ab4a91155ec386868333503b8aaf59a02c2b43be2d7722",
+    "filename": "www-ncsc-gov-uk-guidance-smart-devices-in-the-home-084f684b96.html"
+  },
+  {
+    "url": "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 105687,
+    "finalUrl": "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
+    "retrievedAt": "2026-08-02T14:16:57.618Z",
+    "sha256": "a716b51b2633ee50f8d126f58fe1c140d5a7c098a0b9f362cd4e9c5946fff7c2",
+    "filename": "www-un-org-en-about-us-universal-declaration-of-human-rights-c9b4e7ee9a.html"
+  },
+  {
+    "url": "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 44760,
+    "finalUrl": "https://www.nhs.uk/mental-health/conditions/postnatal-depression/",
+    "retrievedAt": "2026-08-02T14:16:57.537Z",
+    "sha256": "2db8574f3b63b131315742ac95ab92963c8791b559e7398a0c2b0b60184e9996",
+    "filename": "www-nhs-uk-mental-health-conditions-post-natal-depression-overview-b676d19f74.html"
+  },
+  {
+    "url": "https://www.who.int/news-room/fact-sheets/detail/abuse-of-older-people",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 105437,
+    "finalUrl": "https://www.who.int/news-room/fact-sheets/detail/abuse-of-older-people",
+    "retrievedAt": "2026-08-02T14:16:57.818Z",
+    "sha256": "0f01bb83b5c3e4d4902f2de13ac50fe27def6cde1260737381e86c254a1c646c",
+    "filename": "www-who-int-news-room-fact-sheets-detail-abuse-of-older-people-ba5478ac70.html"
+  },
+  {
+    "url": "https://www.who.int/news-room/fact-sheets/detail/violence-against-women",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 118379,
+    "finalUrl": "https://www.who.int/news-room/fact-sheets/detail/violence-against-women",
+    "retrievedAt": "2026-08-02T14:16:57.839Z",
+    "sha256": "312993313965451af185dbab7bc549437ce311d99c7770ef00a71cebb58d937e",
+    "filename": "www-who-int-news-room-fact-sheets-detail-violence-against-women-c7003bd6df.html"
+  },
+  {
+    "url": "https://consumer.ftc.gov/articles/how-protect-kids-online",
+    "status": "blocked",
+    "httpStatus": 404,
+    "decodedLength": 475216,
+    "finalUrl": "https://consumer.ftc.gov/articles/how-protect-kids-online",
+    "retrievedAt": "2026-08-02T14:16:54.380Z",
+    "reason": "HTTP 404"
+  },
+  {
+    "url": "https://www.paho.org/en/topics/mental-health",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 125664,
+    "finalUrl": "https://www.paho.org/en/topics/mental-health",
+    "retrievedAt": "2026-08-02T14:16:57.609Z",
+    "sha256": "157f265f454a4e8d265b9b32bb9c9a087a11bd5885babb7d412c74f3219fcabd",
+    "filename": "www-paho-org-en-topics-mental-health-e5529c2801.html"
+  },
+  {
+    "url": "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 85595,
+    "finalUrl": "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon",
+    "retrievedAt": "2026-08-02T14:16:57.886Z",
+    "sha256": "e8075035de528c3967daaf1a762af8c9517642bc9b38faba8b9fc6cd103ff67c",
+    "filename": "www-who-int-standards-classifications-frequently-asked-questions-burn-out-an-occupational--c4e0b4aa55.html"
+  },
+  {
+    "url": "https://www.cpa.gov.eg/",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 136330,
+    "finalUrl": "https://cpa.gov.eg/ar-eg/",
+    "retrievedAt": "2026-08-02T14:16:56.495Z",
+    "sha256": "411b21351e96715920d80a37f3ff3145ecab2d8b1eb2ea36dd9496c7936327d1",
+    "filename": "www-cpa-gov-eg-c672278fd7.html"
+  },
+  {
+    "url": "https://www.ic3.gov/PSA/2022/PSA220208",
+    "status": "saved",
+    "httpStatus": 200,
+    "decodedLength": 7419,
+    "finalUrl": "https://www.ic3.gov/PSA/2022/PSA220208",
+    "retrievedAt": "2026-08-02T14:16:56.629Z",
+    "sha256": "42589b3b2e1336c8d82024b5d5450802f6191bcc63290f33b3345039f42e6dba",
+    "filename": "www-ic3-gov-psa-2022-psa220208-c5b8001bdf.html"
+  }
+]

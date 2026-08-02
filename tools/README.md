@@ -12,6 +12,18 @@ methodology these scripts implement. Without it, they are just plumbing.
 | `integrate_new.py` | Canonical accumulator → regenerates `aman/threats.js` + `hoqoqi/rights.js` (`window.CARDS` + `window.SOURCES`). Idempotent; safe to re-run. |
 | `workflow-expand-hoqoqi-aman.js` | The content workflow: produce → adversarially verify → PASS-only. **The prompt constants (`ONELAW`, `NUMSAFE`, `CONCISE`, `BASIS`, `AR`) are the methodology compressed — each encodes a scar.** Reuse them verbatim. |
 | `workflow-fix-rerun-pattern.js` | The re-run pattern for failed items, with the anti-truncation + number-safety guards that fixed the tetanus One-Law violation. |
+| `phase0-audit.mjs` | Deterministic retroactive Phase 0 safety audit and four-product coverage baseline. Loads canonical JavaScript in a sandboxed VM, probes sources before capture, writes durable evidence beneath `docs/audits/phase0-2026-08-02/`, and exits non-zero while any audit record is `FAIL` or `BLOCKED`. |
+
+## Phase 0 audit
+
+```powershell
+node --test tools/phase0-audit.test.mjs
+node tools/phase0-audit.mjs
+```
+
+The production command is deliberately fail-closed. A non-zero exit can be the correct result:
+inspect `docs/audits/phase0-2026-08-02/PHASE0_CHECKPOINT.md` for the exact blockers. Successful
+source responses are captured in `corpus/`; failed probes never overwrite a successful capture.
 
 ## The loop, end to end
 
