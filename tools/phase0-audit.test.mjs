@@ -159,6 +159,24 @@ test('preserves exact English and Arabic quantity-and-scope language', () => {
   assert.deepEqual(arabic.quantities, ['التحليل شمل ٥٢٢ تجربة، وأكتر من ١١٦ ألف مشارك، وكان الأثر نص حجمه الأصلي تقريباً.']);
 });
 
+test('keeps decimal percentages inside one complete production sentence', () => {
+  const regional = "A review found prevalence reaching 40% (Palestine) to 77.9% (Sudan) in these samples.";
+  assert.deepEqual(audit.detectStatisticalQuantities(regional).quantities, [regional]);
+  assert.equal(audit.detectStatisticalQuantities(regional).quantities.includes('A review found prevalence reaching 40% (Palestine) to 77.'), false);
+
+  const adhd = "Its prevalence is about 7% in children and 2.5% in adults worldwide.";
+  assert.deepEqual(audit.detectStatisticalQuantities(adhd).quantities, [adhd]);
+  assert.equal(audit.detectStatisticalQuantities(adhd).quantities.includes('Its prevalence is about 7% in children and 2.'), false);
+});
+
+test('keeps et al. author context around production citation years', () => {
+  const citations = 'Cipriani et al. (2018) showed drugs beat placebo. But another review (Jakobsen et al., 2017) found high risk of bias.';
+  assert.deepEqual(audit.detectStatisticalQuantities(citations).quantities, [
+    'Cipriani et al. (2018) showed drugs beat placebo.',
+    'But another review (Jakobsen et al., 2017) found high risk of bias.',
+  ]);
+});
+
 test('independent broad quantitative scan blocks a primary-detector miss', () => {
   const claims = [
     { id: 'ordinary', claim_ar: 'وصف نوعي بلا كمية.', claim_en: 'A qualitative description.' },

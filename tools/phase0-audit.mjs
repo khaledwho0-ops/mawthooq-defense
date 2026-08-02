@@ -135,6 +135,14 @@ function assertSourceReferences(records, sources) {
   for (const record of records) visit(record);
 }
 
+function isSentenceBoundary(text, index) {
+  const punctuation = text[index];
+  if (!/[.!?؟\n]/u.test(punctuation)) return false;
+  if (punctuation !== '.') return true;
+  if (/[0-9٠-٩۰-۹]/u.test(text[index - 1]) && /[0-9٠-٩۰-۹]/u.test(text[index + 1])) return false;
+  return !/\bet al\.$/iu.test(text.slice(Math.max(0, index - 12), index + 1));
+}
+
 function detectStatisticalQuantities(text) {
   const value = String(text);
   const digit = '[0-9٠-٩۰-۹]';
@@ -166,9 +174,9 @@ function detectStatisticalQuantities(text) {
   const ordered = accepted.sort((a, b) => a.start - b.start);
   const sentenceFor = (item) => {
     let start = item.start;
-    while (start > 0 && !/[.!?؟\n]/u.test(value[start - 1])) start -= 1;
+    while (start > 0 && !isSentenceBoundary(value, start - 1)) start -= 1;
     let end = item.end;
-    while (end < value.length && !/[.!?؟\n]/u.test(value[end])) end += 1;
+    while (end < value.length && !isSentenceBoundary(value, end)) end += 1;
     if (end < value.length && value[end] !== '\n') end += 1;
     return value.slice(start, end).trim();
   };

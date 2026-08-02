@@ -30,11 +30,20 @@ node --test --test-name-pattern="reports sentence-level|preserves exact" tools/p
 2 tests; 0 pass; 2 fail; exit 1
 ```
 
+The final sentence-boundary regression began RED on the exact production decimal and citation examples:
+
+```text
+node --test --test-name-pattern="decimal percentages|et al\. author" tools/phase0-audit.test.mjs
+2 tests; 0 pass; 2 fail; exit 1
+```
+
+Focused GREEN was 2 tests passed, 0 failed.
+
 Final GREEN:
 
 ```text
 node --test tools/phase0-audit.test.mjs
-20 tests; 20 pass; 0 fail; exit 0
+22 tests; 22 pass; 0 fail; exit 0
 ```
 
 ## Implemented safeguards
@@ -42,6 +51,7 @@ node --test tools/phase0-audit.test.mjs
 - Quantitative-language detection covers plural magnitudes and counted concepts in English and Arabic, including `millions`/`ملايين`, `five disorders`/`خمسة اضطرابات`, dual Arabic review wording, and `two independent meta-analytic reviews`.
 - `nav-stigma-barrier`, `anx-subtypes`, and `bz5-stigma-paradox` are included in the statistical audit.
 - Detected audit scope is preserved as complete sentence-level claim-language snippets. This retains comparators, plus signs, units, and original Arabic surfaces, including `أكتر من ١١٦ ألف مشارك`, `116,000+ participants`, and `نص` in context.
+- Sentence boundaries distinguish decimal points and scholarly `et al.` abbreviations from terminal punctuation, preserving complete `77.9%`, `2.5%`, `Cipriani et al. (2018)`, and `Jakobsen et al., 2017` context without truncated duplicate snippets.
 - Every one of the 130 Motazen claims has an explicit `statistical` or `not-statistical` decision record.
 - Completeness is independently checked by a separately implemented broad quantitative-language scan. Every broad candidate must be marked statistical; missing, duplicate, or undecided decision records block the gate.
 - Source captures require substantive content, scenario source-found classifications require scenario-specific semantic evidence, corpus index output is URL-sorted, and prior-capture errors fail closed except for absent files.
@@ -56,8 +66,8 @@ node --test tools/phase0-audit.test.mjs
 - Motazen matrix: 52 cells covering 124 of 130 claims; six canonical statuses remain outside the required vocabulary.
 - Aman: 24 rows; 0 built / 15 source-found / 8 no-source / 1 not-built-unprobed.
 - Hoqoqi: 22 rows; 0 built / 20 source-found / 2 no-source / 0 not-built-unprobed.
-- Generated audit directory: 105 files / 8,042,810 bytes.
-- Corpus directory: 92 files / 7,810,494 bytes. The index is deterministically URL-sorted.
+- Generated audit directory: 105 files.
+- Corpus directory: 92 files. The index is deterministically URL-sorted.
 
 ## Canonical input integrity
 
@@ -71,7 +81,7 @@ node --test tools/phase0-audit.test.mjs
 ## Verification commands
 
 ```text
-node --test tools/phase0-audit.test.mjs  -> exit 0, 20/20
+node --test tools/phase0-audit.test.mjs  -> exit 0, 22/22
 node tools/phase0-audit.mjs              -> exit 1, gate BLOCKED (expected)
 git diff --check                         -> exit 0
 ```
