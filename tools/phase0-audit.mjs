@@ -357,6 +357,162 @@ function sourceRefs(record, sources) {
   });
 }
 
+function sha256(value) {
+  return createHash('sha256').update(value).digest('hex');
+}
+
+function isAdamSource(reference, sources) {
+  const source = sources[reference?.srcId] ?? {};
+  const url = reference?.url ?? source.url ?? '';
+  const metadata = `${reference?.label ?? ''} ${source.label ?? ''} ${JSON.stringify({ ...source, ...reference })}`;
+  return /medlineplus\.gov\/ency\//i.test(url) && /A\.D\.A\.M|Ebix|MedlinePlus/i.test(metadata);
+}
+
+async function validateMostaedSemanticReview({
+  cards,
+  sources,
+  corpusIndex,
+  manifest,
+  corpusDir = CORPUS,
+  readFileImpl = readFile,
+}) {
+  const errors = [];
+  let provenContentDefect = false;
+  const resultRecords = [];
+  const qualifyingCards = cards.filter((card) => Number(card.level) >= 4 && (card.sources ?? []).some((reference) => isAdamSource(reference, sources)));
+  const expectedIds = qualifyingCards.map((card) => card.id);
+  const declaredIds = Array.isArray(manifest?.qualifying_card_ids) ? manifest.qualifying_card_ids : [];
+  const records = Array.isArray(manifest?.records) ? manifest.records : [];
+  const recordIds = records.map((record) => record.card_id);
+  const compareInventory = (label, actual) => {
+    const missing = expectedIds.filter((id) => !actual.includes(id));
+    const extra = actual.filter((id) => !expectedIds.includes(id));
+    const duplicates = actual.filter((id, index) => actual.indexOf(id) !== index);
+    if (missing.length) errors.push(`${label} missing qualifying inventory: ${missing.join(', ')}`);
+    if (extra.length) errors.push(`${label} has non-qualifying inventory: ${[...new Set(extra)].join(', ')}`);
+    if (duplicates.length) errors.push(`${label} has duplicate qualifying inventory: ${[...new Set(duplicates)].join(', ')}`);
+  };
+  compareInventory('Mostaed semantic manifest declaration', declaredIds);
+  compareInventory('Mostaed semantic manifest records', recordIds);
+
+  const indexByUrl = new Map((Array.isArray(corpusIndex) ? corpusIndex : []).map((entry) => [entry.url, entry]));
+  for (const card of qualifyingCards) {
+    const record = records.find((item) => item.card_id === card.id);
+    const cardErrors = [];
+    let cardProvenDefect = false;
+    if (!record) {
+      resultRecords.push({ id: card.id, verdict: 'BLOCKED', complete: false, reason: 'Semantic review record is missing.' });
+      continue;
+    }
+
+    const currentCardSha256 = sha256(JSON.stringify(card));
+    if (record.card_sha256 !== currentCardSha256) cardErrors.push(`${card.id} card hash mismatch`);
+    if (JSON.stringify(record.title) !== JSON.stringify(card.title)) cardErrors.push(`${card.id} title is stale`);
+    if (Number(record.level) !== Number(card.level)) cardErrors.push(`${card.id} level is stale`);
+
+    const expectedSources = (card.sources ?? []).filter((reference) => isAdamSource(reference, sources));
+    const sourceRecords = Array.isArray(record.sources) ? record.sources : [];
+    const expectedSourceIds = expectedSources.map((reference) => reference.srcId);
+    const sourceRecordIds = sourceRecords.map((source) => source.source_id);
+    for (const sourceId of expectedSourceIds.filter((id) => !sourceRecordIds.includes(id))) cardErrors.push(`${card.id} missing source record ${sourceId}`);
+    for (const sourceId of sourceRecordIds.filter((id, index) => sourceRecordIds.indexOf(id) !== index)) cardErrors.push(`${card.id} duplicate source record ${sourceId}`);
+    for (const sourceId of sourceRecordIds.filter((id) => !expectedSourceIds.includes(id))) cardErrors.push(`${card.id} unexpected source record ${sourceId}`);
+
+    for (const sourceRecord of sourceRecords) {
+      const reference = expectedSources.find((item) => item.srcId === sourceRecord.source_id);
+      const source = sources[sourceRecord.source_id] ?? {};
+      const expectedUrl = reference?.url ?? source.url ?? '';
+      if (!reference || sourceRecord.url !== expectedUrl) {
+        cardErrors.push(`${sourceRecord.source_id} source URL mismatch`);
+        continue;
+      }
+      const indexEntry = indexByUrl.get(expectedUrl);
+      if (!indexEntry || indexEntry.status !== 'saved') {
+        cardErrors.push(`${sourceRecord.source_id} source capture is inaccessible`);
+        continue;
+      }
+      if (sourceRecord.filename !== indexEntry.filename) cardErrors.push(`${sourceRecord.source_id} source filename mismatch`);
+      if (sourceRecord.final_url !== indexEntry.finalUrl) cardErrors.push(`${sourceRecord.source_id} source final URL mismatch`);
+      if (sourceRecord.retrieval_date !== String(indexEntry.retrievedAt ?? '').slice(0, 10)) cardErrors.push(`${sourceRecord.source_id} source retrieval date mismatch`);
+      try {
+        const bytes = await readFileImpl(path.join(corpusDir, indexEntry.filename));
+        const currentSourceSha256 = sha256(bytes);
+        if (sourceRecord.sha256 !== currentSourceSha256 || indexEntry.sha256 !== currentSourceSha256) cardErrors.push(`${sourceRecord.source_id} source hash mismatch`);
+      } catch (error) {
+        cardErrors.push(`${sourceRecord.source_id} source capture is inaccessible: ${error.message || error}`);
+      }
+    }
+
+    const expectedLines = [...(card.do ?? []).map((item, index) => ({
+      field_path: `do[${index}]`, text: typeof item === 'string' ? item : item.t, source_id: typeof item === 'string' ? null : item.src ?? null,
+    })), ...(card.dont ?? []).map((item, index) => ({
+      field_path: `dont[${index}]`, text: typeof item === 'string' ? item : item.t, source_id: typeof item === 'string' ? null : item.src ?? null,
+    }))];
+    const reviewedLines = Array.isArray(record.actionable_lines) ? record.actionable_lines : [];
+    const reviewedPaths = reviewedLines.map((line) => line.field_path);
+    for (const fieldPath of reviewedPaths.filter((item, index) => reviewedPaths.indexOf(item) !== index)) cardErrors.push(`${card.id} duplicate actionable path ${fieldPath}`);
+    for (const expected of expectedLines) {
+      const reviewed = reviewedLines.find((line) => line.field_path === expected.field_path);
+      if (!reviewed) {
+        cardErrors.push(`${card.id} missing actionable path ${expected.field_path}`);
+        continue;
+      }
+      if (reviewed.text !== expected.text) cardErrors.push(`${card.id} stale actionable text at ${expected.field_path}`);
+      if ((reviewed.source_id ?? null) !== expected.source_id) cardErrors.push(`${card.id} stale actionable source at ${expected.field_path}`);
+      if (!String(reviewed.source_excerpt ?? '').trim()) cardErrors.push(`${card.id} missing source excerpt at ${expected.field_path}`);
+      if (!String(reviewed.qualifier_or_exception ?? '').trim()) cardErrors.push(`${card.id} missing qualifier decision at ${expected.field_path}`);
+      if (typeof reviewed.card_carries !== 'boolean') cardErrors.push(`${card.id} missing carried decision at ${expected.field_path}`);
+      if (reviewed.verdict === 'FAIL') {
+        cardProvenDefect = true;
+        provenContentDefect = true;
+        cardErrors.push(`${card.id} proven content defect at ${expected.field_path}`);
+      } else if (reviewed.verdict !== 'PASS') cardErrors.push(`${card.id} unresolved actionable path ${expected.field_path}`);
+    }
+    for (const fieldPath of reviewedPaths.filter((item) => !expectedLines.some((expected) => expected.field_path === item))) cardErrors.push(`${card.id} unexpected actionable path ${fieldPath}`);
+
+    const qualifiers = Array.isArray(record.source_qualifiers) ? record.source_qualifiers : [];
+    if (!qualifiers.length) cardErrors.push(`${card.id} source qualifier inventory is missing`);
+    const qualifierIds = qualifiers.map((qualifier) => qualifier.id);
+    for (const qualifierId of qualifierIds.filter((item, index) => qualifierIds.indexOf(item) !== index)) cardErrors.push(`${card.id} duplicate source qualifier ${qualifierId}`);
+    for (const qualifier of qualifiers) {
+      const resolved = qualifier.id && expectedSourceIds.includes(qualifier.source_id)
+        && String(qualifier.source_excerpt ?? '').trim()
+        && String(qualifier.disposition ?? '').trim()
+        && qualifier.verdict === 'PASS';
+      if (!resolved) {
+        if (qualifier.verdict === 'FAIL') {
+          cardProvenDefect = true;
+          provenContentDefect = true;
+        }
+        cardErrors.push(`${card.id} unresolved source qualifier ${qualifier.id ?? '(missing id)'}`);
+      }
+    }
+    if (!String(record.reviewer_note ?? '').trim()) cardErrors.push(`${card.id} reviewer note is missing`);
+    if (!record.remediation || typeof record.remediation.changed !== 'boolean') cardErrors.push(`${card.id} remediation record is missing`);
+    if (record.overall_verdict === 'FAIL') {
+      cardProvenDefect = true;
+      provenContentDefect = true;
+    }
+    else if (record.overall_verdict !== 'PASS') cardErrors.push(`${card.id} overall semantic verdict is unresolved`);
+
+    errors.push(...cardErrors);
+    const recordVerdict = cardProvenDefect ? 'FAIL' : cardErrors.length ? 'BLOCKED' : 'PASS';
+    resultRecords.push({
+      id: card.id,
+      verdict: recordVerdict,
+      complete: cardErrors.length === 0,
+      reason: cardErrors.length ? cardErrors.join('; ') : 'Complete source-grounded semantic review.',
+    });
+  }
+
+  return {
+    verdict: provenContentDefect ? 'FAIL' : errors.length ? 'BLOCKED' : 'PASS',
+    complete: errors.length === 0,
+    errors,
+    records: resultRecords,
+  };
+}
+
 function excerptAround(text, needles, qualifierOnly = false) {
   const clean = plainText(text);
   const lower = normalizeDigits(clean).toLowerCase();
@@ -468,14 +624,40 @@ async function writeOutputs() {
   const auditUrls = [...mostaedScope.flatMap((card) => sourceRefs(card, mostaed.sources).filter((source) => /medlineplus\.gov\/ency\//i.test(source.url)).map((source) => source.url)), ...statisticalClaims.flatMap((claim) => sourceRefs(claim, motazen.sources).map((source) => source.url)), ...contactItems.flatMap((item) => item.refs.map((source) => source.url))];
   const scenarioUrls = [...AMAN_SCENARIOS, ...HOQOQI_SCENARIOS].map((item) => item[2]).filter(Boolean);
   const captures = await fetchAll([...auditUrls, ...scenarioUrls]);
+  const liveCorpusIndex = sortCorpusIndex([...captures.entries()].map(([url, capture]) => ({ url, ...capture, text: undefined })));
 
+  let mostaedManifest = null;
+  let mostaedManifestLoadError = null;
+  try {
+    mostaedManifest = JSON.parse(await readFile(path.join(OUTPUT, 'semantic-reviews', 'mostaed-dropped-exceptions.json'), 'utf8'));
+  } catch (error) {
+    mostaedManifestLoadError = error;
+  }
+  const mostaedSemantic = await validateMostaedSemanticReview({
+    cards: mostaed.records,
+    sources: mostaed.sources,
+    corpusIndex: liveCorpusIndex,
+    manifest: mostaedManifest,
+    corpusDir: CORPUS,
+  });
+  if (mostaedManifestLoadError) mostaedSemantic.errors.unshift(`Mostaed semantic manifest inaccessible: ${mostaedManifestLoadError.message || mostaedManifestLoadError}`);
+  const globalSemanticErrors = mostaedSemantic.errors.filter((error) => !mostaedScope.some((card) => error.startsWith(`${card.id} `)));
   const mostaedAudit = mostaedScope.map((card) => {
-    const refs = sourceStatus(captures, sourceRefs(card, mostaed.sources).filter((source) => /medlineplus\.gov\/ency\//i.test(source.url)));
-    const fetched = refs.filter((source) => source.capture?.status === 'saved');
-    const lines = [...(card.do ?? []).map((item, index) => `do[${index}]: ${typeof item === 'string' ? item : item.t}`), ...(card.dont ?? []).map((item, index) => `dont[${index}]: ${typeof item === 'string' ? item : item.t}`)];
-    const qualifiers = fetched.map((source) => excerptAround(source.capture.text, [], true)).filter((text) => !text.startsWith('(No matching'));
-    const reason = fetched.length !== refs.length ? 'At least one referenced source was inaccessible.' : 'Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.';
-    return { id: card.id, title: card.title?.ar ?? card.title?.en ?? '', level: card.level, refs, lines, qualifiers, verdict: 'BLOCKED', complete: Boolean(card.id && refs.length && lines.length && reason), reason };
+    const semanticRecord = mostaedManifest?.records?.find((record) => record.card_id === card.id);
+    const validationRecord = mostaedSemantic.records.find((record) => record.id === card.id)
+      ?? { id: card.id, verdict: 'BLOCKED', complete: false, reason: 'Semantic validation result missing.' };
+    const blockedByGlobalError = validationRecord.verdict === 'PASS' && globalSemanticErrors.length > 0;
+    return {
+      id: card.id,
+      title: card.title?.ar ?? card.title?.en ?? '',
+      level: card.level,
+      refs: sourceStatus(captures, sourceRefs(card, mostaed.sources).filter((source) => /medlineplus\.gov\/ency\//i.test(source.url))),
+      lines: (semanticRecord?.actionable_lines ?? []).map((line) => `${line.field_path}: ${line.text}`),
+      qualifiers: (semanticRecord?.source_qualifiers ?? []).map((qualifier) => `${qualifier.id}: ${qualifier.disposition}`),
+      verdict: blockedByGlobalError ? 'BLOCKED' : validationRecord.verdict,
+      complete: blockedByGlobalError ? false : validationRecord.complete,
+      reason: blockedByGlobalError ? `Semantic manifest incomplete: ${globalSemanticErrors.join('; ')}` : validationRecord.reason,
+    };
   });
 
   const motazenAudit = statisticalClaims.map((claim) => {
@@ -503,7 +685,7 @@ async function writeOutputs() {
   const hoqoqiCoverage = await generateScenarioCoverage(HOQOQI_SCENARIOS, hoqoqi.records, 'hoqoqi', captures);
 
   const linesForSource = (source) => `${source.id} — ${source.url} — ${source.capture?.status === 'saved' ? `HTTP 200; ${source.capture.decodedLength} chars; SHA256 ${source.capture.sha256}; saved corpus/${source.capture.filename}; final ${source.capture.finalUrl}; retrieved ${source.capture.retrievedAt}` : `BLOCKED: ${source.capture?.reason ?? 'no capture'}`}`;
-  const mostaedMd = ['# Mostaed dropped-exceptions audit', '', `Observed qualifying inventory: ${mostaedAudit.length} cards (the canonical current data, not the older ~33 estimate).`, '', ...mostaedAudit.flatMap((record) => [`## ${record.id} — ${record.title}`, '', `- Level: L${record.level}`, `- Sources: ${record.refs.map(linesForSource).join('; ')}`, `- Source qualifiers/exceptions found automatically: ${record.qualifiers.length ? record.qualifiers.join(' … ') : '(none located automatically; this is not proof none exist)'}`, `- Card text checked: ${record.lines.join(' | ')}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
+  const mostaedMd = ['# Mostaed dropped-exceptions audit', '', `Observed qualifying inventory: ${mostaedAudit.length} cards (the canonical current data, not the older ~33 estimate).`, '', 'Human semantic records: `semantic-reviews/mostaed-dropped-exceptions.json`.', '', ...mostaedAudit.flatMap((record) => [`## ${record.id} — ${record.title}`, '', `- Level: L${record.level}`, `- Sources: ${record.refs.map(linesForSource).join('; ')}`, `- Source-wide qualifier dispositions: ${record.qualifiers.length ? record.qualifiers.join(' … ') : '(missing)'}`, `- Card text checked: ${record.lines.join(' | ')}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
   const motazenMd = ['# Motazen statistics-scope audit', '', `All ${motazen.records.length} claims have an explicit statistical/not-statistical audit decision; ${motazenAudit.length} are marked statistical.`, '', ...motazenAudit.flatMap((record) => [`## ${record.id}`, '', `- Exact detected quantity/scope in claim: ${record.quantities.join(' | ')}`, `- Claim text: ${record.claim.replace(/\n/g, ' / ')}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Supporting excerpts with surrounding qualifiers: ${record.excerpts.map((item) => `${item.id}: ${item.excerpt}`).join(' … ') || '(none)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, '']), '## Complete 130-claim decision inventory', '', markdownTable(allClaimsInventory, ['id', 'domain', 'status', 'decision', 'quantities']), ''].join('\n');
   const contactsMd = ['# Aman and Hoqoqi contact provenance audit', '', `Inventory: ${contactsAudit.length} rendered/actionable contact numbers.`, '', ...contactsAudit.flatMap((record) => [`## ${record.project}/${record.cardId} — ${record.number}`, '', `- Field path: ${record.fieldPath}`, `- Authority: ${record.authority}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Exact-number excerpt: ${record.matches.map((source) => excerptAround(source.capture.text, [record.number])).join(' … ') || '(not found)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
 
@@ -569,8 +751,7 @@ async function writeOutputs() {
     ...inventoryCompleteness.errors.map((error) => `Inventory completeness: FAIL — ${error}`),
   ];
   const summary = { auditDate: AUDIT_DATE, gate: gate.clear ? 'CLEAR' : 'BLOCKED', phase1Started: false, commands: ['node --test tools/phase0-audit.test.mjs', 'node tools/phase0-audit.mjs', 'git diff --check'], inputs: inputIntegrity, sourceFetchTotals: fetchTotals, inventoryCompleteness, audits: { mostaedDroppedExceptions: { inventory: mostaedAudit.length, verdicts: verdictTotals(mostaedAudit) }, motazenStatisticsScope: { allClaimsInventoried: motazen.records.length, explicitDecisions: allClaimsInventory.length, broadCandidates: motazen.records.filter((claim) => scanBroadQuantitativeCandidates(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`).hasCandidate).length, statisticalClaims: motazenAudit.length, verdicts: verdictTotals(motazenAudit) }, contactsProvenance: { inventory: contactsAudit.length, verdicts: verdictTotals(contactsAudit) } }, matrices: { complete: matricesComplete, mostaed: { cells: mostaedCoverage.length, total: mostaedCoverage.reduce((sum, row) => sum + row.count, 0) }, motazen: { cells: motazenCoverage.length, classifiedTotal: motazenCoverage.reduce((sum, row) => sum + row.count, 0), canonicalTotal: motazen.records.length, unclassified: motazenUnclassified.map((claim) => ({ id: claim.id, status: claim.status })) }, aman: { rows: amanCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, amanCoverage.filter((row) => row.status === status).length])) }, hoqoqi: { rows: hoqoqiCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, hoqoqiCoverage.filter((row) => row.status === status).length])) } }, blockers };
-  const corpusIndex = sortCorpusIndex([...captures.entries()].map(([url, capture]) => ({ url, ...capture, text: undefined })));
-  await writeFile(path.join(CORPUS, 'index.json'), `${JSON.stringify(corpusIndex, null, 2)}\n`);
+  await writeFile(path.join(CORPUS, 'index.json'), `${JSON.stringify(liveCorpusIndex, null, 2)}\n`);
   await writeFile(path.join(OUTPUT, 'phase0-summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
   const checkpoint = [`# Phase 0 checkpoint — ${AUDIT_DATE}`, '', `**Gate: ${summary.gate}. Phase 1 was not started.**`, '', '## Canonical input integrity', '', markdownTable(Object.entries(inputIntegrity).map(([product, item]) => ({ product, before: item.countBefore, after: item.countAfter, sha256_before: item.sha256Before, sha256_after: item.sha256After, unchanged: item.bytesUnchanged })), ['product', 'before', 'after', 'sha256_before', 'sha256_after', 'unchanged']), '', '## Evidence totals', '', `- Source fetches: ${fetchTotals.requested} requested; ${fetchTotals.saved} saved; ${fetchTotals.blocked} blocked.`, `- Mostaed: ${mostaedAudit.length} audited; ${JSON.stringify(verdictTotals(mostaedAudit))}.`, `- Motazen: all ${motazen.records.length} inventoried; ${motazenAudit.length} statistical; ${JSON.stringify(verdictTotals(motazenAudit))}.`, `- Contacts: ${contactsAudit.length} inventoried; ${JSON.stringify(verdictTotals(contactsAudit))}.`, `- Matrices: Mostaed ${mostaedCoverage.length} cells/${summary.matrices.mostaed.total} cards; Motazen ${motazenCoverage.length} cells/${summary.matrices.motazen.classifiedTotal} classified claims plus ${motazenUnclassified.length} invalid-status claims; Aman ${amanCoverage.length} rows; Hoqoqi ${hoqoqiCoverage.length} rows.`, '', '## Commands', '', ...summary.commands.map((command) => `- \`${command}\``), '', '## Exact blockers', '', ...blockers.map((blocker) => `- ${blocker}`), '', 'The hard gate is fail-closed. No heuristic keyword or quantity match was treated as a semantic PASS, and Phase 1 was not started.', ''].join('\n');
   await writeFile(path.join(OUTPUT, 'PHASE0_CHECKPOINT.md'), checkpoint);
@@ -581,7 +762,8 @@ const audit = {
   loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, scanBroadQuantitativeCandidates,
   validateStatisticalDecisionCompleteness, extractContactNumbers,
   sourceContainsExactNumber, isScenarioCard, toCsv, validateRequiredInventories, evaluateGate,
-  validateSourceDocument, hasScenarioEvidence, sortCorpusIndex, loadPriorCapture, fetchAndCapture, writeOutputs,
+  validateSourceDocument, hasScenarioEvidence, sortCorpusIndex, loadPriorCapture, fetchAndCapture,
+  validateMostaedSemanticReview, writeOutputs,
 };
 export default audit;
 

@@ -6,7 +6,7 @@
 
 | product | before | after | sha256_before | sha256_after | unchanged |
 |---|---|---|---|---|---|
-| mostaed | 119 | 119 | b6ccfa5c4df2767dad72430c7f9b0f3668242c4dd054b477caf4054a9a9913ca | b6ccfa5c4df2767dad72430c7f9b0f3668242c4dd054b477caf4054a9a9913ca | true |
+| mostaed | 119 | 119 | 8287a0e9b53620e614a568bd77e0c9f03f2192141c39e94ed6eb26b2d10c8feb | 8287a0e9b53620e614a568bd77e0c9f03f2192141c39e94ed6eb26b2d10c8feb | true |
 | motazen | 130 | 130 | 0785c79746b050b3412b7fb38ab52c19748919d360e834ade3e12e620eba5822 | 0785c79746b050b3412b7fb38ab52c19748919d360e834ade3e12e620eba5822 | true |
 | aman | 10 | 10 | 49e0d976e71fba3c4c090acf5b58156a982cdfa2a17b7c8cd07f73b310177444 | 49e0d976e71fba3c4c090acf5b58156a982cdfa2a17b7c8cd07f73b310177444 | true |
 | hoqoqi | 15 | 15 | 8f1ed58a2e8c596a093213b1b70ba91efb7ae5eea8cb2616ed23ff53f583f4be | 8f1ed58a2e8c596a093213b1b70ba91efb7ae5eea8cb2616ed23ff53f583f4be | true |
@@ -14,7 +14,7 @@
 ## Evidence totals
 
 - Source fetches: 100 requested; 42 saved; 58 blocked.
-- Mostaed: 14 audited; {"PASS":0,"FAIL":0,"BLOCKED":14}.
+- Mostaed: 14 audited; {"PASS":14,"FAIL":0,"BLOCKED":0}.
 - Motazen: all 130 inventoried; 47 statistical; {"PASS":0,"FAIL":0,"BLOCKED":47}.
 - Contacts: 1 inventoried; {"PASS":1,"FAIL":0,"BLOCKED":0}.
 - Matrices: Mostaed 40 cells/119 cards; Motazen 52 cells/124 classified claims plus 6 invalid-status claims; Aman 24 rows; Hoqoqi 22 rows.
@@ -27,20 +27,6 @@
 
 ## Exact blockers
 
-- choking-adult: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- drowning: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- burn: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- electric-shock: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- infant-choking: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- heat-stroke: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- head-injury: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- shock: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- chemical-burn: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- breathing-difficulty: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- dislocation: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- genital-injury: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- skull-fracture: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- unconsciousness: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
 - mood-recurrence: BLOCKED — At least one cited source was inaccessible.
 - mood-antidepressants: BLOCKED — At least one cited source was inaccessible.
 - mood-efficacy-contested: BLOCKED — At least one cited source was inaccessible.
