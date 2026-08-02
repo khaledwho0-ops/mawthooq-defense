@@ -24,6 +24,9 @@ node tools/phase0-audit.mjs
 The production command is deliberately fail-closed. A non-zero exit can be the correct result:
 inspect `docs/audits/phase0-2026-08-02/PHASE0_CHECKPOINT.md` for the exact blockers. Successful
 source responses are captured in `corpus/`; failed probes never overwrite a successful capture.
+HTTP 200 and response length alone are insufficient: application shells without substantive visible
+source content are blocked, and scenario `source-found` rows additionally require scenario-specific
+evidence in the captured document.
 
 ## The loop, end to end
 

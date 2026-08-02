@@ -1,2 +1,4 @@
-docs/audits/**/corpus/*.html binary
-docs/audits/**/coverage-*.csv binary
+# Source captures and CSV matrices remain UTF-8 text and reviewable in diffs.
+# Exact fetched bytes can legitimately contain upstream trailing whitespace.
+docs/audits/**/corpus/*.html -whitespace
+docs/audits/**/coverage-*.csv -whitespace

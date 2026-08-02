@@ -147,3 +147,87 @@ Generated evidence totals: 102 files, 7,880,915 bytes; corpus: 89 files includin
 - Four scenario source candidates were unavailable in the final probe. They are `no-source`, never PASS/source-found.
 - The only contact PASS is exact-number provenance; it does not imply broader legal or content approval of that card.
 - Phase 1 was not started and no canonical content was edited.
+
+---
+
+## Review fix wave — substantive evidence and completeness hardening
+
+Review fixes were completed on 2026-08-02 without starting Phase 1.
+
+### Strict TDD evidence
+
+Focused regression tests were added before production changes.
+
+RED:
+
+```text
+node --test tools/phase0-audit.test.mjs
+17 tests; 11 pass; 6 fail; exit 1
+```
+
+The six expected failures covered: missing fractional quantity detection; generic JavaScript shell accepted as saved; missing scenario semantic-evidence classifier; missing required-inventory completeness proof; missing deterministic corpus-index sorter; and missing prior-capture error handling.
+
+GREEN:
+
+```text
+node --test tools/phase0-audit.test.mjs
+17 tests; 17 pass; 0 fail; exit 0
+```
+
+Supplementary corruption RED:
+
+```text
+node --test --test-name-pattern="prior-capture recovery" tools/phase0-audit.test.mjs
+1 test; 0 pass; 1 fail; Missing expected rejection.
+```
+
+### Fixes applied
+
+- Quantity extraction now reports non-overlapping exact surface quantities, including `half`, `نصف`, Arabic-Indic digits, Arabic decimal separator `٫`, percentages, and ratios. The canonical `bz5-replication-crisis` claim is now inventoried with exact quantity `half`.
+- Source capture now requires substantive visible page content in addition to HTTP 200, decoded length >1200, and no not-found marker. JavaScript-only application shells are BLOCKED before save/status use.
+- All 49 current Europe PMC application-shell responses and the 17-visible-character IdentityTheft.gov shell are marked BLOCKED in the regenerated, URL-sorted corpus index. They do not count as successful evidence.
+- Aman A8 and A10 are now `no-source` because IdentityTheft.gov returned a non-substantive shell.
+- Aman A22 is now `no-source`: the fetched CISA Secure Our World landing page is substantive but contains no router/Wi-Fi/wireless-network evidence.
+- Every scenario source-found classification now requires its scenario-specific semantic term groups to be present in the captured substantive document.
+- Gate completeness is computed from expected-versus-actual keys for Mostaed audit cards, all 130 Motazen inventory entries, the statistical subset, every extracted Aman/Hoqoqi contact occurrence, all Mostaed/Motazen cells, all claims represented in the required Motazen status matrix, and all A1–A24/H1–H22 rows.
+- Audit-record `complete` values are derived from required fields rather than assigned unconditionally.
+- Corpus index output is deterministically sorted by URL after concurrent acquisition.
+- Prior-capture fallback ignores only `ENOENT`. Permission/corruption read failures become explicit blockers; they are not swallowed.
+- The `.gitattributes` binary rules were removed. HTML and CSV evidence remain UTF-8 text and reviewable in diffs; only upstream trailing-whitespace lint is disabled for exact-byte captures.
+
+### Regenerated production evidence
+
+```text
+node tools/phase0-audit.mjs
+Phase 0 gate: BLOCKED
+exit 1 (intentional fail-closed result)
+```
+
+- Source URLs: 93 requested; 39 substantive captures counted; 54 BLOCKED.
+- Mostaed: 14 audit records; 0 PASS / 0 FAIL / 14 BLOCKED.
+- Motazen: all 130 inventoried; 41 statistical claims; 0 PASS / 0 FAIL / 41 BLOCKED.
+- Contacts: 1 occurrence; 1 PASS / 0 FAIL / 0 BLOCKED.
+- Aman: 24 rows; 0 built / 15 source-found / 8 no-source / 1 not-built-unprobed.
+- Hoqoqi: 22 rows; 0 built / 20 source-found / 2 no-source / 0 not-built-unprobed.
+- Mostaed matrix: 40 cells covering all 119 cards.
+- Motazen matrix: 52 required cells covering 124/130 claims. Completeness explicitly fails for the six out-of-vocabulary status records already listed above.
+- Corpus index: URL-sorted; all 39 entries marked saved were independently rehashed successfully.
+- Generated audit directory: 102 files / 7,859,517 bytes. The corpus directory contains 89 files on disk / 7,681,186 bytes; prior rejected shell captures are retained only as historical bytes and are BLOCKED/unreferenced as successful evidence in `corpus/index.json`.
+
+### Final verification
+
+```text
+node --test tools/phase0-audit.test.mjs  -> exit 0 (17/17)
+node tools/phase0-audit.mjs              -> exit 1, gate BLOCKED
+git diff --check                         -> exit 0
+node --check tools/phase0-audit.mjs      -> exit 0
+independent corpus/index/status check    -> exit 0
+```
+
+Canonical inputs remain count-for-count and byte-for-byte unchanged, with the same SHA256 values recorded earlier in this report: 119 Mostaed, 130 Motazen, 10 Aman, and 15 Hoqoqi.
+
+### Remaining concerns
+
+- Phase 0 remains BLOCKED by 14 Mostaed semantic exception reviews, 41 Motazen statistical scope reviews, and six Motazen statuses outside the required matrix vocabulary.
+- 54 source responses are currently blocked, including 49 Europe PMC shells and IdentityTheft.gov. A substantive official representation is required before they can support PASS/source-found.
+- Phase 1 was not started.

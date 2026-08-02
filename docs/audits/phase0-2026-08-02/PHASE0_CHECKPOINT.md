@@ -13,9 +13,9 @@
 
 ## Evidence totals
 
-- Source fetches: 92 requested; 88 saved; 4 blocked.
+- Source fetches: 93 requested; 39 saved; 54 blocked.
 - Mostaed: 14 audited; {"PASS":0,"FAIL":0,"BLOCKED":14}.
-- Motazen: all 130 inventoried; 39 statistical; {"PASS":0,"FAIL":0,"BLOCKED":39}.
+- Motazen: all 130 inventoried; 41 statistical; {"PASS":0,"FAIL":0,"BLOCKED":41}.
 - Contacts: 1 inventoried; {"PASS":1,"FAIL":0,"BLOCKED":0}.
 - Matrices: Mostaed 40 cells/119 cards; Motazen 52 cells/124 classified claims plus 6 invalid-status claims; Aman 24 rows; Hoqoqi 22 rows.
 
@@ -41,42 +41,44 @@
 - genital-injury: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
 - skull-fracture: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
 - unconsciousness: BLOCKED — Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.
-- mood-recurrence: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- mood-antidepressants: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- mood-efficacy-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- mood-regional: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- anx-benzo-caution: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- anx-help-exists: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- anx-how-strong-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- anx-why-unknown: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- sleep-disruptors-caffeine-shift: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- sleep-melatonin-overuse: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- sleep-insomnia-features: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- sleep-eight-hours-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- sleep-normal-vs-disorder: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- trauma-features-clusters: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- trauma-most-recover: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- adhd-real-valid: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- adhd-normal-vs-disorder: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- p0-languishing: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- p0-bps-frame: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- p0-bps-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- skill-breathing: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz2-serotonin-simple-story-debunked: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz2-serotonin-role-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz3-top-ten-burden: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
+- mood-recurrence: BLOCKED — At least one cited source was inaccessible.
+- mood-antidepressants: BLOCKED — At least one cited source was inaccessible.
+- mood-efficacy-contested: BLOCKED — At least one cited source was inaccessible.
+- mood-regional: BLOCKED — At least one cited source was inaccessible.
+- anx-benzo-caution: BLOCKED — At least one cited source was inaccessible.
+- anx-help-exists: BLOCKED — At least one cited source was inaccessible.
+- anx-how-strong-contested: BLOCKED — At least one cited source was inaccessible.
+- anx-why-unknown: BLOCKED — At least one cited source was inaccessible.
+- sleep-disruptors-caffeine-shift: BLOCKED — At least one cited source was inaccessible.
+- sleep-melatonin-overuse: BLOCKED — At least one cited source was inaccessible.
+- sleep-insomnia-features: BLOCKED — At least one cited source was inaccessible.
+- sleep-eight-hours-contested: BLOCKED — At least one cited source was inaccessible.
+- sleep-normal-vs-disorder: BLOCKED — At least one cited source was inaccessible.
+- trauma-features-clusters: BLOCKED — At least one cited source was inaccessible.
+- trauma-most-recover: BLOCKED — At least one cited source was inaccessible.
+- adhd-real-valid: BLOCKED — At least one cited source was inaccessible.
+- adhd-normal-vs-disorder: BLOCKED — At least one cited source was inaccessible.
+- p0-languishing: BLOCKED — At least one cited source was inaccessible.
+- p0-attend-positive: BLOCKED — At least one cited source was inaccessible.
+- p0-bps-frame: BLOCKED — At least one cited source was inaccessible.
+- p0-bps-contested: BLOCKED — At least one cited source was inaccessible.
+- skill-breathing: BLOCKED — At least one cited source was inaccessible.
+- bz2-serotonin-simple-story-debunked: BLOCKED — At least one cited source was inaccessible.
+- bz2-serotonin-role-contested: BLOCKED — At least one cited source was inaccessible.
+- bz3-top-ten-burden: BLOCKED — At least one cited source was inaccessible.
 - bz3-treatment-gap: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz3-true-magnitude-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz4-illusory-truth: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz4-anecdote-not-evidence: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz4-confirmation-bias-search: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz4-actuarial-vs-clinical: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz4-dunning-kruger: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz5-study-vs-know: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz5-crisis-overstated: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz6-overmedicalizing-grief-contested: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz6-definition-of-disorder-unsettled: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
-- bz7-categories-are-human-decisions: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
+- bz3-true-magnitude-contested: BLOCKED — At least one cited source was inaccessible.
+- bz4-illusory-truth: BLOCKED — At least one cited source was inaccessible.
+- bz4-anecdote-not-evidence: BLOCKED — At least one cited source was inaccessible.
+- bz4-confirmation-bias-search: BLOCKED — At least one cited source was inaccessible.
+- bz4-actuarial-vs-clinical: BLOCKED — At least one cited source was inaccessible.
+- bz4-dunning-kruger: BLOCKED — At least one cited source was inaccessible.
+- bz5-study-vs-know: BLOCKED — At least one cited source was inaccessible.
+- bz5-replication-crisis: BLOCKED — At least one cited source was inaccessible.
+- bz5-crisis-overstated: BLOCKED — At least one cited source was inaccessible.
+- bz6-overmedicalizing-grief-contested: BLOCKED — At least one cited source was inaccessible.
+- bz6-definition-of-disorder-unsettled: BLOCKED — At least one cited source was inaccessible.
+- bz7-categories-are-human-decisions: BLOCKED — At least one cited source was inaccessible.
 - burnout-is-real: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - grief-vs-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
 - postpartum-depression: BLOCKED — Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.
@@ -86,5 +88,6 @@
 - Motazen matrix psychosis-recovery: FAIL — status "grounded" is outside established|contested|debunked|unknown.
 - Motazen matrix adult-adhd: FAIL — status "needs_review" is outside established|contested|debunked|unknown.
 - Motazen matrix loneliness-health: FAIL — status "needs_review" is outside established|contested|debunked|unknown.
+- Inventory completeness: FAIL — Motazen claims represented in matrix missing: addiction-is-illness, adult-adhd, loneliness-health, postpartum-depression, psychosis-recovery, seasonal-affective
 
 The hard gate is fail-closed. No heuristic keyword or quantity match was treated as a semantic PASS, and Phase 1 was not started.

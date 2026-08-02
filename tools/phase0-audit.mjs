@@ -66,6 +66,22 @@ const HOQOQI_SCENARIOS = [
   ['H22', '«إزاي أعرف حقي حقيقي ولا حد بيضحك عليّا؟»', CONSTITUTION],
 ];
 
+const SCENARIO_TERMS = {
+  A1: [['missing person', 'report missing']], A3: [['family emergency', 'kidnap', 'ransom']], A4: [['grooming', 'child safety', 'children online']],
+  A5: [['sextortion']], A6: [['stalkerware', 'spyware', 'phone hackers', 'phone from hackers']], A7: [['sim swap']],
+  A8: [['identity theft', 'unauthorized bank']], A9: [['lost phone', 'stolen phone', 'lost device', 'stolen device']], A10: [['identity theft', 'new account', 'account opened']],
+  A11: [['scammed', 'reverse the transaction']], A12: [['job scam', 'money mule']], A13: [['cryptocurrency', 'crypto']], A14: [['scammed', 'online shopping']],
+  A15: [['hacked account']], A16: [['2-step', 'two-step', 'multifactor', 'multi-factor']], A17: [['ransomware']], A18: [['data breach']],
+  A19: [['kids online', 'children online', 'child online']], A20: [['hacked account']], A21: [['smart device', 'security camera']],
+  A22: [['router', 'wi-fi', 'wifi', 'wireless network']], A23: [['older adults', 'older consumers', 'elder fraud']], A24: [['social media'], ['privacy', 'personal information']],
+  H1: [['24 hours', 'twenty-four hours'], ['lawyer', 'attorney']], H2: [['homes are inviolable', 'judicial warrant']], H3: [['statute of limitations', 'rights and freedoms']],
+  H4: [['harassment', 'sexual violence']], H5: [['torture']], H6: [['child'], ['violence', 'abuse']], H7: [['elder abuse', 'abuse of older people']],
+  H8: [['violence against women']], H9: [['education']], H10: [['health']], H11: [['dismissal', 'termination', 'unlawful firing']], H12: [['wage', 'remuneration']],
+  H13: [['occupational safety', 'safety and health at work']], H14: [['discrimination', 'equal opportunity']], H15: [['consumer', 'المستهلك'], ['complaint', 'defective', 'شكوى', 'الشكاوى', 'معيبة']],
+  H16: [['scammed', 'fraud']], H17: [['eviction', 'tenant', 'housing']], H18: [['public place', 'public access']], H19: [['human rights']],
+  H20: [['women'], ['equal', 'equality']], H21: [['equal', 'equality']], H22: [['rights and freedoms', 'human rights']],
+};
+
 function normalizeDigits(value) {
   return String(value).replace(/[٠-٩۰-۹]/g, (digit) => ARABIC_DIGITS.get(digit));
 }
@@ -120,17 +136,27 @@ function assertSourceReferences(records, sources) {
 }
 
 function detectStatisticalQuantities(text) {
-  const value = normalizeDigits(text);
-  const matches = [];
+  const value = String(text);
+  const digit = '[0-9٠-٩۰-۹]';
+  const candidates = [];
   const patterns = [
-    /\b\d+(?:[.,]\d+)?\s*(?:%|percent|percentage|٪)/giu,
-    /\b\d+(?:[.,]\d+)?\s*[:/]\s*\d+(?:[.,]\d+)?\b/gu,
-    /\b\d+(?:[.,]\d+)?\b/gu,
+    new RegExp(`${digit}+(?:[.,٫]${digit}+)?\\s*(?:%|٪|percent(?:age)?)`, 'giu'),
+    new RegExp(`${digit}+(?:[.,٫]${digit}+)?\\s*[:/]\\s*${digit}+(?:[.,٫]${digit}+)?`, 'gu'),
+    /\b(?:one[- ]half|half|one[- ]third|a third|one[- ]quarter|a quarter|two[- ]thirds|three[- ]quarters)\b/giu,
+    /(?:نصف|النصف|ثلث|الثلث|ربع|الربع|تلت|التلت)(?![\u0600-\u06ff])/gu,
+    new RegExp(`(?<!${digit})${digit}+(?:[.,٫]${digit}+)?(?!${digit})`, 'gu'),
     /\b(?:one|two|three|four|five|six|seven|eight|nine|ten|hundred|thousand|million|billion)\b(?=\s+(?:people|persons|participants|patients|adults|children|cases|respondents|workers|women|men|studies|times|percent))/giu,
     /(?:واحد|واحدة|اتنين|اثنين|اثنان|ثلاثة|تلاتة|أربعة|اربعة|خمسة|ستة|سبعة|ثمانية|تمانية|تسعة|عشرة|مئة|مائة|ألف|مليون|مليار)(?=\s+(?:شخص|أشخاص|مشارك|مشاركين|مريض|مرضى|دراسة|دراسات|مرة|مرات|في المئة|بالمئة|من كل))/gu,
   ];
-  for (const pattern of patterns) for (const match of value.matchAll(pattern)) matches.push(match[0]);
-  return { hasStatistic: matches.length > 0, quantities: [...new Set(matches)] };
+  patterns.forEach((pattern, priority) => {
+    for (const match of value.matchAll(pattern)) candidates.push({ start: match.index, end: match.index + match[0].length, text: match[0].trim(), priority });
+  });
+  const accepted = [];
+  for (const candidate of candidates.sort((a, b) => a.priority - b.priority || a.start - b.start || b.end - a.end)) {
+    if (!accepted.some((item) => candidate.start < item.end && candidate.end > item.start)) accepted.push(candidate);
+  }
+  const quantities = accepted.sort((a, b) => a.start - b.start).map((item) => item.text);
+  return { hasStatistic: quantities.length > 0, quantities };
 }
 
 function extractContactNumbers(record) {
@@ -179,9 +205,60 @@ function toCsv(rows, columns) {
   return `${columns.map(csvCell).join(',')}\r\n${sorted.map((row) => columns.map((column) => csvCell(row[column])).join(',')).join('\r\n')}\r\n`;
 }
 
-function evaluateGate(records, matricesComplete) {
+function validateRequiredInventories(inventories) {
+  const errors = [];
+  for (const inventory of inventories) {
+    const actual = new Set(inventory.actual);
+    const missing = [...new Set(inventory.expected)].filter((key) => !actual.has(key)).sort((a, b) => a.localeCompare(b, 'en'));
+    if (missing.length) errors.push(`${inventory.name} missing: ${missing.join(', ')}`);
+  }
+  return { complete: errors.length === 0, errors };
+}
+
+function evaluateGate(records, matricesComplete, inventoryCompleteness = { complete: true, errors: [] }) {
   const blockers = records.filter((record) => record?.verdict !== 'PASS' || record?.complete !== true);
-  return { clear: matricesComplete === true && blockers.length === 0, blockers: blockers.length + (matricesComplete ? 0 : 1) };
+  const structuralBlockers = (matricesComplete ? 0 : 1) + (inventoryCompleteness.complete ? 0 : inventoryCompleteness.errors.length || 1);
+  return { clear: matricesComplete === true && inventoryCompleteness.complete === true && blockers.length === 0, blockers: blockers.length + structuralBlockers };
+}
+
+function validateSourceDocument(decoded) {
+  const visible = plainText(decoded);
+  const words = visible.toLowerCase().match(/[a-zà-ž\u0600-\u06ff]{3,}/gu) ?? [];
+  const uniqueWords = new Set(words);
+  const shellMarker = /(?:requires javascript to function|enable javascript to (?:run|use) this app)/i.test(visible);
+  const rootOnly = /<div\b[^>]*\bid=["'](?:root|app)["'][^>]*>\s*<\/div>/i.test(decoded) && visible.length < 1_000;
+  if (visible.length < 1_000 || shellMarker || rootOnly) {
+    return { substantive: false, reason: `non-substantive page content (${visible.length} visible characters; ${uniqueWords.size} distinct words)`, visibleText: visible };
+  }
+  return { substantive: true, reason: 'substantive page-specific content', visibleText: visible };
+}
+
+function hasScenarioEvidence(sourceText, requiredTermGroups = []) {
+  const visible = plainText(sourceText).toLowerCase();
+  const missingGroups = requiredTermGroups.filter((group) => !group.some((term) => visible.includes(String(term).toLowerCase())));
+  return { matched: missingGroups.length === 0, missingGroups };
+}
+
+function sortCorpusIndex(entries) {
+  return [...entries].sort((a, b) => String(a.url).localeCompare(String(b.url), 'en'));
+}
+
+async function loadPriorCapture(url, options = {}) {
+  const { corpusDir = CORPUS, filename = stableFilename(url), expectedSha256, readFileImpl = readFile, statImpl = stat } = options;
+  try {
+    const destination = path.join(corpusDir, filename);
+    const bytes = await readFileImpl(destination);
+    const sha256 = createHash('sha256').update(bytes).digest('hex');
+    if (expectedSha256 && sha256 !== expectedSha256) throw new Error(`prior capture hash mismatch for ${filename}`);
+    const decoded = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
+    const assessment = validateSourceDocument(decoded);
+    if (!assessment.substantive) return null;
+    const existingStat = await statImpl(destination);
+    return { status: 'saved', httpStatus: 200, decodedLength: decoded.length, finalUrl: url, retrievedAt: existingStat.mtime.toISOString(), sha256, filename, text: decoded };
+  } catch (error) {
+    if (error?.code === 'ENOENT') return null;
+    throw error;
+  }
 }
 
 async function fetchAndCapture(url, options = {}) {
@@ -194,8 +271,9 @@ async function fetchAndCapture(url, options = {}) {
     const decoded = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
     const top = plainText(decoded.slice(0, 12_000)).toLowerCase();
     const notFound = /(?:page not found|404 not found|the page you requested (?:was not found|could not be found)|الصفحة غير موجودة)/i.test(top);
-    if (response.status !== 200 || decoded.length <= 1200 || notFound) {
-      return { status: 'blocked', httpStatus: response.status, decodedLength: decoded.length, finalUrl: response.url || url, retrievedAt, reason: response.status !== 200 ? `HTTP ${response.status}` : decoded.length <= 1200 ? `decoded body ${decoded.length} <= 1200` : 'not-found marker near top' };
+    const assessment = validateSourceDocument(decoded);
+    if (response.status !== 200 || decoded.length <= 1200 || notFound || !assessment.substantive) {
+      return { status: 'blocked', httpStatus: response.status, decodedLength: decoded.length, finalUrl: response.url || url, retrievedAt, reason: response.status !== 200 ? `HTTP ${response.status}` : decoded.length <= 1200 ? `decoded body ${decoded.length} <= 1200` : notFound ? 'not-found marker near top' : assessment.reason };
     }
     await mkdir(corpusDir, { recursive: true });
     const destination = path.join(corpusDir, filename);
@@ -241,6 +319,15 @@ function markdownTable(rows, columns) {
 async function fetchAll(urls) {
   const unique = [...new Set(urls.filter(Boolean))].sort();
   const results = new Map();
+  let priorIndex = new Map();
+  let priorIndexError = null;
+  try {
+    const entries = JSON.parse(await readFile(path.join(CORPUS, 'index.json'), 'utf8'));
+    if (!Array.isArray(entries)) throw new Error('prior corpus index must be an array');
+    priorIndex = new Map(entries.map((entry) => [entry.url, entry]));
+  } catch (error) {
+    if (error?.code !== 'ENOENT') priorIndexError = error;
+  }
   let cursor = 0;
   async function worker() {
     while (cursor < unique.length) {
@@ -248,17 +335,24 @@ async function fetchAll(urls) {
       const filename = stableFilename(url);
       const capture = await fetchAndCapture(url, { filename });
       if (capture.status === 'blocked' && capture.httpStatus === null) {
+        if (priorIndexError) {
+          results.set(url, { ...capture, reason: `prior-index blocker: ${priorIndexError.message || priorIndexError}` });
+          continue;
+        }
+        const priorRecord = priorIndex.get(url);
+        if (priorRecord?.status !== 'saved') {
+          results.set(url, capture);
+          continue;
+        }
         try {
-          const destination = path.join(CORPUS, filename);
-          const bytes = await readFile(destination);
-          const decoded = new TextDecoder('utf-8', { fatal: false }).decode(bytes);
-          const existingStat = await stat(destination);
-          if (decoded.length > 1200 && !/(?:page not found|404 not found|الصفحة غير موجودة)/i.test(plainText(decoded.slice(0, 12_000)))) {
-            results.set(url, { status: 'saved', httpStatus: 200, decodedLength: decoded.length, finalUrl: url, retrievedAt: existingStat.mtime.toISOString(), sha256: createHash('sha256').update(bytes).digest('hex'), filename, text: decoded, preservedAfterFailedProbe: capture.reason });
+          const prior = await loadPriorCapture(url, { filename, expectedSha256: priorRecord.sha256 });
+          if (prior) {
+            results.set(url, { ...prior, preservedAfterFailedProbe: capture.reason });
             continue;
           }
-        } catch {
-          // No prior successful capture exists; retain the fail-closed probe result.
+        } catch (error) {
+          results.set(url, { ...capture, reason: `prior-capture blocker: ${error.message || error}` });
+          continue;
         }
       }
       results.set(url, capture);
@@ -283,7 +377,10 @@ async function generateScenarioCoverage(inventory, cards, project, captures) {
     if (built) return { id, title, status: 'built', probe_url: '', probe_result: 'existing required-shape scenario card' };
     if (!url) return { id, title, status: 'not-built-unprobed', probe_url: '', probe_result: 'no official/primary candidate selected' };
     const capture = captures.get(url);
-    return { id, title, status: capture?.status === 'saved' ? 'source-found' : 'no-source', probe_url: url, probe_result: capture?.status === 'saved' ? `200; ${capture.decodedLength} chars; sha256 ${capture.sha256}` : capture?.reason ?? 'probe unavailable' };
+    if (capture?.status !== 'saved') return { id, title, status: 'no-source', probe_url: url, probe_result: capture?.reason ?? 'probe unavailable' };
+    const evidence = hasScenarioEvidence(capture.text, SCENARIO_TERMS[id] ?? []);
+    if (!evidence.matched) return { id, title, status: 'no-source', probe_url: url, probe_result: `200 but not scenario-specific; missing semantic evidence for ${evidence.missingGroups.map((group) => group.join('|')).join('; ')}` };
+    return { id, title, status: 'source-found', probe_url: url, probe_result: `200; substantive scenario evidence; ${capture.decodedLength} chars; sha256 ${capture.sha256}` };
   });
 }
 
@@ -301,6 +398,10 @@ async function writeOutputs() {
 
   const mostaedScope = mostaed.records.filter((card) => Number(card.level) >= 4 && sourceRefs(card, mostaed.sources).some((source) => /medlineplus\.gov\/ency\//i.test(source.url) && /A\.D\.A\.M|Ebix|MedlinePlus/i.test(`${source.label} ${JSON.stringify(source.metadata)}`)));
   const statisticalClaims = motazen.records.filter((claim) => detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`).hasStatistic);
+  const allClaimsInventory = motazen.records.map((claim) => {
+    const detected = detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`);
+    return { id: claim.id, domain: claim.domain, status: claim.status, statistical: detected.hasStatistic ? 'yes' : 'no', quantities: detected.quantities.join(' ') };
+  });
   const contactItems = [['aman', aman], ['hoqoqi', hoqoqi]].flatMap(([project, data]) => data.records.flatMap((card) => extractContactNumbers(card).map((contact) => ({ project, card, contact, refs: sourceRefs(card, data.sources) }))));
   const auditUrls = [...mostaedScope.flatMap((card) => sourceRefs(card, mostaed.sources).filter((source) => /medlineplus\.gov\/ency\//i.test(source.url)).map((source) => source.url)), ...statisticalClaims.flatMap((claim) => sourceRefs(claim, motazen.sources).map((source) => source.url)), ...contactItems.flatMap((item) => item.refs.map((source) => source.url))];
   const scenarioUrls = [...AMAN_SCENARIOS, ...HOQOQI_SCENARIOS].map((item) => item[2]).filter(Boolean);
@@ -311,14 +412,17 @@ async function writeOutputs() {
     const fetched = refs.filter((source) => source.capture?.status === 'saved');
     const lines = [...(card.do ?? []).map((item, index) => `do[${index}]: ${typeof item === 'string' ? item : item.t}`), ...(card.dont ?? []).map((item, index) => `dont[${index}]: ${typeof item === 'string' ? item : item.t}`)];
     const qualifiers = fetched.map((source) => excerptAround(source.capture.text, [], true)).filter((text) => !text.startsWith('(No matching'));
-    return { id: card.id, title: card.title?.ar ?? card.title?.en ?? '', level: card.level, refs, lines, qualifiers, verdict: 'BLOCKED', complete: true, reason: fetched.length !== refs.length ? 'At least one referenced source was inaccessible.' : 'Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.' };
+    const reason = fetched.length !== refs.length ? 'At least one referenced source was inaccessible.' : 'Fetched bytes are preserved, but full-context human semantic comparison of every actionable line and carried exception is not recorded; heuristic extraction cannot award PASS.';
+    return { id: card.id, title: card.title?.ar ?? card.title?.en ?? '', level: card.level, refs, lines, qualifiers, verdict: 'BLOCKED', complete: Boolean(card.id && refs.length && lines.length && reason), reason };
   });
 
   const motazenAudit = statisticalClaims.map((claim) => {
     const detected = detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`);
     const refs = sourceStatus(captures, sourceRefs(claim, motazen.sources));
     const excerpts = refs.map((source) => ({ id: source.id, excerpt: source.capture?.status === 'saved' ? excerptAround(source.capture.text, detected.quantities) : '(Source inaccessible.)' }));
-    return { id: claim.id, quantities: detected.quantities, claim: `${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`, refs, excerpts, verdict: 'BLOCKED', complete: true, reason: refs.some((source) => source.capture?.status !== 'saved') ? 'At least one cited source was inaccessible.' : 'Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.' };
+    const claimText = `${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`;
+    const reason = refs.some((source) => source.capture?.status !== 'saved') ? 'At least one cited source was inaccessible.' : 'Exact population/outcome/geography/time/relationship/units/rounding/qualifier agreement requires a recorded semantic review; automated quantity detection cannot award PASS.';
+    return { id: claim.id, quantities: detected.quantities, claim: claimText, refs, excerpts, verdict: 'BLOCKED', complete: Boolean(claim.id && detected.quantities.length && claimText.trim() && refs.length && reason), reason };
   });
 
   const contactsAudit = contactItems.map((item) => {
@@ -326,7 +430,9 @@ async function writeOutputs() {
     const matches = statuses.filter((source) => source.capture?.status === 'saved' && sourceContainsExactNumber(source.capture.text, item.contact.number));
     const inaccessible = statuses.some((source) => source.capture?.status !== 'saved');
     const verdict = matches.length ? 'PASS' : inaccessible ? 'BLOCKED' : 'FAIL';
-    return { project: item.project, cardId: item.card.id, fieldPath: item.contact.fieldPath, number: item.contact.number, authority: item.card.contacts?.find((contact) => normalizeDigits(contact.number ?? '').replace(/\D/g, '') === item.contact.number)?.label ?? '(authority not explicit)', refs: statuses, matches, verdict, complete: true, reason: matches.length ? 'Exact number found in a separately cited source record.' : inaccessible ? 'No accessible cited source established the exact number.' : 'Exact number absent from every cited source; true-but-unsourced remains FAIL.' };
+    const authority = item.card.contacts?.find((contact) => normalizeDigits(contact.number ?? '').replace(/\D/g, '') === item.contact.number)?.label ?? '(authority not explicit)';
+    const reason = matches.length ? 'Exact number found in a separately cited source record.' : inaccessible ? 'No accessible cited source established the exact number.' : 'Exact number absent from every cited source; true-but-unsourced remains FAIL.';
+    return { project: item.project, cardId: item.card.id, fieldPath: item.contact.fieldPath, number: item.contact.number, authority, refs: statuses, matches, verdict, complete: Boolean(item.project && item.card.id && item.contact.fieldPath && item.contact.number && authority && statuses.length && reason), reason };
   });
 
   const mostaedCoverage = buildCoverage(mostaed.records, 'level', [1, 2, 3, 4, 5]);
@@ -336,10 +442,6 @@ async function writeOutputs() {
 
   const linesForSource = (source) => `${source.id} — ${source.url} — ${source.capture?.status === 'saved' ? `HTTP 200; ${source.capture.decodedLength} chars; SHA256 ${source.capture.sha256}; saved corpus/${source.capture.filename}; final ${source.capture.finalUrl}; retrieved ${source.capture.retrievedAt}` : `BLOCKED: ${source.capture?.reason ?? 'no capture'}`}`;
   const mostaedMd = ['# Mostaed dropped-exceptions audit', '', `Observed qualifying inventory: ${mostaedAudit.length} cards (the canonical current data, not the older ~33 estimate).`, '', ...mostaedAudit.flatMap((record) => [`## ${record.id} — ${record.title}`, '', `- Level: L${record.level}`, `- Sources: ${record.refs.map(linesForSource).join('; ')}`, `- Source qualifiers/exceptions found automatically: ${record.qualifiers.length ? record.qualifiers.join(' … ') : '(none located automatically; this is not proof none exist)'}`, `- Card text checked: ${record.lines.join(' | ')}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
-  const allClaimsInventory = motazen.records.map((claim) => {
-    const detected = detectStatisticalQuantities(`${claim.claim_ar ?? ''}\n${claim.claim_en ?? ''}`);
-    return { id: claim.id, domain: claim.domain, status: claim.status, statistical: detected.hasStatistic ? 'yes' : 'no', quantities: detected.quantities.join(' ') };
-  });
   const motazenMd = ['# Motazen statistics-scope audit', '', `All ${motazen.records.length} claims were inventoried; ${motazenAudit.length} contain detected statistical quantities in claim text.`, '', ...motazenAudit.flatMap((record) => [`## ${record.id}`, '', `- Exact detected quantity/scope in claim: ${record.quantities.join(', ')}`, `- Claim text: ${record.claim.replace(/\n/g, ' / ')}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Supporting excerpts with surrounding qualifiers: ${record.excerpts.map((item) => `${item.id}: ${item.excerpt}`).join(' … ') || '(none)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, '']), '## Complete 130-claim inventory', '', markdownTable(allClaimsInventory, ['id', 'domain', 'status', 'statistical', 'quantities']), ''].join('\n');
   const contactsMd = ['# Aman and Hoqoqi contact provenance audit', '', `Inventory: ${contactsAudit.length} rendered/actionable contact numbers.`, '', ...contactsAudit.flatMap((record) => [`## ${record.project}/${record.cardId} — ${record.number}`, '', `- Field path: ${record.fieldPath}`, `- Authority: ${record.authority}`, `- Sources: ${record.refs.map(linesForSource).join('; ') || '(none)'}`, `- Exact-number excerpt: ${record.matches.map((source) => excerptAround(source.capture.text, [record.number])).join(' … ') || '(not found)'}`, `- Verdict: **${record.verdict}**`, `- Basis: ${record.reason}`, ''])].join('\n');
 
@@ -372,27 +474,47 @@ async function writeOutputs() {
   }));
   const allAudits = [...mostaedAudit, ...motazenAudit, ...contactsAudit];
   const motazenUnclassified = motazen.records.filter((claim) => !STATUSES.includes(claim.status));
+  const contactKey = (project, cardId, fieldPath, number) => `${project}/${cardId}/${fieldPath}/${number}`;
+  const mostaedDomains = [...new Set(mostaed.records.map((card) => card.domain ?? '(missing)'))];
+  const motazenDomains = [...new Set(motazen.records.map((claim) => claim.domain ?? '(missing)'))];
+  const inventoryCompleteness = validateRequiredInventories([
+    { name: 'Mostaed audit cards', expected: mostaedScope.map((card) => card.id), actual: mostaedAudit.map((record) => record.id) },
+    { name: 'Motazen 130-claim inventory', expected: motazen.records.map((claim) => claim.id), actual: allClaimsInventory.map((record) => record.id) },
+    { name: 'Motazen statistical subset', expected: statisticalClaims.map((claim) => claim.id), actual: motazenAudit.map((record) => record.id) },
+    { name: 'Aman/Hoqoqi contact occurrences', expected: contactItems.map((item) => contactKey(item.project, item.card.id, item.contact.fieldPath, item.contact.number)), actual: contactsAudit.map((record) => contactKey(record.project, record.cardId, record.fieldPath, record.number)) },
+    { name: 'Mostaed matrix cells', expected: mostaedDomains.flatMap((domain) => [1, 2, 3, 4, 5].map((level) => `${domain}/L${level}`)), actual: mostaedCoverage.map((row) => `${row.domain}/L${row.level}`) },
+    { name: 'Motazen matrix cells', expected: motazenDomains.flatMap((domain) => STATUSES.map((status) => `${domain}/${status}`)), actual: motazenCoverage.map((row) => `${row.domain}/${row.status}`) },
+    { name: 'Motazen claims represented in matrix', expected: motazen.records.map((claim) => claim.id), actual: motazenCoverage.flatMap((row) => row.ids ? row.ids.split(' ') : []) },
+    { name: 'Aman scenario rows', expected: AMAN_SCENARIOS.map(([id]) => id), actual: amanCoverage.map((row) => row.id) },
+    { name: 'Hoqoqi scenario rows', expected: HOQOQI_SCENARIOS.map(([id]) => id), actual: hoqoqiCoverage.map((row) => row.id) },
+  ]);
   const matricesComplete = mostaedCoverage.length > 0
     && mostaedCoverage.reduce((sum, row) => sum + row.count, 0) === mostaed.records.length
     && motazenCoverage.length > 0
     && motazenCoverage.reduce((sum, row) => sum + row.count, 0) === motazen.records.length
     && amanCoverage.length === 24 && hoqoqiCoverage.length === 22;
-  const gate = evaluateGate(allAudits, matricesComplete);
+  const gate = evaluateGate(allAudits, matricesComplete, inventoryCompleteness);
   const verdictTotals = (records) => Object.fromEntries(['PASS', 'FAIL', 'BLOCKED'].map((verdict) => [verdict, records.filter((record) => record.verdict === verdict).length]));
   const fetchTotals = { requested: captures.size, saved: [...captures.values()].filter((capture) => capture.status === 'saved').length, blocked: [...captures.values()].filter((capture) => capture.status !== 'saved').length };
   const blockers = [
     ...allAudits.filter((record) => record.verdict !== 'PASS').map((record) => `${record.id ?? `${record.project}/${record.cardId}/${record.number}`}: ${record.verdict} — ${record.reason}`),
     ...motazenUnclassified.map((claim) => `Motazen matrix ${claim.id}: FAIL — status ${JSON.stringify(claim.status)} is outside established|contested|debunked|unknown.`),
+    ...inventoryCompleteness.errors.map((error) => `Inventory completeness: FAIL — ${error}`),
   ];
-  const summary = { auditDate: AUDIT_DATE, gate: gate.clear ? 'CLEAR' : 'BLOCKED', phase1Started: false, commands: ['node --test tools/phase0-audit.test.mjs', 'node tools/phase0-audit.mjs', 'git diff --check'], inputs: inputIntegrity, sourceFetchTotals: fetchTotals, audits: { mostaedDroppedExceptions: { inventory: mostaedAudit.length, verdicts: verdictTotals(mostaedAudit) }, motazenStatisticsScope: { allClaimsInventoried: motazen.records.length, statisticalClaims: motazenAudit.length, verdicts: verdictTotals(motazenAudit) }, contactsProvenance: { inventory: contactsAudit.length, verdicts: verdictTotals(contactsAudit) } }, matrices: { complete: matricesComplete, mostaed: { cells: mostaedCoverage.length, total: mostaedCoverage.reduce((sum, row) => sum + row.count, 0) }, motazen: { cells: motazenCoverage.length, classifiedTotal: motazenCoverage.reduce((sum, row) => sum + row.count, 0), canonicalTotal: motazen.records.length, unclassified: motazenUnclassified.map((claim) => ({ id: claim.id, status: claim.status })) }, aman: { rows: amanCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, amanCoverage.filter((row) => row.status === status).length])) }, hoqoqi: { rows: hoqoqiCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, hoqoqiCoverage.filter((row) => row.status === status).length])) } }, blockers };
-  await writeFile(path.join(CORPUS, 'index.json'), `${JSON.stringify([...captures.entries()].map(([url, capture]) => ({ url, ...capture, text: undefined })), null, 2)}\n`);
+  const summary = { auditDate: AUDIT_DATE, gate: gate.clear ? 'CLEAR' : 'BLOCKED', phase1Started: false, commands: ['node --test tools/phase0-audit.test.mjs', 'node tools/phase0-audit.mjs', 'git diff --check'], inputs: inputIntegrity, sourceFetchTotals: fetchTotals, inventoryCompleteness, audits: { mostaedDroppedExceptions: { inventory: mostaedAudit.length, verdicts: verdictTotals(mostaedAudit) }, motazenStatisticsScope: { allClaimsInventoried: motazen.records.length, statisticalClaims: motazenAudit.length, verdicts: verdictTotals(motazenAudit) }, contactsProvenance: { inventory: contactsAudit.length, verdicts: verdictTotals(contactsAudit) } }, matrices: { complete: matricesComplete, mostaed: { cells: mostaedCoverage.length, total: mostaedCoverage.reduce((sum, row) => sum + row.count, 0) }, motazen: { cells: motazenCoverage.length, classifiedTotal: motazenCoverage.reduce((sum, row) => sum + row.count, 0), canonicalTotal: motazen.records.length, unclassified: motazenUnclassified.map((claim) => ({ id: claim.id, status: claim.status })) }, aman: { rows: amanCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, amanCoverage.filter((row) => row.status === status).length])) }, hoqoqi: { rows: hoqoqiCoverage.length, statuses: Object.fromEntries(['built', 'source-found', 'no-source', 'not-built-unprobed'].map((status) => [status, hoqoqiCoverage.filter((row) => row.status === status).length])) } }, blockers };
+  const corpusIndex = sortCorpusIndex([...captures.entries()].map(([url, capture]) => ({ url, ...capture, text: undefined })));
+  await writeFile(path.join(CORPUS, 'index.json'), `${JSON.stringify(corpusIndex, null, 2)}\n`);
   await writeFile(path.join(OUTPUT, 'phase0-summary.json'), `${JSON.stringify(summary, null, 2)}\n`);
   const checkpoint = [`# Phase 0 checkpoint — ${AUDIT_DATE}`, '', `**Gate: ${summary.gate}. Phase 1 was not started.**`, '', '## Canonical input integrity', '', markdownTable(Object.entries(inputIntegrity).map(([product, item]) => ({ product, before: item.countBefore, after: item.countAfter, sha256_before: item.sha256Before, sha256_after: item.sha256After, unchanged: item.bytesUnchanged })), ['product', 'before', 'after', 'sha256_before', 'sha256_after', 'unchanged']), '', '## Evidence totals', '', `- Source fetches: ${fetchTotals.requested} requested; ${fetchTotals.saved} saved; ${fetchTotals.blocked} blocked.`, `- Mostaed: ${mostaedAudit.length} audited; ${JSON.stringify(verdictTotals(mostaedAudit))}.`, `- Motazen: all ${motazen.records.length} inventoried; ${motazenAudit.length} statistical; ${JSON.stringify(verdictTotals(motazenAudit))}.`, `- Contacts: ${contactsAudit.length} inventoried; ${JSON.stringify(verdictTotals(contactsAudit))}.`, `- Matrices: Mostaed ${mostaedCoverage.length} cells/${summary.matrices.mostaed.total} cards; Motazen ${motazenCoverage.length} cells/${summary.matrices.motazen.classifiedTotal} classified claims plus ${motazenUnclassified.length} invalid-status claims; Aman ${amanCoverage.length} rows; Hoqoqi ${hoqoqiCoverage.length} rows.`, '', '## Commands', '', ...summary.commands.map((command) => `- \`${command}\``), '', '## Exact blockers', '', ...blockers.map((blocker) => `- ${blocker}`), '', 'The hard gate is fail-closed. No heuristic keyword or quantity match was treated as a semantic PASS, and Phase 1 was not started.', ''].join('\n');
   await writeFile(path.join(OUTPUT, 'PHASE0_CHECKPOINT.md'), checkpoint);
   return summary;
 }
 
-const audit = { loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, extractContactNumbers, sourceContainsExactNumber, isScenarioCard, toCsv, evaluateGate, fetchAndCapture, writeOutputs };
+const audit = {
+  loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, extractContactNumbers,
+  sourceContainsExactNumber, isScenarioCard, toCsv, validateRequiredInventories, evaluateGate,
+  validateSourceDocument, hasScenarioEvidence, sortCorpusIndex, loadPriorCapture, fetchAndCapture, writeOutputs,
+};
 export default audit;
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {

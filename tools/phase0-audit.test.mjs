@@ -121,3 +121,105 @@ test('corpus capture is saved only after a successful probe and failed fetch nev
   assert.equal(await readFile(path.join(directory, 'authority.html'), 'utf8'), body);
   assert.equal((await stat(path.join(directory, 'authority.html'))).mtimeMs, before);
 });
+
+test('reports exact fractional and Arabic decimal quantities without overlapping partial tokens', () => {
+  assert.deepEqual(
+    audit.detectStatisticalQuantities('The replicated effects were about half the original magnitude.').quantities,
+    ['half'],
+  );
+  assert.deepEqual(
+    audit.detectStatisticalQuantities('النسبة كانت ٣٫٥٪، وحوالي نصف العينة.').quantities,
+    ['٣٫٥٪', 'نصف'],
+  );
+  assert.deepEqual(
+    audit.detectStatisticalQuantities('The ratio was 1:4 and 35%.').quantities,
+    ['1:4', '35%'],
+  );
+});
+
+test('rejects a long generic JavaScript application shell as non-substantive source evidence', async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), 'phase0-shell-'));
+  const shell = `<!doctype html><title>IdentityTheft.gov</title><div id="root"></div><script>${'window.__APP_STATE__={};'.repeat(100)}</script>`;
+  const result = await audit.fetchAndCapture('https://identitytheft.gov/', {
+    corpusDir: directory,
+    filename: 'identity.html',
+    fetchImpl: async () => new Response(shell, { status: 200 }),
+  });
+  assert.equal(result.status, 'blocked');
+  assert.match(result.reason, /substantive/i);
+  assert.equal(existsSync(path.join(directory, 'identity.html')), false);
+});
+
+test('accepts substantive page-specific source content', async () => {
+  const directory = await mkdtemp(path.join(os.tmpdir(), 'phase0-substantive-'));
+  const paragraphs = Array.from({ length: 20 }, (_, index) => `<p>Identity theft recovery step ${index}: contact the issuing bank, preserve records, report unauthorized accounts, and follow the official recovery plan.</p>`).join('');
+  const page = `<!doctype html><title>Official identity theft recovery plan</title><main><h1>Recover from identity theft</h1>${paragraphs}</main>`;
+  const result = await audit.fetchAndCapture('https://authority.test/identity-recovery', {
+    corpusDir: directory,
+    filename: 'identity.html',
+    fetchImpl: async () => new Response(page, { status: 200 }),
+  });
+  assert.equal(result.status, 'saved');
+});
+
+test('source-found requires scenario-specific semantic evidence', () => {
+  const generic = '<main><h1>Secure Our World</h1><p>' + 'Use strong passwords and multifactor authentication. '.repeat(40) + '</p></main>';
+  const router = '<main><h1>Secure your home router</h1><p>' + 'Change the default router password and secure the Wi-Fi wireless network. '.repeat(30) + '</p></main>';
+  const required = [['router', 'wi-fi', 'wifi', 'wireless network']];
+  assert.equal(audit.hasScenarioEvidence(generic, required).matched, false);
+  assert.equal(audit.hasScenarioEvidence(router, required).matched, true);
+});
+
+test('required inventory completeness fails on any omitted production-style occurrence or matrix cell', () => {
+  const completeness = audit.validateRequiredInventories([
+    { name: 'mostaed audit', expected: ['m1', 'm2'], actual: ['m1'] },
+    { name: 'motazen 130 claims', expected: ['c1', 'c2'], actual: ['c1', 'c2'] },
+    { name: 'motazen statistical subset', expected: ['s1', 's2'], actual: ['s1'] },
+    { name: 'contact occurrences', expected: ['aman/a/do[0]/122'], actual: [] },
+    { name: 'matrix cells', expected: ['domain/L1', 'domain/L2'], actual: ['domain/L1'] },
+    { name: 'Aman rows', expected: ['A1', 'A2'], actual: ['A1'] },
+    { name: 'Hoqoqi rows', expected: ['H1', 'H2'], actual: ['H1'] },
+  ]);
+  assert.equal(completeness.complete, false);
+  assert.deepEqual(completeness.errors, [
+    'mostaed audit missing: m2',
+    'motazen statistical subset missing: s2',
+    'contact occurrences missing: aman/a/do[0]/122',
+    'matrix cells missing: domain/L2',
+    'Aman rows missing: A2',
+    'Hoqoqi rows missing: H2',
+  ]);
+  assert.equal(audit.evaluateGate([{ verdict: 'PASS', complete: true }], true, completeness).clear, false);
+});
+
+test('corpus index ordering is deterministic by URL after concurrent completion', () => {
+  assert.deepEqual(audit.sortCorpusIndex([
+    { url: 'https://z.test/', status: 'saved' },
+    { url: 'https://a.test/', status: 'blocked' },
+    { url: 'https://m.test/', status: 'saved' },
+  ]).map((entry) => entry.url), ['https://a.test/', 'https://m.test/', 'https://z.test/']);
+});
+
+test('prior-capture recovery ignores ENOENT but propagates corruption and permission failures', async () => {
+  const missing = new Error('missing');
+  missing.code = 'ENOENT';
+  assert.equal(await audit.loadPriorCapture('https://authority.test/page', {
+    corpusDir: 'unused',
+    readFileImpl: async () => { throw missing; },
+  }), null);
+
+  const denied = new Error('permission denied');
+  denied.code = 'EACCES';
+  await assert.rejects(() => audit.loadPriorCapture('https://authority.test/page', {
+    corpusDir: 'unused',
+    readFileImpl: async () => { throw denied; },
+  }), /permission denied/);
+
+  const substantive = Buffer.from(`<main>${'substantive official source evidence '.repeat(50)}</main>`);
+  await assert.rejects(() => audit.loadPriorCapture('https://authority.test/page', {
+    corpusDir: 'unused',
+    expectedSha256: '0'.repeat(64),
+    readFileImpl: async () => substantive,
+    statImpl: async () => ({ mtime: new Date('2026-08-02T12:00:00Z') }),
+  }), /hash mismatch/);
+});
