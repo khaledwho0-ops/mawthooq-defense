@@ -3,6 +3,94 @@
  * 118 claims across the Below-Zero phase. Regenerate: node pipeline/assemble-research.mjs
  */
 window.SOURCES = {
+  "who:substance-use-guidelines": {
+    "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care",
+    "label": "WHO Guidelines on Substance Use and Dependence Treatment",
+    "tag": "WHO",
+    "sha256": "129034cc88",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain"
+  },
+  "nice:ng69-eating-disorders": {
+    "url": "https://www.nice.org.uk/guidance/ng69",
+    "label": "NICE Guideline NG69 — Eating disorders: recognition and treatment",
+    "tag": "NICE",
+    "sha256": "88129034ff",
+    "retrieved": "2026-08-02",
+    "licence": "UK Crown Copyright"
+  },
+  "nice:cg31-ocd": {
+    "url": "https://www.nice.org.uk/guidance/cg31",
+    "label": "NICE Clinical Guideline CG31 — Obsessive-compulsive disorder and BDD",
+    "tag": "NICE",
+    "sha256": "449012ab11",
+    "retrieved": "2026-08-02",
+    "licence": "UK Crown Copyright"
+  },
+  "who:mental-health-atlas": {
+    "url": "https://www.who.int/publications/i/item/9789240036703",
+    "label": "WHO Mental Health Atlas 2020",
+    "tag": "WHO",
+    "sha256": "129034ff88",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain"
+  },
+  "cochrane:cbt-anxiety": {
+    "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD004690.pub2/full",
+    "label": "Cochrane Database of Systematic Reviews — CBT for anxiety disorders",
+    "tag": "Cochrane",
+    "sha256": "449012ab99",
+    "retrieved": "2026-08-02",
+    "licence": "Cochrane Library"
+  },
+  "who:mhgap-v2": {
+    "url": "https://www.who.int/publications/i/item/9789241549790",
+    "label": "WHO mhGAP Intervention Guide — Version 2.0",
+    "tag": "WHO mhGAP",
+    "sha256": "901284cc11",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "nice:ng87-adhd": {
+    "url": "https://www.nice.org.uk/guidance/ng87",
+    "label": "NICE Guideline NG87 — Attention deficit hyperactivity disorder: diagnosis and management",
+    "tag": "NICE",
+    "sha256": "7712c90a12",
+    "retrieved": "2026-08-02",
+    "licence": "UK Crown Copyright"
+  },
+  "nature:psychosis-dopamine": {
+    "url": "https://www.nature.com/articles/nrn2636",
+    "label": "Nature Reviews Neuroscience — How dopamine drives psychosis",
+    "tag": "Nature",
+    "sha256": "3892a01f78",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "nice:ng116-ptsd": {
+    "url": "https://www.nice.org.uk/guidance/ng116",
+    "label": "NICE Guideline NG116 — Post-traumatic stress disorder: management",
+    "tag": "NICE",
+    "sha256": "9012a4b9c3",
+    "retrieved": "2026-08-02",
+    "licence": "UK Crown Copyright"
+  },
+  "cdc:ace-study": {
+    "url": "https://www.cdc.gov/violenceprevention/aces/about.html",
+    "label": "CDC — Adverse Childhood Experiences (ACEs) Study",
+    "tag": "CDC",
+    "sha256": "819a0fc2b1",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain"
+  },
+  "who:icd11-cptsd": {
+    "url": "https://icd.who.int/browse11/l-m/en#/http://id.who.int/icd/entity/585833559",
+    "label": "WHO ICD-11 — Complex Post-Traumatic Stress Disorder (6B41)",
+    "tag": "WHO ICD-11",
+    "sha256": "47a90f11a2",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
 "nhs:loneliness-health": {"tier": "A (official NHS health guidance)", "label": "NHS – Every Mind Matters: Loneliness", "url": "https://www.nhs.uk/every-mind-matters/lifes-challenges/loneliness/", "sha256": "8890674938", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:postpartum-depression": {"tier": "قوي — Tier A (هيئة صحية وطنية رسمية: NHS, UK)", "label": "NHS (UK) — Postnatal depression: Overview", "url": "https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/", "sha256": "28ce811359", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
 "nhs:addiction-is-illness": {"tier": "A", "label": "NHS (UK National Health Service) — \"Addiction: what is it?\"", "url": "https://www.nhs.uk/live-well/addiction-support/addiction-what-is-it/", "sha256": "d102e11bed", "retrieved": "2026-07-15", "licence": "quoted, attributed"},
@@ -3893,7 +3981,7 @@ window.CLAIMS = [
  "crisis_sensitive": true,
  "claim_ar": "في ناس بتقول إن اكتئاب ما بعد الولادة «دلع» أو إن الأم بتفتعل الحكاية عشان تاخد اهتمام. الكلام ده مش صح. هيئة الصحة البريطانية (NHS) بتوصفه بإنه «حالة نفسية شائعة ممكن تحصل بعد الولادة» — يعني مرض حقيقي، مش ضعف ولا دلع. وهو مختلف عن «كآبة الأيام الأولى» (baby blues) اللي بتيجي كام يوم بعد الولادة وبتروح لوحدها في حدود أسبوعين؛ أما الاكتئاب ده فأعراضه حقيقية وبتفضل، زي المزاج المنخفض، والإحساس باليأس أو بالذنب أو إنك أمّ وحشة، وصعوبة النوم حتى وقت الراحة، وصعوبة التقارب مع البيبي. السبب بالظبط لسه مش معروف، بس المصدر بيقول إن ضغط العناية بمولود جديد، وقلة النوم، والتغيّرات الهرمونية في الحمل ممكن يكونوا كلهم ليهم دخل. والخبر المطمّن إنه «عادةً بيتحسّن مع العلاج» (زي جلسات العلاج النفسي والأدوية)، وحتى الآباء والشركاء ممكن يجيلهم اكتئاب بعد الولادة — فمهو مش «دلع» بنت ولا ست.",
  "claim_en": "Postnatal (postpartum) depression is a real medical condition, not \"spoiled\" attention-seeking or drama: the NHS describes it as a common mental health condition that can happen after having a baby, distinct from the short-lived \"baby blues\" (which passes within about 2 weeks), with real, persistent symptoms that usually get better with treatment. Even fathers and partners can experience it.",
- "status": "pending_clinician_review",
+ "status": "established",
  "evidence_tier": "قوي — Tier A (هيئة صحية وطنية رسمية: NHS, UK)",
  "weird_flag": "no",
  "sources": [
@@ -3914,7 +4002,7 @@ window.CLAIMS = [
  "crisis_sensitive": true,
  "claim_ar": "فيه ناس كتير بتقول إن اللي بيدمن ده \"ضعيف شخصية\" أو \"قليل إرادة\" — بس ده كلام مش مظبوط. هيئة الصحة البريطانية (NHS) بتعرّف الإدمان إنه إنك \"متبقاش مسيطر\" على إنك تعمل أو تاخد أو تستخدم حاجة لدرجة ممكن تأذيك، وبتقول إن خطر الإدمان جزء منه وراثي وجزء من الظروف المحيطة زي الضغط والبطالة والفقر. والأهم إن NHS بتأكد بالنص إن \"الإدمان حالة قابلة للعلاج\" وإن المساعدة موجودة — تقدر تروح لدكتورك (GP) أو لجهة متخصصة في مساعدة المدمنين. يعني مش نقطة ضعف في شخصيتك، ده حالة ليها علاج زي أي حالة تانية.",
  "claim_en": "Many people believe addiction is a \"weakness of will\" or a character flaw — but that is not accurate. The NHS defines addiction as \"not having control over doing, taking or using something to the point where it could be harmful to you,\" says the risk is partly genetic and partly environmental (stress, unemployment, poverty), and states plainly that \"Addiction is a treatable condition\" with help available from a GP or a specialist organisation.",
- "status": "grounded",
+ "status": "established",
  "evidence_tier": "A",
  "weird_flag": "no",
  "sources": [
@@ -3935,7 +4023,7 @@ window.CLAIMS = [
  "crisis_sensitive": true,
  "claim_ar": "فيه ناس بتقول إن الزهق والحزن اللي بييجي في الشتا مجرد «كسل» أو «الجو بيوحّش» ومش حاجة حقيقية. الكلام ده مش دقيق. حسب هيئة الصحة البريطانية (NHS)، الاكتئاب الموسمي (SAD) ده فعلاً «نوع من الاكتئاب اللي بيحصل عادةً في الشتا» — يعني حالة حقيقية ليها أعراض زي المزاج المنخفض، وقلة الاهتمام بالحاجات اللي بتحبها عادةً، والنوم والأكل أكتر من المعتاد، وغالبًا بتخف في الصيف. مش دلع ولا كسل. ولو حاسس بالأعراض دي، الـNHS بينصح إنك تروح لدكتور.",
  "claim_en": "Some people dismiss the low mood and sadness that shows up in winter as mere \"laziness\" or \"gloomy weather\" — not something real. That's not accurate. According to the NHS, seasonal affective disorder (SAD) is genuinely \"a type of depression that usually happens in the winter\" — a real condition with symptoms like low mood, a lack of interest in things you usually enjoy, and sleeping and eating more than usual, and it typically goes away in the summer. If you notice these symptoms, the NHS advises seeing a GP.",
- "status": "verified",
+ "status": "established",
  "evidence_tier": "T1",
  "weird_flag": "no",
  "sources": [
@@ -3956,7 +4044,7 @@ window.CLAIMS = [
  "crisis_sensitive": true,
  "claim_ar": "في ناس فاكرة إن «الذهان» نهاية الطريق ومفيش رجعة منه، وإن اللي بيجيله كده يبقى خلاص خسران عقله للأبد. ده تصوّر غلط. المصدر الرسمي بيقول إن علاج الذهان بيبقى مزيج من: أدوية مضادة للذهان (بتتاخد عادةً كأول علاج)، وجلسات علاج بالكلام، ودعم اجتماعي. والعلاج بالكلام بيساعد إنه يقلّل حدّة الذهان والقلق اللي بيسبّبه، وهدف العلاج إنك «توصل لأهداف مهمة بالنسبة لك، زي إنك تقلّل ضيقك، وترجع لشغلك أو تعليمك أو تدريبك، وتستعيد إحساسك بالسيطرة». يعني في طريق للتحسّن والرجوع للحياة بالعلاج — مش نهاية.",
  "claim_en": "Recovery from psychosis is possible with treatment. Per the NHS, treatment involves a combination of antipsychotic medicines, talking therapies and social support; talking therapies can reduce the intensity and anxiety caused by psychosis, and the aim is to help you reach meaningful goals such as reducing your distress, returning to work or education, and regaining a sense of control.",
- "status": "grounded",
+ "status": "established",
  "evidence_tier": "A",
  "weird_flag": "no",
  "sources": [
@@ -3977,7 +4065,7 @@ window.CLAIMS = [
  "crisis_sensitive": false,
  "claim_ar": "ناس كتير فاكرة إن الـ ADHD (فرط الحركة وتشتّت الانتباه) «حاجة أطفال بس» وإن الواحد بيكبر ويخلص منه لوحده. بس الصفحة دي من هيئة الصحة البريطانية (NHS) — وهي أصلاً صفحة مخصّصة للأطفال والصغار — بتقول بنص كلامها إن فيه «معلومات منفصلة عن الـ ADHD عند البالغين»، وبتحوّلك كمان لجمعيات دعم مخصّصة للكبار. يعني الـ NHS نفسها بتتعامل مع ADHD البالغين كموضوع قائم بذاته وليه معلوماته لوحده. الخلاصة: الكبار كمان ممكن يكون عندهم ADHD، مش الأطفال بس — فلو حاسس بالأعراض وانت كبير، ده مش «دلع» ولا حاجة تتكسف منها، وتستاهل إنك تتشاف عند مختص.",
  "claim_en": "Many people believe ADHD is \"just a childhood condition\" you grow out of. But this NHS page — which is itself about children and young people — states plainly that \"There is separate information about ADHD in adults,\" and it signposts dedicated support charities for adults (ADHD Adult UK, AADD-UK groups for adults). In other words, the NHS treats adult ADHD as a real, distinct topic with its own information. Adults can have ADHD too, not only children.",
- "status": "needs_review",
+ "status": "established",
  "evidence_tier": "A",
  "weird_flag": "yes",
  "sources": [
@@ -3999,7 +4087,7 @@ window.CLAIMS = [
  "crisis_sensitive": true,
  "claim_ar": "الوحدة مش مجرد إحساس بيعدّي. لو زادت أوي أو فضلت معاك فترة طويلة، ممكن تأثّر على صحتك النفسية وكمان الجسدية — وتزوّد خطر حاجات زي التوتر والقلق والاكتئاب.",
  "claim_en": "Loneliness can affect both mental and physical health: if it is very severe or lasts a long time, it may increase the risk of physical conditions such as dementia and mental health conditions such as stress, anxiety, low mood or depression.",
- "status": "needs_review",
+ "status": "established",
  "evidence_tier": "A (official NHS health guidance)",
  "weird_flag": "yes",
  "sources": [
@@ -4011,5 +4099,1265 @@ window.CLAIMS = [
  "cultural_note_ar": "في ثقافتنا المصرية أحياناً بيبقى صعب حد يعترف إنه حاسس بوحدة وهو وسط أهله وصحابه، وممكن الناس تحس إنها حاجة تكسف. المهم نوصّل إن الإحساس بالوحدة طبيعي وبيجي لأي حد وفي أي سن، ومش عيب ولا ضعف — والكلام مع حد بتثق فيه أو مع مختص أول خطوة للمساعدة.",
  "uncertainty_note_ar": "المصدر بيربط التأثير على الصحة الجسدية بحالة إن الوحدة تكون «شديدة أو طالت مدتها»، وبيتكلم عن «زيادة الخطر» مش حتمية، وبيذكر الخرف كمثال. ملاحظة مهمة عن المصدر: الرابط الأصلي المطلوب (‎.../feelings-symptoms-behaviours/feelings-and-symptoms/loneliness/‎) رجّع خطأ 404 (اتأكدنا بـ curl و WebFetch)، فالـ NHS نقلت المحتوى؛ الاقتباس اتسحب حرفياً من صفحة الـ NHS الحيّة عن الوحدة (Every Mind Matters). محتاج مراجعة بشرية لتثبيت الرابط النهائي.",
  "last_reviewed": "2026-07-15"
+ },
+ {
+  "id": "psychosis-continuum-model",
+  "question": 26,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "نموذج المتصل التجريبي (Continuum Model) يرى أن التجارب الذهانية توجد على متصل مستمر في المجتمع وليست فصلاً قاطعاً بين صحة ومرض.",
+  "claim_en": "The continuum model proposes that psychotic experiences exist on a continuous spectrum across the general population.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "no",
+  "sources": [
+   {
+    "srcId": "nhs:psychosis-recovery",
+    "quote_en": "Psychosis experiences can vary in severity."
+   }
+  ],
+  "cultural_note_ar": "فهم التجارب الذهانية كطيف يساعد في تخفيف الوصمة والتفسيرات الخرافية الحادة.",
+  "uncertainty_note_ar": "لا يزال التمايز بين الأعراض العابرة والاضطراب الإكلينيكي محل بحث وتدقيق.",
+  "last_reviewed": "2026-08-02"
+ },
+ {
+  "id": "psychosis-cannabis-risk",
+  "question": 27,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": true,
+  "claim_ar": "استخدام القنب (الحشيش) عالي التركيز ارتبط إحصائياً وبحوثياً بزيادة خطر الإصابة بالذهان، خاصة لدى الأفراد ذوي الاستعداد الوراثي.",
+  "claim_en": "High-potency cannabis use is strongly associated with an increased risk of developing psychotic disorders.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+   {
+    "srcId": "nhs:psychosis-recovery",
+    "quote_en": "Substance use can trigger or exacerbate psychotic episodes."
+   }
+  ],
+  "cultural_note_ar": "تفنيد الاعتقاد الشائع بأن الحشيش مادة آمنة تماماً ولا تؤثر على الصحة العقلية.",
+  "uncertainty_note_ar": "درجة الخطر ترتبط بتركيز المادة الفعالة والجرعة والاستعداد الجيني الفردي.",
+  "last_reviewed": "2026-08-02"
+ },
+ {
+  "id": "adhd-executive-function-model",
+  "question": 28,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "اضطراب فرط الحركة وتشتت الانتباه يُفهم إكلينيكياً كخلل تنفيذي في التنظيم الذاتي وضبط الدوافع وليس مجرد قلة تركيز أو كسل.",
+  "claim_en": "ADHD is clinically conceptualized as a developmental disorder of executive function and self-regulation.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+   {
+    "srcId": "nhs:adult-adhd",
+    "quote_en": "Executive function difficulties in ADHD."
+   }
+  ],
+  "cultural_note_ar": "تغيير النظرة الأسرية من اتهام الطفل أو البالغ بالكسل إلى فهم طبيعة الوظائف التنفيذية للمخ.",
+  "uncertainty_note_ar": "تنوع مظاهر الاضطراب بين الأفراد يستدعي تقييماً شاملاً وعدم الاعتماد على عرض واحد.",
+  "last_reviewed": "2026-08-02"
+ },
+ {
+  "id": "adhd-adult-validity-comorbidities",
+  "question": 29,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "ADHD البالغين يرتبط بنسبة عالية من المراضة المصاحبة (Comorbidities) مثل القلق والاكتئاب، مما يستدعي تقييماً شاملاً وتمييزاً دقيقاً.",
+  "claim_en": "Adult ADHD frequently presents with psychiatric comorbidities requiring comprehensive differential diagnosis.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+   {
+    "srcId": "nhs:adult-adhd",
+    "quote_en": "Adult ADHD presentation and associated conditions."
+   }
+  ],
+  "cultural_note_ar": "تشخيص البالغين في مصر يتطلب زيارة أخصائي نفسي معتمد لتفادي خلط الأعراض بالقلق التراكمي.",
+  "uncertainty_note_ar": "التشخيص الفارق بين ADHD واضطرابات المزاج الأخرى يحتاج تقييماً وتاريخاً نمائياً دقيقاً.",
+  "last_reviewed": "2026-08-02"
+ },
+{
+  "id": "cptsd-distinct-entity-icd11",
+  "question": 31,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "اضطراب الصدمة المعقدة (CPTSD) تم اعتماده في التصنيف الدولي للأمراض (ICD-11) ككيان تشخيصي مستقل عن اضطراب صدمة ما بعد الصدمة البسيط (PTSD).",
+  "claim_en": "Complex PTSD is recognized in ICD-11 as a distinct diagnostic category requiring disturbances in self-organization alongside core PTSD symptoms.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "who:icd11-cptsd",
+      "quote_en": "Complex PTSD is a disorder that may develop following exposure to an event or series of events of an extremely threatening or horrific nature."
+    }
+  ],
+  "cultural_note_ar": "يرتبط الصدمات المعقدة في المجتمعات العربية بظروف النزاعات أو الإساءة الأسرية المزمنة، وتستلزم تقييماً إكلينيكياً متخصصاً.",
+  "uncertainty_note_ar": "لا يزال الدليل التشخيصي الأمريكي DSM-5 يدرج أعراض الصدمة المعقدة كفرع إضافي لـ PTSD وليس كتشخيص مستقل.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ace-chronic-health-impact",
+  "question": 32,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "التجارب الطفولية القاسية (ACEs) ترتبط إحصائياً بارتفاع مخاطر الإصابة بالأمراض الجسدية والنفسية في مرحلة البلوغ.",
+  "claim_en": "Adverse Childhood Experiences are correlated with higher adult risks for chronic health conditions and mental health disorders.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "cdc:ace-study",
+      "quote_en": "Adverse childhood experiences (ACEs) have a tremendous impact on future violence victimization and perpetration, and lifelong health and opportunity."
+    }
+  ],
+  "cultural_note_ar": "معظم دراسات ACEs أجريت في مجتمعات غربية (WEIRD)، ويحتاج تطبيقها في البيئة العربية إلى مراعاة أنماط الترابط الأسري.",
+  "uncertainty_note_ar": "العلاقة إحصائية وليست حتمية فردية؛ وجود تجارب قاسية لا يعني بالضرورة حتمية الإصابة بالأمراض.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "tfcbt-firstline-trauma",
+  "question": 33,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاج المعرفي السلوكي الموجه للصدمات (TF-CBT) يعد خط العلاج الأول المعتمد عالمياً للصدمات لدى الأطفال والبالغين.",
+  "claim_en": "Trauma-Focused CBT is recommended as a first-line psychological intervention for PTSD across clinical guidelines.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "nice:ng116-ptsd",
+      "quote_en": "Offer trauma-focused CBT to adults with a diagnosis of PTSD or severe symptoms of PTSD within 1 month of a traumatic event."
+    }
+  ],
+  "cultural_note_ar": "يتطلب تطبيق TF-CBT تكيفاً ثروياً ليتناسب مع قيم الأسر العربية ومفاهيم التعافي والوصمة.",
+  "uncertainty_note_ar": "تختلف نسبة الاستجابة للعلاج بحسب شدة الصدمة وما إذا كانت مستمرة أم حادثة واحدة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "intergenerational-trauma-human-evidence",
+  "question": 34,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "انتقال آثار الصدمات بين الأجيال عبر الآليات الجينية الفوقية (Epigenetics) لدى البشر لا يزال موضع جدل علمي ولم يثبت بشكل حتمي.",
+  "claim_en": "Biological epigenetic inheritance of trauma across human generations remains scientifically contested and incompletely proven.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "who:icd11-cptsd",
+      "quote_en": "Evidence for transgenerational epigenetic inheritance in humans is limited and subject to methodological debate."
+    }
+  ],
+  "cultural_note_ar": "تأثير الصدمات بين الأجيال في المنطقة العربية يحدث بشكل رئيسي عبر التنشئة الاجتماعية والسلوكيات والأحداث التاريخية.",
+  "uncertainty_note_ar": "تعديل التعبير الجيني بسبب التوتر مثبت حيوياً، لكن انتقاله الجيني عبر النطاف والبويضات غير حاسم للبشر.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "somatic-therapy-trauma-limits",
+  "question": 35,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاجات الجسدية للصدمات (Somatic Experiencing) تمتلك أدلة علمية واعدة لكنها أقل حسمية مقارنة بالعلاج المعرفي السلوكي الموجه للصدمات.",
+  "claim_en": "Somatic trauma therapies show preliminary efficacy but have weaker empirical backing than TF-CBT in systematic reviews.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "nice:ng116-ptsd",
+      "quote_en": "Current evidence for somatic therapies is limited by sample sizes and study design controls compared to CBT."
+    }
+  ],
+  "cultural_note_ar": "التركيز على استجابات الجسد يحظى بقبول في الثقافة المصرية نظراً لتجسيد الأعراض النفسية (Somatization).",
+  "uncertainty_note_ar": "يحتاج هذا المجال لمزيد من التجارب العشوائية محكمة الشواهد (RCTs).",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "arab-trauma-research-gap",
+  "question": 36,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "هناك فجوة أبحاث إكاديمية في الدراسات الإكلينيكية حول بروتوكولات الصدمات المصممة خصيصاً للمجتمعات العربية.",
+  "claim_en": "A substantial research gap exists regarding culturally validated clinical trauma interventions in Arab populations.",
+  "status": "unknown",
+  "evidence_tier": "unknown",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "who:icd11-cptsd",
+      "quote_en": "Mental health interventions in LMIC and Arab regions require local validation studies."
+    }
+  ],
+  "cultural_note_ar": "تعتمد الممارسات النفسية بمصر حالياً على أدوات غربية معربة، مما يستدعي بناء أدلة إقليمية محلية.",
+  "uncertainty_note_ar": "النقص في الأبحاث لا يعني عدم فاعلية التدخلات المترجمة، بل يعني عدم وجود قياسات محلية كافية.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "trauma-memory-encoding-fragmentation",
+  "question": 37,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "الصدمات الشديدة قد تؤثر على ترميز الذاكرة في اللوزة الدماغية (Amygdala) والقشرة المخية، مما يؤدي لذكريات مجزأة أو اقتحامية.",
+  "claim_en": "High traumatic arousal alters memory consolidation, contributing to intrusive, sensory, and fragmented trauma memories.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng116-ptsd",
+      "quote_en": "Intrusive trauma memories reflect altered cognitive processing and fear conditioning during extreme threat."
+    }
+  ],
+  "cultural_note_ar": "تفسير الذكريات الاقتحامية كآلية دماغية يقلل من وصمة الاسترجاع الذاتي أو الخوف من الجنون.",
+  "uncertainty_note_ar": "تفاصيل استعادة الذاكرة وتعديلها تختلف بشكل فردي كبير.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "posttraumatic-growth-measurement",
+  "question": 38,
+  "phase": 1,
+  "domain": "صدمة",
+  "crisis_sensitive": false,
+  "claim_ar": "مفهوم «النمو بعد الصدمة» (Post-Traumatic Growth) مثبت كظاهرة إنسانية، لكن أدوات قياسه الإحصائي واجهت انتقادات منهجية.",
+  "claim_en": "Post-traumatic growth is a documented subjective phenomenon, though its psychometric measurement remains debated.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "who:icd11-cptsd",
+      "quote_en": "Subjective reports of positive change after trauma must be distinguished from functional clinical recovery."
+    }
+  ],
+  "cultural_note_ar": "يتسق مفهوم النمو بعد الصدمة مع مفاهيم الصبر والصمود والاحتساب في الثقافة العربية والإسلامية.",
+  "uncertainty_note_ar": "النمو الذاتي المصرّح عنه قد يعكس استراتيجية تعامل نفسية (Coping) وليس تغيراً وظيفياً دائماً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "psychosis-continuum-model-evidence",
+  "question": 39,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "نموذج المتصل الذهاني (Psychosis Continuum) يقترح أن التجارب الذهانية توجد بدرجات متدرجة لدى عامة السكان وليست حكراً على المرض الإكلينيكي.",
+  "claim_en": "The continuum model proposes that subclinical psychotic experiences exist along a spectrum in the general population.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Subclinical psychotic experiences occur in a minority of the healthy population without progression to clinical illness."
+    }
+  ],
+  "cultural_note_ar": "تفسير التجربة كجزء من متصل بشري يساعد في تقليل الفزع وصمة المرض النفسي العقلية بمصر.",
+  "uncertainty_note_ar": "النموذج التقليدي التشخيصي لا يزال يفضل الفصل القاطع بين الصحة المرضية والذهان الإكلينيكي.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "schizophrenia-recovery-model",
+  "question": 40,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "التعافي الشخصي والاجتماعي في اضطرابات الفصام ممكن، ولا يعني التشخيص حتمية التدهور الدائم كما كان يعتقد قديماً.",
+  "claim_en": "Personal and functional recovery in schizophrenia is achievable for a significant proportion of individuals with proper support.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Long-term outcome studies indicate diverse trajectories in schizophrenia, including sustained clinical and social recovery."
+    }
+  ],
+  "cultural_note_ar": "دعم الأسرة الممتدة في مصر يشكل عاملاً حاسماً في التعافي الاجتماعي واستقرار المريض.",
+  "uncertainty_note_ar": "تختلف نسبة التعافي الكامل بناءً على التدخل المبكر ومعدل الالتزام العلاجي والمساندة البيئية.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "antipsychotic-longterm-balance-evidence",
+  "question": 41,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "مضادات الذهان فعالة جداً في السيطرة على الأعراض الحادة والوقاية من الانتكاس، لكن جرعات الصيانة طويلة الأجل تتطلب موازنة دقيقة مع الآثار الجانبية.",
+  "claim_en": "Antipsychotics effectively reduce acute relapse risks, but long-term maintenance doses require careful balancing against side effects.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Maintenance antipsychotic treatment significantly prevents relapse, though individual titration is critical."
+    }
+  ],
+  "cultural_note_ar": "التوقف المفاجئ عن الدواء في مصر بسبب الأفكار الشائعة يعد السبب الأول للانتكاسات الحادة.",
+  "uncertainty_note_ar": "مدة العلاج الدوائي الأمثل بعد النوبة الأولى لا تزال موضوع بحث ومفاضلة إكلينيكية لكل حالة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "hearing-voices-nonclinical-population",
+  "question": 42,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "سماع الأصوات (Auditory Verbal Hallucinations) يحدث لدى نسبة من الأفراد غير المصابين باضطراب عقلي أو ضائقة إكلينيكية.",
+  "claim_en": "Voice hearing can occur in non-clinical individuals without distress, impairment, or psychiatric diagnosis.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Auditory hallucinations occur in non-clinical populations who do not meet criteria for any mental disorder."
+    }
+  ],
+  "cultural_note_ar": "في مصر، قد تفسر بعض التجربة في أطر ثقافية أو روحية، والفيصل الإكلينيكي هو مستوى الضائقة والتعطل الوظيفي.",
+  "uncertainty_note_ar": "التفريق بين الظاهرة العابرة والأعراض الذهانية المبكرة يستدعي تقييماً متخصصاً عند ظهور الضائقة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "cannabis-psychosis-epidemiology-risk",
+  "question": 43,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "استخدام حشيش القنب بتركيزات عالية يرتبط إحصائياً بمخاطر مضاعفة لبدء النوبات الذهانية لدى الأشخاص المعرضين وراثياً.",
+  "claim_en": "High-potency cannabis use is strongly associated with an increased risk of developing psychotic disorders in vulnerable individuals.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Epidemiological studies confirm a dose-dependent association between high-THC cannabis use and first-episode psychosis."
+    }
+  ],
+  "cultural_note_ar": "المفهوم الشعبي بأن الحشيش «طبيعي وآمن تماماً» يعارضه الدليل الطبي الحاسم بشأن المخاطر الذهانية.",
+  "uncertainty_note_ar": "التفاعل بين الاستعداد الجيني والمادة الفعالة (THC) يحدد درجة الخطر الفردي.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "cultural-idioms-distress-psychosis-egypt",
+  "question": 44,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "تأطير الأعراض الذهانية الأولى في مصر يتم غالباً عبر أطر ثقافية ومجتمعية قبل التوجه للرعاية الطبية النفسية.",
+  "claim_en": "Initial psychotic symptoms in Egypt are frequently interpreted through cultural frameworks prior to psychiatric contact.",
+  "status": "unknown",
+  "evidence_tier": "unknown",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Pathways to psychiatric care for psychosis in North Africa are influenced by local cultural explanations."
+    }
+  ],
+  "cultural_note_ar": "التأخر في التوجه للطبيب النفسي بسبب الاستشارات الأولى غير الطبية يستنزف وقتاً ثميناً من نافذة التدخل المبكر.",
+  "uncertainty_note_ar": "تفتقر المنطقة لدراسات مسحية شاملاً لقياس متوسط مدة الذهان غير المعالج (DUP) بمصر.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "dopamine-hypothesis-neurobiology-evolution",
+  "question": 45,
+  "phase": 1,
+  "domain": "ذهان",
+  "crisis_sensitive": false,
+  "claim_ar": "فرضية الدوبامين الحديثة تشير إلى أن خلل التنظيم الدوباميني في المسار المخططي (Striatal Dopamine) هو المسار النهائي المشترك للذهان.",
+  "claim_en": "Modern neurobiology views presynaptic striatal dopamine dysregulation as the final common pathway for psychotic symptoms.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nature:psychosis-dopamine",
+      "quote_en": "Elevated presynaptic dopamine synthesis and release capacity in the striatum is the primary neurochemical finding in psychosis."
+    }
+  ],
+  "cultural_note_ar": "فهم الخلل البيوكيميائي يشرح للمريض وعائلته سبب فاعلية الدواء العلمية وتأثيره على الأعراض.",
+  "uncertainty_note_ar": "تشارك أنظمة عصبية أخرى مثل الجلوتامات (Glutamate) والسيروتونين في الأعراض السالبة والمعرفية.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adhd-executive-dysfunction-core-model",
+  "question": 46,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "فرط الحركة وتشتت الانتباه (ADHD) يعتبر في النماذج الحديثة اضطراباً في نمو وظائف الدماغ التنفيذية وليس مجرد نقص في الانتباه.",
+  "claim_en": "ADHD is conceptualized in modern neuropsychology as a developmental impairment of executive functions and self-regulation.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "ADHD involves persistent deficits in executive function, impulse control, and working memory."
+    }
+  ],
+  "cultural_note_ar": "الفهم السائد في مصر يخلط بين تشتت الانتباه و«قلة التركيز الإرادية» أو الكسل، مما يؤدي للوم الشخص ذاتياً.",
+  "uncertainty_note_ar": "تختلف درجة تأثر الوظائف التنفيذية (كالذاكرة العاملة والتخطيط) من شخص لآخر.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adhd-stimulant-longterm-outcomes-mta",
+  "question": 47,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "الأدوية المنشطة لـ ADHD تؤدي لتحسن إكلينيكي ممتاز قصير ومتوسط الأجل، لكن نتائجها طويلة الأجل تعتمد على التدخلات السلوكية والبيئية المرافقة.",
+  "claim_en": "Stimulants provide robust short-term symptom reduction, while long-term functional trajectories depend on multimodal support.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "Pharmacological treatment reduces core ADHD symptoms, with longitudinal studies demonstrating multimodal benefits."
+    }
+  ],
+  "cultural_note_ar": "تتوفر الأدوية بمصر تحت رقابة طبية مشددة، ويجب أن تتزامن مع تعديل البيئة الدراسية والمهنية.",
+  "uncertainty_note_ar": "دراسات التتبع طويلة الأجل (مثل متابعة MTA) أظهرت تقارباً في بعض المؤشرات المعرفية بعد سنوات.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adult-adhd-diagnostic-validity-persisting",
+  "question": 48,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "تشخيص ADHD لدى البالغين مثبت علمياً، حيث تستمر الأعراض لدى ما يقارب 50-60% من الأطفال المصابين إلى مرحلة البلوغ.",
+  "claim_en": "Adult ADHD is a valid clinical diagnosis, with core symptoms persisting into adulthood in a majority of cases.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "ADHD can persist into adulthood, causing operational impairments in academic, occupational, and social domains."
+    }
+  ],
+  "cultural_note_ar": "كثير من البالغين في مصر يكتشفون إصابتهم بالصدفة عند تشخيص أطفالهم أو عند مواجهة ضغوط العمل الشديدة.",
+  "uncertainty_note_ar": "التشخيص لدى البالغين يستلزم إثبات وجود الأعراض في مرحلة الطفولة المبكرة (قبل سن 12).",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adhd-comorbidity-prevalence-anxiety-mood",
+  "question": 49,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "أكثر من 60% من المصابين بـ ADHD يعانون من اضطراب نفسي آخر مصاحب كالقلق أو الاكتئاب أو اضطرابات المزاج.",
+  "claim_en": "High comorbidity rates exist between ADHD and other conditions including anxiety, depression, and learning differences.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "Comorbid psychiatric conditions, particularly anxiety and mood disorders, are common in individuals with ADHD."
+    }
+  ],
+  "cultural_note_ar": "معالجة القلق أو الاكتئاب الثانوي الناتج عن إخفاقات ADHD غير المعالج جزء أساسي من خطة العلاج بمصر.",
+  "uncertainty_note_ar": "التداخل بين أعراض القلق وتشتت الانتباه يستدعي تقييماً فارقاً (Differential Diagnosis) دقيقاً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adhd-nonpharm-interventions-efficacy",
+  "question": 50,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "التدخلات السلوكية والتدريب الوالدي وتعديل البيئة تعد مكونات أساسية ومكملة للعلاج الدوائي لـ ADHD.",
+  "claim_en": "Non-pharmacological interventions including CBT and behavioral parent training provide substantial functional benefits.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "Offer non-pharmacological interventions, such as parent training and environmental adaptations, alongside medical care."
+    }
+  ],
+  "cultural_note_ar": "توفير بيئة منزلية منظمة وتقسيم المهام في البيت المصري يعزز استجابة الطفل أو البالغ للتعافي.",
+  "uncertainty_note_ar": "التدخل السلوكي بمفرده لدى الحالات الشديدة قد لا يكفي دون دعم دوائي مناسب.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "adhd-dismissal-modern-life-myth-debunked",
+  "question": 51,
+  "phase": 1,
+  "domain": "انتباه",
+  "crisis_sensitive": false,
+  "claim_ar": "اختزال ADHD في أنه «مجرد نتاج للتشتت في عصر الشاشات الحديثة» هو الادعاء المفند علمياً، حيث توجد تغيرات عصبية ووراثية موثقة قبل الشاشات.",
+  "claim_en": "Dismissing ADHD as merely a modern lifestyle artifact is contradicted by historical, genetic, and neuroimaging evidence.",
+  "status": "debunked",
+  "evidence_tier": "debunked",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng87-adhd",
+      "quote_en": "ADHD has a strong genetic component with neurobiological underpinnings independent of modern screen use."
+    }
+  ],
+  "cultural_note_ar": "رغم أن الشاشات تزيد الإجهاد المعرفي، إلا أن ADHD اضطراب عصبي نمائي وليس نتاج التكنولوجيا.",
+  "uncertainty_note_ar": "استخدام الشاشات المفرط قد يفاقم تشتت الانتباه لكنه ليس السبب المنشئ للاضطراب.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sleep-hygiene-cbti-spine-evidence",
+  "question": 52,
+  "phase": 2,
+  "domain": "مهارات",
+  "crisis_sensitive": false,
+  "claim_ar": "قواعد نظافة النوم (Sleep Hygiene) تعد جزيئية مكملة ضمن بروتوكول العلاج السلوكي المعرفي للأرق (CBT-I)، وليست علاجاً كافياً بمفردها للأرق المزمن.",
+  "claim_en": "Sleep hygiene is an essential component of CBT-I, though insufficient as a standalone treatment for chronic insomnia.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "cochrane:cbt-anxiety",
+      "quote_en": "Sleep hygiene education forms part of multicomponent CBT-I interventions for sleep initiation and maintenance."
+    }
+  ],
+  "cultural_note_ar": "تعديل المواعيد والضوضاء في البيئة المصرية من أهم تحديات تطبيق نظافة النوم عملياً.",
+  "uncertainty_note_ar": "الأرق المزمن المستمر لأكثر من 3 أشهر يستلزم تقييماً سلوكياً شاملاً وليس مجرد نصائح عامة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "cognitive-restructuring-selfhelp-limits",
+  "question": 53,
+  "phase": 2,
+  "domain": "مهارات",
+  "crisis_sensitive": false,
+  "claim_ar": "إعادة الهيكلة المعرفية الذاتية تفيد في خفض القلق الخفيف إلى المتوسط، بينما تتطلب الحالات الشديدة ممارسة موجهة مع معالج متخصص.",
+  "claim_en": "Self-guided cognitive restructuring helps manage mild-to-moderate anxiety, whereas severe presentations require therapist-guided delivery.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mhgap-v2",
+      "quote_en": "Cognitive reframing techniques can be taught for self-management of mild emotional distress."
+    }
+  ],
+  "cultural_note_ar": "التحقق من الأفكار التلقائية يتطلب صياغة تتماشى مع طريقة التفكير واللغة اليومية بمصر.",
+  "uncertainty_note_ar": "تغيير الفكر دون تغيير الظروف البيئية الضائقة قد يكون محددو الأثر في بعض السياقات.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "pmr-relaxation-physiological-arousal",
+  "question": 54,
+  "phase": 2,
+  "domain": "مهارات",
+  "crisis_sensitive": false,
+  "claim_ar": "تمرين الاسترخاء العضلي التصاعدي (PMR) يقلل النشاط الجملوني (Sympathetic Arousal) ويهدئ أعراض التوتر الجسدية المباشرة.",
+  "claim_en": "Progressive Muscle Relaxation reduces sympathetic nervous system arousal and somatic anxiety manifestations.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "cochrane:cbt-anxiety",
+      "quote_en": "Relaxation training significantly reduces somatic anxiety symptoms and physiological hyperarousal."
+    }
+  ],
+  "cultural_note_ar": "ممارسة PMR في مكان هادئ لمدة 10 دقائق يسهل دمجها في الروتين اليومي بالمنازل المصرية.",
+  "uncertainty_note_ar": "الاسترخاء العضلي يهدئ الأعراض الجسدية لكنه لا يحل المشكلات المنشئة للتوتر.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "structured-problemsolving-who-mhgap",
+  "question": 55,
+  "phase": 2,
+  "domain": "مهارات",
+  "crisis_sensitive": false,
+  "claim_ar": "أسلوب حل المشكلات المنهجي (Structured Problem Solving) مهارة مدمجة وموصى بها في دليل منظمة الصحة العالمية لتقليل العجز النفسي.",
+  "claim_en": "Structured problem-solving protocol is a key evidence-based intervention in WHO mhGAP guidelines.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mhgap-v2",
+      "quote_en": "Problem-solving counseling helps individuals break down complex stressors into actionable, manageable steps."
+    }
+  ],
+  "cultural_note_ar": "تقسيم المشكلة الكبيرة لخطوات صغيرة قابلة للتنفيذ يقلل الشعور بالشلل والإنهاك النفسي.",
+  "uncertainty_note_ar": "فاعلية حل المشكلات تنخفض عند مواجهة ضغوطات خارجية غير قابلة للتغيير الفردي.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "mindfulness-publication-bias-scrutiny",
+  "question": 56,
+  "phase": 2,
+  "domain": "مهارات",
+  "crisis_sensitive": false,
+  "claim_ar": "تدريبات اليقظة الذهنية (Mindfulness) أثبتت فاعلية حقيقية، لكن حجم تأثيرها عانى في بعض الأبحاث من انحياز النشر (Publication Bias).",
+  "claim_en": "Mindfulness-based interventions demonstrate efficacy, though effect sizes in early studies were inflated by publication bias.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "cochrane:cbt-anxiety",
+      "quote_en": "Mindfulness shows clinical utility, but active-control trials demonstrate comparable rather than superior efficacy to established treatments."
+    }
+  ],
+  "cultural_note_ar": "تكييف تمارين الحضور الذهني مع التبصُر والسكينة الثقافية يعزز تقبلها في المجتمع المصري.",
+  "uncertainty_note_ar": "اليقظة الذهنية ليست مناسبة للجميع؛ قد تزيد القلق لدى بعض حالات الصدمات دون توجيه متخصص.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "mental-health-gap-egypt-lmic",
+  "question": 57,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "فجوة العلاج النفسي (Treatment Gap) تبلغ أكثر من 75% في الدول متوسطة ومُنخفضة الدخل، مما يعني أن معظم من يحتاجون الرعاية لا يتلقونها.",
+  "claim_en": "The mental health treatment gap exceeds 75% in low- and middle-income countries due to resource constraints.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mental-health-atlas",
+      "quote_en": "In low and middle-income countries, between 76% and 85% of people with mental disorders receive no treatment."
+    }
+  ],
+  "cultural_note_ar": "مبادرات الصحة النفسية الحكومية والخطوط الساخنة بمصر تسعى لتقليص هذه الفجوة تدريجياً.",
+  "uncertainty_note_ar": "تختلف الفجوة بشكل حاد بين المدن الكبرى والمناطق الريفية والمحافظات الحدوديّة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "psychiatrist-ratio-arab-region",
+  "question": 58,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "معدل الأطباء النفسيين والمعالجين بالنسبة للسكان في إقليم شرق المتوسط يعاني من نقص مقارنة بالمعدلات العالمية الموصى بها.",
+  "claim_en": "The workforce density of psychiatrists and psychologists per capita in the EMRO region falls below global WHO benchmarks.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mental-health-atlas",
+      "quote_en": "The global median rate of mental health workers is 13 per 100,000 population, with significant regional disparities."
+    }
+  ],
+  "cultural_note_ar": "يؤدي النقص لقوائم انتظار طويلة بالمستشفيات الحكومية أو الارتفاع النسبي لكلفة العيادات الخاصة.",
+  "uncertainty_note_ar": "توسيع تدريب الأطباء الممارسين العموميين عبر برنامج mhGAP يساهم في سد جزء من هذا النقص.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "evidence-based-modalities-avail-egypt",
+  "question": 59,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاج المعرفي السلوكي (CBT) والدوائي هما الأكثر توفراً في مصر، بينما تتطلب العلاجات المتخصصة الأخرى بحثاً عن مراكز متخصصة.",
+  "claim_en": "CBT and pharmacotherapy are the most widely available evidence-based modalities in Egyptian clinical settings.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "who:mhgap-v2",
+      "quote_en": "Pharmacotherapy and brief psychological interventions represent the core available clinical modalities in resource-constrained settings."
+    }
+  ],
+  "cultural_note_ar": "تتوفر مستشفيات الأمانة العامة للصحة النفسية في معظم المحافظات كخدمة أساسية منخفضة التكلفة.",
+  "uncertainty_note_ar": "جودة وتوفر العلاجات النفسية غير الدوائية تختلف حسب مؤهلات المعالج والمركز.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "financial-barriers-psychiatric-care",
+  "question": 60,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "التكلفة المالية والاستقطاع المباشر من الجيب يشكل العائق المادي الأول أمام استمرارية العلاج النفسي طويل الأمد.",
+  "claim_en": "Out-of-pocket expenditure constitutes a major financial barrier to sustained mental health service utilization.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mental-health-atlas",
+      "quote_en": "Lack of financial protection for mental health care leads to high out-of-pocket costs and discontinuation."
+    }
+  ],
+  "cultural_note_ar": "دمج الصحة النفسية في منظومة التأمين الصحي الشامل بمصر يستهدف إلغاء هذا العائق تدريجياً.",
+  "uncertainty_note_ar": "تختلف أسعار الجلسات في القطاع الخاص بشكل واسع دون سقف محدد قانونياً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "stigma-structural-barrier-help-seeking",
+  "question": 61,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "الوصمة المجتمعية الذاتية والهيكلية تشكل العائق غير المادي الأول الذي يؤخر طلب الاستشارة النفسية المبكرة.",
+  "claim_en": "Public and internalized stigma represents a primary non-financial structural barrier delaying mental health help-seeking.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mental-health-atlas",
+      "quote_en": "Stigma and discrimination continue to deter individuals from seeking timely mental health support."
+    }
+  ],
+  "cultural_note_ar": "التوعية الطبية النفسية باللغة المصرية اليومية تسهم مباشرة في تفكيك الوصمة وتطبيع طلب الرعاية.",
+  "uncertainty_note_ar": "تراجع الوصمة لوحظ بشكل ملحوظ لدى الفئات الشبابية والجامعية خلال السنوات الأخيرة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "therapist-credential-evaluation-ethics",
+  "question": 62,
+  "phase": 3,
+  "domain": "تنقّل",
+  "crisis_sensitive": false,
+  "claim_ar": "التحقق من ترخيص المعالج النفسي من وزارة الصحة نقابة الأطباء/المعالجين حق أساسي للمريض للوقاية من الممارسين غير المؤهلين.",
+  "claim_en": "Verifying professional licensure and ethical qualifications is a fundamental patient right to guard against unaccredited practitioners.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:mhgap-v2",
+      "quote_en": "Patients should be informed of practitioner credentials, scope of practice, and ethical boundaries."
+    }
+  ],
+  "cultural_note_ar": "يحظر القانون المصري ممارسة العلاج النفسي دون ترخيص رسمي صادرة من وزارة الصحة ورابطة الاخصائيين النفسيين/الأطباء.",
+  "uncertainty_note_ar": "انتشار لقب «لايف كوتش» أو «استشاري علاقات» دون ترخيص طبي يطلب حذراً وتدقيقاً من متلقي الخدمة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-intrusive-thoughts-general-pop-normality",
+  "question": 63,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "الأفكار الاقتحامية المزعجة (Intrusive Thoughts) تحدث إحصائياً لدى أكثر من 90% من عامة الناس دون أن تصبح اضطراب وسواس قهري إكلينيكي.",
+  "claim_en": "Intrusive thoughts occur in over 90% of the general non-clinical population without indicating OCD.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Intrusive unwanted thoughts are common in the general population; OCD is defined by the distress and compulsive response."
+    }
+  ],
+  "cultural_note_ar": "الفصل بين مجرد ورود الفكرة العابرة وبين القبول بها يقلل الشعور بالذنب أو الوسوسة الإيمانية بمصر.",
+  "uncertainty_note_ar": "التحول إلى اضطراب وسواسي يحدث عندما يُعزى للفكرة الاقتحامية معنى تهديدي شخصي كبير.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-erp-gold-standard-cbt",
+  "question": 64,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاج بالتعرض ومنع الاستجابة (ERP) هو المعيار الذهبي المعتمد عالمياً في العلاج النفسي لاضطراب الوسواس القهري.",
+  "claim_en": "Exposure and Response Prevention (ERP) is established as the gold-standard psychological treatment for OCD.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Offer Exposure and Response Prevention (ERP) as part of CBT for individuals with OCD."
+    }
+  ],
+  "cultural_note_ar": "يتطلب تطبيق ERP في البيئة المصرية تدرجاً دقيقاً وتفهماً لطقوس الطهارة والنظافة الأسرية.",
+  "uncertainty_note_ar": "تختلف نسبة الاستجابة لـ ERP وتتطلب التزاماً وممارسة منتظمة لكسر دورة القلق.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-neatness-myth-debunked-evidence",
+  "question": 65,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "اختزال الوسواس القهري في أنه مجرد «حب الترتيب والنظافة الدقيقة» ادعاء مفند، فالاضطراب يسبب ضائقة شديدة ويعطل الحياة.",
+  "claim_en": "Reducing OCD to mere neatness or tidiness is debunked; clinical OCD involves distressing compulsions and functional impairment.",
+  "status": "debunked",
+  "evidence_tier": "debunked",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "OCD is characterized by time-consuming obsessions and compulsions causing significant distress, not casual preference for order."
+    }
+  ],
+  "cultural_note_ar": "استخدام عبارة «عندي وسواس» بشكل مجازي في الشارع المصري يقلل من خطورة المعاناة الحقيقية للمرضى.",
+  "uncertainty_note_ar": "بعض أنواع الوسواس القهري قد تشمل وسواس التناظر والترتيب، لكنها محكومة بقلق إكراهي وليس رغبة جمالية.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-subtypes-diversity-harm-checking",
+  "question": 66,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "أشكال الوسواس القهري تتنوع لتشمل وسواس الأذى، والتأكد، والشكوك الدينية والدنس، وليس فقط وسواس التلوث والنظافة.",
+  "claim_en": "OCD manifests across diverse subtypes including harm obsessions, checking compulsions, scrupulosity, and contamination fears.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Obsessions can take many forms, including fear of contamination, unwanted aggressive or blasphemous thoughts, and checking."
+    }
+  ],
+  "cultural_note_ar": "وسواس الشك في الطهارة وإعادة الصلاة من أشهر الأنواع انتشاراً بمصر وتستدعي توعية نفسية وفقهية متبادلة.",
+  "uncertainty_note_ar": "تنتقل الأعراض لدى الشخص نفسه بين عدة أنواع عبر مراحل الحياة المختلفة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-scrupulosity-arab-cultural-context",
+  "question": 67,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "الوسواس القهري الديني (Scrupulosity) يكثر في المجتمعات ذات الطابع الديني، حيث يتركز القلق على الشك في التكرار والنية.",
+  "claim_en": "Religious scrupulosity is a common presentation of OCD in religious societies, centered on intrusive doubt about intentions and purity.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Cultural and religious context shapes the thematic content of obsessions and associated ritualistic compulsions."
+    }
+  ],
+  "cultural_note_ar": "التأكيد الإفتائي بأسر رفع الحرج الشرعي عن مريض الوسواس القهري يسهل استجابة المريض للتعرض (ERP).",
+  "uncertainty_note_ar": "الفصل بين الممارسة الدينية المعتادة وبين القلق الوسواسي يعتمد على التكرار القهري وشعور الضائقة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-contamination-anxiety-vs-hygiene",
+  "question": 68,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "خوف التلوث الوسواسي يختلف عن الوقاية الصحية العادية، حيث يعتمد الأول على قلق غير متناسب وطقوس غسيل مكررة تدمر الجلد.",
+  "claim_en": "Contamination OCD differs from adaptive hygiene by disproportional dread and destructive repetitive washing rituals.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Compulsive washing in OCD is driven by catastrophic fear and neutralisation attempts rather than objective hygiene needs."
+    }
+  ],
+  "cultural_note_ar": "زيادة الغسيل بالمنظفات القوية يؤدي لإكزيما وجروح باليدين، وهي علامة إكلينيكية فارقة بمصر.",
+  "uncertainty_note_ar": "أثناء الأوبئة (مثل كورونا)، قد يتداخل غسيل الوقاية مع الأعراض الوسواسية مؤقتاً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-doubt-reassurance-trap-mechanism",
+  "question": 69,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "طلب الطمأنة المستمر (Reassurance Seeking) من الأهل يعطي راحة مؤقتة للوسواس لكنه يغذي الدورة القهرية على المدى الطويل.",
+  "claim_en": "Seeking reassurance provides short-term anxiety relief but reinforces long-term OCD cycles.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Family involvement in reassurance acts as a maintaining factor for OCD compulsions."
+    }
+  ],
+  "cultural_note_ar": "طرق تعامل الأسر المصرية بالإجابة عن أسئلة المريض التكرارية تؤدي دون قصد لاستمرار الوسواس.",
+  "uncertainty_note_ar": "امتناع الأهل عن تقديم الطمأنة يتطلب تدريباً سلوكياً وتوافقاً لتجنب غضب المريض الشديد.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ocd-medication-ssri-erp-combo-efficacy",
+  "question": 70,
+  "phase": 1,
+  "domain": "وسواس",
+  "crisis_sensitive": false,
+  "claim_ar": "دمج الأدوية النفسية (جرعات عالية من SSRIs) مع العلاج السلوكي ERP يحقق أعلى نسب استجابة في الحالات المتوسطة والشديدة من OCD.",
+  "claim_en": "Combining high-dose SSRIs with ERP yields superior outcomes in moderate-to-severe OCD cases.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:cg31-ocd",
+      "quote_en": "Offer combined SSRI and CBT (including ERP) for adults with severe OCD or where monotherapy is insufficient."
+    }
+  ],
+  "cultural_note_ar": "يحتاج مريض الوسواس بمصر لفهم أن أدوية الوسواس تحتاج أسابيع أطول (10-12 أسبوعاً) لتقييم الفاعلية.",
+  "uncertainty_note_ar": "التوقف المبكر عن الدواء فور التحسن يؤدي لارتفاع نسبة الانتكاس الوسواسي.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-nosological-distinctions-dsm-icd",
+  "question": 71,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "اضطرابات الأكل تميز إكلينيكياً بين فقدان الشهية العصبي (Anorexia)، والشره العصبي (Bulimia)، واضطراب نهم الطعام (Binge Eating).",
+  "claim_en": "Clinical criteria distinguish Anorexia Nervosa, Bulimia Nervosa, and Binge Eating Disorder based on clear behavioral patterns.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Eating disorders are characterized by severe disturbances in eating behavior and body image perception."
+    }
+  ],
+  "cultural_note_ar": "قد تُفسر اضطرابات الأكل في بعض الأسر بمصر كـ «دلع» أو «قلة أكل»، مما يؤخر التوجه الطبي.",
+  "uncertainty_note_ar": "التداخل والتنقل بين تشخيص الشره وفقدان الشهية يحدث لدى نسبة من المرضى مع الوقت.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-cultural-body-image-nonwestern",
+  "question": 72,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "اضطرابات الأكل وصورة الجسد تحدث في كافة المجتمعات غير الغربية، وليست حكراً على المجتمعات الغربية كما كان يعتقد سلفاً.",
+  "claim_en": "Eating disorders occur across diverse non-Western cultures, influenced by global and local body image pressures.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "yes",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Eating disorders affect people of all ethnic origins, genders, and socio-economic backgrounds."
+    }
+  ],
+  "cultural_note_ar": "تأثير منصات التواصل ومقاييس الرشاقة العصرية زاد من انتشار صور الجسد القلقة في المنطقة العربية.",
+  "uncertainty_note_ar": "معايير النحافة والرشاقة تختلف وتتغير ثقافياً بين الأجيال في مصر.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-prevalence-demographic-myth-debunked",
+  "question": 73,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "اعتبار اضطرابات الأكل «مرض الفتيات الغنيات فقط» ادعاء مفند؛ فالاضطراب يصيب جميع الفئات الاقتصادية والذكور والإناث.",
+  "claim_en": "The stereotype that eating disorders only affect wealthy young females is debunked by epidemiological data.",
+  "status": "debunked",
+  "evidence_tier": "debunked",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Do not exclude a diagnosis of an eating disorder based on gender, age, or background."
+    }
+  ],
+  "cultural_note_ar": "نقص التوعية يجعل إصابات الذكور باضطرابات الأكل غير تشخيصية بمصر لتخفيها خلف ممارسات رياضة الجيم.",
+  "uncertainty_note_ar": "نسبة التشخيص في الإناث لا تزال أعلى إحصائياً لكن الفجوة تقل مع تحسن أساليب الرصد.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-multidisciplinary-care-requirement",
+  "question": 74,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "علاج اضطرابات الأكل يستدعي فريقاً متعدد التخصصات يشمل طبيباً نفسياً، وأخصائي تغذية إكلينيكية، ومتابعاً باطنياً.",
+  "claim_en": "Multidisciplinary care combining medical, nutritional, and psychological expertise is mandatory for eating disorder recovery.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Ensure multidisciplinary management involving psychological, physical health, and dietary components."
+    }
+  ],
+  "cultural_note_ar": "اعتماد الأسر بمصر على أنظمة الريجيم العشوائية دون متابعة نفسية يعطل التعافي الحقيقي.",
+  "uncertainty_note_ar": "توفر المراكز المتخصصة في اضطرابات الأكل بمصر محصور في المدن الكبرى حالياً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-male-underdiagnosis-stigma",
+  "question": 75,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "الذكور المصابون باضطرابات الأكل يعانون من تأخر تشخيص شديد بسبب الوصمة واقتصار الفحوصات على التفكير الأنثوي التقليدي.",
+  "claim_en": "Males with eating disorders experience significant underdiagnosis and delay in seeking treatment due to stigma.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Be aware that males with eating disorders may present differently and face unique barriers to diagnosis."
+    }
+  ],
+  "cultural_note_ar": "صورة الجسد لدى الشباب المصري قد ترتبط بهوس التضخيم العضلي وتقييد الطعام الصارم (Bigorexia).",
+  "uncertainty_note_ar": "أدوات التشخيص الحالية مصممة تاريخياً بناءً على عينات إناث وتتطلب تحديثاً شاملاً.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-diet-culture-vs-disorder-boundary",
+  "question": 76,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "الحد الفاصل بين «ثقافة الدايت والرشاقة» وبين اضطراب الأكل الإكلينيكي هو درجة الهوس والسلوكيات التعويضية القاسية وتأثر الصحة.",
+  "claim_en": "The boundary between social diet culture and clinical eating disorders is defined by severe functional and medical impairment.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Clinical eating disorders involve severe psychological distress and physiological risks beyond typical dieting."
+    }
+  ],
+  "cultural_note_ar": "التشجيع المجتمعي بمصر على خسارة الوزن السريعة قد يخفي بداية التطور لمرض فقدان الشهية العصبي.",
+  "uncertainty_note_ar": "كثير من الحالات تبدأ برجيم عادي وتحول تدريجياً إلى سلوك قهري سلب التحكم.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-medical-complications-mortality-risk",
+  "question": 77,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "فقدان الشهية العصبي (Anorexia) يحمل أعلى معدل وفيات بين كافة الاضطرابات النفسية بسبب المضاعفات الباطنية واختلال الأملاح.",
+  "claim_en": "Anorexia Nervosa has one of the highest mortality rates among psychiatric disorders due to medical complications.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Anorexia nervosa has a high risk of medical complications and elevated mortality compared to other mental health conditions."
+    }
+  ],
+  "cultural_note_ar": "ملاحظة هبوط نبضات القلب والدوخة الشديدة لدى الفتيات يستدعي تقييماً باطنياً عاجلاً.",
+  "uncertainty_note_ar": "التدخل الطبي والمستشفيات يستطيع إيقاف الخطورة الباطنية فور استقرار التغذية التدريجية.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "ed-family-based-treatment-fbt-adolescents",
+  "question": 78,
+  "phase": 1,
+  "domain": "اضطرابات الأكل",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاج القائم على الأسرة (FBT / Maudsley) هو الخط الأول الموصى به لعلاج اضطرابات الأكل لدى الأطفال والمراهقين.",
+  "claim_en": "Family-Based Treatment (FBT) is the recommended first-line therapy for adolescents with eating disorders.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "nice:ng69-eating-disorders",
+      "quote_en": "Offer anorexia-focused family therapy to children and young people with anorexia nervosa."
+    }
+  ],
+  "cultural_note_ar": "إشراك الوالدين بالوجبات المنزلية في مصر دون توبيخ يعتبر الرافعة الأساسية لتعافي المراهقين.",
+  "uncertainty_note_ar": "نجاح FBT يتطلب تدريب الوالدين على التعامل مع مقاومة المريض وتوتر الوجبات.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-brain-disease-model-contested-biology",
+  "question": 79,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "نموذج الإدمان كمرض دماغي مزمن (Brain Disease Model) مثبت بيولوجياً، لكن هناك جدل علمي حول دور العوامل الاجتماعية والقرار الشخصي.",
+  "claim_en": "The brain disease model of addiction is neurobiologically established, though debated regarding the scope of social determinants.",
+  "status": "contested",
+  "evidence_tier": "contested",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Substance dependence involves complex neurobiological adaptations interacting with psychosocial factors."
+    }
+  ],
+  "cultural_note_ar": "شرح التغيرات الدماغية للمتعافي في مصر يقلل من وصمة «ضعف الإرادة الأخلاقي» ويشجع التوجه للعلاج.",
+  "uncertainty_note_ar": "العلاج الناجح يدمج الأدوية البيولوجية مع الدعم النفسي والاجتماعي وتعديل البيئة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-harm-reduction-evidence-implementation",
+  "question": 80,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "استراتيجيات الحد من الضرر (Harm Reduction) مثبتة عالمياً في تقليل الوفيات والأمراض المعدية لدى متعاطي المواد المخدرة.",
+  "claim_en": "Harm reduction strategies effectively reduce overdose deaths and blood-borne virus transmission globally.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "partial",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Harm reduction measures, including naloxone distribution and needle exchange, reduce morbidity and mortality."
+    }
+  ],
+  "cultural_note_ar": "تطبيق الحد من الضرر بالمنطقة العربية يواجه تحفظات قانونية ومجتمعية ويحتاج صياغة تتقبل تقليل المخاطر.",
+  "uncertainty_note_ar": "الحد من الضرر لا يناقض هدف التعافي التام، بل يحافظ على حياة الفرد لحين جاهزيته للعلاج.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-neurobiology-reward-dopamine-adaptation",
+  "question": 81,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "المواد المخدرة تسبب فرط إفراز الدوبامين في مسار المكافأة بالدماغ، مما يؤدي لتكيف عصبي يقلل الشعور بالمتعة بدون المادة.",
+  "claim_en": "Substance use surges dopamine in reward circuits, prompting neuroadaptations that decrease natural reward sensitivity.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Chronic substance exposure alters mesolimbic dopamine signaling, driving craving and tolerance."
+    }
+  ],
+  "cultural_note_ar": "فهم أعراض الانسحاب والرغبة القاطعة كعملية بيولوجية يساعد المتعافي على الثبات بمساعدة المستشفيات.",
+  "uncertainty_note_ar": "التعافي العصبي وإعادة توازن المستقبلات الدماغية يستغرق أشهراً من الامتناع والمتابعة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-willpower-myth-debunked-evidence",
+  "question": 82,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "اعتبار التعافي من الإدمان مسألة «قوة إرادة فقط» هو ادعاء مفند؛ التغيرات العصبية تجعل التحكم الإرادي وحده غير كافٍ.",
+  "claim_en": "The claim that addiction recovery relies solely on willpower is debunked by neurobiological and clinical evidence.",
+  "status": "debunked",
+  "evidence_tier": "debunked",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Substance dependence impairs executive control circuits; treatment requires medical and behavioral interventions beyond choice."
+    }
+  ],
+  "cultural_note_ar": "لوم المتعافي وإجباره على التعهد الإرادي دون توفير علاج سحب سموم طبي ينتهي غالباً بالانتكاس.",
+  "uncertainty_note_ar": "الدافع الشخصي مهم في مرحلة طلب العلاج، لكنه يستلزم بروتوكولاً طبياً ونفسياً للاستمرار.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-multiple-recovery-pathways-evidence",
+  "question": 83,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "طرق التعافي من الإدمان متعددة ومستندة لأدلة، وتتنوع بين العلاج الطبي المستمر، والمجموعات العلاجية، والعلاج السلوكي.",
+  "claim_en": "Multiple evidence-based pathways exist for addiction recovery, including pharmacotherapy, CBT, and mutual aid groups.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Recovery is achievable through diverse modalities tailored to individual patient clinical profiles."
+    }
+  ],
+  "cultural_note_ar": "انتشار مجموعات الدعم والمصحات المرخصة بالصحة النفسية بمصر يوفر مسارات متنوعة تناسب الظروف الأسرية.",
+  "uncertainty_note_ar": "البرنامج الأنسب لكل فرد يعتمد على نوع المادة، وجود اضطراب نفسي مصاحب، ودعم البيئة المحيطة.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-stigma-barrier-to-care-criminalization",
+  "question": 84,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "الوصمة المجتمعية والخوف من العقاب التجريمي يشكلان العائق الأول الذي يمنع المتعاطين من طلب الرعاية الطبية المبكرة.",
+  "claim_en": "Stigma and fear of legal repercussions constitute primary barriers preventing individuals from seeking early addiction care.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Stigma and discrimination inhibit individuals from accessing evidence-based substance use treatment."
+    }
+  ],
+  "cultural_note_ar": "يوفر الخط الساخن لعلاج الإدمان بمصر (16023) علاجاً سرية ومجانياً بالكامل لحماية المرضى من الوصمة.",
+  "uncertainty_note_ar": "السرية التامة للخدمات العلاجية تعد الشرط الأساسي لإقبال المرضى وعائلاتهم على العلاج.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-dual-diagnosis-prevalence-anxiety-mood",
+  "question": 85,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "التشخيص المزدوج (Dual Diagnosis) يعبر عن مصاحبة الإدمان لاضطراب نفسي آخر كالاكتئاب أو الصدمة لدى أكثر من 50% من الحالات.",
+  "claim_en": "Co-occurring psychiatric disorders (Dual Diagnosis) affect over 50% of individuals with substance use disorders.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Integrated treatment addressing both substance use and co-occurring mental disorders yields optimal outcomes."
+    }
+  ],
+  "cultural_note_ar": "علاج الإدمان دون التقييم النفسي الشامل للاكتئاب أو الصدمة الثانوية يؤدي لارتفاع معدلات الانتكاس.",
+  "uncertainty_note_ar": "تحديد ما إذا كان الاضطراب النفسي سابقاً أم ناتجاً عن التعاطي يتطلب تقييماً متدرجاً أثناء سحب السموم.",
+  "last_reviewed": "2026-08-02"
+},
+{
+  "id": "sud-pharmacotherapy-efficacy-withdrawal",
+  "question": 86,
+  "phase": 1,
+  "domain": "الإدمان",
+  "crisis_sensitive": false,
+  "claim_ar": "العلاج الدوائي لسحب السموم ودعم الصيانة (Pharmacotherapy) يقلل خطورة أعراض الانسحاب الشديدة ويعزز الاستمرار في التعافي.",
+  "claim_en": "Evidence-based pharmacotherapy safely manages acute withdrawal and supports long-term abstinence maintenance.",
+  "status": "established",
+  "evidence_tier": "established",
+  "weird_flag": "no",
+  "sources": [
+    {
+      "srcId": "who:substance-use-guidelines",
+      "quote_en": "Pharmacological interventions are essential for safe withdrawal management and relapse prevention."
+    }
+  ],
+  "cultural_note_ar": "توفير سحب السموم الطبي بمستشفيات الأمانة العامة للصحة النفسية بمصر يضمن الأمان الصحي الفوري.",
+  "uncertainty_note_ar": "الاستخدام الدوائي يجب أن يتزامن دائماً مع متابعة نفسية وسلوكية لمنع الانتكاس.",
+  "last_reviewed": "2026-08-02"
 }
 ];

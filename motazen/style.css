@@ -1,0 +1,154 @@
+
+  /* ── متزن identity: "النَّفَس والورق" (breath & paper). PAPER-LIGHT by default (calm, book-like) —
+     deliberately NOT موثوق's dark gold hall, NOT مستعد's dark emergency-teal. A single deep-SAGE breath
+     accent (not مستعد's bright teal), real paper grain, breath-paced motion, IBM Plex Sans Arabic.
+     M1 = the «ما تحت الصفر» (Below-Zero) DESCENT: 7 stations you walk down before Phase 0. ── */
+  :root{
+    --paper:#F3ECDB; --paper-2:#EBE2CD; --card:#FBF6EA; --card-2:#F6EFDF;
+    --ink:#20302A; --muted:#5E6E63; --dim:#8C978C; --line:rgba(40,70,55,.14);
+    --sage:#2F7D6B; --sage-deep:#1F5B4E; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.30);
+    /* evidence palette — tuned for AA contrast on warm paper (functional, never decorative) */
+    --established:#1E8F5B; --contested:#B4820E; --weak:#B85B1C; --debunked:#B23A2E; --unknown:#67757C;
+    --shadow:0 18px 44px -26px rgba(40,60,45,.34);
+    --arb:'IBM Plex Sans Arabic','Segoe UI',system-ui,'Noto Naskh Arabic',Tahoma,sans-serif;
+    --lat:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  /* متزن defaults to PAPER-LIGHT always (its identity — distinct from the two dark siblings). A calm
+     pine-night is opt-in via the ☾ toggle only, NOT auto-forced by the OS theme, so متزن always opens
+     as itself. */
+  :root[data-theme="dark"]{
+    --paper:#0e1714; --paper-2:#0c1512; --card:#14201b; --card-2:#111c17; --ink:#e9f1eb; --muted:#9db3a8; --dim:#6c8177;
+    --line:rgba(150,200,175,.13); --sage:#5DA491; --sage-deep:#8fd3c1; --sage-soft:#5DA491; --breath-glow:rgba(93,164,145,.22);
+    --established:#37B87A; --contested:#DCA326; --weak:#DB7B3A; --debunked:#E06153; --unknown:#8B98A2; --shadow:0 22px 52px -30px rgba(0,0,0,.6);
+  }
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{color:var(--ink);font-family:var(--arb);line-height:1.9;-webkit-font-smoothing:antialiased;
+    background:var(--paper);
+    /* paper grain: layered fine gradients (a trustworthy book, not a slick SaaS) */
+    background-image:
+      radial-gradient(circle at 18% 12%, rgba(255,255,255,.5), transparent 26%),
+      radial-gradient(circle at 82% 78%, rgba(120,150,130,.06), transparent 30%),
+      repeating-linear-gradient(0deg, rgba(70,90,75,.020) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(90deg, rgba(70,90,75,.016) 0 1px, transparent 1px 3px);
+  }
+  .wrap{max-width:1080px;margin-inline:auto;padding:0 clamp(16px,4vw,36px)}
+  a{color:var(--sage)}
+  /* header */
+  header.bar{position:sticky;top:0;z-index:30;backdrop-filter:blur(9px);background:color-mix(in srgb,var(--paper) 84%,transparent);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;align-items:center;gap:12px;padding-block:13px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:700;text-decoration:none}
+  .brand .mark{width:34px;height:34px;flex:none;animation:breathe 10s ease-in-out infinite}
+  .brand b{font-size:1.35rem;color:var(--sage-deep);letter-spacing:.01em}
+  .brand .eal{font-size:.62rem;color:var(--dim);font-weight:600;letter-spacing:.16em;margin-inline-start:2px}
+  .bar .sp{margin-inline-start:auto}
+  .bar a.lnk,.bar button.lnk{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:600;padding:6px 11px;border-radius:9px}
+  .bar a.lnk:hover,.bar button.lnk:hover{color:var(--ink);background:var(--card)}
+  /* breathing mark */
+  @keyframes breathe{0%,100%{transform:scale(.9);opacity:.85}45%{transform:scale(1.06);opacity:1}}
+  @media (prefers-reduced-motion:reduce){.brand .mark,.breath-orb,.rail .dot.on::after{animation:none!important}}
+  /* hero */
+  .hero{position:relative;text-align:center;padding:clamp(46px,9vw,92px) 0 clamp(20px,3vw,32px);overflow:hidden}
+  .breath-orb{position:absolute;inset-inline-start:50%;top:clamp(30px,7vw,64px);width:min(300px,64vw);aspect-ratio:1;transform:translateX(50%);
+    border-radius:50%;background:radial-gradient(circle,var(--breath-glow),transparent 62%);filter:blur(6px);z-index:0;animation:breathe 10s ease-in-out infinite}
+  .hero .in{position:relative;z-index:1}
+  .eyebrow{font-size:.72rem;letter-spacing:.24em;color:var(--sage);font-weight:700}
+  .hero h1{font-size:clamp(2.8rem,10vw,5.2rem);line-height:1;margin:16px 0 0;font-weight:600;color:var(--sage-deep)}
+  .hero .tag{font-family:'IBM Plex Serif',serif;font-style:italic;font-size:clamp(1.05rem,3vw,1.5rem);color:var(--ink);margin-top:14px;font-weight:400}
+  .hero .sub{color:var(--muted);max-width:660px;margin:16px auto 0;font-size:clamp(.98rem,2.2vw,1.1rem);font-weight:400}
+  /* phase banner — the descent framing */
+  .phasecard{max-width:760px;margin:26px auto 0;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);
+    border-radius:20px;padding:20px 24px;text-align:start;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .phasecard::before{content:'';position:absolute;inset-block:0;inset-inline-start:0;width:4px;background:linear-gradient(var(--sage-soft),var(--sage-deep))}
+  .phasecard .pl{font-size:.72rem;letter-spacing:.2em;font-weight:700;color:var(--sage)}
+  .phasecard h2{font-size:clamp(1.3rem,4vw,1.75rem);color:var(--sage-deep);font-weight:600;margin:4px 0 6px}
+  .phasecard p{color:var(--muted);font-size:.96rem}
+  .phasecard .steps{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .phasecard .steps span{font-size:.78rem;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:5px 12px}
+  .phasecard .steps b{color:var(--sage-deep)}
+  /* evidence legend — a teaching strip */
+  .legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
+  .lg{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 13px;font-size:.79rem;color:var(--muted)}
+  .dot{width:9px;height:9px;border-radius:99px;flex:none}
+  /* lens (compact status filter, secondary to the journey) */
+  .lens{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:22px 0 4px}
+  .lens .lbl{font-size:.78rem;color:var(--dim);font-weight:600}
+  .fchip{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:6px 14px;font-size:.83rem;cursor:pointer;font-weight:600;font-family:inherit;transition:.16s}
+  .fchip:hover{color:var(--ink);border-color:var(--sage-soft)}
+  .fchip.on{background:var(--sage-deep);color:#f4efe2;border-color:transparent}
+
+  /* ── THE JOURNEY / DESCENT ── */
+  .journey{position:relative;padding:18px 0 40px}
+  /* the breath thread running down the spine of the descent */
+  .journey::before{content:'';position:absolute;top:0;bottom:60px;inset-inline-start:max(calc((100vw - 1080px)/2 + 34px),34px);
+    width:2px;background:linear-gradient(var(--sage-soft),transparent);opacity:.5;z-index:0}
+  @media(max-width:720px){.journey::before{inset-inline-start:22px}}
+  .station{position:relative;padding:26px 0 8px;scroll-margin-top:74px}
+  .station .head{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px;position:relative;z-index:1}
+  .stnum{flex:none;width:52px;height:52px;border-radius:50%;background:var(--card);border:1.6px solid var(--sage-soft);
+    display:grid;place-items:center;font-weight:700;color:var(--sage-deep);font-size:1.05rem;box-shadow:0 0 0 6px var(--paper)}
+  .station .htext{flex:1;min-width:0}
+  .station .kick{font-size:.72rem;letter-spacing:.18em;font-weight:700;color:var(--sage)}
+  .station h3{font-size:clamp(1.35rem,4.4vw,1.9rem);color:var(--ink);font-weight:600;line-height:1.35;margin:3px 0 0}
+  .station .frame{color:var(--muted);font-size:.98rem;margin-top:8px;max-width:74ch}
+  .station .scount{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .station .scount i{font-style:normal;font-size:.73rem;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:3px 10px;display:inline-flex;gap:5px;align-items:center}
+  /* cards grid inside a station */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;padding:4px 0 8px;position:relative;z-index:1}
+  .card{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:20px;padding:22px 22px 20px;
+    position:relative;border-inline-start:4px solid var(--stat);box-shadow:var(--shadow);transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s}
+  .card:hover{transform:translateY(-3px)}
+  .card .top{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:13px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:700;padding:4px 11px;border-radius:99px;
+    background:color-mix(in srgb,var(--stat) 14%,transparent);color:var(--stat);border:1px solid color-mix(in srgb,var(--stat) 44%,transparent)}
+  .tier{font-size:.72rem;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:3px 9px}
+  .weird{font-size:.72rem;font-weight:700;color:var(--weak);background:color-mix(in srgb,var(--weak) 12%,transparent);border:1px solid color-mix(in srgb,var(--weak) 38%,transparent);border-radius:99px;padding:3px 9px}
+  .card .claim{font-size:1.14rem;font-weight:500;line-height:1.85}
+  .card .en{color:var(--muted);font-size:.85rem;font-family:var(--lat);direction:ltr;text-align:left;margin-top:9px;line-height:1.55}
+  .card .cultural{margin-top:11px;font-size:.9rem;color:var(--ink);background:color-mix(in srgb,var(--sage-soft) 10%,transparent);border:1px solid color-mix(in srgb,var(--sage-soft) 30%,transparent);border-radius:13px;padding:10px 13px}
+  .card .cultural b{color:var(--sage-deep);font-weight:700}
+  details{margin-top:13px;border-top:1px dashed var(--line);padding-top:11px}
+  details summary{cursor:pointer;font-size:.82rem;font-weight:700;color:var(--sage);list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary::before{content:'؟ ';opacity:.7}
+  details .note{color:var(--muted);font-size:.9rem;margin-top:7px}
+  .dissent{margin-top:9px;font-size:.85rem;color:var(--muted);border-inline-start:3px solid color-mix(in srgb,var(--contested) 60%,transparent);padding-inline-start:10px}
+  .dissent b{color:var(--contested);font-weight:700}
+  .src{margin-top:11px;background:var(--card-2);border:1px solid var(--line);border-radius:13px;padding:11px 14px;font-size:.82rem}
+  .src .q{color:var(--ink);font-family:'IBM Plex Serif',serif;font-style:italic;direction:ltr;text-align:left;opacity:.92;line-height:1.5}
+  .src .cite{margin-top:7px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .src .cite a{font-weight:700;text-decoration:none;word-break:break-word;color:var(--sage-deep)}
+  .src .g{font-size:.66rem;color:var(--sage);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+  .src .dis{font-size:.66rem;color:var(--contested);border:1px solid color-mix(in srgb,var(--contested) 40%,transparent);border-radius:6px;padding:1px 6px;font-weight:700}
+  /* the «ما لا نعرفه» closer gets a distinct, humbler skin */
+  .card.iunknown{background:repeating-linear-gradient(135deg,var(--card) 0 10px,var(--card-2) 10px 20px);border-style:dashed}
+
+  /* sticky progress rail (right side on desktop, top strip on mobile) */
+  .rail{position:fixed;inset-inline-start:14px;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;gap:14px}
+  .rail button{all:unset;cursor:pointer;display:flex;align-items:center;gap:9px;color:var(--dim);font-size:.72rem;font-weight:600}
+  .rail .rd{width:11px;height:11px;border-radius:50%;border:1.6px solid var(--sage-soft);background:var(--paper);transition:.2s;flex:none}
+  .rail button.on .rd{background:var(--sage-deep);border-color:var(--sage-deep);box-shadow:0 0 0 4px var(--breath-glow)}
+  .rail button .rl{opacity:0;transform:translateX(-6px);transition:.2s;white-space:nowrap;max-width:0;overflow:hidden}
+  .rail button:hover .rl,.rail button.on .rl{opacity:1;transform:none;max-width:180px}
+  @media(max-width:900px){.rail{display:none}}
+
+  /* end-of-descent → Phase 0 teaser */
+  .endcard{margin:24px 0 12px;background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:22px;padding:34px clamp(20px,4vw,40px);box-shadow:var(--shadow)}
+  .endcard .z{font-size:.74rem;letter-spacing:.2em;color:var(--sage);font-weight:700;text-align:center;display:block}
+  .endcard h3{font-size:clamp(1.4rem,4.5vw,2rem);color:var(--sage-deep);font-weight:600;margin:6px 0 8px;text-align:center}
+  .endcard>p{color:var(--muted);max-width:640px;margin:0 auto;font-size:.98rem;text-align:center}
+  /* the exit-criterion checklist (PRD §7): what you can now say in your own words */
+  .exit{max-width:720px;margin:22px auto 0;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .exit .xh{font-size:.9rem;font-weight:700;color:var(--sage-deep);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .exit ul{list-style:none;display:grid;gap:11px}
+  .exit li{display:flex;gap:11px;align-items:flex-start;font-size:.96rem;color:var(--ink);line-height:1.75}
+  .exit li .ck{flex:none;width:22px;height:22px;border-radius:50%;background:color-mix(in srgb,var(--established) 16%,transparent);color:var(--established);display:grid;place-items:center;font-size:.8rem;font-weight:700;margin-top:3px}
+  .exit li b{color:var(--sage-deep);font-weight:700}
+  .endcard .soon{display:block;width:fit-content;margin:20px auto 0;font-size:.8rem;color:var(--dim);border:1px dashed var(--line);border-radius:99px;padding:6px 16px}
+  .endcard .next{max-width:640px;margin:16px auto 0;text-align:center;color:var(--muted);font-size:.9rem}
+  .endcard .next b{color:var(--ink)}
+
+  footer{border-top:1px solid var(--line);padding:28px 0 64px;text-align:center;color:var(--dim);font-size:.84rem}
+  footer b{color:var(--ink)}
+  .crisis{max-width:640px;margin:10px auto 0;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 30%,transparent);border-radius:14px;padding:12px 16px;color:var(--ink);font-size:.85rem}
+  .crisis b{color:var(--debunked)}
