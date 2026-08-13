@@ -1,0 +1,51 @@
+{
+  "trackId": "TRACK-HUMAN-001",
+  "scope": "PART_P_FIRST_20_DAYS",
+  "status": "DRAFT_COMPLETE_INTERNAL_REVISION_COMPLETE_HUMAN_REVIEW_PENDING",
+  "schema": "../../15_DATA_MODEL/day-schema.json",
+  "publicationStatus": "HOLD_PENDING_PROFESSIONAL_AND_USER_REVIEW",
+  "internalReview": {
+    "status": "COMPLETE_WITH_EXTERNAL_HOLDS",
+    "packet": "../../25_RED_TEAM/TRACK-HUMAN-001/pilot-days-001-020/README.md",
+    "findings": "../../25_RED_TEAM/TRACK-HUMAN-001/pilot-days-001-020/findings.json",
+    "revisionLog": "../../25_RED_TEAM/TRACK-HUMAN-001/pilot-days-001-020/revision-log.md"
+  },
+  "externalReview": {
+    "status": "PENDING",
+    "approvalClaimed": false
+  },
+  "rules": [
+    "DRAFTED means a source-linked 44-field Arabic lesson exists and passes automated validation; it does not mean professionally approved or safe to publish.",
+    "PENDING means the lesson has not been written; an outline entry is not a completed lesson.",
+    "No day may become APPROVED without attributable human review decisions and resolved blocking findings."
+  ],
+  "days": [
+    {"day":1,"status":"DRAFTED","file":"day-001.json"},
+    {"day":2,"status":"DRAFTED","file":"day-002.json"},
+    {"day":3,"status":"DRAFTED","file":"day-003.json"},
+    {"day":4,"status":"DRAFTED","file":"day-004.json"},
+    {"day":5,"status":"DRAFTED","file":"day-005.json"},
+    {"day":6,"status":"DRAFTED","file":"day-006.json"},
+    {"day":7,"status":"DRAFTED","file":"day-007.json"},
+    {"day":8,"status":"DRAFTED","file":"day-008.json"},
+    {"day":9,"status":"DRAFTED","file":"day-009.json"},
+    {"day":10,"status":"DRAFTED","file":"day-010.json"},
+    {"day":11,"status":"DRAFTED","file":"day-011.json"},
+    {"day":12,"status":"DRAFTED","file":"day-012.json"},
+    {"day":13,"status":"DRAFTED","file":"day-013.json"},
+    {"day":14,"status":"DRAFTED","file":"day-014.json"},
+    {"day":15,"status":"DRAFTED","file":"day-015.json"},
+    {"day":16,"status":"DRAFTED","file":"day-016.json"},
+    {"day":17,"status":"DRAFTED","file":"day-017.json"},
+    {"day":18,"status":"DRAFTED","file":"day-018.json"},
+    {"day":19,"status":"DRAFTED","file":"day-019.json"},
+    {"day":20,"status":"DRAFTED","file":"day-020.json"}
+  ],
+  "requiredReviewsAfterDay20": [
+    "independent clinical and public-health review",
+    "independent behavioral-science and curriculum review",
+    "independent Egyptian society and language review",
+    "independent product, accessibility, privacy, and safety review",
+    "revision log resolving or explicitly holding every finding"
+  ]
+}

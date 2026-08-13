@@ -1,0 +1,17 @@
+{
+  "schemaVersion":"1.0.0","status":"FOUNDATION_COMPLETE_RESEARCH_PENDING","professionalReview":"PENDING",
+  "rules":["المرحلة لا تُستنتج من العمر وحده","الانتقالات غير خطية وقد تتكرر","لا توجد مرحلة معيارية أو متأخرة أخلاقيًا","المحتوى للقاصرين يحتاج حماية وموافقة مناسبة"],
+  "stages":[
+    {"id":"STAGE-ADOLESCENCE","nameAr":"مراهقة","ageRange":"contextual_not_deterministic","adaptations":["guardian and safeguarding review","school power","privacy limits"]},
+    {"id":"STAGE-EMERGING-ADULT","nameAr":"بداية الرشد","ageRange":"contextual_not_deterministic","adaptations":["education-work transition","financial dependence","identity plurality"]},
+    {"id":"STAGE-ADULT","nameAr":"رشد","ageRange":"contextual_not_deterministic","adaptations":["multiple roles","work and care","resource constraints"]},
+    {"id":"STAGE-MIDLIFE","nameAr":"منتصف الحياة","ageRange":"contextual_not_deterministic","adaptations":["care load","health changes","role transitions"]},
+    {"id":"STAGE-LATER-LIFE","nameAr":"مراحل لاحقة من الحياة","ageRange":"contextual_not_deterministic","adaptations":["accessibility","bereavement boundaries","autonomy and support"]},
+    {"id":"TRANSITION-EDUCATION","nameAr":"انتقال تعليمي","ageRange":"any","adaptations":["uncertainty","learning access","evaluation pressure"]},
+    {"id":"TRANSITION-WORK","nameAr":"دخول أو تغيير أو فقد عمل","ageRange":"any","adaptations":["income constraint","identity boundary","legal and organizational context"]},
+    {"id":"TRANSITION-PARENTHOOD-CARE","nameAr":"دخول رعاية أو والدية","ageRange":"any","adaptations":["caregiver load","child rights","support redundancy"]},
+    {"id":"TRANSITION-RELATIONSHIP","nameAr":"ارتباط أو انفصال أو فقد علاقة","ageRange":"any","adaptations":["safety gate","grief","autonomy"]},
+    {"id":"TRANSITION-HEALTH","nameAr":"تغير صحي أو قدرة","ageRange":"any","adaptations":["clinical boundary","accessibility","dose reduction"]}
+  ],
+  "selection":{"optional":true,"multipleTransitionsAllowed":true,"storageDefault":"NO_STORAGE","neverUsedForDiagnosisOrPricing":true}
+}

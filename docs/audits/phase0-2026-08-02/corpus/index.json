@@ -5,7 +5,7 @@
     "httpStatus": 404,
     "decodedLength": 475213,
     "finalUrl": "https://consumer.ftc.gov/articles/family-emergency-scams",
-    "retrievedAt": "2026-08-02T15:11:37.215Z",
+    "retrievedAt": "2026-08-02T18:43:31.740Z",
     "reason": "HTTP 404"
   },
   {
@@ -14,7 +14,7 @@
     "httpStatus": 404,
     "decodedLength": 475216,
     "finalUrl": "https://consumer.ftc.gov/articles/how-protect-kids-online",
-    "retrievedAt": "2026-08-02T15:11:37.249Z",
+    "retrievedAt": "2026-08-02T18:43:31.771Z",
     "reason": "HTTP 404"
   },
   {
@@ -23,8 +23,8 @@
     "httpStatus": 200,
     "decodedLength": 484229,
     "finalUrl": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers",
-    "retrievedAt": "2026-08-02T15:10:29.581Z",
-    "sha256": "ce9584d386c9f353faebcb86a591e6842c03351c3fd21df01769c4fd3a121f9a",
+    "retrievedAt": "2026-08-02T18:41:20.261Z",
+    "sha256": "6e3ac72cbeb1b74d8bb9bafcc1444659dbac2332de52a107f957bc76c9608e9b",
     "filename": "consumer-ftc-gov-articles-how-protect-your-phone-hackers-4ab4d49207.html",
     "preservedAfterFailedProbe": "fetch failed"
   },
@@ -34,18 +34,18 @@
     "httpStatus": 200,
     "decodedLength": 494015,
     "finalUrl": "https://consumer.ftc.gov/articles/job-scams",
-    "retrievedAt": "2026-08-02T15:11:37.251Z",
-    "sha256": "17380fbbdc61bde80cd12f08094b444eb55537852bd9be15e42a12e2898489ed",
+    "retrievedAt": "2026-08-02T18:43:31.773Z",
+    "sha256": "90c087f35b6a9f3412b1d5656455440e93a956073fb75ea36ecfac74d5dfa855",
     "filename": "consumer-ftc-gov-articles-job-scams-7767c4e238.html"
   },
   {
     "url": "https://consumer.ftc.gov/articles/what-do-data-breach",
     "status": "blocked",
-    "httpStatus": 404,
-    "decodedLength": 475204,
+    "httpStatus": null,
+    "decodedLength": 0,
     "finalUrl": "https://consumer.ftc.gov/articles/what-do-data-breach",
-    "retrievedAt": "2026-08-02T15:11:37.251Z",
-    "reason": "HTTP 404"
+    "retrievedAt": "2026-08-02T18:43:31.773Z",
+    "reason": "fetch failed"
   },
   {
     "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
@@ -53,8 +53,8 @@
     "httpStatus": 200,
     "decodedLength": 492377,
     "finalUrl": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
-    "retrievedAt": "2026-08-02T15:01:53.368Z",
-    "sha256": "967bf6cc8dd2de868b33654786bde90fbe1e13c12abc4f734d5919519ee1adf8",
+    "retrievedAt": "2026-08-02T18:32:17.966Z",
+    "sha256": "fd94993ceb0ea99429420e82a11185f0df2e77140f71818927373640dfa96f4a",
     "filename": "consumer-ftc-gov-articles-what-do-if-you-were-scammed-bb355a9edf.html",
     "preservedAfterFailedProbe": "fetch failed"
   },
@@ -63,11 +63,10 @@
     "status": "saved",
     "httpStatus": 200,
     "decodedLength": 497497,
-    "finalUrl": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
-    "retrievedAt": "2026-08-02T15:10:29.524Z",
-    "sha256": "87b3795e791fdb07ab669e38bf9a804f8d30fcf539c025fe32d80e610486ba5d",
-    "filename": "consumer-ftc-gov-articles-what-know-about-cryptocurrency-and-scams-319cd8df21.html",
-    "preservedAfterFailedProbe": "fetch failed"
+    "finalUrl": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams",
+    "retrievedAt": "2026-08-02T18:43:31.774Z",
+    "sha256": "56661b2c5e7409dfc8e9bbf2ffeb98e6dde89c7378d90f55e83b4cd66660affc",
+    "filename": "consumer-ftc-gov-articles-what-know-about-cryptocurrency-and-scams-319cd8df21.html"
   },
   {
     "url": "https://consumer.ftc.gov/consumer-alerts/2024/10/report-fraud-ftc-what-older-adults-need-know",
@@ -75,7 +74,7 @@
     "httpStatus": null,
     "decodedLength": 0,
     "finalUrl": "https://consumer.ftc.gov/consumer-alerts/2024/10/report-fraud-ftc-what-older-adults-need-know",
-    "retrievedAt": "2026-08-02T15:11:37.253Z",
+    "retrievedAt": "2026-08-02T18:43:31.775Z",
     "reason": "fetch failed"
   },
   {
@@ -84,7 +83,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/12096700",
-    "retrievedAt": "2026-08-02T15:11:37.611Z",
+    "retrievedAt": "2026-08-02T18:43:32.151Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -93,7 +92,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/18235867",
-    "retrievedAt": "2026-08-02T15:11:37.618Z",
+    "retrievedAt": "2026-08-02T18:43:32.153Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -102,7 +101,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/22294996",
-    "retrievedAt": "2026-08-02T15:11:37.621Z",
+    "retrievedAt": "2026-08-02T18:43:32.158Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -111,7 +110,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/23831861",
-    "retrievedAt": "2026-08-02T15:11:37.621Z",
+    "retrievedAt": "2026-08-02T18:43:32.159Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -120,7 +119,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/24034956",
-    "retrievedAt": "2026-08-02T15:11:38.034Z",
+    "retrievedAt": "2026-08-02T18:43:32.702Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -129,7 +128,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/25806940",
-    "retrievedAt": "2026-08-02T15:11:38.063Z",
+    "retrievedAt": "2026-08-02T18:43:32.720Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -138,7 +137,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/26315443",
-    "retrievedAt": "2026-08-02T15:11:38.080Z",
+    "retrievedAt": "2026-08-02T18:43:32.738Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -147,7 +146,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/26941311",
-    "retrievedAt": "2026-08-02T15:11:38.131Z",
+    "retrievedAt": "2026-08-02T18:43:32.890Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -156,7 +155,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/27189265",
-    "retrievedAt": "2026-08-02T15:11:38.149Z",
+    "retrievedAt": "2026-08-02T18:43:32.924Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -165,7 +164,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/28178949",
-    "retrievedAt": "2026-08-02T15:11:38.156Z",
+    "retrievedAt": "2026-08-02T18:43:32.939Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -174,7 +173,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/28470168",
-    "retrievedAt": "2026-08-02T15:11:38.162Z",
+    "retrievedAt": "2026-08-02T18:43:32.978Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -183,7 +182,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/29451967",
-    "retrievedAt": "2026-08-02T15:11:38.167Z",
+    "retrievedAt": "2026-08-02T18:43:33.005Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -192,7 +191,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/29477251",
-    "retrievedAt": "2026-08-02T15:11:38.169Z",
+    "retrievedAt": "2026-08-02T18:43:33.119Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -201,7 +200,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/33549739",
-    "retrievedAt": "2026-08-02T15:11:38.226Z",
+    "retrievedAt": "2026-08-02T18:43:33.168Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -210,7 +209,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/33581801",
-    "retrievedAt": "2026-08-02T15:11:38.256Z",
+    "retrievedAt": "2026-08-02T18:43:33.224Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -219,7 +218,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/35026139",
-    "retrievedAt": "2026-08-02T15:11:38.296Z",
+    "retrievedAt": "2026-08-02T18:43:33.265Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -228,7 +227,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/35401341",
-    "retrievedAt": "2026-08-02T15:11:38.316Z",
+    "retrievedAt": "2026-08-02T18:43:33.270Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -237,7 +236,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/35854107",
-    "retrievedAt": "2026-08-02T15:11:38.351Z",
+    "retrievedAt": "2026-08-02T18:43:33.280Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -246,7 +245,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/36193171",
-    "retrievedAt": "2026-08-02T15:11:38.352Z",
+    "retrievedAt": "2026-08-02T18:43:33.321Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -255,7 +254,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/36624160",
-    "retrievedAt": "2026-08-02T15:11:38.388Z",
+    "retrievedAt": "2026-08-02T18:43:33.350Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -264,7 +263,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/36938996",
-    "retrievedAt": "2026-08-02T15:11:38.396Z",
+    "retrievedAt": "2026-08-02T18:43:33.368Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -273,7 +272,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/37067677",
-    "retrievedAt": "2026-08-02T15:11:38.413Z",
+    "retrievedAt": "2026-08-02T18:43:33.379Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -282,7 +281,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/37681273",
-    "retrievedAt": "2026-08-02T15:11:38.442Z",
+    "retrievedAt": "2026-08-02T18:43:33.382Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -291,7 +290,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/37974470",
-    "retrievedAt": "2026-08-02T15:11:38.443Z",
+    "retrievedAt": "2026-08-02T18:43:33.383Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -300,7 +299,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/38952836",
-    "retrievedAt": "2026-08-02T15:11:38.443Z",
+    "retrievedAt": "2026-08-02T18:43:33.452Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -309,7 +308,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/39070736",
-    "retrievedAt": "2026-08-02T15:11:38.450Z",
+    "retrievedAt": "2026-08-02T18:43:33.498Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -318,7 +317,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/39363308",
-    "retrievedAt": "2026-08-02T15:11:38.491Z",
+    "retrievedAt": "2026-08-02T18:43:33.548Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -327,7 +326,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/39540077",
-    "retrievedAt": "2026-08-02T15:11:38.496Z",
+    "retrievedAt": "2026-08-02T18:43:33.558Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -336,7 +335,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/39607055",
-    "retrievedAt": "2026-08-02T15:11:38.535Z",
+    "retrievedAt": "2026-08-02T18:43:33.600Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -345,7 +344,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/40127267",
-    "retrievedAt": "2026-08-02T15:11:38.541Z",
+    "retrievedAt": "2026-08-02T18:43:33.640Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -354,7 +353,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/40528849",
-    "retrievedAt": "2026-08-02T15:11:38.541Z",
+    "retrievedAt": "2026-08-02T18:43:33.642Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -363,7 +362,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/40564612",
-    "retrievedAt": "2026-08-02T15:11:38.543Z",
+    "retrievedAt": "2026-08-02T18:43:33.690Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -372,7 +371,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/40811499",
-    "retrievedAt": "2026-08-02T15:11:38.547Z",
+    "retrievedAt": "2026-08-02T18:43:33.700Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -381,7 +380,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/40830577",
-    "retrievedAt": "2026-08-02T15:11:38.593Z",
+    "retrievedAt": "2026-08-02T18:43:33.742Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -390,7 +389,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41020433",
-    "retrievedAt": "2026-08-02T15:11:38.603Z",
+    "retrievedAt": "2026-08-02T18:43:33.783Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -399,7 +398,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41039330",
-    "retrievedAt": "2026-08-02T15:11:38.630Z",
+    "retrievedAt": "2026-08-02T18:43:33.793Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -408,7 +407,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41195774",
-    "retrievedAt": "2026-08-02T15:11:38.638Z",
+    "retrievedAt": "2026-08-02T18:43:33.800Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -417,7 +416,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41250080",
-    "retrievedAt": "2026-08-02T15:11:38.640Z",
+    "retrievedAt": "2026-08-02T18:43:33.838Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -426,7 +425,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41402711",
-    "retrievedAt": "2026-08-02T15:11:38.656Z",
+    "retrievedAt": "2026-08-02T18:43:33.839Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -435,7 +434,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41523646",
-    "retrievedAt": "2026-08-02T15:11:38.668Z",
+    "retrievedAt": "2026-08-02T18:43:33.840Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -444,7 +443,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41555769",
-    "retrievedAt": "2026-08-02T15:11:38.696Z",
+    "retrievedAt": "2026-08-02T18:43:33.883Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -453,7 +452,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41688805",
-    "retrievedAt": "2026-08-02T15:11:38.702Z",
+    "retrievedAt": "2026-08-02T18:43:33.908Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -462,7 +461,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41760614",
-    "retrievedAt": "2026-08-02T15:11:38.723Z",
+    "retrievedAt": "2026-08-02T18:43:33.938Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -471,7 +470,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/41819810",
-    "retrievedAt": "2026-08-02T15:11:38.732Z",
+    "retrievedAt": "2026-08-02T18:43:33.939Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -480,7 +479,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42075032",
-    "retrievedAt": "2026-08-02T15:11:38.734Z",
+    "retrievedAt": "2026-08-02T18:43:33.948Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -489,7 +488,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42089634",
-    "retrievedAt": "2026-08-02T15:11:38.770Z",
+    "retrievedAt": "2026-08-02T18:43:33.948Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -498,7 +497,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42092856",
-    "retrievedAt": "2026-08-02T15:11:38.786Z",
+    "retrievedAt": "2026-08-02T18:43:33.949Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -507,7 +506,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42110248",
-    "retrievedAt": "2026-08-02T15:11:38.791Z",
+    "retrievedAt": "2026-08-02T18:43:33.981Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -516,7 +515,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42149467",
-    "retrievedAt": "2026-08-02T15:11:38.796Z",
+    "retrievedAt": "2026-08-02T18:43:34.018Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -525,7 +524,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42157206",
-    "retrievedAt": "2026-08-02T15:11:38.818Z",
+    "retrievedAt": "2026-08-02T18:43:34.021Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -534,7 +533,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42167796",
-    "retrievedAt": "2026-08-02T15:11:38.828Z",
+    "retrievedAt": "2026-08-02T18:43:34.044Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -543,7 +542,7 @@
     "httpStatus": 200,
     "decodedLength": 28181,
     "finalUrl": "https://europepmc.org/article/MED/42194483",
-    "retrievedAt": "2026-08-02T15:11:38.828Z",
+    "retrievedAt": "2026-08-02T18:43:34.053Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -552,7 +551,7 @@
     "httpStatus": 200,
     "decodedLength": 28173,
     "finalUrl": "https://europepmc.org/article/MED/847460",
-    "retrievedAt": "2026-08-02T15:11:38.862Z",
+    "retrievedAt": "2026-08-02T18:43:34.058Z",
     "reason": "non-substantive page content (910 visible characters; 79 distinct words)"
   },
   {
@@ -561,7 +560,7 @@
     "httpStatus": 200,
     "decodedLength": 35895,
     "finalUrl": "https://medlineplus.gov/ency/article/000007.htm",
-    "retrievedAt": "2026-08-02T15:11:38.879Z",
+    "retrievedAt": "2026-08-02T18:43:34.059Z",
     "sha256": "7e14bcbb408560411ffdefa84228df8344983032b7cb5f1a41e25c59a3eb2e26",
     "filename": "medlineplus-gov-ency-article-000007-htm-24cf5c4a9c.html"
   },
@@ -571,7 +570,7 @@
     "httpStatus": 200,
     "decodedLength": 33490,
     "finalUrl": "https://medlineplus.gov/ency/article/000014.htm",
-    "retrievedAt": "2026-08-02T15:11:38.885Z",
+    "retrievedAt": "2026-08-02T18:43:34.078Z",
     "sha256": "51749ea3de8e5aa6b3ff64e79061a15242b5f782a39153cf8ca73abdd0b5c020",
     "filename": "medlineplus-gov-ency-article-000014-htm-9a52c9aa76.html"
   },
@@ -581,7 +580,7 @@
     "httpStatus": 200,
     "decodedLength": 34839,
     "finalUrl": "https://medlineplus.gov/ency/article/000022.htm",
-    "retrievedAt": "2026-08-02T15:11:38.901Z",
+    "retrievedAt": "2026-08-02T18:43:34.079Z",
     "sha256": "b4adebf16c028ab36478858e713a4e7efb77a578ee3c7e2888ee5d4e0cbaa7b3",
     "filename": "medlineplus-gov-ency-article-000022-htm-6a9c016e54.html"
   },
@@ -591,7 +590,7 @@
     "httpStatus": 200,
     "decodedLength": 36495,
     "finalUrl": "https://medlineplus.gov/ency/article/000028.htm",
-    "retrievedAt": "2026-08-02T15:11:38.915Z",
+    "retrievedAt": "2026-08-02T18:43:34.120Z",
     "sha256": "2c57d6a6580183b072ea1116209e3a5ba50f744f7a40dc9ebdea0cb1696af805",
     "filename": "medlineplus-gov-ency-article-000028-htm-6f5c25540f.html"
   },
@@ -601,7 +600,7 @@
     "httpStatus": 200,
     "decodedLength": 39277,
     "finalUrl": "https://medlineplus.gov/ency/article/000030.htm",
-    "retrievedAt": "2026-08-02T15:11:38.934Z",
+    "retrievedAt": "2026-08-02T18:43:34.140Z",
     "sha256": "0d66d1418df9bf1104379fabdb398a99ed4f77dd30ecb1decb79c50c551d4d93",
     "filename": "medlineplus-gov-ency-article-000030-htm-a91249d64f.html"
   },
@@ -611,7 +610,7 @@
     "httpStatus": 200,
     "decodedLength": 31730,
     "finalUrl": "https://medlineplus.gov/ency/article/000039.htm",
-    "retrievedAt": "2026-08-02T15:11:38.935Z",
+    "retrievedAt": "2026-08-02T18:43:34.148Z",
     "sha256": "4dbfca27f2f86d1a09ebcd622c3c3579d794510d500182ebe9088c09fbbccecb",
     "filename": "medlineplus-gov-ency-article-000039-htm-59cf851378.html"
   },
@@ -621,7 +620,7 @@
     "httpStatus": 200,
     "decodedLength": 31163,
     "finalUrl": "https://medlineplus.gov/ency/article/000044.htm",
-    "retrievedAt": "2026-08-02T15:11:38.963Z",
+    "retrievedAt": "2026-08-02T18:43:34.158Z",
     "sha256": "c318f7ed331373aeb7c005902ffc5e69f43f31b358c662686bb52ace37d31ac5",
     "filename": "medlineplus-gov-ency-article-000044-htm-3a796e31fc.html"
   },
@@ -631,7 +630,7 @@
     "httpStatus": 200,
     "decodedLength": 36067,
     "finalUrl": "https://medlineplus.gov/ency/article/000046.htm",
-    "retrievedAt": "2026-08-02T15:11:39.114Z",
+    "retrievedAt": "2026-08-02T18:43:34.158Z",
     "sha256": "8e2d631313d243a28b75eb22cde24d66ae3a9c44ac6f279c640db458a6a9c19e",
     "filename": "medlineplus-gov-ency-article-000046-htm-6d7cc31490.html"
   },
@@ -641,7 +640,7 @@
     "httpStatus": 200,
     "decodedLength": 31886,
     "finalUrl": "https://medlineplus.gov/ency/article/000048.htm",
-    "retrievedAt": "2026-08-02T15:11:39.152Z",
+    "retrievedAt": "2026-08-02T18:43:34.316Z",
     "sha256": "88a94dfe08c3e14b9ef83bd5015722ad77554c3544ab5308b4eb7df5886f512e",
     "filename": "medlineplus-gov-ency-article-000048-htm-214b4c7031.html"
   },
@@ -651,7 +650,7 @@
     "httpStatus": 200,
     "decodedLength": 34537,
     "finalUrl": "https://medlineplus.gov/ency/article/000049.htm",
-    "retrievedAt": "2026-08-02T15:11:39.153Z",
+    "retrievedAt": "2026-08-02T18:43:34.323Z",
     "sha256": "eac391a78e62a6d51fc1f35e5853ba8bc424df37cdde4b24fe9ba5855127d997",
     "filename": "medlineplus-gov-ency-article-000049-htm-04380ada4d.html"
   },
@@ -661,7 +660,7 @@
     "httpStatus": 200,
     "decodedLength": 33363,
     "finalUrl": "https://medlineplus.gov/ency/article/000053.htm",
-    "retrievedAt": "2026-08-02T15:11:39.153Z",
+    "retrievedAt": "2026-08-02T18:43:34.329Z",
     "sha256": "bad995c350ba82a74d456aa3e05c5d547328a8a9d3b15e49707c9a19b3f33348",
     "filename": "medlineplus-gov-ency-article-000053-htm-228ae086aa.html"
   },
@@ -671,7 +670,7 @@
     "httpStatus": 200,
     "decodedLength": 33710,
     "finalUrl": "https://medlineplus.gov/ency/article/000056.htm",
-    "retrievedAt": "2026-08-02T15:11:39.153Z",
+    "retrievedAt": "2026-08-02T18:43:34.339Z",
     "sha256": "240e6394f7aa8200fd68ba4a1df4deac90df78b8ea396676706ebf7d2d311bf0",
     "filename": "medlineplus-gov-ency-article-000056-htm-9e0c1c93c6.html"
   },
@@ -681,7 +680,7 @@
     "httpStatus": 200,
     "decodedLength": 31850,
     "finalUrl": "https://medlineplus.gov/ency/article/000059.htm",
-    "retrievedAt": "2026-08-02T15:11:39.171Z",
+    "retrievedAt": "2026-08-02T18:43:34.351Z",
     "sha256": "f709133db4a17dc6dc25bc03be18bba8c77a007b56e4700e47bdcffe4c6e5a6b",
     "filename": "medlineplus-gov-ency-article-000059-htm-8ccc72eec0.html"
   },
@@ -691,7 +690,7 @@
     "httpStatus": 200,
     "decodedLength": 33681,
     "finalUrl": "https://medlineplus.gov/ency/article/000060.htm",
-    "retrievedAt": "2026-08-02T15:11:39.216Z",
+    "retrievedAt": "2026-08-02T18:43:34.352Z",
     "sha256": "ca7e884edba7e0f28a363a8d7050f46ab99685dd520288de0d647ea2bdfb5713",
     "filename": "medlineplus-gov-ency-article-000060-htm-dfe577a34e.html"
   },
@@ -699,20 +698,20 @@
     "url": "https://support.google.com/accounts/answer/6160491",
     "status": "saved",
     "httpStatus": 200,
-    "decodedLength": 1582320,
+    "decodedLength": 1582334,
     "finalUrl": "https://support.google.com/accounts/answer/6160491",
-    "retrievedAt": "2026-08-02T15:11:39.218Z",
-    "sha256": "dbe26aacf2bf46ac8dd477489f2d595eebfabe627a6804ebc3a8d8bff6317622",
+    "retrievedAt": "2026-08-02T18:43:34.360Z",
+    "sha256": "be6a564a64306c96169cf642b793f78aa1dee6218a924066d5ed36b921eb9a34",
     "filename": "support-google-com-accounts-answer-6160491-d3f5c62981.html"
   },
   {
     "url": "https://www.cisa.gov/secure-our-world",
     "status": "saved",
     "httpStatus": 200,
-    "decodedLength": 66675,
+    "decodedLength": 66678,
     "finalUrl": "https://www.cisa.gov/secure-our-world",
-    "retrievedAt": "2026-08-02T15:11:39.219Z",
-    "sha256": "f5b4dd96ec492c058104f9f4b254ae7d7ca5cebb534bdf0c26d0cc9e78173389",
+    "retrievedAt": "2026-08-02T18:43:34.382Z",
+    "sha256": "e0fa5bca088438f33b4e49e39d85cd259b9083a8fb6c84618dcb600467ccace9",
     "filename": "www-cisa-gov-secure-our-world-60cecf3b48.html"
   },
   {
@@ -721,7 +720,7 @@
     "httpStatus": 200,
     "decodedLength": 320806,
     "finalUrl": "https://www.constituteproject.org/constitution/Egypt_2014",
-    "retrievedAt": "2026-08-02T15:11:39.219Z",
+    "retrievedAt": "2026-08-02T18:43:34.389Z",
     "sha256": "1802553132580a9a52b781ed7aeb07d137ad85c5c2e733074b463091b91459e8",
     "filename": "www-constituteproject-org-constitution-egypt-2014-2eed3d6f84.html"
   },
@@ -731,8 +730,8 @@
     "httpStatus": 200,
     "decodedLength": 136330,
     "finalUrl": "https://cpa.gov.eg/ar-eg/",
-    "retrievedAt": "2026-08-02T15:11:39.226Z",
-    "sha256": "19c06b55ce39b0405d8234f7c59ccf5b9bebe5935b389da54a652f46b4bd8f3a",
+    "retrievedAt": "2026-08-02T18:43:34.402Z",
+    "sha256": "1896b4b6e7aec38fcff23531b91a91f62f424a83c82460cf5e9b92476ba9e332",
     "filename": "www-cpa-gov-eg-c672278fd7.html"
   },
   {
@@ -741,8 +740,8 @@
     "httpStatus": 200,
     "decodedLength": 68068,
     "finalUrl": "https://www.gov.uk/report-missing-person",
-    "retrievedAt": "2026-08-02T15:11:39.272Z",
-    "sha256": "f3fb2843ecc3ec517f71981635ac330cfc5c783573cc6dc68cae225efa52cb4b",
+    "retrievedAt": "2026-08-02T18:43:34.406Z",
+    "sha256": "925b76b41e82f22ced33b82dc56f19d07aabb7de2f1708ef11d6c20e381fa1bb",
     "filename": "www-gov-uk-report-missing-person-7577a21e50.html"
   },
   {
@@ -751,8 +750,8 @@
     "httpStatus": 200,
     "decodedLength": 7419,
     "finalUrl": "https://www.ic3.gov/PSA/2022/PSA220208",
-    "retrievedAt": "2026-08-02T15:11:39.368Z",
-    "sha256": "52e18138b72831cc17e6eb8949869eb30aedbb9dec69b9b65527d81132dc8673",
+    "retrievedAt": "2026-08-02T18:43:34.412Z",
+    "sha256": "3839acded6fe34c531c18b255cda6947aaa364078982922842ccd37cc2efecfe",
     "filename": "www-ic3-gov-psa-2022-psa220208-c5b8001bdf.html"
   },
   {
@@ -761,7 +760,7 @@
     "httpStatus": 200,
     "decodedLength": 8744,
     "finalUrl": "https://www.identitytheft.gov/",
-    "retrievedAt": "2026-08-02T15:11:39.369Z",
+    "retrievedAt": "2026-08-02T18:43:34.424Z",
     "reason": "non-substantive page content (17 visible characters; 2 distinct words)"
   },
   {
@@ -770,8 +769,8 @@
     "httpStatus": 200,
     "decodedLength": 95051,
     "finalUrl": "https://www.ilo.org/topics-and-sectors/wages",
-    "retrievedAt": "2026-08-02T15:11:39.509Z",
-    "sha256": "b1edff4a823496108cf2f1ea6ffedf89a8af97e85717865dda9edff4699eaa48",
+    "retrievedAt": "2026-08-02T18:43:34.429Z",
+    "sha256": "3aa2a3f36da619aae486be7bf93dfd1061dc79a70e138d8b4a53783f258f25cd",
     "filename": "www-ilo-org-topics-and-sectors-wages-17d036ba01.html"
   },
   {
@@ -780,8 +779,8 @@
     "httpStatus": 200,
     "decodedLength": 112682,
     "finalUrl": "https://www.ilo.org/topics-and-sectors/safety-and-health-work",
-    "retrievedAt": "2026-08-02T15:11:39.604Z",
-    "sha256": "99c5311352c939adf42bb6f790cdcd45bc3d4a325cddfe9eac0d2a319c1b0c3e",
+    "retrievedAt": "2026-08-02T18:43:34.669Z",
+    "sha256": "5187cd1e51e492d648ec57657d5d5f7b8e58c1ecded91530247c37f1127ebd30",
     "filename": "www-ilo-org-topics-safety-and-health-work-d659798424.html"
   },
   {
@@ -790,7 +789,7 @@
     "httpStatus": 200,
     "decodedLength": 141984,
     "finalUrl": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email",
-    "retrievedAt": "2026-08-02T15:11:39.674Z",
+    "retrievedAt": "2026-08-02T18:43:34.701Z",
     "sha256": "abbdd2ab94fa6ec6f34615c19ca43a45646f49f290e5e1fe308d2d24445cb3dd",
     "filename": "www-ncsc-gov-uk-collection-top-tips-for-staying-secure-online-activate-2-step-verification-ead0ef8c7d.html"
   },
@@ -800,7 +799,7 @@
     "httpStatus": 200,
     "decodedLength": 144700,
     "finalUrl": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
-    "retrievedAt": "2026-08-02T15:11:39.722Z",
+    "retrievedAt": "2026-08-02T18:43:34.903Z",
     "sha256": "3fbfd95d57d272ddaebd92c472467439c25199e6ee0c1be32b441ea579286402",
     "filename": "www-ncsc-gov-uk-guidance-recovering-a-hacked-account-4f1351e404.html"
   },
@@ -810,8 +809,8 @@
     "httpStatus": 200,
     "decodedLength": 135074,
     "finalUrl": "https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself",
-    "retrievedAt": "2026-08-02T15:11:39.792Z",
-    "sha256": "699c4a1b04ce203c3582504a477bc9ca8c260b6c9eae6b26673a5f3b558084f8",
+    "retrievedAt": "2026-08-02T18:43:34.949Z",
+    "sha256": "908706b5e89f91bd52fbb3cb060e2fc693dafb3edcf6ca12308160fad41536f0",
     "filename": "www-ncsc-gov-uk-guidance-sextortion-scams-how-to-protect-yourself-4affacaae7.html"
   },
   {
@@ -820,7 +819,7 @@
     "httpStatus": 200,
     "decodedLength": 147238,
     "finalUrl": "https://www.ncsc.gov.uk/guidance/smart-devices-in-the-home",
-    "retrievedAt": "2026-08-02T15:11:39.812Z",
+    "retrievedAt": "2026-08-02T18:43:35.019Z",
     "sha256": "eed70d6a192607e2b3ab4a91155ec386868333503b8aaf59a02c2b43be2d7722",
     "filename": "www-ncsc-gov-uk-guidance-smart-devices-in-the-home-084f684b96.html"
   },
@@ -830,7 +829,7 @@
     "httpStatus": 200,
     "decodedLength": 140258,
     "finalUrl": "https://www.ncsc.gov.uk/guidance/social-media-how-to-use-it-safely",
-    "retrievedAt": "2026-08-02T15:11:39.965Z",
+    "retrievedAt": "2026-08-02T18:43:35.135Z",
     "sha256": "c7292004aa4c3fdf6a71a6e4d00e80815fe663a74d8bd28af02035cedae089be",
     "filename": "www-ncsc-gov-uk-guidance-social-media-how-to-use-it-safely-f1c78443f2.html"
   },
@@ -840,7 +839,7 @@
     "httpStatus": 200,
     "decodedLength": 91405,
     "finalUrl": "https://www.ncsc.gov.uk/ransomware/home",
-    "retrievedAt": "2026-08-02T15:11:39.971Z",
+    "retrievedAt": "2026-08-02T18:43:35.228Z",
     "sha256": "b5c0aca6a9f780c6d865f69e63223cdf03950b602fafd1c6e205b111dc390eeb",
     "filename": "www-ncsc-gov-uk-ransomware-home-6857135a42.html"
   },
@@ -850,7 +849,7 @@
     "httpStatus": 200,
     "decodedLength": 48091,
     "finalUrl": "https://www.nhs.uk/conditions/adhd-children-teenagers/",
-    "retrievedAt": "2026-08-02T15:11:39.977Z",
+    "retrievedAt": "2026-08-02T18:43:35.252Z",
     "sha256": "af431b15db4e94beb45f38eaeed00dc048dd42ab161b6d58ef2bee199d2eb422",
     "filename": "www-nhs-uk-conditions-adhd-children-teenagers-28aa834ea7.html"
   },
@@ -860,7 +859,7 @@
     "httpStatus": 200,
     "decodedLength": 28202,
     "finalUrl": "https://www.nhs.uk/live-well/addiction-support/addiction-what-is-it/",
-    "retrievedAt": "2026-08-02T15:11:39.993Z",
+    "retrievedAt": "2026-08-02T18:43:35.271Z",
     "sha256": "d2585ec4766e1ff8e6e94b7ee2cb4e940f61d48bc95f9bb819152fe72941d6c6",
     "filename": "www-nhs-uk-live-well-addiction-support-addiction-what-is-it-de5cb4bf97.html"
   },
@@ -870,8 +869,8 @@
     "httpStatus": 200,
     "decodedLength": 50555,
     "finalUrl": "https://www.nhs.uk/mental-health/conditions/bipolar-disorder/",
-    "retrievedAt": "2026-08-02T15:11:40.034Z",
-    "sha256": "ed429acc2478eecf379faf6c0cefc88c22aba681a2c9830f5ec3c418a1e46d21",
+    "retrievedAt": "2026-08-02T18:43:35.300Z",
+    "sha256": "4c1050fc393d6d4bf7b4ff0cbb5242a6526cacf00031db5d009b699bf6de06ad",
     "filename": "www-nhs-uk-mental-health-conditions-bipolar-disorder-overview-041171bb6e.html"
   },
   {
@@ -880,7 +879,7 @@
     "httpStatus": 200,
     "decodedLength": 44760,
     "finalUrl": "https://www.nhs.uk/mental-health/conditions/postnatal-depression/",
-    "retrievedAt": "2026-08-02T15:11:40.073Z",
+    "retrievedAt": "2026-08-02T18:43:35.333Z",
     "sha256": "2db8574f3b63b131315742ac95ab92963c8791b559e7398a0c2b0b60184e9996",
     "filename": "www-nhs-uk-mental-health-conditions-post-natal-depression-overview-b676d19f74.html"
   },
@@ -890,7 +889,7 @@
     "httpStatus": 200,
     "decodedLength": 48153,
     "finalUrl": "https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/grief-bereavement-loss/",
-    "retrievedAt": "2026-08-02T15:11:40.202Z",
+    "retrievedAt": "2026-08-02T18:43:35.343Z",
     "sha256": "f0b1503e1df1cc7749ea2323701be202f43223ee1356dcb38bfa166a11154eb7",
     "filename": "www-nhs-uk-mental-health-feelings-symptoms-behaviours-feelings-and-symptoms-grief-bereavem-4721731426.html"
   },
@@ -900,8 +899,8 @@
     "httpStatus": 200,
     "decodedLength": 125664,
     "finalUrl": "https://www.paho.org/en/topics/mental-health",
-    "retrievedAt": "2026-08-02T15:11:40.211Z",
-    "sha256": "ca2c94cfb2c83321423e38951f1a016d3a89188c6e226c08993fddb2b93fca53",
+    "retrievedAt": "2026-08-02T18:43:35.439Z",
+    "sha256": "b1f8f9a2518fbae9fc52f0d3f8f7eef13d35287de05d0f8fa339f88f79c5f2e1",
     "filename": "www-paho-org-en-topics-mental-health-e5529c2801.html"
   },
   {
@@ -910,8 +909,8 @@
     "httpStatus": 200,
     "decodedLength": 105687,
     "finalUrl": "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
-    "retrievedAt": "2026-08-02T15:11:40.271Z",
-    "sha256": "3b322ccbc9831daa5067210d535d7bec5f6db359c8a14435e7fb8491cfa0cf42",
+    "retrievedAt": "2026-08-02T18:43:35.510Z",
+    "sha256": "5cbc8f6956ac8043ab827d7ba22b1c1b5ec003b5ddbaaed37f3e994486068d33",
     "filename": "www-un-org-en-about-us-universal-declaration-of-human-rights-c9b4e7ee9a.html"
   },
   {
@@ -920,7 +919,7 @@
     "httpStatus": 200,
     "decodedLength": 105437,
     "finalUrl": "https://www.who.int/news-room/fact-sheets/detail/abuse-of-older-people",
-    "retrievedAt": "2026-08-02T15:11:40.278Z",
+    "retrievedAt": "2026-08-02T18:43:35.621Z",
     "sha256": "0f01bb83b5c3e4d4902f2de13ac50fe27def6cde1260737381e86c254a1c646c",
     "filename": "www-who-int-news-room-fact-sheets-detail-abuse-of-older-people-ba5478ac70.html"
   },
@@ -930,7 +929,7 @@
     "httpStatus": 200,
     "decodedLength": 118379,
     "finalUrl": "https://www.who.int/news-room/fact-sheets/detail/violence-against-women",
-    "retrievedAt": "2026-08-02T15:11:40.336Z",
+    "retrievedAt": "2026-08-02T18:43:35.638Z",
     "sha256": "312993313965451af185dbab7bc549437ce311d99c7770ef00a71cebb58d937e",
     "filename": "www-who-int-news-room-fact-sheets-detail-violence-against-women-c7003bd6df.html"
   },
@@ -940,7 +939,7 @@
     "httpStatus": 200,
     "decodedLength": 85595,
     "finalUrl": "https://www.who.int/standards/classifications/frequently-asked-questions/burn-out-an-occupational-phenomenon",
-    "retrievedAt": "2026-08-02T15:11:40.375Z",
+    "retrievedAt": "2026-08-02T18:43:35.700Z",
     "sha256": "e8075035de528c3967daaf1a762af8c9517642bc9b38faba8b9fc6cd103ff67c",
     "filename": "www-who-int-standards-classifications-frequently-asked-questions-burn-out-an-occupational--c4e0b4aa55.html"
   }

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-08-13",
+  "status": "ACTIVE_FOR_RESEARCH_NOT_PRODUCTION_APPROVAL",
+  "principle": "Freshness means the record was rechecked on schedule; it does not erase methodological limitations or make evidence professionally approved.",
+  "classes": [
+    {
+      "id": "CURRENT_RESOURCE",
+      "match": {"exactTypes": ["RESOURCE_DIRECTORY"]},
+      "maxDaysSinceCheck": 30,
+      "publicationAgeAction": "NOT_APPLICABLE",
+      "requiredAction": "Verify directly with each service owner and perform a lawful safe access test. Expire and hide unverified records.",
+      "publicationRule": "A secondary directory is never sufficient for product publication even while its page check is current."
+    },
+    {
+      "id": "GUIDANCE_STANDARD",
+      "match": {"typeContainsAny": ["GUIDANCE", "GUIDELINE", "CONSENSUS", "STANDARD", "HANDBOOK", "ETHICS"]},
+      "maxDaysSinceCheck": 365,
+      "publicationAgeAction": "SEARCH_FOR_REPLACEMENT_OR_UPDATE_AT_EACH_CHECK",
+      "requiredAction": "Check the issuing body's current version, supersession notice, scope, and jurisdiction.",
+      "publicationRule": "A current link does not prove transfer to Egypt or approval of Motazen wording."
+    },
+    {
+      "id": "EVIDENCE_SYNTHESIS",
+      "match": {"typeContainsAny": ["REVIEW", "META", "RAPID_EVIDENCE"]},
+      "maxDaysSinceCheck": 730,
+      "publicationAgeAction": "FLAG_IF_PUBLISHED_MORE_THAN_FIVE_YEARS_AGO_AND_SEARCH_FOR_NEWER_SYNTHESIS",
+      "requiredAction": "Re-run the focused search, check corrections/retractions, and compare newer syntheses and counterevidence.",
+      "publicationRule": "Older influential syntheses may remain as historical evidence when their age and newer evidence are explicit."
+    },
+    {
+      "id": "CONTEXT_PRIMARY",
+      "match": {"fallback": true},
+      "maxDaysSinceCheck": 730,
+      "publicationAgeAction": "FLAG_SURVEYS_AND_SYSTEM_SNAPSHOTS_AFTER_THREE_YEARS;_RETAIN_HISTORICAL_STUDIES_WITH_LABEL",
+      "requiredAction": "Check corrections/retractions and search for newer or more representative Egyptian data.",
+      "publicationRule": "A study does not become false solely because it is old, but current prevalence, access, technology, and service claims require current data."
+    }
+  ],
+  "auditSnapshot": {
+    "registeredSources": 91,
+    "classCounts": {
+      "CURRENT_RESOURCE": 1,
+      "GUIDANCE_STANDARD": 9,
+      "EVIDENCE_SYNTHESIS": 69,
+      "CONTEXT_PRIMARY": 12
+    },
+    "overdueByCheckDate": 0,
+    "productionEligibleHelpResources": 0,
+    "notes": [
+      "All records were checked on 2026-08-13, but the help-resource directory remains HOLD because owner confirmation and access testing are missing.",
+      "Publication-age flags must inform the next search; they do not silently delete historically relevant evidence.",
+      "Professional review remains PENDING for every claim."
+    ]
+  }
+}

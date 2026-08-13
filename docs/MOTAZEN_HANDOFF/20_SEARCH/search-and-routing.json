@@ -1,0 +1,9 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "search":{"indexedObjects":["capability","skill","pattern","claim","source","day","term","help_route"],"arabicNormalization":["normalize_alef_variants","normalize_ya_alif_maqsura","ignore_optional_diacritics","preserve_negation","preserve_safety_terms"],"ranking":["exact_term","approved_synonym","user_selected_role","prerequisite_fit","low_bandwidth_format"],"forbiddenRanking":["diagnostic_probability","advertising_value","engagement_likelihood","emotional_vulnerability"]},
+  "patternSearch":{"purposeAr":"توجيه إلى أوصاف سلوك غير تشخيصية.","resultTemplate":["اسم تعليمي","سياقات محتملة","ما ليس هو","سؤال ملاحظة","بديل اختياري","عتبة مساعدة"],"forbidden":["أنت مصاب","هذا نوع شخصيتك","تأكيد اضطراب","تشخيص شخص آخر"],"safetyPrecedence":true},
+  "unknownMode":{"labelAr":"لا أعرف ما المشكلة","steps":[{"id":"SAFETY","promptAr":"هل يوجد خطر أو إيذاء أو عنف أو طارئ؟","onYes":"EXIT_TO_HUMAN_HELP"},{"id":"DOMAIN","promptAr":"أين يظهر الأثر أكثر؟","options":["جسد أو نوم","انفعال أو تفكير","سلوك أو عادة","علاقة","عمل أو تعلم","مال أو وصول","غير واضح"]},{"id":"IMPACT","promptAr":"هل هو عابر أم مستمر أو شديد أو معطل؟","onThreshold":"HUMAN_EVALUATION"},{"id":"NEED","promptAr":"هل تحتاج فهمًا أم خطوة صغيرة أم دعمًا أم راحة؟","options":["LEARN","TINY_STEP","SUPPORT","REST","EXIT"]}],"noFreeTextRequired":true,"noDiagnosis":true,"noStoredProfile":true},
+  "help":{"alwaysVisible":true,"independentOfSearch":true,"resourceFreshnessRequired":true,"unverifiedResourcesHidden":true},
+  "privacy":{"queryStorageDefault":"NO_STORAGE","analyticsOptIn":"AGGREGATE_ONLY","AIQueryExpansionDefault":false,"sensitiveAutocomplete":false},
+  "acceptanceTests":["بحث كلمة قلق لا يعرض تشخيصًا","عبارة خطر ترفع مسار المساعدة قبل النتائج","يعمل وضع غير واضح بلا نص حر أو حساب","يمكن اختيار الراحة أو الخروج في كل خطوة","لا تظهر خدمة غير متحققة"]
+}

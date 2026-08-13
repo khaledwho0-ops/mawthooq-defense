@@ -1,0 +1,10 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING",
+  "states":["ENTRY","TRACK_CHOICE","DAY_PREVIEW","FULL","STANDARD","MINIMUM","REST","PRACTICE","REFLECTION_NO_SAVE","REFLECTION_SAVE_OPT_IN","HELP_NON_URGENT","HELP_URGENT_EXIT","REPORT","EXPORT_DELETE_EXIT"],
+  "precedence":["HELP_URGENT_EXIT","HELP_NON_URGENT","REST","PRIVACY_CHOICE","CONTENT"],
+  "globalTransitions":[{"from":"*","to":"HELP_URGENT_EXIT","condition":"user_indicates_immediate_danger"},{"from":"*","to":"REST","condition":"user_selects_rest"},{"from":"*","to":"EXPORT_DELETE_EXIT","condition":"user_selects_exit"}],
+  "forbidden":["HELP_URGENT_EXIT->CONTENT_AUTO","REST->BACKLOG","MINIMUM->FULL_AUTO","REFLECTION_NO_SAVE->REFLECTION_SAVE_OPT_IN_AUTO","EXIT->RETENTION_PROMPT_COERCIVE"],
+  "focusRules":["route change announces Arabic title","urgent route moves focus to action and exit","modal never traps help","error summary precedes invalid fields","mixed-direction identifiers are isolated"],
+  "networkFailure":["never hide cached safety boundary","mark help data stale and withhold unverified contacts","preserve no-save text only in volatile memory","offer copy or discard before navigation","never silently sync sensitive data"],
+  "acceptanceTests":["help reachable in one action from every screen","urgent exit never returns automatically","minimum mode cannot create a backlog","AI consent cannot be inherited from journal consent","screen-reader order matches visual RTL order"]
+}

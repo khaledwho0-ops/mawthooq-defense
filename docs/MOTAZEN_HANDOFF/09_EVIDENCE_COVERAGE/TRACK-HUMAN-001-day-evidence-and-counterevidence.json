@@ -1,0 +1,3297 @@
+{
+  "schemaVersion": "1.0.0",
+  "trackId": "TRACK-HUMAN-001",
+  "status": "GENERATED_REVIEW_PENDING",
+  "days": [
+    {
+      "day": 1,
+      "dayId": "DAY-TRACK-HUMAN-001-001",
+      "claimIds": [
+        "CLM-MEASURE-001",
+        "CLM-SELF-RESPECT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WEI-2015-MHL-MEASURES",
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "additionalSourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "مراجعة أدوات الثقافة النفسية قديمة واستبعدت أدلة غير إنجليزية، ودراسات تقدير الذات غير مصرية ومتغايرة ولا تقيس الكرامة أو الاتزان كما يعرفهما هذا المنهج. لا توجد حتى الآن دراسة تثبت أثر تعريف متزن المقترح.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MEASURE-001",
+          "counterevidence": "Newer validated tools may exist and must be identified in an updated Arabic and international review.",
+          "limitations": "The review excluded non-English and grey literature and is now old enough to require an updated measurement search.",
+          "egyptian_applicability": "DOES_NOT_VALIDATE_ANY_TOOL_FOR_EGYPT"
+        },
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "dayId": "DAY-TRACK-HUMAN-001-002",
+      "claimIds": [
+        "CLM-SELF-RESPECT-001",
+        "CLM-MONITORING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "additionalSourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "أدلة المتابعة متعددة المجالات وغير متجانسة، ولا تحدد الجرعة المثلى لهذا التمرين. كما أن مفاهيم الكرامة واللوم ومسؤولية الأثر تحتاج اختبارًا لغويًا واجتماعيًا في سياقات مصرية متنوعة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "dayId": "DAY-TRACK-HUMAN-001-003",
+      "claimIds": [
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+        "CLM-EGYPT-VARIATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING",
+        "SRC-WHO-EGYPT-2017-STEPS"
+      ],
+      "additionalSourceIds": [
+        "SRC-GODA-2025-EGYPT-MHL-ADULTS",
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "مصادر الرسائل الصحية أمريكية ومحدودة المجال، وSTEPS يقيس مخاطر صحية لا مهارة المسؤولية، والدراسات المصرية لا تمثل كل الفئات. صياغة الوكالة دون لوم تحتاج مقابلات معرفية ومراجعة مصرية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-EGYPT-VARIATION-001",
+          "counterevidence": "National averages can be useful for planning, but they do not establish a person's cause, capacity, resources, diagnosis, or preferred wording.",
+          "limitations": "The sources measure different constructs and periods; none validates Motazen, provides current national mental-health literacy, or substitutes for participatory research.",
+          "egyptian_applicability": "DIRECT_BUT_REQUIRES_STRATIFIED_COGNITIVE_INTERVIEWS_AND_PILOT"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "dayId": "DAY-TRACK-HUMAN-001-004",
+      "claimIds": [
+        "CLM-SELF-RESPECT-001",
+        "CLM-SELF-COMPASSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-NIVEAU-2021-SELF-ESTEEM",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة غير مصرية في معظمها، وتستخدم مقاييس لا تساوي الكرامة أو الاحترام غير المشروط. صياغة الفصل بين الفعل والقيمة تحتاج اختبار فهم وقبول وأثر سلبي مع مستخدمين مصريين ومراجعين مهنيين.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "dayId": "DAY-TRACK-HUMAN-001-005",
+      "claimIds": [
+        "CLM-PURPOSE-001",
+        "CLM-ETHICS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MANCO-2021-MEANING",
+        "SRC-WATTS-2017-ETHICS-INSTRUCTION"
+      ],
+      "additionalSourceIds": [
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "المراجعات تجمع تعريفات وتدخلات وسكانًا مختلفين، وتقيس غالبًا معنى أو معرفة أو حكمًا لا سلوكًا طويل الأمد تحت ضغط وسلطة. صياغات القيم المصرية تحتاج بحثًا نوعيًا واختبارًا عبر فئات دينية وغير دينية متنوعة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PURPOSE-001",
+          "counterevidence": "A person may hold multiple changing sources of meaning, and uncertainty about purpose is not pathology.",
+          "limitations": "Effects were much larger against passive than active controls and constructs and interventions varied.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_SECULAR_FAMILY_CLASS_GENDER_AND_LIFE_STAGE_PLURALISM"
+        },
+        {
+          "claimId": "CLM-ETHICS-001",
+          "counterevidence": "Effects vary by field, design, criterion, and practice; moral judgment and perception outcomes can be weaker than knowledge or narrow decision outcomes.",
+          "limitations": "Training outcomes often measure knowledge, judgments, or task decisions rather than durable behavior under real power and incentives.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_ETHICS_LEGAL_RELIGIOUS_SOCIAL_AND_USER_REVIEW_WITHOUT_IDEOLOGICAL_SIGNOFF"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "dayId": "DAY-TRACK-HUMAN-001-006",
+      "claimIds": [
+        "CLM-IDENTITY-001",
+        "CLM-WORK-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GUTU-2025-IDENTITY-WELLBEING",
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT"
+      ],
+      "additionalSourceIds": [
+        "SRC-IBRAHIM-2022-EGYPT-RECOVERY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "مراجعة الهوية ضمت دراسات قليلة، والعينة المصرية كانت صغيرة وفي سياق تعافٍ خاص، ومراجعة العمل متعددة البلدان والقطاعات. خريطة الأدوار المقترحة لم تختبر بعد للفهم أو الضرر أو النقل السلوكي في مصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-IDENTITY-001",
+          "counterevidence": "Commitment may relate to development, but exploration findings and links to wellbeing are inconsistent; change does not imply inauthenticity.",
+          "limitations": "The review included only 10 studies and the Egyptian qualitative sample was small and recovery-specific.",
+          "egyptian_applicability": "REQUIRES_DIVERSE_ADULT_ROLE_TRANSITION_AND_LANGUAGE_RESEARCH"
+        },
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "dayId": "DAY-TRACK-HUMAN-001-007",
+      "claimIds": [
+        "CLM-PROBLEM-SOLVING-001",
+        "CLM-SELF-RESPECT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-LINDE-2015-PROBLEM-SOLVING",
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "additionalSourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد تجربة مصرية لهذا القالب، ولا نعرف أثره مع تفاوت القراءة والسلطة والمشكلات البنيوية. يلزم اختبار فهم وعبء وضرر، مع منع تفسيره كعلاج مختصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PROBLEM-SOLVING-001",
+          "counterevidence": "Other focused syntheses report benefit in selected clinical populations, reinforcing that context and delivery matter.",
+          "limitations": "The face-to-face problem-solving therapy estimate crossed no effect and delivery modes differed.",
+          "egyptian_applicability": "TOOL_MAY_SUPPORT_REFLECTION_BUT_TREATMENT_CLAIMS_PROHIBITED"
+        },
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "dayId": "DAY-TRACK-HUMAN-001-008",
+      "claimIds": [
+        "CLM-MONITORING-001",
+        "CLM-MHL-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-BRAGG-2016-WEB-MHL"
+      ],
+      "additionalSourceIds": [
+        "SRC-XU-2018-HELPSEEKING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "أدلة التثقيف أغلبها من بيئات غير عربية، ودليل المتابعة يأتي من سياقات بحثية وسريرية لا يجوز تعميم نسبها. نحتاج اختبارًا مصريًا للغة والعبء والخصوصية والآثار السلبية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        },
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "dayId": "DAY-TRACK-HUMAN-001-009",
+      "claimIds": [
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+        "CLM-DECISION-CONTEXT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING",
+        "SRC-STARCKE-2016-STRESS-DECISIONS"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-EGYPT-2017-STEPS",
+        "SRC-WEI-2025-SLEEP-RISK-DECISIONS",
+        "SRC-HOEFEL-2020-DECISION-NEEDS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "دراسة الرسائل ليست تجربة عامة للمسؤولية، وأبحاث القرار غالبًا مختبرية أو صحية وغير مصرية. يلزم اختبار اللغة لمنع فهم «السيطرة» كلوم، ومعرفة أثرها تحت سلطات وموارد مختلفة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-DECISION-CONTEXT-001",
+          "counterevidence": "Some decision tasks show no significant effect or more conservative rather than riskier behavior under sleep loss or stress.",
+          "limitations": "Average effects are small or mixed and vary by task, timing, framing, stressor, and individual conditions.",
+          "egyptian_applicability": "PLAUSIBLE_GENERAL_CAUTION_REQUIRES_LOCAL_REAL_WORLD_DECISION_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "dayId": "DAY-TRACK-HUMAN-001-010",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-TALEVSKI-2020-TEACHBACK"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-MAWSON-2025-DISTRIBUTED-PRACTICE",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "معظم أدلة التعلم من بيئات تعليمية غير مصرية، والشرح العائد المدروس يتضمن بشرًا مدربين. لم تختبر خريطة متزن العربية من حيث الفهم أو العبء أو النقل السلوكي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "dayId": "DAY-TRACK-HUMAN-001-011",
+      "claimIds": [
+        "CLM-ACTIVITY-001",
+        "CLM-EGYPT-VARIATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-2020-PHYSICAL-ACTIVITY",
+        "SRC-WHO-EGYPT-2017-STEPS"
+      ],
+      "additionalSourceIds": [
+        "SRC-GODA-2025-EGYPT-MHL-ADULTS",
+        "SRC-GHANEM-2009-EGYPT-MENTAL-SURVEY"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا يقيس متزن الصحة أو النوم أو التغذية أو شدة العمل، ولا تغطي المصادر المصرية كل المناطق والفئات والظروف الحالية. تحتاج اللغة واختيارات الحد الأدنى مراجعة طبية وإتاحة وتجربة مستخدم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ACTIVITY-001",
+          "counterevidence": "A standardized dose or activity can be inaccessible or unsafe for some users.",
+          "limitations": "Motazen cannot assess contraindications, disability needs, pregnancy, chronic disease, pain, or individual exercise risk.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ACCESS_HEAT_SAFETY_GENDER_AND_ENVIRONMENT_CONSIDERATIONS"
+        },
+        {
+          "claimId": "CLM-EGYPT-VARIATION-001",
+          "counterevidence": "National averages can be useful for planning, but they do not establish a person's cause, capacity, resources, diagnosis, or preferred wording.",
+          "limitations": "The sources measure different constructs and periods; none validates Motazen, provides current national mental-health literacy, or substitutes for participatory research.",
+          "egyptian_applicability": "DIRECT_BUT_REQUIRES_STRATIFIED_COGNITIVE_INTERVIEWS_AND_PILOT"
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "dayId": "DAY-TRACK-HUMAN-001-012",
+      "claimIds": [
+        "CLM-SLEEP-DURATION-001",
+        "CLM-SLEEP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AASM-SRS-2015-ADULT-SLEEP-DURATION",
+        "SRC-DEPASQUALE-2024-SLEEP-HYGIENE"
+      ],
+      "additionalSourceIds": [
+        "SRC-NHLBI-2022-HEALTHY-SLEEP-HABITS",
+        "SRC-CHUNG-2018-SLEEP-HYGIENE-INSOMNIA"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "التوصيات أمريكية القيادة والمراجعات متعددة السياقات بلا تحقق مصري. لا توجد بيانات فردية أو فحص طبي، ولا نعرف ملاءمة اللغة لعمال الورديات ومقدمي الرعاية وذوي الإعاقة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SLEEP-DURATION-001",
+          "counterevidence": "The consensus itself reports uncertainty around some duration ranges and does not establish that every adult has the same optimal amount.",
+          "limitations": "Duration alone omits timing, continuity, quality, disorders, medications, pain, caregiving, and individual need.",
+          "egyptian_applicability": "GENERAL_HEALTH_LITERACY_ONLY_REQUIRES_LOCAL_FEASIBILITY_TESTING"
+        },
+        {
+          "claimId": "CLM-SLEEP-001",
+          "counterevidence": "Education may support general sleep health but was less effective than CBT-I in insomnia comparisons.",
+          "limitations": "Specific advice needs evidence and adaptation for shift work, caregiving, illness, housing, and other constraints.",
+          "egyptian_applicability": "REQUIRES_LOCAL_FEASIBILITY_AND_RESOURCE_PATHWAYS"
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "dayId": "DAY-TRACK-HUMAN-001-013",
+      "claimIds": [
+        "CLM-SLEEP-EXPERIMENT-001",
+        "CLM-MONITORING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GARDINER-2023-CAFFEINE-SLEEP",
+        "SRC-HE-2025-SCREEN-SLEEP"
+      ],
+      "additionalSourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-NHLBI-2022-HEALTHY-SLEEP-HABITS",
+        "SRC-CHUNG-2018-SLEEP-HYGIENE-INSOMNIA"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد تجربة مصرية مباشرة لهذا البروتوكول، ولا يقيس المنتج النوم موضوعيًا أو يفحص الموانع. قد يسبب التتبع ضررًا لبعض المستخدمين، ما يتطلب اختبارًا سريريًا وتجربة مستخدم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SLEEP-EXPERIMENT-001",
+          "counterevidence": "Not every screen exposure or late caffeine use produces the same outcome, and persistent sleep problems can reflect medical, psychiatric, medication, pain, breathing, or work-schedule factors.",
+          "limitations": "Screen evidence is largely observational; caffeine response varies; generic sleep hygiene is not equivalent to insomnia treatment.",
+          "egyptian_applicability": "REQUIRES_LOW_COST_SHIFT_WORK_CAREGIVING_HOUSING_AND_DEVICE_CONTEXT"
+        },
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "dayId": "DAY-TRACK-HUMAN-001-014",
+      "claimIds": [
+        "CLM-ACTIVITY-001",
+        "CLM-EGYPT-VARIATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-2020-PHYSICAL-ACTIVITY",
+        "SRC-WHO-EGYPT-2017-STEPS"
+      ],
+      "additionalSourceIds": [
+        "SRC-GODA-2025-EGYPT-MHL-ADULTS"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "الإرشاد عالمي ولا يختبر هذا النص في مصر أو مع كل إعاقة ومرض وعمل وبيئة. يحتاج الدرس مراجعة طبية وإتاحة واختبار ضرر، ولا يملك فحص موانع فردي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ACTIVITY-001",
+          "counterevidence": "A standardized dose or activity can be inaccessible or unsafe for some users.",
+          "limitations": "Motazen cannot assess contraindications, disability needs, pregnancy, chronic disease, pain, or individual exercise risk.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ACCESS_HEAT_SAFETY_GENDER_AND_ENVIRONMENT_CONSIDERATIONS"
+        },
+        {
+          "claimId": "CLM-EGYPT-VARIATION-001",
+          "counterevidence": "National averages can be useful for planning, but they do not establish a person's cause, capacity, resources, diagnosis, or preferred wording.",
+          "limitations": "The sources measure different constructs and periods; none validates Motazen, provides current national mental-health literacy, or substitutes for participatory research.",
+          "egyptian_applicability": "DIRECT_BUT_REQUIRES_STRATIFIED_COGNITIVE_INTERVIEWS_AND_PILOT"
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "dayId": "DAY-TRACK-HUMAN-001-015",
+      "claimIds": [
+        "CLM-ATTENTION-ADHD-BOUNDARY-001",
+        "CLM-DIGITAL-DISTRACTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-NICE-NG87-ADHD",
+        "SRC-PARRY-2024-SMARTPHONE-PRESENCE"
+      ],
+      "additionalSourceIds": [
+        "SRC-BIEDERMANN-2021-DIGITAL-SELF-CONTROL"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "إرشاد التشخيص بريطاني ومسار التقييم المصري يحتاج تحققًا، وأبحاث الهاتف ليست مصرية ولا تمثل كل مهام الحياة. لم تختبر صياغة الملاحظة أو ضررها محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ATTENTION-ADHD-BOUNDARY-001",
+          "counterevidence": "A short quiz, a difficult week, heavy phone use, procrastination, or identifying with online symptom content cannot establish or exclude ADHD.",
+          "limitations": "Motazen cannot assess developmental history, rule out other causes, observe multiple settings, or determine clinical impairment.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CLINICIAN_REVIEW_AND_CURRENT_LOCAL_REFERRAL_DIRECTORY"
+        },
+        {
+          "claimId": "CLM-DIGITAL-DISTRACTION-001",
+          "counterevidence": "Most pooled cognitive outcomes for mere smartphone presence were null, and visualization or blocking tools did not work consistently.",
+          "limitations": "Active notifications, checking, content, task demands, and real-world obligations differ from mere phone presence; intervention evidence is sparse and heterogeneous.",
+          "egyptian_applicability": "LOW_RISK_PERSONAL_EXPERIMENT_ONLY_WITH_WORK_CARE_AND_ACCESS_EXCEPTIONS"
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "dayId": "DAY-TRACK-HUMAN-001-016",
+      "claimIds": [
+        "CLM-ATTENTION-ADHD-BOUNDARY-001",
+        "CLM-MOTIVATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GILLISON-2019-SDT-MOTIVATION",
+        "SRC-NICE-NG87-ADHD"
+      ],
+      "additionalSourceIds": [
+        "SRC-SHEERAN-2020-SDT-BEHAVIOR"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "أبحاث الدافعية تجمع تدخلات وسلوكيات متعددة ولا تعزل المؤقت، وإرشاد ADHD غير مصري. يلزم اختبار الإتاحة والعبء والآثار السلبية والملاءمة الواقعية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ATTENTION-ADHD-BOUNDARY-001",
+          "counterevidence": "A short quiz, a difficult week, heavy phone use, procrastination, or identifying with online symptom content cannot establish or exclude ADHD.",
+          "limitations": "Motazen cannot assess developmental history, rule out other causes, observe multiple settings, or determine clinical impairment.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CLINICIAN_REVIEW_AND_CURRENT_LOCAL_REFERRAL_DIRECTORY"
+        },
+        {
+          "claimId": "CLM-MOTIVATION-001",
+          "counterevidence": "A person may act without first feeling motivated, and a supportive technique may change perceived motivation without producing durable behavior change.",
+          "limitations": "Interventions and behaviors were heterogeneous, techniques operated in combinations, and individual strategy effects were limited.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CONSTRAINTS_AUTONOMY_LANGUAGE_AND_FEASIBILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "dayId": "DAY-TRACK-HUMAN-001-017",
+      "claimIds": [
+        "CLM-DIGITAL-DISTRACTION-001",
+        "CLM-DIGITAL-001"
+      ],
+      "primarySourceIds": [
+        "SRC-RAMADHAN-2024-DIGITAL-DETOX",
+        "SRC-PARRY-2024-SMARTPHONE-PRESENCE"
+      ],
+      "additionalSourceIds": [
+        "SRC-BIEDERMANN-2021-DIGITAL-SELF-CONTROL"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأبحاث متعددة التعريفات وغير مصرية ولا تمثل الاعتماد المحلي على الهاتف للعمل والمال والرعاية. يلزم اختبار الإتاحة والخصوصية والكلفة وسيناريوهات الأجهزة المشتركة والمراقبة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-DIGITAL-DISTRACTION-001",
+          "counterevidence": "Most pooled cognitive outcomes for mere smartphone presence were null, and visualization or blocking tools did not work consistently.",
+          "limitations": "Active notifications, checking, content, task demands, and real-world obligations differ from mere phone presence; intervention evidence is sparse and heterogeneous.",
+          "egyptian_applicability": "LOW_RISK_PERSONAL_EXPERIMENT_ONLY_WITH_WORK_CARE_AND_ACCESS_EXCEPTIONS"
+        },
+        {
+          "claimId": "CLM-DIGITAL-001",
+          "counterevidence": "A small depressive-symptom effect coexisted with null results on other outcomes.",
+          "limitations": "Definitions and interventions varied and there were no significant average effects for life satisfaction, stress, or overall wellbeing.",
+          "egyptian_applicability": "REQUIRES_LOCAL_WORK_STUDY_FAMILY_ACCESS_AND_CONNECTIVITY_CONTEXT"
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "dayId": "DAY-TRACK-HUMAN-001-018",
+      "claimIds": [
+        "CLM-TIME-001",
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AEON-2021-TIME-MANAGEMENT",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "additionalSourceIds": [
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-WHO-EGYPT-2017-STEPS"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا تحدد المراجعة عناصر تدخل فعالة بوضوح، ولا تمثل أدلة مصرية مباشرة عن التنقل والعمل غير الرسمي والرعاية. يلزم اختبار العبء والعدالة والخصوصية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-TIME-001",
+          "counterevidence": "Productivity-focused time framing can increase pressure and inequality; some constraints require resources or collective change rather than a better planner.",
+          "limitations": "Most studies were cross-sectional, intervention content was opaque, and privilege confounds access to time-management practices.",
+          "egyptian_applicability": "REQUIRES_TIME_USE_CARE_WORK_INFORMAL_WORK_AND_TRANSPORT_TESTING"
+        },
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "dayId": "DAY-TRACK-HUMAN-001-019",
+      "claimIds": [
+        "CLM-MOTIVATION-001",
+        "CLM-ENGAGEMENT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GILLISON-2019-SDT-MOTIVATION",
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION"
+      ],
+      "additionalSourceIds": [
+        "SRC-SHEERAN-2020-SDT-BEHAVIOR",
+        "SRC-TANDON-2026-CULTURAL-DIGITAL-ENGAGEMENT"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات سريرية أو متعددة السلوكيات والثقافات، وتعريف الانسحاب مختلف. يلزم اختبار ما إذا كانت تسمية الدنيا تقلل العار فعلًا أو تخفي احتياج دعم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MOTIVATION-001",
+          "counterevidence": "A person may act without first feeling motivated, and a supportive technique may change perceived motivation without producing durable behavior change.",
+          "limitations": "Interventions and behaviors were heterogeneous, techniques operated in combinations, and individual strategy effects were limited.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CONSTRAINTS_AUTONOMY_LANGUAGE_AND_FEASIBILITY_TESTING"
+        },
+        {
+          "claimId": "CLM-ENGAGEMENT-001",
+          "counterevidence": "Reminder and compensation associations in trials do not justify shame, loss aversion, compulsive streaks, or assuming more engagement causes better outcomes.",
+          "limitations": "Motazen is educational rather than treatment, definitions vary, and associations between adaptation depth and retention do not prove causation.",
+          "egyptian_applicability": "REQUIRES_PARTICIPATORY_EGYPTIAN_TESTING_AND_DROPOUT_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "dayId": "DAY-TRACK-HUMAN-001-020",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001",
+        "CLM-MONITORING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-GASS-2021-SELF-MONITORING"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "أدلة التعلم غالبًا تعليمية وغير مصرية، والشرح العائد المدروس تفاعلي، ولا توجد بيانات أثر أو ضرر لمتزن. لا يمكن اعتبار مراجعة فردية تقييمًا للمنتج.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "dayId": "DAY-TRACK-HUMAN-001-021",
+      "claimIds": [
+        "CLM-RUMINATION-001",
+        "CLM-DEBIASING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ZETSCHE-2018-RNT-CONTROL",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "additionalSourceIds": [
+        "SRC-MCCARRICK-2021-RUMINATION-WORRY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات دولية وبعضها ارتباطي أو علاجي بقيادة متخصصين، ولا تثبت أثر سجل ذاتي قصير. يلزم اختبار خطر الاجترار والوسواس واللغة والفهم محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RUMINATION-001",
+          "counterevidence": "The meta-analysis found no broad deficit across most cognitive-control functions, and reduced rumination produced smaller behavior than cognitive effects.",
+          "limitations": "Associations are small and specific, and intervention benefits were larger with professional delivery; Motazen cannot provide treatment.",
+          "egyptian_applicability": "REQUIRES_LANGUAGE_CONTEXT_AND_HELP_SEEKING_REVIEW"
+        },
+        {
+          "claimId": "CLM-DEBIASING-001",
+          "counterevidence": "Some interventions were not successful, and sometimes the assumed bias was not present.",
+          "limitations": "Methods, biases, outcomes, and quality varied; sample-size and measurement reporting were frequent weaknesses.",
+          "egyptian_applicability": "REQUIRES_REALISTIC_LOCAL_DECISION_SCENARIOS_AND_TRANSFER_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "dayId": "DAY-TRACK-HUMAN-001-022",
+      "claimIds": [
+        "CLM-UNCERTAINTY-001",
+        "CLM-DEBIASING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WILSON-2023-UNCERTAINTY",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "العينات والتدخلات السريرية لا تمثل عامة البالغين في مصر، ولا نعرف إن كان التصنيف يقلل الاجترار أو يزيد الفحص. يحتاج اختبار ضرر وفهم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-UNCERTAINTY-001",
+          "counterevidence": "Ordinary uncertainty may be realistic and linked to unstable conditions rather than an individual deficit.",
+          "limitations": "Directly targeted CBT superiority was not maintained at follow-up, and Motazen does not diagnose or treat GAD.",
+          "egyptian_applicability": "REQUIRES_NONCLINICAL_LOCAL_RESEARCH_AND_CLEAR_ESCALATION"
+        },
+        {
+          "claimId": "CLM-DEBIASING-001",
+          "counterevidence": "Some interventions were not successful, and sometimes the assumed bias was not present.",
+          "limitations": "Methods, biases, outcomes, and quality varied; sample-size and measurement reporting were frequent weaknesses.",
+          "egyptian_applicability": "REQUIRES_REALISTIC_LOCAL_DECISION_SCENARIOS_AND_TRANSFER_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "dayId": "DAY-TRACK-HUMAN-001-023",
+      "claimIds": [
+        "CLM-RUMINATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ZETSCHE-2018-RNT-CONTROL",
+        "SRC-MCCARRICK-2021-RUMINATION-WORRY"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "المراجعات دولية وبها مقاييس وآليات وتدخلات مختلفة، ولا يوجد تحقق مصري للغة أو سلامة وقف الحلقة ذاتيًا. قد يزيد التسجيل الاجترار لبعض الناس.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RUMINATION-001",
+          "counterevidence": "The meta-analysis found no broad deficit across most cognitive-control functions, and reduced rumination produced smaller behavior than cognitive effects.",
+          "limitations": "Associations are small and specific, and intervention benefits were larger with professional delivery; Motazen cannot provide treatment.",
+          "egyptian_applicability": "REQUIRES_LANGUAGE_CONTEXT_AND_HELP_SEEKING_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "dayId": "DAY-TRACK-HUMAN-001-024",
+      "claimIds": [
+        "CLM-RUMINATION-001",
+        "CLM-PROBLEM-SOLVING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ZETSCHE-2018-RNT-CONTROL",
+        "SRC-LINDE-2015-PROBLEM-SOLVING"
+      ],
+      "additionalSourceIds": [
+        "SRC-MCCARRICK-2021-RUMINATION-WORRY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأدلة الدولية لا تحدد جرعة ذاتية عامة وقد تزيد الحدود والفحوص الأعراض لبعض الناس. يلزم اختبار مصري سريري ولغوي وتجربة ضرر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RUMINATION-001",
+          "counterevidence": "The meta-analysis found no broad deficit across most cognitive-control functions, and reduced rumination produced smaller behavior than cognitive effects.",
+          "limitations": "Associations are small and specific, and intervention benefits were larger with professional delivery; Motazen cannot provide treatment.",
+          "egyptian_applicability": "REQUIRES_LANGUAGE_CONTEXT_AND_HELP_SEEKING_REVIEW"
+        },
+        {
+          "claimId": "CLM-PROBLEM-SOLVING-001",
+          "counterevidence": "Other focused syntheses report benefit in selected clinical populations, reinforcing that context and delivery matter.",
+          "limitations": "The face-to-face problem-solving therapy estimate crossed no effect and delivery modes differed.",
+          "egyptian_applicability": "TOOL_MAY_SUPPORT_REFLECTION_BUT_TREATMENT_CLAIMS_PROHIBITED"
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "dayId": "DAY-TRACK-HUMAN-001-025",
+      "claimIds": [
+        "CLM-UNCERTAINTY-001",
+        "CLM-DEBIASING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WILSON-2023-UNCERTAINTY",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأبحاث غير مصرية ومهام الانحياز متنوعة، ولا تختبر مباشرة خريطة الاستعداد. قد تغذي الخريطة الفحص أو تخفض خطرًا حقيقيًا إذا أسيء استخدامها.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-UNCERTAINTY-001",
+          "counterevidence": "Ordinary uncertainty may be realistic and linked to unstable conditions rather than an individual deficit.",
+          "limitations": "Directly targeted CBT superiority was not maintained at follow-up, and Motazen does not diagnose or treat GAD.",
+          "egyptian_applicability": "REQUIRES_NONCLINICAL_LOCAL_RESEARCH_AND_CLEAR_ESCALATION"
+        },
+        {
+          "claimId": "CLM-DEBIASING-001",
+          "counterevidence": "Some interventions were not successful, and sometimes the assumed bias was not present.",
+          "limitations": "Methods, biases, outcomes, and quality varied; sample-size and measurement reporting were frequent weaknesses.",
+          "egyptian_applicability": "REQUIRES_REALISTIC_LOCAL_DECISION_SCENARIOS_AND_TRANSFER_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "dayId": "DAY-TRACK-HUMAN-001-026",
+      "claimIds": [
+        "CLM-SOCIAL-COMPARISON-001",
+        "CLM-SELF-RESPECT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MEIER-2022-SOCIAL-COMPARISON-ENVY",
+        "SRC-VALKENBURG-2022-SOCIAL-MEDIA-WELLBEING"
+      ],
+      "additionalSourceIds": [
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الدراسات تعتمد كثيرًا على التقرير الذاتي وتصنيفات رقمية واسعة وليست مصرية. معاني المقارنة العائلية والطبقية والجندرية تحتاج بحثًا محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SOCIAL-COMPARISON-001",
+          "counterevidence": "Some users and contexts show neutral or positive effects, including inspiration, information, identity, connection, and social support.",
+          "limitations": "Observational self-report and reverse causation are common, and active-versus-passive categories are too coarse for individual guidance.",
+          "egyptian_applicability": "REQUIRES_PLATFORM_GENDER_CLASS_AND_FAMILY_CONTEXT_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 27,
+      "dayId": "DAY-TRACK-HUMAN-001-027",
+      "claimIds": [
+        "CLM-CHOICE-OVERLOAD-001",
+        "CLM-DECISION-CONTEXT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-SCHEIBEHENNE-2010-CHOICE-OVERLOAD",
+        "SRC-HOEFEL-2020-DECISION-NEEDS"
+      ],
+      "additionalSourceIds": [
+        "SRC-STARCKE-2016-STRESS-DECISIONS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "التحليل التجميعي قديم ويخفي تفاوتًا، وأبحاث احتياجات القرار غالبًا صحية. لا يوجد تحقق لقرارات يومية مصرية أو أثر التقليص على الوكالة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-CHOICE-OVERLOAD-001",
+          "counterevidence": "Some specific contexts do show overload, so simplifying options is a reversible experiment rather than a universal cure.",
+          "limitations": "A near-zero mean conceals contextual variation; decision difficulty can also arise from stakes, information quality, power, values conflict, timing, or missing support.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_FAMILY_FINANCIAL_AND_SERVICE_DECISION_CONTEXT"
+        },
+        {
+          "claimId": "CLM-DECISION-CONTEXT-001",
+          "counterevidence": "Some decision tasks show no significant effect or more conservative rather than riskier behavior under sleep loss or stress.",
+          "limitations": "Average effects are small or mixed and vary by task, timing, framing, stressor, and individual conditions.",
+          "egyptian_applicability": "PLAUSIBLE_GENERAL_CAUTION_REQUIRES_LOCAL_REAL_WORLD_DECISION_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "dayId": "DAY-TRACK-HUMAN-001-028",
+      "claimIds": [
+        "CLM-DECISION-CONTEXT-001",
+        "CLM-ETHICS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-STARCKE-2016-STRESS-DECISIONS",
+        "SRC-WATTS-2017-ETHICS-INSTRUCTION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WEI-2025-SLEEP-RISK-DECISIONS",
+        "SRC-HOEFEL-2020-DECISION-NEEDS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "معظم الأدلة مختبرية أو تعليمية أو صحية وغير مصرية، وإعادة بناء ما كان معروفًا معرضة لتحيز الذاكرة. يلزم اختبار العدالة والفهم والضرر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-DECISION-CONTEXT-001",
+          "counterevidence": "Some decision tasks show no significant effect or more conservative rather than riskier behavior under sleep loss or stress.",
+          "limitations": "Average effects are small or mixed and vary by task, timing, framing, stressor, and individual conditions.",
+          "egyptian_applicability": "PLAUSIBLE_GENERAL_CAUTION_REQUIRES_LOCAL_REAL_WORLD_DECISION_TESTING"
+        },
+        {
+          "claimId": "CLM-ETHICS-001",
+          "counterevidence": "Effects vary by field, design, criterion, and practice; moral judgment and perception outcomes can be weaker than knowledge or narrow decision outcomes.",
+          "limitations": "Training outcomes often measure knowledge, judgments, or task decisions rather than durable behavior under real power and incentives.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_ETHICS_LEGAL_RELIGIOUS_SOCIAL_AND_USER_REVIEW_WITHOUT_IDEOLOGICAL_SIGNOFF"
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "dayId": "DAY-TRACK-HUMAN-001-029",
+      "claimIds": [
+        "CLM-AI-001",
+        "CLM-MISINFO-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-2024-GENAI-HEALTH",
+        "SRC-LU-2023-MISINFORMATION-INOCULATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-PENNYCOOK-2024-INOCULATION-COUNTEREVIDENCE"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "الإرشاد عالمي ولا يقيم نموذجًا أو لغة عربية بعينها، وتجارب التضليل غير عربية غالبًا. لا توجد دراسة تثبت أن قائمة الفحص تمنع الضرر أو التسريب.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-AI-001",
+          "counterevidence": "Potential access and education benefits exist, but require defined use, evaluation, human accountability, and privacy safeguards.",
+          "limitations": "The guidance does not rate a particular model or guarantee that disclosure, warnings, or filters eliminate risk.",
+          "egyptian_applicability": "DIRECT_PRODUCT_GOVERNANCE_RELEVANCE_REQUIRES_LOCAL_PRIVACY_AND_LANGUAGE_TESTING"
+        },
+        {
+          "claimId": "CLM-MISINFO-001",
+          "counterevidence": "Inoculation alone did not improve truth discernment in five real-headline experiments, while combination with an accuracy prompt did.",
+          "limitations": "Credibility tasks and intentions are not equivalent to durable behavior; sponsor and employment conflicts were disclosed in one key study.",
+          "egyptian_applicability": "REQUIRES_ARABIC_EGYPTIAN_CONTENT_AND_REAL_SHARING_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "dayId": "DAY-TRACK-HUMAN-001-030",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001",
+        "CLM-DEBIASING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة تعليمية وصحية في الغالب ولا تختبر خريطة قرار عربية ذاتية. لم تُقَس قابلية الفهم أو الإكراه أو أثر القرار في مستخدمي متزن.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-DEBIASING-001",
+          "counterevidence": "Some interventions were not successful, and sometimes the assumed bias was not present.",
+          "limitations": "Methods, biases, outcomes, and quality varied; sample-size and measurement reporting were frequent weaknesses.",
+          "egyptian_applicability": "REQUIRES_REALISTIC_LOCAL_DECISION_SCENARIOS_AND_TRANSFER_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 31,
+      "dayId": "DAY-TRACK-HUMAN-001-031",
+      "claimIds": [
+        "CLM-EMOTION-LABEL-001",
+        "CLM-EMOTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-TORRE-2018-AFFECT-LABELING",
+        "SRC-SEAH-2022-EMOTION-DIFFERENTIATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "فئات الانفعال واللغة حساسة للثقافة، ولا توجد معايرة مصرية للكلمات أو تمرين متزن. قد تزيد التسمية الفحص أو تخفي عرضًا جسديًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-EMOTION-LABEL-001",
+          "counterevidence": "Self-generated labels may temporarily increase affect, affect labeling did not reduce shame in one cited experiment, and no evidence supports a perfect universal emotion wheel.",
+          "limitations": "Labeling effects differ by timing, task, target, and label generation; differentiation evidence is correlational and heterogeneous.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_ARABIC_TERMINOLOGY_COGNITIVE_INTERVIEWS_AND_NONLITERATE_OPTIONS"
+        },
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 32,
+      "dayId": "DAY-TRACK-HUMAN-001-032",
+      "claimIds": [
+        "CLM-EMOTION-001",
+        "CLM-DECISION-CONTEXT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION",
+        "SRC-STARCKE-2016-STRESS-DECISIONS"
+      ],
+      "additionalSourceIds": [
+        "SRC-TORRE-2018-AFFECT-LABELING"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "المراجعات لا تثبت استراتيجية عالمية أو سببية، والتصنيفات الثقافية واسعة. لم تختبر اللغة أو آثار التأجيل والأمان في مصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        },
+        {
+          "claimId": "CLM-DECISION-CONTEXT-001",
+          "counterevidence": "Some decision tasks show no significant effect or more conservative rather than riskier behavior under sleep loss or stress.",
+          "limitations": "Average effects are small or mixed and vary by task, timing, framing, stressor, and individual conditions.",
+          "egyptian_applicability": "PLAUSIBLE_GENERAL_CAUTION_REQUIRES_LOCAL_REAL_WORLD_DECISION_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 33,
+      "dayId": "DAY-TRACK-HUMAN-001-033",
+      "claimIds": [
+        "CLM-ANGER-REGULATION-001",
+        "CLM-EMOTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-POP-2025-ANGER-REGULATION",
+        "SRC-KJAERVIK-2024-ANGER-AROUSAL"
+      ],
+      "additionalSourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "المراجعات لا تتحقق من علامة مبكرة فردية أو سيناريوهات مصرية للسلطة والعنف والجندر والعمل. يلزم مراجعة حماية ومستخدمين ومختصين.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ANGER-REGULATION-001",
+          "counterevidence": "Exercise can have broad health value even though arousal-increasing activity was not an effective anger-reduction category, and some strategies may work differently by person and context.",
+          "limitations": "Heterogeneity is large; pooled calming activities do not validate every method or address coercion, abuse, intoxication, weapons, or imminent violence.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SAFETY_PATHWAYS_AND_GENDER_POWER_REVIEW"
+        },
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 34,
+      "dayId": "DAY-TRACK-HUMAN-001-034",
+      "claimIds": [
+        "CLM-MEDITATION-SAFETY-001",
+        "CLM-MINDFULNESS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-FARIAS-2020-MEDITATION-ADVERSE",
+        "SRC-GALANTE-2021-MINDFULNESS"
+      ],
+      "additionalSourceIds": [
+        "SRC-GOLDBERG-2021-MINDFULNESS-METAREVIEW"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الإبلاغ عن الضرر غير متسق، والدراسات لا تتحقق من هذا النص أو التكيف المصري والديني والحسي. يلزم مراجعة سريرية وإتاحة وتجربة مستخدم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MEDITATION-SAFETY-001",
+          "counterevidence": "Many people experience no harm and some benefit, but absence of systematic reporting cannot prove universal safety.",
+          "limitations": "Adverse-event definitions and reporting are inconsistent, causal attribution is difficult, and risk estimates vary strongly by study design and exposure.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CLINICAL_TRAUMA_RELIGIOUS_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-MINDFULNESS-001",
+          "counterevidence": "Specific active alternatives may work similarly, and effects do not generalize to every setting.",
+          "limitations": "The evidence concerns multi-session expert-defined programs, many trials had high risk of bias, and prediction intervals included no effect.",
+          "egyptian_applicability": "REQUIRES_ACCEPTABILITY_ACCESSIBILITY_AND_ADVERSE_EXPERIENCE_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 35,
+      "dayId": "DAY-TRACK-HUMAN-001-035",
+      "claimIds": [
+        "CLM-ANGER-REGULATION-001",
+        "CLM-RELATIONSHIP-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-POP-2025-ANGER-REGULATION",
+        "SRC-KJAERVIK-2024-ANGER-AROUSAL"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK",
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "الدراسات لا تغطي كل سياقات العنف والسلطة أو التكيف المصري، ولا تسمح بتخصيص أمان. يحتاج النص مراجعة حماية وعنف أسري وعمل وجندر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ANGER-REGULATION-001",
+          "counterevidence": "Exercise can have broad health value even though arousal-increasing activity was not an effective anger-reduction category, and some strategies may work differently by person and context.",
+          "limitations": "Heterogeneity is large; pooled calming activities do not validate every method or address coercion, abuse, intoxication, weapons, or imminent violence.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SAFETY_PATHWAYS_AND_GENDER_POWER_REVIEW"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        }
+      ]
+    },
+    {
+      "day": 36,
+      "dayId": "DAY-TRACK-HUMAN-001-036",
+      "claimIds": [
+        "CLM-MHL-001",
+        "CLM-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BRAGG-2016-WEB-MHL",
+        "SRC-XU-2018-HELPSEEKING"
+      ],
+      "additionalSourceIds": [
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة غير مصرية غالبًا وتخلط معرفة واتجاهًا ونية وسلوكًا. مسارات الخدمة المحلية غير مكتملة التحقق، ولا توجد صلاحية تشخيص للدرس.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 37,
+      "dayId": "DAY-TRACK-HUMAN-001-037",
+      "claimIds": [
+        "CLM-SELF-RESPECT-001",
+        "CLM-SELF-COMPASSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION",
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "المقاييس لا تساوي الكرامة أو الخجل المصري، والتدخلات غير متجانسة وغير محلية. الإفصاح والإصلاح والعار تحتاج مراجعة ثقافية وقانونية وسلامة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 38,
+      "dayId": "DAY-TRACK-HUMAN-001-038",
+      "claimIds": [
+        "CLM-SOCIAL-COMPARISON-001",
+        "CLM-SELF-RESPECT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MEIER-2022-SOCIAL-COMPARISON-ENVY",
+        "SRC-VALKENBURG-2022-SOCIAL-MEDIA-WELLBEING"
+      ],
+      "additionalSourceIds": [
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "معظم الأدلة رصدية ودولية ومتمركزة حول المنصات. المقارنة خارج الإنترنت ومعاني الطبقة والنوع والعائلة في مصر، وكذلك سلامة الإفصاح، تحتاج بحثًا محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SOCIAL-COMPARISON-001",
+          "counterevidence": "Some users and contexts show neutral or positive effects, including inspiration, information, identity, connection, and social support.",
+          "limitations": "Observational self-report and reverse causation are common, and active-versus-passive categories are too coarse for individual guidance.",
+          "egyptian_applicability": "REQUIRES_PLATFORM_GENDER_CLASS_AND_FAMILY_CONTEXT_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 39,
+      "dayId": "DAY-TRACK-HUMAN-001-039",
+      "claimIds": [
+        "CLM-EMOTION-001",
+        "CLM-ANGER-REGULATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION",
+        "SRC-POP-2025-ANGER-REGULATION",
+        "SRC-KJAERVIK-2024-ANGER-AROUSAL"
+      ],
+      "additionalSourceIds": [
+        "SRC-TORRE-2018-AFFECT-LABELING",
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الدراسات غير متجانسة وتعتمد على سياقات وتجارب لا تمثل كل البيئات المصرية أو علاقات السلطة. لا تحدد جرعة ذاتية أو خريطة آمنة لكل صدمة أو خطر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        },
+        {
+          "claimId": "CLM-ANGER-REGULATION-001",
+          "counterevidence": "Exercise can have broad health value even though arousal-increasing activity was not an effective anger-reduction category, and some strategies may work differently by person and context.",
+          "limitations": "Heterogeneity is large; pooled calming activities do not validate every method or address coercion, abuse, intoxication, weapons, or imminent violence.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SAFETY_PATHWAYS_AND_GENDER_POWER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 40,
+      "dayId": "DAY-TRACK-HUMAN-001-040",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001",
+        "CLM-EMOTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-HU-2014-EMOTION-REGULATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "أدلة الاسترجاع يغلب عليها التعليم، وأدلة الشرح الراجع تأتي من الرعاية الصحية. لا توجد هنا تجربة مصرية تثبت فهم السلسلة أو نقلها إلى السلوك أو أمانها لكل مستخدم.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 41,
+      "dayId": "DAY-TRACK-HUMAN-001-041",
+      "claimIds": [
+        "CLM-HABIT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-SINGH-2024-HABIT-FORMATION"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "الأدلة تركز على سلوكيات صحية مختارة، وكثير منها عالي خطر التحيز ويقيس التلقائية ذاتيًا. السياقات المصرية اليومية والشيفتات والرعاية والقيود المادية غير مختبرة هنا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        }
+      ]
+    },
+    {
+      "day": 42,
+      "dayId": "DAY-TRACK-HUMAN-001-042",
+      "claimIds": [
+        "CLM-HABIT-001",
+        "CLM-MOTIVATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-SINGH-2024-HABIT-FORMATION",
+        "SRC-GILLISON-2019-SDT-MOTIVATION",
+        "SRC-SHEERAN-2020-SDT-BEHAVIOR"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات تجمع تدخلات وسلوكيات مختلفة وغالبها غير مصري، ولا تحدد حجم بداية عالميًا أو تفرق دائمًا بين نقص القدرة والغموض والدافعية والقيود.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        },
+        {
+          "claimId": "CLM-MOTIVATION-001",
+          "counterevidence": "A person may act without first feeling motivated, and a supportive technique may change perceived motivation without producing durable behavior change.",
+          "limitations": "Interventions and behaviors were heterogeneous, techniques operated in combinations, and individual strategy effects were limited.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CONSTRAINTS_AUTONOMY_LANGUAGE_AND_FEASIBILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 43,
+      "dayId": "DAY-TRACK-HUMAN-001-043",
+      "claimIds": [
+        "CLM-HABIT-001",
+        "CLM-DIGITAL-DISTRACTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-PARRY-2024-SMARTPHONE-PRESENCE",
+        "SRC-BIEDERMANN-2021-DIGITAL-SELF-CONTROL",
+        "SRC-SINGH-2024-HABIT-FORMATION"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "العينات غالبًا مختبرية أو تعليمية وغير مصرية، والأدوات والتعريفات مختلفة. لا تمثل اعتماد الهاتف للعمل والرعاية والسلامة أو البيئات المشتركة بالكامل.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        },
+        {
+          "claimId": "CLM-DIGITAL-DISTRACTION-001",
+          "counterevidence": "Most pooled cognitive outcomes for mere smartphone presence were null, and visualization or blocking tools did not work consistently.",
+          "limitations": "Active notifications, checking, content, task demands, and real-world obligations differ from mere phone presence; intervention evidence is sparse and heterogeneous.",
+          "egyptian_applicability": "LOW_RISK_PERSONAL_EXPERIMENT_ONLY_WITH_WORK_CARE_AND_ACCESS_EXCEPTIONS"
+        }
+      ]
+    },
+    {
+      "day": 44,
+      "dayId": "DAY-TRACK-HUMAN-001-044",
+      "claimIds": [
+        "CLM-PROCRASTINATION-001",
+        "CLM-MOTIVATION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ROZENTAL-2018-PROCRASTINATION",
+        "SRC-GILLISON-2019-SDT-MOTIVATION",
+        "SRC-SHEERAN-2020-SDT-BEHAVIOR"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات قليلة وغير مصرية وتختلف في التعريفات والتدخلات، ولا تفصل دائمًا بين التأجيل الاختياري والقيود أو الأسباب الصحية والتنفيذية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PROCRASTINATION-001",
+          "counterevidence": "Some people benefit from structured approaches, but no universal productivity technique is established.",
+          "limitations": "Only 12 studies were included and the CBT subgroup contained three studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_CONTEXT_AND_SCREENING_FOR_CONSTRAINTS_OR_DISTRESS"
+        },
+        {
+          "claimId": "CLM-MOTIVATION-001",
+          "counterevidence": "A person may act without first feeling motivated, and a supportive technique may change perceived motivation without producing durable behavior change.",
+          "limitations": "Interventions and behaviors were heterogeneous, techniques operated in combinations, and individual strategy effects were limited.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_CONSTRAINTS_AUTONOMY_LANGUAGE_AND_FEASIBILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 45,
+      "dayId": "DAY-TRACK-HUMAN-001-045",
+      "claimIds": [
+        "CLM-PROCRASTINATION-001",
+        "CLM-HABIT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ROZENTAL-2018-PROCRASTINATION",
+        "SRC-SINGH-2024-HABIT-FORMATION"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "قاعدة التدخلات محدودة وغير مصرية، وخريطة النفور والغموض والخوف والقدرة والقيد توليف تعليمي يحتاج اختبارًا مباشرًا وثقافيًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PROCRASTINATION-001",
+          "counterevidence": "Some people benefit from structured approaches, but no universal productivity technique is established.",
+          "limitations": "Only 12 studies were included and the CBT subgroup contained three studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_CONTEXT_AND_SCREENING_FOR_CONSTRAINTS_OR_DISTRESS"
+        },
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        }
+      ]
+    },
+    {
+      "day": 46,
+      "dayId": "DAY-TRACK-HUMAN-001-046",
+      "claimIds": [
+        "CLM-SELF-COMPASSION-001",
+        "CLM-ENGAGEMENT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION",
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION",
+        "SRC-TANDON-2026-CULTURAL-DIGITAL-ENGAGEMENT"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "تدخلات التعاطف غير متجانسة ومعرضة للتحيز، وأدلة الانقطاع رقمية وسريرية نسبيًا. لا توجد هنا دراسة مصرية لحدود الكفاية في العمل والأسرة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        },
+        {
+          "claimId": "CLM-ENGAGEMENT-001",
+          "counterevidence": "Reminder and compensation associations in trials do not justify shame, loss aversion, compulsive streaks, or assuming more engagement causes better outcomes.",
+          "limitations": "Motazen is educational rather than treatment, definitions vary, and associations between adaptation depth and retention do not prove causation.",
+          "egyptian_applicability": "REQUIRES_PARTICIPATORY_EGYPTIAN_TESTING_AND_DROPOUT_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 47,
+      "dayId": "DAY-TRACK-HUMAN-001-047",
+      "claimIds": [
+        "CLM-MONITORING-001",
+        "CLM-MEASURE-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-WEI-2015-MHL-MEASURES"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "مراجعة المتابعة مجالها سلوك تعاطٍ وليست عادات عامة، ومراجعة المقاييس أقدم وغير مصرية. لم تُختبر مدة أو صيغة هذا التدريب محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        },
+        {
+          "claimId": "CLM-MEASURE-001",
+          "counterevidence": "Newer validated tools may exist and must be identified in an updated Arabic and international review.",
+          "limitations": "The review excluded non-English and grey literature and is now old enough to require an updated measurement search.",
+          "egyptian_applicability": "DOES_NOT_VALIDATE_ANY_TOOL_FOR_EGYPT"
+        }
+      ]
+    },
+    {
+      "day": 48,
+      "dayId": "DAY-TRACK-HUMAN-001-048",
+      "claimIds": [
+        "CLM-WORK-001",
+        "CLM-TIME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-AEON-2021-TIME-MANAGEMENT"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "الأدلة غير مصرية وتختلف القطاعات والتدخلات، ولا تمثل العمل غير الرسمي والرعاية والسكن والمواصلات المحلية بما يكفي. التعافي القصير لم يُختبر هنا مباشرة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        },
+        {
+          "claimId": "CLM-TIME-001",
+          "counterevidence": "Productivity-focused time framing can increase pressure and inequality; some constraints require resources or collective change rather than a better planner.",
+          "limitations": "Most studies were cross-sectional, intervention content was opaque, and privilege confounds access to time-management practices.",
+          "egyptian_applicability": "REQUIRES_TIME_USE_CARE_WORK_INFORMAL_WORK_AND_TRANSPORT_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 49,
+      "dayId": "DAY-TRACK-HUMAN-001-049",
+      "claimIds": [
+        "CLM-FAILURE-LEARNING-001",
+        "CLM-SELF-COMPASSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-KEITH-2008-ERROR-MANAGEMENT",
+        "SRC-MACNAMARA-2023-GROWTH-MINDSET",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-FARIAS-2020-MEDITATION-ADVERSE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة تدريبية وتعليمية وغير مصرية غالبًا، ولا تحدد أمان الإفصاح أو المحاولة في علاقات السلطة أو الخسائر الواقعية. التوليف يحتاج مراجعة محلية ومهنية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FAILURE-LEARNING-001",
+          "counterevidence": "Higher-quality growth-mindset intervention evidence showed no reliable academic achievement effect, and forced positive reframing may invalidate harm or delay support.",
+          "limitations": "Training tasks do not represent high-stakes failure, abuse, grief, moral injury, poverty, discrimination, or consequences without a retry.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_EDUCATION_WORK_CLINICAL_TRAUMA_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 50,
+      "dayId": "DAY-TRACK-HUMAN-001-050",
+      "claimIds": [
+        "CLM-HABIT-001",
+        "CLM-ENGAGEMENT-001",
+        "CLM-MONITORING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-SINGH-2024-HABIT-FORMATION",
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION",
+        "SRC-GASS-2021-SELF-MONITORING"
+      ],
+      "additionalSourceIds": [
+        "SRC-TANDON-2026-CULTURAL-DIGITAL-ENGAGEMENT"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "المصادر تأتي من عادات صحية وتدخلات رقمية وسياق تعاطٍ، وليست تجربة مصرية لهذا النظام المتكامل. الجرعة والقبول والنقل للسلوك غير معروفين.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        },
+        {
+          "claimId": "CLM-ENGAGEMENT-001",
+          "counterevidence": "Reminder and compensation associations in trials do not justify shame, loss aversion, compulsive streaks, or assuming more engagement causes better outcomes.",
+          "limitations": "Motazen is educational rather than treatment, definitions vary, and associations between adaptation depth and retention do not prove causation.",
+          "egyptian_applicability": "REQUIRES_PARTICIPATORY_EGYPTIAN_TESTING_AND_DROPOUT_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 51,
+      "dayId": "DAY-TRACK-HUMAN-001-051",
+      "claimIds": [
+        "CLM-CONNECTION-001",
+        "CLM-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-2025-SOCIAL-CONNECTION",
+        "SRC-ZAGIC-2022-SOCIAL-CONNECTIONS"
+      ],
+      "additionalSourceIds": [
+        "SRC-XU-2018-HELPSEEKING",
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "تختلف تعريفات الاتصال والتدخلات، وقد تكون السببية متبادلة. معاني القرب والخصوصية والأسرة والنوع والوصول في مصر تحتاج اختبارًا مباشرًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-CONNECTION-001",
+          "counterevidence": "More contacts do not necessarily improve felt safety, belonging, or relationship quality.",
+          "limitations": "The meta-analysis had an older mean sample age and heterogeneous interventions.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_RELATIONSHIP_NORMS_ACCESS_AND_SAFETY_RESEARCH"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 52,
+      "dayId": "DAY-TRACK-HUMAN-001-052",
+      "claimIds": [
+        "CLM-FRIENDSHIP-001",
+        "CLM-SOCIAL-COMPARISON-001"
+      ],
+      "primarySourceIds": [
+        "SRC-PEZIRKIANIDIS-2023-ADULT-FRIENDSHIP",
+        "SRC-WHO-2025-SOCIAL-CONNECTION"
+      ],
+      "additionalSourceIds": [
+        "SRC-MEIER-2022-SOCIAL-COMPARISON-ENVY",
+        "SRC-VALKENBURG-2022-SOCIAL-MEDIA-WELLBEING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات قليلة وطالبية الوزن وتختلف تعريفات الصداقة. النوع والحركة والأسرة والعمل والمساحة العامة والرقمية في مصر تحتاج بحثًا مباشرًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FRIENDSHIP-001",
+          "counterevidence": "More friends is not automatically better, close-friend labels were not consistently associated with wellbeing, and unsafe or one-sided ties should not be preserved for a metric.",
+          "limitations": "Cross-sectional designs dominate, dyadic and longitudinal work is limited, and wellbeing measures vary.",
+          "egyptian_applicability": "REQUIRES_ADULT_EGYPTIAN_FRIENDSHIP_LIFE_STAGE_GENDER_AND_ACCESS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-SOCIAL-COMPARISON-001",
+          "counterevidence": "Some users and contexts show neutral or positive effects, including inspiration, information, identity, connection, and social support.",
+          "limitations": "Observational self-report and reverse causation are common, and active-versus-passive categories are too coarse for individual guidance.",
+          "egyptian_applicability": "REQUIRES_PLATFORM_GENDER_CLASS_AND_FAMILY_CONTEXT_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 53,
+      "dayId": "DAY-TRACK-HUMAN-001-053",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأبحاث غير مصرية وتشمل أزواجًا ومهنيين وطلابًا في برامج مختلفة. القوة واللغة والخصوصية والأمان في الأسرة والعمل تحتاج اختبارًا محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 54,
+      "dayId": "DAY-TRACK-HUMAN-001-054",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-EMOTION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-HU-2014-EMOTION-REGULATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-OMURA-2017-ASSERTIVENESS"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأدلة غير مصرية وغير متجانسة، ولا تختبر مباشرة فصل الاعتراف عن الاتفاق في علاقات الأسرة والعمل والسلطة المحلية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 55,
+      "dayId": "DAY-TRACK-HUMAN-001-055",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-EGYPT-2017-STEPS",
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات غير مصرية أو غير مباشرة، ولا تختبر هذه الصياغة مع الأسرة والعمل والرعاية والسلطة المحلية. قابلية الرفض تحتاج اختبارًا نوعيًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 56,
+      "dayId": "DAY-TRACK-HUMAN-001-056",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-RELATIONSHIP-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة غير مصرية ومتخصصة، ولا تحدد تكلفة الرفض عبر الأسرة والعمل والنوع والاعتماد الاقتصادي. خدمات الدعم المحلية تحتاج تحققًا حاليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        }
+      ]
+    },
+    {
+      "day": 57,
+      "dayId": "DAY-TRACK-HUMAN-001-057",
+      "claimIds": [
+        "CLM-EGYPT-FAMILY-CAREGIVING-001",
+        "CLM-EGYPT-SPIRITUALITY-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-ABDELHALIM-2024-EGYPT-CAREGIVERS",
+        "SRC-ALSAWAFI-2020-ARAB-FAMILY",
+        "SRC-IBRAHIM-2022-EGYPT-RECOVERY"
+      ],
+      "additionalSourceIds": [
+        "SRC-OKASHA-2021-EGYPT-TRADITIONAL-HEALERS",
+        "SRC-ELKHATIB-2023-ARAB-HELPSEEKING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "العينات صغيرة أو سريرية ولا تمثل الأقاليم والطبقات والأديان والأعمار وأشكال الأسرة والسلامة. توزيع الرعاية اليومي يحتاج بحثًا نوعيًا أوسع.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-EGYPT-FAMILY-CAREGIVING-001",
+          "counterevidence": "Family participation can support recovery and care, yet obligation, criticism, over-involvement, stigma, financial pressure, violence, or unequal labor can also harm; family absence is not personal failure.",
+          "limitations": "Clinical and mostly cross-sectional samples cannot establish causality or define normal family duty, healthy hierarchy, privacy, consent, or universally safe communication.",
+          "egyptian_applicability": "DIRECT_EGYPTIAN_EVIDENCE_BUT_REQUIRES_BROADER_REGIONAL_GENDER_CLASS_DISABILITY_SAFETY_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-EGYPT-SPIRITUALITY-HELP-001",
+          "counterevidence": "Spirituality was meaningful in some recovery accounts, while some religious illness interpretations accompanied delayed specialist contact in a narrow sample; neither pattern applies universally.",
+          "limitations": "The Egyptian qualitative sample was small, the clinical survey was diagnosis-specific, and Arab evidence is heterogeneous.",
+          "egyptian_applicability": "DIRECT_START_REQUIRES_DIVERSE_USER_CLERGY_CLINICIAN_AND_SOCIAL_RESEARCH_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 58,
+      "dayId": "DAY-TRACK-HUMAN-001-058",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-EGYPT-FAMILY-CAREGIVING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-ABDELHALIM-2024-EGYPT-CAREGIVERS",
+        "SRC-ALSAWAFI-2020-ARAB-FAMILY"
+      ],
+      "additionalSourceIds": [
+        "SRC-IBRAHIM-2022-EGYPT-RECOVERY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات غير متجانسة وسريرية أو غير مصرية جزئيًا، ولا تمثل كل أشكال الأسرة والصداقة والقوة أو أدوار الطوارئ.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-EGYPT-FAMILY-CAREGIVING-001",
+          "counterevidence": "Family participation can support recovery and care, yet obligation, criticism, over-involvement, stigma, financial pressure, violence, or unequal labor can also harm; family absence is not personal failure.",
+          "limitations": "Clinical and mostly cross-sectional samples cannot establish causality or define normal family duty, healthy hierarchy, privacy, consent, or universally safe communication.",
+          "egyptian_applicability": "DIRECT_EGYPTIAN_EVIDENCE_BUT_REQUIRES_BROADER_REGIONAL_GENDER_CLASS_DISABILITY_SAFETY_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 59,
+      "dayId": "DAY-TRACK-HUMAN-001-059",
+      "claimIds": [
+        "CLM-HELP-001",
+        "CLM-EGYPT-002",
+        "CLM-EGYPT-003"
+      ],
+      "primarySourceIds": [
+        "SRC-XU-2018-HELPSEEKING",
+        "SRC-XU-2026-HELPSEEKING-UPDATE",
+        "SRC-BAKLOLA-2024-EGYPT-MHL",
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS"
+      ],
+      "additionalSourceIds": [
+        "SRC-ELKHATIB-2023-ARAB-HELPSEEKING",
+        "SRC-WHO-EMRO-2026-GENDER-HEALTH"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة المصرية طلابية وعرضية، والمراجعات غير متجانسة. لا تثبت توفر مسار حالي أو ملاءمته، وتحتاج الموارد تحققًا من المالك والنطاق والوقت.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-EGYPT-002",
+          "counterevidence": "Literacy factors were not uniformly associated with professional help-seeking, and personal, religious, and informal routes remained relevant.",
+          "limitations": "Convenience and online sampling, self-report, cross-sectional designs, and student-only populations limit inference.",
+          "egyptian_applicability": "DIRECT_FOR_STUDENT_CONTEXT_PARTIAL_FOR_CORE_ADULT_TRACK"
+        },
+        {
+          "claimId": "CLM-EGYPT-003",
+          "counterevidence": "Family and religious support can facilitate care for some people as well as delay formal care for others; they must not be stereotyped as inherently helpful or harmful.",
+          "limitations": "Most regional evidence concerns attitudes and intentions, barriers differ within Egypt, and no single route is suitable for everyone.",
+          "egyptian_applicability": "RELEVANT_FRAMEWORK_REQUIRES_DIVERSE_USER_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 60,
+      "dayId": "DAY-TRACK-HUMAN-001-060",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-OMURA-2017-ASSERTIVENESS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "أدلة التعلم تعليمية أو سريرية، وأدلة التواصل غير مصرية ومتنوعة. لا تثبت السلامة أو النقل عبر الأسرة والعمل وعلاقات القوة المحلية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 61,
+      "dayId": "DAY-TRACK-HUMAN-001-061",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-RELATIONSHIP-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة غير مصرية ومتخصصة ولا تحدد أثر صياغة الحدود في أسر وسكن وعمل يعتمد فيها الأفراد على بعضهم أو يخشون الانتقام.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        }
+      ]
+    },
+    {
+      "day": 62,
+      "dayId": "DAY-TRACK-HUMAN-001-062",
+      "claimIds": [
+        "CLM-RELATIONSHIP-SAFETY-001",
+        "CLM-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION",
+        "SRC-WHO-2014-IPV-HANDBOOK",
+        "SRC-WHO-EMRO-EGYPT-CONTACTS"
+      ],
+      "additionalSourceIds": [],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "لا يستطيع المحتوى تقييم العنف أو الجهاز أو الواجب القانوني أو المسار المحلي. الإحالات المصرية وخطط الأمان تحتاج تحققًا حديثًا ومراجعة ناجين ومتخصصين.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        },
+        {
+          "claimId": "CLM-SAFETY-001",
+          "counterevidence": "Direct confirmation from each service owner may validate or invalidate individual entries.",
+          "limitations": "The directory page does not itself prove that every number and operating time is currently active.",
+          "egyptian_applicability": "DIRECT_OPERATIONAL_RELEVANCE_BUT_BLOCKED_PENDING_FRESHNESS_CONFIRMATION"
+        }
+      ]
+    },
+    {
+      "day": 63,
+      "dayId": "DAY-TRACK-HUMAN-001-063",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-DEBIASING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأدلة غير مصرية ومهام تقليل الانحياز لا تمثل الخلاف الواقعي. تحتاج اللغة والسلطة والقنوات الرسمية والأمان اختبارًا محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-DEBIASING-001",
+          "counterevidence": "Some interventions were not successful, and sometimes the assumed bias was not present.",
+          "limitations": "Methods, biases, outcomes, and quality varied; sample-size and measurement reporting were frequent weaknesses.",
+          "egyptian_applicability": "REQUIRES_REALISTIC_LOCAL_DECISION_SCENARIOS_AND_TRANSFER_TESTS"
+        }
+      ]
+    },
+    {
+      "day": 64,
+      "dayId": "DAY-TRACK-HUMAN-001-064",
+      "claimIds": [
+        "CLM-ANGER-REGULATION-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-POP-2025-ANGER-REGULATION",
+        "SRC-KJAERVIK-2024-ANGER-AROUSAL",
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة غير مصرية ولا تحدد مدة أو قناة أو أثر التوقف في السكن والعمل والرعاية وعلاقات القوة. الأمان الفردي لا يمكن تقييمه هنا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ANGER-REGULATION-001",
+          "counterevidence": "Exercise can have broad health value even though arousal-increasing activity was not an effective anger-reduction category, and some strategies may work differently by person and context.",
+          "limitations": "Heterogeneity is large; pooled calming activities do not validate every method or address coercion, abuse, intoxication, weapons, or imminent violence.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SAFETY_PATHWAYS_AND_GENDER_POWER_REVIEW"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 65,
+      "dayId": "DAY-TRACK-HUMAN-001-065",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-SELF-RESPECT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-NIVEAU-2021-SELF-ESTEEM"
+      ],
+      "additionalSourceIds": [
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الدراسات غير مصرية ومتغايرة ولا تمثل نقد العمل والأسرة والسلطة أو الاتهامات عالية العواقب. معنى الكرامة والدفاعية يحتاج اختبارًا لغويًا محليًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-SELF-RESPECT-001",
+          "counterevidence": "Raising a self-rating does not prove better behavior or wellbeing, and inflated or contingent evaluation may create pressure, defensiveness, or comparison.",
+          "limitations": "Self-esteem measures are not identical to dignity or self-respect; interventions were heterogeneous and often targeted clinical or at-risk groups.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LINGUISTIC_RELIGIOUS_SOCIAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 66,
+      "dayId": "DAY-TRACK-HUMAN-001-066",
+      "claimIds": [
+        "CLM-FORGIVENESS-001",
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AKHTAR-2018-FORGIVENESS",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK",
+        "SRC-WHO-EGYPT-2017-STEPS",
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأدلة غير مباشرة وغير مصرية غالبًا، ومعاني الاعتذار والكرامة والسلطة والحقوق تختلف. لا يمكن تحديد سلامة الاعتراف أو أثره من هذا المحتوى.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FORGIVENESS-001",
+          "counterevidence": "No wellbeing estimate establishes that contact with the person who caused harm is safe or beneficial.",
+          "limitations": "Interventions are structured processes, not pressure to forgive; safety, justice, distance, and non-reconciliation remain valid choices.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_CULTURAL_GENDER_AND_SURVIVOR_REVIEW"
+        },
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 67,
+      "dayId": "DAY-TRACK-HUMAN-001-067",
+      "claimIds": [
+        "CLM-FORGIVENESS-001",
+        "CLM-HABIT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AKHTAR-2018-FORGIVENESS",
+        "SRC-SINGH-2024-HABIT-FORMATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد هنا دراسة مصرية أو تدخل مباشر لبنية الإصلاح المقترحة، وتختلف الحقوق والأعراف والقوة ونوع الضرر بشدة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FORGIVENESS-001",
+          "counterevidence": "No wellbeing estimate establishes that contact with the person who caused harm is safe or beneficial.",
+          "limitations": "Interventions are structured processes, not pressure to forgive; safety, justice, distance, and non-reconciliation remain valid choices.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_CULTURAL_GENDER_AND_SURVIVOR_REVIEW"
+        },
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        }
+      ]
+    },
+    {
+      "day": 68,
+      "dayId": "DAY-TRACK-HUMAN-001-068",
+      "claimIds": [
+        "CLM-FORGIVENESS-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AKHTAR-2018-FORGIVENESS",
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد دراسة محلية مباشرة لهذا النموذج، وتختلف الثقة حسب المجال والقوة والقانون والثقافة ونوع الضرر، ولا يمكن التنبؤ بعودتها.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FORGIVENESS-001",
+          "counterevidence": "No wellbeing estimate establishes that contact with the person who caused harm is safe or beneficial.",
+          "limitations": "Interventions are structured processes, not pressure to forgive; safety, justice, distance, and non-reconciliation remain valid choices.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_CULTURAL_GENDER_AND_SURVIVOR_REVIEW"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 69,
+      "dayId": "DAY-TRACK-HUMAN-001-069",
+      "claimIds": [
+        "CLM-FORGIVENESS-001",
+        "CLM-RELATIONSHIP-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AKHTAR-2018-FORGIVENESS",
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "additionalSourceIds": [
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "التدخلات متعددة الثقافات وسريرية جزئيًا، ومعاني الصفح والدين والحق والأسرة في مصر تحتاج مراجعة محلية من دون فرض أيديولوجي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FORGIVENESS-001",
+          "counterevidence": "No wellbeing estimate establishes that contact with the person who caused harm is safe or beneficial.",
+          "limitations": "Interventions are structured processes, not pressure to forgive; safety, justice, distance, and non-reconciliation remain valid choices.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_CULTURAL_GENDER_AND_SURVIVOR_REVIEW"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "dayId": "DAY-TRACK-HUMAN-001-070",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-RELATIONSHIP-SAFETY-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "additionalSourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة تعليمية وعلاقية ودولية، ولا تقيّم هذه الشجرة أو الخدمات والقوانين والقوة في مصر. لا يمكن للتطبيق إجراء تقييم أمان فردي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 71,
+      "dayId": "DAY-TRACK-HUMAN-001-071",
+      "claimIds": [
+        "CLM-FINANCE-001",
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING",
+        "SRC-WHO-EGYPT-2017-STEPS"
+      ],
+      "additionalSourceIds": [
+        "SRC-W3C-2021-COGNITIVE-USABLE",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "المراجعة الأساسية من دول منظمة التعاون ولا تلتقط التضخم والدخل غير الرسمي والائتمان وحماية المستهلك وتوزيع الموارد داخل الأسر المصرية الآن.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FINANCE-001",
+          "counterevidence": "Some interventions may help selected behaviors, but education cannot by itself change income, prices, debt terms, or product access.",
+          "limitations": "Interventions and outcomes were too heterogeneous for pooling and many studies had methodological weaknesses.",
+          "egyptian_applicability": "REQUIRES_CURRENT_EGYPTIAN_ECONOMIC_CONSUMER_PROTECTION_AND_ACCESS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 72,
+      "dayId": "DAY-TRACK-HUMAN-001-072",
+      "claimIds": [
+        "CLM-FINANCE-001",
+        "CLM-SOCIAL-COMPARISON-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY",
+        "SRC-MEIER-2022-SOCIAL-COMPARISON-ENVY",
+        "SRC-VALKENBURG-2022-SOCIAL-MEDIA-WELLBEING"
+      ],
+      "additionalSourceIds": [
+        "SRC-LUDOLPH-2018-DEBIASING",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد هنا بيانات مصرية حديثة عن الأسعار والائتمان وعادات الشراء أو اختبار سببي لهذه الوقفة بين فئات دخل مختلفة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FINANCE-001",
+          "counterevidence": "Some interventions may help selected behaviors, but education cannot by itself change income, prices, debt terms, or product access.",
+          "limitations": "Interventions and outcomes were too heterogeneous for pooling and many studies had methodological weaknesses.",
+          "egyptian_applicability": "REQUIRES_CURRENT_EGYPTIAN_ECONOMIC_CONSUMER_PROTECTION_AND_ACCESS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-SOCIAL-COMPARISON-001",
+          "counterevidence": "Some users and contexts show neutral or positive effects, including inspiration, information, identity, connection, and social support.",
+          "limitations": "Observational self-report and reverse causation are common, and active-versus-passive categories are too coarse for individual guidance.",
+          "egyptian_applicability": "REQUIRES_PLATFORM_GENDER_CLASS_AND_FAMILY_CONTEXT_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 73,
+      "dayId": "DAY-TRACK-HUMAN-001-073",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-COMPREHENSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-MAWSON-2025-DISTRIBUTED-PRACTICE"
+      ],
+      "additionalSourceIds": [
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "كثير من الأدلة صفية ولا تمثل جميع البالغين أو المواد أو اللغات، ولم يُختبر هذا الدرس العربي أو أثره خارج التطبيق.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 74,
+      "dayId": "DAY-TRACK-HUMAN-001-074",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-LEARNING-002"
+      ],
+      "primarySourceIds": [
+        "SRC-MAWSON-2025-DISTRIBUTED-PRACTICE",
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-WANG-2020-MICROLEARNING-SELFCARE"
+      ],
+      "additionalSourceIds": [
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "البيئات التعليمية تهيمن على الأدلة، ولا تختبر هذه الخطة مع واقع الورديات والرعاية والاتصال الرقمي المتفاوت في مصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-LEARNING-002",
+          "counterevidence": "Short content may be easier to consume while remaining insufficient for application, environmental change, or durable behavior.",
+          "limitations": "Most included studies had moderate-to-high risk of bias, and only a minority of studies measuring behavior reported significant improvement.",
+          "egyptian_applicability": "REQUIRES_DIRECT_TESTING_OF_LENGTH_READING_LOAD_ENERGY_AND_COMPREHENSION"
+        }
+      ]
+    },
+    {
+      "day": 75,
+      "dayId": "DAY-TRACK-HUMAN-001-075",
+      "claimIds": [
+        "CLM-COMPREHENSION-001",
+        "CLM-LEARNING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-PAN-2018-RETRIEVAL-TRANSFER"
+      ],
+      "additionalSourceIds": [
+        "SRC-W3C-2021-COGNITIVE-USABLE",
+        "SRC-MAWSON-2025-DISTRIBUTED-PRACTICE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "أدلة الشرح الراجع تأتي جزئيًا من تواصل صحي وتعليمي، ولا تحدد صلاحية هذا القالب العربي لكل ثقافة أو قدرة أو مجال.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 76,
+      "dayId": "DAY-TRACK-HUMAN-001-076",
+      "claimIds": [
+        "CLM-WORK-001",
+        "CLM-IDENTITY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-GUTU-2025-IDENTITY-WELLBEING",
+        "SRC-IBRAHIM-2022-EGYPT-RECOVERY"
+      ],
+      "additionalSourceIds": [
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "الأدلة لا تمثل تنوع العمل الرسمي وغير الرسمي والبطالة والسلطة والقطاعات المصرية، ولا تحدد سلامة حد فردي بعينه.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        },
+        {
+          "claimId": "CLM-IDENTITY-001",
+          "counterevidence": "Commitment may relate to development, but exploration findings and links to wellbeing are inconsistent; change does not imply inauthenticity.",
+          "limitations": "The review included only 10 studies and the Egyptian qualitative sample was small and recovery-specific.",
+          "egyptian_applicability": "REQUIRES_DIVERSE_ADULT_ROLE_TRANSITION_AND_LANGUAGE_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 77,
+      "dayId": "DAY-TRACK-HUMAN-001-077",
+      "claimIds": [
+        "CLM-WORK-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-OMURA-2017-ASSERTIVENESS",
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION"
+      ],
+      "additionalSourceIds": [
+        "SRC-W3C-2021-COGNITIVE-USABLE",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "المصادر لا تمثل القطاعات واللغة والتسلسل الإداري والعمل غير الرسمي في مصر، ولا تتنبأ بعاقبة سؤال فردي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 78,
+      "dayId": "DAY-TRACK-HUMAN-001-078",
+      "claimIds": [
+        "CLM-WORK-001",
+        "CLM-MHL-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-BRAGG-2016-WEB-MHL",
+        "SRC-XU-2018-HELPSEEKING"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2024-EGYPT-MHL",
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "أدلة التدخل التنظيمي منخفضة اليقين، والوصول المصري والعوائق متغيران، ولا توجد أداة تقييم سريري داخل موتزن.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        },
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        }
+      ]
+    },
+    {
+      "day": 79,
+      "dayId": "DAY-TRACK-HUMAN-001-079",
+      "claimIds": [
+        "CLM-COMMUNITY-001",
+        "CLM-CIVIC-001",
+        "CLM-ETHICS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-NICHOL-2023-VOLUNTEERING",
+        "SRC-FENN-2024-CIVIC-ENGAGEMENT",
+        "SRC-WATTS-2017-ETHICS-INSTRUCTION"
+      ],
+      "additionalSourceIds": [
+        "SRC-LUDOLPH-2018-DEBIASING",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد مراجعة محلية محدثة للقانون والسلامة وتنوع المشاركة في مصر، ولا يمكن تعميم علاقات الرفاه بسبب الاختيار الذاتي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-COMMUNITY-001",
+          "counterevidence": "Community contribution can drain time, money, safety, or care capacity and may be exploitative rather than beneficial.",
+          "limitations": "Healthy-volunteer selection, role quality, access, motives, and unpaid burden complicate causal inference.",
+          "egyptian_applicability": "REQUIRES_LOCAL_FORMAL_AND_INFORMAL_CARE_COMMUNITY_AND_BURDEN_RESEARCH"
+        },
+        {
+          "claimId": "CLM-CIVIC-001",
+          "counterevidence": "Engagement can coexist with distress, burden, exclusion, retaliation risk, or no wellbeing change; nonparticipation is not a moral failure.",
+          "limitations": "Causality, selection, activity type, duration, historical marginalization, and geographic transfer remain unresolved.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_LEGAL_SAFETY_CIVIC_AND_COMMUNITY_EXPERT_REVIEW"
+        },
+        {
+          "claimId": "CLM-ETHICS-001",
+          "counterevidence": "Effects vary by field, design, criterion, and practice; moral judgment and perception outcomes can be weaker than knowledge or narrow decision outcomes.",
+          "limitations": "Training outcomes often measure knowledge, judgments, or task decisions rather than durable behavior under real power and incentives.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_ETHICS_LEGAL_RELIGIOUS_SOCIAL_AND_USER_REVIEW_WITHOUT_IDEOLOGICAL_SIGNOFF"
+        }
+      ]
+    },
+    {
+      "day": 80,
+      "dayId": "DAY-TRACK-HUMAN-001-080",
+      "claimIds": [
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+        "CLM-LEARNING-001",
+        "CLM-WORK-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-BIRKENMAIER-2022-FINANCIAL-CAPABILITY",
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT"
+      ],
+      "additionalSourceIds": [
+        "SRC-NICHOL-2023-VOLUNTEERING",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "التكامل مصمم نظريًا من مصادر دولية متباينة ولا يثبت الصلاحية الثقافية أو القانونية أو الاقتصادية الحالية في مصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-WORK-001",
+          "counterevidence": "An individual relaxation exercise may provide short-term relief without changing the condition producing exhaustion.",
+          "limitations": "The pooled reduction was small and evidence certainty very low because of heterogeneity, bias risk, and few studies.",
+          "egyptian_applicability": "REQUIRES_LOCAL_SECTOR_INFORMAL_WORK_POWER_AND_JOB_SECURITY_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 81,
+      "dayId": "DAY-TRACK-HUMAN-001-081",
+      "claimIds": [
+        "CLM-FAILURE-LEARNING-001",
+        "CLM-SELF-COMPASSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-KEITH-2008-ERROR-MANAGEMENT",
+        "SRC-MACNAMARA-2023-GROWTH-MINDSET",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-FARIAS-2020-MEDITATION-ADVERSE",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا تختبر المصادر شجرة التصنيف أو اللغة المصرية، وأدلة التعاطف وعقلية النمو لا تبرر استنتاجات فردية أو أخلاقية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FAILURE-LEARNING-001",
+          "counterevidence": "Higher-quality growth-mindset intervention evidence showed no reliable academic achievement effect, and forced positive reframing may invalidate harm or delay support.",
+          "limitations": "Training tasks do not represent high-stakes failure, abuse, grief, moral injury, poverty, discrimination, or consequences without a retry.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_EDUCATION_WORK_CLINICAL_TRAUMA_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 82,
+      "dayId": "DAY-TRACK-HUMAN-001-082",
+      "claimIds": [
+        "CLM-FAILURE-LEARNING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-KEITH-2008-ERROR-MANAGEMENT",
+        "SRC-MACNAMARA-2023-GROWTH-MINDSET",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING"
+      ],
+      "evidenceRating": "MODERATE",
+      "calibratedLimitationAr": "لا تختبر الأدلة هذا القالب العربي أو الأخطاء اليومية المعقدة، ولا تحدد مسؤولية أو إصلاحًا مناسبًا في حالة حقيقية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-FAILURE-LEARNING-001",
+          "counterevidence": "Higher-quality growth-mindset intervention evidence showed no reliable academic achievement effect, and forced positive reframing may invalidate harm or delay support.",
+          "limitations": "Training tasks do not represent high-stakes failure, abuse, grief, moral injury, poverty, discrimination, or consequences without a retry.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_EDUCATION_WORK_CLINICAL_TRAUMA_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 83,
+      "dayId": "DAY-TRACK-HUMAN-001-083",
+      "claimIds": [
+        "CLM-UNCERTAINTY-001",
+        "CLM-DECISION-CONTEXT-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WILSON-2023-UNCERTAINTY",
+        "SRC-STARCKE-2016-STRESS-DECISIONS",
+        "SRC-HOEFEL-2020-DECISION-NEEDS"
+      ],
+      "additionalSourceIds": [
+        "SRC-WEI-2025-SLEEP-RISK-DECISIONS",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا تقدم المصادر قاعدة مثلى لحد البحث أو قرارًا فرديًا، ولا تختبر السياق اللغوي والوصول للمعلومات في مصر.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-UNCERTAINTY-001",
+          "counterevidence": "Ordinary uncertainty may be realistic and linked to unstable conditions rather than an individual deficit.",
+          "limitations": "Directly targeted CBT superiority was not maintained at follow-up, and Motazen does not diagnose or treat GAD.",
+          "egyptian_applicability": "REQUIRES_NONCLINICAL_LOCAL_RESEARCH_AND_CLEAR_ESCALATION"
+        },
+        {
+          "claimId": "CLM-DECISION-CONTEXT-001",
+          "counterevidence": "Some decision tasks show no significant effect or more conservative rather than riskier behavior under sleep loss or stress.",
+          "limitations": "Average effects are small or mixed and vary by task, timing, framing, stressor, and individual conditions.",
+          "egyptian_applicability": "PLAUSIBLE_GENERAL_CAUTION_REQUIRES_LOCAL_REAL_WORLD_DECISION_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 84,
+      "dayId": "DAY-TRACK-HUMAN-001-084",
+      "claimIds": [
+        "CLM-RESILIENCE-001",
+        "CLM-RESPONSIBILITY-WITHOUT-BLAME-001"
+      ],
+      "primarySourceIds": [
+        "SRC-FERREIRA-2021-RESILIENCE",
+        "SRC-PEINADO-2020-DISPARITY-MESSAGING",
+        "SRC-XU-2018-HELPSEEKING"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-EGYPT-2017-STEPS",
+        "SRC-ABDELHALIM-2024-EGYPT-CAREGIVERS"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا تمثل الأدلة كل ضغوط مصر أو توزيع الموارد داخل الأسرة والعمل، ولا تثبت أمان شبكة دعم بعينها.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RESILIENCE-001",
+          "counterevidence": "Reported significant results coexist with substantial methodological limitations and cannot support guaranteed outcomes.",
+          "limitations": "Fair quality, low power, and inconsistent theories and measures prevent confident comparison.",
+          "egyptian_applicability": "REQUIRES_LOCAL_STRUCTURAL_AND_CULTURAL_RESEARCH"
+        },
+        {
+          "claimId": "CLM-RESPONSIBILITY-WITHOUT-BLAME-001",
+          "counterevidence": "Agency language may support action for some people, but it becomes inaccurate and harmful when it implies full control, equal opportunity, or deserved suffering.",
+          "limitations": "Health-disparity messaging is not a direct trial of general responsibility education, and no universal wording has been shown safe across contexts.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_PUBLIC_HEALTH_SOCIAL_LEGAL_AND_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 85,
+      "dayId": "DAY-TRACK-HUMAN-001-085",
+      "claimIds": [
+        "CLM-HELP-001",
+        "CLM-EGYPT-001",
+        "CLM-EGYPT-002"
+      ],
+      "primarySourceIds": [
+        "SRC-XU-2018-HELPSEEKING",
+        "SRC-XU-2026-HELPSEEKING-UPDATE",
+        "SRC-BAKLOLA-2024-EGYPT-MHL"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS",
+        "SRC-WHO-EMRO-2026-GENDER-HEALTH"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الدراسات المصرية لا تمثل كل البالغين والمناطق والخدمات، وبيانات الوصول تتغير؛ لم تُتحقق موارد محددة داخل المنتج.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-EGYPT-001",
+          "counterevidence": "Local service trust resources family support and help pathways may differ substantially within and between countries.",
+          "limitations": "The source cannot quantify an Egyptian barrier or establish that all groups experience the same factors.",
+          "egyptian_applicability": "RELEVANT_CONTEXTUAL_START_REQUIRES_DIRECT_EGYPTIAN_STUDIES"
+        },
+        {
+          "claimId": "CLM-EGYPT-002",
+          "counterevidence": "Literacy factors were not uniformly associated with professional help-seeking, and personal, religious, and informal routes remained relevant.",
+          "limitations": "Convenience and online sampling, self-report, cross-sectional designs, and student-only populations limit inference.",
+          "egyptian_applicability": "DIRECT_FOR_STUDENT_CONTEXT_PARTIAL_FOR_CORE_ADULT_TRACK"
+        }
+      ]
+    },
+    {
+      "day": 86,
+      "dayId": "DAY-TRACK-HUMAN-001-086",
+      "claimIds": [
+        "CLM-MHL-001",
+        "CLM-HELP-001",
+        "CLM-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BRAGG-2016-WEB-MHL",
+        "SRC-XU-2018-HELPSEEKING",
+        "SRC-WHO-EMRO-EGYPT-CONTACTS"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2024-EGYPT-MHL",
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا تتحقق المصادر من كل خدمة حالية أو ملاءمتها، ولا تسمح المؤشرات العامة بتحديد تشخيص أو مستوى رعاية فردي.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-SAFETY-001",
+          "counterevidence": "Direct confirmation from each service owner may validate or invalidate individual entries.",
+          "limitations": "The directory page does not itself prove that every number and operating time is currently active.",
+          "egyptian_applicability": "DIRECT_OPERATIONAL_RELEVANCE_BUT_BLOCKED_PENDING_FRESHNESS_CONFIRMATION"
+        }
+      ]
+    },
+    {
+      "day": 87,
+      "dayId": "DAY-TRACK-HUMAN-001-087",
+      "claimIds": [
+        "CLM-SAFETY-001",
+        "CLM-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-EMRO-EGYPT-CONTACTS",
+        "SRC-XU-2018-HELPSEEKING",
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا يستطيع المحتوى التحقق لحظيًا من الموقع والخطر والخدمة، ولم تُعتمد قائمة موارد نهائية؛ لذلك لا يقدم رقمًا ثابتًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-SAFETY-001",
+          "counterevidence": "Direct confirmation from each service owner may validate or invalidate individual entries.",
+          "limitations": "The directory page does not itself prove that every number and operating time is currently active.",
+          "egyptian_applicability": "DIRECT_OPERATIONAL_RELEVANCE_BUT_BLOCKED_PENDING_FRESHNESS_CONFIRMATION"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 88,
+      "dayId": "DAY-TRACK-HUMAN-001-088",
+      "claimIds": [
+        "CLM-HELP-002",
+        "CLM-EGYPT-002",
+        "CLM-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MA-2023-SCHOOL-MHL",
+        "SRC-BAKLOLA-2024-EGYPT-MHL",
+        "SRC-WHO-EMRO-EGYPT-CONTACTS"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS",
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الأدلة لا تضمن استجابة شخص أو خدمة، والموارد المحلية تتغير ولم تُعتمد قائمة نشر نهائية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-HELP-002",
+          "counterevidence": "Other broader reviews find improvements for some help-seeking outcomes in other populations or intervention combinations.",
+          "limitations": "Few studies inconsistent outcome measures and no cost-effectiveness evidence.",
+          "egyptian_applicability": "NOT_DIRECTLY_APPLICABLE_TO_ADULT_CORE_TRACK_BUT_IMPORTANT_FOR_FUTURE_STUDENT_TRACKS"
+        },
+        {
+          "claimId": "CLM-EGYPT-002",
+          "counterevidence": "Literacy factors were not uniformly associated with professional help-seeking, and personal, religious, and informal routes remained relevant.",
+          "limitations": "Convenience and online sampling, self-report, cross-sectional designs, and student-only populations limit inference.",
+          "egyptian_applicability": "DIRECT_FOR_STUDENT_CONTEXT_PARTIAL_FOR_CORE_ADULT_TRACK"
+        },
+        {
+          "claimId": "CLM-SAFETY-001",
+          "counterevidence": "Direct confirmation from each service owner may validate or invalidate individual entries.",
+          "limitations": "The directory page does not itself prove that every number and operating time is currently active.",
+          "egyptian_applicability": "DIRECT_OPERATIONAL_RELEVANCE_BUT_BLOCKED_PENDING_FRESHNESS_CONFIRMATION"
+        }
+      ]
+    },
+    {
+      "day": 89,
+      "dayId": "DAY-TRACK-HUMAN-001-089",
+      "claimIds": [
+        "CLM-PURPOSE-001",
+        "CLM-EGYPT-SPIRITUALITY-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MANCO-2021-MEANING",
+        "SRC-IBRAHIM-2022-EGYPT-RECOVERY",
+        "SRC-OKASHA-2021-EGYPT-TRADITIONAL-HEALERS"
+      ],
+      "additionalSourceIds": [
+        "SRC-ELKHATIB-2023-ARAB-HELPSEEKING",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "المصادر لا تمثل كل المعتقدات والمناطق ولا تثبت سببية المعنى أو ملاءمة وسيط روحي أو مهني بعينه.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PURPOSE-001",
+          "counterevidence": "A person may hold multiple changing sources of meaning, and uncertainty about purpose is not pathology.",
+          "limitations": "Effects were much larger against passive than active controls and constructs and interventions varied.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_SECULAR_FAMILY_CLASS_GENDER_AND_LIFE_STAGE_PLURALISM"
+        },
+        {
+          "claimId": "CLM-EGYPT-SPIRITUALITY-HELP-001",
+          "counterevidence": "Spirituality was meaningful in some recovery accounts, while some religious illness interpretations accompanied delayed specialist contact in a narrow sample; neither pattern applies universally.",
+          "limitations": "The Egyptian qualitative sample was small, the clinical survey was diagnosis-specific, and Arab evidence is heterogeneous.",
+          "egyptian_applicability": "DIRECT_START_REQUIRES_DIVERSE_USER_CLERGY_CLINICIAN_AND_SOCIAL_RESEARCH_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 90,
+      "dayId": "DAY-TRACK-HUMAN-001-090",
+      "claimIds": [
+        "CLM-LEARNING-001",
+        "CLM-FAILURE-LEARNING-001",
+        "CLM-SAFETY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-KEITH-2008-ERROR-MANAGEMENT",
+        "SRC-WHO-EMRO-EGYPT-CONTACTS"
+      ],
+      "additionalSourceIds": [
+        "SRC-XU-2026-HELPSEEKING-UPDATE",
+        "SRC-FERREIRA-2021-RESILIENCE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لم تُختبر الشجرة أو ترجمتها السلوكية، ولا تتحقق لحظيًا من الخطر أو الخدمات أو ملاءمة المسار لشخص بعينه.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-LEARNING-001",
+          "counterevidence": "Bias-adjusted transfer estimates can shrink substantially when favorable moderators are absent, and recalled knowledge may still fail to change behavior.",
+          "limitations": "Effects depend on timing, task design, feedback, initial success, and transfer target; the studies do not validate Motazen's final sequence or Arabic delivery.",
+          "egyptian_applicability": "REQUIRES_ARABIC_ADULT_COMPREHENSION_RETENTION_AND_APPLICATION_TESTING"
+        },
+        {
+          "claimId": "CLM-FAILURE-LEARNING-001",
+          "counterevidence": "Higher-quality growth-mindset intervention evidence showed no reliable academic achievement effect, and forced positive reframing may invalidate harm or delay support.",
+          "limitations": "Training tasks do not represent high-stakes failure, abuse, grief, moral injury, poverty, discrimination, or consequences without a retry.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_EDUCATION_WORK_CLINICAL_TRAUMA_AND_USER_REVIEW"
+        },
+        {
+          "claimId": "CLM-SAFETY-001",
+          "counterevidence": "Direct confirmation from each service owner may validate or invalidate individual entries.",
+          "limitations": "The directory page does not itself prove that every number and operating time is currently active.",
+          "egyptian_applicability": "DIRECT_OPERATIONAL_RELEVANCE_BUT_BLOCKED_PENDING_FRESHNESS_CONFIRMATION"
+        }
+      ]
+    },
+    {
+      "day": 91,
+      "dayId": "DAY-TRACK-HUMAN-001-091",
+      "claimIds": [
+        "CLM-MEASURE-001",
+        "CLM-COMPREHENSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WEI-2015-MHL-MEASURES",
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-GASS-2021-SELF-MONITORING"
+      ],
+      "additionalSourceIds": [
+        "SRC-AGARWAL-2021-RETRIEVAL-CLASSROOM",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا توجد مجموعة مقارنة أو مقاييس عربية مصرية مصدقة لهذا المسار، والملاحظات الذاتية عرضة للذاكرة والتحيز.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MEASURE-001",
+          "counterevidence": "Newer validated tools may exist and must be identified in an updated Arabic and international review.",
+          "limitations": "The review excluded non-English and grey literature and is now old enough to require an updated measurement search.",
+          "egyptian_applicability": "DOES_NOT_VALIDATE_ANY_TOOL_FOR_EGYPT"
+        },
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        }
+      ]
+    },
+    {
+      "day": 92,
+      "dayId": "DAY-TRACK-HUMAN-001-092",
+      "claimIds": [
+        "CLM-MONITORING-001",
+        "CLM-MHL-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-BRAGG-2016-WEB-MHL",
+        "SRC-XU-2018-HELPSEEKING"
+      ],
+      "additionalSourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد صلاحية سريرية لمكتبة الأنماط أو اختبار مصري لهذا القالب، والاستنتاجات مبنية على ملاحظات ذاتية قصيرة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        },
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        }
+      ]
+    },
+    {
+      "day": 93,
+      "dayId": "DAY-TRACK-HUMAN-001-093",
+      "claimIds": [
+        "CLM-EMOTION-001",
+        "CLM-HABIT-001",
+        "CLM-RELATIONSHIP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-HU-2014-EMOTION-REGULATION",
+        "SRC-SINGH-2024-HABIT-FORMATION",
+        "SRC-OMURA-2017-ASSERTIVENESS"
+      ],
+      "additionalSourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-HOEFEL-2020-DECISION-NEEDS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "الدليل غير مصمم لتحديد أفضل مهارة لفرد مصري، والملاحظات الشخصية قصيرة وغير سببية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-EMOTION-001",
+          "counterevidence": "A strategy associated with poorer outcomes in one context may be neutral or socially functional in another.",
+          "limitations": "Associations do not prove that assigning a strategy causes improvement, and broad cultural categories do not establish Egyptian applicability.",
+          "egyptian_applicability": "REQUIRES_DIRECT_EGYPTIAN_AND_ARAB_CULTURAL_RESEARCH"
+        },
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 94,
+      "dayId": "DAY-TRACK-HUMAN-001-094",
+      "claimIds": [
+        "CLM-TIME-001",
+        "CLM-ENGAGEMENT-001",
+        "CLM-ACTIVITY-001"
+      ],
+      "primarySourceIds": [
+        "SRC-AEON-2021-TIME-MANAGEMENT",
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION",
+        "SRC-WHO-2020-PHYSICAL-ACTIVITY"
+      ],
+      "additionalSourceIds": [
+        "SRC-BES-2023-ORGANIZATIONAL-BURNOUT",
+        "SRC-TANDON-2026-CULTURAL-DIGITAL-ENGAGEMENT"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا تلتقط المصادر الجداول المصرية والعمل غير الرسمي والرعاية والوصول الصحي، ولا تسمح بوصفة حركة فردية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-TIME-001",
+          "counterevidence": "Productivity-focused time framing can increase pressure and inequality; some constraints require resources or collective change rather than a better planner.",
+          "limitations": "Most studies were cross-sectional, intervention content was opaque, and privilege confounds access to time-management practices.",
+          "egyptian_applicability": "REQUIRES_TIME_USE_CARE_WORK_INFORMAL_WORK_AND_TRANSPORT_TESTING"
+        },
+        {
+          "claimId": "CLM-ENGAGEMENT-001",
+          "counterevidence": "Reminder and compensation associations in trials do not justify shame, loss aversion, compulsive streaks, or assuming more engagement causes better outcomes.",
+          "limitations": "Motazen is educational rather than treatment, definitions vary, and associations between adaptation depth and retention do not prove causation.",
+          "egyptian_applicability": "REQUIRES_PARTICIPATORY_EGYPTIAN_TESTING_AND_DROPOUT_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-ACTIVITY-001",
+          "counterevidence": "A standardized dose or activity can be inaccessible or unsafe for some users.",
+          "limitations": "Motazen cannot assess contraindications, disability needs, pregnancy, chronic disease, pain, or individual exercise risk.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ACCESS_HEAT_SAFETY_GENDER_AND_ENVIRONMENT_CONSIDERATIONS"
+        }
+      ]
+    },
+    {
+      "day": 95,
+      "dayId": "DAY-TRACK-HUMAN-001-095",
+      "claimIds": [
+        "CLM-MONITORING-001",
+        "CLM-MHL-001",
+        "CLM-HELP-001"
+      ],
+      "primarySourceIds": [
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-BRAGG-2016-WEB-MHL",
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "additionalSourceIds": [
+        "SRC-BAKLOLA-2023-EGYPT-BARRIERS",
+        "SRC-WHO-EMRO-EGYPT-CONTACTS"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد صلاحية حساسية أو نوعية لهذه الإشارات، ولا تحقق لحظي من الخطر أو الخدمات المحلية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        },
+        {
+          "claimId": "CLM-MHL-001",
+          "counterevidence": "School-based review evidence did not show strong improvement in help-seeking outcomes and some adult reviews report unclear behavior transfer.",
+          "limitations": "Interventions outcomes and populations varied and actual help-seeking was less consistent than knowledge attitudes or intentions.",
+          "egyptian_applicability": "UNKNOWN_REQUIRES_DIRECT_EGYPTIAN_OR_ARABIC_EVIDENCE"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        }
+      ]
+    },
+    {
+      "day": 96,
+      "dayId": "DAY-TRACK-HUMAN-001-096",
+      "claimIds": [
+        "CLM-ENGAGEMENT-001",
+        "CLM-SELF-COMPASSION-001"
+      ],
+      "primarySourceIds": [
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION",
+        "SRC-TANDON-2026-CULTURAL-DIGITAL-ENGAGEMENT",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "additionalSourceIds": [
+        "SRC-SINGH-2024-HABIT-FORMATION",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "LIMITED",
+      "calibratedLimitationAr": "لا توجد تجربة لسياسة العودة أو بيانات مصرية كافية عن الانقطاع والأسباب والآثار السلبية.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-ENGAGEMENT-001",
+          "counterevidence": "Reminder and compensation associations in trials do not justify shame, loss aversion, compulsive streaks, or assuming more engagement causes better outcomes.",
+          "limitations": "Motazen is educational rather than treatment, definitions vary, and associations between adaptation depth and retention do not prove causation.",
+          "egyptian_applicability": "REQUIRES_PARTICIPATORY_EGYPTIAN_TESTING_AND_DROPOUT_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-SELF-COMPASSION-001",
+          "counterevidence": "Some apparent improvement may reflect attention, expectancy, comparison choice, or study bias.",
+          "limitations": "Intervention evidence cannot be assigned to a single micro-exercise; active-control and follow-up results were less convincing.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNVALIDATED_REQUIRES_ACCEPTABILITY_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 97,
+      "dayId": "DAY-TRACK-HUMAN-001-097",
+      "claimIds": [
+        "CLM-AI-001",
+        "CLM-MONITORING-001"
+      ],
+      "primarySourceIds": [
+        "SRC-WHO-2024-GENAI-HEALTH",
+        "SRC-GASS-2021-SELF-MONITORING",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "additionalSourceIds": [
+        "SRC-WHO-2014-IPV-HANDBOOK",
+        "SRC-LUDOLPH-2018-DEBIASING"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا تمثل المصادر قانونًا مصريًا محدثًا أو بنية تقنية منفذة، ولا يمكن ضمان الحذف أو منع إعادة التعريف دون تدقيق النظام.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-AI-001",
+          "counterevidence": "Potential access and education benefits exist, but require defined use, evaluation, human accountability, and privacy safeguards.",
+          "limitations": "The guidance does not rate a particular model or guarantee that disclosure, warnings, or filters eliminate risk.",
+          "egyptian_applicability": "DIRECT_PRODUCT_GOVERNANCE_RELEVANCE_REQUIRES_LOCAL_PRIVACY_AND_LANGUAGE_TESTING"
+        },
+        {
+          "claimId": "CLM-MONITORING-001",
+          "counterevidence": "Some methods and populations benefited, so a blanket harm claim would also be unsupported.",
+          "limitations": "Reported percentages must not be generalized from substance use to all tracking.",
+          "egyptian_applicability": "SAFETY_DESIGN_PRINCIPLE_REQUIRES_USER_TESTING"
+        }
+      ]
+    },
+    {
+      "day": 98,
+      "dayId": "DAY-TRACK-HUMAN-001-098",
+      "claimIds": [
+        "CLM-RELATIONSHIP-001",
+        "CLM-RELATIONSHIP-SAFETY-001",
+        "CLM-FORGIVENESS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-BLANCHARD-2009-COUPLE-COMMUNICATION",
+        "SRC-KARANTZAS-2023-RELATIONSHIP-AGGRESSION",
+        "SRC-WHO-2014-IPV-HANDBOOK"
+      ],
+      "additionalSourceIds": [
+        "SRC-AKHTAR-2018-FORGIVENESS",
+        "SRC-OMURA-2017-ASSERTIVENESS"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا يقيّم الدليل علاقة حقيقية أو ثقافة وقانون وسلطة مصرية بعينها، ولا يضمن أمان وسيط أو استجابة.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-RELATIONSHIP-001",
+          "counterevidence": "A direct or assertive script may carry social, employment, family, or safety costs in unequal-power contexts.",
+          "limitations": "Effects vary by measure, follow-up, distress, setting, and hierarchy; sustained real-world behavior evidence is limited.",
+          "egyptian_applicability": "REQUIRES_LOCAL_ROLE_POWER_GENDER_AND_FAMILY_NORM_TESTING"
+        },
+        {
+          "claimId": "CLM-RELATIONSHIP-SAFETY-001",
+          "counterevidence": "The randomized relationship-education estimate for aggression was not significant, despite larger pre-post associations.",
+          "limitations": "Motazen cannot privately assess violence or safely individualize a plan; device monitoring and disclosure can create risk.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_SURVIVOR_EXPERT_REVIEW_AND_CURRENT_REFERRALS"
+        },
+        {
+          "claimId": "CLM-FORGIVENESS-001",
+          "counterevidence": "No wellbeing estimate establishes that contact with the person who caused harm is safe or beneficial.",
+          "limitations": "Interventions are structured processes, not pressure to forgive; safety, justice, distance, and non-reconciliation remain valid choices.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_CULTURAL_GENDER_AND_SURVIVOR_REVIEW"
+        }
+      ]
+    },
+    {
+      "day": 99,
+      "dayId": "DAY-TRACK-HUMAN-001-099",
+      "claimIds": [
+        "CLM-PURPOSE-001",
+        "CLM-HABIT-001",
+        "CLM-MEASURE-001"
+      ],
+      "primarySourceIds": [
+        "SRC-MANCO-2021-MEANING",
+        "SRC-SINGH-2024-HABIT-FORMATION",
+        "SRC-WEI-2015-MHL-MEASURES"
+      ],
+      "additionalSourceIds": [
+        "SRC-LINARDON-2019-DIGITAL-ATTRITION",
+        "SRC-HAN-2023-SELF-COMPASSION"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا توجد متابعة طولية لموتزن أو معيار صالح لاختيار الأهداف والمدة والجرعة في السياق المصري.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-PURPOSE-001",
+          "counterevidence": "A person may hold multiple changing sources of meaning, and uncertainty about purpose is not pathology.",
+          "limitations": "Effects were much larger against passive than active controls and constructs and interventions varied.",
+          "egyptian_applicability": "REQUIRES_RELIGIOUS_SECULAR_FAMILY_CLASS_GENDER_AND_LIFE_STAGE_PLURALISM"
+        },
+        {
+          "claimId": "CLM-HABIT-001",
+          "counterevidence": "Some changes can be faster, but that does not support a universal fixed-day promise.",
+          "limitations": "Most studies had high risk of bias and used self-reported automaticity.",
+          "egyptian_applicability": "GENERAL_EXPECTATION_RULE_ONLY_NOT_AN_EGYPTIAN_EFFECT_ESTIMATE"
+        },
+        {
+          "claimId": "CLM-MEASURE-001",
+          "counterevidence": "Newer validated tools may exist and must be identified in an updated Arabic and international review.",
+          "limitations": "The review excluded non-English and grey literature and is now old enough to require an updated measurement search.",
+          "egyptian_applicability": "DOES_NOT_VALIDATE_ANY_TOOL_FOR_EGYPT"
+        }
+      ]
+    },
+    {
+      "day": 100,
+      "dayId": "DAY-TRACK-HUMAN-001-100",
+      "claimIds": [
+        "CLM-COMPREHENSION-001",
+        "CLM-MEASURE-001",
+        "CLM-HELP-001",
+        "CLM-ETHICS-001"
+      ],
+      "primarySourceIds": [
+        "SRC-TALEVSKI-2020-TEACHBACK",
+        "SRC-WEI-2015-MHL-MEASURES",
+        "SRC-XU-2026-HELPSEEKING-UPDATE"
+      ],
+      "additionalSourceIds": [
+        "SRC-WATTS-2017-ETHICS-INSTRUCTION",
+        "SRC-W3C-2021-COGNITIVE-USABLE"
+      ],
+      "evidenceRating": "MIXED",
+      "calibratedLimitationAr": "لا توجد تجربة فاعلية أو متابعة أو مراجعة مهنية خارجية أو اختبار مستخدمين مصريين مكتمل؛ النشر يظل محجوزًا.",
+      "counterevidence": [
+        {
+          "claimId": "CLM-COMPREHENSION-001",
+          "counterevidence": "Poorly phrased recall checks may feel like tests, increase shame, or measure memory rather than understanding.",
+          "limitations": "A static comprehension question cannot observe tone, correct a misconception reliably, or replace a trained human conversation.",
+          "egyptian_applicability": "REQUIRES_LOW_LITERACY_ARABIC_CO_DESIGN_AND_COGNITIVE_INTERVIEWS"
+        },
+        {
+          "claimId": "CLM-MEASURE-001",
+          "counterevidence": "Newer validated tools may exist and must be identified in an updated Arabic and international review.",
+          "limitations": "The review excluded non-English and grey literature and is now old enough to require an updated measurement search.",
+          "egyptian_applicability": "DOES_NOT_VALIDATE_ANY_TOOL_FOR_EGYPT"
+        },
+        {
+          "claimId": "CLM-HELP-001",
+          "counterevidence": "Effects were not uniform for general-public or youth settings and informal help seeking did not consistently improve.",
+          "limitations": "Formal informal and self-help outcomes cannot be combined and intention is not equivalent to behavior.",
+          "egyptian_applicability": "PLAUSIBLE_BUT_UNTESTED_FOR_MOTAZEN_AND_REQUIRES_LOCAL_BARRIERS_RESEARCH"
+        },
+        {
+          "claimId": "CLM-ETHICS-001",
+          "counterevidence": "Effects vary by field, design, criterion, and practice; moral judgment and perception outcomes can be weaker than knowledge or narrow decision outcomes.",
+          "limitations": "Training outcomes often measure knowledge, judgments, or task decisions rather than durable behavior under real power and incentives.",
+          "egyptian_applicability": "REQUIRES_EGYPTIAN_ETHICS_LEGAL_RELIGIOUS_SOCIAL_AND_USER_REVIEW_WITHOUT_IDEOLOGICAL_SIGNOFF"
+        }
+      ]
+    }
+  ]
+}

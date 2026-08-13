@@ -10,7 +10,7 @@
 | أسس | contested | 11 | bz1-mental-health-as-primary-good bz1-wellbeing-definition-value-laden bz2-serotonin-role-contested bz2-solved-or-open bz3-true-magnitude-contested bz4-actuarial-vs-clinical bz4-dunning-kruger bz5-crisis-overstated bz6-definition-of-disorder-unsettled bz6-overmedicalizing-grief-contested bz7-are-current-categories-valid |
 | أسس | debunked | 1 | bz2-serotonin-simple-story-debunked |
 | أسس | unknown | 7 | bz1-no-single-agreed-definition bz2-hard-problem-unknown bz3-what-we-dont-know bz4-what-we-dont-know bz5-what-we-dont-know bz6-no-biological-line-unknown bz7-no-settled-definition-of-disorder |
-| انتباه | established | 5 | adhd-arab-egypt-context adhd-established-help adhd-normal-vs-disorder adhd-real-valid adhd-recognition-features |
+| انتباه | established | 8 | adhd-adult-validity-comorbidities adhd-arab-egypt-context adhd-established-help adhd-executive-function-model adhd-normal-vs-disorder adhd-real-valid adhd-recognition-features adult-adhd |
 | انتباه | contested | 1 | adhd-over-under-diagnosis |
 | انتباه | debunked | 1 | adhd-myths-sugar-parenting-screens |
 | انتباه | unknown | 1 | adhd-causes-unknown |
@@ -22,11 +22,11 @@
 | خريطة | contested | 1 | p0-bps-contested |
 | خريطة | debunked | 0 |  |
 | خريطة | unknown | 1 | p0-map-unknown |
-| ذهان | established | 4 | psy-continuum psy-early-treatment psy-recovery-real psy-treatment-recommended |
-| ذهان | contested | 1 | psy-maintenance-contested |
+| ذهان | established | 6 | psy-continuum psy-early-treatment psy-recovery-real psy-treatment-recommended psychosis-cannabis-risk psychosis-recovery |
+| ذهان | contested | 2 | psy-maintenance-contested psychosis-continuum-model |
 | ذهان | debunked | 2 | psy-not-split-personality psy-violence-myth |
 | ذهان | unknown | 1 | psy-longterm-unknown |
-| سلوك | established | 1 | eating-disorders |
+| سلوك | established | 2 | addiction-is-illness eating-disorders |
 | سلوك | contested | 0 |  |
 | سلوك | debunked | 0 |  |
 | سلوك | unknown | 0 |  |
@@ -34,7 +34,7 @@
 | صدمة | contested | 1 | trauma-emdr-contested |
 | صدمة | debunked | 1 | trauma-debriefing-debunked |
 | صدمة | unknown | 1 | trauma-displaced-unknown |
-| ضغط | established | 1 | burnout-is-real |
+| ضغط | established | 2 | burnout-is-real loneliness-health |
 | ضغط | contested | 0 |  |
 | ضغط | debunked | 0 |  |
 | ضغط | unknown | 0 |  |
@@ -46,7 +46,7 @@
 | قلق | contested | 1 | anx-how-strong-contested |
 | قلق | debunked | 1 | anx-cbd-cannabis-hype |
 | قلق | unknown | 1 | anx-why-unknown |
-| مزاج | established | 13 | bipolar-basics grief-vs-depression mood-antidepressants mood-behavioural-activation mood-burden mood-can-be-serious mood-comorbid-anxiety mood-help-exists mood-psychotherapy-works mood-recurrence mood-regional mood-vs-ordinary-sadness mood-what-is |
+| مزاج | established | 15 | bipolar-basics grief-vs-depression mood-antidepressants mood-behavioural-activation mood-burden mood-can-be-serious mood-comorbid-anxiety mood-help-exists mood-psychotherapy-works mood-recurrence mood-regional mood-vs-ordinary-sadness mood-what-is postpartum-depression seasonal-affective |
 | مزاج | contested | 1 | mood-efficacy-contested |
 | مزاج | debunked | 1 | mood-not-weakness |
 | مزاج | unknown | 1 | mood-longterm-unknown |
@@ -59,9 +59,3 @@
 
 | id | status |
 |---|---|
-| postpartum-depression | pending_clinician_review |
-| addiction-is-illness | grounded |
-| seasonal-affective | verified |
-| psychosis-recovery | grounded |
-| adult-adhd | needs_review |
-| loneliness-health | needs_review |

@@ -1,0 +1,47 @@
+{
+  "schemaVersion":"1.0.0","status":"FOUNDATION_COMPLETE_RESEARCH_PENDING","professionalReview":"PENDING",
+  "recordSchema":["id","domain","nameAr","definitionAr","notThisAr","prerequisites","capabilityIds","safetyBoundaryAr"],
+  "skills":[
+    {"id":"SKILL-OBSERVE","domain":"core-skill","nameAr":"ملاحظة بلا حكم","definitionAr":"وصف واقعة وإشارة وسياق دون تحويلها إلى هوية.","notThisAr":"ليست تشخيصًا أو مراقبة مستمرة.","prerequisites":[],"capabilityIds":["CAP-001"],"safetyBoundaryAr":"توقف إذا زاد الرصد القهري أو الخطر."},
+    {"id":"SKILL-PAUSE","domain":"core-skill","nameAr":"وقفة قابلة للتوقف","definitionAr":"تأخير قصير يفتح اختيارًا حين يكون التأخير آمنًا.","notThisAr":"ليست تجاهلًا لخطر أو طارئ.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-003"],"safetyBoundaryAr":"لا تؤخر مساعدة عاجلة."},
+    {"id":"SKILL-DECIDE","domain":"core-skill","nameAr":"قرار سياقي","definitionAr":"مقارنة خيارات وقيود ومتأثرين ومجهول مع قابلية الرجوع.","notThisAr":"ليس ضمان نتيجة.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-010"],"safetyBoundaryAr":"القرارات العالية تحتاج خبيرًا مناسبًا."},
+    {"id":"SKILL-RETRIEVE","domain":"education","nameAr":"استرجاع وتصحيح","definitionAr":"محاولة من الذاكرة ثم تحقق وتصحيح.","notThisAr":"ليس اختبار ذكاء.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-039"],"safetyBoundaryAr":"لا تعتمد على الذاكرة في قرار طبي أو قانوني."},
+    {"id":"SKILL-ASK-HELP","domain":"support","nameAr":"طلب مساعدة","definitionAr":"وصف مشكلة وأثر وطلب وقناة وبديل.","notThisAr":"ليس اعتراف فشل أو تشخيصًا.","prerequisites":[],"capabilityIds":["CAP-036"],"safetyBoundaryAr":"الخطر يحتاج مساعدة عاجلة لا نصًا مثاليًا."}
+  ],
+  "emotionalLiteracy":[
+    {"id":"EMO-SIGNAL","domain":"emotion","nameAr":"الانفعال إشارة","definitionAr":"معلومة عن معنى أو احتياج محتمل لا أمرًا بالسلوك.","notThisAr":"ليس حقيقة كاملة أو تشخيصًا.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-002"],"safetyBoundaryAr":"الأعراض الشديدة أو المستمرة تحتاج تقييمًا."},
+    {"id":"EMO-NAME","domain":"emotion","nameAr":"تسمية تقريبية","definitionAr":"اختيار كلمة أو درجة تقريبية مع السماح بعدم المعرفة.","notThisAr":"ليست اختبار دقة أو هوية.","prerequisites":["EMO-SIGNAL"],"capabilityIds":["CAP-002"],"safetyBoundaryAr":"لا تفرض تسمية على آخر."},
+    {"id":"EMO-REGULATE","domain":"emotion","nameAr":"تنظيم لا محو","definitionAr":"تغيير الاستثارة أو الفعل مع بقاء الانفعال مشروعًا.","notThisAr":"ليس تهدئة إجبارية.","prerequisites":["EMO-NAME"],"capabilityIds":["CAP-003"],"safetyBoundaryAr":"لا تستخدمه للبقاء في خطر."}
+  ],
+  "communication":[
+    {"id":"COM-LISTEN","domain":"communication","nameAr":"استماع بحدود","definitionAr":"فهم ما يقوله الآخر قبل الحل دون وعد موافقة.","notThisAr":"ليس تحمل إساءة.","prerequisites":["SKILL-PAUSE"],"capabilityIds":["CAP-023"],"safetyBoundaryAr":"توقف عند تهديد أو إساءة."},
+    {"id":"COM-REQUEST","domain":"communication","nameAr":"طلب قابل للرفض","definitionAr":"وصف وطلب محدد يترك حق الرفض.","notThisAr":"ليس أمرًا مخفيًا.","prerequisites":["COM-LISTEN"],"capabilityIds":["CAP-024"],"safetyBoundaryAr":"افحص فرق السلطة."},
+    {"id":"COM-REFUSE","domain":"communication","nameAr":"رفض يحكم فعلي","definitionAr":"تحديد ما سأفعله أو لا أفعله دون سيطرة على الآخر.","notThisAr":"ليس عقابًا.","prerequisites":["COM-REQUEST"],"capabilityIds":["CAP-025"],"safetyBoundaryAr":"عدم المواجهة كامل عند الانتقام."},
+    {"id":"COM-REPAIR","domain":"communication","nameAr":"اعتذار وإصلاح","definitionAr":"مسؤولية محددة وتغيير وإصلاح بلا طلب مسامحة.","notThisAr":"ليس محو أثر.","prerequisites":["COM-REQUEST"],"capabilityIds":["CAP-027"],"safetyBoundaryAr":"لا يطلب اتصالًا أو ثقة."}
+  ],
+  "relationships":[
+    {"id":"REL-SAFETY","domain":"relationship","nameAr":"بوابة الأمان","definitionAr":"فحص عنف وسيطرة وانتقام قبل التواصل.","notThisAr":"ليست أداة تنبؤ فردية.","prerequisites":[],"capabilityIds":["CAP-026"],"safetyBoundaryAr":"الخطر يوقف الحوار."},
+    {"id":"REL-BOUNDARY","domain":"relationship","nameAr":"حد علاقة","definitionAr":"حماية فعل ووقت وقناة وموضوع.","notThisAr":"ليس تحكمًا أو صمتًا عقابيًا.","prerequisites":["REL-SAFETY","COM-REFUSE"],"capabilityIds":["CAP-025"],"safetyBoundaryAr":"راعِ السلطة والسكن والدخل."},
+    {"id":"REL-TRUST","domain":"relationship","nameAr":"ثقة تدريجية","definitionAr":"توقع يتغير بسلوك متكرر وحق المتضرر.","notThisAr":"ليست واجبًا بعد اعتذار.","prerequisites":["REL-SAFETY"],"capabilityIds":["CAP-028"],"safetyBoundaryAr":"المسامحة والاتصال منفصلان."}
+  ],
+  "family":[
+    {"id":"FAM-ROLE","domain":"family","nameAr":"توقعات الدور","definitionAr":"تمييز مسؤولية متفق عليها من توقع غير معلن.","notThisAr":"ليست شرعنة سلطة الأسرة.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-031"],"safetyBoundaryAr":"السكن والمال قد يحدان الرفض."},
+    {"id":"FAM-CARE","domain":"family","nameAr":"توزيع الرعاية","definitionAr":"إظهار العمل المدفوع وغير المدفوع والقدرة والدعم.","notThisAr":"ليس تقسيمًا حسابيًا ثابتًا.","prerequisites":["FAM-ROLE"],"capabilityIds":["CAP-031"],"safetyBoundaryAr":"حماية الأطفال والمعرضين أولًا."},
+    {"id":"FAM-MEDIATION","domain":"family","nameAr":"وسيط مختار","definitionAr":"طرف مناسب يوافق عليه المتأثرون وله حدود واضحة.","notThisAr":"ليس قريبًا مفروضًا أو وساطة عنف عامة.","prerequisites":["REL-SAFETY"],"capabilityIds":["CAP-036"],"safetyBoundaryAr":"لا وساطة غير متخصصة مع عنف."}
+  ],
+  "parenting":[
+    {"id":"PAR-DEVELOPMENT","domain":"parenting","nameAr":"توقع نمائي","definitionAr":"توقع يراعي عمرًا وقدرة وفروقًا فردية دون تشخيص.","notThisAr":"ليس معيار طفل مثالي.","prerequisites":[],"capabilityIds":["CAP-031"],"safetyBoundaryAr":"القلق النمائي يحتاج مختصًا."},
+    {"id":"PAR-COREGULATE","domain":"parenting","nameAr":"تنظيم مشترك","definitionAr":"بالغ يقلل الحمل ويساعد الطفل على تسمية واختيار مناسب.","notThisAr":"ليس إجبار هدوء أو تجاهل حاجة.","prerequisites":["EMO-SIGNAL"],"capabilityIds":["CAP-003"],"safetyBoundaryAr":"لا يحل محل حماية أو رعاية صحية."},
+    {"id":"PAR-REPAIR","domain":"parenting","nameAr":"إصلاح مع طفل","definitionAr":"اعتراف بالغ بالأثر وتغيير دون تحميل الطفل طمأنته.","notThisAr":"ليس تبريرًا بالضغط.","prerequisites":["COM-REPAIR"],"capabilityIds":["CAP-027"],"safetyBoundaryAr":"الأذى يحتاج حماية ومساءلة."}
+  ],
+  "education":[
+    {"id":"EDU-RETRIEVAL","domain":"education","nameAr":"استرجاع موزع","definitionAr":"عودة بفاصل مع تحقق وتصحيح.","notThisAr":"ليس جدولًا مثاليًا.","prerequisites":["SKILL-RETRIEVE"],"capabilityIds":["CAP-039"],"safetyBoundaryAr":"عدّل للقدرة والوصول."},
+    {"id":"EDU-COMPREHEND","domain":"education","nameAr":"شرح ونقل","definitionAr":"شرح بحد ومثال جديد ومثال مضاد.","notThisAr":"ليس تكرار تعريف.","prerequisites":["EDU-RETRIEVAL"],"capabilityIds":["CAP-039"],"safetyBoundaryAr":"لا يجعل الفصاحة مقياس ذكاء."},
+    {"id":"EDU-FEEDBACK","domain":"education","nameAr":"تغذية راجعة على مهمة","definitionAr":"معلومة محددة قابلة للفعل عن مخرج.","notThisAr":"ليست حكم هوية.","prerequisites":["COM-REQUEST"],"capabilityIds":["CAP-039"],"safetyBoundaryAr":"راعِ سلطة التقييم."}
+  ],
+  "workplace":[
+    {"id":"WORK-CLARITY","domain":"workplace","nameAr":"وضوح النتيجة والأولوية","definitionAr":"سؤال يحدد مخرجًا أو موعدًا أو ما سيتأجل.","notThisAr":"ليس تحديًا للسلطة.","prerequisites":["COM-REQUEST"],"capabilityIds":["CAP-040"],"safetyBoundaryAr":"افحص الانتقام والقناة."},
+    {"id":"WORK-LOAD","domain":"workplace","nameAr":"خريطة حمل وموارد","definitionAr":"إظهار المطالب والوقت والدعم والتصميم التنظيمي.","notThisAr":"ليست نصيحة صمود فردي.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-040"],"safetyBoundaryAr":"التحرش والخطر لمسار دعم."},
+    {"id":"WORK-IDENTITY","domain":"workplace","nameAr":"العمل دور","definitionAr":"فصل نتيجة المهمة والدخل عن كرامة الشخص.","notThisAr":"ليس إنكارًا لأهمية الرزق.","prerequisites":["SKILL-OBSERVE"],"capabilityIds":["CAP-040"],"safetyBoundaryAr":"لا تنصح بترك العمل بلا عواقب."}
+  ]
+}

@@ -1,5 +1,37 @@
 /* hoqoqi · Egyptian Awareness Library. ONE LAW: every step grounded in window.SOURCES. Auto-generated. */
 window.SOURCES = {
+  "web:egypt-constitution-equality": {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "label": "الدستور المصري 2014 — المادة 53 والمادة 92 (المساواة وحماية الحقوق والحريات من الانتقاص)",
+    "tag": "الدستور",
+    "sha256": "4232769e07",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "web:egypt-property-housing": {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "label": "الدستور المصري 2014 — المادة 58 والمادة 35 (حرمة المساكن وحماية الملكية)",
+    "tag": "الدستور",
+    "sha256": "5e78627421",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "web:egypt-health-right": {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "label": "الدستور المصري 2014 — المادة 18 وقرار الطوارئ الطبية 1063 لسنة 2014",
+    "tag": "الدستور والقرارات",
+    "sha256": "cbe4614cae",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "web:egypt-elder-rights": {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "label": "الدستور المصري 2014 — المادة 83 (حقوق المسنين والحماية من الاستغلال)",
+    "tag": "الدستور",
+    "sha256": "8f0a0f6160",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
  "ftc:fraud-victim-steps": {
   "url": "https://consumer.ftc.gov/articles/what-do-if-you-were-scammed",
   "label": "FTC Consumer Advice — What To Do if You Were Scammed",
@@ -1525,5 +1557,1542 @@ window.CARDS = [
     "grade": "مصدر"
    }
   ]
- }
+ },
+ {
+  "id": "scenario-h1-arrest-24h",
+  "title": {
+   "ar": "«اتقبض على أخويا — أعمل إيه في أول ٢٤ ساعة؟»",
+   "en": "My brother was arrested — what should I do in the first 24 hours?"
+  },
+  "level": 5,
+  "domain": "حرية وأمان شخصي",
+  "who": [
+   "الأفراد والعائلات",
+   "أي شخص يتعرض أحد أقاربه للاحتجاز"
+  ],
+  "place": [
+   "أقسام الشرطة / أماكن الاحتجاز"
+  ],
+  "my_right": "المادة 54 من الدستور المصري 2014 تكفل: الحرية الشخصية حق طبيعي، ويجب إبلاغ المقبوض عليه بأسباب احتجازه فورًا، وتمكينه من الاتصال بأسرته ومحاميه فورًا، وتقديمه للنيابة العامة خلال 24 ساعة من احتجازه.",
+  "how_to_recover": {
+   "principle": "لا يجوز قبض أو تفتيش أو حبس أو تقييد حرية أحد إلا بأمر قضائي مسبب، ويجب العرض على سلطة التحقيق خلال 24 ساعة.",
+   "procedure": "توجه فورًا لقسم الشرطة لمعرفة سبب الاحتجاز ومكان تواجده، اتصل بمحام مصري، وأرسل تلغرافًا رسميًا لرئيس النيابة العامة والنائب العام لإثبات ساعة القبض وحفظ الميعاد القانوني (24 ساعة)."
+  },
+  "do": [
+   {
+    "t": "اطلب معرفة مكان المقبوض عليه وتاريخ وساعة ضبطه من مأمور الضبط.",
+    "en": "Request the location and exact timestamp of arrest from police officers.",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "أبلغ محامي الأسرة أو اطلب حضور محامٍ قبل بدء أي استجواب أمام النيابة.",
+    "en": "Notify family lawyer or demand lawyer presence before questioning.",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "أرسل تلغرافًا رسميًا من البريد المصري إلى النيابة المختصة لإثبات ساعة احتجازه وحفظ ميعاد الـ 24 ساعة.",
+    "en": "Send an official telegram to the prosecution to prove the 24-hour arrest timestamp.",
+    "src": "web:egypt-arrest-rights"
+   }
+  ],
+  "dont": [
+   {
+    "t": "لا تسكت على تجاوز ميعاد 24 ساعة دون إرسال إثبات كتابي ورسمي بالاحتجاز.",
+    "en": "Do not remain silent if the 24-hour limit passes without official record.",
+    "src": "web:egypt-arrest-rights"
+   },
+   {
+    "t": "لا تجعل المقبوض عليه يوقع أو يدلي بأقوال بدون حضور محاميه.",
+    "en": "Do not allow the detainee to sign statements without lawyer presence.",
+    "src": "web:egypt-arrest-rights"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده فورًا عند احتجاز أو قبض على أحد أقاربك لمعرفة الخطوات القانونية اللازمة في الساعات الأولى."
+  },
+  "note": {
+   "ar": "هذا وعي قانوني عام يستند للدستور المصري 2014 المادة 54، وليس بديلًا عن الاستشارة القانونية المباشرة من محام مقيد بالنظارات."
+  },
+  "basis": {
+   "ar": "مستخرج ومطابق للمادة 54 من الدستور المصري 2014 على Constitute Project."
+  },
+  "quote": "كفل الدستور الحرية الشخصية، وكل من يقبض عليه يجب إبلاغه بأسباب ذلك فوراً، وتمكينه من الاتصال بذويه وبمحاميه، وتقديمه إلى سلطة التحقيق خلال 24 ساعة.",
+  "contacts": [
+   {
+    "label": "النيابة العامة المصرية — مكتب النائب العام (البلاغات والتلغرافات)",
+    "number": "",
+    "say": "أرسل تلغرافًا رسميًا من مكاتب الهيئة القومية للبريد لرئيس النيابة المختص لإثبات ميعاد القبض."
+   },
+   {
+    "label": "المجلس القومي لحقوق الإنسان",
+    "number": "15508",
+    "say": "قدّم شكوى احتجاز أو تجاوز ميعاد العرض القانوني."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-arrest-rights",
+    "grade": "الدستور"
+   }
+  ]
+ },
+ {
+  "id": "scenario-h2-home-search",
+  "title": {
+   "ar": "«البوليس عايز يفتش بيتي — إيه حقوقي والقانون بيقول إيه؟»",
+   "en": "The police want to search my home — what are my rights?"
+  },
+  "level": 5,
+  "domain": "حرمة المساكن والخصوصية",
+  "who": [
+   "جميع المواطنين والسكان"
+  ],
+  "place": [
+   "المنازل والعقارات السكنية"
+  ],
+  "my_right": "المادة 58 من الدستور المصري 2014: للمنازل حرمة، ولا يجوز دخولها، ولا تفتيشها، ولا مراقبتها، إلا بأمر قضائي مسبب يحدد المكان والتوقيت والغرض.",
+  "how_to_recover": {
+   "principle": "تفتيش المنازل ودخولها بدون إذن قضائي مسبب من النيابة المختصة أو حالة تلبس صريحة يُعد باطلاً دستوريًا وقانونيًا.",
+   "procedure": "اطلب الاطلاع على الإذن القضائي المكتوب، تحقق من اسم صاحب المنزل والعنوان والتاريخ والغرض، واطلب حضور محامٍ أو شهود من الجيران لتدوين إجراءات التفتيش."
+  },
+  "do": [
+   {
+    "t": "اطلب الاطلاع على الأمر القضائي المسبب الصادر بدخول المنزل وتفتيشه وقراءة بياناته بدقة.",
+    "en": "Request to view the written judicial search warrant and inspect its scope.",
+    "src": "web:egypt-home-inviolable"
+   },
+   {
+    "t": "اطلب حضور محاميك أو أحد الجيران ليكون شاهدًا على إجراءات التفتيش وما يتم ضبطه.",
+    "en": "Request lawyer or neighbor presence as witness to the search.",
+    "src": "web:egypt-home-inviolable"
+   }
+  ],
+  "dont": [
+   {
+    "t": "لا تقاوم بالقوة ولكن سجل اعتراضك القانوني كتابة إذا لم ينطبق الإذن القضائي على العنوان أو الشخص.",
+    "en": "Do not resist physically, but state legal objection if warrant lacks match.",
+    "src": "web:egypt-home-inviolable"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده عند حضور القوة الأمنية للمنزل للتأكد من الشروط الدستورية للدخول والتفتيش."
+  },
+  "note": {
+   "ar": "مستند للمادة 58 من الدستور المصري 2014. وعي قانوني عام وليس استشارة قانونية."
+  },
+  "basis": {
+   "ar": "المادة 58 من الدستور المصري 2014 (حرمة المنازل)."
+  },
+  "quote": "للمنازل حرمة، وفيما عدا حالات الخطر، أو الاستغاثة، لا يجوز دخولها، ولا تفتيشها، ولا مراقبتها أو التنصت عليها، إلا بأمر قضائي مسبب.",
+  "contacts": [
+   {
+    "label": "النيابة العامة المصرية",
+    "number": "",
+    "say": "البلاغات والشكاوى الخاصة بتجاوزات التفتيش."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-home-inviolable",
+    "grade": "الدستور"
+   }
+  ]
+ },
+ {
+  "id": "scenario-h15-defective-goods",
+  "title": {
+   "ar": "«المحل رفض يرجّع البضاعة المعيبة أو السلعة — حقي إيه والقانون بيقول إيه؟»",
+   "en": "Store refused to return a defective item — what are my consumer rights?"
+  },
+  "level": 3,
+  "domain": "حماية المستهلك والمعاملات",
+  "who": [
+   "جميع المشترين والمستهلكين في مصر"
+  ],
+  "place": [
+   "المحلات والمتاجر والتسوق الإلكتروني"
+  ],
+  "my_right": "قانون حماية المستهلك المصري رقم 181 لسنة 2018: للمستهلك الحق في استبدال السلعة أو إعادتها مع استرداد قيمتها خلال 14 يوماً بدون أسباب، وخلال 30 يوماً إذا شابها عيب أو مخالفة للمواصفات.",
+  "how_to_recover": {
+   "principle": "الالتزام بضمان جودة المنتج ورد الشراء عند وجود عيب صناعة أو عدم مطابقة للمواصفات حق ملزم بنص القانون.",
+   "procedure": "احتفظ بالفاتورة الضريبية، واجه إدارة المحل بنص القانون والميعاد (14 أو 30 يوماً)، وفي حال الرفض قدم شكوى فورية لجهاز حماية المستهلك على الخط الساخن 19588 أو الواتساب الرسمي."
+  },
+  "do": [
+   {
+    "t": "احتفظ بالفاتورة الضريبية والأصل وأي مستند أو ضمان يتصل بالسلعة.",
+    "en": "Keep original tax invoice and warranty documents.",
+    "src": "eg:cpa"
+   },
+   {
+    "t": "تقدم بشكوى لجهاز حماية المستهلك عبر الخط الساخن 19588 أو تطبيق الجهاز الرسمى في حال امتناع التاجر.",
+    "en": "File complaint with Consumer Protection Agency via hotline 19588 if merchant refuses.",
+    "src": "eg:cpa"
+   }
+  ],
+  "dont": [
+   {
+    "t": "لا تتنازل عن حُسن استخدام حماية المستهلك في المواعيد القانونية (14 يومًا بدون سبب، و30 يومًا للعيوب).",
+    "en": "Do not miss the legal deadlines (14 days no-reason, 30 days defective).",
+    "src": "eg:cpa"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده لما تشتري سلعة وتكتشف فيها عيب ويرفض البائع استرجاعها أو استبدالها."
+  },
+  "note": {
+   "ar": "الإجراءات مستندة لقانون حماية المستهلك المصري 181/2018 والموقع الرسمي لجهاز حماية المستهلك (CPA)."
+  },
+  "basis": {
+   "ar": "قانون حماية المستهلك المصري 181 لسنة 2018 وتوجيهات CPA."
+  },
+  "quote": "للمستهلك الحق في استبدال السلعة أو إعادتها مع استرداد قيمتها النقدية دون إبداء أسباب خلال 14 يوماً، وخلال 30 يوماً لو شابها عيب.",
+  "contacts": [
+   {
+    "label": "جهاز حماية المستهلك المصري (الخط الساخن)",
+    "number": "19588",
+    "say": "قدم شكوى امتناع عن استرجاع أو استبدال بضاعة معيبة مع بيانات الفاتورة والمحل."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "eg:cpa",
+    "grade": "CPA"
+   }
+  ]
+ },
+ {
+  "id": "scenario-h23-pdpl-data-leak",
+  "title": {
+   "ar": "«شركة أو صفحة سرّبت بياناتي الشخصية — إيه حقي بالقانون المصري الجديد؟»",
+   "en": "A company leaked my personal data — what are my rights under Egyptian PDPL?"
+  },
+  "level": 4,
+  "domain": "حماية البيانات الشخصية والخصوصية الرقمية",
+  "who": [
+   "جميع المواطنين والمستخدمين"
+  ],
+  "place": [
+   "المنصات الإلكترونية / الشركات / المواقع"
+  ],
+  "my_right": "قانون حماية البيانات الشخصية المصري رقم 151 لسنة 2020: البيانات الشخصية حق مصون للأفراد، ولا يجوز جمعها أو معالجتها أو الإفصاح عنها إلا بموافقة صريحة من الشخص أو في الأحوال المصرح بها قانوناً.",
+  "how_to_recover": {
+   "principle": "حق الأفراد في محو بياناتهم، والاعتراض على معالجتها، والمطالبة بالتعويض عن أي تسريب أو انتهاك لخصوصيتهم الرقمية.",
+   "procedure": "أرسل طلباً كتابياً للجهة المسربة بالامتناع والمحو، وسجل أدلة التسريب، وتقدم بشكوى لمركز حماية البيانات الشخصية ومباحث الإنترنت."
+  },
+  "do": [
+   {
+    "t": "أرسل إخطارًا رسميًا للجهة لحذف بياناتك وسحب موافقتك على المعالجة.",
+    "en": "Send formal notice to the data controller to erase your personal data.",
+    "src": "web:egypt-equality"
+   },
+   {
+    "t": "قدّم بلاغًا رسميًا لمباحث تكنولوجيا المعلومات ومركز حماية البيانات الشخصية عند حدوث تسريب أو تداول غير قانوني.",
+    "en": "Report to cybercrime division and Data Protection Center upon unlawful processing.",
+    "src": "web:egypt-equality"
+   }
+  ],
+  "dont": [
+   {
+    "t": "لا تتجاهل التسريب، وتأكد من تغيير كلمات المرور وتأمين حساباتك المرتبطة بالبيانات المسربة.",
+    "en": "Do not ignore data breaches; secure linked accounts immediately.",
+    "src": "web:egypt-equality"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده عند تسريب بياناتك الشخصية من أي منصة أو شركة تجارية."
+  },
+  "note": {
+   "ar": "مستند للقانون 151 لسنة 2020 لحماية البيانات الشخصية في مصر."
+  },
+  "basis": {
+   "ar": "قانون حماية البيانات الشخصية رقم 151 لسنة 2020."
+  },
+  "quote": "حماية البيانات الشخصية حق دستوري وقانوني، ولا يجوز معالجة البيانات إلا بموافقة الشخص أو نص قانوني.",
+  "contacts": [
+   {
+    "label": "مباحث تكنولوجيا المعلومات",
+    "number": "108",
+    "say": "قدم بلاغ انتهاك خصوصية وتسريب بيانات إلكترونية."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "web:egypt-equality",
+    "grade": "الدستور"
+   }
+  ]
+ },
+{
+  "id": "scenario-h6-school-beating",
+  "title": {
+    "ar": "«المدرسة أو المدرس بيضرب ابني — أعمل إيه قانوناً؟»",
+    "en": "School staff physically punishing child"
+  },
+  "level": 4,
+  "domain": "حقوق الطفل والتعليم",
+  "who": [
+    "أولياء الأمور",
+    "الطلاب"
+  ],
+  "place": [
+    "المدارس",
+    "المؤسسات التعليمية"
+  ],
+  "my_right": "المادة 80 من الدستور المصري وقانون الطفل 12 لسنة 1996: تكفل الدولة حماية الطفل من كافة أشكال العنف والإساءة والمعاملة المهينة، ويحظر العقاب البدني بالمدارس.",
+  "how_to_recover": {
+    "principle": "حظر الضرب والعقاب البدني تماماً في المدارس، وحق الولي في مقاضاة المعتدي جنائياً وتأديبياً.",
+    "procedure": "توجه للمستشفى الحكومي لإصدار تقرير طبي، ثم حرر محضراً بقسم الشرطة وتقدم بشكوى للإدارة التعليمية وخط نجدة الطفل 16000."
+  },
+  "do": [
+    {
+      "t": "استخرج تقريرًا طبيًا فوريًا من مستشفى حكومي يثبت الإصابات والآثار الجسدية.",
+      "en": "Obtain immediate medical report from a public hospital detailing injuries.",
+      "src": "web:egypt-children-protection"
+    },
+    {
+      "t": "قدم شكوى رسمية مسببة لمدير الإدارة التعليمية وسجل رقم القيد.",
+      "en": "Submit formal written complaint to Educational Zone Director with tracking number.",
+      "src": "web:egypt-children-protection"
+    },
+    {
+      "t": "اتصل بخط نجدة الطفل 16000 للإبلاغ الرسمي وحفظ خط الرعاية النفسية والقانونية.",
+      "en": "Call Child Helpline 16000 to register official report.",
+      "src": "web:egypt-children-protection"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقبل الوعود الشفهية بالتسوية دون إثبات الشكوى كتابياً.",
+      "en": "Do not accept verbal promises without written documentation.",
+      "src": "web:egypt-children-protection"
+    },
+    {
+      "t": "لا تتأخر في استخراج التقرير الطبي فور وقوع الحادثة.",
+      "en": "Do not delay getting medical report immediately.",
+      "src": "web:egypt-children-protection"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده فور تعرض طفلك للضرب أو الإهانة البدنية داخل المدرسة."
+  },
+  "note": {
+    "ar": "هذا توعية قانونية عامة — استشير محامي مصري مختص عند اتخاذ الإجراءات القضائية."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادة 80 وقانون الطفل رقم 12 لسنة 1996."
+  },
+  "quote": "تعد الدولة رعاية الطفل وحمايتها من جميع أشكال العنف والمهانة والتعدي واجباً دستورياً.",
+  "contacts": [
+    {
+      "label": "خط نجدة الطفل",
+      "number": "16000",
+      "say": "أبلغ عن تعرض طفل لعقاب بدني وإصابة داخل المدرسة."
+    },
+    {
+      "label": "شرطة النجدة",
+      "number": "122",
+      "say": "أطلب تحرير محضر باعتداء على طفل."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-children-protection",
+      "grade": "الدستور والقانون"
+    }
+  ]
+},
+{
+  "id": "scenario-h7-elder-exploitation",
+  "title": {
+    "ar": "«أبويا كبير في السن وحد بيستغل فلوسه أو بيضغط عليه يبيع ممتلكاته»",
+    "en": "Elder financial exploitation and abuse"
+  },
+  "level": 4,
+  "domain": "حقوق كبار السن",
+  "who": [
+    "كبار السن",
+    "أبناء وأقارب كبار السن"
+  ],
+  "place": [
+    "المنازل",
+    "البنوك",
+    "الشهر العقاري"
+  ],
+  "my_right": "المادة 83 من الدستور المصري وقانون حقوق كبار السن: تلتزم الدولة بضمان حقوق المسنين صحياً واقتصادياً واجتماعياً وحمايتهم من كافة أشكال الاستغلال والإساءة.",
+  "how_to_recover": {
+    "principle": "حماية كبار السن من الاستغلال المالي أو الضغط النفسي، وحق العائلة في إبطال التصرفات الصادرة تحت الإكراه أو ضعف الأهلية.",
+    "procedure": "وثق الحركات المالية المشبوهة، واطلب تقييماً طبياً ونفسياً للأهلية، وتقدم بعريضة للنيابة العامة لشئون الأسرة."
+  },
+  "do": [
+    {
+      "t": "سجل ورصد جميع المعاملات المالية والسحوبات التنسيقية غير المبررة.",
+      "en": "Document all unexplained financial withdrawals and asset transfers.",
+      "src": "web:egypt-elder-rights"
+    },
+    {
+      "t": "اطلب توقيع الكشف الطبي والنفسي الرسمي لتقييم القدرة على اتخاذ القرارات المالية.",
+      "en": "Request formal medical evaluation of financial decision-making capacity.",
+      "src": "web:egypt-elder-rights"
+    },
+    {
+      "t": "قدم بلاغاً لنيابة الأسرة عند وجود شواهد استغلال أو إكراه على التوقيع.",
+      "en": "File petition to Family Prosecution if coercion or exploitation is suspected.",
+      "src": "web:egypt-elder-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تسمح بتوقيع توكيلات عامة أو بيع عقارات تحت الضغط أو في حالة عدم الوعي الكامل.",
+      "en": "Do not allow signing powers of attorney or sales under pressure or impaired capacity.",
+      "src": "web:egypt-elder-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند ملاحظة استغلال مالي أو سلب ممتلكات شخص مسن."
+  },
+  "note": {
+    "ar": "توعية قانونية لحماية كبار السن — استشير محامي أسرة مختص."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادة 83 وقانون حقوق المسنين."
+  },
+  "quote": "تلتزم الدولة بضمان حقوق المسنين وحمايتهم من الاستغلال والإساءة.",
+  "contacts": [
+    {
+      "label": "منظومة الشكاوى الحكومية",
+      "number": "16528",
+      "say": "أبلغ عن استغلال شخص مسن وحاجته للحماية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-elder-rights",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h8-domestic-violence",
+  "title": {
+    "ar": "«أختي أو قريبتي يتعرض زوجها لها بالضرب والعنف الشديد — أعمل إيه؟»",
+    "en": "Domestic violence emergency and legal rights"
+  },
+  "level": 5,
+  "domain": "حقوق المرأة والأسرة",
+  "who": [
+    "النساء",
+    "أسر الضحايا"
+  ],
+  "place": [
+    "المنازل",
+    "الأماكن الخاصة"
+  ],
+  "my_right": "المادتان 11 و51 من الدستور المصري: الكرامة حق لكل إنسان، وتلتزم الدولة بحماية المرأة من كافة أشكال العنف وضمان سلامتها الجسدية والنفسية.",
+  "how_to_recover": {
+    "principle": "حظر العنف الأسري والجسدي، وحق الضحية في الحصول على الحماية والتقرير الطبي والملاحقة الجنائية وطلب المأوى الآمن.",
+    "procedure": "توجه فوراً للمستشفى الحكومي لإصدار التقرير الطبي الأول، ثم حرر محضراً بقسم الشرطة وتواصل مع المجلس القومي للمرأة."
+  },
+  "do": [
+    {
+      "t": "احرص على الذهاب الفوري لأقرب مستشفى حكومي لإصدار تقرير طبي رسمي يوثق الإصابات.",
+      "en": "Go immediately to nearest public hospital for official medical report documenting injuries.",
+      "src": "web:egypt-women-rights"
+    },
+    {
+      "t": "حرر محضراً بقسم الشرطة واطلب إثبات حالة مع أخذ رقم المحضر الرسمي.",
+      "en": "File a police report with immediate status verification and obtain official police report number.",
+      "src": "web:egypt-women-rights"
+    },
+    {
+      "t": "اتصل بخط استشارات المجلس القومي للمرأة 15115 للدعم القانوني والدعم النفسي والإيواء.",
+      "en": "Call National Council for Women hotline 15115 for legal support and shelter services.",
+      "src": "web:egypt-women-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك موقع الحادث دون إثبات المحضر أو التقرير الطبي الأول.",
+      "en": "Do not leave without hospital report or police tracking number.",
+      "src": "web:egypt-women-rights"
+    },
+    {
+      "t": "لا تتنازل عن المحضر تحت الضغط دون الحصول على ضمانات قانونية رسمية وحماية.",
+      "en": "Do not drop legal report without formal protection guarantees.",
+      "src": "web:egypt-women-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند تعرض سيدة للاعتداء الجسدي أو التهديد بالسلامة في محيط الأسرة."
+  },
+  "note": {
+    "ar": "توعية قانونية لحماية النساء من العنف — استشير محامي مختص للتنفيذ."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادتان 11 و51 وقانون العقوبات."
+  },
+  "quote": "الكرامة حق لكل إنسان، وتلتزم الدولة بحماية المرأة ضد كل أشكال العنف.",
+  "contacts": [
+    {
+      "label": "مكتب شكاوى المرأة",
+      "number": "15115",
+      "say": "أبلغ عن حالة اعتداء وعنف أسري وأطلب الدعم القانوني."
+    },
+    {
+      "label": "شرطة النجدة",
+      "number": "122",
+      "say": "طلب استغاثة فورية لحماية سيدة تعرضت للاعتداء."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-women-rights",
+      "grade": "الدستور والقانون"
+    }
+  ]
+},
+{
+  "id": "scenario-h9-denied-education",
+  "title": {
+    "ar": "«المدرسة رفضت تقبل ابني أو اتمنع من دخول الامتحانات والاستكمال»",
+    "en": "Denied right to basic education"
+  },
+  "level": 3,
+  "domain": "حقوق الطفل والتعليم",
+  "who": [
+    "أولياء الأمور",
+    "الطلاب"
+  ],
+  "place": [
+    "المدارس الحكومية والخاصة"
+  ],
+  "my_right": "المادة 19 من الدستور المصري: التعليم حق لكل مواطن، وهو إلزامي حتى نهاية المرحلة الثانوية، وتكفل الدولة مجانيته في مؤسساتها.",
+  "how_to_recover": {
+    "principle": "لا يجوز حرمان أي طفل من التعليم الإلزامي أو منعه من أداء الامتحانات لأسباب مالية أو إدارية تعسفية.",
+    "procedure": "قدم طلب قيد رسمي للإدارة التعليمية، واطلب خطاباً رسمياً بأسباب الرفض، واشتكِ للوزارة."
+  },
+  "do": [
+    {
+      "t": "قدم طلباً مكتوباً ومسجلاً لمدير الإدارة التعليمية لطلب التسكين الفوري.",
+      "en": "Submit written registered request to Educational Zone Director for immediate placement.",
+      "src": "web:egypt-education-right"
+    },
+    {
+      "t": "اطلب إفادة كتابية رسمية تبيّن أسباب منع الطالب من أداء الامتحانات أو القيد.",
+      "en": "Request official written statement specifying grounds for denying admission or exams.",
+      "src": "web:egypt-education-right"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تكتفِ بالرفض الشفهي عند البوابة أو مكتب الإدارة دون إثبات كتابي.",
+      "en": "Do not accept verbal refusal without formal written record.",
+      "src": "web:egypt-education-right"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند تعنت إدارة مدرسة في قبول قيد طالب أو منعه من الامتحان."
+  },
+  "note": {
+    "ar": "حق دستوري مكفول — استشير محامي عند الحاجة للطعن أمام القضاء الإداري."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادة 19."
+  },
+  "quote": "التعليم حق لكل مواطن، وهو إلزامي حتى نهاية المرحلة الثانوية أو ما يعادلها.",
+  "contacts": [
+    {
+      "label": "شكاوى وزارة التربية والتعليم",
+      "number": "19126",
+      "say": "أبلغ عن منع طالب من حق القيد والتعليم."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-education-right",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h10-denied-healthcare",
+  "title": {
+    "ar": "«المستشفى رفض يستقبل أمي في حالة طوارئ حارجة»",
+    "en": "Emergency medical treatment denied at hospital"
+  },
+  "level": 5,
+  "domain": "حقوق الصحة والطوارئ",
+  "who": [
+    "المرضى",
+    "أسر المرضى"
+  ],
+  "place": [
+    "المستشفيات الحكومية والخاصة"
+  ],
+  "my_right": "المادة 18 من الدستور المصري وقرار رئيس الوزراء 1063 لسنة 2014: التزام كافة المنشآت الطبية الحكومية والخاصة بتقديم العلاج المجاني الفوري لكل إنسان في حالات الطوارئ والخطر على الحياة لمدة 48 ساعة على الأقل.",
+  "how_to_recover": {
+    "principle": "حظر الامتناع عن تقديم الخدمة الطبية الطارئة فوراً في أي مستشفى حكومي أو خاص.",
+    "procedure": "تمسك بقرار 1063 للطوارئ، اتصل بالطوارئ الطبية 137 والإسعاف 123 فوراً لتسجيل البلاغ ونقل المريض إذا لزم الأمر."
+  },
+  "do": [
+    {
+      "t": "طالب إدارة المستشفى بتطبيق قرار العلاج المجاني الفوري للحالات الحارجة (قرار 1063).",
+      "en": "Demand implementation of mandatory 48-hour free emergency care decree (1063/2014).",
+      "src": "web:egypt-health-right"
+    },
+    {
+      "t": "اتصل بطوارئ وزارة الصحة 137 فوراً أثناء وجودك بالمستشفى لتسجيل حالة الامتناع.",
+      "en": "Call Ministry of Health Emergency Line 137 immediately on site to log refusal.",
+      "src": "web:egypt-health-right"
+    },
+    {
+      "t": "سجل أسماء الأطباء وتوقيت الرفض واطلب التنسيق الفوري للنقل عبر الإسعاف 123.",
+      "en": "Log doctor names and exact refusal timestamp, coordinate transfer via 123.",
+      "src": "web:egypt-health-right"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تغادر المستشفى في حالة الخطر على الحياة قبل تأمين نقل طبي آمن ومسجل.",
+      "en": "Do not leave life-threatening situation without safe documented medical transfer.",
+      "src": "web:egypt-health-right"
+    },
+    {
+      "t": "لا تسدد مبالغ ماليّة مسبقة كشرط لإسعاف مريض الطوارئ الحارجة.",
+      "en": "Do not pay advance deposits for critical life-saving triage.",
+      "src": "web:egypt-health-right"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده فوراً عند رفض أي مستشفى استقبال حالة طوارئ مهددة للحياة."
+  },
+  "note": {
+    "ar": "حق دستوري وقرار حكومي ملزم لكافة المستشفيات الحكومية والخاصة بمصر."
+  },
+  "basis": {
+    "ar": "الدستور المصري المادة 18 وقرار رئيس مجلس الوزراء 1063 لسنة 2014."
+  },
+  "quote": "يحظر الامتناع عن تقديم العلاج بأشكاله المختلفة لكل إنسان في حالات الطوارئ أو الخطر على الحياة.",
+  "contacts": [
+    {
+      "label": "طوارئ الرعاية العاجلة بوزارة الصحة",
+      "number": "137",
+      "say": "أبلغ عن رفض مستشفى استقبال حالة طوارئ مهددة للحياة."
+    },
+    {
+      "label": "الإسعاف المصري",
+      "number": "123",
+      "say": "طلب نقل إسعافي لحالة طوارئ حارجة."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-health-right",
+      "grade": "الدستور والقرارات الملزمة"
+    }
+  ]
+},
+{
+  "id": "scenario-h11-fired-without-cause",
+  "title": {
+    "ar": "«مديري بيضغط عليّ أستقيل أو بيهددني بالفصل التعسفي دون سبب قانوني»",
+    "en": "Threat of unfair dismissal or coerced resignation"
+  },
+  "level": 4,
+  "domain": "حقوق العمل",
+  "who": [
+    "العاملون بالقطاع الخاص والحكومي"
+  ],
+  "place": [
+    "مقرات العمل",
+    "الشركات"
+  ],
+  "my_right": "قانون العمل المصري رقم 12 لسنة 2003 والمادة 12 من الدستور: العمل حق وواجب، ولا يجوز فصل العامل إلا بحكم من المحكمة العمالية أو في الحالات المنصوص عليها حصراً في المادة 69.",
+  "how_to_recover": {
+    "principle": "بطلان الفصل التعسفي والاستقالة المكرهة، وحق العامل في التعويض أو العودة للعمل وتلقي مستحقاته.",
+    "procedure": "لا توقع على استقالة أو استمارة 6، حرر محضراً بقسم الشرطة بإثبات المنع من الدخول، وتقدم بشكوى لمكتب العمل خلال 10 أيام."
+  },
+  "do": [
+    {
+      "t": "ارفض التوقيع على أي نموذج استقالة أو إقرار بالاستلام تحت الضغط.",
+      "en": "Refuse to sign resignation letters or waiver forms under pressure.",
+      "src": "web:egypt-work-rights"
+    },
+    {
+      "t": "حرر محضراً بقسم الشرطة لإثبات منعك من دخول مقر العمل (إثبات حالة).",
+      "en": "File a police status report if barred from workplace entry.",
+      "src": "web:egypt-work-rights"
+    },
+    {
+      "t": "تقدم بشكوى رسمية لمكتب العمل التابع له مقر الشركة خلال 10 أيام من تاريخ المنع.",
+      "en": "Submit formal complaint to Labor Office within 10 days of lockout.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك عملك دون إثبات كتابي أو محضر حتى لا يحتسب انقطاعاً عن العمل.",
+      "en": "Do not abandon work without official status record preventing unauthorized absence claims.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند التهديد بالفصل التعسفي أو الضغط للتوقيع على استقالة."
+  },
+  "note": {
+    "ar": "توعية بقانون العمل المصري رقم 12 لسنة 2003 — استشير محامي عمالي."
+  },
+  "basis": {
+    "ar": "قانون العمل المصري رقم 12 لسنة 2003 والمادة 12 من الدستور."
+  },
+  "quote": "لا يجوز فصل العامل إلا بحكم قضائي من المحكمة العمالية المختصة.",
+  "contacts": [
+    {
+      "label": "الخط الساخن لوزارة العمل",
+      "number": "19468",
+      "say": "أقدم شكوى منع من العمل وفصل تعسفي ضد منشأة."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-work-rights",
+      "grade": "قانون العمل والدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h12-unpaid-wages",
+  "title": {
+    "ar": "«صاحب الشغل مأخر أجر بقاله شهور أو رافض يديني مستحقاتي عند ترك العمل»",
+    "en": "Unpaid wages or withheld end-of-service benefits"
+  },
+  "level": 4,
+  "domain": "حقوق العمل",
+  "who": [
+    "العمال والمهنيون"
+  ],
+  "place": [
+    "مقرات العمل"
+  ],
+  "my_right": "قانون العمل المصري رقم 12 لسنة 2003: يلتزم صاحب العمل بتأدية الأجر في المواعيد المحددة وفي مكان العمل، وتعتبر ديون الأجور ديوناً ممتازة تنفذ قبل غيرها.",
+  "how_to_recover": {
+    "principle": "الأجر حق غير قابل للتأخير، وحق العامل في إلزام جهة العمل بالصرف والتعويض عن التأخير.",
+    "procedure": "احتفظ بأدلة العمل، وتقدم بشكوى لمكتب العمل، ثم اللجوء للمحكمة العمالية لإصدار أمر دفع."
+  },
+  "do": [
+    {
+      "t": "احفظ كافة كشوف الحضور والانصراف، والرسائل، ومعاملات البنك الدالة على الأجر.",
+      "en": "Retain attendance logs, bank statements, and salary communication proofs.",
+      "src": "web:egypt-work-rights"
+    },
+    {
+      "t": "تقدم بشكوى رسمية لمكتب العمل المختص لتسوية النزاع ودياً أو إحالته للمحكمة العمالية.",
+      "en": "File formal complaint at Labor Office for mediation or referral to court.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا توقع على مخالصة مالية نهائية قبل استلام كافة مبالغ الأجر فعلياً.",
+      "en": "Do not sign final financial waivers before receiving full payment.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند تأخير صرف الأجر أو رفض تسليم المستحقات المالية."
+  },
+  "note": {
+    "ar": "توعية بحقوق الأجور بقانون العمل المصري."
+  },
+  "basis": {
+    "ar": "قانون العمل المصري 12 لسنة 2003 المواد 34-40."
+  },
+  "quote": "تؤدى الأجور في أحد أيام العمل وفي مكانه، وتعتبر من الديون الممتازة.",
+  "contacts": [
+    {
+      "label": "شكاوى وزارة العمل",
+      "number": "19468",
+      "say": "أبلغ عن تأخير صرف أجور عمال بشكل جماعي أو فردي."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-work-rights",
+      "grade": "قانون العمل"
+    }
+  ]
+},
+{
+  "id": "scenario-h13-unsafe-work-conditions",
+  "title": {
+    "ar": "«الشغل بيجبرني أشتغل في مكان خطر جداً من غير أدوات سلامة ولا حماية»",
+    "en": "Unsafe working conditions lacking protective equipment"
+  },
+  "level": 4,
+  "domain": "حقوق العمل",
+  "who": [
+    "العمال والمهنيون"
+  ],
+  "place": [
+    "المصانع",
+    "مواقع البناء",
+    "الورش"
+  ],
+  "my_right": "قانون العمل المصري رقم 12 لسنة 2003 (الكتاب الخامس — السلامة والصحة المهنية): التزام المنشأة بتوفير وسائل السلامة والصحة المهنية وتأمين بيئة العمل مجاناً دون تحميل العامل أي كلفة.",
+  "how_to_recover": {
+    "principle": "حظر التكليف بأعمال مهددة للحياة دون أدوات الوقاية الشاملة، وحق العامل في الامتناع عن الخطر الداهم.",
+    "procedure": "ابلغ التفتيش العمالي والسلامة المهنية بمكتب العمل لإجراء التفتيش الفوري وتثبيت المخالفة."
+  },
+  "do": [
+    {
+      "t": "اطالب الإدارة كتابياً بتوفير مهمات الوقاية الشخصية قبل البدء في الأنشطة الخطرة.",
+      "en": "Request written supply of personal protective equipment before high-risk tasks.",
+      "src": "web:egypt-work-rights"
+    },
+    {
+      "t": "قدم بلاغاً لتفتيش السلامة والصحة المهنية بمكتب العمل التابع للمنطقة.",
+      "en": "Report safety non-compliance to Occupational Safety Inspection Unit.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تتحمل شراء أدوات السلامة المهنية الحيوية على نفقتك الخاصة.",
+      "en": "Do not purchase mandatory primary safety gear out of your own pocket.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند إجبارك على العمل في ظروف خطرة تهدد سلامتك الجسدية."
+  },
+  "note": {
+    "ar": "توعية بالسلامة والصحة المهنية بقانون العمل المصري."
+  },
+  "basis": {
+    "ar": "قانون العمل المصري 12 لسنة 2003 — المواد 208-215."
+  },
+  "quote": "تلتزم المنشأة وتوفر وسائل السلامة والصحة المهنية لحماية العمال من مخاطر بيئة العمل.",
+  "contacts": [
+    {
+      "label": "إدارة السلامة والصحة المهنية بوزارة العمل",
+      "number": "19468",
+      "say": "أبلغ عن مخالفة سلامة وصحة مهنية وتعريض عمال للخطر."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-work-rights",
+      "grade": "قانون العمل"
+    }
+  ]
+},
+{
+  "id": "scenario-h14-workplace-discrimination",
+  "title": {
+    "ar": "«بيميّزوا ضدي في الشغل في الترقية أو المرتب بسبب النوع أو الدين أو الجنسية»",
+    "en": "Workplace discrimination in pay, promotion, or hiring"
+  },
+  "level": 3,
+  "domain": "حقوق العمل",
+  "who": [
+    "العمال والمهنيون"
+  ],
+  "place": [
+    "مقرات العمل"
+  ],
+  "my_right": "المادة 53 والمادة 12 من الدستور المصري وقانون العمل: يحظر كل تمييز بين العمال في شروط أو ظروف العمل أو الأجر بسبب الدين أو العقيدة أو الجنس أو الأصل.",
+  "how_to_recover": {
+    "principle": "حظر التمييز وتكافؤ الفرص في الأجور والترقيات والتوظيف بين جميع المواطنين.",
+    "procedure": "وثق التفاوت غير المبرر في الأجر أو الفرص، وتقدم بشكوى لمكتب العمل وللجلس القومي لحقوق الإنسان عند التمييز المنهجي."
+  },
+  "do": [
+    {
+      "t": "احتفظ باللوائح الداخلية المقرة وعقود العمل والتقييمات الوظيفية التي تثبت التمييز.",
+      "en": "Document workplace regulations, contracts, and performance reviews evidencing disparity.",
+      "src": "web:egypt-work-rights"
+    },
+    {
+      "t": "قدم شكوى رسمية لمكتب العمل والمجلس القومي لحقوق الإنسان لإثبات حالة التمييز.",
+      "en": "File a formal complaint to Labor Office and NCHR regarding discriminatory practice.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقبل البنود الشفهية التي تشترط أجوراً أقل لفئات معينة لنفس مهام الوظيفة.",
+      "en": "Do not accept unequal pay terms based on protected demographic attributes.",
+      "src": "web:egypt-work-rights"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند التعرض لتمييز غير قانوني في بيئة العمل."
+  },
+  "note": {
+    "ar": "توعية بحظر التمييز ومبادئ الدستور المصري وقانون العمل."
+  },
+  "basis": {
+    "ar": "الدستور المصري المادة 53 وقانون العمل رقم 12 لسنة 2003."
+  },
+  "quote": "المواطنون لدى القانون سواء، وهم متساوون في الحقوق والواجبات العامة لا تمييز بينهم.",
+  "contacts": [
+    {
+      "label": "المجلس القومي لحقوق الإنسان",
+      "number": "15380",
+      "say": "أبلغ عن شكوى تمييز شغلي وحرمان من الحقوق."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-work-rights",
+      "grade": "الدستور والقانون"
+    }
+  ]
+},
+{
+  "id": "scenario-h16-scammed-online-offline",
+  "title": {
+    "ar": "«شخص أو شركة نصبوا عليّ في فلوس أو بضاعة أو خدمات وهمية»",
+    "en": "Legal rights after financial fraud or commercial scam"
+  },
+  "level": 4,
+  "domain": "الحقوق والحريات العامة",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "my_right": "المادة 336 من قانون النصب والجمارك والمادة 35 من الدستور: حماية الملكية الخاصة وتجريم الاستيلاء على أموال الغير بطرق احتيالية.",
+  "how_to_recover": {
+    "principle": "تجريم النصب والاحتيال، وحق المجني عليه في إقامة الدعوى الجنائية والاسترداد المدني.",
+    "procedure": "اجمع كافة مستندات التحويل والمحادثات وحرر محضراً بقسم الشرطة أو مباحث الأموال العامة."
+  },
+  "do": [
+    {
+      "t": "اجمع كافة عقود التعامل والمدفوعات البنكية وإيصالات الاستلام والمحادثات المكتوبة.",
+      "en": "Compile all contracts, bank receipts, payment slips, and text records.",
+      "src": "web:egypt-property-housing"
+    },
+    {
+      "t": "توجه لقسم الشرطة أو مباحث الأموال العامة لتحرير محضر بالنصب والاحتيال.",
+      "en": "File a criminal fraud report at police station or Financial Crimes Bureau.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تتأخر في الإبلاغ حتى لا تسقط الجريمة بمضي المدة أو يختفي الجاني.",
+      "en": "Do not delay reporting before evidence or culprit disappears.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند التعرض للاستيلاء على أموالك بطرق احتيالية."
+  },
+  "note": {
+    "ar": "توعية جنائية بقانون العقوبات المصري — استشير محامي جنائي."
+  },
+  "basis": {
+    "ar": "قانون العقوبات المصري المادة 336 والمادة 35 من الدستور."
+  },
+  "quote": "يعاقب بالحبس كل من استولى على توقيع أو مبالغ مالية بناء على حيل احتيالية.",
+  "contacts": [
+    {
+      "label": "مباحث الأموال العامة",
+      "number": "15380",
+      "say": "أبلغ عن جريمة نصب واستيلاء على أموال بطرق احتيالية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-property-housing",
+      "grade": "قانون العقوبات"
+    }
+  ]
+},
+{
+  "id": "scenario-h17-unlawful-eviction",
+  "title": {
+    "ar": "«صاحب البيت عايز يطردني من الشقة أو يغير الكالون دون حكم قضائي»",
+    "en": "Unlawful landlord eviction or lock change without judicial order"
+  },
+  "level": 4,
+  "domain": "حقوق السكن والعقارات",
+  "who": [
+    "المستأجرون"
+  ],
+  "place": [
+    "المنازل",
+    "الشقق السكنية"
+  ],
+  "my_right": "المادة 58 والمادة 35 من الدستور المصري والقانون المدني: المساكن لها حرمة، ولا يجوز دخولها ولا طرد مستأجر منها إلا بأمر قضائي مسبب وفقاً للقانون.",
+  "how_to_recover": {
+    "principle": "حظر الإخلاء القسري وتجريم اقتحام أو تغيير كالون الشقة المؤجرة دون حكم قضائي.",
+    "procedure": "حرر محضراً فورياً بقسم الشرطة بـ «طرد تعسفي وإثبات حالة»، واطلب التمكين من الشقة برقم المحضر."
+  },
+  "do": [
+    {
+      "t": "احتفظ بنسخة من عقد الإيجار وإيصالات سداد أحدث الشهور في مكان آمن خارج الشقة.",
+      "en": "Keep rental agreement copy and recent rent receipts safely accessible.",
+      "src": "web:egypt-property-housing"
+    },
+    {
+      "t": "توجه لقسم الشرطة فوراً للتحرير محضر «إثبات حالة ومنع حيازة وطرد تعسفي».",
+      "en": "Go immediately to police to file unlawful eviction and possession dispute report.",
+      "src": "web:egypt-property-housing"
+    },
+    {
+      "t": "تقدم بطلب للنيابة العامة لإصدار قرار قرار تمكين فوري من العين المؤجرة.",
+      "en": "Apply to Public Prosecution for emergency tenancy re-possession order.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك الشقة مغلقة دون التحرير الفوري للمحضر عند التهديد بالإخلاء.",
+      "en": "Do not leave premises without immediately filing police report upon eviction threat.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند محاولة مؤجر طردك من السكن دون حكم محكمة."
+  },
+  "note": {
+    "ar": "توعية بحرمة المساكن وقانون الإيجارات المصري — استشير محامي مدني."
+  },
+  "basis": {
+    "ar": "الدستور المصري المادة 58 والقانون المدني المصري."
+  },
+  "quote": "للمساكن حرمة، ولا يجوز دخولها أو طرد قاطنيها إلا بحكم قضائي مسبب.",
+  "contacts": [
+    {
+      "label": "شرطة النجدة",
+      "number": "122",
+      "say": "أطلب النجدة فوراً لمشاجرة ومحاولة طرد تعسفي من مسكن."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-property-housing",
+      "grade": "الدستور والقانون المدني"
+    }
+  ]
+},
+{
+  "id": "scenario-h18-denied-public-access",
+  "title": {
+    "ar": "«منعوني من دخول مكان عام أو شاطئ أو حديقة بسبب لبسي أو شكلي»",
+    "en": "Arbitrary denial of access to public space or beach"
+  },
+  "level": 3,
+  "domain": "الحقوق والحريات العامة",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "الأماكن العامة",
+    "الشواطئ",
+    "الحدائق"
+  ],
+  "my_right": "المادة 53 والمادة 57 من الدستور المصري: للمواطنين حق التنقل والتواجد في الأماكن العامة والشواطئ العامة، ويحظر التمييز أو منع المواطنين تعسفياً.",
+  "how_to_recover": {
+    "principle": "عمومية الشواطئ والمرافق العامة، وحظر التمييز الطبقي أو الشكلي في تقديم الخدمات العامة.",
+    "procedure": "وثق المنع بطلب سبب كتابي، اتصل بشرطة النجدة 122 ووزارة السياحة أو المحافظة التابع لها المكان."
+  },
+  "do": [
+    {
+      "t": "اطلب مقابلة المدير المسؤول واطلب التبيين الكتابي لسبب منع الدخول للمكان العام.",
+      "en": "Request manager and ask for written justification for public entry refusal.",
+      "src": "web:egypt-property-housing"
+    },
+    {
+      "t": "اتصل بشرطة النجدة 122 لإثبات حالة التمييز والمنع غير القانوني من منفعة عامة.",
+      "en": "Call 122 Police to log discrimination and illegal exclusion from public space.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تدخل في صدام بدني، واحرص على توثيق الوقائع بهدوء وبإبلاغ السلطات المختصة.",
+      "en": "Do not engage in physical altercation; log facts calmly with police.",
+      "src": "web:egypt-property-housing"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده عند منعك تعسفياً من دخول مكان عام أو شاطئ ملك للدولة."
+  },
+  "note": {
+    "ar": "توعية بمبادئ الدستور وحظر التمييز في المرافق العامة."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادتان 53 و57."
+  },
+  "quote": "كفالة الحق في استخدام وتواجد المواطنين في الأماكن العامة دون تمييز.",
+  "contacts": [
+    {
+      "label": "شرطة النجدة",
+      "number": "122",
+      "say": "أطلب إثبات حالة منع من دخول مرفق أو شاطئ عام دون سبب قانوني."
+    },
+    {
+      "label": "منظومة الشكاوى الحكومية",
+      "number": "16528",
+      "say": "أقدم شكوى منع مواطنين من استخدام مرفق عام."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-property-housing",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h19-universal-basic-rights",
+  "title": {
+    "ar": "«إيه هي حقوقي الأساسية الدستورية كمواطن مصري من غير تعقيد؟»",
+    "en": "Fundamental constitutional rights for Egyptian citizens"
+  },
+  "level": 3,
+  "domain": "الحقوق والحريات العامة",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "مصر"
+  ],
+  "my_right": "باب الحقوق والحريات بالدستور المصري 2014: الكرامة الإنسانية، المساواة أمام القانون، حرمة الحياة الخاصة، السلامة الجسدية، وحرية التنقل والسكن.",
+  "how_to_recover": {
+    "principle": "الحقوق الدستورية مكفولة ومباشرة، ولا يجوز لأي قانون أو لائحة أن تمس أصل الحق أو تفرغه من مضمونه (المادة 92).",
+    "procedure": "عند انتهاك أي حق دستوري، يحق للمواطن اللجوء للقضاء المصري والمجلس القومي لحقوق الإنسان."
+  },
+  "do": [
+    {
+      "t": "تمسك بطلب النص الحرفي للقانون عند أي إجراء ينطوي على قيود على حريتك.",
+      "en": "Demand exact legal text references whenever facing restrictions.",
+      "src": "web:egypt-constitution-equality"
+    },
+    {
+      "t": "اللم بالنصوص الدستورية الأساسية التي تكفل حق الدفاع وحرمة المسكن والمساواة.",
+      "en": "Understand basic constitutional provisions securing defense and privacy.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تسلم بتنازل عن حقك الدستوري المباشر تحت ادعاءات لائحية مخالفة للقانون.",
+      "en": "Do not waive constitutional rights based on unconstitutional sub-regulations.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده لتعرف الحد الأدنى الدستوري لحقوقك كمواطن."
+  },
+  "note": {
+    "ar": "توعية مبسطة بالباب الثاني والثالث من الدستور المصري 2014."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المواد 51-93."
+  },
+  "quote": "الحرية الشخصية حق طبيعي، وهي مصونة لا تمس، ولا يجوز تقييدها إلا بأمر قضائي.",
+  "contacts": [
+    {
+      "label": "المجلس القومي لحقوق الإنسان",
+      "number": "15380",
+      "say": "استفسار وبلاغ عن انتهاك حق دستوري مكفول."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-constitution-equality",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h20-womens-legal-rights",
+  "title": {
+    "ar": "«إيه هي الحقوق الدستورية والتمكين القانوني الخاط بالمرأة في مصر؟»",
+    "en": "Women's constitutional rights and equal protection"
+  },
+  "level": 3,
+  "domain": "حقوق المرأة والأسرة",
+  "who": [
+    "النساء"
+  ],
+  "place": [
+    "جميع مؤسسات الدولة والعمل والمجتمع"
+  ],
+  "my_right": "المادة 11 من الدستور المصري: تكفل الدولة تحقيق المساواة بين المرأة والرجل في جميع الحقوق المدنية والسياسية والاقتصادية والاجتماعية والثقافية، وتلتزم بحمايتها ضد كافة أشكال العنف.",
+  "how_to_recover": {
+    "principle": "كفالة التمكين والمساواة والحماية من التمييز والعنف، وحق المرأة في تقلد الوظائف العامة والقضاء دون تمييز.",
+    "procedure": "اللجوء لمكتب شكاوى المرأة بالمجلس القومي للمرأة، وإقامة الدعاوى القضائية عند الحرمان التمييزي."
+  },
+  "do": [
+    {
+      "t": "استفيدي من خدمات الدعم القانوني والاستشاري التي يقدمها المجلس القومي للمرأة.",
+      "en": "Access legal and counseling support services from National Council for Women.",
+      "src": "web:egypt-constitution-equality"
+    },
+    {
+      "t": "أبلغي فوراً عن أي انتهاك يتعلق بالتمييز أو العنف في العمل أو الأماكن العامة.",
+      "en": "Report immediately any discriminatory violation or harassment.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقبلي التمييز في الأجر أو الفرص الوظيفية بدعوى الأعراف أو القرارات الإدارية.",
+      "en": "Do not accept wage or promotion discrimination based on gender.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده لمعرفة التمكين الدستوري والحماية القانونية للمرأة."
+  },
+  "note": {
+    "ar": "توعية بالمادة 11 من الدستور المصري 2014 ومكافحة التمييز."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادة 11."
+  },
+  "quote": "تلتزم الدولة باتخاذ التدابير الكفيلة بضمان تمثيل المرأة تمثيلاً مناسباً وحمايتها من العنف.",
+  "contacts": [
+    {
+      "label": "مكتب شكاوى المجلس القومي للمرأة",
+      "number": "15115",
+      "say": "طلب دعم قانوني لشكوى تمييز أو انتهاك حق امرأة."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-constitution-equality",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h21-mens-equal-rights",
+  "title": {
+    "ar": "«إيه مفهوم المساواة القانونية والحماية المتكافئة أمام القانون لجميع المواطنين؟»",
+    "en": "Equal protection of law and non-discrimination principle"
+  },
+  "level": 3,
+  "domain": "الحقوق والحريات العامة",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "المحاكم والمؤسسات"
+  ],
+  "my_right": "المادة 53 والمادة 96 من الدستور المصري: المواطنون لدى القانون سواء، وهم متساوون في الحقوق والحريات والواجبات العامة، والمجرم متهم حتى تثبت إدانته في محاكمة قانونية عادلة.",
+  "how_to_recover": {
+    "principle": "الحماية المتكافئة أمام القضاء وحظر التمييز أو المحاكمة الاستثنائية لجميع المواطنين على حد سواء.",
+    "procedure": "التمسك بحق الدفاع والمساواة الإجرائية أمام كافة الهيئات القضائية والإدارية."
+  },
+  "do": [
+    {
+      "t": "تمسك بالمعاملة القانونية المتكافئة وضمانات المحاكمة العادلة وحق الاستعانة بمحامٍ.",
+      "en": "Insist on equal treatment, fair trial guarantees, and legal counsel access.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقبل أي معاملة تفضيلية أو تمييزية تحرمك من الحماية القانونية المتكافئة.",
+      "en": "Do not accept arbitrary treatment violating equal protection principles.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده لتعرف مبدأ المساواة وحظر التمييز الدستوري."
+  },
+  "note": {
+    "ar": "توعية بمبدأ المساواة والمادة 53 من الدستور المصري."
+  },
+  "basis": {
+    "ar": "الدستور المصري 2014 — المادتان 53 و96."
+  },
+  "quote": "المواطنون لدى القانون سواء، المتهم بريء حتى تثبت إدانته في محاكمة قانونية مكفول فيها حق الدفاع.",
+  "contacts": [
+    {
+      "label": "المجلس القومي لحقوق الإنسان",
+      "number": "15380",
+      "say": "أبلغ عن مخالفة ضمانات المساواة وحق الدفاع."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-constitution-equality",
+      "grade": "الدستور"
+    }
+  ]
+},
+{
+  "id": "scenario-h22-verify-legal-right-meta",
+  "title": {
+    "ar": "«إزاي أتأكد إن الكلام القانوني اللي بيتقالي حقيقي ومستند لنص مش افتكاسة؟»",
+    "en": "Meta-card: How to verify if a legal right claim is authentic (The One-Law)"
+  },
+  "level": 2,
+  "domain": "الحقوق والحريات العامة",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "my_right": "قانون الإثبات والشفافية القانونية: لا جريمة ولا عقوبة ولا سلب لحق إلا بناءً على قانون مكتوب ومشور بالجريدة الرسمية (المادة 95 من الدستور).",
+  "how_to_recover": {
+    "principle": "«اطلب النص الحرفي ورقم المادة والقانون» — القاعدة الذهبية لحماية نفسك من الادعاءات والشائعات القانونية.",
+    "procedure": "اطلب دائماً اسم القانون ورقم المادة، وراجع الجريدة الرسمية أو بوابة التشريعات الحكومية أو استشر محامياً مقيداً."
+  },
+  "do": [
+    {
+      "t": "اطلب دائماً رقم القانون ورقم المادة ونصها الحرفي عندما يخبرك أحد بحق أو التزام.",
+      "en": "Always ask for the exact law number, article number, and verbatim text.",
+      "src": "web:egypt-constitution-equality"
+    },
+    {
+      "t": "راجع التشريعات من البوابة الرسمية للحكومة المصرية أو الجريدة الرسمية.",
+      "en": "Verify legal text against official government gazette or legislation portals.",
+      "src": "web:egypt-constitution-equality"
+    },
+    {
+      "t": "استشر محامياً مقيداً بنقابة المحامين عند اتخاذ أي إجراء قضائي أو توقيع عقود.",
+      "en": "Consult a licensed Egyptian attorney before signing binding documents.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تصدق الادعاءات القانونية المرسلة عبر منصات التواصل دون سند من مادة قانونية موثقة.",
+      "en": "Do not accept legal claims shared on social media without verbatim article citations.",
+      "src": "web:egypt-constitution-equality"
+    }
+  ],
+  "whenWhy": {
+    "ar": "افتح الكارت ده كلما شككت في صحة نصيحة قانونية أو ادعاء بحق أو التزام."
+  },
+  "note": {
+    "ar": "الكارت الذهبي لمشروع حقوقي — القانون الواحد: الدليل قبل التصديق."
+  },
+  "basis": {
+    "ar": "الدستور المصري المادة 95 ومبادئ النشر في الجريدة الرسمية."
+  },
+  "quote": "لا جريمة ولا عقوبة إلا بناء على قانون، ولا توقع عقوبة إلا بحكم قضائي.",
+  "contacts": [
+    {
+      "label": "نقابة المحامين المصرية (استعلام القيد)",
+      "number": "15380",
+      "say": "استعلام عن قيد محامي والتأكد من الترخيص."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-constitution-equality",
+      "grade": "الدستور والمنهجية"
+    }
+  ]
+},
+ {
+     "id": "scenario-h3-physical-assault",
+     "title": {
+       "ar": "«حد اعتدى عليّ ضرب أو جرح — أعمل إيه في قسم الشرطة والمستشفى؟»",
+       "en": "I was physically assaulted — what are my legal rights and reporting steps?"
+     },
+     "level": 5,
+     "domain": "حقوق السلامة والجسد",
+     "who": [
+       "جميع المواطنين والمقيمين في مصر"
+     ],
+     "place": [
+       "الشارع، أماكن العمل، أو الأماكن العامة والخاصة"
+     ],
+     "my_right": "الدستور المصري 2014 المادة 99 والمادة 51: الاعتداء على الحرية الشخصية أو حرمة الحياة الخاصة للمواطنين، وغيرها من الحقوق والحريات العامة التي يضمنها الدستور والقانون، جريمة لا تسقط الدعوى الجنائية ولا المدنية الناشئة عنها بالتقادم، وتكفل الدولة تعويضاً عادلاً لمن وقع عليه الاعتداء.",
+     "how_to_recover": {
+       "principle": "الاعتداء الجسدي جريمة جنائية تعاقب عليها التشريعات المصرية، والحق في السلامة الجسدية حق دستوري أصيل.",
+       "procedure": "توجه فوراً لأقرب مستشفى حكومي للحصول على تقرير طبي رسمي يدون الإصابات، ثم تقدم بتقرير المستشفى لقسم الشرطة التابع لمكان الواقعة لعمل محضر رسمياً واستدعاء المشكو في حقه."
+     },
+     "do": [
+       {
+         "t": "توجه لأقرب مستشفى حكومي فور وقوع الاعتداء واطلب تقريراً طبياً أولياً موثقاً بالإصابات.",
+         "en": "Go immediately to a public hospital for an official medical report of injuries.",
+         "src": "web:egypt-constitution"
+       },
+       {
+         "t": "حرر محضراً رسمياً بقسم الشرطة التابع لمكان الاعتداء وأرفق به التقرير الطبي وأسماء الشهود إن وجدوا.",
+         "en": "File an official police report attaching the medical report and witness names.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "dont": [
+       {
+         "t": "لا تتأخر في استخراج التقرير الطبي حتى لا تفقد الإصابات أثرها القانوني أمام النيابة.",
+         "en": "Do not delay getting a medical report so physical injury evidence is preserved.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "whenWhy": {
+       "ar": "افتح الكارت ده فور التعرض لأي اعتداء بدني للحفاظ على حقك الجنائي والمدني."
+     },
+     "note": {
+       "ar": "مستند للمادة 99 من الدستور المصري وتطبيقات قانون العقوبات."
+     },
+     "basis": {
+       "ar": "الدستور المصري 2014 (المادة 99)."
+     },
+     "quote": "كل اعتداء على الحرية الشخصية أو حرمة الحياة الخاصة للمواطنين، وغيرها من الحقوق والحريات العامة التي يضمنها الدستور والقانون، جريمة لا تسقط الدعوى الجنائية ولا المدنية الناشئة عنها بالتقادم.",
+     "contacts": [
+       {
+         "label": "الشرطة المصرية (النجدة)",
+         "number": "122",
+         "say": "ابعتوا دورية في حالة الاعتداء المباشر."
+       },
+       {
+         "label": "المجلس القومي لحقوق الإنسان",
+         "number": "15508",
+         "say": "قدم شكوى انتهاك حق السلامة الجسدية."
+       }
+     ],
+     "sources": [
+       {
+         "srcId": "web:egypt-constitution-equality",
+         "grade": "الدستور"
+       }
+     ]
+   },
+   {
+     "id": "scenario-h4-street-harassment",
+     "title": {
+       "ar": "«اتحرشوا بيّا في الشارع أو وسيلة مواصلات — إيه الإجراء القانوني؟»",
+       "en": "I was harassed in public — what are my legal rights and reporting steps?"
+     },
+     "level": 4,
+     "domain": "حقوق الحماية والسلامة",
+     "who": [
+       "النساء والفتيات وجميع المواطنين في مصر"
+     ],
+     "place": [
+       "الشارع، المواصلات العامة، والمحلات والمؤسسات"
+     ],
+     "my_right": "الدستور المصري 2014 المادة 11 وقانون العقوبات (المادة 306 مكرر أ وب): تلتزم الدولة بحماية المرأة ضد كافة أشكال العنف، ويعاقب القانون على التحرش اللفظي والإشاري والجنسي بعقوبات مشددة تصل للسجن والغرامة.",
+     "how_to_recover": {
+       "principle": "التحرش بكل صوره جريمة يعاقب عليها القانون المصري، وتوفر الدولة قنوات مخصصة للابلاغ وحماية المجني عليهن.",
+       "procedure": "استغث بشرطة النجدة أو اركب لأقرب محطة/قسم شرطة، واطلب عمل محضر تحرش، أو اتصلي بالخط الساخن للمجلس القومي للمرأة للحصول على دعم قانوني مجاني."
+     },
+     "do": [
+       {
+         "t": "احتفظي بأي دليل كصور أو فيديوهات أو شهود في موقع الواقعة.",
+         "en": "Preserve any photos, video recordings, or witness details from the scene.",
+         "src": "web:egypt-constitution"
+       },
+       {
+         "t": "اتصلي بالخط الساخن للمجلس القومي للمرأة للحصول على مرافقة قانونية ودعم نفسي.",
+         "en": "Contact National Council for Women hotline for legal aid and support.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "dont": [
+       {
+         "t": "لا تتنازلي عن المحضر تحت أي ضغط اجتماعي؛ التحرش جريمة لا تخصك وحدك بل المجتمع.",
+         "en": "Do not drop the complaint under social pressure; harassment is a public crime.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "whenWhy": {
+       "ar": "افتحي الكارت ده عند التهديد أو التحرش في الأماكن العامة لمعرفة المسار القانوني."
+     },
+     "note": {
+       "ar": "مستند للمادة 11 من الدستور المصري وتعديلات قانون العقوبات."
+     },
+     "basis": {
+       "ar": "الدستور المصري 2014 والقانون رقم 141 لسنة 2021 لتشديد عقوبات التحرش."
+     },
+     "quote": "تلتزم الدولة بحماية المرأة ضد كَافة أشكال العنف، وتكفل تمكين المرأة من التوفيق بين واجبات الأسرة ومتطلبات العمل.",
+     "contacts": [
+       {
+         "label": "المجلس القومي للمرأة — شكاوى المرأة",
+         "number": "15115",
+         "say": "ابحثي عن دعم قانوني في محضر التحرش."
+       },
+       {
+         "label": "شرطة النجدة",
+         "number": "122",
+         "say": "بلّغي عن واقعة تحرش في المكان الحرفي."
+       }
+     ],
+     "sources": [
+       {
+         "srcId": "web:egypt-constitution-equality",
+         "grade": "الدستور"
+       }
+     ]
+   },
+   {
+     "id": "scenario-h5-custody-abuse-torture",
+     "title": {
+       "ar": "«اتعرضت أو حد من قرايبي لسوء معاملة أو تعذيب أثناء الاحتجاز — أعمل إيه؟»",
+       "en": "Subjected to mistreatment or abuse in custody — what are the legal remedies?"
+     },
+     "level": 5,
+     "domain": "الحريات والحماية القانونية",
+     "who": [
+       "جميع المحتجزين والمقبوض عليهم وذويهم"
+     ],
+     "place": [
+       "أقسام الشرطة ومراكز الاحتجاز والإصلاح"
+     ],
+     "my_right": "الدستور المصري 2014 المادة 52 والمادة 55: التعذيب بجميع صوره وأشكاله جريمة لا تسقط بالتقادم. وكل من يقبض عليه، أو يحبس، أو تقيد حريته، يجب أن يعامل بما يحفظ عليه كرامته، ولا يجوز تعذيبه، ولا ترهيبه، ولا إكراهه، ولا إيذاؤه بدئياً أو معنوياً.",
+     "how_to_recover": {
+       "principle": "الحظر المطلق للتعذيب وسوء المعاملة حق غير قابل للتقييد، ويحق للمتضرر ومحاميه تقديم تلغرافات وشكاوى فورية للنيابة العامة.",
+       "procedure": "أرسل تلغرافاً رسمياً للنائب العام ورئيس النيابة الكلية لإثبات الحالة وطلب العرض الفوري على الطب الشرعي، وقدم بلاغاً للمجلس القومي لحقوق الإنسان."
+     },
+     "do": [
+       {
+         "t": "أرسل تلغرافاً رسمياً بالبريد من أقرب مكتب بريد موجه للنائب العام لطلب توقيع الكشف الطبي الشرعي.",
+         "en": "Send an official telegram to the Prosecutor General requesting forensic examination.",
+         "src": "web:egypt-constitution"
+       },
+       {
+         "t": "وثّق الإصابات فور الإفراج واستخرج تقريراً طبياً جامعياً أو حكومياً مصفاً بكافة الآثار.",
+         "en": "Document all injuries immediately upon release with a university hospital report.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "dont": [
+       {
+         "t": "لا تسكت عن طلب العرض على الطب الشرعي في أول جلسة تحقيق أمام النيابة العامة.",
+         "en": "Do not fail to request immediate forensic referral during the first prosecution hearing.",
+         "src": "web:egypt-constitution"
+       }
+     ],
+     "whenWhy": {
+       "ar": "افتح الكارت ده عند وقوع أي تعدٍّ بدني أو معنوي أثناء الاحتجاز لمنع ضياع المعالم."
+     },
+     "note": {
+       "ar": "مستند للمادتين 52 و55 من الدستور المصري 2014."
+     },
+     "basis": {
+       "ar": "الدستور المصري 2014 (المواد 52، 55)."
+     },
+     "quote": "التعذيب بجميع صوره وأشكاله جريمة لا تسقط بالتقادم... وكل قول يثبت أنه صدر من مواطن تحت وطأة شيء مما تقدم، أو التهديد بشيء منه، يطرح ولا يعول عليه.",
+     "contacts": [
+       {
+         "label": "المجلس القومي لحقوق الإنسان — لجنة الشكاوى",
+         "number": "15508",
+         "say": "قدم بلاغاً رسمياً بانتهاك المادة 52 ودعم توثيق الطب الشرعي."
+       },
+       {
+         "label": "مكتب النائب العام — الشكاوى الإلكترونية",
+         "number": "15380",
+         "say": "أرسل بلاغ انتهاك مكان احتجاز ورقم التلغراف."
+       }
+     ],
+     "sources": [
+       {
+         "srcId": "web:egypt-constitution-equality",
+         "grade": "الدستور"
+       }
+     ]
+   }
 ];

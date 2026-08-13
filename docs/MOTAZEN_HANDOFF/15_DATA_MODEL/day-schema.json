@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://motazen.local/schemas/day-v1.json",
+  "title": "Motazen full daily lesson",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["dayId", "trackId", "version", "status", "professionalReview", "outlineRefs", "content"],
+  "properties": {
+    "dayId": {"type": "string", "pattern": "^DAY-TRACK-HUMAN-001-(00[1-9]|0[1-9][0-9]|100)$"},
+    "trackId": {"const": "TRACK-HUMAN-001"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+-draft$"},
+    "status": {"enum": ["DRAFT", "RESEARCHED", "SOURCE_VERIFIED", "SAFETY_REVIEWED", "CULTURAL_REVIEWED", "PROFESSIONAL_REVIEW_REQUIRED", "PROFESSIONALLY_REVIEWED", "PUBLISHED", "STALE"]},
+    "professionalReview": {"const": "PENDING"},
+    "outlineRefs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capabilityIds", "claimIds", "patternIds", "practiceFamilyIds", "prerequisites"],
+      "properties": {
+        "capabilityIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^CAP-[0-9]{3}$"}},
+        "claimIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^CLM-[A-Z0-9-]+$"}},
+        "patternIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^PAT-[0-9]{3}$"}},
+        "practiceFamilyIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^PRACTICE-[A-Z-]+$"}},
+        "prerequisites": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 1, "maximum": 99}}
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dayNumber", "titleAr", "objectiveAr", "definitionSimpleAr", "definitionDeepAr", "notThisAr", "roleRelevanceAr", "researchSaysAr", "researchDoesNotProveAr", "commonMisunderstandingAr", "healthyExampleAr", "unhealthyExampleAr", "egyptianContextExampleAr", "selfCheckQuestionsAr", "action5MinAr", "action15MinAr", "fullPracticeAr", "whatNotToDoAr", "patternToWatchAr", "patternInterruptionAr", "microExperimentAr", "realWorldMissionAr", "relationshipPracticeAr", "environmentChangeAr", "fullModeAr", "standardModeAr", "minimumModeAr", "failureResponseAr", "tooEasyAr", "tooHardAr", "reflectionAr", "journalPromptsAr", "noticeTomorrowAr", "tomorrowPreparationAr", "roleSpecificAdaptationAr", "specialContextAdaptationsAr", "safetyNoteAr", "professionalHelpThresholdAr", "primarySourceIds", "additionalSourceIds", "evidenceStrength", "researchLimitationAr", "optionalDeepDiveAr", "completionWithoutPerfectionAr"
+      ],
+      "properties": {
+        "dayNumber": {"type": "integer", "minimum": 1, "maximum": 100},
+        "titleAr": {"$ref": "#/$defs/substantiveArabic"},
+        "objectiveAr": {"$ref": "#/$defs/substantiveArabic"},
+        "definitionSimpleAr": {"$ref": "#/$defs/substantiveArabic"},
+        "definitionDeepAr": {"$ref": "#/$defs/longArabic"},
+        "notThisAr": {"$ref": "#/$defs/substantiveArabic"},
+        "roleRelevanceAr": {"$ref": "#/$defs/substantiveArabic"},
+        "researchSaysAr": {"$ref": "#/$defs/longArabic"},
+        "researchDoesNotProveAr": {"$ref": "#/$defs/substantiveArabic"},
+        "commonMisunderstandingAr": {"$ref": "#/$defs/substantiveArabic"},
+        "healthyExampleAr": {"$ref": "#/$defs/substantiveArabic"},
+        "unhealthyExampleAr": {"$ref": "#/$defs/substantiveArabic"},
+        "egyptianContextExampleAr": {"$ref": "#/$defs/substantiveArabic"},
+        "selfCheckQuestionsAr": {"type": "array", "minItems": 3, "maxItems": 8, "uniqueItems": true, "items": {"$ref": "#/$defs/shortArabic"}},
+        "action5MinAr": {"$ref": "#/$defs/substantiveArabic"},
+        "action15MinAr": {"$ref": "#/$defs/substantiveArabic"},
+        "fullPracticeAr": {"$ref": "#/$defs/substantiveArabic"},
+        "whatNotToDoAr": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/shortArabic"}},
+        "patternToWatchAr": {"$ref": "#/$defs/substantiveArabic"},
+        "patternInterruptionAr": {"$ref": "#/$defs/substantiveArabic"},
+        "microExperimentAr": {"$ref": "#/$defs/substantiveArabic"},
+        "realWorldMissionAr": {"$ref": "#/$defs/substantiveArabic"},
+        "relationshipPracticeAr": {"$ref": "#/$defs/applicableText"},
+        "environmentChangeAr": {"$ref": "#/$defs/substantiveArabic"},
+        "fullModeAr": {"$ref": "#/$defs/substantiveArabic"},
+        "standardModeAr": {"$ref": "#/$defs/substantiveArabic"},
+        "minimumModeAr": {"$ref": "#/$defs/substantiveArabic"},
+        "failureResponseAr": {"$ref": "#/$defs/substantiveArabic"},
+        "tooEasyAr": {"$ref": "#/$defs/substantiveArabic"},
+        "tooHardAr": {"$ref": "#/$defs/substantiveArabic"},
+        "reflectionAr": {"$ref": "#/$defs/substantiveArabic"},
+        "journalPromptsAr": {"type": "array", "minItems": 1, "maxItems": 4, "uniqueItems": true, "items": {"$ref": "#/$defs/shortArabic"}},
+        "noticeTomorrowAr": {"$ref": "#/$defs/substantiveArabic"},
+        "tomorrowPreparationAr": {"$ref": "#/$defs/substantiveArabic"},
+        "roleSpecificAdaptationAr": {"$ref": "#/$defs/substantiveArabic"},
+        "specialContextAdaptationsAr": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"$ref": "#/$defs/shortArabic"}},
+        "safetyNoteAr": {"$ref": "#/$defs/applicableText"},
+        "professionalHelpThresholdAr": {"$ref": "#/$defs/applicableText"},
+        "primarySourceIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"}},
+        "additionalSourceIds": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[A-Z0-9-]+$"}},
+        "evidenceStrength": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rating", "explanationAr"],
+          "properties": {"rating": {"enum": ["STRONG", "MODERATE", "LIMITED", "MIXED"]}, "explanationAr": {"$ref": "#/$defs/substantiveArabic"}}
+        },
+        "researchLimitationAr": {"$ref": "#/$defs/substantiveArabic"},
+        "optionalDeepDiveAr": {"$ref": "#/$defs/applicableText"},
+        "completionWithoutPerfectionAr": {"$ref": "#/$defs/substantiveArabic"}
+      }
+    }
+  },
+  "$defs": {
+    "shortArabic": {"type": "string", "minLength": 12, "pattern": "[\\u0600-\\u06FF]"},
+    "substantiveArabic": {"type": "string", "minLength": 35, "pattern": "[\\u0600-\\u06FF]"},
+    "longArabic": {"type": "string", "minLength": 100, "pattern": "[\\u0600-\\u06FF]"},
+    "applicableText": {"type": "object", "additionalProperties": false, "required": ["applicable", "textAr"], "properties": {"applicable": {"type": "boolean"}, "textAr": {"$ref": "#/$defs/substantiveArabic"}}}
+  }
+}

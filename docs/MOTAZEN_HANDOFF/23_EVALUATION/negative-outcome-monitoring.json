@@ -1,0 +1,14 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_OPERATION_PENDING","professionalReview":"PENDING",
+  "signalTypes":["DISTRESS_INCREASE","SHAME_OR_SELF_BLAME","COMPULSIVE_MONITORING","RELATIONSHIP_ESCALATION","DELAYED_HELP","PRIVACY_EXPOSURE","ACCESS_EXCLUSION","MISLEADING_CLAIM","UNVERIFIED_RESOURCE","OTHER"],
+  "report":{"anonymousAllowed":true,"accountRequired":false,"lessonCompletionRequired":false,"freeTextOptional":true,"sensitiveDataWarning":true,"immediateDeleteOption":true},
+  "triage":[
+    {"severity":"CRITICAL","examples":["immediate danger","resource directs to unsafe action","exposed violence data"],"action":"hide_or_disable_affected_route_and_escalate_to_named_human_owner","sla":"IMMEDIATE_OPERATIONAL_RESPONSE"},
+    {"severity":"HIGH","examples":["delayed help","relationship escalation","credible clinical misinterpretation"],"action":"hold content and multidisciplinary review","sla":"ONE_BUSINESS_DAY_TARGET"},
+    {"severity":"MEDIUM","examples":["shame copy","repeated accessibility failure"],"action":"triage and corrective release","sla":"FIVE_BUSINESS_DAY_TARGET"},
+    {"severity":"LOW","examples":["confusing wording","minor fit problem"],"action":"backlog with transparent status","sla":"NEXT_REVIEW_CYCLE"}
+  ],
+  "invariants":["do not diagnose reporter","do not promise emergency response","show urgent-help exit independently","do not reuse reports for advertising or training","preserve reporter withdrawal and deletion where legally possible"],
+  "governance":{"ownersRequired":["clinical_safety","privacy","accessibility","content","operations"],"decisionLogRequired":true,"recurrenceReviewRequired":true,"publicAggregateReportRequired":true},
+  "openGates":["staffing and on-call authority","legal retention review","secure implementation","pilot thresholds"]
+}

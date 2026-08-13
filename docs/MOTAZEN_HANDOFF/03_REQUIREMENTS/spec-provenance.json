@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "status": "VERIFIED_IDENTICAL_ATTACHMENTS",
+  "readCompletelyOn": "2026-08-13",
+  "encoding": "UTF-8",
+  "lineCount": 6325,
+  "byteCount": 90018,
+  "sha256": "ba776c1cc5f036dd504d116d4ea14050d8b9634d9a1573e289dc71369cf44e66",
+  "attachments": [
+    "C:\\Users\\pc\\.codex\\attachments\\0168a005-90e3-47cc-a8d2-39bec8ce12a4\\pasted-text-1.txt",
+    "C:\\Users\\pc\\.codex\\attachments\\8b1761a5-1e32-4269-b769-b2133ce27a3e\\pasted-text.txt"
+  ],
+  "project": {
+    "root": "C:\\Users\\pc\\Desktop\\EGY\\mawthooq-site",
+    "productPath": "C:\\Users\\pc\\Desktop\\EGY\\mawthooq-site\\motazen",
+    "repository": "https://github.com/khaledwho0-ops/mawthooq-defense.git",
+    "branch": "implementation/plan1-phase0",
+    "baselineHead": "786b61dea964114a15c6d179b3f70a84c276b13f"
+  },
+  "bindingInterpretation": [
+    "The specification extends and preserves the existing Motazen project.",
+    "Every track claimed complete must have its own 100 full distinct days.",
+    "The first execution is Parts A through S in order for Track #1, not immediate production UI coding.",
+    "AI critical-lens reports may support red-teaming but cannot be labeled professional human approval.",
+    "Existing product files remain preserved until the content and handoff system is implementation-ready."
+  ]
+}

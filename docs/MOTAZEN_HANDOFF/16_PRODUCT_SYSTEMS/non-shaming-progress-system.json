@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "purposeAr":"عرض تقدم متعدد الأبعاد من دون درجة اتزان أو ترتيب أو عقوبة أو ادعاء نتيجة.",
+  "dimensions":[
+    {"id":"UNDERSTANDING","labelAr":"فهم يمكن شرحه","evidence":"optional_self_explanation","neverScore":true},
+    {"id":"ATTEMPT","labelAr":"محاولة آمنة","evidence":"optional_user_mark","neverScore":true},
+    {"id":"FIT","labelAr":"ملاءمة أو عدم ملاءمة","evidence":"keep_modify_stop","neverScore":true},
+    {"id":"NEGATIVE_EFFECT","labelAr":"أثر سلبي أو ضغط","evidence":"private_optional_report","neverScore":true},
+    {"id":"SUPPORT","labelAr":"اختيار دعم أو توقف","evidence":"no_details_required","neverScore":true}
+  ],
+  "display":{"percentCompleteAllowed":false,"wellbeingScoreAllowed":false,"rankAllowed":false,"streakAllowed":false,"badgesOnSafetyAllowed":false,"neutralHistoryOptional":true,"userCanHideAll":true},
+  "copyRules":["استخدم وصف الفعل لا وصف الشخصية","اعرض لا دليل كافٍ كإجابة كاملة","التوقف والراحة والمساعدة نتائج كاملة","لا تستخدم أحمر للعقاب أو أخضر للصحة"],
+  "privacy":{"storageDefault":"NO_STORAGE","exportOptional":true,"deleteIndependent":true,"monetizationForbidden":true,"diagnosticInferenceForbidden":true},
+  "acceptanceTests":["لا يمكن حساب درجة كلية من الحقول","لا يخسر المستخدم شيئًا بالانقطاع","يمكن تسجيل أثر سلبي دون إكمال الدرس","يمكن إخفاء التاريخ وحذفه","لا يظهر ترتيب اجتماعي أو مقارنة"],
+  "openGates":["اختبار فهم المستخدمين للمؤشرات","مراجعة أضرار القياس الذاتي","تنفيذ وإتاحة وصول كاملة"]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "entryPoints":["DAY_FIELD","SOURCE","TERM","ACCESSIBILITY","SAFETY","PRIVACY","GENERAL"],
+  "minimumFields":["category","affectedObjectId","descriptionOptional","replyRequested","consentToStore"],
+  "forbiddenRequiredFields":["realName","diagnosis","phone","preciseLocation","relationshipDetails","employer","nationalId"],
+  "routes":{"SAFETY":"negative_outcome_monitoring","PRIVACY":"privacy_owner","ACCESSIBILITY":"accessibility_owner","EVIDENCE":"research_owner","ARABIC":"language_cultural_owner","OTHER":"product_triage"},
+  "statuses":["RECEIVED","TRIAGED","NEEDS_INFORMATION","PLANNED","FIXED","DECLINED_WITH_REASON","HELD_EXTERNAL","CLOSED"],
+  "antiRetaliation":["feedback never changes progress","negative feedback never hides help","reporting does not require account","no persuasive request to change rating"],
+  "transparency":{"receiptProvided":true,"statusVisibleIfTokenRetained":true,"decisionReasonRequired":true,"aggregateChangelog":true},
+  "privacy":{"noStorageDefaultForDraft":true,"attachmentDefault":false,"deletionRoute":true,"AIProcessingDefault":false},
+  "openGates":["secure storage and abuse controls","Arabic usability test","staff ownership and response capacity"]
+}

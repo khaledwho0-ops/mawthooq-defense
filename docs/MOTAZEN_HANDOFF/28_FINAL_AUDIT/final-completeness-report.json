@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-08-13",
+  "status": "NOT_PUBLICATION_READY",
+  "counts": {
+    "BLOCKED_EXTERNAL": 5,
+    "PARTIAL": 95
+  },
+  "verifiedAssets": {
+    "humanTrackDays": 100,
+    "contentFields": 4400,
+    "behavioralExperiments": 100,
+    "realWorldMissions": 100,
+    "journalPrompts": 300,
+    "sources": 91,
+    "claims": 60,
+    "capabilities": 44,
+    "patterns": 61
+  },
+  "externalBlocks": [
+    {
+      "id": "DEL-073",
+      "name": "Resource Directory",
+      "gap": "Owner confirmation and access tests are required before publication."
+    },
+    {
+      "id": "DEL-095",
+      "name": "Cultural Review",
+      "gap": "Attributable Egyptian cultural/language review has not occurred."
+    },
+    {
+      "id": "DEL-096",
+      "name": "Clinical Safety Review",
+      "gap": "Attributable Egyptian clinical/public-health review has not occurred."
+    },
+    {
+      "id": "DEL-097",
+      "name": "Accessibility Audit",
+      "gap": "Manual assistive-technology and expert WCAG audit has not occurred."
+    },
+    {
+      "id": "DEL-098",
+      "name": "Privacy Audit",
+      "gap": "Privacy architecture is not built and independent privacy review has not occurred."
+    }
+  ],
+  "missingDeliverables": [],
+  "publicationDecision": "HOLD_PENDING_PROFESSIONAL_USER_PRIVACY_ACCESSIBILITY_RESOURCE_AND_IMPLEMENTATION_GATES",
+  "truthStatement": "A complete 100-day researched draft exists for the first-priority إنسان متزن track. The wider multi-track product and production implementation are not complete, and no external approval is claimed."
+}

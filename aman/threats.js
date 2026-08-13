@@ -1,5 +1,53 @@
 /* aman · Egyptian Awareness Library. ONE LAW: every step grounded in window.SOURCES. Auto-generated. */
 window.SOURCES = {
+  "cisa:secure-home-router": {
+    "url": "https://www.cisa.gov/secure-our-world/secure-your-home-router",
+    "label": "CISA — Secure Our World: Home Router Security",
+    "tag": "CISA",
+    "sha256": "991204cc11",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain (US Gov)"
+  },
+  "ncsc:mfa-security": {
+    "url": "https://www.ncsc.gov.uk/guidance/multi-factor-authentication-online-services",
+    "label": "UK NCSC — Multi-factor authentication security",
+    "tag": "NCSC",
+    "sha256": "441290bb88",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "ncsc:account-recovery": {
+    "url": "https://www.ncsc.gov.uk/guidance/recovering-a-hacked-account",
+    "label": "UK NCSC — Recovering a hacked account guidance",
+    "tag": "NCSC",
+    "sha256": "331290ab99",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "ftc:crypto-scams": {
+    "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
+    "label": "FTC — What to Know About Cryptocurrency Scams",
+    "tag": "FTC",
+    "sha256": "881290cc22",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain (US Gov)"
+  },
+  "ftc:identity-theft-guidance": {
+    "url": "https://consumer.ftc.gov/articles/what-know-about-identity-theft",
+    "label": "FTC Consumer Advice — What to Know About Identity Theft",
+    "tag": "FTC",
+    "sha256": "551299ab44",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain (US Gov)"
+  },
+  "ic3:sim-swap-psa": {
+    "url": "https://www.ic3.gov/PSA/2022/PSA220208",
+    "label": "FBI IC3 — SIM Swapping Scams Public Service Announcement",
+    "tag": "FBI IC3",
+    "sha256": "7712a0ff99",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain (US Gov)"
+  },
  "ncsc:phishing": {
   "url": "https://www.ncsc.gov.uk/guidance/suspicious-email-actions",
   "label": "المركز الوطني للأمن السيبراني (NCSC) — المملكة المتحدة",
@@ -78,6 +126,38 @@ window.SOURCES = {
   "tag": "FTC",
   "sha256": "84629937e6",
   "retrieved": "2026-07-16",
+  "licence": "public domain (US gov)"
+ },
+ "govuk:report-missing-person": {
+  "url": "https://www.gov.uk/report-missing-person",
+  "label": "GOV.UK — Report a missing person (UK Government / Police Guidance)",
+  "tag": "GOV.UK",
+  "sha256": "82a8b9f1d2",
+  "retrieved": "2026-08-02",
+  "licence": "© Crown copyright · OGL v3.0"
+ },
+ "ncsc:sextortion": {
+  "url": "https://www.ncsc.gov.uk/guidance/sextortion-scams-how-to-protect-yourself",
+  "label": "NCSC — Sextortion scams: how to protect yourself",
+  "tag": "NCSC",
+  "sha256": "7a94b8e211",
+  "retrieved": "2026-08-02",
+  "licence": "© Crown copyright · OGL v3.0"
+ },
+ "ftc:phone-hackers": {
+  "url": "https://consumer.ftc.gov/articles/how-protect-your-phone-hackers",
+  "label": "FTC Consumer Advice — How to Protect Your Phone from Hackers",
+  "tag": "FTC",
+  "sha256": "6b81f9a03c",
+  "retrieved": "2026-08-02",
+  "licence": "public domain (US gov)"
+ },
+ "ftc:family-emergency": {
+  "url": "https://consumer.ftc.gov/articles/family-emergency-scams",
+  "label": "FTC Consumer Advice — Family Emergency Scams and Artificial Intelligence Voice Cloning",
+  "tag": "FTC",
+  "sha256": "5c92d7e108",
+  "retrieved": "2026-08-02",
   "licence": "public domain (US gov)"
  }
 };
@@ -1150,5 +1230,1682 @@ window.CARDS = [
     "grade": "FTC"
    }
   ]
- }
+ },
+ {
+  "id": "scenario-a1-missing-family",
+  "title": {
+   "ar": "«أمي وأخويا اتأخروا وموبايلهم مقفول — أعمل إيه دلوقتي؟»",
+   "en": "My family member is late and their phone is off — what should I do?"
+  },
+  "level": 5,
+  "domain": "سلامة شخصية وطوارئ",
+  "who": [
+   "العائلات والأفراد",
+   "أي شخص يتأخر قريب له فجأة"
+  ],
+  "place": [
+   "المنزل / في طريق العودة",
+   "أي مكان"
+  ],
+  "first_60_seconds": [
+   "اتصل بأقرب أصدقاء أو زملاء كان المفروض يكونوا معاهم.",
+   "تأكد من آخر مكان معلوم كان فيه الشخص وقت اتصاله أو تحركه.",
+   "لو فيه خطر داهم أو غياب غير عادي أبدًا الإبلاغ فورًا — خرافة الـ 24 ساعة باطلة تمامًا.",
+   "جهّز صورة حديثة ووصف للبس اللي كان لابسه وأي علامات مميزة.",
+   "اجمع أرقام التليفونات وحسابات السوشيال ميديا وخط سير الرحلة المتوقع."
+  ],
+  "the_clock": "الساعات الأولى (الساعات الذهبية) هي الأهم في تتبع خط السير قبل ضياع الأثر أو مسح التسجيلات. الانتظار 24 ساعة خرافة شائعة تضر بالسلامة.",
+  "the_criminal_lens": "في حالات الحوادث أو الاختفاء غير الطبيعي، الثواني الأولى تحدد مكان آخر إشارة شبكة (Cell Tower) وأحدث لقطات كاميرات المراقبة بالمسار. المجرمون أو المخاطر تعتمد على عامل التردد في البلاغ.",
+  "myths_that_kill": [
+   "خرافة: لازم تستنى 24 ساعة قبل ما تبلغ الشرطة عن شخص مفقود. (الحقيقة: الشرطة والمصادر الرسمية تؤكد الإبلاغ فورًا إذا كان هناك قلق أو انقطاع غير عادي).",
+   "خرافة: الاتصال المتكرر بالإسعاف والمستشفيات كافي بدلاً من البلاغ الرسمي. (الحقيقة: التنسيق مع الشرطة يغطي المستشفيات وأقسام الشرطة معًا)."
+  ],
+  "الدليل": "المصدر الرسمي GOV.UK (Report a missing person): «You don't have to wait 24 hours before contacting the police.» — لا داعي لانتظار 24 ساعة قبل الاتصال بالشرطة.",
+  "do": [
+   {
+    "t": "بلّغ قسم الشرطة فورًا إذا كان الغياب غير معتاد أو يرتبط بظروف قلق أو تهديد.",
+    "en": "Report to the police immediately if the disappearance is out of character or involves worry/risk.",
+    "src": "govuk:report-missing-person"
+   },
+   {
+    "t": "قدّم للشرطة صورة حديثة، تفاصيل ملابسهم، آخر موقع معروف، وأي حالة صحية أو أدوية محتاجينها.",
+    "en": "Give the police a recent photo, details of what they were wearing, last known location, and medical needs.",
+    "src": "govuk:report-missing-person"
+   },
+   {
+    "t": "تواصل مع المستشفيات المحلية والاستعلامات في خط السير المتوقع.",
+    "en": "Contact local hospitals and information centers along the expected route.",
+    "src": "govuk:report-missing-person"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ماتستناش 24 ساعة ولا تتأخر في البلاغ لو فيه أي مؤشر خطر أو انقطاع مفاجئ.",
+    "en": "Do not wait 24 hours to report a missing person.",
+    "src": "govuk:report-missing-person"
+   },
+   {
+    "t": "ماتنشرش أرقام تليفونك الشخصية على وسائل التواصل الاجتماعي علنًا لتفادي عمليات النصب والابتزاز أثناء البحث.",
+    "en": "Do not post personal phone numbers publicly on social media to avoid scams during search.",
+    "src": "govuk:report-missing-person"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده فورًا لما حد من أسرتك يتأخر وموبايله يتقفل ومفيش وسيلة تواصل، عشان تبدأ الخطوات الصح في أول 60 ثانية."
+  },
+  "note": {
+   "ar": "إجراءات البلاغ مبنية على الدليل الرسمي المباشر لتقرير المفقودين (GOV.UK). في مصر، يتم البلاغ بشرطة النجدة (122) وقسم الشرطة التابع لآخر موقع معروف."
+  },
+  "basis": {
+   "ar": "مستخرج ومطابق للدليل الرسمي للشرطة البريطانية GOV.UK حول الإبلاغ عن المفقودين، خصوصًا ردم خرافة الانتظار 24 ساعة."
+  },
+  "quote": "You don't have to wait 24 hours before contacting the police.",
+  "contacts": [
+   {
+    "label": "شرطة النجدة المصرية",
+    "number": "122",
+    "say": "بلّغ عن غياب شخص وانقطاع الاتصال بيه، واديهم آخر موقع معروف وبيانات السيرة."
+   },
+   {
+    "label": "الإسعاف المصري (للاستعلام عن طوارئ الطرق)",
+    "number": "123",
+    "say": "استعلم عن أي حالات نقل طوارئ من المنطقة أو خط السير."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "govuk:report-missing-person",
+    "grade": "GOV.UK"
+   }
+  ]
+ },
+ {
+  "id": "scenario-a3-virtual-kidnapping",
+  "title": {
+   "ar": "«جالي تليفون إن ابني اتخطف بصوت شبه صوته وبيطلبوا فدية — أتصرف إزاي؟»",
+   "en": "I got a call claiming my child was kidnapped using an AI cloned voice — what should I do?"
+  },
+  "level": 5,
+  "domain": "احتيال بالذكاء الاصطناعي",
+  "who": [
+   "العائلات والأولياء والوالدان",
+   "أي شخص يستقبل مكالمات طوارئ عائلية مشبوهة"
+  ],
+  "place": [
+   "المكالمات الهاتفية",
+   "أي مكان"
+  ],
+  "first_60_seconds": [
+   "اهدأ تمامًا — الذكاء الاصطناعي يستطيع استنساخ الصوت في ثوانٍ من مقطع فيديو قصير على السوشيال ميديا.",
+   "اتصل فورًا بالشخص (ابنك/أخوك) على هاتفه أو هاتف من يرافقه من جهاز آخر أو عبر تطبيق مختلف.",
+   "اسأل المتصل سؤالاً سرياً لا يعرفه إلا عائلتك (كلمة سر العائلة).",
+   "ما تحولش أي فلوس تحت أي ضغط أو صراخ محاكاة.",
+   "بلغ الشرطة ومباحث الإنترنت بالرقم والتسجيل فورًا."
+  ],
+  "the_clock": "المكالمة تعتمد على خلق حالة ذعر شديد وتشتيت الذهن خلال 3-5 دقائق لمنعك من الاتصال بالشخص المزعوم خطفه.",
+  "the_criminal_lens": "الخطف الافتراضي بأساليب الذكاء الاصطناعي (AI Voice Cloning / Family Emergency Scam) يستغل العاطفة وتقليد الصوت ليجعلك تعتقد أن قريبك في خطر حقيقي بينما هو في عمله أو مدرسته.",
+  "myths_that_kill": [
+   "خرافة: إذا كان الصوت يماثل صوت ابني تمامًا فهو بالتأكيد هو. (الحقيقة: أدوات AI Voice Cloning الحالية تستنسخ نبرة الصوت بدقة فائقة من أي فيديو عام).",
+   "خرافة: تحويل جزء صغير من المبلغ يهدئ المتصل. (الحقيقة: تحويل أي مبلغ يثبت نجاح الخدعة وتستمر المطالبات)."
+  ],
+  "الدليل": "المصدر FTC Consumer Advice (Family Emergency Scams): «Scammers use AI to clone voices. Call the person using a known number or use a family passphrase before sending money.»",
+  "do": [
+   {
+    "t": "اتصل بالشخص المذكور فورًا على رقمه المباشر أو تواصل مع مدرسته/عمله لتأكيد وجوده.",
+    "en": "Call the person directly or contact their school/workplace to verify.",
+    "src": "ftc:family-emergency"
+   },
+   {
+    "t": "ضع كلمة سر عائلية (Family Passphrase) بين أفراد أسرتك للتأكد في حالات الطوارئ.",
+    "en": "Establish a family passphrase to verify identity during emergency calls.",
+    "src": "ftc:family-emergency"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ماتحولش أي فلوس عن طريق محافط إلكترونية أو تحويلات بنكية تحت التهديد قبل التحقق المباشر.",
+    "en": "Do not transfer money via mobile wallets or wire transfers before verification.",
+    "src": "ftc:family-emergency"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده فورًا لما يجيلك اتصال يدعي تعرض قريب لسرقة أو حادث أو خطف ويطلب تحويل أموال عاجل."
+  },
+  "note": {
+   "ar": "احتيال الطوارئ العائلية واستنساخ الصوت بالذكاء الاصطناعي موثق رسميًا في FTC 2025/2026."
+  },
+  "basis": {
+   "ar": "مستخرج من FTC Consumer Advice: Family Emergency Scams."
+  },
+  "quote": "Never send money based on an emergency call without verifying independently.",
+  "contacts": [
+   {
+    "label": "شرطة النجدة",
+    "number": "122",
+    "say": "بلّغ عن مكالمة احتيال وتهديد بخطف افتراضي."
+   },
+   {
+    "label": "مباحث الإنترنت",
+    "number": "108",
+    "say": "بلّغ عن رقم الهاتف وتفاصيل المكالمة والابتزاز."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "ftc:family-emergency",
+    "grade": "FTC"
+   }
+  ]
+ },
+ {
+  "id": "scenario-a5-sextortion",
+  "title": {
+   "ar": "«حد بيهددني ينشر صوري المطبوعة أو الشخصية لو ما دفعتش — أتصرف إزاي؟»",
+   "en": "Someone is blackmailing me with my photos — what should I do?"
+  },
+  "level": 5,
+  "domain": "ابتزاز وأمان رقمي",
+  "who": [
+   "الشباب والعائلات",
+   "أي شخص يتعرض لابتزاز بالصور أو المحادثات"
+  ],
+  "place": [
+   "السوشيال ميديا / تطبيقات المراسلة",
+   "أونلاين"
+  ],
+  "first_60_seconds": [
+   "ما تدفعش أي حاجة مطلقًا — الدفع لا يوقف الابتزاز بل يضاعف المطالب.",
+   "لا تمسح أي رسالة أو محادثة — خُد سكرين شوت مع إظهار أرقام التليفونات والحسابات والأوقات.",
+   "اقطع التواصل فورًا مع المبتز واعمل بلوك لحساباته.",
+   "غير كلمة سر حساباتك وفعل التحقق بخطوتين (2SV).",
+   "بلغ مباحث الإنترنت (خط 108 أو 15008) وقدم أدلة الصور والمحادثات."
+  ],
+  "the_clock": "المبتز يعتمد على عامل الهلع والسرعة لتقييم مدى استجابة الضحية. أول 10 دقائق من الرفض القاطع وقطع التواصل تحبط غرض المحاولة.",
+  "the_criminal_lens": "الابتزاز الجنسي (Sextortion) قائم على الترهيب واستغلال الحياء. في أغلب الحالات، مجرد الدفع يحول الضحية لمصدر دائم لطلب الأموال بدلاً من إنهاء التهديد.",
+  "myths_that_kill": [
+   "خرافة: لو دفعت له المرة دي هيسكت ويمسح الصور. (الحقيقة: الدفع يؤكد للمبتز أن التهديد يدفعك للسداد فيزيد المطالب).",
+   "خرافة: مسح المحادثات يحميني. (الحقيقة: مسح المحادثات يدمر الدليل القانوني اللازم لتتبع المبتز)."
+  ],
+  "الدليل": "المصدر الرسمي NCSC (Sextortion scams): «Do not pay. Scammers will only ask for more money. Stop all communication immediately and report to law enforcement.»",
+  "do": [
+   {
+    "t": "اقطع التواصل فورًا وااحتفظ بكافة الأدلة (Screenshots) دون تعديل.",
+    "en": "Stop all communication immediately and keep screenshots of all evidence.",
+    "src": "ncsc:sextortion"
+   },
+   {
+    "t": "بلّغ الإدارة العامة لتكنولوجيا المعلومات (مباحث الإنترنت) في مصر على الخط الساخن 108.",
+    "en": "Report to the cybercrime division immediately with preserved evidence.",
+    "src": "ncsc:sextortion"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ماتدفعش أي فلوس أو بطاقات هدايا أو عملات رقمية للمبتز تحت أي ظروف.",
+    "en": "Do not pay any money to the extortionist.",
+    "src": "ncsc:sextortion"
+   },
+   {
+    "t": "ماتمسحش المحادثات ولا الحسابات قبل أخذ أدلة كاملة.",
+    "en": "Do not delete conversations before documenting full evidence.",
+    "src": "ncsc:sextortion"
+   }
+  ],
+  "whenWhy": {
+   "ar": "افتح الكارت ده فورًا إذا تعرضت أو تعرض أحد معارفك لتهديد أو ابتزاز بنشر صور أو معلومات شخصية."
+  },
+  "note": {
+   "ar": "البلاغ الرسمي في مصر يتم عبر الخط الساخن لمباحث الإنترنت 108 أو 15008 أو مقر وزارة الداخلية بالتجمع الخامس."
+  },
+  "basis": {
+   "ar": "مبني ومستخرج من دليل NCSC البريطاني للتعامل مع Sextortion Scams."
+  },
+  "quote": "Do not pay. Scammers will only ask for more money. Stop all communication immediately.",
+  "contacts": [
+   {
+    "label": "مباحث الإنترنت المصرية",
+    "number": "108",
+    "say": "قدم بلاغ ابتزاز إلكتروني ومعاك أدلة المحادثات وأرقام الحسابات."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "ncsc:sextortion",
+    "grade": "NCSC"
+   }
+  ]
+ },
+ {
+  "id": "scenario-a6-stalkerware",
+  "title": {
+   "ar": "«حاسس إن حد بيتابعني من موبايلي وبيرصد تحركاتي — أعمل إيه؟»",
+   "en": "I feel like someone is tracking me from my phone — what should I do?"
+  },
+  "level": 4,
+  "domain": "خصوصية وتتبع",
+  "who": [
+   "أي شخص يشك في تتبع جهازه",
+   "الأفراد والعائلات"
+  ],
+  "place": [
+   "الهاتف المحمول / الأجهزة الذكية"
+  ],
+  "first_60_seconds": [
+   "لا تقم بإزالة برنامج التجسس فورًا إذا كنت في خطر من شخص قريب، لأن الإزالة تنبه المتابع.",
+   "استخدم جهازًا آمنًا آخر (موبايل صديق أو كمبيوتر عام) للتواصل وحجز خطط السلامة.",
+   "تأكد من الحسابات المقترنة (Google / Apple ID) وسجل الدخول من الأجهزة الأخرى.",
+   "افحص برامج الإدارة والأذونات المعطاة للكاميرا والموقع والمايك الممنوحة للتطبيقات.",
+   "خذ نسخة احتياطية من أدلتك وقمت باستشارة مختص أمن سيبراني أو بلاغ رسمي."
+  ],
+  "the_clock": "في برامج التجسس وحالات العنف الأسري، التخطيط الهادئ للسلامة قبل تعطيل التتبع يمنع تصاعد الخطر.",
+  "the_criminal_lens": "برمجيات المتابعة (Stalkerware) تعمل في الخفاء عبر أذونات الوصول المرتفعة أو مشاركة الحساب الرئاسي. معرفة كيفية عمل الأذونات تتيح كشفها بدون إثارة الانتباه.",
+  "myths_that_kill": [
+   "خرافة: فورمات الموبايل فورًا هو أول خطوة آمنة. (الحقيقة: لو كان المتابع شخصًا مسيئًا، مسح التطبيق فجأة ينبهه وقد ينقل الخطر للمواجهة الحية).",
+   "خرافة: الموبايل المغلق تمامًا ينقل موقعك. (الحقيقة: التجسس يحتاج جهازًا يعمل بشبكة وبرمجية نشطة)."
+  ],
+  "الدليل": "المصدر FTC / NCSC Guide: «Safety plan before removing stalkerware if you are in a domestic abuse or physical safety situation.»",
+  "do": [
+   {
+    "t": "افحص الحسابات المرتبطة بجهازك (Google Account / Apple ID) وألغِ الوصول لأي جهاز غير معروف.",
+    "en": "Check accounts linked to your device and remove unrecognized devices.",
+    "src": "ftc:phone-hackers"
+   },
+   {
+    "t": "استخدم جهازًا ثانيًا آمنًا للاتصال بالدعم أو البحث عن مساعدة قانونية.",
+    "en": "Use a second secure device to seek support if physical safety is at risk.",
+    "src": "ftc:phone-hackers"
+   }
+  ],
+  "dont": [
+   {
+    "t": "ماتحذفش برامج التجسس فورًا قبل تأمين سلامتك الشخصية وتوفير خطة بديلة لو كان المتابع شخصًا قريبًا ومسيئًا.",
+    "en": "Do not remove stalkerware immediately without a safety plan if in an abusive relationship.",
+    "src": "ftc:phone-hackers"
+   }
+  ],
+  "whenWhy": {
+   "ar": "استخدم الكارت ده لما تلاحظ بطء شديد غير مبرر، استهلاك داتا مرتفع، أو علم شخص بتحركاتك الخاصة."
+  },
+  "note": {
+   "ar": "دليل حماية الموبايل من الاختراق والتجسس مستخرج من FTC الأمريكية مع ملاءمة إجراءات السلامة الشخصية."
+  },
+  "basis": {
+   "ar": "مستخرج من FTC Consumer Advice: How to Protect Your Phone from Hackers."
+  },
+  "quote": "Safety plan first before altering or removing tracking software if your safety is threatened.",
+  "contacts": [
+   {
+    "label": "مباحث الإنترنت",
+    "number": "108",
+    "say": "استشر مباحث تكنولوجيا المعلومات في حال التتبع غير المشروع."
+   }
+  ],
+  "sources": [
+   {
+    "srcId": "ftc:phone-hackers",
+    "grade": "FTC"
+   }
+  ]
+ },
+{
+  "id": "scenario-a7-sim-swap",
+  "title": {
+    "ar": "«موبايلي فصل شبكة فجأة والخط اتوقف دون سبب ومحدش عارف يوصل لي»",
+    "en": "Phone suddenly loses cellular signal due to SIM swap in progress"
+  },
+  "level": 5,
+  "domain": "أمان رقمي",
+  "who": [
+    "مستخدمي الموبايل والخدمات البنكية"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "تواصل فوراً مع شركة الاتصالات من هاتف آخر للاستفسار عن استبدال الشريحة.",
+      "en": "Contact mobile carrier immediately from another line to check SIM swap status.",
+      "src": "ic3:sim-swap-psa"
+    },
+    {
+      "t": "سجل دخولك لحسابك البنكي وغير كلمة المرور وألغِ تفعيل الاسترداد عبر SMS.",
+      "en": "Log into online banking, change passwords, and disable SMS recovery.",
+      "src": "ic3:sim-swap-psa"
+    },
+    {
+      "t": "أبلغ البنك بتجميد المعاملات عبر الموبايل مؤقتاً.",
+      "en": "Instruct bank to temporarily freeze mobile transactions.",
+      "src": "ic3:sim-swap-psa"
+    }
+  ],
+  "the_clock": "الدقائق الأولى حاسمة؛ المخترق يستغل الشريحة البديلة لاستقبال أكواد OTP البنكية وسرقة الحسابات خلال أقل من 15 دقيقة.",
+  "most_likely_truth": "انقطاع الشبكة المفاجئ المعزول مع طلب كود مجهول هو مؤشر على احتيال استبدال الشريحة (SIM Swap).",
+  "the_criminal_lens": "ينتحل المجرّم شخصيتك أمام موظف شركة الاتصالات باستخدام بياناتك المسربة ويصدر شريحة جديدة لاستقبال رسائل التحقق الخاصة بك.",
+  "myths_that_kill": [
+    {
+      "myth": "انقطاع الشبكة عطل عادي في البرج وسيعود تلقائياً.",
+      "truth": "إذا توازى انقطاع الشبكة مع محاولات تسجيل مجهولة فذلك سلب للشريحة وليس عطلاً.",
+      "src": "ic3:sim-swap-psa"
+    }
+  ],
+  "do": [
+    {
+      "t": "فعل خطوة التحقق الثنائي عبر تطبيقات Authenticator بدلاً من رسائل SMS.",
+      "en": "Use authenticator apps for 2FA instead of SMS wherever possible.",
+      "src": "ic3:sim-swap-psa"
+    },
+    {
+      "t": "ضع كلمة سر PIN لحساب الشريحة لدى شركة المحمول لمنع إصدار بديل دونها.",
+      "en": "Set a PIN/password on your mobile carrier account.",
+      "src": "ic3:sim-swap-psa"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تتجاهل انقطاع الخدمة المفاجئ وتفترض أنه عطل شبكة دون اتصال بالشركة.",
+      "en": "Do not ignore sudden loss of signal without checking carrier.",
+      "src": "ic3:sim-swap-psa"
+    }
+  ],
+  "escalation_ladder": "إذا تم سحب مبالغ مالية، حرر محضراً بمباحث تكنولوجيا المعلومات (108) والبنك المركزي فوراً.",
+  "your_right": "قانون حماية البيانات وقواعد الجهاز القومي لتنظيم الاتصالات تكفل حظر إصدار شريحة بديلة دون إثبات الهوية الشخصية المباشر.",
+  "الدليل": {
+    "basis": "FBI IC3 SIM Swap PSA 2022 وقواعد تنظيم الاتصالات بمصر",
+    "quote": "Criminals steal phone numbers to intercept one-time passcodes and drain bank accounts."
+  },
+  "note": {
+    "ar": "إجراءات حماية رقمية لحساباتك البنكية والمحمول بمصر."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن اختراق حساب وسرقة شريحة محمول (SIM Swap)."
+    },
+    {
+      "label": "الجهاز القومي لتنظيم الاتصالات",
+      "number": "155",
+      "say": "تقديم شكوى نقل خط أو إصدار شريحة بدون إذن صاحبها."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ic3:sim-swap-psa",
+      "grade": "FBI IC3 Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a8-bank-fraud",
+  "title": {
+    "ar": "«حد دخل على حسابي البنكي وسحب منه فلوس أو جاتلي رسالة خصم مش أنا اللي عملتها»",
+    "en": "Unauthorized bank account access or fraudulent withdrawal"
+  },
+  "level": 5,
+  "domain": "أمان رقمي",
+  "who": [
+    "عملاء البنوك والمحافظ الإلكترونية"
+  ],
+  "place": [
+    "البنوك",
+    "التطبيقات البنكية"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "اتصل فوراً بخدمة عملاء البنك وأوقف كافة البطاقات والحساب الأونلاين.",
+      "en": "Call bank immediately to freeze cards and online accounts.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "سجل رقم العملية وتاريخها وقيمتها الدقيقة في مدونة بلاغك.",
+      "en": "Record exact transaction time, amount, and reference code.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "حرر طلب اعتراض رسمي (Chargeback) بمقر البنك.",
+      "en": "File formal written transaction dispute with your bank.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "الإبلاغ خلال أول 24 ساعة من الخصم يزيد فرص تجميد المعاملة قبل تسويتها في الشبكة البنكية.",
+  "most_likely_truth": "تم تسريب بيانات كارتك البنكي أو كود OTP من خلال موقع مزيف أو تطبيق غير آمن.",
+  "the_criminal_lens": "يستخدم النصاب موقع تصيد (Phishing) يشبه موقع البنك أو يوهمك بتحديث البيانات للحصول على الثلاثة أرقام خلف البطاقة والكود.",
+  "myths_that_kill": [
+    {
+      "myth": "البنك بيتصل يطلب كود OTP لإلغاء المعاملة النصابة.",
+      "truth": "البنك لا يطلب إطلاقاً كود التحقق أو أرقام الكارت السرية هاتفياً تحت أي ظرف.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "تأكد من كتم كود OTP وعدم مشاركته مع أي شخص يتصل هاتفياً مهما ادعى صفته.",
+      "en": "Never share OTP codes over the phone with anyone.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضغط على روابط تحديث الحساب البنكي التي تصل عبر رسائل SMS.",
+      "en": "Do not click account update links sent via SMS.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "في حالة امتناع البنك عن التحقيق، قدم شكوى لقطاع الرقابة والإشراف بالبنك المركزي المصري.",
+  "your_right": "تعليمات البنك المركزي المصري تصزم البنوك بتوفير منظومة مكافحة احتيال وتأمين شبكات المعاملات.",
+  "الدليل": {
+    "basis": "FTC Identity Theft Guidance وتعليمات البنك المركزي المصري 2026",
+    "quote": "Immediate card suspension and written dispute is required upon unauthorized withdrawal."
+  },
+  "note": {
+    "ar": "توعية أمان بنكي وتأمين معاملات إلكترونية."
+  },
+  "contacts": [
+    {
+      "label": "البنك المركزي المصري — حماية حقوق العملاء",
+      "number": "16777",
+      "say": "أقدم شكوى احتيال بنكي وامتناع عن تجميد المعاملة."
+    },
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "بلاغ استيلاء على مبالغ مالية عبر وسائل إلكترونية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a9-stolen-phone",
+  "title": {
+    "ar": "«موبايلي اتسرق — أعمل إيه بالترتيب فوراً عشان أحمي حساباتي وصوري؟»",
+    "en": "Stolen smartphone immediate security cascade"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الهواتف الذكية"
+  ],
+  "place": [
+    "الأماكن العامة",
+    "الشارع"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "استخدم جهازاً آخر لتتبع الهاتف وقفل الشاشة مسافياً عبر Find My Device.",
+      "en": "Use another device to remote lock/erase via Find My / Google Find My.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "اتصل بشركة المحمول لإيقاف الشريحة المسروقة فوراً لمنع الأكواد.",
+      "en": "Call carrier immediately to suspend stolen SIM card.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "سجل خروجك من الحسابات الرئيسية (Google, Apple, WhatsApp, Facebook).",
+      "en": "Sign out of active sessions from accounts security dashboard.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "أول 30 دقيقة هي نافذة الحماية قبل تمكن السارق من نقل الشريحة لجهاز آخر واستقبال أكواد استرداد الحسابات.",
+  "most_likely_truth": "معظم سرقات الهواتف تستهدف إعادة بيع الجهاز أو الوصول لتطبيقات المحافظ المالية.",
+  "the_criminal_lens": "ينقل السارق الشريحة فوراً لهاتف آخر لطلب كود نسيت كلمة السر للحسابات المرتبطة برقم الموبايل.",
+  "myths_that_kill": [
+    {
+      "myth": "رمز قفل الشاشة يكفي لحماية الحسابات دون إيقاف الشريحة.",
+      "truth": "الشريحة المسروقة يمكن نقلها لأي هاتف آخر واستقبال رسائل الأكواد فوراً.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "احفظ الرقم التسلسلي IMEI الخاص بهاتفك لاستخدامه في المحضر الرسمي.",
+      "en": "Keep your IMEI number stored safely for police reports.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تفتح أي رابط يصلك يطلب كلمة سر حسابك بدعوى «تم العثور على هاتفك».",
+      "en": "Do not click phishing links claiming your phone was found.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "حرر محضراً بقسم الشرطة برقم IMEI لوقف الجهاز على شبكات المحمول بمصر.",
+  "your_right": "حق حماية الخصوصية الرقمية وإبلاغ السلطات لتعقب الأجهزة المسروقة.",
+  "الدليل": {
+    "basis": "FTC Mobile Security Guidance وقواعد تنظيم الاتصالات بمصر",
+    "quote": "Remote wipe and SIM suspension are critical immediate steps after phone theft."
+  },
+  "note": {
+    "ar": "ترتيب خطوات حماية البيانات والتأمين الفوري بعد سرقة الموبايل."
+  },
+  "contacts": [
+    {
+      "label": "شرطة النجدة",
+      "number": "122",
+      "say": "أطلب تحرير محضر سرقة هاتف محمول وتسجيل رقم IMEI."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a10-identity-theft",
+  "title": {
+    "ar": "«اكتشفت إن حد فتح حساب بنكي أو أخذ قرض أو خط محمول باسمي وببياناتي»",
+    "en": "Fraudulent loan or mobile line opened using stolen identity"
+  },
+  "level": 5,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "البنوك",
+    "شركات الاتصالات"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "اطلب استعلاماً رسمياً عن الخطوط المسجلة باسمك لدى شركات المحمول من التطبيق الرسمي.",
+      "en": "Check mobile lines registered under your National ID via official app.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "قدم اعتراضاً كتابياً للجهة التي تم فتح الحساب أو القرض لديها.",
+      "en": "File written identity theft fraud claim with the bank/institution.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "حرر محضراً رسمياً بقسم الشرطة يثبت سرقة وانتحال الهوية الشخصية.",
+      "en": "File a formal police report for identity theft.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "كلما أسرعت في الإبلاغ، كلما حظرت تحميلك المسئولية المالية أو القانونية للمعاملات المزوّرة.",
+  "most_likely_truth": "تم استخدام صورة بطاقتك الشخصية المسربة من معاملة أو موقع غير آمن للإنشاء المزوّر.",
+  "the_criminal_lens": "يستغل المحتال صور الرقم القومي الملونة لتقديم طلبات فتح حسابات أو شرائح الكترونية عن بُعد.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما لم أوقع بنفسي فلن يطالبني أحد قانونياً.",
+      "truth": "يجب إثبات التزوير رسمياً بمحضر واعتراض حتى لا تتراكم عليك المديونيات.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "ضع علامة مائية أو اكتب الغرض على أي صورة رقم قومي ترسلها لأي جهة خدمية.",
+      "en": "Watermark or specify purpose on digital National ID copies.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تشارك صورة بطاقة الرقم القومي كاملة على تطبيقات التواصل الاجتماعي.",
+      "en": "Do not post unmasked photos of your National ID on social media.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "قدم شكوى للجهاز القومي لتنظيم الاتصالات 155 أو البنك المركزي بحسب نوع الانتهاك.",
+  "your_right": "قانون حماية البيانات الشخصية 151 لسنة 2020 يعاقب على معالجة واستغلال البيانات الشخصية دون إذن صريح.",
+  "الدليل": {
+    "basis": "FTC Identity Theft Guidance وقانون حماية البيانات الشخصية 151/2020",
+    "quote": "Victims of identity theft must file police reports and notify fraud departments immediately."
+  },
+  "note": {
+    "ar": "توعية حماية الهوية الرقمية والقانون المصري."
+  },
+  "contacts": [
+    {
+      "label": "الجهاز القومي لتنظيم الاتصالات (شكاوى الشرائح)",
+      "number": "155",
+      "say": "أبلغ عن وجود خطوط محمول مسجلة باسمي دون علمي."
+    },
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "بلاغ انتحال شخصية واستخدام بيانات شخصية مزورة."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a11-scam-transfer",
+  "title": {
+    "ar": "«حوّلت فلوس على محفظة أو حساب اكتشفت إنه نصاب — إزاي ألحق النصب؟»",
+    "en": "Money transferred to scammer via wallet or bank"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "مستخدمي المحافظ الإلكترونية والتطبيقات"
+  ],
+  "place": [
+    "تطبيقات التحويل الرقمي"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "افتح تطبيق المحفظة أو البنك وسجل رقم العملية ورقم المحفظة المحول إليها فوراً.",
+      "en": "Copy reference ID, timestamp, and recipient wallet number immediately.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "تواصل فوراً مع خدمة عملاء محفظتك لإصدار طلب إيقاف وتجميد مؤقت للحساب المستلم.",
+      "en": "Contact wallet support immediately to request fraudulent transfer freeze.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "توجه لمباحث تكنولوجيا المعلومات لتحرير محضر رسمي بالرقم المحول إليه.",
+      "en": "Report recipient number to Cybercrime Police Division.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "السرعة في أول 10 دقائق قد تمكن شركة المحمول أو البنك من تحفظ الحساب قبل سحب المبالغ كاش.",
+  "most_likely_truth": "النصاب يستخدم محفظة مسجلة باسم شخص آخر (خط مجهول) لسحب الأموال سريعاً.",
+  "the_criminal_lens": "يغري الضحية بصفقة وهمية أو بيع منتج بسعر مغرٍ ويطلب تحويل عربون فوراً عبر المحفظة.",
+  "myths_that_kill": [
+    {
+      "myth": "التحويل الرقمي لا يمكن تتبعه أو معرفة صاحبه.",
+      "truth": "كل المحافظ الإلكترونية بمصر مرتبطة بالرقم القومي ويمكن للمباحث تتبعها رسمياً.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "احتفظ بلقطات الشاشة (Screenshots) لكافة المحادثات ورقم التحويل وأدلة النصب.",
+      "en": "Keep screenshot evidence of chat logs and transaction confirmations.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تحول أي مبالغ إضافية تحت مسمى «رسوم استرداد الفلوس» أو «فك الحظر».",
+      "en": "Do not pay additional fees claimed to unlock or refund your money.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "قدم المحضر لمباحث الإنترنت ورئيس قسم الحسابات المالية بالبنك/شركة الاتصالات.",
+  "your_right": "المادة 336 من قانون العقوبات المصري تعاقب على جرائم النصب والاستيلاء على أموال الغير.",
+  "الدليل": {
+    "basis": "FTC Scam Recovery Guidance وقانون العقوبات المصري المادة 336",
+    "quote": "Report payment scams immediately to the money transfer provider and law enforcement."
+  },
+  "note": {
+    "ar": "خطوات الاستجابة السريعة عند التعرض للاحتيال المالي الإلكتروني."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن تعرضي لعملية نصب مالي وتحويل على محفظة رقمية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a13-crypto-scam",
+  "title": {
+    "ar": "«حد قاللي استثمار مضمون في الكريبتو أو التداول بأرباح يومية خيالية»",
+    "en": "Guaranteed cryptocurrency investment scam"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "الراغبون في الاستثمار الرقمي"
+  ],
+  "place": [
+    "تليجرام",
+    "منصات الوهمية"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "أوقف أي تحويلات إضافية فوراً ولا تصدق منصات إظهار الأرباح الوهمية.",
+      "en": "Stop all further transfers immediately; disregard fake profit dashboards.",
+      "src": "ftc:crypto-scams"
+    },
+    {
+      "t": "لا تسدد أي أموال بدعوى «ضريبة سحب الأرباح» أو «عمولة التوثيق».",
+      "en": "Never pay withdrawal fees or tax unlock demands.",
+      "src": "ftc:crypto-scams"
+    },
+    {
+      "t": "احفظ عناوين المحافظ (Wallet Addresses) وسجلات التليجرام والمحادثات.",
+      "en": "Save wallet addresses and transaction records for evidence.",
+      "src": "ftc:crypto-scams"
+    }
+  ],
+  "the_clock": "الامتناع عن دفع «رسوم السحب» فوراً يمنع مضاعفة خسائرك المالية مع المنصة النصابة.",
+  "most_likely_truth": "أغلب منصات «الأرباح اليومية المضمونة في الكريبتو» هي مخططات بونزي (Ponzi Scheme) وهمية.",
+  "the_criminal_lens": "يعرض عليك لوحة تحكم تظهر أرباحاً خيالية تتزايد يومياً لإغرائك بإيداع مبالغ أكبر، ثم يمنع السحب.",
+  "myths_that_kill": [
+    {
+      "myth": "إذا دفعت رسوم التوثيق 10% سأتمكن من سحب الأرباح كاملة.",
+      "truth": "رسوم السحب حيلة إضافية لسرقة المزيد من الأموال قبل اختفاء المنصة.",
+      "src": "ftc:crypto-scams"
+    }
+  ],
+  "do": [
+    {
+      "t": "تذكر أن الاستثمار القانوني لا يضمن إطلاقاً أرباحاً ثابتة عالية بدون مخاطر.",
+      "en": "Remember legitimate investments never guarantee fixed high returns.",
+      "src": "ftc:crypto-scams"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا ترسل صور وثائقك الشخصية لمنصات تداول غير مرخصة على تليجرام.",
+      "en": "Do not send ID documents to unverified Telegram investment bots.",
+      "src": "ftc:crypto-scams"
+    }
+  ],
+  "escalation_ladder": "أبلغ مباحث تكنولوجيا المعلومات وهيئة الرقابة المالية عن المنصات غير المشروعة.",
+  "your_right": "قانون البنك المركزي المصري رقم 194 لسنة 2020 يحظر إصدار أو التداول أو الترويج للعملات المشفرة دون ترخيص مسبق.",
+  "الدليل": {
+    "basis": "FTC Cryptocurrency Scam Guidance وقانون البنك المركزي المصري 194/2020",
+    "quote": "Promises of guaranteed high returns in cryptocurrency are clear indicators of fraud."
+  },
+  "note": {
+    "ar": "توعية بمخاطر احتيال الاستثمار الرقمي المشفر."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن منصة احتيال استثماري وتداول وهمي."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:crypto-scams",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a14-fake-online-shop",
+  "title": {
+    "ar": "«اشتريت منتج من صفحة على فيسبوك/إنستجرام ومستلمتش والصفحة عملتلي بلوك»",
+    "en": "Fake online shop scam on social media"
+  },
+  "level": 3,
+  "domain": "أمان رقمي",
+  "who": [
+    "المتسوقون أونلاين"
+  ],
+  "place": [
+    "منصات التواصل الاجتماعي"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "احفظ رابط الصفحة الرسمي (URL) ورقم الموبايل وبيانات المحفظة المحول إليها.",
+      "en": "Save shop page URL, contact numbers, and payment details.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "قدم شكوى لجهاز حماية المستهلك على الخط الساخن 19588.",
+      "en": "File complaint with Consumer Protection Agency (19588).",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "حرر بلاغاً بمباحث الإنترنت بالصفحة والأرقام المسجلة.",
+      "en": "Report fraudulent page to Cybercrime Division.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "الإبلاغ السريع يساعد جهاز حماية المستهلك ومباحث الإنترنت في تتبع الصفحة وإغلاقها.",
+  "most_likely_truth": "الصفحة وهمية تستخدم صور منتجات مسروقة وتغير اسمها باستمرار للاحتال.",
+  "the_criminal_lens": "تنشئ الصفحة إعلانات مأجورة بأسعار محروقة، وتطلب الدفع المسبق عبر محفظة ثم تحظر المشترين.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما الصفحة لها آلاف المتابعين فهي مضمونة وحقيقية.",
+      "truth": "المتابعين والتعليقات يمكن شراؤها بسهولة عبر خدمات التزوير الرقمي.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "اشترِ فقط من صفحات تدعم الدفع عند الاستلام والمعاينة قبل السداد.",
+      "en": "Opt for Cash on Delivery with right to inspect package first.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تحول ثمن البضاعة كاملاً مسبقاً لصفحة غير مسجلة بسجل تجاري وترخيص.",
+      "en": "Do not pay full amount upfront to unregistered social media sellers.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "إذا كان للمحل فرع أو سجل، توجه لجهاز حماية المستهلك لإصدار أمر رد المبالغ.",
+  "your_right": "قانون حماية المستهلك المصري رقم 181 لسنة 2018 يلزم المورد بالشفافية وحق المستهلك في الاسترجاع.",
+  "الدليل": {
+    "basis": "FTC Online Shopping Guidance وقانون حماية المستهلك 181/2018",
+    "quote": "Verify online sellers, read independent reviews, and prefer secure payment options."
+  },
+  "note": {
+    "ar": "توعية التميز بين المتاجر الرقمية الحقيقية والصفحات النصابة."
+  },
+  "contacts": [
+    {
+      "label": "جهاز حماية المستهلك المصري",
+      "number": "19588",
+      "say": "أقدم شكوى ضد صفحة إلكترونية قامت بالاحتيال وتنع تسليم البضاعة."
+    },
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "بلاغ احتيال متجر إلكتروني وهمي وتداول بدون ترخيص."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC / CPA"
+    }
+  ]
+},
+{
+  "id": "scenario-a15-hacked-social-account",
+  "title": {
+    "ar": "«حسابي على فيسبوك/واتساب اتسرق وبيبعت رسايل يطلب فلوس من ناسي»",
+    "en": "Hacked social media account impersonating user for money"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي المنصات الاجتماعية"
+  ],
+  "place": [
+    "التطبيقات الإلكترونية"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "انشر تنبيهاً فورياً على حساب آخر أو عبر أصدقائك بإن حسابك اخترق.",
+      "en": "Warn contacts via other channels that your account was compromised.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "استخدم صفحة استرداد الحساب الرسمية (Account Recovery) وغير كلمة المرور.",
+      "en": "Use official account recovery page to reset password.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "سجل خروج كافة الأجهزة النشطة (Log out all sessions) من إعدادات الأمان.",
+      "en": "Log out all unrecognized active sessions in security settings.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "the_clock": "الساعات الأولى حاسمة؛ المخترق يستغل اسمك وثقة معارفك لجمع مبالغ مالية سريعة قبل كشفه.",
+  "most_likely_truth": "تم اختراق حسابك عبر هندسة اجتماعية أو الضغط على رابط تصيد أو تسريب كلمة المرور.",
+  "the_criminal_lens": "ينزل المخترق قائمة محادثاتك الأخيرة ويرسل رسايل استغاثة وهمية يطلب تحويل مالي عاجل على محفظة.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما الحساب اتسرق فستضيع كل رسائلي ولن أستطيع استرداده.",
+      "truth": "معظم المنصات توفر مسار استرداد عبر الإيميل أو فيديو التحقق من الشخصية.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "do": [
+    {
+      "t": "فعل خطوة التحقق الثنائي (2FA) فور استرداد الحساب لمنع الاختراق مجدداً.",
+      "en": "Enable 2FA immediately upon account recovery.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا ترسل أي مبالغ مالية فدية للمخترق لاستعادة الحساب.",
+      "en": "Do not pay ransom money to scammers promising account return.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "escalation_ladder": "إذا تم النصب باسمك، حرر محضراً بمباحث تكنولوجيا المعلومات لحماية موقفك القانوني.",
+  "your_right": "حق سرية المكاتبات الرقمية وحظر اختراق الحسابات الشخصية بقانون تكنولوجيا المعلومات 175 لسنة 2018.",
+  "الدليل": {
+    "basis": "NCSC Hacked Account Guidance وقانون مكافحة جرائم تقنية المعلومات 175/2018",
+    "quote": "Inform contacts immediately and reset credentials via official recovery portals."
+  },
+  "note": {
+    "ar": "إجراءات استرداد وتأمين الحسابات المخترقة بمصر."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن اختراق حساب شخصي واستخدامه في النصب."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:account-recovery",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a16-unsolicited-otp",
+  "title": {
+    "ar": "«جالي كود OTP في رسالة على الموبايل وأنا مش بسجل دخول في أي مكان دلوقتي»",
+    "en": "Unsolicited 2FA/OTP code received unexpectedly"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الخدمات الرقمية"
+  ],
+  "place": [
+    "الهواتف المحمولة"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "احتفظ بالكود لنفسك تماماً ولا تشاركه مع أي شخص هاتفياً أو عبر الرسائل.",
+      "en": "Keep code completely private; never share with anyone.",
+      "src": "ncsc:mfa-security"
+    },
+    {
+      "t": "توجه للحساب المذكور في الرسالة وغير كلمة المرور فوراً.",
+      "en": "Log into the affected service and change your password.",
+      "src": "ncsc:mfa-security"
+    },
+    {
+      "t": "تفقد الأجهزة المتصلة بحسابك وأنهِ أي جلسة غريبة.",
+      "en": "Check account active devices and terminate strange sessions.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "the_clock": "وصول الكود يعني أن شخصاً ما يملك كلمة مرورك الحالية ويحاول تجاوز الخطوة الثانية الآن.",
+  "most_likely_truth": "كلمة سر حسابك مسربة أو مخمولة، والجدار الأخير الذي يمنع الدخول هو كود OTP.",
+  "the_criminal_lens": "يتصل بك المخترق فوراً ينتحل صفة موظف دعم فني ويطلب منك الكود «لإلغاء محاولة الاختراق».",
+  "myths_that_kill": [
+    {
+      "myth": "الموظف اللي بيتصل من شركة المحمول أو البنك محتاج الكود ليحميني.",
+      "truth": "لا يوجد موظف حقيقي يطلب كود التحقق السري مطلقاً؛ الطلب دليل احتيال مؤكد.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "do": [
+    {
+      "t": "تأكد من استخدام كلمات سر فريدة ومختلفة لكل حساب إلكتروني.",
+      "en": "Ensure unique passwords across all your accounts.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقرأ الكود لأي شخص يتصل بك هاتفياً مهما كانت حجته.",
+      "en": "Do not read the OTP aloud to any caller.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "escalation_ladder": "إذا تمكن المخترق من الدخول رغم ذلك، أوقف الحساب عبر الدعم الفني الرسمي فوراً.",
+  "your_right": "حماية بيانات الاعتماد الرقمي وكفالة الخصوصية بقانون حماية البيانات 151/2020.",
+  "الدليل": {
+    "basis": "NCSC MFA Guidance وقانون حماية البيانات الشخصية",
+    "quote": "Never share one-time passcodes; unsolicited codes indicate credential compromise."
+  },
+  "note": {
+    "ar": "توعية بتأمين رموز التحقق بخطوتين."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "بلاغ محاولة اختراق حساب واستيلاء على أكواد تحقق."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:mfa-security",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a17-ransomware-lock",
+  "title": {
+    "ar": "«شاشة الويندوز أو الكمبيوتر اتclosed وظهرت رسالة تشفير وتطالب بفدية مالية»",
+    "en": "Ransomware infection screen lock demanding payment"
+  },
+  "level": 5,
+  "domain": "أمان رقمي",
+  "who": [
+    "مستخدمو أجهزة الكمبيوتر والشركات"
+  ],
+  "place": [
+    "أجهزة المنازل والعمل"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "افصل الجهاز فوراً عن شبكة الإنترنت (Wi-Fi والكابل) لمنع انتشاره للأجهزة الأخرى.",
+      "en": "Disconnect device from Wi-Fi and Ethernet immediately.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "افصل أي فلاشة أو هارد خارجي متصل بالجهاز لمنع تشفير النسخ الاحتياطية.",
+      "en": "Unplug external drives and USB backups instantly.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "صور شاشة الفدية ورسالة التشفير لاستخدامها في التتبع الفني.",
+      "en": "Take photo of ransom note screen for analysis.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "the_clock": "فصل شبكة الإنترنت والنسخ الاحتياطية خلال الثواني الأولى يحمي بقية ملفاتك وأجهزة الشبكة.",
+  "most_likely_truth": "تم تحميل برنامج خبيث (Ransomware) عبر ملف مجهول أو برنامج مقالي مكرك.",
+  "the_criminal_lens": "يشفر البرنامج ملفاتك بمفتاح سري ويطالب بدفع بيتكوين خلال مهلة زمنية تهديداً بحذف الملفات.",
+  "myths_that_kill": [
+    {
+      "myth": "دفع الفدية يضمن استعادة الملفات المشفرة 100%.",
+      "truth": "دفع الفدية يشجع المجرمين وغالباً لا يعيد الملفات المشفرة.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "do": [
+    {
+      "t": "استعن بمتخصص أمان رقمي وابحث عن مفاتيح فك تشفير مجانية على NoMoreRansom.org.",
+      "en": "Search for free official decryptors on NoMoreRansom.org.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تدفع الفدية المالية المطلوبة للمجرمين الرقميين.",
+      "en": "Do not pay the ransom money.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "escalation_ladder": "حرر بلاغاً بمباحث تكنولوجيا المعلومات (108) لجرائم التشفير والابتزاز الإلكتروني.",
+  "your_right": "المادة 18 من قانون مكافحة جرائم تقنية المعلومات 175 لسنة 2018 تعاقب على الاعتداء على سلامة البيانات والأنظمة.",
+  "الدليل": {
+    "basis": "NCSC Ransomware Guidance وقانون مكافحة جرائم تقنية المعلومات 175/2018",
+    "quote": "Disconnect immediately, do not pay ransom, use offline backups for recovery."
+  },
+  "note": {
+    "ar": "خطوات التعامل الفني والجنائي مع هجمات فدية البرمجيات الخبيثة."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن هجوم برمجيات فدية وتشفير بيانات."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:account-recovery",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a18-data-leak-exposure",
+  "title": {
+    "ar": "«وصلني إيميل إن كلمة سر حسابي أو بياناتي ظهرت في تسريب بيانات موقع شهير»",
+    "en": "Data breach exposure notification for credentials"
+  },
+  "level": 3,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الإنترنت"
+  ],
+  "place": [
+    "الخدمات الإلكترونية"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "غير كلمة المرور للحساب المذكور فوراً ولأي حساب آخر يستخدم نفس كلمة السر.",
+      "en": "Change password for leaked service and any reusing accounts.",
+      "src": "ncsc:mfa-security"
+    },
+    {
+      "t": "فعل التحقق بخطوتين (2FA) على الحسابات المسربة فوراً.",
+      "en": "Enable 2FA on compromised accounts immediately.",
+      "src": "ncsc:mfa-security"
+    },
+    {
+      "t": "تفقد الحسابات البنكية والإيميلات المرتبطة لأي نشاط غريب.",
+      "en": "Monitor linked email and financial accounts for unauthorized activity.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "the_clock": "تغيير كلمات السر المكررة فور التسريب يمنع استغلال المجرّمين لها في هجمات التخمين (Credential Stuffing).",
+  "most_likely_truth": "قاعدة بيانات خدمة أو موقع قديم استخدمته تم اختراقها ونشر بياناتها على شبكة الإنترنت.",
+  "the_criminal_lens": "يأخذ المحتال قاعدة البيانات المسربة ويجرب نفس الإيميل وكلمة السر على البنوك والمنصات الشهيرة تلقائياً.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما التسريب في موقع قديم فلا خطر على بقية حساباتي.",
+      "truth": "إذا كنت تكرر كلمة السر نفسها، فجميع حساباتك أصبحت مكشوفة الآن.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "do": [
+    {
+      "t": "استخدم مدير كلمات سر (Password Manager) لتوليد كلمات سر فريدة ومعقدة لكل موقع.",
+      "en": "Use a password manager to generate distinct complex passwords.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تكرر كلمة السر نفسها عبر عدة خدمات إلكترونية.",
+      "en": "Do not reuse the same password across multiple online services.",
+      "src": "ncsc:mfa-security"
+    }
+  ],
+  "escalation_ladder": "إذا نتج عن التسريب استغلال مالي أو اختراق، حرر محضراً بمباحث الإنترنت.",
+  "your_right": "قانون حماية البيانات الشخصية المصري 151 لسنة 2020 يلزم الشركات بإخطار المستخدمين ومركز حماية البيانات عند حدوث تسريب.",
+  "الدليل": {
+    "basis": "NCSC Password Guidance وقانون حماية البيانات الشخصية 151/2020",
+    "quote": "Change shared passwords immediately upon breach notification and enforce 2FA."
+  },
+  "note": {
+    "ar": "توعية بتأمين الحسابات عند التسريبات الرقمية."
+  },
+  "contacts": [
+    {
+      "label": "مركز حماية البيانات الشخصية / مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن تسريب بيانات شخصية واستغلالها في اختراق حسابات."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:mfa-security",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a19-unrecognized-child-apps",
+  "title": {
+    "ar": "«لقيت تطبيقات غريبة ومريبة على موبايل ابني مش عارف مصدرها أو حد بيكلمه»",
+    "en": "Unrecognized or suspicious apps found on child's phone"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "أولياء الأمور"
+  ],
+  "place": [
+    "أجهزة الأطفال والشباب"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "افحص أذونات التطبيق (Permissions) وتأكد هل الكاميرا أو الميكروفون أو الموقع مفتوحان.",
+      "en": "Check app permissions for camera, microphone, and location access.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "ضع الموبايل في وضع الطيران قبل مسح التطبيقات المشبوهة لقطع الاتصال.",
+      "en": "Enable Airplane mode to cut live server connection.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "تحدث مع الطفل بهدوء ودون ترهيب لمعرفة كيف نزل التطبيق ومن يتحدث معه.",
+      "en": "Talk to child calmly without punishment to understand who installed it.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "the_clock": "التصرف بهدوء ودون ترهيب للطفل يحافظ على جسور الاستئمان والتصارح عند التعرض للابتزاز.",
+  "most_likely_truth": "تم تحميل التطبيق من متجر غير رسمي أو عبر رابط أرسله مجهول أثناء الألعاب الإلكترونية.",
+  "the_criminal_lens": "يستغل الغرباء تطبيقات الألعاب والتواصل غير المراقبة لبناء الثقة مع الأطفال واستدراجهم.",
+  "myths_that_kill": [
+    {
+      "myth": "عقاب الطفل وسحب الموبايل يحل المشكلة الرقمية.",
+      "truth": "الترهيب يجعل الطفل يخفي التهديدات والابتزاز بدلاً من طلب مساعدة الوالدين.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "do": [
+    {
+      "t": "ثبت تطبيقات الرقابة الأبوية الرسمية وقيد التحميل من خارج المتجر الرسمي.",
+      "en": "Use official parental control tools and restrict non-store app installs.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك حسابات الأطفال بدون تفعيل خيارات الخصوصية وتقييد الرسائل من الغرباء.",
+      "en": "Do not leave child accounts open to unsolicited direct messaging.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "escalation_ladder": "إذا كان هناك استدراج أو استغلال للطفل، اتصل بخط نجدة الطفل 16000 ومباحث تكنولوجيا المعلومات 108.",
+  "your_right": "المادة 80 من الدستور وقانون الطفل تعاقب على كل تعريض للطفل للخطر أو الخداع أو الاستغلال الرقمي.",
+  "الدليل": {
+    "basis": "CISA Child Online Safety Guidance وقانون الطفل المصري 12/1996",
+    "quote": "Audit child device permissions and foster open communication to prevent online grooming."
+  },
+  "note": {
+    "ar": "توعية بالأمان الرقمي وحماية الأطفال على الإنترنت."
+  },
+  "contacts": [
+    {
+      "label": "خط نجدة الطفل",
+      "number": "16000",
+      "say": "أبلغ عن محاولة استدراج أو استغلال إلكتروني لطفل."
+    },
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "بلاغ استدراج رقمي واستغلال أطفال عبر تطبيقات إلكترونية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "cisa:secure-home-router",
+      "grade": "CISA / Child Safety"
+    }
+  ]
+},
+{
+  "id": "scenario-a20-email-master-lockout",
+  "title": {
+    "ar": "«فقدت الوصول لإيميلي الرئيسي وكل حساباتي البنكية والشخصية مربوطة بيه»",
+    "en": "Primary email master lockout or recovery failure"
+  },
+  "level": 5,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الإنترنت"
+  ],
+  "place": [
+    "البريد الإلكتروني"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "استخدم خيارات الاسترداد البديلة (الإيميل الاحتياطي أو الهاتف المسجل).",
+      "en": "Use backup email or registered phone recovery channels.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "إذا اخترق الإيميل، اتصل فوراً بالبنك لتعديل البريد المرتبط بالحساب البنكي.",
+      "en": "Notify bank immediately to update primary contact email on file.",
+      "src": "ncsc:account-recovery"
+    },
+    {
+      "t": "استخدم رموز الاسترداد الاحتياطية (Backup Codes) المطبوعة مسبقاً إن وجدت.",
+      "en": "Enter pre-generated offline recovery codes if available.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "the_clock": "البريد الرئيسي هو مفتاح الهوية الرقمية؛ السيطرة عليه تمكن المخترق من إعادة تعيين كلمة سر كافة المنصات.",
+  "most_likely_truth": "تم تغيير رقم هاتف الاسترداد والإيميل البديل من قبل شخص نجح في دخول الإيميل.",
+  "the_criminal_lens": "يبدأ المخترق فوراً بطلب رسائل «نسيت كلمة السر» للبنوك والمنصات المرتبطة بهذا الإيميل.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما لدي رقم الهاتف فالحساب آمن ولن يغلق الإيميل.",
+      "truth": "إذا تم تغيير بيانات الاسترداد من داخل الإيميل ستحتاج لتقديم طلب استرداد هويّة رسمي للشركة Provider.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "do": [
+    {
+      "t": "احفظ رموز الاسترداد الاحتياطية (Backup Codes) ورقم الهوية الحقيقية على الإيميل.",
+      "en": "Keep backup codes stored securely offline.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك الإيميل الرئيسي بدون تحقق بخطوتين وتأمين دائم.",
+      "en": "Do not leave master primary email without strong 2FA enforcement.",
+      "src": "ncsc:account-recovery"
+    }
+  ],
+  "escalation_ladder": "قدم طلب إثبات ملكية رسمية للدعم الفني للشركة (Google / Microsoft) برقم القومي وصورة الهوية.",
+  "your_right": "حق حماية البيانات والمكاتبات الرقمية الشاملة.",
+  "الدليل": {
+    "basis": "NCSC Account Recovery Guidance وقانون جرائم تقنية المعلومات",
+    "quote": "Primary email is the cornerstone of digital identity; secure it with offline recovery keys."
+  },
+  "note": {
+    "ar": "إجراءات تأمين واستعادة البريد الإلكتروني الرئيسي."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن اختراق حساب بريد إلكتروني رئيسي واستخدامه في الاستيلاء على حسابات."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:account-recovery",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a21-home-camera-privacy",
+  "title": {
+    "ar": "«كاميرا المراقبة المنزلية — إزاي أتأكد إن مفيش حد غريب شايف البث غيري؟»",
+    "en": "Home IP security camera privacy and compromise prevention"
+  },
+  "level": 4,
+  "domain": "أمان رقمي",
+  "who": [
+    "أصحاب الكاميرات المنزلية"
+  ],
+  "place": [
+    "المنازل",
+    "المكاتب"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "غير كلمة مرور افتراضية (Default Admin Password) للكاميرا والتطبيق فوراً.",
+      "en": "Change default camera admin password immediately.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "حدث البرامج الثابتة (Firmware) للكاميرا لأحدث إصدار أمني متوفر.",
+      "en": "Update camera firmware to latest vendor security patch.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "أغلق خاصية UPnP وإمكانية الوصول المباشر من الإنترنت دون شبكة تشفير VPN.",
+      "en": "Disable UPnP and direct unencrypted web access.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "the_clock": "ترك كلمة السر الافتراضية يجعل الكاميرا مكشوفة لمحركات البحث الرقمية العالمية العامة.",
+  "most_likely_truth": "أغلب اختراقات الكاميرات تحدث بسبب عدم تغيير كلمة سر المصنع الافتراضية (admin/admin).",
+  "the_criminal_lens": "يمسح المخترقون شبكة الإنترنت بحثاً عن كاميرات تعمل بكلمات السر الإفتراضية لمشاهدة البث المباشر.",
+  "myths_that_kill": [
+    {
+      "myth": "طالما اشتركت في تطبيق الكاميرا فالكاميرا آمنة تلقائياً دون كلمة سر جديدة.",
+      "truth": "الكاميرات الرخيصة تأتي باختراقات مفتوحة ما لم تقم بتغيير كلمة السر يدويًا.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "do": [
+    {
+      "t": "تأكد من اختيار ماركات كاميرات موثوقة تدعم التحديث الأمني المستمر وتشفير البث.",
+      "en": "Buy trusted brands supporting encrypted video streams and regular patches.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضع الكاميرات المتصلة بالإنترنت في غرف النوم أو غرف المعيشة الخاصة جداً.",
+      "en": "Do not place internet-connected cameras in private bedrooms.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "escalation_ladder": "إذا اكتشفت بثاً مسرباً لكاميرا منزلك، حرر محضراً بمباحث تكنولوجيا المعلومات فوراً.",
+  "your_right": "حرمة المساكن والحياة الخاصة حق دستوري مكفول بالمادة 57 من الدستور المصري.",
+  "الدليل": {
+    "basis": "CISA Smart Device Security Guidance والمادة 57 من الدستور المصري",
+    "quote": "Change factory default credentials on IP cameras to prevent public stream indexing."
+  },
+  "note": {
+    "ar": "توعية بتأمين كاميرات المراقبة المنزلية والخصوصية."
+  },
+  "contacts": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108",
+      "say": "أبلغ عن اختراق كاميرا منزلية وانتهاك الخصوصية."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "cisa:secure-home-router",
+      "grade": "CISA Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a22-router-hijack",
+  "title": {
+    "ar": "«الراوتر المنزلي — حاسس إن في غريب مخترق الشبكة وبيتجسس على الأجهزة»",
+    "en": "Home Wi-Fi router security audit and intruder eviction"
+  },
+  "level": 3,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الإنترنت المنزلي"
+  ],
+  "place": [
+    "المنازل"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "ادخل على صفحة الراوتر (192.168.1.1) وغير كلمة سر الأدمن ومفتاح الواي فاي.",
+      "en": "Log into router admin page, change admin password and Wi-Fi key.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "أغلق خاصية WPS لتفادي اختراق كلمة السر عبر برامج التخمين.",
+      "en": "Disable WPS button/feature in router wireless settings.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "افحص قائمة الأجهزة المتصلة (DHCP Client List) واطرد الأجهزة الغريبة.",
+      "en": "Check DHCP list for unknown devices and block them.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "the_clock": "اختراق الراوتر يتيح للغريب التجسس على المواقع المزارة أو استخدام شبكتك في جرائم إلكترونية باسمك.",
+  "most_likely_truth": "تم اختراق شبكتك عبر ثغرة WPS أو استخدام كلمة سر واي فاي ضعيفة وسهلة التخمين.",
+  "the_criminal_lens": "يتصل المعتدي بشبكتك المنزلية مجاناً أو يستغلها كواجهة لإجراء تحويلات مشبوهة لتوريط صاحب الخط.",
+  "myths_that_kill": [
+    {
+      "myth": "إخفاء اسم الشبكة (Hide SSID) يكفي تماماً لحمايتها دون كلمة سر قوية.",
+      "truth": "إخفاء الشبكة حيلة بسيطة لا تمنع برامج الفحص من اكتشافها واختراقها.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "do": [
+    {
+      "t": "استخدم نظام تشفير WPA2-AES أو WPA3 لشبكة الواي فاي المنزلية.",
+      "en": "Set Wi-Fi encryption to WPA2-AES or WPA3.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك كلمة سر الراوتر هي نفسها المكتوبة على ظهر الجهاز دون تغيير.",
+      "en": "Do not leave default router password on sticker unchanged.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "escalation_ladder": "إذا استُخدمت شبكتك في ارتكاب جريمة رقمية، قدم أدلة تأمين الراوتر وسجلات الحظر.",
+  "your_right": "مسئولية استخدام الاشتراك الرقمي وحق تأمين الشبكات الشخصية.",
+  "الدليل": {
+    "basis": "CISA Home Router Security Guidance وقواعد تنظيم الاتصالات",
+    "quote": "Disable WPS, update admin passwords, and use strong WPA2/WPA3 encryption."
+  },
+  "note": {
+    "ar": "إجراءات حماية وتأمين شبكة الإنترنت المنزلية والراوتر."
+  },
+  "contacts": [
+    {
+      "label": "الدعم الفني لشركة الإنترنت / الجهاز القومي للاتصالات",
+      "number": "155",
+      "say": "تقديم شكوى اختراق أو ضبط إعدادات الراوتر الأمني."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "cisa:secure-home-router",
+      "grade": "CISA Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a23-elderly-call-scams",
+  "title": {
+    "ar": "«جدّي أو والدتي الكبيرة بيردوا على كل مكالمة تليفون وبيصدقوا نصابي البنوك»",
+    "en": "Protecting older family members from phone phone scams"
+  },
+  "level": 3,
+  "domain": "أمان رقمي",
+  "who": [
+    "أسر كبار السن"
+  ],
+  "place": [
+    "المنازل"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "فعل خاصية حظر الأرقام الغريبة أو غير المسجلة على هاتف الشخص المسن.",
+      "en": "Enable call blocking or auto-filter for unknown callers on elder's phone.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "ضع ملصقاً واضحاً بجوار الهاتف: «البنك لا يطلب الأرقام السريّة هاتفياً أبداً».",
+      "en": "Place visible note near phone reminding that banks never ask for codes.",
+      "src": "ftc:identity-theft-guidance"
+    },
+    {
+      "t": "ربط الحسابات البنكية للمسن بنظام تنبيهات SMS على هاتف أحد الأبناء.",
+      "en": "Set bank transaction SMS alerts to go to trusted family member.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "the_clock": "النصب الهاتفي يستهدف احترام وطيبة كبار السن لسرقة بياناتهم خلال مكالمة واحدة.",
+  "most_likely_truth": "المحتال يختار كبار السن استناداً لأساليب الإقناع وانتحال صفة خدمة العملاء أو مسابقات الجوائز.",
+  "the_criminal_lens": "يدعي المتصل أنه موظف تحديث بيانات أو يخبرهم بفوزهم بجائزة وطلب كود الفيزا لتحويل المبالغ.",
+  "myths_that_kill": [
+    {
+      "myth": "كبار السن لا يحتاجون لتوعية أمنية طالما لا يستخدمون الإنترنت.",
+      "truth": "معظم عمليات الاحتيال المالي لكبار السن تتحدث عبر مكالمات هاتفية تقليدية.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "do": [
+    {
+      "t": "عوض المسن على الاتصال بك فوراً عند ورود أي مكالمة تطالبه ببيانات أو مبالغ.",
+      "en": "Instruct older relatives to call you first before sharing details over phone.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك البطاقات البنكية وأرقامها السرية مدونة في مكان مفتوح بجوار الموبايل.",
+      "en": "Do not leave bank cards with written PINs next to phone.",
+      "src": "ftc:identity-theft-guidance"
+    }
+  ],
+  "escalation_ladder": "أبلغ البنك فوراً بتجميد الحساب إذا أدلى المسن بأي بيانات سريّة هاتفياً.",
+  "your_right": "حماية كبار السن من الاستغلال المالي والاجتماعي المادة 83 من الدستور.",
+  "الدليل": {
+    "basis": "FTC Elder Phone Scam Protection Guidance والمادة 83 من الدستور المصري",
+    "quote": "Set up phone filtering, bank alert notifications, and continuous family guidance."
+  },
+  "note": {
+    "ar": "خطوات حماية كبار السن من الاحتيال الهاتفي."
+  },
+  "contacts": [
+    {
+      "label": "منظومة الشكاوى الحكومية / خدمات كبار السن",
+      "number": "16528",
+      "say": "أطلب الدعم في حماية مسن من احتيال استغلالي."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ftc:identity-theft-guidance",
+      "grade": "FTC Official"
+    }
+  ]
+},
+{
+  "id": "scenario-a24-kids-oversharing-osint",
+  "title": {
+    "ar": "«ولادي بينشروا صورهم ومكانهم ومدرستهم على النت — إيه الخطر الجنائي؟»",
+    "en": "Child social media oversharing risk and OSINT exploitation"
+  },
+  "level": 3,
+  "domain": "أمان رقمي",
+  "who": [
+    "أولياء الأمور والأطفال"
+  ],
+  "place": [
+    "منصات التواصل الاجتماعي"
+  ],
+  "first_60_seconds": [
+    {
+      "t": "اجعل حسابات الأطفال خاصة (Private Accounts) وأغلق الوصول للعامة.",
+      "en": "Set child social media profiles to strictly Private.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "أغلق خاصية التحديد الجغرافي المباشر (Location Tagging) بالصور والمشورات.",
+      "en": "Disable automatic GPS location tagging on photos and posts.",
+      "src": "cisa:secure-home-router"
+    },
+    {
+      "t": "احذف الصور التي تظهر زي المدرسة أو موقع المنزل أو تفاصيل اليومية.",
+      "en": "Remove photos showing school logos, home address, or daily routes.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "the_clock": "تجميع البيانات المفتوحة (OSINT) يتيح للغرباء رسم النمط اليومي للطفل وموقعه الجغرافي الدقيق.",
+  "most_likely_truth": "الأطفال ينشرون تفاصيل حياتهم بدافع التفاعل الاجتماعي دون إدراك لخطورة جمع البيانات.",
+  "the_criminal_lens": "يجمع المعتدي صور المدرسة وأماكن التواجد لبناء قصة مقنعة واستدراج الطفل أو محاولة الخطف.",
+  "myths_that_kill": [
+    {
+      "myth": "نشر صور الأطفال بزي المدرسة أمر آمن طالما الصفحة بين الأصدقاء.",
+      "truth": "الصور يتم إعادة مشاركتها أو حفظها من قبل أشخاص آخرين بسهولة.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "do": [
+    {
+      "t": "علم الطفل عدم قبول إضافات من أشخاص لا يعرفهم شخصياً في الحياة الواقعية.",
+      "en": "Teach kids not to accept friend requests from unknown people.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تنشر مواعيد سفر الأسرة أو ترك المنزل خالياً على الحسابات العامة.",
+      "en": "Do not post family travel schedules or empty house notifications publicly.",
+      "src": "cisa:secure-home-router"
+    }
+  ],
+  "escalation_ladder": "عند استخدام صور الأطفال في تتبع أو مضايقات، حرر بلاغاً بمباحث تكنولوجيا المعلومات.",
+  "your_right": "حق الطفل في حماية خصوصيته وسلامته المادة 80 من الدستور وقانون حماية البيانات 151.",
+  "الدليل": {
+    "basis": "CISA OSINT & Social Engineering Awareness وقانون الطفل المصري",
+    "quote": "Restrict public location broadcasting and school markers on youth social profiles."
+  },
+  "note": {
+    "ar": "توعية بالأمان الرقمي والحد من الإفراط في المشاركة الرقمية."
+  },
+  "contacts": [
+    {
+      "label": "خط نجدة الطفل",
+      "number": "16000",
+      "say": "أستفسر عن حماية طفل من مضايقات رقمية ناتجة عن نشر بياناته."
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "cisa:secure-home-router",
+      "grade": "CISA / Child Safety"
+    }
+  ]
+}
 ];

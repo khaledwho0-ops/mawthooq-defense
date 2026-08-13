@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-08-13T09:39:38.359Z",
+  "repoRoot": "C:/Users/pc/Desktop/EGY/mawthooq-site",
+  "preservationRule": "Read-only baseline. Existing Motazen files and uncommitted work must not be replaced or deleted.",
+  "git": {
+    "branch": "implementation/plan1-phase0",
+    "commit": "786b61dea964114a15c6d179b3f70a84c276b13f",
+    "dirty": true,
+    "statusRecordedBy": "git status --short",
+    "warning": "The repository contained extensive pre-existing modified and untracked work. Never use destructive cleanup or broad staging."
+  },
+  "motazenFiles": [
+    {
+      "path": "motazen/assess.html",
+      "bytes": 13420,
+      "sha256": "f52d39a9b958eec786766d64085804be00f66a50443478dc547382a0a79adb81"
+    },
+    {
+      "path": "motazen/assistant.html",
+      "bytes": 13785,
+      "sha256": "7df11768ab70b9fc865757890c5ef5ba8cd20d384753d58204b86e2be8af7647"
+    },
+    {
+      "path": "motazen/claims.js",
+      "bytes": 412386,
+      "sha256": "23a1c4cea635bcf87ef8b70ee61d2c28328de9349030b0b049a19de923e4c056"
+    },
+    {
+      "path": "motazen/exercises.html",
+      "bytes": 9671,
+      "sha256": "f4da3287ace991317e01cd2413d8fd3b0aa58a3c1d3d6191a5e8654c58b87c6e"
+    },
+    {
+      "path": "motazen/game.html",
+      "bytes": 9351,
+      "sha256": "48c76be3a8b28bc2609efd0fdcaec3a9e4e921faa11b6ec7a79b8cd90e263462"
+    },
+    {
+      "path": "motazen/index.html",
+      "bytes": 16680,
+      "sha256": "0615123450d606e11356542266605337c1c5b7ac80fbd9de1770323fc39945a5"
+    },
+    {
+      "path": "motazen/navigation.html",
+      "bytes": 11699,
+      "sha256": "dc3ebec6b40779731e0ded13f5e6f997cf48eed5cf1e54c289f3e7ebcb8a6ab3"
+    },
+    {
+      "path": "motazen/phase0.html",
+      "bytes": 12105,
+      "sha256": "444b0019851499e0a41baa89445295bc38beb5ad96e77c0bb0bec4ee342bfb86"
+    },
+    {
+      "path": "motazen/phase1.html",
+      "bytes": 12300,
+      "sha256": "46af7ac50414c1046e8dfac80d846ccb1b8386813a204e864e98daf1dbd584ea"
+    },
+    {
+      "path": "motazen/scenarios.html",
+      "bytes": 14339,
+      "sha256": "10c900f2594380936b0d4b741fd5341520fc68a27e9e50f3e56f343c20baa625"
+    },
+    {
+      "path": "motazen/style.css",
+      "bytes": 14151,
+      "sha256": "c7f02168bcce2f979caf9696d93d994d4f39bebd9fa214186e57ededf42d8837"
+    }
+  ]
+}

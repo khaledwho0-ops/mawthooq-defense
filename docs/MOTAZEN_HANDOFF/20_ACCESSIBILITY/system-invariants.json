@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "status": "DRAFT_NOT_IMPLEMENTED",
+  "routes": ["structuredText","supportedReading","audioWithTranscript","iconPlusText","noStorage","accessibleExport"],
+  "alwaysReachable": ["stop","skip","humanHelp","privacy","modeSwitch"],
+  "rtl": {"rootLang":"ar","rootDirection":"rtl","logicalPropertiesRequired":true,"visualOrderMayReplaceDOMOrder":false,"mixedDirectionIsolationRequired":true,"manualCharacterReversalAllowed":false},
+  "interaction": {"keyboardComplete":true,"switchComplete":true,"dragOnlyAllowed":false,"timeLimitsDefault":false,"timerDisableAllowed":true,"autoplayAllowed":false,"motionRequired":false},
+  "meaning": {"colorOnlyAllowed":false,"iconOnlySafetyAllowed":false,"audioWithoutTranscriptAllowed":false,"minimumModeVisuallyInferiorAllowed":false},
+  "lowBandwidth": {"coreRequiresImage":false,"coreRequiresAudio":false,"coreRequiresCustomFont":false,"mediaPreloadOnMetered":false,"mediaSizeLabelRequired":true,"cancellableDownloadRequired":true},
+  "offline": {"noSaveCompletion":true,"publicAndPrivateCachesSeparated":true,"atomicVersionUpdate":true,"staleHelpMayAppearCurrent":false,"journalAutoMergeAllowed":false,"offlineCloudDeletionClaimAllowed":false,"failedSaveMayClaimSaved":false},
+  "privacy": {"freeTextCrashRecoveryWithoutOptIn":false,"noStorageRouteRequired":true,"localSpeechRetentionDefault":false},
+  "requiredHumanTesting": ["ArabicScreenReader","keyboardAndSwitch","lowVisionAndZoom","cognitiveAccess","lowLiteracy","disabledUsers","slowIntermittentNetwork","sharedDevice","mixedDirectionInput"]
+}

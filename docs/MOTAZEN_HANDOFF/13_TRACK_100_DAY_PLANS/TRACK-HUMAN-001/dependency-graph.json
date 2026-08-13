@@ -1,0 +1,3063 @@
+{
+  "schemaVersion": 1,
+  "trackId": "TRACK-HUMAN-001",
+  "status": "DRAFT_RESEARCHED_NOT_PROFESSIONALLY_REVIEWED",
+  "nodes": [
+    {
+      "day": 1,
+      "phase": 1,
+      "titleAr": "الاتزان ليس درجة ولا شخصية مثالية",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-007"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 2,
+      "phase": 1,
+      "titleAr": "صف ما يحدث قبل أن تحكم على نفسك",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-007"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 3,
+      "phase": 1,
+      "titleAr": "السياق جزء من القصة لا عذر ولا تهمة",
+      "capabilityIds": [
+        "CAP-009",
+        "CAP-019"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 4,
+      "phase": 1,
+      "titleAr": "القيمة الإنسانية لا ترتفع بالإنجاز ولا تسقط بالتعثر",
+      "capabilityIds": [
+        "CAP-007",
+        "CAP-008"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 5,
+      "phase": 1,
+      "titleAr": "قيمك بوصلة وليست قائمة إجابات نموذجية",
+      "capabilityIds": [
+        "CAP-005",
+        "CAP-043"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 6,
+      "phase": 1,
+      "titleAr": "هويتك أوسع من دور واحد",
+      "capabilityIds": [
+        "CAP-006",
+        "CAP-040"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 7,
+      "phase": 1,
+      "titleAr": "حوّل الشكوى العامة إلى موقف محدد",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-011"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 8,
+      "phase": 1,
+      "titleAr": "لاحظ النمط من غير أن تشخّص نفسك",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 9,
+      "phase": 1,
+      "titleAr": "المسؤولية تبدأ بما تحت سيطرتك",
+      "capabilityIds": [
+        "CAP-009",
+        "CAP-010"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 10,
+      "phase": 1,
+      "titleAr": "مراجعة البداية: ماذا تعرف وماذا لا تعرف؟",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004",
+        "CAP-005",
+        "CAP-009"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 11,
+      "phase": 2,
+      "titleAr": "الطاقة ليست فضيلة أخلاقية",
+      "capabilityIds": [
+        "CAP-018",
+        "CAP-019"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 12,
+      "phase": 2,
+      "titleAr": "النوم احتياج متغير لا مسابقة ساعات",
+      "capabilityIds": [
+        "CAP-017",
+        "CAP-018"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 13,
+      "phase": 2,
+      "titleAr": "افحص ليلة واحدة من غير أن تراقب نومك قهريًا",
+      "capabilityIds": [
+        "CAP-017",
+        "CAP-001"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 14,
+      "phase": 2,
+      "titleAr": "الحركة خيار متكيف وليست عقوبة للجسد",
+      "capabilityIds": [
+        "CAP-018",
+        "CAP-009"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 15,
+      "phase": 2,
+      "titleAr": "الانتباه مورد يتأثر بالمهمة والبيئة والحالة",
+      "capabilityIds": [
+        "CAP-015",
+        "CAP-019"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 16,
+      "phase": 2,
+      "titleAr": "اختبر فترة انتباه لها نهاية واضحة",
+      "capabilityIds": [
+        "CAP-015",
+        "CAP-014"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 17,
+      "phase": 2,
+      "titleAr": "غيّر احتكاكًا رقميًا واحدًا لا حياتك كلها",
+      "capabilityIds": [
+        "CAP-015",
+        "CAP-016"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 18,
+      "phase": 2,
+      "titleAr": "خطط بالوقت المتاح لا باليوم المثالي",
+      "capabilityIds": [
+        "CAP-037",
+        "CAP-009"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 19,
+      "phase": 2,
+      "titleAr": "الحد الأدنى خطة كاملة لليوم الصعب",
+      "capabilityIds": [
+        "CAP-014",
+        "CAP-020"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 20,
+      "phase": 2,
+      "titleAr": "مراجعة الأساسات: ما الذي حسّن القدرة فعلًا؟",
+      "capabilityIds": [
+        "CAP-015",
+        "CAP-017",
+        "CAP-018",
+        "CAP-037"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 21,
+      "phase": 3,
+      "titleAr": "الفكرة حدث ذهني وليست حقيقة تلقائية",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 22,
+      "phase": 3,
+      "titleAr": "ما أعرفه وما أستنتجه وما لا أعرفه",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-022"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 23,
+      "phase": 3,
+      "titleAr": "الاجترار يشبه الحل لكنه لا يتحرك",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-019"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 24,
+      "phase": 3,
+      "titleAr": "اخرج من حلقة التفكير بخطوة أو توقف",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-011"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 25,
+      "phase": 3,
+      "titleAr": "الأسوأ الممكن ليس الأكثر احتمالًا",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-022"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 26,
+      "phase": 3,
+      "titleAr": "المقارنة تعطي معلومة ناقصة لا حكمًا على قيمتك",
+      "capabilityIds": [
+        "CAP-034",
+        "CAP-007"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 27,
+      "phase": 3,
+      "titleAr": "كثرة الخيارات قد تربكك لكنها ليست قاعدة ثابتة",
+      "capabilityIds": [
+        "CAP-010",
+        "CAP-022"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 28,
+      "phase": 3,
+      "titleAr": "قرار جيد لا يضمن نتيجة جيدة",
+      "capabilityIds": [
+        "CAP-010",
+        "CAP-043"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 29,
+      "phase": 3,
+      "titleAr": "لا تسلّم قرارك للذكاء الاصطناعي",
+      "capabilityIds": [
+        "CAP-010",
+        "CAP-043"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 30,
+      "phase": 3,
+      "titleAr": "مراجعة التفكير: اشرح قرارك دون ادعاء اليقين",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-010",
+        "CAP-022"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 31,
+      "phase": 4,
+      "titleAr": "سمِّ الشعور بتواضع لا بيقين زائف",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-001"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 32,
+      "phase": 4,
+      "titleAr": "الشعور والمعلومة والفعل ثلاث طبقات",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-003",
+        "CAP-010"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 33,
+      "phase": 4,
+      "titleAr": "لاحظ تصاعد الاستثارة قبل أن تفيض",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-032"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 34,
+      "phase": 4,
+      "titleAr": "التهدئة ليست تنفسًا إجباريًا",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-015"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 35,
+      "phase": 4,
+      "titleAr": "الغضب إشارة لا تصريحًا بالإيذاء",
+      "capabilityIds": [
+        "CAP-032",
+        "CAP-003"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 36,
+      "phase": 4,
+      "titleAr": "الحزن لا يحتاج تصحيحًا فوريًا",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-036"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 37,
+      "phase": 4,
+      "titleAr": "الخجل يصف تجربة لا يثبت أنك سيئ",
+      "capabilityIds": [
+        "CAP-007",
+        "CAP-008",
+        "CAP-027"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 38,
+      "phase": 4,
+      "titleAr": "الحسد يكشف رغبة ولا يبرر الانتقاص",
+      "capabilityIds": [
+        "CAP-033",
+        "CAP-034"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 39,
+      "phase": 4,
+      "titleAr": "لا تكبت ولا تفرغ: اختر استجابة تناسب الموقف",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-004"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 40,
+      "phase": 4,
+      "titleAr": "مراجعة الانفعال: من الإشارة إلى الاختيار",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-003",
+        "CAP-032",
+        "CAP-033"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 41,
+      "phase": 5,
+      "titleAr": "العادة سياق وفعل ونتيجة وليست صفة",
+      "capabilityIds": [
+        "CAP-012",
+        "CAP-001"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 42,
+      "phase": 5,
+      "titleAr": "ابدأ بأصغر فعل له معنى",
+      "capabilityIds": [
+        "CAP-012",
+        "CAP-013"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 43,
+      "phase": 5,
+      "titleAr": "عدّل البيئة بدل محاكمة الإرادة",
+      "capabilityIds": [
+        "CAP-012",
+        "CAP-015"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 44,
+      "phase": 5,
+      "titleAr": "التسويف ليس دائمًا كسلًا",
+      "capabilityIds": [
+        "CAP-011",
+        "CAP-012",
+        "CAP-013"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 45,
+      "phase": 5,
+      "titleAr": "ابدأ المهمة من نقطة الاحتكاك الحقيقية",
+      "capabilityIds": [
+        "CAP-011",
+        "CAP-012",
+        "CAP-014"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 46,
+      "phase": 5,
+      "titleAr": "الكمال يرفع معيار البدء حتى يمنعه",
+      "capabilityIds": [
+        "CAP-007",
+        "CAP-014"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 47,
+      "phase": 5,
+      "titleAr": "المتابعة أداة وقد تصبح عبئًا",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-012"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 48,
+      "phase": 5,
+      "titleAr": "الراحة جزء من النظام لا مكافأة بعد الإنهاك",
+      "capabilityIds": [
+        "CAP-018",
+        "CAP-019",
+        "CAP-037"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 49,
+      "phase": 5,
+      "titleAr": "التعثر بيانات لا حكم نهائي",
+      "capabilityIds": [
+        "CAP-020",
+        "CAP-021",
+        "CAP-012"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 50,
+      "phase": 5,
+      "titleAr": "ابنِ دورة عمل وراحة وعودة تناسبك",
+      "capabilityIds": [
+        "CAP-012",
+        "CAP-014",
+        "CAP-020"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 51,
+      "phase": 6,
+      "titleAr": "الاتصال وعدد العلاقات ليسا الشيء نفسه",
+      "capabilityIds": [
+        "CAP-035",
+        "CAP-029"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 52,
+      "phase": 6,
+      "titleAr": "الصداقة جودة وصيانة لا امتحان شعبية",
+      "capabilityIds": [
+        "CAP-030",
+        "CAP-034"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 53,
+      "phase": 6,
+      "titleAr": "استمع لتفهم قبل أن تصلح",
+      "capabilityIds": [
+        "CAP-025",
+        "CAP-024"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 54,
+      "phase": 6,
+      "titleAr": "التحقق من الشعور ليس موافقة على كل تفسير",
+      "capabilityIds": [
+        "CAP-024",
+        "CAP-025",
+        "CAP-004"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 55,
+      "phase": 6,
+      "titleAr": "اطلب طلبًا محددًا قابلًا للرفض",
+      "capabilityIds": [
+        "CAP-024",
+        "CAP-023"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 56,
+      "phase": 6,
+      "titleAr": "قول لا لا يحتاج محاكمة الطرف الآخر",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-024"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 57,
+      "phase": 6,
+      "titleAr": "الأسرة قد تسند وقد تُحمّل",
+      "capabilityIds": [
+        "CAP-031",
+        "CAP-023"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 58,
+      "phase": 6,
+      "titleAr": "الدعم ليس سيطرة ولا إنقاذًا دائمًا",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-029",
+        "CAP-031"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 59,
+      "phase": 6,
+      "titleAr": "اطلب المساعدة مع تسمية الغرض والعائق",
+      "capabilityIds": [
+        "CAP-036",
+        "CAP-024"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 60,
+      "phase": 6,
+      "titleAr": "مراجعة العلاقة: استمع واطلب وارفض وادعم",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-024",
+        "CAP-025",
+        "CAP-029",
+        "CAP-036"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 61,
+      "phase": 7,
+      "titleAr": "الحد يصف فعلك لا يسيطر على الآخر",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-009"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 62,
+      "phase": 7,
+      "titleAr": "ليست كل محادثة صعبة آمنة الآن",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-026",
+        "CAP-036"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 63,
+      "phase": 7,
+      "titleAr": "صف الواقعة قبل الاتهام",
+      "capabilityIds": [
+        "CAP-024",
+        "CAP-026"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 64,
+      "phase": 7,
+      "titleAr": "خذ توقفًا له عودة لا صمتًا عقابيًا",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-026"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 65,
+      "phase": 7,
+      "titleAr": "الدفاعية تحمي الصورة وتمنع المعلومة",
+      "capabilityIds": [
+        "CAP-004",
+        "CAP-025",
+        "CAP-026"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 66,
+      "phase": 7,
+      "titleAr": "اعتذر عن الفعل لا عن وجودك",
+      "capabilityIds": [
+        "CAP-009",
+        "CAP-027"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 67,
+      "phase": 7,
+      "titleAr": "الإصلاح فعل متكرر وليس كلمة واحدة",
+      "capabilityIds": [
+        "CAP-027",
+        "CAP-028"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 68,
+      "phase": 7,
+      "titleAr": "الثقة لا تُطلب كحق بعد الضرر",
+      "capabilityIds": [
+        "CAP-028",
+        "CAP-027"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 69,
+      "phase": 7,
+      "titleAr": "المسامحة ليست واجبًا ولا عودة تلقائية",
+      "capabilityIds": [
+        "CAP-027",
+        "CAP-023"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 70,
+      "phase": 7,
+      "titleAr": "مراجعة الخلاف: اختر بين حديث وتوقف وحد ودعم",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-026",
+        "CAP-027",
+        "CAP-028"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 71,
+      "phase": 8,
+      "titleAr": "المال سلوك وقيود لا مقياس قيمة",
+      "capabilityIds": [
+        "CAP-038",
+        "CAP-009"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 72,
+      "phase": 8,
+      "titleAr": "قرار شراء تحت ضغط المقارنة",
+      "capabilityIds": [
+        "CAP-038",
+        "CAP-010",
+        "CAP-034"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 73,
+      "phase": 8,
+      "titleAr": "تعلّم بالاسترجاع لا بإحساس الألفة",
+      "capabilityIds": [
+        "CAP-039",
+        "CAP-015"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 74,
+      "phase": 8,
+      "titleAr": "وزّع المراجعة ولا تحوّلها إلى جدول مثالي",
+      "capabilityIds": [
+        "CAP-039",
+        "CAP-037"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 75,
+      "phase": 8,
+      "titleAr": "الفهم يظهر عندما تشرح وتطبق",
+      "capabilityIds": [
+        "CAP-039",
+        "CAP-004"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 76,
+      "phase": 8,
+      "titleAr": "العمل دور مهم وليس كل الهوية",
+      "capabilityIds": [
+        "CAP-040",
+        "CAP-006",
+        "CAP-007"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 77,
+      "phase": 8,
+      "titleAr": "الغموض في العمل يحتاج سؤالًا لا قراءة أفكار",
+      "capabilityIds": [
+        "CAP-040",
+        "CAP-024",
+        "CAP-010"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 78,
+      "phase": 8,
+      "titleAr": "الاحتراق ليس كلمة لكل تعب",
+      "capabilityIds": [
+        "CAP-019",
+        "CAP-040",
+        "CAP-036"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 79,
+      "phase": 8,
+      "titleAr": "المشاركة المجتمعية اختيار ذو كلفة وسياق",
+      "capabilityIds": [
+        "CAP-042",
+        "CAP-044",
+        "CAP-043"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 80,
+      "phase": 8,
+      "titleAr": "مراجعة الحياة العملية: القيود تغيّر الخطة لا الكرامة",
+      "capabilityIds": [
+        "CAP-037",
+        "CAP-038",
+        "CAP-039",
+        "CAP-040",
+        "CAP-042"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 81,
+      "phase": 9,
+      "titleAr": "ليست كل خسارة خطأً ولا كل خطأ درسًا",
+      "capabilityIds": [
+        "CAP-021",
+        "CAP-043"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 82,
+      "phase": 9,
+      "titleAr": "راجع خطأً آمنًا بمعلومة وتصحيح ومحاولة",
+      "capabilityIds": [
+        "CAP-021",
+        "CAP-020"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 83,
+      "phase": 9,
+      "titleAr": "عدم اليقين لا يختفي قبل كل خطوة",
+      "capabilityIds": [
+        "CAP-022",
+        "CAP-010"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 84,
+      "phase": 9,
+      "titleAr": "المرونة ليست احتمال كل شيء وحدك",
+      "capabilityIds": [
+        "CAP-020",
+        "CAP-036",
+        "CAP-009"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 85,
+      "phase": 9,
+      "titleAr": "طلب المساعدة مهارة لا اعترافًا بالفشل",
+      "capabilityIds": [
+        "CAP-036",
+        "CAP-024"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 86,
+      "phase": 9,
+      "titleAr": "متى يتوقف التعليم وتبدأ الحاجة إلى تقييم؟",
+      "capabilityIds": [
+        "CAP-036",
+        "CAP-019"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 87,
+      "phase": 9,
+      "titleAr": "عند الخطر: أوقف المنهج واتجه إلى إنسان",
+      "capabilityIds": [
+        "CAP-036"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 88,
+      "phase": 9,
+      "titleAr": "خطة الدعم تحتاج بديلًا إذا لم يرد أحد",
+      "capabilityIds": [
+        "CAP-036",
+        "CAP-031",
+        "CAP-030"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 89,
+      "phase": 9,
+      "titleAr": "المعنى يمكن أن يساعد ولا يجب أن يبرر الألم",
+      "capabilityIds": [
+        "CAP-041",
+        "CAP-005"
+      ],
+      "safetySensitivity": "HIGH"
+    },
+    {
+      "day": 90,
+      "phase": 9,
+      "titleAr": "مراجعة الضغط: خطوة أو دعم أو توقف",
+      "capabilityIds": [
+        "CAP-020",
+        "CAP-021",
+        "CAP-022",
+        "CAP-036",
+        "CAP-041"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 91,
+      "phase": 10,
+      "titleAr": "راجع ما تغير خارج التطبيق",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-009"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 92,
+      "phase": 10,
+      "titleAr": "خريطة أنماطك ليست هوية جديدة",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004",
+        "CAP-012"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 93,
+      "phase": 10,
+      "titleAr": "اختر مهارتك الأساسية ومهارة الدعم",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-010",
+        "CAP-012",
+        "CAP-024"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 94,
+      "phase": 10,
+      "titleAr": "صمّم أسبوعًا عاديًا لا أسبوعًا مثاليًا",
+      "capabilityIds": [
+        "CAP-037",
+        "CAP-014",
+        "CAP-018"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 95,
+      "phase": 10,
+      "titleAr": "مؤشرات الإنذار ليست تشخيصًا",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-019",
+        "CAP-036"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 96,
+      "phase": 10,
+      "titleAr": "خطة العودة بعد يوم وثلاثة وسبعة وثلاثين",
+      "capabilityIds": [
+        "CAP-020",
+        "CAP-012",
+        "CAP-014"
+      ],
+      "safetySensitivity": "LOW"
+    },
+    {
+      "day": 97,
+      "phase": 10,
+      "titleAr": "دليل خصوصيتك: ما الذي لا تسجله؟",
+      "capabilityIds": [
+        "CAP-010",
+        "CAP-043"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 98,
+      "phase": 10,
+      "titleAr": "دليل العلاقات: دعم وحد وخلاف وإصلاح",
+      "capabilityIds": [
+        "CAP-023",
+        "CAP-024",
+        "CAP-025",
+        "CAP-026",
+        "CAP-027",
+        "CAP-036"
+      ],
+      "safetySensitivity": "CRITICAL"
+    },
+    {
+      "day": 99,
+      "phase": 10,
+      "titleAr": "خطة ستة أشهر قابلة للتعديل لا عقد كمال",
+      "capabilityIds": [
+        "CAP-005",
+        "CAP-010",
+        "CAP-012",
+        "CAP-020",
+        "CAP-041"
+      ],
+      "safetySensitivity": "MEDIUM"
+    },
+    {
+      "day": 100,
+      "phase": 10,
+      "titleAr": "نهاية المسار ليست نهاية التعلم",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004",
+        "CAP-005",
+        "CAP-009",
+        "CAP-020",
+        "CAP-036",
+        "CAP-041",
+        "CAP-043"
+      ],
+      "safetySensitivity": "HIGH"
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 1,
+      "to": 4,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 5,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 6,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 7,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 8,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 9,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 7,
+      "to": 9,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 1,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 6,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 7,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 11,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 11,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 12,
+      "to": 13,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 14,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 15,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 15,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 15,
+      "to": 16,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 15,
+      "to": 17,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 16,
+      "to": 17,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 18,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 18,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 16,
+      "to": 18,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 19,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 19,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 10,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 12,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 13,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 14,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 15,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 16,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 17,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 20,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 21,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 21,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 20,
+      "to": 21,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 21,
+      "to": 22,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 21,
+      "to": 23,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 23,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 23,
+      "to": 24,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 25,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 23,
+      "to": 25,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 26,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 21,
+      "to": 26,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 26,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 27,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 27,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 28,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 27,
+      "to": 28,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 29,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 27,
+      "to": 29,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 29,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 21,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 23,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 24,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 25,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 26,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 27,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 29,
+      "to": 30,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 2,
+      "to": 31,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 21,
+      "to": 31,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 30,
+      "to": 31,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 32,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 33,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 33,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 34,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 35,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 35,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 34,
+      "to": 35,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 36,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 36,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 37,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 37,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 37,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 26,
+      "to": 38,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 38,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 38,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 37,
+      "to": 38,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 34,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 35,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 36,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 37,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 38,
+      "to": 39,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 34,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 35,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 36,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 37,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 38,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 39,
+      "to": 40,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 41,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 41,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 40,
+      "to": 41,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 42,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 42,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 42,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 17,
+      "to": 43,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 43,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 43,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 7,
+      "to": 44,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 44,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 44,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 45,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 43,
+      "to": 45,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 44,
+      "to": 45,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 46,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 46,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 45,
+      "to": 46,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 47,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 13,
+      "to": 47,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 16,
+      "to": 47,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 47,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 48,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 48,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 48,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 48,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 43,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 44,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 45,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 46,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 48,
+      "to": 49,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 43,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 44,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 45,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 46,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 48,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 49,
+      "to": 50,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 51,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 51,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 51,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 26,
+      "to": 52,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 52,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 53,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 32,
+      "to": 53,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 53,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 54,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 31,
+      "to": 54,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 54,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 55,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 55,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 54,
+      "to": 55,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 56,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 56,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 57,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 57,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 57,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 57,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 56,
+      "to": 57,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 52,
+      "to": 58,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 54,
+      "to": 58,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 57,
+      "to": 58,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 59,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 59,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 57,
+      "to": 59,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 58,
+      "to": 59,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 52,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 54,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 56,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 57,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 58,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 60,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 61,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 56,
+      "to": 61,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 60,
+      "to": 61,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 62,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 56,
+      "to": 62,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 62,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 61,
+      "to": 62,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 63,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 63,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 63,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 63,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 64,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 34,
+      "to": 64,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 35,
+      "to": 64,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 63,
+      "to": 64,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 65,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 65,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 65,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 64,
+      "to": 65,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 66,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 37,
+      "to": 66,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 63,
+      "to": 66,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 65,
+      "to": 66,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 41,
+      "to": 67,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 67,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 66,
+      "to": 67,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 68,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 66,
+      "to": 68,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 67,
+      "to": 68,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 61,
+      "to": 69,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 69,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 66,
+      "to": 69,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 67,
+      "to": 69,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 68,
+      "to": 69,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 61,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 63,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 64,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 65,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 66,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 67,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 68,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 69,
+      "to": 70,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 71,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 71,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 71,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 70,
+      "to": 71,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 26,
+      "to": 72,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 27,
+      "to": 72,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 71,
+      "to": 72,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 16,
+      "to": 73,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 42,
+      "to": 73,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 73,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 74,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 74,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 73,
+      "to": 74,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 10,
+      "to": 75,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 30,
+      "to": 75,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 40,
+      "to": 75,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 60,
+      "to": 75,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 73,
+      "to": 75,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 4,
+      "to": 76,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 6,
+      "to": 76,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 76,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 57,
+      "to": 76,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 77,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 77,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 77,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 76,
+      "to": 77,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 11,
+      "to": 78,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 12,
+      "to": 78,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 78,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 48,
+      "to": 78,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 76,
+      "to": 78,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 79,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 9,
+      "to": 79,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 79,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 79,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 71,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 72,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 73,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 74,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 75,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 76,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 77,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 78,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 79,
+      "to": 80,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 81,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 37,
+      "to": 81,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 49,
+      "to": 81,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 80,
+      "to": 81,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 49,
+      "to": 82,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 67,
+      "to": 82,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 81,
+      "to": 82,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 22,
+      "to": 83,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 27,
+      "to": 83,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 83,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 82,
+      "to": 83,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 3,
+      "to": 84,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 84,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 84,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 81,
+      "to": 84,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 85,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 85,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 78,
+      "to": 85,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 84,
+      "to": 85,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 12,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 15,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 36,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 78,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 85,
+      "to": 86,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 87,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 87,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 86,
+      "to": 87,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 51,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 57,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 85,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 86,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 87,
+      "to": 88,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 89,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 6,
+      "to": 89,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 36,
+      "to": 89,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 81,
+      "to": 89,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 84,
+      "to": 89,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 81,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 82,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 83,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 84,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 85,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 86,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 87,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 88,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 89,
+      "to": 90,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 20,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 30,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 40,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 60,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 70,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 80,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 90,
+      "to": 91,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 8,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 23,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 44,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 46,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 58,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 65,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 78,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 91,
+      "to": 92,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 39,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 60,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 70,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 90,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 92,
+      "to": 93,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 18,
+      "to": 94,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 94,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 48,
+      "to": 94,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 94,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 93,
+      "to": 94,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 33,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 78,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 86,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 88,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 92,
+      "to": 95,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 19,
+      "to": 96,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 49,
+      "to": 96,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 96,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 94,
+      "to": 96,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 29,
+      "to": 97,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 47,
+      "to": 97,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 97,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 91,
+      "to": 97,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 53,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 55,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 56,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 59,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 61,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 62,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 64,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 66,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 67,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 69,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 70,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 95,
+      "to": 98,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 5,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 28,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 50,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 74,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 91,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 93,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 94,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 95,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 96,
+      "to": 99,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 91,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 92,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 93,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 94,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 95,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 96,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 97,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 98,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    },
+    {
+      "from": 99,
+      "to": 100,
+      "relation": "REQUIRES_EARLIER_LEARNING"
+    }
+  ]
+}

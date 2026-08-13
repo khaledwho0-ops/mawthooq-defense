@@ -16,10 +16,11 @@ function semanticReviewFixture() {
     level: 4,
     do: [{ t: 'اعمل الخطوة الآمنة.', src: 'adam:reviewed' }],
     dont: [{ t: 'ماتعملش الخطوة الخطرة.', src: 'adam:reviewed' }],
-    sources: [{ srcId: 'adam:reviewed', url: 'https://medlineplus.gov/ency/article/000001.htm' }],
+    sources: [{ srcId: 'adam:reviewed', url: 'https://medlineplus.gov/ency/article/000001.htm', sha256: '', retrieved: '2026-08-02' }],
   };
   const sourceBytes = Buffer.from('<main>Complete source context with an explicit safety exception.</main>');
   const sourceSha256 = createHash('sha256').update(sourceBytes).digest('hex');
+  card.sources[0].sha256 = sourceSha256;
   const cardSha256 = createHash('sha256').update(JSON.stringify(card)).digest('hex');
   const filename = 'reviewed-source.html';
   const manifest = {
@@ -39,18 +40,23 @@ function semanticReviewFixture() {
         final_url: 'https://medlineplus.gov/ency/article/000001.htm',
       }],
       actionable_lines: [
-        { field_path: 'do[0]', text: card.do[0].t, source_id: 'adam:reviewed', source_excerpt: 'Complete source context.', qualifier_or_exception: 'none', card_carries: true, verdict: 'PASS' },
-        { field_path: 'dont[0]', text: card.dont[0].t, source_id: 'adam:reviewed', source_excerpt: 'explicit safety exception.', qualifier_or_exception: 'explicit exception', card_carries: true, verdict: 'PASS' },
+        { field_path: 'do[0]', text: card.do[0].t, english_text: null, english_status: 'absent', source_id: 'adam:reviewed', source_excerpt: 'Complete source context', qualifier_or_exception: 'none', card_carries: true, verdict: 'PASS' },
+        { field_path: 'dont[0]', text: card.dont[0].t, english_text: null, english_status: 'absent', source_id: 'adam:reviewed', source_excerpt: 'explicit safety exception', qualifier_or_exception: 'explicit exception', card_carries: true, verdict: 'PASS' },
       ],
-      source_qualifiers: [{ id: 'reviewed-exception', source_id: 'adam:reviewed', source_excerpt: 'explicit safety exception.', disposition: 'Carried by dont[0].', verdict: 'PASS' }],
+      source_qualifiers: [
+        { id: 'reviewed-context', source_id: 'adam:reviewed', source_excerpt: 'Complete source context', disposition: 'Carried by do[0].', verdict: 'PASS' },
+        { id: 'reviewed-exception', source_id: 'adam:reviewed', source_excerpt: 'explicit safety exception', disposition: 'Carried by dont[0].', verdict: 'PASS' },
+      ],
       overall_verdict: 'PASS',
       reviewer_note: 'Complete full-context human review.',
-      remediation: { changed: false },
+      remediation: { changed: false, before_card_sha256: cardSha256, after_card_sha256: cardSha256, modified_fields: [] },
     }],
   };
   return {
     cards: [card],
-    sources: { 'adam:reviewed': { url: 'https://medlineplus.gov/ency/article/000001.htm', label: 'A.D.A.M. review source' } },
+    baseCards: [structuredClone(card)],
+    sources: { 'adam:reviewed': { url: 'https://medlineplus.gov/ency/article/000001.htm', label: 'A.D.A.M. review source', sha256: sourceSha256, retrieved: '2026-08-02' } },
+    requiredQualifierInventory: { 'adam:reviewed': ['reviewed-context', 'reviewed-exception'] },
     corpusIndex: [{ url: 'https://medlineplus.gov/ency/article/000001.htm', status: 'saved', filename, sha256: sourceSha256, retrievedAt: '2026-08-02T12:00:00.000Z', finalUrl: 'https://medlineplus.gov/ency/article/000001.htm' }],
     manifest,
     readFileImpl: async (requested) => {
@@ -67,6 +73,12 @@ async function loadCanonicalMostaedCard(id) {
 
 test('phase 0 audit module exists', () => {
   assert.equal(existsSync(new URL('./phase0-audit.mjs', import.meta.url)), true);
+});
+
+test('loads the actual remediation base card from a pinned git revision', async () => {
+  const base = await audit.loadJavaScriptDataAtRevision('786b61d', 'mostaed/scenarios.js', 'SCENARIOS');
+  assert.equal(base.records.length, 119);
+  assert.equal(base.records.find((card) => card.id === 'choking-adult').do.length, 6);
 });
 
 test('accepts a complete source-grounded Mostaed semantic review', async () => {
@@ -126,6 +138,77 @@ test('blocks unresolved Mostaed source-wide qualifiers', async () => {
   assert.match(result.errors.join('\n'), /unresolved source qualifier reviewed-exception/i);
 });
 
+test('blocks a fabricated source excerpt that is absent from the hashed capture', async () => {
+  const fixture = semanticReviewFixture();
+  fixture.manifest.records[0].actionable_lines[0].source_excerpt = 'Fabricated source claim';
+  const result = await audit.validateMostaedSemanticReview(fixture);
+  assert.equal(result.verdict, 'BLOCKED');
+  assert.match(result.errors.join('\n'), /source excerpt.*not found.*do\[0\]/i);
+});
+
+test('blocks a reduced source-wide qualifier inventory', async () => {
+  const fixture = semanticReviewFixture();
+  fixture.manifest.records[0].source_qualifiers.pop();
+  const result = await audit.validateMostaedSemanticReview(fixture);
+  assert.equal(result.verdict, 'BLOCKED');
+  assert.match(result.errors.join('\n'), /missing required source qualifier reviewed-exception/i);
+});
+
+test('blocks a PASS line that does not carry its source condition', async () => {
+  const fixture = semanticReviewFixture();
+  fixture.manifest.records[0].actionable_lines[0].card_carries = false;
+  const result = await audit.validateMostaedSemanticReview(fixture);
+  assert.equal(result.verdict, 'BLOCKED');
+  assert.match(result.errors.join('\n'), /source condition is not carried.*do\[0\]/i);
+});
+
+test('blocks stale canonical source-registry and card-citation hashes', async (t) => {
+  await t.test('source registry', async () => {
+    const fixture = semanticReviewFixture();
+    fixture.sources['adam:reviewed'].sha256 = '0'.repeat(64);
+    const result = await audit.validateMostaedSemanticReview(fixture);
+    assert.equal(result.verdict, 'BLOCKED');
+    assert.match(result.errors.join('\n'), /canonical source hash mismatch/i);
+  });
+
+  await t.test('card citation', async () => {
+    const fixture = semanticReviewFixture();
+    fixture.cards[0].sources[0].sha256 = '0'.repeat(64);
+    fixture.manifest.records[0].card_sha256 = createHash('sha256').update(JSON.stringify(fixture.cards[0])).digest('hex');
+    const result = await audit.validateMostaedSemanticReview(fixture);
+    assert.equal(result.verdict, 'BLOCKED');
+    assert.match(result.errors.join('\n'), /card citation hash mismatch/i);
+  });
+});
+
+test('blocks fabricated remediation hashes and modified fields', async (t) => {
+  await t.test('before hash', async () => {
+    const fixture = semanticReviewFixture();
+    fixture.manifest.records[0].remediation.changed = true;
+    fixture.manifest.records[0].remediation.before_card_sha256 = '0'.repeat(64);
+    const result = await audit.validateMostaedSemanticReview(fixture);
+    assert.equal(result.verdict, 'BLOCKED');
+    assert.match(result.errors.join('\n'), /remediation before-card hash mismatch/i);
+  });
+
+  await t.test('modified field', async () => {
+    const fixture = semanticReviewFixture();
+    fixture.manifest.records[0].remediation.changed = true;
+    fixture.manifest.records[0].remediation.modified_fields = [{ field_path: 'do[0].t', before: 'invented', after: fixture.cards[0].do[0].t }];
+    const result = await audit.validateMostaedSemanticReview(fixture);
+    assert.equal(result.verdict, 'BLOCKED');
+    assert.match(result.errors.join('\n'), /remediation before value mismatch.*do\[0\]\.t/i);
+  });
+});
+
+test('blocks actionable lines without an explicit English review status', async () => {
+  const fixture = semanticReviewFixture();
+  delete fixture.manifest.records[0].actionable_lines[0].english_status;
+  const result = await audit.validateMostaedSemanticReview(fixture);
+  assert.equal(result.verdict, 'BLOCKED');
+  assert.match(result.errors.join('\n'), /English review status.*do\[0\]/i);
+});
+
 test('fails a Mostaed semantic review that records a proven content defect', async () => {
   const fixture = semanticReviewFixture();
   fixture.manifest.records[0].actionable_lines[0].verdict = 'FAIL';
@@ -149,6 +232,8 @@ test('adult choking carries five-thrust cycles and the pregnant-or-obese chest-t
   assert.match(card.do[5].t, /حامل أو بدين جدًا.*ضغطات صدر.*بدل ضغطات البطن/);
   assert.equal(card.do[5].src, 'mlp:choking-adult');
   assert.equal(card.dont[2].src, 'mlp:choking-adult');
+  assert.match(card.after.ar, /أي حد اختنق.*كشف طبي/);
+  assert.doesNotMatch(card.after.ar, /لو اضطريت تعمل ضغطات بطن/);
 });
 
 test('drowning carries rescue breathing and CPR before post-rescue reassurance', async () => {
@@ -162,6 +247,8 @@ test('drowning carries rescue breathing and CPR before post-rescue reassurance',
 test('burn cooling is limited to minor unbroken-skin burns and excludes severe-burn immersion', async () => {
   const card = await loadCanonicalMostaedCard('burn');
   assert.match(card.do[0].t, /لو الحرق بسيط والجلد مش مفتوح/);
+  assert.match(card.do[0].t, /٥.*٣٠ دقيقة/);
+  assert.equal(card.do[0].src, 'mlp:burns');
   assert.match(card.dont[1].t, /ماتغمرش الحرق الشديد في ميّه ساقعة/);
   assert.match(card.dont[4].t, /ماتحطّش مخدة تحت راسه لو الحرق في مجرى الهوا/);
 });
@@ -169,9 +256,10 @@ test('burn cooling is limited to minor unbroken-skin burns and excludes severe-b
 test('electric shock carries dry insulation, complete shock positioning, and the high-voltage cutoff boundary', async () => {
   const card = await loadCanonicalMostaedCard('electric-shock');
   assert.match(card.do[1].t, /قف على حاجة ناشفة ماتوصّلش كهربا/);
-  assert.match(card.do[3].t, /مش بيتنفّس أو نفسه ضعيف.*تنفّس إنقاذي.*مفيش نبض.*إنعاش/);
-  assert.match(card.do[5].t, /ارفع رجليه.*غطّيه/);
+  assert.match(card.do[3].t, /فاقد الوعي.*مش بيتنفّس أو نفسه ضعيف.*تنفّس إنقاذي.*مفيش نبض.*إنعاش/);
+  assert.match(card.do[5].t, /لو مش شاكك في إصابة عمود فقري.*ارفع رجليه.*غطّيه/);
   assert.match(card.dont[0].t, /لحد ما الكهربا تتفصل/);
+  assert.equal(card.dont.some((line) => /ماتحرّكش راسه أو رقبته.*عموده الفقري/.test(line.t)), true);
 });
 
 test('heat illness hydration avoids an unmeasured homemade salt dose', async () => {
@@ -179,6 +267,9 @@ test('heat illness hydration avoids an unmeasured homemade salt dose', async () 
   assert.match(card.do[2].t, /مشروب رياضي، أو ميّه ساقعة عادية/);
   assert.doesNotMatch(card.do[2].t, /ملح/);
   assert.equal(card.redFlags.some((line) => /٣٨٫٩/.test(typeof line === 'string' ? line : line.t)), true);
+  const emergencyText = card.redFlags.map((line) => typeof line === 'string' ? line : line.t).join(' ');
+  assert.match(emergencyText, /نبضه أو تنفّسه سريع/);
+  assert.match(emergencyText, /مش بيتحسّن أو بيسوء رغم الإسعاف/);
 });
 
 test('head injury carries the source vomiting log-roll instruction', async () => {
@@ -186,6 +277,7 @@ test('head injury carries the source vomiting log-roll instruction', async () =>
   assert.equal(card.do.length, 6);
   assert.match(card.do[5].t, /لو بيرجّع.*الراس والرقبة والجسم كوحدة واحدة.*مايشرقش/);
   assert.equal(card.do[5].src, 'mlp:head-injury');
+  assert.equal(card.dont.some((line) => /إصابة راس خطيرة.*٤٨ ساعة.*كحول.*مخدرات/.test(line.t)), true);
 });
 
 test('breathing difficulty carries the three-sided seal for a sucking chest wound', async () => {
@@ -205,13 +297,33 @@ test('chemical burn carries the immediate fifteen-minute eye-flush escalation', 
 test('unconsciousness carries age, pregnancy, diabetes, and seizure escalation conditions', async () => {
   const card = await loadCanonicalMostaedCard('unconsciousness');
   const text = card.variations.join(' ');
-  assert.match(text, /حامل.*فوق ٥٠ سنة.*سكر.*تشنّجات/);
+  assert.match(text, /حامل.*فوق ٥٠ سنة.*سكر.*تشنّجات.*فقد التحكم في البول أو البراز/);
 });
 
 test('dislocation carries the source shock-position injury exceptions', async () => {
   const card = await loadCanonicalMostaedCard('dislocation');
   const text = card.variations.join(' ');
   assert.match(text, /علامات صدمة.*مفيش إصابة راس أو رجل أو ضهر.*ارفع رجليه ٣٠ سم.*غطّيه/);
+});
+
+test('all reviewed Mostaed actionable lists stay within anti-truncation limits', async () => {
+  const data = await audit.loadJavaScriptData(fileURLToPath(new URL('../mostaed/scenarios.js', import.meta.url)), 'SCENARIOS');
+  const reviewedIds = new Set([
+    'choking-adult', 'drowning', 'burn', 'electric-shock', 'infant-choking', 'heat-stroke', 'head-injury',
+    'shock', 'chemical-burn', 'breathing-difficulty', 'dislocation', 'genital-injury', 'skull-fracture', 'unconsciousness',
+  ]);
+  const wordCount = (text) => String(text).trim().split(/\s+/u).filter(Boolean).length;
+  for (const card of data.records.filter((item) => reviewedIds.has(item.id))) {
+    assert.ok(card.do.length <= 6, `${card.id} has ${card.do.length} do lines`);
+    assert.ok(card.dont.length <= 4, `${card.id} has ${card.dont.length} dont lines`);
+    for (const [kind, lines] of [['do', card.do], ['dont', card.dont]]) {
+      for (const [index, line] of lines.entries()) {
+        const arabic = typeof line === 'string' ? line : line.t;
+        assert.ok(wordCount(arabic) <= 20, `${card.id} ${kind}[${index}] Arabic has ${wordCount(arabic)} words`);
+        if (typeof line === 'object' && line.en) assert.ok(wordCount(line.en) <= 20, `${card.id} ${kind}[${index}] English has ${wordCount(line.en)} words`);
+      }
+    }
+  }
 });
 
 test('loads every supported window array in a sandboxed VM', async () => {

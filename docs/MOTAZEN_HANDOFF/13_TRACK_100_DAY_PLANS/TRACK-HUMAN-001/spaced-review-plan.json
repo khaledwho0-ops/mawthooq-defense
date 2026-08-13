@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 1,
+  "trackId": "TRACK-HUMAN-001",
+  "status": "DRAFT_RESEARCHED_NOT_PROFESSIONALLY_REVIEWED",
+  "rule": "Review days require recall before reopening content, application to a new case, an error check, and one adaptation; they are not recap-only duplicates.",
+  "reviews": [
+    {
+      "day": 10,
+      "titleAr": "مراجعة البداية: ماذا تعرف وماذا لا تعرف؟",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-001",
+        "CAP-004",
+        "CAP-005",
+        "CAP-009"
+      ],
+      "earlierAnchorDays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 20,
+      "titleAr": "مراجعة الأساسات: ما الذي حسّن القدرة فعلًا؟",
+      "reviewType": "PILOT_RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-015",
+        "CAP-017",
+        "CAP-018",
+        "CAP-037"
+      ],
+      "earlierAnchorDays": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 30,
+      "titleAr": "مراجعة التفكير: اشرح قرارك دون ادعاء اليقين",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-004",
+        "CAP-010",
+        "CAP-022"
+      ],
+      "earlierAnchorDays": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 40,
+      "titleAr": "مراجعة الانفعال: من الإشارة إلى الاختيار",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-002",
+        "CAP-003",
+        "CAP-032",
+        "CAP-033"
+      ],
+      "earlierAnchorDays": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 50,
+      "titleAr": "ابنِ دورة عمل وراحة وعودة تناسبك",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-012",
+        "CAP-014",
+        "CAP-020"
+      ],
+      "earlierAnchorDays": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 60,
+      "titleAr": "مراجعة العلاقة: استمع واطلب وارفض وادعم",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-023",
+        "CAP-024",
+        "CAP-025",
+        "CAP-029",
+        "CAP-036"
+      ],
+      "earlierAnchorDays": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 70,
+      "titleAr": "مراجعة الخلاف: اختر بين حديث وتوقف وحد ودعم",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-023",
+        "CAP-026",
+        "CAP-027",
+        "CAP-028"
+      ],
+      "earlierAnchorDays": [
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 75,
+      "titleAr": "الفهم يظهر عندما تشرح وتطبق",
+      "reviewType": "RETRIEVAL_TRANSFER",
+      "revisitsCapabilities": [
+        "CAP-039",
+        "CAP-004"
+      ],
+      "earlierAnchorDays": [
+        10,
+        30,
+        40,
+        60,
+        73
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 80,
+      "titleAr": "مراجعة الحياة العملية: القيود تغيّر الخطة لا الكرامة",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-037",
+        "CAP-038",
+        "CAP-039",
+        "CAP-040",
+        "CAP-042"
+      ],
+      "earlierAnchorDays": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 90,
+      "titleAr": "مراجعة الضغط: خطوة أو دعم أو توقف",
+      "reviewType": "RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-020",
+        "CAP-021",
+        "CAP-022",
+        "CAP-036",
+        "CAP-041"
+      ],
+      "earlierAnchorDays": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 91,
+      "titleAr": "راجع ما تغير خارج التطبيق",
+      "reviewType": "EVALUATION",
+      "revisitsCapabilities": [
+        "CAP-001",
+        "CAP-009"
+      ],
+      "earlierAnchorDays": [
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90
+      ],
+      "addedComplexityAr": "استرجاع بلا فتح المحتوى أولًا، ثم تطبيق على حالة جديدة وتعديل الاستراتيجية وفق العائق أو الأثر السلبي."
+    },
+    {
+      "day": 100,
+      "titleAr": "نهاية المسار ليست نهاية التعلم",
+      "reviewType": "FINAL_RETRIEVAL_INTEGRATION",
+      "revisitsCapabilities": [
+        "CAP-001",
+        "CAP-004",
+        "CAP-005",
+        "CAP-009",
+        "CAP-020",
+        "CAP-036",
+        "CAP-041",
+        "CAP-043"
+      ],
+      "earlierAnchorDays": [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "addedComplexityAr": "تركيب دليل شخصي يضم الفهم والممارسة وحدود التوقف والدعم وما بقي مجهولًا."
+    }
+  ]
+}

@@ -1,8 +1,10 @@
 import { createHash } from 'node:crypto';
+import { execFile } from 'node:child_process';
 import { mkdir, readFile, rename, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import vm from 'node:vm';
+import { promisify } from 'node:util';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -12,6 +14,7 @@ const OUTPUT = path.join(ROOT, 'docs', 'audits', `phase0-${AUDIT_DATE}`);
 const CORPUS = path.join(OUTPUT, 'corpus');
 const STATUSES = ['established', 'contested', 'debunked', 'unknown'];
 const ARABIC_DIGITS = new Map([...'٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹'].map((digit, index) => [digit, String(index % 10)]));
+const execFileAsync = promisify(execFile);
 
 const AMAN_SCENARIOS = [
   ['A1', '«أمي وأخويا اتأخروا وموبايلهم مقفول»', 'https://www.gov.uk/report-missing-person'],
@@ -106,11 +109,10 @@ function stableFilename(url, prefix = 'source') {
   return `${stem}-${suffix}.html`;
 }
 
-async function loadJavaScriptData(file, globalName) {
-  const source = await readFile(file, 'utf8');
+function parseJavaScriptData(source, filename, globalName) {
   const window = Object.create(null);
   const context = vm.createContext({ window }, { codeGeneration: { strings: false, wasm: false } });
-  new vm.Script(source, { filename: file, timeout: 2_000 }).runInContext(context, { timeout: 2_000 });
+  new vm.Script(source, { filename, timeout: 2_000 }).runInContext(context, { timeout: 2_000 });
   const records = window[globalName];
   const sources = window.SOURCES ?? {};
   if (!Array.isArray(records)) throw new Error(`window.${globalName} must be an array`);
@@ -123,6 +125,15 @@ async function loadJavaScriptData(file, globalName) {
   }
   assertSourceReferences(records, sources);
   return { records: structuredClone(records), sources: structuredClone(sources) };
+}
+
+async function loadJavaScriptData(file, globalName) {
+  return parseJavaScriptData(await readFile(file, 'utf8'), file, globalName);
+}
+
+async function loadJavaScriptDataAtRevision(revision, file, globalName) {
+  const { stdout } = await execFileAsync('git', ['show', `${revision}:${file}`], { cwd: ROOT, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
+  return parseJavaScriptData(stdout, `${revision}:${file}`, globalName);
 }
 
 function assertSourceReferences(records, sources) {
@@ -368,11 +379,64 @@ function isAdamSource(reference, sources) {
   return /medlineplus\.gov\/ency\//i.test(url) && /A\.D\.A\.M|Ebix|MedlinePlus/i.test(metadata);
 }
 
+const MOSTAED_REQUIRED_QUALIFIERS = Object.freeze({
+  'mlp:choking-adult': ['scope-conscious-over-one', 'strong-cough-no-intervention', 'five-five-cycles-until-out-or-unconscious', 'pregnant-obese-chest-thrusts', 'unconscious-cpr-not-abdominal-thrusts', 'post-event-medical-exam'],
+  'mlp:drowning': ['rescuer-safety', 'trained-rescue-only', 'rescue-breathing-then-cpr', 'spine-immobilization-only-obvious-injury', 'heimlich-exception', 'all-nonfatal-drowning-medical-check'],
+  'mlp:burns': ['uncertain-burn-treated-major', 'minor-unbroken-skin-cooling-5-to-30-minutes', 'severe-burn-no-cold-water', 'shock-position-injury-exceptions', 'airway-burn-no-pillow', 'children-older-immunocompromised-escalation'],
+  'mlp:electrical-injury': ['safe-power-cutoff', 'dry-insulation-if-current-live', 'rescue-breathing-unconscious-ineffective', 'cpr-unconscious-no-pulse', 'shock-position-no-spinal-movement', 'high-voltage-until-off', 'vehicle-power-line-fire-exception'],
+  'mlp:choking-infant': ['scope-under-one', 'strong-cough-or-cry', 'visible-object-only', 'cycles-until-object-or-unconscious', 'alone-two-minutes-cpr', 'other-cause-use-cpr', 'provider-after-success'],
+  'mlp:heat': ['oral-fluid-alert-only', 'safe-water-alternative', 'shock-seizure-unconscious-escalation', 'vomiting-unconscious-no-oral', 'temperature-threshold', 'rapid-pulse-breathing-escalation', 'no-improvement-or-worsening-escalation'],
+  'mlp:head-injury': ['moderate-severe-emergency', 'unconscious-spinal-treatment', 'skull-fracture-pressure-exception', 'vomiting-log-roll', 'child-single-vomit-boundary', 'deep-bleeding-wound-no-wash', 'serious-head-injury-no-alcohol-drugs-48-hours'],
+  'mlp:shock': ['immediate-emergency-help', 'breathing-check-five-minutes', 'shock-position-injury-boundaries', 'leg-elevation-pain-harm-exception', 'vomit-spine-log-roll', 'no-oral-or-spinal-movement'],
+  'mlp:chemical-burn': ['rescuer-protection', 'dry-chemical-brush-first', 'water-exposure-exceptions', 'severity-escalation', 'eye-flush-fifteen-minutes', 'no-unsupervised-neutralizing', 'breathing-seizure-unconscious-emergency'],
+  'mlp:breathing-difficulty': ['call-immediately', 'prescribed-medicine-only', 'silent-wheeze-not-improvement', 'three-sided-chest-seal', 'injury-movement-exception', 'no-pillow-airway'],
+  'mlp:dislocation': ['call-before-treatment-life-threat', 'head-back-leg-no-movement', 'bone-reduction-specialist-only', 'circulation-check-unbroken-skin-only', 'shock-position-injury-boundary', 'movement-after-immobilization', 'hip-pelvis-upper-leg-absolute-necessity'],
+  'mlp:genital-injury': ['vaginal-pressure-foreign-object-exception', 'stuck-object-leave', 'assault-preserve-clothes-bathing', 'straddle-escalation'],
+  'mlp:skull-fracture': ['movement-absolute-necessity', 'suspected-fracture-no-direct-pressure', 'vomiting-stabilize-turn', 'conscious-symptoms-transport', 'no-medicine-before-provider', 'never-alone'],
+  'mlp:unconsciousness': ['side-position-no-spinal-injury', 'spinal-injury-leave-if-breathing', 'low-sugar-only-conscious', 'loose-versus-lodged-object', 'no-oral-unconscious', 'one-minute-age-condition-escalation', 'bowel-bladder-control-escalation'],
+});
+
+function normalizedEvidenceText(value) {
+  return plainText(new TextDecoder('utf-8', { fatal: false }).decode(Buffer.isBuffer(value) ? value : Buffer.from(String(value)))).normalize('NFKC');
+}
+
+function fieldValue(record, fieldPath) {
+  return fieldPath.split(/\.|\[|\]/).filter(Boolean).reduce((value, key) => value?.[key], record);
+}
+
+function changedTopLevelFields(beforeCard, afterCard) {
+  return [...new Set([...Object.keys(beforeCard ?? {}), ...Object.keys(afterCard ?? {})])]
+    .filter((key) => JSON.stringify(beforeCard?.[key]) !== JSON.stringify(afterCard?.[key]));
+}
+
+function validateRemediationEvidence(card, baseCard, remediation) {
+  if (!remediation || typeof remediation.changed !== 'boolean') return ['remediation record is missing'];
+  if (!baseCard) return ['remediation base card is missing'];
+  const errors = [];
+  const beforeHash = sha256(JSON.stringify(baseCard));
+  const afterHash = sha256(JSON.stringify(card));
+  if (remediation.before_card_sha256 !== beforeHash) errors.push('remediation before-card hash mismatch');
+  if (remediation.after_card_sha256 !== afterHash) errors.push('remediation after-card hash mismatch');
+  const changedFields = changedTopLevelFields(baseCard, card);
+  if (remediation.changed !== (changedFields.length > 0)) errors.push('remediation changed flag mismatch');
+  const modifiedFields = Array.isArray(remediation.modified_fields) ? remediation.modified_fields : [];
+  for (const field of modifiedFields) {
+    if (JSON.stringify(field.before) !== JSON.stringify(fieldValue(baseCard, field.field_path))) errors.push(`remediation before value mismatch at ${field.field_path}`);
+    if (JSON.stringify(field.after) !== JSON.stringify(fieldValue(card, field.field_path))) errors.push(`remediation after value mismatch at ${field.field_path}`);
+  }
+  const providedPaths = modifiedFields.map((field) => field.field_path);
+  for (const fieldPath of changedFields.filter((field) => !providedPaths.includes(field))) errors.push(`remediation missing modified field ${fieldPath}`);
+  for (const fieldPath of providedPaths.filter((field) => !changedFields.includes(field))) errors.push(`remediation unexpected modified field ${fieldPath}`);
+  return errors;
+}
+
 async function validateMostaedSemanticReview({
   cards,
+  baseCards = [],
   sources,
   corpusIndex,
   manifest,
+  requiredQualifierInventory = MOSTAED_REQUIRED_QUALIFIERS,
   corpusDir = CORPUS,
   readFileImpl = readFile,
 }) {
@@ -399,6 +463,7 @@ async function validateMostaedSemanticReview({
   for (const card of qualifyingCards) {
     const record = records.find((item) => item.card_id === card.id);
     const cardErrors = [];
+    const sourceTextById = new Map();
     let cardProvenDefect = false;
     if (!record) {
       resultRecords.push({ id: card.id, verdict: 'BLOCKED', complete: false, reason: 'Semantic review record is missing.' });
@@ -438,15 +503,21 @@ async function validateMostaedSemanticReview({
         const bytes = await readFileImpl(path.join(corpusDir, indexEntry.filename));
         const currentSourceSha256 = sha256(bytes);
         if (sourceRecord.sha256 !== currentSourceSha256 || indexEntry.sha256 !== currentSourceSha256) cardErrors.push(`${sourceRecord.source_id} source hash mismatch`);
+        if (source.sha256 !== currentSourceSha256) cardErrors.push(`${sourceRecord.source_id} canonical source hash mismatch`);
+        if (reference.sha256 !== currentSourceSha256) cardErrors.push(`${sourceRecord.source_id} card citation hash mismatch`);
+        const retrievalDate = String(indexEntry.retrievedAt ?? '').slice(0, 10);
+        if (source.retrieved !== retrievalDate) cardErrors.push(`${sourceRecord.source_id} canonical source retrieval date mismatch`);
+        if (reference.retrieved !== retrievalDate) cardErrors.push(`${sourceRecord.source_id} card citation retrieval date mismatch`);
+        sourceTextById.set(sourceRecord.source_id, normalizedEvidenceText(bytes));
       } catch (error) {
         cardErrors.push(`${sourceRecord.source_id} source capture is inaccessible: ${error.message || error}`);
       }
     }
 
     const expectedLines = [...(card.do ?? []).map((item, index) => ({
-      field_path: `do[${index}]`, text: typeof item === 'string' ? item : item.t, source_id: typeof item === 'string' ? null : item.src ?? null,
+      field_path: `do[${index}]`, text: typeof item === 'string' ? item : item.t, english_text: typeof item === 'string' ? null : item.en?.trim() || null, source_id: typeof item === 'string' ? null : item.src ?? null,
     })), ...(card.dont ?? []).map((item, index) => ({
-      field_path: `dont[${index}]`, text: typeof item === 'string' ? item : item.t, source_id: typeof item === 'string' ? null : item.src ?? null,
+      field_path: `dont[${index}]`, text: typeof item === 'string' ? item : item.t, english_text: typeof item === 'string' ? null : item.en?.trim() || null, source_id: typeof item === 'string' ? null : item.src ?? null,
     }))];
     const reviewedLines = Array.isArray(record.actionable_lines) ? record.actionable_lines : [];
     const reviewedPaths = reviewedLines.map((line) => line.field_path);
@@ -460,8 +531,17 @@ async function validateMostaedSemanticReview({
       if (reviewed.text !== expected.text) cardErrors.push(`${card.id} stale actionable text at ${expected.field_path}`);
       if ((reviewed.source_id ?? null) !== expected.source_id) cardErrors.push(`${card.id} stale actionable source at ${expected.field_path}`);
       if (!String(reviewed.source_excerpt ?? '').trim()) cardErrors.push(`${card.id} missing source excerpt at ${expected.field_path}`);
+      else if (!sourceTextById.get(reviewed.source_id)?.includes(normalizedEvidenceText(reviewed.source_excerpt))) cardErrors.push(`${card.id} source excerpt not found at ${expected.field_path}`);
       if (!String(reviewed.qualifier_or_exception ?? '').trim()) cardErrors.push(`${card.id} missing qualifier decision at ${expected.field_path}`);
       if (typeof reviewed.card_carries !== 'boolean') cardErrors.push(`${card.id} missing carried decision at ${expected.field_path}`);
+      else if (reviewed.card_carries !== true) cardErrors.push(`${card.id} source condition is not carried at ${expected.field_path}`);
+      if (expected.english_text) {
+        if (reviewed.english_status !== 'reviewed') cardErrors.push(`${card.id} English review status is incomplete at ${expected.field_path}`);
+        if (reviewed.english_text !== expected.english_text) cardErrors.push(`${card.id} stale English actionable text at ${expected.field_path}`);
+        if (!sourceTextById.get(reviewed.source_id)?.includes(normalizedEvidenceText(reviewed.english_source_excerpt ?? ''))) cardErrors.push(`${card.id} English source excerpt not found at ${expected.field_path}`);
+        if (!String(reviewed.english_qualifier_or_exception ?? '').trim()) cardErrors.push(`${card.id} English qualifier decision is missing at ${expected.field_path}`);
+        if (reviewed.english_card_carries !== true || reviewed.english_verdict !== 'PASS') cardErrors.push(`${card.id} English actionable review is unresolved at ${expected.field_path}`);
+      } else if (reviewed.english_status !== 'absent' || reviewed.english_text !== null) cardErrors.push(`${card.id} English review status is incomplete at ${expected.field_path}`);
       if (reviewed.verdict === 'FAIL') {
         cardProvenDefect = true;
         provenContentDefect = true;
@@ -486,9 +566,15 @@ async function validateMostaedSemanticReview({
         }
         cardErrors.push(`${card.id} unresolved source qualifier ${qualifier.id ?? '(missing id)'}`);
       }
+      if (String(qualifier.source_excerpt ?? '').trim() && !sourceTextById.get(qualifier.source_id)?.includes(normalizedEvidenceText(qualifier.source_excerpt))) cardErrors.push(`${card.id} source qualifier excerpt not found ${qualifier.id ?? '(missing id)'}`);
     }
+    const requiredQualifierIds = expectedSourceIds.flatMap((sourceId) => requiredQualifierInventory[sourceId] ?? []);
+    for (const sourceId of expectedSourceIds.filter((sourceId) => !Array.isArray(requiredQualifierInventory[sourceId]))) cardErrors.push(`${card.id} independent qualifier inventory missing for source ${sourceId}`);
+    for (const qualifierId of requiredQualifierIds.filter((id) => !qualifierIds.includes(id))) cardErrors.push(`${card.id} missing required source qualifier ${qualifierId}`);
+    for (const qualifierId of qualifierIds.filter((id) => !requiredQualifierIds.includes(id))) cardErrors.push(`${card.id} unexpected source qualifier ${qualifierId}`);
     if (!String(record.reviewer_note ?? '').trim()) cardErrors.push(`${card.id} reviewer note is missing`);
-    if (!record.remediation || typeof record.remediation.changed !== 'boolean') cardErrors.push(`${card.id} remediation record is missing`);
+    const baseCard = baseCards.find((item) => item.id === card.id);
+    cardErrors.push(...validateRemediationEvidence(card, baseCard, record.remediation).map((error) => `${card.id} ${error}`));
     if (record.overall_verdict === 'FAIL') {
       cardProvenDefect = true;
       provenContentDefect = true;
@@ -628,13 +714,22 @@ async function writeOutputs() {
 
   let mostaedManifest = null;
   let mostaedManifestLoadError = null;
+  let mostaedBaseCards = [];
   try {
     mostaedManifest = JSON.parse(await readFile(path.join(OUTPUT, 'semantic-reviews', 'mostaed-dropped-exceptions.json'), 'utf8'));
   } catch (error) {
     mostaedManifestLoadError = error;
   }
+  if (mostaedManifest?.remediation_base_commit) {
+    try {
+      mostaedBaseCards = (await loadJavaScriptDataAtRevision(mostaedManifest.remediation_base_commit, 'mostaed/scenarios.js', 'SCENARIOS')).records;
+    } catch (error) {
+      mostaedManifestLoadError = error;
+    }
+  } else if (!mostaedManifestLoadError) mostaedManifestLoadError = new Error('remediation_base_commit is missing');
   const mostaedSemantic = await validateMostaedSemanticReview({
     cards: mostaed.records,
+    baseCards: mostaedBaseCards,
     sources: mostaed.sources,
     corpusIndex: liveCorpusIndex,
     manifest: mostaedManifest,
@@ -759,7 +854,7 @@ async function writeOutputs() {
 }
 
 const audit = {
-  loadJavaScriptData, assertSourceReferences, detectStatisticalQuantities, scanBroadQuantitativeCandidates,
+  loadJavaScriptData, loadJavaScriptDataAtRevision, assertSourceReferences, detectStatisticalQuantities, scanBroadQuantitativeCandidates,
   validateStatisticalDecisionCompleteness, extractContactNumbers,
   sourceContainsExactNumber, isScenarioCard, toCsv, validateRequiredInventories, evaluateGate,
   validateSourceDocument, hasScenarioEvidence, sortCorpusIndex, loadPriorCapture, fetchAndCapture,

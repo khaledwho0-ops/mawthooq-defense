@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0.0","status":"CONTENT_MAPPED_UI_AND_REVIEW_PENDING","trackId":"TRACK-HUMAN-001",
+  "modules":[
+    {"id":"MODULE-SLEEP","nameAr":"النوم والقدرة","dayRanges":[[11,12]],"entryDay":11,"safetyDay":12,"claimIds":["CLM-SLEEP-001"],"notThisAr":"ليس علاج أرق أو وصفة طبية."},
+    {"id":"MODULE-DIGITAL","nameAr":"التوازن الرقمي","dayRanges":[[15,17],[26,29]],"entryDay":15,"safetyDay":29,"claimIds":["CLM-DIGITAL-001","CLM-SOCIAL-COMPARISON-001","CLM-AI-001"],"notThisAr":"ليس منع هاتف أو مراقبة استخدام."},
+    {"id":"MODULE-STRESS","nameAr":"الضغط والانفعال","dayRanges":[[31,40],[78,90]],"entryDay":31,"safetyDay":86,"claimIds":["CLM-EMOTION-001","CLM-MHL-001","CLM-SAFETY-001"],"notThisAr":"ليس تشخيصًا أو إدارة أزمة داخل المحتوى."},
+    {"id":"MODULE-HABITS","nameAr":"العادات والتعثر","dayRanges":[[41,50],[94,96]],"entryDay":41,"safetyDay":49,"claimIds":["CLM-HABIT-001","CLM-ENGAGEMENT-001"],"notThisAr":"ليس تحدي سلسلة أو مدة ثابتة."},
+    {"id":"MODULE-COMMUNICATION","nameAr":"التواصل والعلاقات","dayRanges":[[51,70],[98,98]],"entryDay":51,"safetyDay":62,"claimIds":["CLM-RELATIONSHIP-001","CLM-RELATIONSHIP-SAFETY-001"],"notThisAr":"ليس وساطة عنف أو دعوة لمواجهة."},
+    {"id":"MODULE-FAILURE","nameAr":"الخطأ والمرونة والعودة","dayRanges":[[81,90],[96,96]],"entryDay":81,"safetyDay":87,"claimIds":["CLM-FAILURE-LEARNING-001","CLM-RESILIENCE-001"],"notThisAr":"ليس تمجيد ألم أو تحملًا فرديًا."},
+    {"id":"MODULE-MONEY","nameAr":"السلوك المالي","dayRanges":[[71,72]],"entryDay":71,"safetyDay":71,"claimIds":["CLM-FINANCE-001"],"notThisAr":"ليس نصيحة استثمار أو دين."},
+    {"id":"MODULE-AI","nameAr":"محو أمية الذكاء الاصطناعي","dayRanges":[[29,29],[97,97]],"entryDay":29,"safetyDay":97,"claimIds":["CLM-AI-001"],"notThisAr":"ليس تشخيصًا أو معالجة تلقائية للبيانات."},
+    {"id":"MODULE-PRIVACY","nameAr":"الخصوصية والتسجيل","dayRanges":[[47,47],[97,97]],"entryDay":47,"safetyDay":97,"claimIds":["CLM-AI-001","CLM-MONITORING-001"],"notThisAr":"ليس وعد سرية مطلقة."}
+  ],
+  "routingRules":["modules reference canonical days rather than duplicate content","prerequisites remain enforced","safety day is always reachable independently","module completion creates no wellbeing score","role adaptations require a new reviewed transformation"]
+}

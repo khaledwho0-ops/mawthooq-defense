@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_REVIEW_PENDING","professionalReview":"PENDING",
+  "principle":"Evidence type never overrides design quality, directness, recency, population, cultural fit, harms, or counterevidence.",
+  "levels":[
+    {"id":"A1","label":"Authoritative current guidance or standard","uses":["safety boundary","public-health minimum","technical conformance"],"cautions":["authority scope","resource freshness","local law and implementation"]},
+    {"id":"A2","label":"Systematic review, meta-analysis, or high-level synthesis","uses":["effect range","heterogeneity","harms and limits"],"cautions":["study quality","population transfer","publication bias"]},
+    {"id":"A3","label":"Government or representative surveillance","uses":["population context","burden and access"],"cautions":["measurement","date","not intervention evidence"]},
+    {"id":"B1","label":"Direct contextual or strong observational evidence","uses":["Egyptian context","association","implementation"],"cautions":["causality","sampling","site specificity"]},
+    {"id":"B2","label":"Narrow, conceptual, qualitative, or emerging evidence","uses":["mechanism hypothesis","language and experience","research gaps"],"cautions":["small or selected samples","no outcome promise"]},
+    {"id":"B3","label":"Narrative or early synthesis","uses":["orientation only"],"cautions":["selection bias","must not anchor a strong claim"]}
+  ],
+  "decisionPolicy":["Prefer direct high-quality evidence for the exact claim, not the highest label alone.","Downgrade transfer when population, role, language, power, or Egyptian context differs.","Expose counterevidence, including null, adverse, and contradictory findings.","Do not turn group association into individual prediction.","Operational resources require owner, access, hours, and expiry verification independent of evidence level.","A day inherits the weakest important safety or transfer limitation of its cited claims."],
+  "claimWording":{"STRONG":"supported within named scope; still no individual guarantee","MODERATE":"may help or is associated under named conditions","LIMITED":"educational possibility or caution; no outcome claim","MIXED":"evidence varies or combines different questions; state conflict"},
+  "publicationGate":["registered sources and claims","counterevidence visible","Egypt applicability stated","professional review attributable","freshness current","day wording within calibrated strength"]
+}

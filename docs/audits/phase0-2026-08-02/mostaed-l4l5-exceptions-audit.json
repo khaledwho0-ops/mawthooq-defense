@@ -1,0 +1,349 @@
+[
+  {
+    "id": "choking-adult",
+    "title": "شخص بيختنق (بالغ)",
+    "level": 5,
+    "sources": [
+      "mlp:choking-adult",
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "house-fire",
+    "title": "حريق في البيت",
+    "level": 5,
+    "sources": [
+      "ready:home-fires",
+      null,
+      null
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "friend-suicidal",
+    "title": "صاحبك بيقول إنه عايز يموت",
+    "level": 5,
+    "sources": [
+      "mlp:suicide",
+      null,
+      null,
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "collapse-cpr",
+    "title": "شخص وقع فاقد الوعي (إنعاش قلبي)",
+    "level": 5,
+    "sources": [
+      "nhs:cpr",
+      "nhs:after-accident",
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "drowning",
+    "title": "إنقاذ غريق",
+    "level": 5,
+    "sources": [
+      "mlp:drowning",
+      null
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "burn",
+    "title": "حرق (حرارة أو سوائل مغلية)",
+    "level": 4,
+    "sources": [
+      "mlp:burns",
+      null,
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "heart-attack",
+    "title": "أعراض جلطة قلبية (نوبة قلبية)",
+    "level": 5,
+    "sources": [
+      "nhs:heart-attack",
+      "nhs:cpr",
+      null,
+      null
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "stroke-fast",
+    "title": "أعراض سكتة دماغية (اختبار FAST)",
+    "level": 5,
+    "sources": [
+      "cdc:stroke-signs",
+      null,
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "seizure",
+    "title": "نوبة صرع (تشنّج)",
+    "level": 4,
+    "sources": [
+      "cdc:seizure-first-aid",
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "anaphylaxis",
+    "title": "رد فعل تحسّسي شديد (حساسية مفرطة)",
+    "level": 5,
+    "sources": [
+      "nhs:anaphylaxis",
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "electric-shock",
+    "title": "صعق كهربائي",
+    "level": 4,
+    "sources": [
+      "mlp:electrical-injury",
+      null,
+      null
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "infant-choking",
+    "title": "رضيع بيختنق (أقل من سنة)",
+    "level": 5,
+    "sources": [
+      "mlp:choking-infant",
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "car-accident",
+    "title": "حادثة عربية (مكان الحادث)",
+    "level": 5,
+    "sources": [
+      "nhs:after-accident",
+      null,
+      null
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "poisoning",
+    "title": "تسمّم — حد بلع مادة أو دوا",
+    "level": 4,
+    "sources": [
+      "nhs:poisoning",
+      null,
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "heat-stroke",
+    "title": "إجهاد حراري وضربة شمس",
+    "level": 4,
+    "sources": [
+      "mlp:heat",
+      null,
+      null,
+      null
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "head-injury",
+    "title": "إصابة في الراس",
+    "level": 4,
+    "sources": [
+      "mlp:head-injury"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "shock",
+    "title": "صدمة (هبوط حاد في الدورة الدموية)",
+    "level": 4,
+    "sources": [
+      "mlp:shock"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "chemical-burn",
+    "title": "حرق كيماوي",
+    "level": 4,
+    "sources": [
+      "mlp:chemical-burn"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "breathing-difficulty",
+    "title": "صعوبة في التنفّس",
+    "level": 4,
+    "sources": [
+      "mlp:breathing-difficulty"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "dislocation",
+    "title": "خلع في المفصل",
+    "level": 4,
+    "sources": [
+      "mlp:dislocation"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "genital-injury",
+    "title": "إصابة في الأعضاء التناسلية",
+    "level": 4,
+    "sources": [
+      "mlp:genital-injury"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "skull-fracture",
+    "title": "كسر في الجمجمة",
+    "level": 5,
+    "sources": [
+      "mlp:skull-fracture"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "unconsciousness",
+    "title": "فقدان الوعي — إسعافات أولية",
+    "level": 5,
+    "sources": [
+      "mlp:unconsciousness"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "landslide",
+    "title": "انهيار أرضي وتدفّق طيني",
+    "level": 4,
+    "sources": [
+      "ready:landslides-debris-flow"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "low-blood-sugar",
+    "title": "هبوط سكر الدم",
+    "level": 4,
+    "sources": [
+      "nhs:low-blood-sugar"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "asthma-attack",
+    "title": "نوبة ربو",
+    "level": 4,
+    "sources": [
+      "nhs:asthma"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "febrile-seizure",
+    "title": "تشنّج حراري عند طفل",
+    "level": 4,
+    "sources": [
+      "nhs:febrile-seizures",
+      "nhs:seizure-first-aid"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "bronchiolitis",
+    "title": "التهاب الشُّعَيبات الهوائية",
+    "level": 4,
+    "sources": [
+      "nhs:bronchiolitis",
+      "nhs:rsv"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "whooping-cough",
+    "title": "السعال الديكي",
+    "level": 4,
+    "sources": [
+      "nhs:whooping-cough",
+      "nhs:respiratory-tract-infection"
+    ],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "high-blood-sugar",
+    "title": "ارتفاع السكر الحاد (هايبرجليسيميا)",
+    "level": 4,
+    "sources": [],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "carbon-monoxide",
+    "title": "تسمّم أول أكسيد الكربون (carbon monoxide poisoning)",
+    "level": 4,
+    "sources": [],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "dog-bite",
+    "title": "عضة كلب أو حيوان (أو إنسان) + خطر السعار",
+    "level": 4,
+    "sources": [],
+    "hasExceptionMention": true
+  },
+  {
+    "id": "severe-bleeding",
+    "title": "نزيف خارجي شديد",
+    "level": 5,
+    "sources": [],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "electrical-shock-immediate-safety",
+    "title": "الصعق الكهربائي والإسعاف الأولي",
+    "level": 4,
+    "sources": [
+      "nhs:electric-shock"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "carbon-monoxide-inhalation-evacuation",
+    "title": "تسمم أول أكسيد الكربون (عادم السخان)",
+    "level": 5,
+    "sources": [
+      "nhs:carbon-monoxide"
+    ],
+    "hasExceptionMention": false
+  },
+  {
+    "id": "chemical-skin-burn-flush-protocol",
+    "title": "الحروق الكيميائية وملامسة المظفات الحارقة",
+    "level": 4,
+    "sources": [
+      "nhs:burns"
+    ],
+    "hasExceptionMention": false
+  }
+]

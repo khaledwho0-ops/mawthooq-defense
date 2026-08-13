@@ -162,7 +162,7 @@
 
 <script src="rights.js"></script>
 <script>
-const S = window.CARDS || [];
+const S = (window.CARDS || []).filter(c => c.id.startsWith('scenario-'));
 const LV = {1:{n:'معلومة',c:'--l1'},2:{n:'مهم',c:'--l2'},3:{n:'خطير',c:'--l3'},4:{n:'عاجل',c:'--l4'},5:{n:'حرج',c:'--l5'}};
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const uniq = a => [...new Set(a)];

@@ -1,0 +1,15 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "purposeAr":"إعادة الدخول بعد الانقطاع دون دين أو محو تقدم أو تلاعب بالسلسلة.",
+  "rules":{"noDebt":true,"noForcedRestart":true,"noStreakLoss":true,"noBacklog":true,"noReasonRequired":true,"notificationsDefault":"OFF","userCanExit":true},
+  "routes":[
+    {"absence":"ABOUT_1_DAY","promptAr":"هل تريد المتابعة من هنا أم تركها؟","options":["CONTINUE","SKIP","EXIT"]},
+    {"absence":"ABOUT_3_DAYS","promptAr":"اختر الحد الأدنى أو موضوعًا أو التوقف.","options":["MINIMUM","CHOOSE_TOPIC","EXIT"]},
+    {"absence":"ABOUT_7_DAYS","promptAr":"هل ما زال المحتوى مناسبًا؟","options":["RESUME_SELECTED","REVIEW_FIT","EXPORT_DELETE_EXIT"]},
+    {"absence":"ABOUT_30_DAYS_OR_MORE","promptAr":"بداية جديدة اختيارية من أي نقطة، بلا فتح سجل قديم تلقائيًا.","options":["CHOOSE_ENTRY","NO_HISTORY_MODE","EXPORT_DELETE_EXIT"]}
+  ],
+  "forbiddenCopy":["أفسدت تقدمك","عد لليوم الأول","عوض الأيام","سلسلتك في خطر","اشتقنا لك لأنك لم تلتزم"],
+  "privacy":{"historyPreviewDefault":false,"sensitiveReminderOnLockScreen":false,"absenceReasonCollected":false,"oldConsentReusedForAI":false},
+  "acceptanceTests":["لا تظهر مهام متراكمة بعد أي مدة","يعمل اختيار الخروج بلا حساب أو استبيان","لا يظهر محتوى حساس عند الفتح","كل إشعار يحتاج اختيارًا سابقًا ويمكن إيقافه","العودة لا تؤثر في الوصول للمساعدة"],
+  "openGates":["اختبار أثر الرسائل بالعربية المصرية","اختبار دون اتصال وتعارض مزامنة","مراجعة مكافحة التلاعب"]
+}

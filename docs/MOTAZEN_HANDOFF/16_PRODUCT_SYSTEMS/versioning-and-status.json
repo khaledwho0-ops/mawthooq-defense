@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "trackVersion":{"format":"MAJOR.MINOR.PATCH","states":["PLANNED","RESEARCHED_DRAFT","INTERNAL_REVIEW","EXTERNAL_REVIEW","APPROVED_FOR_PILOT","PILOT_ACTIVE","REVISED","APPROVED_FOR_PUBLICATION","RETIRED"],"breakingChanges":["day reorder","safety boundary change","capability removal","data-policy expansion"]},
+  "dayVersion":{"format":"MAJOR.MINOR.PATCH","requiredFields":["dayId","trackId","version","status","professionalReview","outlineRefs","content"],"immutableIdentity":true,"revisionLogRequired":true,"sourceImpactRequired":true},
+  "transitions":[
+    {"from":"RESEARCHED_DRAFT","to":"INTERNAL_REVIEW","requires":["schema_valid","sources_registered","safety_fields_active"]},
+    {"from":"INTERNAL_REVIEW","to":"EXTERNAL_REVIEW","requires":["four_lens_findings_resolved_or_held","no_false_approval"]},
+    {"from":"EXTERNAL_REVIEW","to":"APPROVED_FOR_PILOT","requires":["attributable_professional_decisions","privacy_accessibility_cultural_safety_gates"]},
+    {"from":"APPROVED_FOR_PILOT","to":"PILOT_ACTIVE","requires":["consent_withdrawal_harm_monitoring","resource_freshness"]},
+    {"from":"REVISED","to":"APPROVED_FOR_PUBLICATION","requires":["pilot_evaluation","negative_outcome_review","final_completeness_audit","named_approvers"]}
+  ],
+  "forbiddenTransitions":["RESEARCHED_DRAFT->PUBLISHED","INTERNAL_REVIEW->APPROVED_FOR_PUBLICATION","PENDING_HUMAN_REVIEW->PROFESSIONALLY_REVIEWED"],
+  "evidenceVersioning":{"freshnessClasses":["STATIC_FOUNDATIONAL","PERIODIC","VOLATILE_RESOURCE"],"correctionTriggers":["retraction","major_guideline_update","resource_owner_change","safety_signal"],"impactTraversal":["source","claim","capability","day","track","ui_copy"]},
+  "acceptanceTests":["كل تغيير محتوى يحتفظ بمعرف ثابت وإصدار جديد","لا نشر بلا أسماء وقرارات مراجعين","سحب المصدر يحدد كل الأيام المتأثرة","يمكن تقاعد يوم دون حذفه من سجل التدقيق"],
+  "openGates":["تنفيذ سجل تغييرات","توقيع أدوار الاعتماد","تجربة ترحيل بيانات المستخدم"]
+}

@@ -1,0 +1,114 @@
+{
+  "مزاج": {
+    "established": 15,
+    "contested": 1,
+    "debunked": 1,
+    "unknown": 1,
+    "Total": 18
+  },
+  "قلق": {
+    "established": 10,
+    "contested": 1,
+    "debunked": 1,
+    "unknown": 1,
+    "Total": 13
+  },
+  "ضغط ونوم": {
+    "established": 8,
+    "contested": 2,
+    "debunked": 1,
+    "unknown": 1,
+    "Total": 12
+  },
+  "صدمة": {
+    "established": 10,
+    "contested": 4,
+    "debunked": 1,
+    "unknown": 2,
+    "Total": 17
+  },
+  "انتباه": {
+    "established": 12,
+    "contested": 2,
+    "debunked": 2,
+    "unknown": 1,
+    "Total": 17
+  },
+  "ذهان": {
+    "established": 10,
+    "contested": 4,
+    "debunked": 2,
+    "unknown": 2,
+    "Total": 18
+  },
+  "خريطة": {
+    "established": 4,
+    "contested": 1,
+    "debunked": 0,
+    "unknown": 1,
+    "Total": 6
+  },
+  "مهارات": {
+    "established": 8,
+    "contested": 1,
+    "debunked": 0,
+    "unknown": 1,
+    "Total": 10
+  },
+  "تنقّل": {
+    "established": 9,
+    "contested": 0,
+    "debunked": 0,
+    "unknown": 1,
+    "Total": 10
+  },
+  "أسس": {
+    "established": 21,
+    "contested": 11,
+    "debunked": 1,
+    "unknown": 7,
+    "Total": 40
+  },
+  "سلوك": {
+    "established": 2,
+    "contested": 0,
+    "debunked": 0,
+    "unknown": 0,
+    "Total": 2
+  },
+  "أزمة": {
+    "established": 1,
+    "contested": 0,
+    "debunked": 0,
+    "unknown": 0,
+    "Total": 1
+  },
+  "ضغط": {
+    "established": 2,
+    "contested": 0,
+    "debunked": 0,
+    "unknown": 0,
+    "Total": 2
+  },
+  "وسواس": {
+    "established": 7,
+    "contested": 0,
+    "debunked": 1,
+    "unknown": 0,
+    "Total": 8
+  },
+  "اضطرابات الأكل": {
+    "established": 7,
+    "contested": 0,
+    "debunked": 1,
+    "unknown": 0,
+    "Total": 8
+  },
+  "الإدمان": {
+    "established": 6,
+    "contested": 1,
+    "debunked": 1,
+    "unknown": 0,
+    "Total": 8
+  }
+}

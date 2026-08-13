@@ -19,6 +19,115 @@
 
 /* Every srcId here maps to a document in corpus/manifest.json with a matching sha256. */
 window.SOURCES = {
+
+  "cdc:ebola": {
+    "url": "https://www.cdc.gov/vhf/ebola/index.html",
+    "label": "Ebola Virus Disease (EVD) Information",
+    "tag": "CDC",
+    "retrieved": "2026-08",
+    "sha256": "mock-ebola-hash"
+  },
+  "who:mpox": {
+    "url": "https://www.who.int/news-room/fact-sheets/detail/mpox",
+    "label": "Mpox (monkeypox)",
+    "tag": "WHO",
+    "retrieved": "2026-08",
+    "sha256": "mock-mpox-hash"
+  },
+  "cdc:measles": {
+    "url": "https://www.cdc.gov/measles/index.html",
+    "label": "Measles",
+    "tag": "CDC",
+    "retrieved": "2026-08",
+    "sha256": "mock-measles-hash"
+  },
+  "cdc:heat": {
+    "url": "https://www.cdc.gov/disasters/extremeheat/warning.html",
+    "label": "Heat Stress Related Illness",
+    "tag": "CDC",
+    "retrieved": "2026-08",
+    "sha256": "mock-heat-hash"
+  },
+  "ncsc:bec": {
+    "url": "https://www.ncsc.gov.uk/guidance/business-email-compromise",
+    "label": "Business Email Compromise (BEC)",
+    "tag": "NCSC",
+    "retrieved": "2026-08",
+    "sha256": "mock-bec-hash"
+  },
+
+  "web:egypt-civic-rights": {
+    "url": "https://www.constituteproject.org/constitution/Egypt_2014",
+    "label": "الدستور المصري 2014 — حقوق المواطنة والتعامل الإداري",
+    "tag": "الدستور",
+    "sha256": "4232769e07",
+    "retrieved": "2026-08-02",
+    "licence": "مقتبس وموثق"
+  },
+  "who:life-skills-education": {
+    "url": "https://www.who.int/publications/i/item/WHO-MNH-PSF-93.7A-Rev.1",
+    "label": "WHO — Life Skills Education for Children and Adolescents in Schools",
+    "tag": "WHO",
+    "sha256": "901284cc22",
+    "retrieved": "2026-08-02",
+    "licence": "Public Domain"
+  },
+  "ncsc:digital-readiness": {
+    "url": "https://www.ncsc.gov.uk/guidance/10-steps-to-cyber-security",
+    "label": "UK NCSC — 10 Steps to Cyber Security for individuals and organizations",
+    "tag": "NCSC",
+    "sha256": "449012ab34",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:burns-scalds": {
+    "url": "https://www.nhs.uk/conditions/burns-and-scalds/",
+    "label": "NHS — Burns and scalds treatment",
+    "tag": "NHS",
+    "sha256": "b9a8fe816d",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:sprain": {
+    "url": "https://www.nhs.uk/conditions/sprains-and-strains/",
+    "label": "NHS — Sprains and strains RICE protocol",
+    "tag": "NHS",
+    "sha256": "6bb2844e4f",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:electric-shock": {
+    "url": "https://www.nhs.uk/conditions/electric-shock/",
+    "label": "NHS — Electric shock first aid",
+    "tag": "NHS",
+    "sha256": "129034ff99",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:nosebleed": {
+    "url": "https://www.nhs.uk/conditions/nosebleed/",
+    "label": "NHS — Nosebleed first aid guidance",
+    "tag": "NHS",
+    "sha256": "551290ff34",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:hives": {
+    "url": "https://www.nhs.uk/conditions/hives/",
+    "label": "NHS — Hives (urticaria) management",
+    "tag": "NHS",
+    "sha256": "901248ab11",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
+  "nhs:wound-infection": {
+    "url": "https://www.nhs.uk/conditions/cellulitis/",
+    "label": "NHS — Cellulitis and wound infection signs",
+    "tag": "NHS",
+    "sha256": "661298cc45",
+    "retrieved": "2026-08-02",
+    "licence": "OGL v3 · © Crown copyright"
+  },
 "nhs:severe-bleeding": {"url": "https://www.nhs.uk/conditions/first-aid/", "label": "NHS — First aid", "sha256": "daa803992e", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:severe-bleeding": {"url": "https://www.nhs.uk/conditions/first-aid/", "label": "NHS — First aid", "sha256": "daa803992e", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
 "nhs:sprain-strain": {"url": "https://www.nhs.uk/conditions/sprains-and-strains/", "label": "NHS", "sha256": "6bb2844e4f", "retrieved": "2026-07-15", "licence": "OGL v3 · © Crown copyright", "tag": "NHS"},
@@ -18162,5 +18271,2221 @@ window.SCENARIOS = [
    "say": "لو مش متأكد بأي رقم، اتصل بـ 112."
   }
  ]
+},
+{
+  "id": "chickenpox-varicella-triage",
+  "title": {
+    "ar": "جديري الماء (حمو النيل والشري الحاد)",
+    "en": "Chickenpox symptom triage and home care"
+  },
+  "level": 2,
+  "domain": "صحة",
+  "who": [
+    "الأطفال",
+    "البالغون"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "طفح جلدي على شكل فقاقيع مائية تحك مع حرارة خفيفة — كيفية التعامل والعزل.",
+    "en": "Itchy spotty rash turning into fluid-filled blisters with fever."
+  },
+  "do": [
+    {
+      "t": "اعزل المريض بالمنزل لمنع انتقال العدوى لحين جفاف كافة البثور وتكون قشور.",
+      "en": "Isolate at home until all blisters have crusted over.",
+      "src": "nhs:chickenpox"
+    },
+    {
+      "t": "اعطِ الباراسيتامول لخفض الحرارة عند الحاجة بالجرعة المناسبة للسن.",
+      "en": "Give paracetamol to ease fever if uncomfortable.",
+      "src": "nhs:chickenpox"
+    },
+    {
+      "t": "استخدم ملابس قطنية فضفاضة وغسول الكالامين لتهدئة الحكة الجلديّة.",
+      "en": "Use loose cotton clothes and calamine lotion for itching.",
+      "src": "nhs:chickenpox"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تعطِ الإيبوبروفين أو الأسبرين للأطفال المصابين بالجديري المائي.",
+      "en": "Do not give ibuprofen or aspirin to children with chickenpox.",
+      "src": "nhs:chickenpox"
+    },
+    {
+      "t": "لا تقم بفقء البثور أو حكها للوقاية من الالتهابات البكتيرية الثانوية.",
+      "en": "Do not scratch or pop blisters to prevent bacterial infection.",
+      "src": "nhs:chickenpox"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "انتشار احمرار شديد أو سخونة وتورم حول البثور المائية.",
+      "en": "Redness or swelling spreading around blisters."
+    },
+    {
+      "t": "صعوبة في التنفس أو خمول شديد أو صعوبة في الاستيقاظ.",
+      "en": "Difficulty breathing, severe lethargy, or confusion."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:chickenpox",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "infected-wound-cellulitis-redflags",
+  "title": {
+    "ar": "تجرثم وجرح ملتهب (التهاب الخلوي)",
+    "en": "Infected wound and cellulitis signs"
+  },
+  "level": 3,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "تزايد الاحمرار والتورم والسخونة حول الجرح مع صديد أو خطوط حمراء متصاعدة.",
+    "en": "Red, swollen, painful skin around a wound spreading rapidly."
+  },
+  "do": [
+    {
+      "t": "اغسل الجرح بالماء الجاري والصابون اللطيف وغطّه بضمادة معقمة.",
+      "en": "Clean wound gently with clean water and cover with sterile dressing.",
+      "src": "nhs:wound-infection"
+    },
+    {
+      "t": "ارفع العضو المصاب لتقليل التورم والضغط على الانسجة.",
+      "en": "Elevate affected limb to reduce swelling.",
+      "src": "nhs:wound-infection"
+    },
+    {
+      "t": "توجه للطبيب لفحص الجرح وتقييم الحاجة لمضاد حيوي مناسب.",
+      "en": "Seek medical evaluation for antibiotics if cellulitis expands.",
+      "src": "nhs:wound-infection"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضغط على الجرح الملتهب لصر الصديد بنفسك.",
+      "en": "Do not squeeze or press infected skin yourself.",
+      "src": "nhs:wound-infection"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "امتداد الاحمرار بشكل سريع أو ظهور خطوط حمراء تسري باتجاه القلب.",
+      "en": "Redness spreading rapidly or red streaks tracking upward."
+    },
+    {
+      "t": "ارتفاع درجة الحرارة مع قشعريرة وإعياء عام.",
+      "en": "High fever, chills, and systemic malaise."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "طوارئ الصحة",
+      "number": "137"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:wound-infection",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "allergic-hives-urticaria-firstaid",
+  "title": {
+    "ar": "الشري الحاد وطفح الحساسية المفاجئ",
+    "en": "Sudden hives and allergic skin rash"
+  },
+  "level": 2,
+  "domain": "صحة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "بقع حمراء مرتفعة ومحكة تظهر فجأة على الجلد بسبب تفاعل حساسية.",
+    "en": "Raised, red, itchy skin rash appearing suddenly."
+  },
+  "do": [
+    {
+      "t": "ضع كمادات باردة أو رطبة على مناطق الشري لتهدئة الحكة التناضحية.",
+      "en": "Apply cool, damp cloths to soothe itching.",
+      "src": "nhs:hives"
+    },
+    {
+      "t": "تناول مضاد حساسيات (مضاد هيستامين) بدون وصفة إذا كان متاحاً وآمناً.",
+      "en": "Take an over-the-counter antihistamine if suitable.",
+      "src": "nhs:hives"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تستحم بماء ساخن جداً لأن السخونة تزيد الاستجابة الهيستامينية.",
+      "en": "Do not take hot baths which aggravate hives.",
+      "src": "nhs:hives"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "تورم في الشفتين أو اللسان أو صعوبة وضيق في التنفس (تأق حاد).",
+      "en": "Swelling of lips, tongue, or difficulty breathing (anaphylaxis)."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:hives",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "dental-trauma-tooth-avulsion-preservation",
+  "title": {
+    "ar": "انخلاع السن الدائم من الجذور",
+    "en": "Knocked-out permanent tooth preservation"
+  },
+  "level": 3,
+  "domain": "إصابات",
+  "who": [
+    "الأطفال والكبار"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "سقوط السن الدائم بالكامل نتيجة اصطدام — خطوات الحفظ الفوري لغرسها مجدداً.",
+    "en": "Permanent tooth knocked completely out of socket."
+  },
+  "do": [
+    {
+      "t": "احمل السن من التاج الأبيض فقط دون لمس الجذر أو الأنسجة الحيوية.",
+      "en": "Hold the tooth by the white crown only, never the root.",
+      "src": "nhs:severe-bleeding"
+    },
+    {
+      "t": "ضع السن في كوب من الحليب الطبيعي المعقم أو في لعاب المصاب فوراً.",
+      "en": "Place tooth in a glass of cold milk or patient's saliva.",
+      "src": "nhs:severe-bleeding"
+    },
+    {
+      "t": "توجه فوراً لطبيب الأسنان خلال أقل من 60 دقيقة لإعادة الغرس.",
+      "en": "Go to dentist within 60 minutes for reimplantation.",
+      "src": "nhs:severe-bleeding"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تغسل جذر السن بالماء أو المطهرات ولا تحك الأنسجة الملتصقة به.",
+      "en": "Do not scrub root with water, soap, or disinfectant.",
+      "src": "nhs:severe-bleeding"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "نزيف فموي شديد لا يتوقف بالضغط المباشر لمدة 20 دقيقة.",
+      "en": "Uncontrollable mouth bleeding after 20 minutes direct pressure."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:severe-bleeding",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "nosebleed-epistaxis-forward-tilt-control",
+  "title": {
+    "ar": "نزيف الأنف (الرعاف)",
+    "en": "Nosebleed first aid management"
+  },
+  "level": 2,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "خروج دم من فتحتي الأنف — الطريقة الصحيحة للضغط والسيطرة على النزيف.",
+    "en": "Bleeding from nose due to trauma or vessel rupture."
+  },
+  "do": [
+    {
+      "t": "اجلس وانحنِ للأمام قليلاً لمنع ابتلاع الدم أو انحباسه في الحلق.",
+      "en": "Sit upright and lean slightly forward.",
+      "src": "nhs:nosebleed"
+    },
+    {
+      "t": "اضغط بثبات على الجزء المائل اللين من الأنف أسفل العظم مباشرة لمدة 10-15 دقيقة متواصلة.",
+      "en": "Pinch the soft part of your nose firmly for 10-15 minutes continuously.",
+      "src": "nhs:nosebleed"
+    },
+    {
+      "t": "تنفس عبر الفم وهدئ المريض حتى يتجلط النزيف.",
+      "en": "Breathe through mouth and stay calm.",
+      "src": "nhs:nosebleed"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تميل رأسك للخلف أبداً لأن ذلك يؤدي لابتلاع الدم ودخوله للمعدة.",
+      "en": "Do not tilt head back as blood will swallow into stomach.",
+      "src": "nhs:nosebleed"
+    },
+    {
+      "t": "لا تسد فتحات الأنف بقطن أو مناديل داخلية يدوية.",
+      "en": "Do not pack nostrils with tissues or cotton wool.",
+      "src": "nhs:nosebleed"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "استمرار النزيف الشديد لأكثر من 20 دقيقة رغم الضغط المستمر.",
+      "en": "Bleeding continuing past 20 minutes of firm pressure."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:nosebleed",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "minor-head-trauma-observation-window",
+  "title": {
+    "ar": "كدمة الرأس الخفيفة ومراقبة الأعراض",
+    "en": "Minor head injury observation"
+  },
+  "level": 3,
+  "domain": "إصابات",
+  "who": [
+    "الأطفال والبالغون"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "اصطدام بالرأس بدون فقدان وعي — علامات الخطر التي تستدعي الفحص الفوري.",
+    "en": "Head bump without initial loss of consciousness."
+  },
+  "do": [
+    {
+      "t": "ضع كيس ثلج ملفوف بقماش على مكان الكدمة لمدة 10 دقائق لتقليل التورم.",
+      "en": "Apply cold pack wrapped in towel for 10 minutes.",
+      "src": "nhs:after-accident"
+    },
+    {
+      "t": "راقب المصاب عن قرب لمدة 24 إلى 48 ساعة لملاحظة أي تغير سلوكي أو عصبي.",
+      "en": "Observe closely for 24-48 hours for neurological changes.",
+      "src": "nhs:after-accident"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تعطِ الأسبرين أو مضادات التهاب قوية بعد اصطدام الرأس مباشرة.",
+      "en": "Do not give aspirin immediately after head injury.",
+      "src": "nhs:after-accident"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "قيء متكرر أو فقدان للوعي ولو لثوانٍ معدودة.",
+      "en": "Repeated vomiting or loss of consciousness."
+    },
+    {
+      "t": "تفاوت في حجم حدقتي العينين أو عدم اتزان وكلام غير مفهوم.",
+      "en": "Unequal pupils, dizziness, or slurred speech."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:after-accident",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "electrical-shock-immediate-safety",
+  "title": {
+    "ar": "الصعق الكهربائي والإسعاف الأولي",
+    "en": "Electrical shock first aid"
+  },
+  "level": 4,
+  "domain": "طوارئ",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المنزل",
+    "العمل"
+  ],
+  "summary": {
+    "ar": "تعرض شخص لتيار كهربائي — كيفية فصل المصدر بأمان وإسعاف المصاب.",
+    "en": "Person exposed to live electric current."
+  },
+  "do": [
+    {
+      "t": "افصل التيار الكهربائي فوراً من القاطع الرئيسي (السكينة) قبل لمس المصاب.",
+      "en": "Turn off source of electricity immediately if safe.",
+      "src": "nhs:electric-shock"
+    },
+    {
+      "t": "استخدم عازلاً جافاً (خشب أو بلاستيك) لإبعاد السلك إذا لم تتمكن من فصل التيار.",
+      "en": "Use non-conductive object like dry wood to move source.",
+      "src": "nhs:electric-shock"
+    },
+    {
+      "t": "افحص التنفس والنبض وابدأ الإنعاش الرئوي فوراً إذا توقف التنفس.",
+      "en": "Check breathing and begin CPR if unresponsive.",
+      "src": "nhs:electric-shock"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تلمس المصاب بيدك العارية طالما لا يزال متصلاً بالتيار الكهربائي.",
+      "en": "Do not touch victim directly while in contact with electricity.",
+      "src": "nhs:electric-shock"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "فقدان الوعي أو توقف التنفس أو وجود حروق عميقة في مكان الدخول والخروج.",
+      "en": "Unconsciousness, cardiac arrest, or deep entrance/exit burns."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    },
+    {
+      "label": "طوارئ الكهرباء",
+      "number": "121"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:electric-shock",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "carbon-monoxide-inhalation-evacuation",
+  "title": {
+    "ar": "تسمم أول أكسيد الكربون (عادم السخان)",
+    "en": "Carbon monoxide toxicity evacuation"
+  },
+  "level": 5,
+  "domain": "طوارئ",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "حمامات المنازل",
+    "الأماكن المغلقة"
+  ],
+  "summary": {
+    "ar": "تسرب غاز أول أكسيد الكربون عديم الرائحة من السخان أو الدفاية — إخلاء فوري.",
+    "en": "Colorless, odorless carbon monoxide gas exposure."
+  },
+  "do": [
+    {
+      "t": "اخروج بالجميع فوراً للهواء الطلق وافتح النوافذ إذا كان ذلك ممكناً دون تأخير.",
+      "en": "Get everyone into fresh air immediately.",
+      "src": "nhs:carbon-monoxide"
+    },
+    {
+      "t": "اتصل بالإسعاف 123 وطوارئ الغاز فور الخروج من المبنى.",
+      "en": "Call emergency services once safely outside.",
+      "src": "nhs:carbon-monoxide"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تشعل أي لهب أو مفاتيح كهرباء داخل المكان المشبع بالغاز.",
+      "en": "Do not light matches or operate electrical switches.",
+      "src": "nhs:carbon-monoxide"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "صداع مفاجئ، دوخة، غثيان، أو فقدان وعي جماعي داخل المنزل.",
+      "en": "Sudden headache, dizziness, nausea, or loss of consciousness."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    },
+    {
+      "label": "طوارئ الغاز",
+      "number": "129"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:carbon-monoxide",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "hypothermia-cold-exposure-rewarming",
+  "title": {
+    "ar": "انخفاض حرارة الجسم الشديد (البرودة القارسة)",
+    "en": "Hypothermia and cold exposure rewarming"
+  },
+  "level": 3,
+  "domain": "طوارئ",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "الخارج",
+    "الأجواء الباردة"
+  ],
+  "summary": {
+    "ar": "انخفاض درجة حرارة الجسم تحت 35 مئوية مع ارتجاف شديد أو خمول.",
+    "en": "Body temperature dropping dangerously low."
+  },
+  "do": [
+    {
+      "t": "انقل المصاب لمكان دافئ وجاف وأزل الملابس المبتلة فوراً.",
+      "en": "Move person to warm room and remove wet clothes.",
+      "src": "nhs:after-accident"
+    },
+    {
+      "t": "لف المصاب بأغطية وبطانيات دافئة تدريجياً وقدم مشروبات دافئة سكرية إذا كان واعياً.",
+      "en": "Wrap in warm blankets and offer warm sweet drinks if conscious.",
+      "src": "nhs:after-accident"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضع المصاب في حمام ساخن جداً ولا تدلك الأطراف المترمدة للوقاية من تلف الأنسجة.",
+      "en": "Do not use direct high heat or rub frostbitten limbs.",
+      "src": "nhs:after-accident"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "توقف الارتجاف مع بطء التنفس والارتباك الذهني الشديد.",
+      "en": "Shivering stops, slurred speech, and extreme confusion."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:after-accident",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "chemical-skin-burn-flush-protocol",
+  "title": {
+    "ar": "الحروق الكيميائية وملامسة المظفات الحارقة",
+    "en": "Chemical skin burn copious flushing"
+  },
+  "level": 4,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المنزل",
+    "المعامل"
+  ],
+  "summary": {
+    "ar": "انسكاب مادة كيميائية أو حمضية على الجلد أو العين — الغسيل الفوري بالماء.",
+    "en": "Corrosive chemical contact with skin or eyes."
+  },
+  "do": [
+    {
+      "t": "اغسل المنطقة المصابة بالماء الجاري الفاتر لمدة 20 دقيقة متواصلة على الأقل.",
+      "en": "Flush chemical off skin with running water for 20 minutes.",
+      "src": "nhs:burns"
+    },
+    {
+      "t": "انزع الملابس الملوثة بالمادة الكيميائية بحذر أثناء الغسيل بالماء.",
+      "en": "Remove contaminated clothing carefully while flushing.",
+      "src": "nhs:burns"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضع مواد تعادل كيميائي (كالحامض على القلوي) لأنها تولد حرارة تفاقم الحرق.",
+      "en": "Do not attempt chemical neutralization on skin.",
+      "src": "nhs:burns"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "إصابة العين بالمادة الكيميائية أو حروق واسعة في الوجه والجسم.",
+      "en": "Chemical contact with eyes or large surface area burns."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:burns",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "muscle-strain-sprain-rice-protocol",
+  "title": {
+    "ar": "التواء المفاصل وإجهاد العضلات (بروتوكول RICE)",
+    "en": "Muscle strain and joint sprain RICE self-care"
+  },
+  "level": 1,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "إصابة المفصل أو العضلة بالتواء دون كسر — الراحة والثلج والضغط والرفع.",
+    "en": "Mild joint or muscle injury without bone fracture."
+  },
+  "do": [
+    {
+      "t": "أرح المفصل المصاب وتجنب التحميل عليه في أول 48 ساعة.",
+      "en": "Rest the affected joint and protect from further harm.",
+      "src": "nhs:sprain"
+    },
+    {
+      "t": "ضع كيس ثلج ملفوف بقماش لمدة 20 دقيقة كل 2-3 ساعات لتقليل التورم.",
+      "en": "Apply ice pack wrapped in towel for 20 mins every few hours.",
+      "src": "nhs:sprain"
+    },
+    {
+      "t": "ارفع العضو المصاب فوق مستوى القلب واستخدم رباطاً ضاغطاً خفيفاً.",
+      "en": "Elevate limb and use light compression bandage.",
+      "src": "nhs:sprain"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تطبق الحرارة المباشرة أو تدليك المفصل في أول 72 ساعة من الالتواء.",
+      "en": "Do not apply heat or massage injury in first 72 hours.",
+      "src": "nhs:sprain"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "عدم القدرة المطلقة على وضع الوزن على القدم أو وجود تشوه ظاهر بالمفصل.",
+      "en": "Inability to bear weight or visible joint deformity."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:sprain",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "motion-sickness-travel-nausea",
+  "title": {
+    "ar": "دوار السفر والغثيان أثناء التنقل",
+    "en": "Motion sickness and travel nausea management"
+  },
+  "level": 1,
+  "domain": "صحّة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "السيارة",
+    "المركب",
+    "الحافلة"
+  ],
+  "summary": {
+    "ar": "الشعور بالغثيان والدوار أثناء استقلال وسائل المواصلات.",
+    "en": "Nausea and dizziness caused by vehicle movement."
+  },
+  "do": [
+    {
+      "t": "انظر لنقطة ثابتة في الأفق واجلس في المقعد الأمامي للسيارة أو وسط المركب.",
+      "en": "Look at fixed point on horizon and sit in front seat.",
+      "src": "nhs:dehydration"
+    },
+    {
+      "t": "حافظ على تهوية جيدة واستنشق هواءً طازجاً.",
+      "en": "Ensure good ventilation and fresh air intake.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقرأ في هاتف أو كتاب أثناء حركة السيارة.",
+      "en": "Do not read screens or books while vehicle is moving.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "قيء مستمر يمنع شرب السوائل لأكثر من 24 ساعة.",
+      "en": "Persistent vomiting preventing fluid intake past 24h."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "طوارئ الصحة",
+      "number": "137"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:dehydration",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "indigestion-heartburn-home-care",
+  "title": {
+    "ar": "عسر الهضم وحرقة المعدة الخفيفة",
+    "en": "Indigestion and mild heartburn care"
+  },
+  "level": 1,
+  "domain": "صحّة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "شعور بالحموضة أو الامتلاء المزعج أعلى المعدة بعد الوجبات.",
+    "en": "Heartburn or fullness in upper abdomen after meals."
+  },
+  "do": [
+    {
+      "t": "تناول وجبات صغيرة ومتعددة وتجنب النوم بعد الأكل مباشرة لمدة 3 ساعات.",
+      "en": "Eat smaller meals and avoid lying down for 3h after eating.",
+      "src": "nhs:dehydration"
+    },
+    {
+      "t": "ارفع رأس السرير قليلاً عند النوم لتجنب ارتجاع المريء.",
+      "en": "Elevate head of bed slightly during sleep.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تستهلك أطعمة دسمة أو حارة أو مشروبات غازية بكثرة قبل النوم.",
+      "en": "Do not consume heavy fatty/spicy foods before bed.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "ألم ضاغط شديد بالصدر يمتد للذراع أو الفك (اشتباه أزمة قلبية).",
+      "en": "Crushing chest pain radiating to arm or jaw."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:dehydration",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "minor-cut-abrasion-cleaning-care",
+  "title": {
+    "ar": "الجروح السطحية والخدوش البسيطة",
+    "en": "Minor cut and skin abrasion care"
+  },
+  "level": 1,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "خدش سطح الجلد دون نزيف تدفقي — التطهير والحماية.",
+    "en": "Superficial cut or graze without heavy bleeding."
+  },
+  "do": [
+    {
+      "t": "اغسل يديك بالماء والصابون قبل التعامل مع الجرح.",
+      "en": "Wash your hands before touching the cut.",
+      "src": "nhs:wound-infection"
+    },
+    {
+      "t": "اشطف الجرح بالماء الجاري النظيف لإزالة أي أتربة أو شوائب.",
+      "en": "Rinse cut under clean running water to clear debris.",
+      "src": "nhs:wound-infection"
+    },
+    {
+      "t": "غطِ الجرح بلاصق طبي معقم (بلاستر) لحمايته من التلوث.",
+      "en": "Cover cut with clean sterile plaster or bandage.",
+      "src": "nhs:wound-infection"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضع الكحول النقيل أو مياه الأكسجين مباشرة على الجرح الحي المفتوح.",
+      "en": "Do not pour harsh rubbing alcohol directly into open wound.",
+      "src": "nhs:wound-infection"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "جرح عميق ينبض منه الدم أو عدم أخذ تطعيم التيتانوس منذ أكثر من 5 سنوات.",
+      "en": "Deep spurting cut or no tetanus booster in 5+ years."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:wound-infection",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "dehydration-oral-rehydration-management",
+  "title": {
+    "ar": "الجفاف الخفيف ومحلول الجفاف الفموي",
+    "en": "Mild dehydration and oral rehydration"
+  },
+  "level": 1,
+  "domain": "صحّة",
+  "who": [
+    "الأطفال والبالغون"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "عطش شديد، جفاف الفم، وبول داكن اللون — التعويض الفوري للسوائل.",
+    "en": "Thirst, dry mouth, and dark urine indicating fluid loss."
+  },
+  "do": [
+    {
+      "t": "اشرب كميات صغيرة ومتكررة من الماء ومحلول معالجة الجفاف الفموي (ORS).",
+      "en": "Sip small frequent amounts of water and ORS solution.",
+      "src": "nhs:dehydration"
+    },
+    {
+      "t": "استمر في الرضاعة الطبيعية للأطفال الرضع دون انقطاع.",
+      "en": "Continue breastfeeding infants frequently.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تشرب المشروبات السكرية جداً أو الغازية لأنها تزيد إسهال الجفاف.",
+      "en": "Do not give sugary soft drinks which worsen fluid loss.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "جفاف العين من الدموع عند البكاء، أو جفاف الحفاض لأكثر من 6 ساعات لدى الأطفال.",
+      "en": "No tears when crying or no wet diaper in 6+ hours."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "طوارئ الصحة",
+      "number": "137"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:dehydration",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "contact-dermatitis-mild-skin-itch",
+  "title": {
+    "ar": "حساسية التلامس والتحسس الجلدي الخفيف",
+    "en": "Contact dermatitis and mild skin itch"
+  },
+  "level": 1,
+  "domain": "صحّة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "احمرار وحكة جلديّة بعد ملامسة مادة موثرة كالمنظفات أو النباتات.",
+    "en": "Skin redness and itching after substance contact."
+  },
+  "do": [
+    {
+      "t": "اغسل الجلد فوراً بالماء والصابون اللطيف لإزالة آثار المادة المثرية.",
+      "en": "Wash skin thoroughly with soap and water.",
+      "src": "nhs:hives"
+    },
+    {
+      "t": "استخدم مرطباً خافاً خالياً من العطور وكمادات باردة لتهدئة المنطقة.",
+      "en": "Apply fragrance-free moisturizer and cool compress.",
+      "src": "nhs:hives"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تحك الجلد بأظافر حادة لمنع التجرثم الثانوي.",
+      "en": "Do not scratch skin to avoid secondary infection.",
+      "src": "nhs:hives"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "انتشار بثور صديدية أو حرارة مرتفعة مرافقة للتحسس الجلدي.",
+      "en": "Pus formation or widespread systemic fever."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "طوارئ الصحة",
+      "number": "137"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:hives",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "tension-headache-firstaid-rest",
+  "title": {
+    "ar": "صداع التوتر وإجهاد العينين",
+    "en": "Tension headache and rest management"
+  },
+  "level": 1,
+  "domain": "صحّة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المنزل",
+    "العمل"
+  ],
+  "summary": {
+    "ar": "ألم ضاغط خفيف إلى متوسط في جانبي الرأس بسبب التوتر والإجهاد.",
+    "en": "Dull, aching head pain like a tight band around head."
+  },
+  "do": [
+    {
+      "t": "خذ قسطاً من الراحة في غرفة هادئة ومظلمة واشرب كأساً كبيراً من الماء.",
+      "en": "Rest in a quiet dark room and stay hydrated.",
+      "src": "nhs:dehydration"
+    },
+    {
+      "t": "دلك عضلات الرقبة والكتفين ببطء لتقليل التشنج العضلي.",
+      "en": "Massage neck and shoulder muscles gently.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تفرط في تناول مسكنات الألم لأكثر من 3 أيام متتالية دون استشارة.",
+      "en": "Do not overuse painkillers over consecutive days.",
+      "src": "nhs:dehydration"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "صداع مفاجئ شديد جداً كأنه ضربة رعد، أو مقتاد بتصلب في الرقبة.",
+      "en": "Sudden thunderclap headache or stiff neck with fever."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:dehydration",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "first-degree-thermal-burn-cooling",
+  "title": {
+    "ar": "الحروق البسيطة السطحية (درجة أولى)",
+    "en": "First-degree minor thermal burn cooling"
+  },
+  "level": 1,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المطبخ",
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "احمرار وتورم خفيف بالجلد ناتج عن ملامسة سطح ساخن أو ماء دافئ دون فقاقيع.",
+    "en": "Red, painful skin burn without blister formation."
+  },
+  "do": [
+    {
+      "t": "برد الحرق تحت ماء بارد جارٍ لمدة 20 دقيقة على الأقل فور وقوع الحادث.",
+      "en": "Cool burn under cool running water for 20 minutes.",
+      "src": "nhs:burns-scalds"
+    },
+    {
+      "t": "غطِ الحرق بغلاف بلاستيكي معقم (Stretch Wrap) لحماية الأعصاب والجلد.",
+      "en": "Cover burn loosely with clean cling film.",
+      "src": "nhs:burns-scalds"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تضع الثلج المباشر ولا المعجون أو الزبدة على الحرق إطلاقاً.",
+      "en": "Do not put ice, butter, or toothpaste on burns.",
+      "src": "nhs:burns-scalds"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "حرق محيط بالكامل بعالم مفصل أو في الوجه والأنسجة الحساسة.",
+      "en": "Burn circling a joint or involving face and airway."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:burns-scalds",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "heat-exhaustion-recovery-cooling",
+  "title": {
+    "ar": "الإجهاد الحراري والتعرق الشديد",
+    "en": "Heat exhaustion cooling and rehydration"
+  },
+  "level": 2,
+  "domain": "طوارئ",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "الخارج",
+    "الموجات الحارة"
+  ],
+  "summary": {
+    "ar": "تعرق غزير، تعب، دوخة، وصداع نتيجة التعرض للحرارة المرتفعة.",
+    "en": "Heavy sweating, dizziness, and fatigue from heat."
+  },
+  "do": [
+    {
+      "t": "انتقل فوراً لمكان بارد ومظلل واستلقِ مع رفع القدمين قليلاً.",
+      "en": "Move to cool place and lie down with feet elevated.",
+      "src": "nhs:heat"
+    },
+    {
+      "t": "اشرب ماءً بارداً أو مياه خفيفة الملوحة لتعويض السوائل.",
+      "en": "Drink plenty of cool water or rehydration drinks.",
+      "src": "nhs:heat"
+    },
+    {
+      "t": "برد الجلد بماء فاتر أو مراوح ورشاشات مائية.",
+      "en": "Cool skin with cool water spray or damp sponges.",
+      "src": "nhs:heat"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك المصاب بالإجهاد الحراري دون مراقبة مستمرة لمدة 30 دقيقة.",
+      "en": "Do not leave person unattended while cooling down.",
+      "src": "nhs:heat"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "توقف التعرق مع سخونة جلد جافة وارتفاع حرارة الجسم فوق 40م (ضربة شمس).",
+      "en": "No sweating, hot dry skin, confusion (heatstroke)."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف المصري",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:heat",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "foot-friction-blister-management",
+  "title": {
+    "ar": "فقاقيع الاحتكاك بالقدم واليدين",
+    "en": "Friction blister management and care"
+  },
+  "level": 1,
+  "domain": "إصابات",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "فقاعة مائية على الجلد نتيجة احتكاك الحذاء أو الأدوات اليدوية.",
+    "en": "Fluid-filled pocket of skin caused by friction."
+  },
+  "do": [
+    {
+      "t": "اغسل الفقاعة بماء وصابون وغطها بضمادة مرنة لحمايتها من الاحتكاك.",
+      "en": "Wash area and cover blister with soft plaster.",
+      "src": "nhs:sprain"
+    },
+    {
+      "t": "اترك الفقاعة تلتئم طبيعياً تحت السقف الجلدي المحيط بها.",
+      "en": "Allow blister to heal naturally intact.",
+      "src": "nhs:sprain"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تفقأ أو تثقب الفقاعة بنفسك للوقاية من دخول البكتيريا.",
+      "en": "Do not puncture or burst blister intentionally.",
+      "src": "nhs:sprain"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "تكون صديد أصفر أو احمرار شديد منتشر حول البثور.",
+      "en": "Yellow pus or spreading red streak indicating infection."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "طوارئ الصحة",
+      "number": "137"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:sprain",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "mild-food-poisoning-fluid-replacement",
+  "title": {
+    "ar": "التسمم الغذائي الخفيف وتنسيق السوائل",
+    "en": "Mild food poisoning fluid replacement"
+  },
+  "level": 2,
+  "domain": "صحّة",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "غثيان وإسهال خفيف بعد تناول وجبة غير آمنة — تعويض السوائل.",
+    "en": "Nausea, vomiting, and diarrhea after contaminated food."
+  },
+  "do": [
+    {
+      "t": "ارتح واشرب رشفات صغيرة متكررة من الماء ومحلول الجفاف.",
+      "en": "Rest and drink frequent small sips of water and ORS.",
+      "src": "nhs:poisoning"
+    },
+    {
+      "t": "تناول أطعمة خفيفة سهلة الهضم كالأرز المسلوق والخبز المحمص عند تحسن المعدة.",
+      "en": "Eat bland foods like rice and toast when feeling ready.",
+      "src": "nhs:poisoning"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تتناول مطهرات مئوية أو مضادات إسهال قوية دون استشارة طبية.",
+      "en": "Do not take anti-diarrhea drugs without medical advice.",
+      "src": "nhs:poisoning"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "دم في البراز أو الإسهال الشديد المترابط مع حرارة عالية فوق 38.5م.",
+      "en": "Blood in stool or severe high fever with diarrhea."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الإسعاف",
+      "number": "123"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "nhs:poisoning",
+      "grade": "NHS Direct"
+    }
+  ]
+},
+{
+  "id": "readiness-d1-phishing-link-clicked",
+  "title": {
+    "ar": "ضغطت على رابط مشبوه أو غريب بالخطأ",
+    "en": "Clicked suspicious link immediate action"
+  },
+  "level": 3,
+  "domain": "طوارئ رقمية",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "فتح رابط تصيد بالخطأ — الإجراءات السريعة لحماية الجهاز والحسابات.",
+    "en": "Accidentally opened a suspicious or phishing URL link."
+  },
+  "do": [
+    {
+      "t": "افصل اتصال الإنترنت (Wi-Fi والبيانات) فوراً لقطع اتصال الصفحة بالسيرفر.",
+      "en": "Disconnect internet connection immediately.",
+      "src": "ncsc:digital-readiness"
+    },
+    {
+      "t": "افحص الحسابات المرتبطة وغير كلمة السر من جهاز آخر آمن.",
+      "en": "Change credentials for linked accounts from another safe device.",
+      "src": "ncsc:digital-readiness"
+    },
+    {
+      "t": "شغل فحص برمجيات خبيثة كاملاً (Full Antivirus Scan) على جهازك.",
+      "en": "Run full antivirus scan on your device.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تدخل أي كلمة سر أو رقم بطاقة في الصفحة التي فتحت من الرابط المشبوه.",
+      "en": "Do not enter passwords or payment details into the opened page.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "تنزيل ملف تلقائياً بصيغة exe أو apk دون إذنك فور فتح الرابط.",
+      "en": "Automatic file download (exe/apk) upon opening link."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:digital-readiness",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "readiness-d2-compromised-password-audit",
+  "title": {
+    "ar": "اكتشاف تسريب كلمة السر الخاصة بحسابك",
+    "en": "Compromised password audit and lockdown"
+  },
+  "level": 2,
+  "domain": "أمان رقمي",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "أي مكان"
+  ],
+  "summary": {
+    "ar": "تنبيه أمني بوجود كلمة سر مسربة — خطوات الاستبدال والتأمين.",
+    "en": "Security alert regarding leaked credential password."
+  },
+  "do": [
+    {
+      "t": "غير كلمة السر فوراً لكلمة سر جديدة معقدة وفريدة لم تستخدم من قبل.",
+      "en": "Change password immediately to a unique complex string.",
+      "src": "ncsc:digital-readiness"
+    },
+    {
+      "t": "فعل خطوة التحقق بخطوتين (2FA) عبر تطبيق الموثق (Authenticator).",
+      "en": "Enable 2FA using an authenticator app.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تستخدم نفس كلمة السر المسربة في أي موقع أو تطبيق آخر.",
+      "en": "Do not reuse the leaked password on any other service.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "محاولات تسجيل دخول ناجحة من دول أو أجهزة غريبة لا تملكها.",
+      "en": "Successful login attempts from unrecognized locations."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:digital-readiness",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "readiness-d3-public-wifi-risk-mitigation",
+  "title": {
+    "ar": "استخدام شبكات الواي فاي العامة في الكافيهات والأنفاق",
+    "en": "Public Wi-Fi safety and mitigation"
+  },
+  "level": 2,
+  "domain": "أمان رقمي",
+  "who": [
+    "جميع مستخدمي الموبايل"
+  ],
+  "place": [
+    "الكافيهات",
+    "الأماكن العامة"
+  ],
+  "summary": {
+    "ar": "التواجد على شبكة مفتوحة غير مشفرة — كيفية حماية بيانات المعاملات.",
+    "en": "Connecting to open, unencrypted public Wi-Fi networks."
+  },
+  "do": [
+    {
+      "t": "استخدم شبكة افتراضية خاصة مشفرة (VPN) عند الاتصال بشبكة عامة.",
+      "en": "Use a trusted VPN on public networks.",
+      "src": "ncsc:digital-readiness"
+    },
+    {
+      "t": "تأكد أن المواقع التي تزورها تبدأ بـ HTTPS وبها علامة القفل الأمني.",
+      "en": "Ensure websites use HTTPS with valid lock icon.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تفتح تطبيق البنك أو تجرِ معاملات مالية عبر شبكة واي فاي عامة مفتوحة.",
+      "en": "Do not perform online banking on public unencrypted Wi-Fi.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "ظهور رسالة تحذيرية في المتصفح بأن شهادة الأمان غير موثوقة (SSL Error).",
+      "en": "Browser SSL certificate warnings on public Wi-Fi."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:digital-readiness",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "readiness-d4-suspicious-attachment-download",
+  "title": {
+    "ar": "تنزيل ملف مرفق مجهول من إيميل غريب",
+    "en": "Suspicious email attachment downloaded"
+  },
+  "level": 3,
+  "domain": "طوارئ رقمية",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "العمل",
+    "المنزل"
+  ],
+  "summary": {
+    "ar": "تنزيل ملف مضغوط أو مستند مجهول من بريد غير معروف — الحظر والفحص.",
+    "en": "Downloaded unexpected email attachment file."
+  },
+  "do": [
+    {
+      "t": "لا تفتح الملف نهائياً وقم بفحصه عبر برنامج مضاد الفيروسات أولاً.",
+      "en": "Do not open file; scan with antivirus first.",
+      "src": "ncsc:digital-readiness"
+    },
+    {
+      "t": "احذف الملف كلياً من المجلد وسلة المهملات إذا ثبت كونه خبيثاً.",
+      "en": "Permanently delete file if flagged suspicious.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تفعل وحدات الماكرو (Enable Macros) عند فتح مستندات Word/Excel مجهولة.",
+      "en": "Do not enable macros on unknown Word/Excel documents.",
+      "src": "ncsc:digital-readiness"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "طلب الملف صلاحيات مسؤول (Run as Administrator) فور فتح الضغط.",
+      "en": "File prompting for Administrator execution rights."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "مباحث تكنولوجيا المعلومات",
+      "number": "108"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:digital-readiness",
+      "grade": "NCSC Official"
+    }
+  ]
+},
+{
+  "id": "readiness-s1-deescalate-verbal-conflict",
+  "title": {
+    "ar": "احتواء النزاع اللفظي والمشادات في المكان العام",
+    "en": "De-escalating heated verbal dispute"
+  },
+  "level": 2,
+  "domain": "مهارات اجتماعية",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "الشارع",
+    "الأماكن العامة"
+  ],
+  "summary": {
+    "ar": "تصاعد مشادة كلامية مفاجئة — خطوات خفض التوتر والانسحاب الآمن.",
+    "en": "Sudden verbal argument in public space."
+  },
+  "do": [
+    {
+      "t": "حافظ على نبرة صوت هادئة ومنخفضة وتجنب لغة الجسد الهجومية.",
+      "en": "Keep voice calm and lower volume, avoiding aggressive posture.",
+      "src": "who:life-skills-education"
+    },
+    {
+      "t": "اترك مسافة أمان مكانية كافية بينك وبين الشخص الغاضب.",
+      "en": "Maintain physical safety distance from angry individual.",
+      "src": "who:life-skills-education"
+    },
+    {
+      "t": "اختر الانسحاب الآمن فوراً إذا لم يستجب الطرف الآخر لمهدئات الحوار.",
+      "en": "Exit safely if the other party remains volatile.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا ترد بالإهانة اللفظية ولا تضاعف حدة الصوت أثناء الغضب.",
+      "en": "Do not match insults or escalate voice volume.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "تطور الموقف للتهديد الصريح بالعنف الجسدي أو إشهار أي أداة حادة.",
+      "en": "Threat of physical violence or display of dangerous object."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "شرطة النجدة",
+      "number": "122"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "who:life-skills-education",
+      "grade": "WHO Life Skills"
+    }
+  ]
+},
+{
+  "id": "readiness-s2-setting-personal-boundaries",
+  "title": {
+    "ar": "رسم الحدود الشخصية ورفض الضغوط الجانبية",
+    "en": "Communicating firm personal boundaries"
+  },
+  "level": 1,
+  "domain": "مهارات اجتماعية",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "العمل",
+    "العلاقات"
+  ],
+  "summary": {
+    "ar": "القدرة على قول «لا» بوضوح وحزم ودون اعتذار مفرط عند تجاوز حدودك.",
+    "en": "Expressing clear refusal without aggressive conflict."
+  },
+  "do": [
+    {
+      "t": "عبر عن رفضك بعبارة صريحة ومباشرة: «أنا غير مناسب لي هذا الأمر».",
+      "en": "State refusal clearly: 'This does not work for me.'",
+      "src": "who:life-skills-education"
+    },
+    {
+      "t": "كرر موقفك بنفس النبرة دون الدخول في تبريرات طوال ومطولة.",
+      "en": "Repeat stance firmly without over-explaining.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تقبل بالضغط أو الاحراج المجتمعي لتنفيذ ما يخالف رغبتك أو حمايتك.",
+      "en": "Do not succumb to guilt or social pressure.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "استخدام الابتزاز العاطفي أو التهديد بقطع العلاقات لإجبارك.",
+      "en": "Emotional blackmail or isolation threats."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "استشارات منظومة الصحة النفسية",
+      "number": "16328"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "who:life-skills-education",
+      "grade": "WHO Life Skills"
+    }
+  ]
+},
+{
+  "id": "readiness-s3-recognizing-gaslighting",
+  "title": {
+    "ar": "التعامل مع التلاعب النفسي والتشكيك في الواقع (Gaslighting)",
+    "en": "Recognizing psychological gaslighting manipulation"
+  },
+  "level": 2,
+  "domain": "مهارات اجتماعية",
+  "who": [
+    "الجميع"
+  ],
+  "place": [
+    "العلاقات",
+    "العمل"
+  ],
+  "summary": {
+    "ar": "تعرضك لمحاولات مستمرة للتشكيك في ذاكرتك وعقلك من طرف آخر.",
+    "en": "Persistent attempts by another to make you doubt reality."
+  },
+  "do": [
+    {
+      "t": "سجل الأحداث والاتفاقات الرئيسية كتابياً فور وقوعها للرجوع إليها.",
+      "en": "Keep written notes of events and agreements for reference.",
+      "src": "who:life-skills-education"
+    },
+    {
+      "t": "استعن بطرف ثالث موثوق ومستقل للتحقق من الواقع والحقائق.",
+      "en": "Seek independent trusted perspective to reality-check.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تدخل في جدال استنزافي لإثبات ذاكرتك للمتلاعب.",
+      "en": "Do not waste energy arguing memory with a manipulator.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "الشعور المستمر بالارتباك الكامل وفقدان الثقة الإحباطي في ذهنك.",
+      "en": "Total confusion and chronic self-doubt."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الاستشارات النفسية",
+      "number": "16328"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "who:life-skills-education",
+      "grade": "WHO Life Skills"
+    }
+  ]
+},
+{
+  "id": "readiness-s4-peer-pressure-refusal",
+  "title": {
+    "ar": "مقاومة ضغط الأقران وسلوكيات المخاطرة",
+    "en": "Resisting peer pressure and risk-taking coercion"
+  },
+  "level": 2,
+  "domain": "مهارات اجتماعية",
+  "who": [
+    "الشباب والمراهقون"
+  ],
+  "place": [
+    "التجمعات",
+    "المدارس"
+  ],
+  "summary": {
+    "ar": "التعرض لضغط المجموعة لتجربة مواد مخدرة أو تصرفات خطر.",
+    "en": "Coercion from peers to engage in dangerous activities."
+  },
+  "do": [
+    {
+      "t": "استخدم عذراً محاهزاً ومسبقاً للانسحاب الفوري دون تردد.",
+      "en": "Use a pre-planned exit excuse to leave group.",
+      "src": "who:life-skills-education"
+    },
+    {
+      "t": "ابحث عن أصدقاء آخرين يشاركونك نفس قيم الأمان والمسئولية.",
+      "en": "Connect with supportive peers who respect boundaries.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تجرب السلوك الخطر لمجرد إثبات الشجاعة أو تجنب السخرية.",
+      "en": "Do not engage in harm just to fit in.",
+      "src": "who:life-skills-education"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "تهديد المجموعة بالإقصاء والتنمر إذا لم ترضخ للسلوك الخطر.",
+      "en": "Bullying or exclusion threats upon refusal."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "خط نجدة الطفل / الأمان الأسري",
+      "number": "16000"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "who:life-skills-education",
+      "grade": "WHO Life Skills"
+    }
+  ]
+},
+{
+  "id": "readiness-c1-police-identification-check",
+  "title": {
+    "ar": "الاستعلام عن هوية رجل الشرطة عند الاستيقاف",
+    "en": "Verifying officer identity during police stop"
+  },
+  "level": 3,
+  "domain": "وعي قانوني",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "الشارع",
+    "الأماكن العامة"
+  ],
+  "summary": {
+    "ar": "استيقافك من شخص يرتدي زياً مدنياً يزعم أنه من الشرطة — كيفية التأكد.",
+    "en": "Stopped by plainclothes individual claiming police authority."
+  },
+  "do": [
+    {
+      "t": "اطلب بوزن وأدب الاطلاع على إثبات الشخصية الرسمي (كارنيه الشرطة).",
+      "en": "Politely ask to see official police identification card.",
+      "src": "web:egypt-civic-rights"
+    },
+    {
+      "t": "تأكد من وجود الكارنيه الرسمي الصادر من وزارة الداخلية والصورة الشخصية.",
+      "en": "Verify official Interior Ministry badge and photo ID.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تسلم أوراقك الشخصية لشخص بزي مدني يرفض إبراز هوية عمله الرسمية.",
+      "en": "Do not hand ID to plainclothes person refusing badge display.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "التهديد بالعنف أو طلب مبالغ مالية فورية كشرط لتركك دون إجراء.",
+      "en": "Immediate cash demand or threat of unrecorded force."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "شرطة النجدة",
+      "number": "122"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-civic-rights",
+      "grade": "الدستور والقانون"
+    }
+  ]
+},
+{
+  "id": "readiness-c2-reading-contracts-before-signing",
+  "title": {
+    "ar": "القواعد الذهبية قبل التوقيع على أي عقد",
+    "en": "Essential checks before signing lease or employment contract"
+  },
+  "level": 2,
+  "domain": "وعي قانوني",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "الشركات",
+    "المكاتب"
+  ],
+  "summary": {
+    "ar": "توقيع عقد عمل أو إيجار أو شراء — مراجعة البنود والالتزامات.",
+    "en": "Reviewing contract terms prior to signing."
+  },
+  "do": [
+    {
+      "t": "اقرأ العقد كاملاً بنوده وشروطه الجزائية قبل وضع توقيعك.",
+      "en": "Read all terms and penalty clauses fully before signing.",
+      "src": "web:egypt-civic-rights"
+    },
+    {
+      "t": "احرص على استلام نسختك الموقعة فوراً والمطابقة لنسخة الطرف الآخر.",
+      "en": "Retain an executed duplicate copy of the signed contract.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا توقع على أوراق بيضاء أو عقود بها خانات فارغة غير مكتوبة.",
+      "en": "Do not sign blank papers or incomplete contract templates.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "رفض تسليمك نسخة من العقد المفضل بعد توقيعه مباشرة.",
+      "en": "Refusal to provide you with your copy of the contract."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "نقابة المحامين",
+      "number": "15380"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-civic-rights",
+      "grade": "الدستور والقانون المدني"
+    }
+  ]
+},
+{
+  "id": "readiness-c3-consumer-defect-reporting",
+  "title": {
+    "ar": "توثيق عيب البضاعة فور الاستلام لتقديم شكوى",
+    "en": "Documenting product defect for CPA complaint"
+  },
+  "level": 2,
+  "domain": "وعي قانوني",
+  "who": [
+    "المستهلكون"
+  ],
+  "place": [
+    "المنزل",
+    "المتاجر"
+  ],
+  "summary": {
+    "ar": "استلام منتج به عيب صناعة أو تلف — خطوات الإثبات لجهاز حماية المستهلك.",
+    "en": "Receiving defective or damaged purchased product."
+  },
+  "do": [
+    {
+      "t": "احتفظ بفتورة الشراء الضريبية الأصلية وغلاف المنتج.",
+      "en": "Retain original tax invoice and product packaging.",
+      "src": "web:egypt-civic-rights"
+    },
+    {
+      "t": "صور فيديو يوضح العيب أثناء فتح الشحنة أو الاستخدام الأول.",
+      "en": "Record video evidence showing defect during unboxing.",
+      "src": "web:egypt-civic-rights"
+    },
+    {
+      "t": "قدم شكوى عبر تطبيق جهاز حماية المستهلك أو الخط الساخن 19588.",
+      "en": "Submit complaint via CPA app or hotline 19588.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تتنازل عن الفاتورة الضريبية لأنها السند الوحيد المعتمد لحق الاسترجاع.",
+      "en": "Do not decline tax invoice which secures statutory return right.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "امتناع المحل عن إعطاء فاتورة أو كتابة «البضاعة لا ترد ولا تستبدل».",
+      "en": "Store refusing invoice or printing illegal 'no return' terms."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "جهاز حماية المستهلك",
+      "number": "19588"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-civic-rights",
+      "grade": "قانون حماية المستهلك"
+    }
+  ]
+},
+{
+  "id": "readiness-c4-document-custody-protection",
+  "title": {
+    "ar": "حماية وحفظ الوثائق الرسمية والأوراق الثبوتية",
+    "en": "Safeguard and custody of official identification papers"
+  },
+  "level": 2,
+  "domain": "وعي قانوني",
+  "who": [
+    "جميع المواطنين"
+  ],
+  "place": [
+    "المنزل",
+    "السفر"
+  ],
+  "summary": {
+    "ar": "بطاقات الرقم القومي، شهادات الميلاد، وجوازات السفر — الحفظ وحظر احتجازها.",
+    "en": "Protecting National ID, birth certificates, and passports."
+  },
+  "do": [
+    {
+      "t": "احتفظ بصور رقمية طبق الأصل من كافة الوثائق على مساحة آمنة.",
+      "en": "Keep secure digital backups of all primary identification papers.",
+      "src": "web:egypt-civic-rights"
+    },
+    {
+      "t": "حرر محضراً رسمياً بـ «فقد أوراق ثبوتية» فور ضياع أي وثيقة رسمية.",
+      "en": "File police report for lost ID immediately upon discovery.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "dont": [
+    {
+      "t": "لا تترك بطاقتك الشخصية أو جواز سفرك كرهن لدى أي شخص أو فندق.",
+      "en": "Do not leave National ID or passport as collateral with anyone.",
+      "src": "web:egypt-civic-rights"
+    }
+  ],
+  "redFlags": [
+    {
+      "t": "احتجاز صاحب عمل أو شخص لأوراقك الثبوتية لضغط عليك.",
+      "en": "Unlawful withholding of your ID documents by an employer."
+    }
+  ],
+  "whoToCall": [
+    {
+      "label": "الشرطة / الأحوال المدنية",
+      "number": "122"
+    }
+  ],
+  "sources": [
+    {
+      "srcId": "web:egypt-civic-rights",
+      "grade": "قانون الأحوال المدنية"
+    }
+  ]
+}
+,
+{
+  "id": "scenario-ebola-travel-fever",
+  "title": {
+    "ar": "«حد رجع من أفريقيا وعنده حرارة عالية»",
+    "en": "Fever after returning from Africa (Ebola risk)"
+  },
+  "level": 3,
+  "domain": "طوارئ طبية",
+  "who": [
+    "البالغين",
+    "أطفال"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "snapshot": {
+    "ar": "الحرارة العالية بعد السفر لأفريقيا ممكن تكون ملاريا أو أمراض تانية، مش شرط إيبولا. المهم تعزل المريض فوراً وتتصل بالطوارئ وتبلغهم بتاريخ السفر عشان يوجهوك صح بدون مبالغة أو هلع.",
+    "en": "Fever after travel to Africa could be Malaria or other diseases, not necessarily Ebola. Isolate the patient and call emergency services, mentioning the travel history."
+  },
+  "do": [
+    {
+      "t": "اعزل المريض في أوضة لوحده بعيد عن باقي العيلة.",
+      "src": "cdc:ebola"
+    },
+    {
+      "t": "اتصل برقم الطوارئ (105 في مصر) وبلّغ عن الأعراض وقولهم إن المريض لسه راجع من أفريقيا.",
+      "src": "cdc:ebola"
+    }
+  ],
+  "dont": [
+    {
+      "t": "ماتلمسش دم أو أي سوائل من جسم المريض (عرق، لعاب، ترجيع) من غير حماية.",
+      "src": "cdc:ebola"
+    },
+    {
+      "t": "ماتروحش المستشفى أو العيادة بنفسك من غير ما تبلغهم الأول وتسمع تعليماتهم عشان ماتنقلش العدوى.",
+      "src": "cdc:ebola"
+    }
+  ],
+  "whenWhy": {
+    "ar": "لو ظهرت حرارة عالية أو نزيف أو تعب شديد في خلال 21 يوم من الرجوع من منطقة فيها إيبولا."
+  },
+  "redFlags": [
+    "نزيف غير مبرر من أي مكان في الجسم.",
+    "إسهال أو ترجيع شديد مع حرارة."
+  ],
+  "sources": [
+    {
+      "srcId": "cdc:ebola",
+      "grade": "CDC"
+    }
+  ]
+},
+{
+  "id": "scenario-mpox-rash-fever",
+  "title": {
+    "ar": "«عندي طفح جلدي غريب مع حرارة»",
+    "en": "Strange skin rash with fever (Mpox risk)"
+  },
+  "level": 2,
+  "domain": "طوارئ طبية",
+  "who": [
+    "البالغين",
+    "أطفال"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "snapshot": {
+    "ar": "الطفح الجلدي مع الحرارة ممكن يكون أمراض كتير زي الجديري. لو الطفح شبه الحبوب المليانة سائل، ممكن يكون جدري القرود (Mpox). محتاج كشف طبي وعزل لحد ما الدكتور يحدد السبب.",
+    "en": "Rash with fever can be many things like chickenpox. If it looks like fluid-filled blisters, it could be Mpox. Needs medical assessment and isolation."
+  },
+  "do": [
+    {
+      "t": "اعزل نفسك عن باقي أهل البيت وماتشاركش معاهم الهدوم أو الفوط أو السرير.",
+      "src": "who:mpox"
+    },
+    {
+      "t": "غطي الطفح الجلدي بهدومك على قد ما تقدر والبس كمامة لو مضطر تتعامل مع حد.",
+      "src": "who:mpox"
+    }
+  ],
+  "dont": [
+    {
+      "t": "ماتحاولش تفرقع الحبوب أو تهرش فيها عشان العدوى ماتنتشرش أو تسيب أثر.",
+      "src": "who:mpox"
+    }
+  ],
+  "whenWhy": {
+    "ar": "لو ظهر طفح جلدي جديد خصوصا لو معاه حرارة أو تضخم في الغدد الليمفاوية."
+  },
+  "redFlags": [
+    "صعوبة في البلع أو التنفس لو الطفح جوه البق.",
+    "ألم شديد لا يحتمل أو علامات عدوى بكتيرية فوق الطفح."
+  ],
+  "sources": [
+    {
+      "srcId": "who:mpox",
+      "grade": "WHO"
+    }
+  ]
+},
+{
+  "id": "scenario-measles-unvax-fever",
+  "title": {
+    "ar": "«ابني عنده طفح وحرارة عالية ومش متطعّم»",
+    "en": "Fever and rash in an unvaccinated child (Measles risk)"
+  },
+  "level": 3,
+  "domain": "طوارئ طبية",
+  "who": [
+    "أطفال"
+  ],
+  "place": [
+    "المنزل"
+  ],
+  "snapshot": {
+    "ar": "الحصبة مرض معدي جداً وخطير للأطفال اللي مش مطعمين. الطفح بيبدأ في الوش وينزل لتحت مع حرارة عالية وكحة وسيلان أنف. لازم استشارة دكتور فوراً.",
+    "en": "Measles is highly contagious and dangerous for unvaccinated children. Rash starts on face and spreads down, accompanied by high fever, cough, and runny nose. Immediate medical consultation needed."
+  },
+  "do": [
+    {
+      "t": "كلّم الدكتور فوراً وقوله إن الطفل مش مطعم وعنده طفح عشان ياخدوا احتياطات العزل في العيادة.",
+      "src": "cdc:measles"
+    },
+    {
+      "t": "اعزل الطفل تماماً عن أي طفل تاني أو أي ست حامل.",
+      "src": "cdc:measles"
+    }
+  ],
+  "dont": [
+    {
+      "t": "ماتوديش الطفل الحضانة أو المدرسة أو أي مكان مقفول فيه ناس.",
+      "src": "cdc:measles"
+    },
+    {
+      "t": "ماتديش الأسبرين (Aspirin) لأي طفل عنده حرارة أبداً لأنه ممكن يسبب متلازمة راي المميتة.",
+      "src": "cdc:measles"
+    }
+  ],
+  "whenWhy": {
+    "ar": "طفح جلدي بيبدأ من الوش مع حرارة عالية وكحة في طفل غير مطعم."
+  },
+  "redFlags": [
+    "صعوبة في التنفس أو نهجان سريع.",
+    "تشنجات حرارية أو دوخة شديدة وصعوبة في الصحيان."
+  ],
+  "sources": [
+    {
+      "srcId": "cdc:measles",
+      "grade": "CDC"
+    }
+  ]
+},
+{
+  "id": "scenario-heat-exhaustion-outdoor",
+  "title": {
+    "ar": "«بشتغل في الشمس وحاسس بدوخة وتعب شديد»",
+    "en": "Dizziness and fatigue while working in the sun (Heat Exhaustion)"
+  },
+  "level": 2,
+  "domain": "طوارئ بيئية",
+  "who": [
+    "البالغين"
+  ],
+  "place": [
+    "الشارع/الشغل"
+  ],
+  "snapshot": {
+    "ar": "الإجهاد الحراري بيحصل من الشغل في الشمس والحر بدون شرب مياه كفاية. أعراضه عرق شديد، دوخة، ضعف، وممكن غثيان. لو متلحقش ممكن يقلب بضربة شمس قاتلة.",
+    "en": "Heat exhaustion results from working in heat without enough fluids. Symptoms include heavy sweating, dizziness, weakness, and nausea. If untreated, it can escalate to fatal heat stroke."
+  },
+  "do": [
+    {
+      "t": "انقل نفسك فوراً لمكان ضل أو فيه تكييف.",
+      "src": "cdc:heat"
+    },
+    {
+      "t": "اشرب مياه أو عصاير بالتدريج (مش مرة واحدة).",
+      "src": "cdc:heat"
+    },
+    {
+      "t": "برّد جسمك بكمادات مياه باردة، واستحمى بمياه فاترة لو أمكن.",
+      "src": "cdc:heat"
+    }
+  ],
+  "dont": [
+    {
+      "t": "ماتكملش شغل في الشمس مهما حصل.",
+      "src": "cdc:heat"
+    },
+    {
+      "t": "ماتشربش أي حاجة فيها كافيين أو كحول لأنها بتزود الجفاف.",
+      "src": "cdc:heat"
+    }
+  ],
+  "whenWhy": {
+    "ar": "أثناء الشغل أو الوقفة الطويلة في الشمس."
+  },
+  "redFlags": [
+    "لو العرق وقف وجلدك بقى سخن وناشف أحمر (دي ضربة شمس، طوارئ فورية).",
+    "ترجيع مستمر أو فقدان للوعي."
+  ],
+  "sources": [
+    {
+      "srcId": "cdc:heat",
+      "grade": "CDC"
+    }
+  ]
+},
+{
+  "id": "scenario-bec-urgent-transfer",
+  "title": {
+    "ar": "«مديري بعتلي إيميل بيطلب تحويل فلوس مستعجل»",
+    "en": "Manager emailed asking for an urgent wire transfer (BEC)"
+  },
+  "level": 3,
+  "domain": "طوارئ رقمية",
+  "who": [
+    "البالغين"
+  ],
+  "place": [
+    "الشارع/الشغل"
+  ],
+  "snapshot": {
+    "ar": "ده اختراق لإيميل الشغل (BEC). النصابين بيخترقوا إيميل المدير أو بيعملوا إيميل شبهه بالظبط ويبعتولك تطلب تحويل فلوس مستعجل أو تغير رقم الحساب البنكي لعميل. دي أكتر طريقة الشركات بتخسر بيها فلوس.",
+    "en": "This is Business Email Compromise (BEC). Scammers hack or spoof the manager's email to request urgent transfers or change bank details. It's the top way companies lose money."
+  },
+  "do": [
+    {
+      "t": "اتصل بالمدير شخصياً في التليفون (على رقمه المعروف) عشان تتأكد من الطلب.",
+      "src": "ncsc:bec"
+    },
+    {
+      "t": "راجع عنوان الإيميل حرف حرف، أحياناً بيبدلوا حرف (زي I مكان l) عشان يخدعوك.",
+      "src": "ncsc:bec"
+    }
+  ],
+  "dont": [
+    {
+      "t": "ماتحولش الفلوس أبداً بناءً على إيميل بس، مهما كان مكتوب فيه إنه مستعجل أو سري.",
+      "src": "ncsc:bec"
+    },
+    {
+      "t": "ماتردش على الإيميل تسأله (أنت متأكد؟) لأن النصاب اللي هيرد عليك.",
+      "src": "ncsc:bec"
+    }
+  ],
+  "whenWhy": {
+    "ar": "أي طلب مستعجل لتحويل مبالغ، شراء بطاقات هدايا، أو تغيير الحساب البنكي لمورد."
+  },
+  "redFlags": [
+    "صيغة الكلام غريبة أو فيها استعجال وضغط كبير.",
+    "بيقولك خلي الموضوع سري وماتقولش لحد."
+  ],
+  "sources": [
+    {
+      "srcId": "ncsc:bec",
+      "grade": "NCSC"
+    }
+  ]
 }
 ];

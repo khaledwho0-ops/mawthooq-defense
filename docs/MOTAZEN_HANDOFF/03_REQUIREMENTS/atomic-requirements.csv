@@ -1,0 +1,151 @@
+id,priority,source_section,requirement,verification,artifact,status
+MOT-0001,MUST,1,Use the product name متزن and preserve its intended meaning,Check constitution name and Arabic rendering,01_PRODUCT_CONSTITUTION/constitution.md,IN_PROGRESS
+MOT-0002,MUST,2,Build a society-wide library of distinct 100-day human-capability curricula,Count planned tracks and require 100 days per final track,04_TRACK_UNIVERSE/tracks.json,IN_PROGRESS
+MOT-0003,MUST,3,Teach evidence-informed human capability and mental-health literacy through practical curricula,Review mission scope and every track outcome,02_PRD/PRD-v2.md,IN_PROGRESS
+MOT-0004,MUST NOT,4,Do not operate as therapy diagnosis emergency care or pseudo-scientific self-help,Run prohibited-claim and safety-boundary audit,22_SAFETY/professional-boundaries.md,IN_PROGRESS
+MOT-0005,MUST,5,Make research evidence practice cultural fit safety and humility foundational,Map each principle to a product gate,01_PRODUCT_CONSTITUTION/constitution.md,IN_PROGRESS
+MOT-0006,MUST,6,Apply the universal learn-understand-practice-reflect-integrate formula,Validate every day contains all learning stages,14_DAILY_LESSONS,PLANNED
+MOT-0007,MUST,7,Represent all eighteen content layers without reducing them to a shallow lesson,Audit day schema and coverage matrix,15_DATA_MODEL/schema.md,PLANNED
+MOT-0008,MUST NOT,8,Do not prioritize fast generation or attractive UI over deep curriculum research,Confirm no production UI integration precedes content gates,27_BUILD_ORDER/build-order.md,IN_PROGRESS
+MOT-0009,MUST,9,Run the full research operating loop before curriculum synthesis,Require search log evidence gate and synthesis status,05_ROLE_RESEARCH,PLANNED
+MOT-0010,MUST,10,Create a role-specific research question tree before searching,Validate question coverage for first priority track,05_ROLE_RESEARCH/TRACK-HUMAN-001/question-tree.md,PLANNED
+MOT-0011,MUST,11,Search all required source families and record provenance,Audit source types against required families,06_SOURCE_LIBRARY/sources.json,PLANNED
+MOT-0012,MUST,12,Meet source mix quotas without treating quotas as a stopping rule,Calculate source mix and require saturation notes,05_ROLE_RESEARCH/TRACK-HUMAN-001/research-gate.md,PLANNED
+MOT-0013,MUST NOT,13,Do not stop after finding several good sources,Require unresolved-query and saturation records,05_ROLE_RESEARCH/TRACK-HUMAN-001/search-log.csv,PLANNED
+MOT-0014,MUST,14,Document research saturation by domain and reopen weak domains,Verify every domain has saturation rationale,05_ROLE_RESEARCH/TRACK-HUMAN-001/research-gate.md,PLANNED
+MOT-0015,MUST,15,Classify source quality from strongest guidance and reviews to excluded low-quality material,Validate evidence-level controlled vocabulary,06_SOURCE_LIBRARY/sources.json,PLANNED
+MOT-0016,MUST,16,Maintain an atomic claim ledger with sources population limitations counterevidence and review state,Validate every required claim field and source link,07_CLAIM_LIBRARY/claims.json,PLANNED
+MOT-0017,MUST NOT,17,Do not use science says language when evidence is mixed narrow or uncertain,Scan published wording and require calibrated alternatives,24_TESTS,PLANNED
+MOT-0018,MUST,18,Teach replication measurement sampling publication-bias and cultural-transfer limits,Audit capability and myth coverage,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0019,MUST,19,Audit popular psychology claims before using them,Require verdict evidence and limitation for each myth,07_CLAIM_LIBRARY/myths.json,PLANNED
+MOT-0020,MUST,20,Run four independent expert lenses for every major track and preserve objections,Check four complete reports and veto dispositions,25_RED_TEAM/expert-lens-reports.md,PLANNED
+MOT-0021,MUST,21,Model the complete master role architecture with distinct research needs,Audit named core family education work and society roles,04_TRACK_UNIVERSE/tracks.json,PLANNED
+MOT-0022,MUST,22,Research the additional life-stage family education work community and transition track universe,Audit all listed candidate roles and overlap decisions,04_TRACK_UNIVERSE/tracks.json,PLANNED
+MOT-0023,MUST,23,Use a scored priority matrix while retaining 100 days for each published final track,Recalculate scores and inspect day_count_required,04_TRACK_UNIVERSE/priority-matrix.csv,PLANNED
+MOT-0024,MUST,24,Make each role track genuinely distinct in pressures skills examples exercises and sequencing,Run cross-track similarity and role-specificity audit,24_TESTS/cross-track-duplication.md,PLANNED
+MOT-0025,MUST,25,Reuse evidence infrastructure without shrinking role curricula,Trace shared sources while forbidding copied final lessons,15_DATA_MODEL/schema.md,PLANNED
+MOT-0026,MUST,26,Cover the complete core human domain library,Map each domain to capabilities claims and track days,24_TESTS/TRACK-HUMAN-001-coverage.csv,PLANNED
+MOT-0027,MUST,27,Create a searchable comprehensive bad-pattern library,Count required patterns and role mappings,10_PATTERN_ONTOLOGY/patterns.json,PLANNED
+MOT-0028,MUST,28,Give every pattern triggers rewards costs alternatives practice relapse and safety fields,Validate the complete pattern schema,10_PATTERN_ONTOLOGY/patterns.json,PLANNED
+MOT-0029,MUST,29,Design every final track as exactly 100 sequenced days,Validate exact count unique order and phase coverage,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0030,MUST NOT,30,Do not copy one ten-phase template mechanically across roles,Audit phase weights and role-specific rationale,24_TESTS/cross-track-duplication.md,PLANNED
+MOT-0031,MUST,31,Use the full universal daily lesson schema for every complete day,Validate all 44 required fields and substantive values,tools/motazen2/validate-days.mjs,PLANNED
+MOT-0032,MUST,32,Provide a meaningful low-energy version for every day,Reject days with missing or disguised normal-effort alternatives,14_DAILY_LESSONS,PLANNED
+MOT-0033,MUST,33,Let users resume after missed days without punishment reset or shame,Test missed-day states and copy,15_DATA_MODEL/progress.md,PLANNED
+MOT-0034,MUST NOT,34,Do not create addictive streaks or loss-framed progress mechanics,Audit progress and notification specifications,16_INFORMATION_ARCHITECTURE/progress.md,PLANNED
+MOT-0035,MUST,35,Build إنسان متزن as a complete independent 100-day core-human track,Require exact 100-day gate for TRACK-HUMAN-001,13_TRACK_100_DAY_PLANS/TRACK-HUMAN-001.json,PLANNED
+MOT-0036,MUST,36,Build طالب متزن as a distinct 100-day student track,Require new student research pass and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0037,MUST,37,Build طالبة متزنة as a distinct 100-day female-student track without stereotypes,Require distinct research gender audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0038,MUST,38,Build رجل متزن as a distinct 100-day adult-man track without gender essentialism,Require distinct research stereotype audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0039,MUST,39,Build امرأة متزنة as a distinct 100-day adult-woman track without restrictive norms,Require distinct research stereotype audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0040,MUST,40,Build أب متزن as a distinct 100-day fatherhood track,Require parenting research safety audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0041,MUST,41,Build أم متزنة as a distinct 100-day motherhood track without identity reduction,Require parenting research stereotype audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0042,MUST,42,Adapt parent content to child age and development without diagnosing children,Validate age branches safety and scope,15_DATA_MODEL/personalization.md,PLANNED
+MOT-0043,MUST,43,Build أخ متزن as a distinct 100-day sibling track,Require family research and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0044,MUST,44,Build أخت متزنة as a distinct 100-day sibling track without gender stereotypes,Require family research stereotype audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0045,MUST,45,Build معلم متزن as a distinct 100-day educator track,Require educator research safeguarding and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0046,MUST,46,Build معلمة متزنة as a distinct 100-day educator track without gender stereotypes,Require educator research safeguarding stereotype audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0047,MUST,47,Build موظف متزن as a distinct 100-day employee track,Require workplace research and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0048,MUST,48,Build مدير متزن as a distinct 100-day manager track with power and duty safeguards,Require leadership research power audit and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0049,MUST,49,Build باحث عن عمل متزن as a distinct 100-day job-seeker track,Require labor-context research and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0050,MUST,50,Build مستقل متزن as a distinct 100-day freelancer track,Require freelance research and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0051,MUST,51,Build قائد مجتمع متزن as a distinct 100-day community-leader track,Require community ethics research and exact day count,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0052,MUST,52,Research further roles before accepting or merging them,Record evidence need overlap and decision for every candidate,04_TRACK_UNIVERSE/tracks.json,PLANNED
+MOT-0053,MUST NOT,53,Do not weight identical modules equally across specialized roles,Compare domain weights and role outcome maps,24_TESTS/cross-track-duplication.md,PLANNED
+MOT-0054,MUST,54,Maintain a curriculum coverage matrix across days domains skills patterns and outcomes,Validate no critical blank cells,24_TESTS/TRACK-HUMAN-001-coverage.csv,PLANNED
+MOT-0055,MUST,55,Maintain an acyclic day dependency graph with valid prerequisites,Run graph integrity and cycle tests,13_TRACK_100_DAY_PLANS/TRACK-HUMAN-001-dependencies.json,PLANNED
+MOT-0056,MUST,56,Revisit important skills through spaced practice with added complexity,Audit review intervals and progression,24_TESTS/TRACK-HUMAN-001-coverage.csv,PLANNED
+MOT-0057,MUST,57,Include retrieval and review days that require recall application and correction,Count and inspect review-day functions,13_TRACK_100_DAY_PLANS/TRACK-HUMAN-001.json,PLANNED
+MOT-0058,MUST,58,Include ethical role-relevant real-world missions,Audit mission risk burden and reversibility,11_EXERCISE_LIBRARY/missions.json,PLANNED
+MOT-0059,MUST,59,Keep micro-experiments low-risk reversible optional and non-manipulative,Run experiment safety checklist,11_EXERCISE_LIBRARY/experiments.json,PLANNED
+MOT-0060,MUST,60,Provide practical communication scripts with context alternatives and boundaries,Validate script fields and role fit,12_COMMUNICATION_SCRIPTS/scripts.json,PLANNED
+MOT-0061,MUST,61,Teach what not to say and why without shaming the speaker,Audit scripts for harmful phrases and safer replacements,12_COMMUNICATION_SCRIPTS/what-not-to-say.json,PLANNED
+MOT-0062,MUST,62,Provide stepped help-seeking levels and concrete escalation options,Test level definitions and routes,22_SAFETY/help-seeking.md,PLANNED
+MOT-0063,MUST,63,Stop optimization content when clinical red flags or urgent danger apply,Test safety-trigger precedence,22_SAFETY/crisis-escalation.md,PLANNED
+MOT-0064,MUST NOT,64,Never diagnose users relatives colleagues students or children,Scan all content and interaction rules,22_SAFETY/professional-boundaries.md,PLANNED
+MOT-0065,MUST,65,Use validated instruments only within their licenses populations and non-diagnostic scope,Audit instrument provenance permissions and wording,22_SAFETY/instruments.md,PLANNED
+MOT-0066,MUST,66,Measure nonclinical learning and behavior without fake mental-health scores,Audit metrics and prohibited outcome claims,23_EVALUATION/evaluation.md,PLANNED
+MOT-0067,MUST,67,Personalize examples difficulty timing and practice without turning curriculum into an unordered feed,Test stable sequence and allowed adaptations,15_DATA_MODEL/personalization.md,PLANNED
+MOT-0068,MUST,68,Support explicit track combinations without collapsing their distinct curricula,Validate combination rules and workload protections,15_DATA_MODEL/personalization.md,PLANNED
+MOT-0069,MUST,69,Allow transparent cross-track credit while retaining 100 days in each track,Test credit display and preserved day count,15_DATA_MODEL/progress.md,PLANNED
+MOT-0070,MUST,70,Make Arabic the primary authored language with clear MSA and optional Egyptian explanation,Audit Arabic completeness RTL and human review status,19_ARABIC/arabic-system.md,PLANNED
+MOT-0071,MUST,71,Maintain a versioned Arabic terminology registry with preferred avoided and contextual terms,Validate terminology entries and usage,19_ARABIC/terminology.json,PLANNED
+MOT-0072,MUST,72,Adapt content to Egyptian and MENA realities without assuming one culture,Run cultural-transfer and generalization audit,05_ROLE_RESEARCH/TRACK-HUMAN-001/egypt-mena-plan.md,PLANNED
+MOT-0073,MUST,73,Respect religious nonreligious and plural value frameworks without exploitation or dismissal,Run values-neutrality review,25_RED_TEAM/cultural-review.md,PLANNED
+MOT-0074,MUST,74,Design for financial constraints and never frame poverty as a mindset failure,Audit costs assumptions and low-resource alternatives,11_EXERCISE_LIBRARY/exercises.json,PLANNED
+MOT-0075,MUST,75,Cover digital attention comparison harassment misinformation privacy and healthy use,Map digital-life domains to days and evidence,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0076,MUST,76,Teach AI literacy including limitations privacy dependence verification and manipulation,Audit AI module claims and practices,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0077,MUST,77,Teach evidence-informed sleep literacy without rigid universal prescriptions,Audit sleep claims contraindications and variability,07_CLAIM_LIBRARY/claims.json,PLANNED
+MOT-0078,MUST,78,Teach physical wellbeing links without unsafe exercise nutrition or supplement advice,Run health-advice safety review,22_SAFETY/professional-boundaries.md,PLANNED
+MOT-0079,MUST,79,Cover money behavior under real constraints without financial overreach,Audit money module boundaries and examples,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0080,MUST,80,Cover healthy relationship skills coercion safety and realistic boundaries,Run relationship-safety audit,10_PATTERN_ONTOLOGY/patterns.json,PLANNED
+MOT-0081,MUST,81,Cover family systems care conflict interdependence privacy and power in context,Run family-context and safety audit,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0082,MUST,82,Cover parenting capabilities by developmental context without shame or amateur diagnosis,Run child-safeguarding and stereotype audit,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0083,MUST,83,Cover educator wellbeing classroom relationships fairness boundaries and safeguarding,Run educator-domain coverage audit,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0084,MUST,84,Cover workplace stress communication boundaries power burnout and help-seeking,Run workplace-domain and power audit,08_CONCEPT_ONTOLOGY/human-capabilities.json,PLANNED
+MOT-0085,MUST,85,Provide non-diagnostic bad-pattern search by plain-language experience and role,Test search synonyms results and safety routing,16_INFORMATION_ARCHITECTURE/search.md,PLANNED
+MOT-0086,MUST,86,Provide an I do not know what is wrong mode that clarifies needs without diagnosis,Test branching language privacy and escalation,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0087,MUST,87,Provide an urgent mode that stops normal curriculum and routes to current human help,Test crisis precedence resource freshness and offline warning,22_SAFETY/crisis-escalation.md,PLANNED
+MOT-0088,MUST,88,Provide a private optional journal with local-only storage and explicit AI consent,Audit storage consent export deletion and encryption,21_PRIVACY/privacy.md,PLANNED
+MOT-0089,MUST,89,Use specific non-leading non-diagnostic journal prompts with skip and low-energy options,Audit every prompt against principles,12_COMMUNICATION_SCRIPTS/journal-prompts.json,PLANNED
+MOT-0090,MUST,90,Minimize encrypt export and delete data and prohibit emotional-data monetization,Run privacy threat model and acceptance tests,21_PRIVACY/privacy.md,PLANNED
+MOT-0091,MUST,91,Make notifications optional configurable respectful and non-shaming,Audit default settings timing copy and disable controls,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0092,MUST,92,Use the complete normalized content database model,Validate entities relationships IDs and review fields,15_DATA_MODEL/schema.md,PLANNED
+MOT-0093,MUST,93,Use the complete track data model including role audience outcomes phases and version state,Validate every track field and reference,15_DATA_MODEL/schema.md,PLANNED
+MOT-0094,MUST,94,Use the complete day data model including all practice reflection safety and evidence fields,Validate all day fields and controlled values,15_DATA_MODEL/schema.md,PLANNED
+MOT-0095,MUST,95,Use the complete evidence data model including method population limitations and freshness,Validate every source field,06_SOURCE_LIBRARY/sources.json,PLANNED
+MOT-0096,MUST,96,Maintain a traversable claim-to-source-to-concept-to-track-to-day graph,Run referential-integrity tests in both directions,07_CLAIM_LIBRARY/claims.json,PLANNED
+MOT-0097,MUST,97,Classify source freshness and review guidelines reviews studies and resources appropriately,Run stale-source audit by type,06_SOURCE_LIBRARY/sources.json,PLANNED
+MOT-0098,MUST,98,Version every track and record lesson evidence removal and safety changes,Validate semantic version and change log,13_TRACK_100_DAY_PLANS,PLANNED
+MOT-0099,MUST,99,Collect clarity feasibility cultural judgment and concern feedback without equating satisfaction with efficacy,Audit questions interpretation and privacy,23_EVALUATION/evaluation.md,PLANNED
+MOT-0100,MUST,100,Evaluate comprehension recall behavior usefulness confidence dropout and negative effects,Validate measurement plan and adverse-outcome monitoring,23_EVALUATION/evaluation.md,PLANNED
+MOT-0101,MUST NOT,101,Do not claim clinical outcomes from engagement or unsupported percentages,Scan product content analytics and reports,24_TESTS,PLANNED
+MOT-0102,MUST,102,Pilot 20 full days of one priority track before completing thousands of lessons,Require pilot gate before later-day files,14_DAILY_LESSONS/TRACK-HUMAN-001,PLANNED
+MOT-0103,MUST,103,Use priority analysis with إنسان متزن as the suggested first track and record any justified change,Inspect priority matrix decision and sequence,04_TRACK_UNIVERSE/priority-matrix.csv,PLANNED
+MOT-0104,MUST,104,Design architecture for thousands of lessons without reducing any final track below 100 days,Run scale consistency terminology and duplication tests,15_DATA_MODEL/schema.md,PLANNED
+MOT-0105,MUST,105,Allow shared evidence but require different role lessons examples and practices,Run cross-track content similarity audit,24_TESTS/cross-track-duplication.md,PLANNED
+MOT-0106,MUST,106,Run all ten research passes separately for every track,Require pass status records before synthesis,05_ROLE_RESEARCH,PLANNED
+MOT-0107,MUST,107,Generate multiple English and Arabic search queries for every domain,Audit search-log language domain and counterquery coverage,05_ROLE_RESEARCH/TRACK-HUMAN-001/search-log.csv,PLANNED
+MOT-0108,MUST,108,Run a dedicated Egypt and MENA evidence pass for every major role,Audit Arabic and English local-context queries and findings,05_ROLE_RESEARCH/TRACK-HUMAN-001/egypt-mena-plan.md,PLANNED
+MOT-0109,MUST,109,Search limitations adverse effects mixed evidence replication and cultural limits for every intervention,Require counterevidence fields and searches,05_ROLE_RESEARCH/TRACK-HUMAN-001/search-log.csv,PLANNED
+MOT-0110,MUST,110,Red-team popular advice including habit dopamine hustle positivity and relationship myths,Audit named myths and evidence-calibrated verdicts,07_CLAIM_LIBRARY/myths.json,PLANNED
+MOT-0111,MUST,111,Require zero purchases and make any basic tools optional,Scan every exercise and recommendation for required cost,11_EXERCISE_LIBRARY/exercises.json,PLANNED
+MOT-0112,MUST,112,Maintain a verified digital resource directory with privacy cost access language and freshness fields,Validate every directory record,06_SOURCE_LIBRARY/resources.json,PLANNED
+MOT-0113,MUST,113,Provide topic-specific Arabic and English video search guidance with authority types and red flags,Audit search guidance and prohibit random-influencer primacy,06_SOURCE_LIBRARY/video-search.json,PLANNED
+MOT-0114,MUST,114,Evaluate books and courses by evidence author claims fit access and cost rather than popularity,Validate recommendation appraisal fields,06_SOURCE_LIBRARY/resources.json,PLANNED
+MOT-0115,MUST,115,Create an expanded searchable famous-problems library by role,Audit required examples scientific expansion and role tags,10_PATTERN_ONTOLOGY/patterns.json,PLANNED
+MOT-0116,MUST,116,Give every pattern a notice-to-relapse multi-stage change pathway,Validate all ten pathway stages,10_PATTERN_ONTOLOGY/patterns.json,PLANNED
+MOT-0117,MUST,117,Treat relapse as information rather than erasure or moral failure,Audit lesson progress and notification copy,01_PRODUCT_CONSTITUTION/constitution.md,PLANNED
+MOT-0118,MUST,118,Show learning skills patterns missions reflections and goals beyond days completed,Audit progress dashboard fields and hierarchy,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0119,MUST,119,Give users direct controls for journal analytics AI personalization export deletion and notifications,Test every privacy-dashboard control,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0120,MUST,120,Specify all fifty minimum platform screens,Count screen IDs 1 through 50 and validate required purposes,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0121,MUST,121,Specify every screen across user state content data actions states low energy RTL access privacy and devices,Validate all screen schema fields and acceptance criteria,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0122,MUST,122,Target WCAG 2.2 AA with all listed accessibility modes,Run accessibility checklist and automated plus manual tests,20_ACCESSIBILITY/accessibility.md,PLANNED
+MOT-0123,MUST,123,Provide a text-first compressed non-autoplay cached low-bandwidth mode,Test asset budgets optional images and cached curriculum,20_ACCESSIBILITY/low-bandwidth.md,PLANNED
+MOT-0124,MUST,124,Provide offline lessons exercises journal and freshness-warned help information,Test offline flows and stale emergency data warning,20_ACCESSIBILITY/offline.md,PLANNED
+MOT-0125,MUST,125,Use a calm mature supportive evidence-based private Arabic-first design,Run design review against prohibited childish clinical poster and social styles,18_DESIGN_SYSTEM/design-system.md,PLANNED
+MOT-0126,MUST NOT,126,Do not display leaderboards or public emotional-development comparisons,Search specifications and UI for comparison mechanics,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0127,MUST,127,If community is ever added require moderation learning support and privacy with no diagnosis or popularity contests,Keep feature absent or validate all conditional safeguards,27_BUILD_ORDER/build-order.md,PLANNED
+MOT-0128,MUST,128,Let users report inaccurate harmful outdated unclear triggering medical culturally inappropriate or mistranslated content,Validate report reasons routing and acknowledgment,17_SCREEN_SPECS/screens.json,PLANNED
+MOT-0129,MUST,129,Use the full content review workflow and never falsify professional review,Validate state transitions reviewer identity and timestamps,15_DATA_MODEL/schema.md,PLANNED
+MOT-0130,MUST,130,Produce the complete 27-directory implementation handoff,Check every named directory and artifact group,docs/MOTAZEN_HANDOFF,IN_PROGRESS
+MOT-0131,MUST,131,Follow product phases 0 through 20 in order with gates,Validate phase status and prohibit downstream bypass,27_BUILD_ORDER/build-order.md,IN_PROGRESS
+MOT-0132,MUST,132,Pass the full research completion gate before writing a track's 100 days,Reject critical weak or missing research areas,05_ROLE_RESEARCH/TRACK-HUMAN-001/research-gate.md,PLANNED
+MOT-0133,MUST,133,Pass the full curriculum completion gate before calling a track complete,Run every listed completion check and block on any major no,24_TESTS/track-completion.md,PLANNED
+MOT-0134,MUST,134,Audit accidental repetition filler and superficial renaming within each track,Review deterministic and manual duplication report,24_TESTS/TRACK-HUMAN-001-duplication.md,PLANNED
+MOT-0135,MUST,135,Audit copied lessons across tracks while allowing deeper spaced foundational reuse,Review cross-track similarity and rationale,24_TESTS/cross-track-duplication.md,PLANNED
+MOT-0136,MUST NOT,136,Enforce every one of the ninety absolute negative rules as independent testable prohibitions,Require 90-rule negative suite with zero violations,25_RED_TEAM/absolute-negative-rules.json,PLANNED
+MOT-0137,MUST NOT,137,Do not use shallow search snippets blogs invented prose early coding silent deletion or compressed curricula,Run anti-shallowness audit before each gate,25_RED_TEAM/anti-shallowness.md,IN_PROGRESS
+MOT-0138,MUST,138,Produce Parts A through R in order and defer Part S until pilot quality passes,Check artifact gates and pilot status,27_BUILD_ORDER/build-order.md,IN_PROGRESS
+MOT-0139,MUST,139,Complete all 100 full-quality days for Track 1 only after first-execution gates,Require exactly 100 validated day records,14_DAILY_LESSONS/TRACK-HUMAN-001,PLANNED
+MOT-0140,MUST,140,Run evaluation and gap closure for missing skills duplication evidence safety culture energy and progression,Require zero unresolved critical audit findings,24_TESTS/final-verification.md,PLANNED
+MOT-0141,MUST,141,Begin Track 2 with a new role research pass and a new 100-day curriculum,Verify no copied Track 1 research assumption or lesson,05_ROLE_RESEARCH,PLANNED
+MOT-0142,MUST,142,Repeat the full research pilot review completion audit and version workflow for every track,Validate phase history per track,27_BUILD_ORDER/build-order.md,PLANNED
+MOT-0143,MUST,143,Give the coding agent complete schemas logic UI privacy safety and tests without requiring invented psychology,Run implementation-readiness checklist,27_BUILD_ORDER/build-order.md,PLANNED
+MOT-0144,MUST,144,Deliver all one hundred named long-term platform artifacts and 100 days for every published role track,Run numbered final-deliverable checklist,24_TESTS/final-verification.md,PLANNED
+MOT-0145,MUST,145,Always publish an honest track count audit including planned researched outlined validated complete reviewed published and lesson totals,Generate counts directly from registries,24_TESTS/track-count.json,PLANNED
+MOT-0146,MUST,146,Answer every per-track definition-of-done question and keep the track incomplete on any major no,Validate checklist evidence and unresolved unknowns,24_TESTS/track-completion.md,PLANNED
+MOT-0147,MUST,147,Answer every whole-platform definition-of-done question and keep Motazen incomplete when answers are unavailable,Validate platform audit evidence and blockers,24_TESTS/final-verification.md,PLANNED
+MOT-0148,MUST,148,Build distinct society-wide 100-day human-capability curricula rather than one skinned course,Audit architecture day counts and cross-track distinctness,01_PRODUCT_CONSTITUTION/constitution.md,IN_PROGRESS
+MOT-0149,MUST,149,Follow the master role-to-research-to-design-to-review-to-version-to-evaluation flow,Validate ordered phase transitions for every track,27_BUILD_ORDER/build-order.md,PLANNED
+MOT-0150,MUST,150,Research deeply expose uncertainty source claims include practice failure low energy Egypt and boundaries then hand off implementation-ready work,Run final requirement evidence and handoff audits,24_TESTS/final-verification.md,IN_PROGRESS

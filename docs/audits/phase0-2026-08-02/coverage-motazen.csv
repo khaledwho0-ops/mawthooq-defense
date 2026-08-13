@@ -9,7 +9,7 @@ domain,status,count,ids
 أسس,unknown,7,bz1-no-single-agreed-definition bz2-hard-problem-unknown bz3-what-we-dont-know bz4-what-we-dont-know bz5-what-we-dont-know bz6-no-biological-line-unknown bz7-no-settled-definition-of-disorder
 انتباه,contested,1,adhd-over-under-diagnosis
 انتباه,debunked,1,adhd-myths-sugar-parenting-screens
-انتباه,established,5,adhd-arab-egypt-context adhd-established-help adhd-normal-vs-disorder adhd-real-valid adhd-recognition-features
+انتباه,established,8,adhd-adult-validity-comorbidities adhd-arab-egypt-context adhd-established-help adhd-executive-function-model adhd-normal-vs-disorder adhd-real-valid adhd-recognition-features adult-adhd
 انتباه,unknown,1,adhd-causes-unknown
 تنقّل,contested,0,
 تنقّل,debunked,0,
@@ -19,13 +19,13 @@ domain,status,count,ids
 خريطة,debunked,0,
 خريطة,established,4,p0-attend-positive p0-bps-frame p0-languishing p0-two-continua
 خريطة,unknown,1,p0-map-unknown
-ذهان,contested,1,psy-maintenance-contested
+ذهان,contested,2,psy-maintenance-contested psychosis-continuum-model
 ذهان,debunked,2,psy-not-split-personality psy-violence-myth
-ذهان,established,4,psy-continuum psy-early-treatment psy-recovery-real psy-treatment-recommended
+ذهان,established,6,psy-continuum psy-early-treatment psy-recovery-real psy-treatment-recommended psychosis-cannabis-risk psychosis-recovery
 ذهان,unknown,1,psy-longterm-unknown
 سلوك,contested,0,
 سلوك,debunked,0,
-سلوك,established,1,eating-disorders
+سلوك,established,2,addiction-is-illness eating-disorders
 سلوك,unknown,0,
 صدمة,contested,1,trauma-emdr-contested
 صدمة,debunked,1,trauma-debriefing-debunked
@@ -37,7 +37,7 @@ domain,status,count,ids
 ضغط ونوم,unknown,1,sleep-why-we-sleep-unknown
 ضغط,contested,0,
 ضغط,debunked,0,
-ضغط,established,1,burnout-is-real
+ضغط,established,2,burnout-is-real loneliness-health
 ضغط,unknown,0,
 قلق,contested,1,anx-how-strong-contested
 قلق,debunked,1,anx-cbd-cannabis-hype
@@ -45,7 +45,7 @@ domain,status,count,ids
 قلق,unknown,1,anx-why-unknown
 مزاج,contested,1,mood-efficacy-contested
 مزاج,debunked,1,mood-not-weakness
-مزاج,established,13,bipolar-basics grief-vs-depression mood-antidepressants mood-behavioural-activation mood-burden mood-can-be-serious mood-comorbid-anxiety mood-help-exists mood-psychotherapy-works mood-recurrence mood-regional mood-vs-ordinary-sadness mood-what-is
+مزاج,established,15,bipolar-basics grief-vs-depression mood-antidepressants mood-behavioural-activation mood-burden mood-can-be-serious mood-comorbid-anxiety mood-help-exists mood-psychotherapy-works mood-recurrence mood-regional mood-vs-ordinary-sadness mood-what-is postpartum-depression seasonal-affective
 مزاج,unknown,1,mood-longterm-unknown
 مهارات,contested,0,
 مهارات,debunked,0,

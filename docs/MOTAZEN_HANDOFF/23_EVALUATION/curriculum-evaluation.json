@@ -1,0 +1,18 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_PILOT_PENDING","professionalReview":"PENDING",
+  "questions":["هل فهم المستخدم الفرق وحدوده؟","هل جرب سلوكًا آمنًا خارج التطبيق؟","هل ظهر أثر سلبي أو عبء؟","لمن لا يعمل ولماذا؟","هل الوصول والمساعدة والخصوصية تعمل؟"],
+  "outcomes":[
+    {"id":"COMPREHENSION","method":"teach_back_plus_novel_case","diagnostic":false},
+    {"id":"BEHAVIOR_ATTEMPT","method":"optional_contextual_self_report","causalClaim":false},
+    {"id":"NEGATIVE_EFFECT","method":"independent_private_signal","requiredForCompletion":false},
+    {"id":"ACCESS_FAILURE","method":"task_and_assistive_technology_observation"},
+    {"id":"HELP_ROUTE_SUCCESS","method":"verified_scenario_walkthrough_no_crisis_simulation"},
+    {"id":"ATTRITION_AND_EXIT","method":"aggregate_opt_in_with_exit_reason_optional"}
+  ],
+  "timepoints":["BASELINE_OPTIONAL","DAY_20","DAY_50","DAY_100","FOLLOWUP_30_DAYS_OPTIONAL","FOLLOWUP_90_DAYS_OPTIONAL"],
+  "segmentationBoundaries":["no ranking","no diagnosis","no protected-attribute targeting without ethics approval","report missingness and access constraints"],
+  "interpretationRules":["completion is not effectiveness","satisfaction is not comprehension","association is not causation","negative and null outcomes remain visible","dropout is not personal failure"],
+  "stopRules":["credible severe harm signal","help route failure","privacy breach","high-risk language misunderstanding","disparate access harm"],
+  "publicationGate":{"requiresHumanReview":true,"requiresAdverseOutcomeReport":true,"requiresLimitations":true,"requiresProtocolPreRegistration":true},
+  "openGates":["sample and power plan","ethics and consent review","Arabic instrument validation","Egyptian pilot recruitment"]
+}

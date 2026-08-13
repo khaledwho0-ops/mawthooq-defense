@@ -1,0 +1,16 @@
+{
+  "schemaVersion":"1.0.0","status":"DESIGN_COMPLETE_IMPLEMENTATION_PENDING","professionalReview":"PENDING",
+  "purposeAr":"إتاحة التعلم عند انخفاض الطاقة دون ضغط أو تشخيص أو إخفاء الحاجة للمساعدة.",
+  "entry":{"userInitiated":true,"defaultLabelAr":"طاقتي منخفضة اليوم","noReasonRequired":true,"noDiagnosticInference":true,"availableWithoutAccount":true},
+  "routes":[
+    {"id":"REST","labelAr":"راحة بلا محتوى","completionCredit":true,"maximumSteps":0},
+    {"id":"MINIMUM","labelAr":"الحد الأدنى","completionCredit":true,"maximumMinutes":2,"allowedFields":["definitionSimpleAr","minimumModeAr","completionWithoutPerfectionAr"]},
+    {"id":"AUDIO_OR_TEXT","labelAr":"اختر نصًا أو صوتًا إن توفر","completionCredit":true,"mediaNeverRequired":true},
+    {"id":"HELP","labelAr":"الوصول للمساعدة","completionCredit":true,"independentOfLesson":true,"independentOfStorage":true}
+  ],
+  "invariants":["لا سلسلة أو خصم أو رسالة عار","لا تعويض تلقائي لاحقًا","لا تخمين سبب انخفاض الطاقة","لا تقييد المساعدة بالإكمال","لا تنشيط تمرين تنفس أو تأمل تلقائيًا","الخطر يوقف المحتوى ويتقدم على كل مسار"],
+  "stateTransitions":{"FULL":["MINIMUM","REST","HELP"],"MINIMUM":["REST","HELP","FULL"],"REST":["MINIMUM","HELP","EXIT"],"HELP":["EXIT"]},
+  "privacy":{"storeSelectionByDefault":false,"analyticsEventAllowed":"aggregate_opt_in_only","forbidden":["free_text_reason","health_inference","risk_score","advertising_profile"]},
+  "acceptanceTests":["يمكن اختيار الراحة بنقرة بلا حساب","المسار الأدنى لا يتجاوز دقيقتين ولا يفتح أسئلة لاحقة","لا تنشأ مهمة فائتة بعد الراحة","زر المساعدة ظاهر في كل حالة","اختيار الطاقة لا يخزن افتراضيًا"],
+  "openGates":["اختبار مستخدمين ذوي إعاقات وأمراض مزمنة","مراجعة سريرية ولغوية مصرية","تنفيذ وقياس حمل الشبكة"]
+}

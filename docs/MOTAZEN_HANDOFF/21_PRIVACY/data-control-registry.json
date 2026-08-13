@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "status": "DRAFT_NOT_IMPLEMENTED",
+  "defaultMode": "NO_SAVE",
+  "advertisingAllowed": false,
+  "saleAllowed": false,
+  "diagnosticInferenceAllowed": false,
+  "balanceScoreAllowed": false,
+  "categories": [
+    {"id":"CONTENT_CACHE","sensitivity":"PUBLIC_VERSIONED","defaultStorage":"LOCAL_CACHE","consent":"NOT_REQUIRED_FOR_PUBLIC_CONTENT","retention":"UNTIL_VERSION_EVICTION","export":false,"delete":"CLEAR_CONTENT_CACHE","aiAllowed":false,"analyticsAllowed":false},
+    {"id":"PREFERENCES","sensitivity":"LOW_BUT_POTENTIALLY_REVEALING","defaultStorage":"NONE","consent":"LOCAL_OPT_IN","retention":"UNTIL_CATEGORY_RESET","export":true,"delete":"IMMEDIATE_LOCAL","aiAllowed":false,"analyticsAllowed":false},
+    {"id":"PROGRESS","sensitivity":"PERSONAL_BEHAVIOR","defaultStorage":"NONE","consent":"LOCAL_OPT_IN","retention":"UNTIL_CATEGORY_RESET","export":true,"delete":"IMMEDIATE_LOCAL","aiAllowed":false,"analyticsAllowed":false},
+    {"id":"JOURNAL","sensitivity":"SENSITIVE_FREE_TEXT","defaultStorage":"NONE","consent":"SEPARATE_LOCAL_OR_CLOUD_OPT_IN","retention":"USER_CHOSEN_AND_VISIBLE","export":true,"delete":"IMMEDIATE_LOCAL_OR_VERIFIED_CLOUD_WORKFLOW","aiAllowed":"PER_USE_EXACT_PAYLOAD_OPT_IN_ONLY","analyticsAllowed":false},
+    {"id":"REFLECTION","sensitivity":"SENSITIVE_FREE_TEXT","defaultStorage":"TRANSIENT_MEMORY_ONLY","consent":"SEPARATE_SAVE_OPT_IN","retention":"ZERO_AFTER_SESSION_UNLESS_SAVED","export":true,"delete":"IMMEDIATE","aiAllowed":"PER_USE_EXACT_PAYLOAD_OPT_IN_ONLY","analyticsAllowed":false},
+    {"id":"HELP_INTERACTION","sensitivity":"HIGHLY_SENSITIVE_CONTEXT","defaultStorage":"NONE","consent":"NOT_REQUIRED_TO_ACCESS_HELP","retention":"ZERO_CONTENT_RETENTION","export":false,"delete":"NOT_APPLICABLE_NO_CONTENT_STORAGE","aiAllowed":false,"analyticsAllowed":false},
+    {"id":"SEARCH_QUERY","sensitivity":"POTENTIALLY_SENSITIVE","defaultStorage":"TRANSIENT_MEMORY_ONLY","consent":"NOT_REQUIRED_FOR_LOCAL_SEARCH","retention":"ZERO_AFTER_QUERY","export":false,"delete":"IMMEDIATE","aiAllowed":false,"analyticsAllowed":false},
+    {"id":"RESEARCH_DATA","sensitivity":"PROTOCOL_DEFINED_HIGH","defaultStorage":"NONE","consent":"SEPARATE_RESEARCH_CONSENT","retention":"PROTOCOL_AND_GOVERNANCE_DEFINED","export":"PARTICIPANT_RIGHTS_DEFINED","delete":"WITHDRAWAL_AND_LIMITS_DISCLOSED","aiAllowed":"PROTOCOL_SPECIFIC_ONLY","analyticsAllowed":"PROTOCOL_SPECIFIC_ONLY"}
+  ],
+  "aiPerUseDisclosureFields": ["exactPayload","purpose","provider","storageRegionIfKnown","retention","humanReviewPossibility","trainingUse","saferNoSendAlternative","withdrawalEffect"],
+  "forbiddenSinksForFreeText": ["URL","REFERRER","BROWSER_HISTORY","CONTENT_CACHE","ANALYTICS","CRASH_REPORT","APPLICATION_LOG","PUSH_NOTIFICATION","SUPPORT_TICKET_AUTOFILL","ADVERTISING","MODEL_TRAINING_WITHOUT_NEW_EXPLICIT_CONSENT"],
+  "requiredVerification": ["networkNoSendTest","logLeakTest","cacheLeakTest","exportTest","localDeleteTest","cloudDeleteTest","backupExpiryEvidence","consentWithdrawalTest","aiPayloadPreviewTest","keyboardAndScreenReaderTest","sharedDeviceThreatTest"]
+}

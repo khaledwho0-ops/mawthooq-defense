@@ -1,0 +1,17 @@
+{
+  "schemaVersion":"1.0.0","status":"FOUNDATION_COMPLETE_RESEARCH_PENDING","professionalReview":"PENDING",
+  "rules":["الأدوار متعددة ومتزامنة وليست هويات ثابتة","لا يُستنتج الدور من العمر أو الجنس أو الدخل","اختيار الدور اختياري ويمكن عدم الاختيار","فرق السلطة والسياق يغيران الأمثلة والسلامة"],
+  "roles":[
+    {"id":"ROLE-PERSON","nameAr":"إنسان دون دور محدد","parent":null,"powerQuestions":["من يتأثر؟","ما الذي لا يملكه الشخص؟"],"trackIds":["TRACK-HUMAN-001"]},
+    {"id":"ROLE-STUDENT","nameAr":"طالب أو متعلم","parent":"ROLE-PERSON","powerQuestions":["من يقيّم؟","هل السؤال أو الرفض آمن؟"],"trackIds":["TRACK-STUDENT-001","TRACK-STUDENT-002"]},
+    {"id":"ROLE-PARENT","nameAr":"والد أو مقدم رعاية","parent":"ROLE-PERSON","powerQuestions":["ما حق الطفل؟","هل الحماية تتقدم؟"],"trackIds":["TRACK-PARENT-001","TRACK-PARENT-002"]},
+    {"id":"ROLE-EDUCATOR","nameAr":"معلم أو مربي","parent":"ROLE-PERSON","powerQuestions":["هل يوجد إكراه تقييمي؟","ما الوصول المطلوب؟"],"trackIds":["TRACK-EDUCATOR-001","TRACK-EDUCATOR-002"]},
+    {"id":"ROLE-EMPLOYEE","nameAr":"عامل أو موظف","parent":"ROLE-PERSON","powerQuestions":["ما عاقبة الرفض؟","هل العمل رسمي أو غير رسمي؟"],"trackIds":["TRACK-WORK-001","TRACK-WORK-002"]},
+    {"id":"ROLE-MANAGER","nameAr":"مدير أو صاحب سلطة عمل","parent":"ROLE-EMPLOYEE","powerQuestions":["هل الطلب قابل للرفض؟","من يتحمل الكلفة؟"],"trackIds":["TRACK-WORK-003"]},
+    {"id":"ROLE-FAMILY-MEMBER","nameAr":"عضو أسرة","parent":"ROLE-PERSON","powerQuestions":["هل السكن أو المال يحد الرفض؟","هل الوسيط آمن؟"],"trackIds":["TRACK-FAMILY-001","TRACK-FAMILY-002"]},
+    {"id":"ROLE-PARTNER","nameAr":"شريك في علاقة","parent":"ROLE-PERSON","powerQuestions":["هل يوجد عنف أو سيطرة؟","هل الاتصال اختياري؟"],"trackIds":["TRACK-FAMILY-003"]},
+    {"id":"ROLE-CAREGIVER","nameAr":"مقدم رعاية مدفوعة أو غير مدفوعة","parent":"ROLE-PERSON","powerQuestions":["ما حمل الرعاية؟","من يدعم مقدم الرعاية؟"],"trackIds":["TRACK-LIFE-001"]},
+    {"id":"ROLE-COMMUNITY-MEMBER","nameAr":"عضو مجتمع","parent":"ROLE-PERSON","powerQuestions":["ما القانون والسلامة؟","من عرّف الحاجة؟"],"trackIds":["TRACK-COMMUNITY-001"]}
+  ],
+  "selection":{"multiSelect":true,"noneAllowed":true,"storageDefault":"NO_STORAGE","revalidationRequiredPerTrack":true}
+}
