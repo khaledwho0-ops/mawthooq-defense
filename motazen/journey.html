@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>متزن · رحلة ١٠٠ يوم — إنسان متزن</title>
+<meta name="description" content="رحلة ١٠٠ يوم لبناء الاتزان النفسي — كل يوم بهدفه وتمارينه ومصادره وحدود أمانه. مسار «إنسان متزن» من المكتبة المصرية للوعي.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── Journey-specific styles ── */
+
+/* Phase navigation */
+.phase-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:24px 0 8px}
+.phase-btn{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:8px 18px;font-size:.82rem;cursor:pointer;font-weight:600;font-family:inherit;transition:.2s}
+.phase-btn:hover{color:var(--ink);border-color:var(--sage-soft)}
+.phase-btn.active{background:var(--sage-deep);color:#f4efe2;border-color:transparent}
+.phase-btn .pnum{font-weight:300;opacity:.7;margin-inline-start:4px}
+
+/* Day grid */
+.days-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px;max-width:720px;margin:20px auto;padding:0 8px}
+.day-dot{width:100%;aspect-ratio:1;border-radius:14px;border:1.6px solid var(--line);background:var(--card);display:grid;place-items:center;font-size:.82rem;font-weight:600;color:var(--muted);cursor:pointer;transition:.2s;position:relative}
+.day-dot:hover{border-color:var(--sage);color:var(--sage-deep);transform:scale(1.08)}
+.day-dot.active{background:var(--sage-deep);color:#f4efe2;border-color:var(--sage-deep);box-shadow:0 0 0 4px var(--breath-glow)}
+.day-dot.visited{background:color-mix(in srgb,var(--sage) 14%,transparent);border-color:var(--sage-soft);color:var(--sage-deep)}
+.day-dot.safety{border-color:color-mix(in srgb,var(--debunked) 50%,transparent)}
+.day-dot.safety::after{content:'';position:absolute;top:3px;inset-inline-end:3px;width:5px;height:5px;border-radius:50%;background:var(--debunked)}
+
+/* Progress bar */
+.progress-wrap{max-width:720px;margin:16px auto;display:flex;align-items:center;gap:12px;padding:0 8px}
+.progress-bar{flex:1;height:6px;border-radius:99px;background:var(--card-2);border:1px solid var(--line);overflow:hidden}
+.progress-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--sage-soft),var(--sage-deep));transition:width .4s ease}
+.progress-text{font-size:.78rem;color:var(--dim);font-weight:600;white-space:nowrap}
+
+/* Day viewer */
+.day-viewer{max-width:820px;margin:0 auto;padding:16px 0 60px}
+.day-viewer:empty{display:none}
+.day-viewer:empty::after{content:'';display:none}
+
+.dv-header{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:22px;padding:28px 28px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden;margin-bottom:18px}
+.dv-header::before{content:'';position:absolute;inset-block:0;inset-inline-start:0;width:5px;background:linear-gradient(var(--sage-soft),var(--sage-deep))}
+.dv-eyebrow{font-size:.72rem;letter-spacing:.2em;font-weight:700;color:var(--sage);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dv-eyebrow .phase-tag{background:color-mix(in srgb,var(--sage) 12%,transparent);border:1px solid color-mix(in srgb,var(--sage) 30%,transparent);border-radius:99px;padding:2px 10px;font-size:.68rem}
+.dv-title{font-size:clamp(1.4rem,4.5vw,2rem);color:var(--sage-deep);font-weight:600;margin:8px 0 6px;line-height:1.4}
+.dv-objective{color:var(--muted);font-size:.98rem;line-height:1.8}
+.dv-evidence{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:99px;background:color-mix(in srgb,var(--stat-color,var(--sage)) 12%,transparent);color:var(--stat-color,var(--sage));border:1px solid color-mix(in srgb,var(--stat-color,var(--sage)) 35%,transparent)}
+
+/* Content sections */
+.dv-section{background:linear-gradient(180deg,var(--card),var(--card-2));border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:14px;box-shadow:0 8px 28px -16px rgba(40,60,45,.15)}
+.dv-section.safety-section{border-color:color-mix(in srgb,var(--debunked) 35%,transparent);background:color-mix(in srgb,var(--debunked) 4%,var(--card))}
+.dv-section.safety-section .dv-sec-title{color:var(--debunked)}
+.dv-sec-title{font-size:1.05rem;font-weight:700;color:var(--sage-deep);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.dv-sec-title .icon{font-size:1.1rem;opacity:.8}
+.dv-text{color:var(--ink);font-size:.96rem;line-height:1.9}
+.dv-text.muted{color:var(--muted)}
+
+/* Collapsible sections */
+.dv-collapse{border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+.dv-collapse summary{cursor:pointer;font-size:.88rem;font-weight:700;color:var(--sage);list-style:none;display:flex;align-items:center;gap:6px}
+.dv-collapse summary::-webkit-details-marker{display:none}
+.dv-collapse summary::before{content:'◂';transition:transform .2s;display:inline-block}
+.dv-collapse[open] summary::before{transform:rotate(-90deg)}
+.dv-collapse .inner{margin-top:10px}
+
+/* Lists */
+.dv-list{list-style:none;padding:0;margin:8px 0 0}
+.dv-list li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:.93rem;color:var(--ink);line-height:1.8}
+.dv-list li::before{content:'·';color:var(--sage);font-weight:700;font-size:1.4rem;line-height:1.4;flex:none}
+.dv-list.warn li::before{content:'⚠';font-size:.85rem;color:var(--debunked)}
+
+/* Modes cards */
+.modes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}
+.mode-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.mode-card .mode-label{font-size:.76rem;font-weight:700;letter-spacing:.12em;color:var(--sage);margin-bottom:6px}
+.mode-card .mode-time{font-size:.72rem;color:var(--dim);margin-bottom:6px}
+.mode-card p{font-size:.9rem;color:var(--ink);line-height:1.8}
+
+/* Nav arrows */
+.day-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 40px;max-width:820px;margin:0 auto}
+.nav-btn{background:var(--card);border:1px solid var(--line);color:var(--sage-deep);border-radius:14px;padding:12px 24px;font-size:.92rem;font-weight:600;cursor:pointer;font-family:inherit;transition:.2s;display:flex;align-items:center;gap:8px}
+.nav-btn:hover{background:var(--sage-deep);color:#f4efe2;border-color:transparent}
+.nav-btn:disabled{opacity:.3;cursor:not-allowed;background:var(--card)}
+.nav-btn:disabled:hover{background:var(--card);color:var(--sage-deep)}
+
+/* Skeleton loading */
+.skeleton{background:linear-gradient(90deg,var(--card) 25%,var(--card-2) 50%,var(--card) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:12px;height:200px;margin:20px auto;max-width:820px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* Scroll to top */
+.scroll-top{position:fixed;bottom:24px;inset-inline-end:24px;z-index:20;width:44px;height:44px;border-radius:50%;background:var(--sage-deep);color:#f4efe2;border:none;cursor:pointer;display:grid;place-items:center;font-size:1.2rem;box-shadow:var(--shadow);opacity:0;transform:translateY(12px);transition:.3s;pointer-events:none}
+.scroll-top.show{opacity:1;transform:none;pointer-events:auto}
+
+/* Stats banner */
+.stats-banner{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:20px 0}
+.stat-chip{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 18px;text-align:center}
+.stat-chip .sv{font-size:1.5rem;font-weight:700;color:var(--sage-deep);display:block}
+.stat-chip .sl{font-size:.74rem;color:var(--dim);font-weight:600}
+
+@media(max-width:600px){
+  .days-grid{grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:4px}
+  .day-dot{font-size:.72rem;border-radius:10px}
+  .dv-header,.dv-section{padding:18px 16px}
+  .modes-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+  <a class="brand" href="index.html">
+    <svg class="mark" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16.5" stroke="var(--sage-soft)" stroke-width="1.6" opacity=".6"/><path d="M6 22 q7 -11 14 0 t14 0" stroke="var(--sage)" stroke-width="2.4" fill="none" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="var(--sage-deep)"/></svg>
+    <b>متزن</b><span class="eal">EAL</span>
+  </a>
+  <span class="sp"></span>
+  <button class="lnk" id="themeBtn" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:1rem" title="نهار / ليل" aria-label="بدّل نهار/ليل">☾</button>
+  <a class="lnk" href="index.html">الرئيسية</a>
+  <a class="lnk" href="phase0.html">المرحلة صفر</a>
+  <a class="lnk" href="phase1.html">المجالات</a>
+  <a class="lnk" href="#" style="color:var(--sage-deep)">رحلة ١٠٠ يوم</a>
+</div></header>
+
+<section class="hero" style="padding-bottom:12px">
+  <div class="breath-orb" aria-hidden="true"></div>
+  <div class="wrap in">
+    <div class="eyebrow">مسار إنسان متزن · ١٠٠ يوم</div>
+    <h1>رحلة الاتزان</h1>
+    <div class="tag">مئة يوم من الفهم والممارسة والأمان — خطوة خطوة.</div>
+    <p class="sub">كل يوم بهدفه، تعريفه، تمارينه، حدود أمانه، ومصادره الحقيقية. ابدأ من أي يوم، خذ وقتك، وتذكّر: لا درجة ولا مقارنة ولا عقوبة.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <!-- Stats -->
+  <div class="stats-banner" id="statsBanner">
+    <div class="stat-chip"><span class="sv">١٠٠</span><span class="sl">يوم</span></div>
+    <div class="stat-chip"><span class="sv">١٠</span><span class="sl">مراحل</span></div>
+    <div class="stat-chip"><span class="sv" id="visitedCount">٠</span><span class="sl">يوم زرته</span></div>
+  </div>
+
+  <!-- Phase filter -->
+  <div class="phase-nav" id="phaseNav"></div>
+
+  <!-- Progress -->
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <span class="progress-text" id="progressText">٠ / ١٠٠</span>
+  </div>
+
+  <!-- Day grid -->
+  <div class="days-grid" id="daysGrid"></div>
+</div>
+
+<!-- Day content viewer -->
+<div class="wrap">
+  <div class="day-viewer" id="dayViewer"></div>
+  <div class="day-nav" id="dayNav" style="display:none">
+    <button class="nav-btn" id="prevBtn">→ اليوم السابق</button>
+    <button class="nav-btn" id="nextBtn">اليوم التالي ←</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="ارجع لأعلى">↑</button>
+
+<footer><div class="wrap">
+  <b>متزن</b> · المكتبة المصرية للوعي<br>
+  <span style="font-size:.78rem;color:var(--dim)">هذا المحتوى تعليمي ولا يُغني عن التقييم المهني. عند أي خطر: أوقف المنهج واطلب مساعدة بشرية عاجلة.</span>
+  <div class="crisis" style="margin-top:14px">
+    <b>⚠ عند الخطر:</b> الأزمات والطوارئ النفسية لا يغطيها هذا المسار. أوقفه واطلب مساعدة متخصصة محلية فورًا. خط نجدة الطفل والأسرة: <b style="direction:ltr">16000</b>
+  </div>
+</div></footer>
+
+<script>
+/* ── Theme toggle ── */
+const themeBtn = document.getElementById('themeBtn');
+const saved = localStorage.getItem('motazen-theme');
+if(saved === 'dark') document.documentElement.setAttribute('data-theme','dark');
+themeBtn.addEventListener('click',()=>{
+  const dark = document.documentElement.getAttribute('data-theme')==='dark';
+  document.documentElement.setAttribute('data-theme', dark ? '' : 'dark');
+  localStorage.setItem('motazen-theme', dark ? 'light' : 'dark');
+  themeBtn.textContent = dark ? '☾' : '☀';
+});
+if(saved==='dark') themeBtn.textContent='☀';
+
+/* ── Phase definitions ── */
+const PHASES = [
+  {id:0, name:'الوعي الذاتي', range:[1,10], icon:'🌱'},
+  {id:1, name:'فهم المشاعر', range:[11,20], icon:'💧'},
+  {id:2, name:'التفكير', range:[21,30], icon:'🧠'},
+  {id:3, name:'الجسد والطاقة', range:[31,40], icon:'🫁'},
+  {id:4, name:'العادات', range:[41,50], icon:'🔄'},
+  {id:5, name:'العلاقات والتواصل', range:[51,60], icon:'🤝'},
+  {id:6, name:'الحدود والخلاف', range:[61,70], icon:'🛡️'},
+  {id:7, name:'العمل والمجتمع', range:[71,80], icon:'🏗️'},
+  {id:8, name:'التعثر والمرونة', range:[81,90], icon:'🌊'},
+  {id:9, name:'التقييم والتكامل', range:[91,100], icon:'🧭'},
+];
+
+const BASE = '../docs/MOTAZEN_HANDOFF/14_DAILY_LESSONS/TRACK-HUMAN-001/';
+const cache = {};
+let currentDay = null;
+let activePhase = null;
+
+/* ── Arabic numerals ── */
+function toAr(n){ return String(n).replace(/\d/g, d=>'٠١٢٣٤٥٦٧٨٩'[d]); }
+
+/* ── Visited days (localStorage) ── */
+function getVisited(){ try{ return JSON.parse(localStorage.getItem('motazen-visited')||'[]'); }catch{return [];} }
+function markVisited(d){ const v=getVisited(); if(!v.includes(d)){v.push(d);localStorage.setItem('motazen-visited',JSON.stringify(v));} updateProgress(); }
+
+/* ── Build phase nav ── */
+const phaseNav = document.getElementById('phaseNav');
+PHASES.forEach(p=>{
+  const btn = document.createElement('button');
+  btn.className = 'phase-btn';
+  btn.innerHTML = `${p.icon} ${p.name}<span class="pnum">${toAr(p.range[0])}–${toAr(p.range[1])}</span>`;
+  btn.onclick = ()=> filterPhase(p.id);
+  phaseNav.appendChild(btn);
+});
+// "All" button
+const allBtn = document.createElement('button');
+allBtn.className = 'phase-btn active';
+allBtn.textContent = 'الكل';
+allBtn.onclick = ()=> filterPhase(null);
+phaseNav.prepend(allBtn);
+
+function filterPhase(id){
+  activePhase = id;
+  phaseNav.querySelectorAll('.phase-btn').forEach((b,i)=>{
+    b.classList.toggle('active', id===null ? i===0 : i===id+1);
+  });
+  renderGrid();
+}
+
+/* ── Build day grid ── */
+const daysGrid = document.getElementById('daysGrid');
+function renderGrid(){
+  daysGrid.innerHTML='';
+  const visited = getVisited();
+  for(let d=1;d<=100;d++){
+    const phase = PHASES.find(p=> d>=p.range[0] && d<=p.range[1]);
+    if(activePhase!==null && phase.id!==activePhase) continue;
+    const dot = document.createElement('button');
+    dot.className = 'day-dot';
+    if(visited.includes(d)) dot.classList.add('visited');
+    if(d===currentDay) dot.classList.add('active');
+    dot.textContent = toAr(d);
+    dot.title = `يوم ${toAr(d)} — ${phase.name}`;
+    dot.onclick = ()=> loadDay(d);
+    daysGrid.appendChild(dot);
+  }
+}
+renderGrid();
+
+/* ── Progress ── */
+function updateProgress(){
+  const visited = getVisited();
+  const pct = Math.round(visited.length);
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('progressText').textContent = `${toAr(visited.length)} / ١٠٠`;
+  document.getElementById('visitedCount').textContent = toAr(visited.length);
+  renderGrid();
+}
+updateProgress();
+
+/* ── Load day ── */
+async function loadDay(dayNum){
+  currentDay = dayNum;
+  markVisited(dayNum);
+  renderGrid();
+  const viewer = document.getElementById('dayViewer');
+  viewer.innerHTML = '<div class="skeleton"></div>';
+  document.getElementById('dayNav').style.display='flex';
+  document.getElementById('prevBtn').disabled = dayNum<=1;
+  document.getElementById('nextBtn').disabled = dayNum>=100;
+
+  // Scroll to viewer
+  viewer.scrollIntoView({behavior:'smooth', block:'start'});
+
+  try{
+    let data = cache[dayNum];
+    if(!data){
+      const pad = String(dayNum).padStart(3,'0');
+      const resp = await fetch(`${BASE}day-${pad}.json`);
+      if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      data = await resp.json();
+      cache[dayNum] = data;
+    }
+    renderDay(data, dayNum);
+  }catch(e){
+    viewer.innerHTML = `<div class="dv-section" style="text-align:center"><p class="dv-text" style="color:var(--debunked)">⚠ لم يتم تحميل اليوم ${toAr(dayNum)}.<br><span style="font-size:.82rem;color:var(--dim)">${e.message}</span></p></div>`;
+  }
+}
+
+/* ── Render day ── */
+function renderDay(data, dayNum){
+  const c = data.content;
+  const phase = PHASES.find(p=> dayNum>=p.range[0] && dayNum<=p.range[1]);
+  const evidenceMap = {
+    'STRONG':{label:'دليل قوي', color:'var(--established)'},
+    'MODERATE':{label:'دليل متوسط', color:'var(--sage)'},
+    'MIXED':{label:'دليل مختلط', color:'var(--contested)'},
+    'WEAK':{label:'دليل ضعيف', color:'var(--weak)'},
+    'CONCEPTUAL':{label:'تأطير مفاهيمي', color:'var(--unknown)'},
+  };
+  const ev = data.evidenceStrength || c.evidenceStrength || {};
+  const evInfo = evidenceMap[ev.rating] || evidenceMap['MIXED'];
+
+  let html = '';
+
+  // Header
+  html += `<div class="dv-header">
+    <div class="dv-eyebrow">
+      <span>يوم ${toAr(dayNum)}</span>
+      <span class="phase-tag">${phase.icon} ${phase.name}</span>
+      ${data.professionalReview==='PENDING'?'<span class="phase-tag" style="color:var(--contested);border-color:color-mix(in srgb,var(--contested) 30%,transparent)">في انتظار المراجعة المهنية</span>':''}
+    </div>
+    <h2 class="dv-title">${c.titleAr||''}</h2>
+    <p class="dv-objective">${c.objectiveAr||''}</p>
+    <span class="dv-evidence" style="--stat-color:${evInfo.color}">● ${evInfo.label}</span>
+  </div>`;
+
+  // Definition
+  html += `<div class="dv-section">
+    <div class="dv-sec-title"><span class="icon">📖</span> التعريف</div>
+    <p class="dv-text">${c.definitionSimpleAr||''}</p>
+    ${c.definitionDeepAr ? `<details class="dv-collapse"><summary>التعريف المعمّق</summary><div class="inner"><p class="dv-text muted">${c.definitionDeepAr}</p></div></details>` : ''}
+    ${c.notThisAr ? `<details class="dv-collapse"><summary>ما ليس هو</summary><div class="inner"><p class="dv-text muted">${c.notThisAr}</p></div></details>` : ''}
+  </div>`;
+
+  // Research & Evidence
+  if(c.researchSaysAr || c.researchDoesNotProveAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🔬</span> الدليل والبحث</div>
+      ${c.researchSaysAr ? `<p class="dv-text">${c.researchSaysAr}</p>` : ''}
+      ${c.researchDoesNotProveAr ? `<details class="dv-collapse"><summary>ما لا يثبته الدليل</summary><div class="inner"><p class="dv-text muted">${c.researchDoesNotProveAr}</p></div></details>` : ''}
+      ${c.researchLimitationAr ? `<details class="dv-collapse"><summary>حدود البحث</summary><div class="inner"><p class="dv-text muted">${c.researchLimitationAr}</p></div></details>` : ''}
+      ${ev.explanationAr ? `<details class="dv-collapse"><summary>شرح قوة الدليل</summary><div class="inner"><p class="dv-text muted">${ev.explanationAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Examples
+  if(c.healthyExampleAr || c.unhealthyExampleAr || c.egyptianContextExampleAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">💡</span> أمثلة</div>
+      ${c.healthyExampleAr ? `<div style="margin-bottom:10px"><span style="color:var(--established);font-weight:700;font-size:.82rem">✓ مثال صحي</span><p class="dv-text">${c.healthyExampleAr}</p></div>` : ''}
+      ${c.unhealthyExampleAr ? `<div style="margin-bottom:10px"><span style="color:var(--debunked);font-weight:700;font-size:.82rem">✗ مثال غير صحي</span><p class="dv-text">${c.unhealthyExampleAr}</p></div>` : ''}
+      ${c.egyptianContextExampleAr ? `<details class="dv-collapse"><summary>في السياق المصري</summary><div class="inner"><p class="dv-text muted">${c.egyptianContextExampleAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Common Misunderstanding & Patterns
+  if(c.commonMisunderstandingAr || c.patternToWatchAr || c.patternInterruptionAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🔍</span> أنماط وسوء فهم شائع</div>
+      ${c.commonMisunderstandingAr ? `<p class="dv-text">${c.commonMisunderstandingAr}</p>` : ''}
+      ${c.patternToWatchAr ? `<details class="dv-collapse"><summary>نمط يستحق المراقبة</summary><div class="inner"><p class="dv-text muted">${c.patternToWatchAr}</p></div></details>` : ''}
+      ${c.patternInterruptionAr ? `<details class="dv-collapse"><summary>كيف تقاطع النمط</summary><div class="inner"><p class="dv-text muted">${c.patternInterruptionAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Self-check questions
+  if(c.selfCheckQuestionsAr && c.selfCheckQuestionsAr.length){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">❓</span> أسئلة فحص ذاتي</div>
+      <ul class="dv-list">${c.selfCheckQuestionsAr.map(q=>`<li>${q}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  // Practice modes
+  if(c.fullModeAr || c.standardModeAr || c.minimumModeAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">⚡</span> أوضاع الممارسة</div>
+      <div class="modes-grid">
+        ${c.minimumModeAr ? `<div class="mode-card"><div class="mode-label">الحد الأدنى</div><div class="mode-time">٣–٥ دقائق</div><p>${c.minimumModeAr}</p></div>` : ''}
+        ${c.standardModeAr ? `<div class="mode-card"><div class="mode-label">المعتاد</div><div class="mode-time">١٠–١٥ دقيقة</div><p>${c.standardModeAr}</p></div>` : ''}
+        ${c.fullModeAr ? `<div class="mode-card"><div class="mode-label">الكامل</div><div class="mode-time">٣٠–٤٠ دقيقة</div><p>${c.fullModeAr}</p></div>` : ''}
+      </div>
+    </div>`;
+  }
+
+  // Actions
+  if(c.action5MinAr || c.action15MinAr || c.fullPracticeAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🎯</span> التمارين</div>
+      ${c.action5MinAr ? `<div style="margin-bottom:12px"><span style="font-weight:700;font-size:.82rem;color:var(--sage)">⏱ ٥ دقائق</span><p class="dv-text">${c.action5MinAr}</p></div>` : ''}
+      ${c.action15MinAr ? `<details class="dv-collapse"><summary>⏱ ١٥ دقيقة</summary><div class="inner"><p class="dv-text muted">${c.action15MinAr}</p></div></details>` : ''}
+      ${c.fullPracticeAr ? `<details class="dv-collapse"><summary>الممارسة الكاملة</summary><div class="inner"><p class="dv-text muted">${c.fullPracticeAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Micro experiment & Real world mission
+  if(c.microExperimentAr || c.realWorldMissionAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🧪</span> التجربة والمهمة</div>
+      ${c.microExperimentAr ? `<div style="margin-bottom:10px"><span style="font-weight:700;font-size:.82rem;color:var(--sage)">تجربة صغيرة</span><p class="dv-text">${c.microExperimentAr}</p></div>` : ''}
+      ${c.realWorldMissionAr ? `<div><span style="font-weight:700;font-size:.82rem;color:var(--sage-deep)">مهمة واقعية</span><p class="dv-text">${c.realWorldMissionAr}</p></div>` : ''}
+    </div>`;
+  }
+
+  // What not to do
+  if(c.whatNotToDoAr && c.whatNotToDoAr.length){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🚫</span> ما لا يجب فعله</div>
+      <ul class="dv-list warn">${c.whatNotToDoAr.map(w=>`<li>${w}</li>`).join('')}</ul>
+    </div>`;
+  }
+
+  // Environment, relationship, adaptations
+  const extras = [];
+  if(c.environmentChangeAr) extras.push({t:'تغيير البيئة', v:c.environmentChangeAr});
+  if(c.relationshipPracticeAr && c.relationshipPracticeAr.textAr) extras.push({t:'ممارسة العلاقات', v:c.relationshipPracticeAr.textAr});
+  if(c.roleSpecificAdaptationAr) extras.push({t:'تكييف الأدوار', v:c.roleSpecificAdaptationAr});
+  if(extras.length){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🔧</span> تكييفات وسياقات</div>
+      ${extras.map(e=>`<details class="dv-collapse"><summary>${e.t}</summary><div class="inner"><p class="dv-text muted">${e.v}</p></div></details>`).join('')}
+      ${c.specialContextAdaptationsAr && c.specialContextAdaptationsAr.length ? `<details class="dv-collapse"><summary>سياقات خاصة</summary><div class="inner"><ul class="dv-list">${c.specialContextAdaptationsAr.map(s=>`<li>${s}</li>`).join('')}</ul></div></details>` : ''}
+    </div>`;
+  }
+
+  // Difficulty adjustments
+  if(c.tooEasyAr || c.tooHardAr || c.failureResponseAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">⚖️</span> تعديل الصعوبة</div>
+      ${c.tooEasyAr ? `<details class="dv-collapse"><summary>إذا كان سهلاً جدًا</summary><div class="inner"><p class="dv-text muted">${c.tooEasyAr}</p></div></details>` : ''}
+      ${c.tooHardAr ? `<details class="dv-collapse"><summary>إذا كان صعبًا جدًا</summary><div class="inner"><p class="dv-text muted">${c.tooHardAr}</p></div></details>` : ''}
+      ${c.failureResponseAr ? `<details class="dv-collapse"><summary>إذا لم تفعل شيئًا</summary><div class="inner"><p class="dv-text muted">${c.failureResponseAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Journal & Reflection
+  if(c.journalPromptsAr || c.reflectionAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">📝</span> التأمل واليوميات</div>
+      ${c.reflectionAr ? `<p class="dv-text">${c.reflectionAr}</p>` : ''}
+      ${c.journalPromptsAr && c.journalPromptsAr.length ? `<details class="dv-collapse"><summary>أسئلة اليوميات</summary><div class="inner"><ul class="dv-list">${c.journalPromptsAr.map(j=>`<li>${j}</li>`).join('')}</ul></div></details>` : ''}
+    </div>`;
+  }
+
+  // Tomorrow
+  if(c.noticeTomorrowAr || c.tomorrowPreparationAr){
+    html += `<div class="dv-section">
+      <div class="dv-sec-title"><span class="icon">🌅</span> استعداد الغد</div>
+      ${c.noticeTomorrowAr ? `<p class="dv-text">${c.noticeTomorrowAr}</p>` : ''}
+      ${c.tomorrowPreparationAr ? `<details class="dv-collapse"><summary>تحضير</summary><div class="inner"><p class="dv-text muted">${c.tomorrowPreparationAr}</p></div></details>` : ''}
+    </div>`;
+  }
+
+  // Safety — always prominent
+  const safetyNote = c.safetyNoteAr;
+  const helpThreshold = c.professionalHelpThresholdAr;
+  if((safetyNote && safetyNote.applicable) || (helpThreshold && helpThreshold.applicable)){
+    html += `<div class="dv-section safety-section">
+      <div class="dv-sec-title"><span class="icon">🛑</span> حدود الأمان</div>
+      ${safetyNote && safetyNote.textAr ? `<p class="dv-text">${safetyNote.textAr}</p>` : ''}
+      ${helpThreshold && helpThreshold.textAr ? `<div style="margin-top:10px;padding:12px 14px;background:color-mix(in srgb,var(--debunked) 8%,transparent);border:1px solid color-mix(in srgb,var(--debunked) 25%,transparent);border-radius:12px"><p class="dv-text" style="font-size:.9rem">${helpThreshold.textAr}</p></div>` : ''}
+    </div>`;
+  }
+
+  // Completion note
+  if(c.completionWithoutPerfectionAr){
+    html += `<div class="dv-section" style="text-align:center;background:color-mix(in srgb,var(--sage) 6%,var(--card))">
+      <p class="dv-text" style="font-size:.92rem;color:var(--sage-deep);font-weight:500">${c.completionWithoutPerfectionAr}</p>
+    </div>`;
+  }
+
+  // Deep dive
+  if(c.optionalDeepDiveAr && c.optionalDeepDiveAr.applicable && c.optionalDeepDiveAr.textAr){
+    html += `<div class="dv-section">
+      <details class="dv-collapse" style="border:none;padding:0;margin:0">
+        <summary>🔎 تعمق اختياري</summary>
+        <div class="inner"><p class="dv-text muted">${c.optionalDeepDiveAr.textAr}</p></div>
+      </details>
+    </div>`;
+  }
+
+  document.getElementById('dayViewer').innerHTML = html;
+}
+
+/* ── Navigation ── */
+document.getElementById('prevBtn').onclick = ()=>{ if(currentDay>1) loadDay(currentDay-1); };
+document.getElementById('nextBtn').onclick = ()=>{ if(currentDay<100) loadDay(currentDay+1); };
+
+/* ── Keyboard navigation ── */
+document.addEventListener('keydown', e=>{
+  if(!currentDay) return;
+  if(e.key==='ArrowRight' && currentDay>1) loadDay(currentDay-1);
+  if(e.key==='ArrowLeft' && currentDay<100) loadDay(currentDay+1);
+});
+
+/* ── Scroll to top ── */
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>{
+  scrollBtn.classList.toggle('show', window.scrollY>400);
+});
+scrollBtn.onclick = ()=> window.scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
